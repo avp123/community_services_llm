@@ -14,7 +14,6 @@ from sentence_transformers import SentenceTransformer
 import faiss
 import googlemaps
 import json 
-import openai 
 import time
 from scipy.spatial import cKDTree
 import math 
@@ -24,6 +23,13 @@ from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 
 from dotenv import load_dotenv
 load_dotenv()
+
+from openai import AzureOpenAI
+client = AzureOpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY_AZURE"),
+    azure_endpoint=os.environ.get("OPENAI_AZURE_ENDPOINT"),
+    api_version="2024-12-01-preview"
+)
 
 
 # Create geocoder with a user agent
@@ -469,9 +475,7 @@ Examples:
 - "Serves Glassboro area" → {{"is_virtual": false, "address": null, "city": "Glassboro", "confidence": "medium"}}
 """
 
-    try:
-        client = openai.Client(api_key=os.getenv("SECRET_KEY"))
-        
+    try:        
         response = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[

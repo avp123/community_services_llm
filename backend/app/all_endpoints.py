@@ -44,7 +44,6 @@ from app.database import (
 )
 from app.generate_outreach import generate_check_ins_rule_based
 from app.notifications import notification_job
-import openai 
 
 # Environment configuration
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -210,7 +209,12 @@ def generate_sidebar_update(all_messages, sid, loop):
         messages = [{"role": "system", "content": system_prompt}] + context_messages
 
         # 2. Call GPT-4o-mini
-        client = openai.Client(api_key=os.environ.get("SECRET_KEY"))
+        from openai import AzureOpenAI
+        client = AzureOpenAI(
+            api_key=os.environ.get("OPENAI_API_KEY_AZURE"),
+            azure_endpoint=os.environ.get("OPENAI_AZURE_ENDPOINT"),
+            api_version="2024-12-01-preview"
+        )
         
         completion = client.beta.chat.completions.parse(
             model="gpt-4o-mini", 

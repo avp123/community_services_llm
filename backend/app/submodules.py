@@ -5,7 +5,6 @@ APIs to build streaming responses.
 """
 
 import os
-import openai
 import json 
 import re
 import time
@@ -21,7 +20,14 @@ from app.utils import (
 )
 
 # Initialize
-openai.api_key = os.environ.get("SECRET_KEY")
+from openai import AzureOpenAI
+
+client = AzureOpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY_AZURE"),
+    azure_endpoint=os.environ.get("OPENAI_AZURE_ENDPOINT"),
+    api_version="2024-12-01-preview"
+)
+
 # NOTE: This eagerly loads embedding models and indices on import which can be
 # expensive; consider lazy-loading in production to reduce startup time.
 embedding_model, saved_resources, documents_resources, metadata_resources, \
@@ -622,8 +628,8 @@ def _construct_response_new(
         # Safety check: prevent infinite loops
         if iteration_count > MAX_ITERATIONS:
             # Silently force final response - no user notification
-            response = openai.chat.completions.create(
-                model="gpt-5.2",
+            response = client.chat.completions.create(
+                model="gpt-5-chat",
                 messages=messages + [{"role": "user", "content": "You have gathered sufficient information. Please provide your final comprehensive answer now."}],
                 stream=True
             )
@@ -632,8 +638,8 @@ def _construct_response_new(
                     yield f"data: {event.choices[0].delta.content.replace(chr(10), '<br/>')}\n\n"
             break
         
-        response = openai.chat.completions.create(
-            model="gpt-5.2",
+        response = client.chat.completions.create(
+            model="gpt-5-chat",
             messages=messages,
             tools=tools,
             tool_choice="auto"
@@ -655,8 +661,8 @@ def _construct_response_new(
         # Safety check: prevent exceeding OpenAI's limit
         if total_tool_calls >= MAX_TOOL_CALLS:
             # Silently force final response - no user notification
-            response = openai.chat.completions.create(
-                model="gpt-5.2",
+            response = client.chat.completions.create(
+                model="gpt-5-chat",
                 messages=messages + [{"role": "user", "content": "You have gathered sufficient information. Please provide your final comprehensive answer now."}],
                 stream=True
             )
@@ -781,8 +787,8 @@ def _construct_response_vanilla(
     messages.append({"role": "user", "content": situation})
     
     # Call GPT without tools, without RAG
-    response = openai.chat.completions.create(
-        model="gpt-5.2",
+    response = client.chat.completions.create(
+        model="gpt-5-chat",
         messages=messages,
         stream=True
     )

@@ -6,14 +6,18 @@ produce follow-up messages and schedule check-ins for service users.
 
 import psycopg
 import os
-import openai
 import json
 from datetime import datetime, timedelta
 from app.utils import call_chatgpt_api_all_chats
 from app.database import CONNECTION_STRING
 import spacy
 
-openai.api_key = os.environ.get("SECRET_KEY")
+from openai import AzureOpenAI
+client = AzureOpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY_AZURE"),
+    azure_endpoint=os.environ.get("OPENAI_AZURE_ENDPOINT"),
+    api_version="2024-12-01-preview"
+)
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -144,11 +148,9 @@ Rules:
 - If there are truly no check-ins to schedule, return an empty array: []
 """
 
-    client = openai.Client(api_key=os.environ.get("SECRET_KEY"))
-
     try:
         response = client.chat.completions.create(
-            model="gpt-5.2",  # same model as the rest of the app
+            model="gpt-5-chat",  # same model as the rest of the app
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"Here is the conversation:\n\n{conversation_text}"}
