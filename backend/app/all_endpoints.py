@@ -70,7 +70,7 @@ app.add_middleware(
         os.environ.get("FRONTEND_URL", ""),
         "https://peercopilot.com",
         "https://www.peercopilot.com",
-        "https://icy-dune-095a4b50f.azurestaticapps.net",
+        "https://icy-dune-095a4b50f.4.azurestaticapps.net",
     ],
     allow_credentials=True,
     allow_methods=["*"],
