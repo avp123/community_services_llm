@@ -39,8 +39,12 @@ jobs:
         with:
           name: python-app
           path: |
-            .
-            !antenv/
+            backend/
+            requirements.txt
+            runtime.txt
+            !backend/.env
+            !backend/**/__pycache__/**
+            !backend/**/*.pyc
 
       # 🚫 Opting Out of Oryx Build
       # If you prefer to disable the Oryx build process during deployment, follow these steps:
