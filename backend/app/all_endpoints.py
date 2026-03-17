@@ -165,8 +165,8 @@ def warmup_models():
     except Exception as e:
         print(f"[Warmup] Failed to load embeddings: {e}")
 
-# Start a background thread to warm up embeddings after server start (may be slow)
-threading.Thread(target=warmup_models, daemon=True).start()
+# RAG warmup disabled so Azure startup stays under 230s; re-enable when using lazy RAG
+# threading.Thread(target=warmup_models, daemon=True).start()
 
 # Service user endpoints
 class NewServiceUser(BaseModel):
