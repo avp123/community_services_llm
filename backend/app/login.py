@@ -18,6 +18,7 @@ import qrcode
 import io
 import base64
 from backend.app.audit_logger import AuditLogger
+from backend.app.submodules import start_rag_warmup_once
 
 
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -163,6 +164,10 @@ async def login(request: LoginRequest, req: Request):
             "mfa_used": mfa_enabled
         }
     )
+
+    # Trigger background RAG warmup after fully successful authentication.
+    # This will only start once per backend instance.
+    start_rag_warmup_once()
 
     return LoginResponse(
         access_token=access_token,

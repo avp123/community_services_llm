@@ -9,6 +9,7 @@ import json
 import re
 import time
 import concurrent.futures
+import threading
 import numpy as np
 
 from backend.app.rag_utils import get_model_and_indices
@@ -28,13 +29,99 @@ client = AzureOpenAI(
     api_version="2024-12-01-preview"
 )
 
-# RAG loading commented out to keep Azure startup under 230s; app works without it
-# until first RAG-dependent request. Uncomment and remove None fallbacks to re-enable.
-# embedding_model, saved_resources, documents_resources, metadata_resources, \
-#     geo_trees, geo_indices, saved_articles, documents_articles = get_model_and_indices()
+# Lazy-initialized RAG globals. These are populated on-demand via
+# `get_rag_assets()` below, so app startup stays light on Azure.
 embedding_model = saved_resources = documents_resources = metadata_resources = None
 geo_trees = geo_indices = saved_articles = documents_articles = None
 internal_prompts, external_prompts = get_all_prompts()
+
+# One-time warmup state for this process
+_rag_warmup_started = False
+_rag_warmup_lock = threading.Lock()
+
+
+def get_rag_assets():
+    """
+    Lazily load and cache all RAG assets.
+
+    Returns the tuple:
+        embedding_model,
+        saved_resources,
+        documents_resources,
+        metadata_resources,
+        geo_trees,
+        geo_indices,
+        saved_articles,
+        documents_articles
+    """
+    global embedding_model, saved_resources, documents_resources, metadata_resources
+    global geo_trees, geo_indices, saved_articles, documents_articles
+
+    # If we've already loaded everything for this process, just return it.
+    if embedding_model is not None and saved_resources is not None:
+        return (
+            embedding_model,
+            saved_resources,
+            documents_resources,
+            metadata_resources,
+            geo_trees,
+            geo_indices,
+            saved_articles,
+            documents_articles,
+        )
+
+    # Otherwise, delegate to the canonical RAG loader and cache results.
+    (
+        embedding_model,
+        saved_resources,
+        documents_resources,
+        metadata_resources,
+        geo_trees,
+        geo_indices,
+        saved_articles,
+        documents_articles,
+    ) = get_model_and_indices()
+
+    return (
+        embedding_model,
+        saved_resources,
+        documents_resources,
+        metadata_resources,
+        geo_trees,
+        geo_indices,
+        saved_articles,
+        documents_articles,
+    )
+
+
+def _rag_warmup():
+    """
+    Background task to trigger RAG loading once per process.
+    """
+    try:
+        print("[RAG Warmup] Starting lazy warmup via get_rag_assets()")
+        get_rag_assets()
+        print("[RAG Warmup] Completed successfully")
+    except Exception as exc:
+        print(f"[RAG Warmup] Failed: {exc}")
+
+
+def start_rag_warmup_once():
+    """
+    Start a background thread to warm up RAG assets once per process.
+
+    Safe to call multiple times; only the first call will start a thread.
+    """
+    global _rag_warmup_started
+
+    with _rag_warmup_lock:
+        if _rag_warmup_started:
+            return
+
+        _rag_warmup_started = True
+
+        thread = threading.Thread(target=_rag_warmup, daemon=True)
+        thread.start()
 
 
 # ============================================================================
@@ -181,26 +268,33 @@ def get_questions_resources(
     )
     resource_mentions.append(situation)
 
-    # Retrieve resources in parallel (skipped when RAG is disabled for fast startup)
-    if embedding_model is None or saved_resources is None:
-        unique_resources = []
-        print("[Pipeline] RAG disabled - skipping resource retrieval")
-    else:
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            resource_lists = list(
-                executor.map(
-                    lambda text: extract_resources(
-                        embedding_model,
-                        saved_resources,
-                        documents_resources,
-                        text,
-                        {f"resource_{organization}": True},
-                        k=k,
-                    ),
-                    resource_mentions,
-                )
+    # Retrieve resources in parallel using lazily-loaded RAG assets
+    (
+        rag_model,
+        rag_saved_resources,
+        rag_documents_resources,
+        rag_metadata_resources,
+        _rag_geo_trees,
+        _rag_geo_indices,
+        _rag_saved_articles,
+        _rag_documents_articles,
+    ) = get_rag_assets()
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        resource_lists = list(
+            executor.map(
+                lambda text: extract_resources(
+                    rag_model,
+                    rag_saved_resources,
+                    rag_documents_resources,
+                    text,
+                    {f"resource_{organization}": True},
+                    k=k,
+                ),
+                resource_mentions,
             )
-        unique_resources = deduplicate_resources(resource_lists)
+        )
+    unique_resources = deduplicate_resources(resource_lists)
 
     print(f"[Pipeline] Resources retrieved at {time.time()}")
 
@@ -685,33 +779,49 @@ def _construct_response_new(
             print(f"[DEBUG] Executing {name} with {args}")
 
             if name == "resources_tool":
-                if saved_resources is None or embedding_model is None:
-                    output = "Resource search is temporarily unavailable (RAG disabled for startup)."
-                else:
-                    output = resources_tool(
-                        query=args.get("query", ""),
-                        organization=organization,
-                        location=args.get("location"),
-                        k=args.get("k", 5),
-                        saved_indices=saved_resources,
-                        documents=documents_resources,
-                        metadata=metadata_resources,
-                        geo_trees=geo_trees,
-                        geo_indices=geo_indices,
-                        embedding_model=embedding_model
-                    )
+                (
+                    rag_model,
+                    rag_saved_resources,
+                    rag_documents_resources,
+                    rag_metadata_resources,
+                    rag_geo_trees,
+                    rag_geo_indices,
+                    _rag_saved_articles,
+                    _rag_documents_articles,
+                ) = get_rag_assets()
+
+                output = resources_tool(
+                    query=args.get("query", ""),
+                    organization=organization,
+                    location=args.get("location"),
+                    k=args.get("k", 5),
+                    saved_indices=rag_saved_resources,
+                    documents=rag_documents_resources,
+                    metadata=rag_metadata_resources,
+                    geo_trees=rag_geo_trees,
+                    geo_indices=rag_geo_indices,
+                    embedding_model=rag_model,
+                )
 
             elif name == "library_tool":
-                if saved_articles is None or embedding_model is None:
-                    output = "Library search is temporarily unavailable (RAG disabled for startup)."
-                else:
-                    output = library_tool(
-                        query=args.get("query", ""),
-                        category=args.get("category", "peer"),
-                        saved_indices_peer=saved_articles,
-                        documents_peer=documents_articles,
-                        embedding_model=embedding_model
-                    )
+                (
+                    rag_model,
+                    _rag_saved_resources,
+                    _rag_documents_resources,
+                    _rag_metadata_resources,
+                    _rag_geo_trees,
+                    _rag_geo_indices,
+                    rag_saved_articles,
+                    rag_documents_articles,
+                ) = get_rag_assets()
+
+                output = library_tool(
+                    query=args.get("query", ""),
+                    category=args.get("category", "peer"),
+                    saved_indices_peer=rag_saved_articles,
+                    documents_peer=rag_documents_articles,
+                    embedding_model=rag_model,
+                )
 
             elif name == "directions_tool":
                 output = directions_tool(

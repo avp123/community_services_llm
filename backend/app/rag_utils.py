@@ -40,7 +40,11 @@ geolocator = Nominatim(user_agent="peercopilot_app")
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["OMP_NUM_THREADS"] = "1"
 
-CONNECTION_STRING = os.getenv("RESOURCE_DB_URL")
+_USE_RENDER_DB = os.getenv("USE_RENDER_DB", "").lower() in ("1", "true", "yes")
+if _USE_RENDER_DB:
+    CONNECTION_STRING = os.getenv("RENDER_RESOURCE_DB_URL") or os.getenv("RESOURCE_DB_URL")
+else:
+    CONNECTION_STRING = os.getenv("RESOURCE_DB_URL")
 MODEL_NAME = 'sentence-transformers/all-mpnet-base-v2'
 ALL_ORGS = ['cspnj', 'clhs','georgia']
 

@@ -12,7 +12,11 @@ from datetime import date as _date, datetime as _datetime
 from dotenv import load_dotenv
 load_dotenv()
 
-CONNECTION_STRING = os.getenv("DATABASE_URL")
+_USE_RENDER_DB = os.getenv("USE_RENDER_DB", "").lower() in ("1", "true", "yes")
+if _USE_RENDER_DB:
+    CONNECTION_STRING = os.getenv("RENDER_DATABASE_URL") or os.getenv("DATABASE_URL")
+else:
+    CONNECTION_STRING = os.getenv("DATABASE_URL")
 
 def update_conversation(metadata, previous_text, service_user_id):
     """
