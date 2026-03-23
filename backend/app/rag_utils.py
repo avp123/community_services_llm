@@ -40,11 +40,12 @@ geolocator = Nominatim(user_agent="peercopilot_app")
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["OMP_NUM_THREADS"] = "1"
 
-_USE_RENDER_DB = os.getenv("USE_RENDER_DB", "").lower() in ("1", "true", "yes")
-if _USE_RENDER_DB:
-    CONNECTION_STRING = os.getenv("RENDER_RESOURCE_DB_URL") or os.getenv("RESOURCE_DB_URL")
+_USE_LOCAL_DB = os.getenv("USE_LOCAL_DB", "").lower() in ("1", "true", "yes")
+if _USE_LOCAL_DB:
+    CONNECTION_STRING = os.getenv("LOCAL_RESOURCE_DB_URL")
 else:
     CONNECTION_STRING = os.getenv("RESOURCE_DB_URL")
+_LOCAL_DB_CONNECTION_LOGGED = False
 MODEL_NAME = 'sentence-transformers/all-mpnet-base-v2'
 ALL_ORGS = ['cspnj', 'clhs','georgia']
 
@@ -61,7 +62,12 @@ _CACHE = {
 }
 
 def get_db_connection():
-    return psycopg.connect(CONNECTION_STRING)
+    global _LOCAL_DB_CONNECTION_LOGGED
+    conn = psycopg.connect(CONNECTION_STRING)
+    if _USE_LOCAL_DB and not _LOCAL_DB_CONNECTION_LOGGED:
+        print("[RAG DB] Local resource DB connection successful.")
+        _LOCAL_DB_CONNECTION_LOGGED = True
+    return conn
 
 def get_embedding_model():
     """Lazy loads the model."""

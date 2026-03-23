@@ -12,11 +12,14 @@ from datetime import date as _date, datetime as _datetime
 from dotenv import load_dotenv
 load_dotenv()
 
-_USE_RENDER_DB = os.getenv("USE_RENDER_DB", "").lower() in ("1", "true", "yes")
-if _USE_RENDER_DB:
-    CONNECTION_STRING = os.getenv("RENDER_DATABASE_URL") or os.getenv("DATABASE_URL")
+_USE_LOCAL_DB = os.getenv("USE_LOCAL_DB", "").lower() in ("1", "true", "yes")
+if _USE_LOCAL_DB:
+    CONNECTION_STRING = os.getenv("LOCAL_DATABASE_URL")
 else:
     CONNECTION_STRING = os.getenv("DATABASE_URL")
+
+if _USE_LOCAL_DB:
+    print("[DB] Local main DB mode enabled.")
 
 def update_conversation(metadata, previous_text, service_user_id):
     """
