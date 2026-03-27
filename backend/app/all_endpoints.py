@@ -41,6 +41,9 @@ from backend.app.database import (
     add_service_user_checkin,
     update_service_user_profile,
     update_last_session_db,
+    fetch_service_user_custom_prompt,
+    fetch_account_custom_prompt,
+    update_account_custom_prompt,
 )
 from backend.app.generate_outreach import generate_check_ins_rule_based
 from backend.app.notifications import notification_job
@@ -89,6 +92,7 @@ class NewWellness(BaseModel):
     followUpMessage: str
     username: str
     location: str
+    custom_prompt: Optional[str] = None
 
 # Middleware
 @app.middleware("http")
@@ -144,6 +148,31 @@ async def update_user_notification_settings(
         return {"success": True, "message": message}
     else:
         raise HTTPException(status_code=400, detail=message)
+
+
+class AccountPromptUpdate(BaseModel):
+    custom_prompt: Optional[str] = None
+
+
+@app.get("/api/account-prompt")
+async def get_account_prompt(current_user: UserData = Depends(get_current_user)):
+    text = fetch_account_custom_prompt(current_user.username)
+    return {"success": True, "custom_prompt": text or ""}
+
+
+@app.post("/api/account-prompt")
+async def set_account_prompt(
+    body: AccountPromptUpdate,
+    current_user: UserData = Depends(get_current_user),
+):
+    success, message = update_account_custom_prompt(
+        current_user.username,
+        body.custom_prompt if body.custom_prompt is not None else "",
+    )
+    if success:
+        return {"success": True, "message": message}
+    raise HTTPException(status_code=400, detail=message)
+
     
 # Health check endpoints
 @app.get("/")
@@ -310,7 +339,8 @@ async def create_service_user(item: NewWellness, current_user: UserData = Depend
         item.lastSession, 
         item.nextCheckIn, 
         item.location,
-        item.followUpMessage
+        item.followUpMessage,
+        item.custom_prompt,
     )
     
     if not success:
@@ -428,6 +458,38 @@ def _background_stream(
             prompt_length=len(scrubbed_text),
             response_length=0
         )
+
+        username = metadata.get("username")
+        scrubbed_account_prompt = None
+        if username:
+            raw_account = fetch_account_custom_prompt(username)
+            if raw_account:
+                scrubbed_account_prompt = PHIScrubber.scrub_for_gpt(
+                    raw_account,
+                    patient_id=service_user_id,
+                )
+
+        scrubbed_profile_prompt = None
+        if service_user_id:
+            raw_profile_prompt = fetch_service_user_custom_prompt(service_user_id)
+            if raw_profile_prompt:
+                scrubbed_profile_prompt = PHIScrubber.scrub_for_gpt(
+                    raw_profile_prompt,
+                    patient_id=service_user_id,
+                )
+
+        extra_prompt_parts = []
+        if scrubbed_account_prompt and str(scrubbed_account_prompt).strip():
+            extra_prompt_parts.append(
+                "ACCOUNT-LEVEL CUSTOM PROMPT (all chats):\n"
+                + str(scrubbed_account_prompt).strip()
+            )
+        if scrubbed_profile_prompt and str(scrubbed_profile_prompt).strip():
+            extra_prompt_parts.append(
+                "PROFILE-LEVEL CUSTOM PROMPT (this member):\n"
+                + str(scrubbed_profile_prompt).strip()
+            )
+        combined_custom_prompt = "\n\n".join(extra_prompt_parts) if extra_prompt_parts else None
         
         # Send scrubbed content to GPT
         gen = construct_response(
@@ -436,6 +498,7 @@ def _background_stream(
             model, 
             organization,
             version,
+            profile_custom_prompt=combined_custom_prompt,
         )
         
         for accumulated_text in accumulate_chunks(gen):
@@ -595,6 +658,9 @@ async def reset_session(sid, data):
     print(f"  Reason: {data.get('reason')}")
     print(f"  Previous user: {data.get('previous_service_user_id')}")
     print(f"  New user: {data.get('new_service_user_id')}")
+
+    if sid in session_histories:
+        session_histories[sid] = []
     
     await sio.emit("reset_ack", {
         "message": "Session reset.",
@@ -623,6 +689,7 @@ class UpdateServiceUser(BaseModel):
     patientName: Optional[str] = None
     location: Optional[str] = None
     status: Optional[str] = None
+    custom_prompt: Optional[str] = None
 
 
 class UpdateLastSession(BaseModel):
@@ -685,6 +752,7 @@ async def update_service_user(
         patientName=data.patientName,
         location=data.location,
         status=data.status,
+        custom_prompt=data.custom_prompt,
     )
     if success:
         AuditLogger.log_phi_access(

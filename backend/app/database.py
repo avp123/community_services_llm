@@ -4,6 +4,8 @@ Provides thin helpers for conversation and outreach CRUD operations.
 """
 
 import hashlib
+from typing import Optional
+
 import psycopg
 from psycopg.rows import dict_row
 import os
@@ -78,17 +80,49 @@ def generate_service_user_id(provider_username: str, patient_name: str) -> str:
     return hashlib.sha256(raw.encode()).hexdigest()[:16]  # short, unique, anonymized
 
 
-def add_new_service_user(provider_username, patient_name, last_session, next_checkin, location, followup_message):
+def fetch_service_user_custom_prompt(service_user_id: str):
+    """Return profiles.custom_prompt for a service user, or None."""
+    if not service_user_id:
+        return None
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT custom_prompt FROM profiles WHERE service_user_id = %s",
+                    (service_user_id,),
+                )
+                row = cur.fetchone()
+                if not row:
+                    return None
+                return row.get("custom_prompt")
+    except Exception as e:
+        print(f"[DB] fetch_service_user_custom_prompt error: {e}")
+        return None
+
+
+def add_new_service_user(
+    provider_username,
+    patient_name,
+    last_session,
+    next_checkin,
+    location,
+    followup_message,
+    custom_prompt=None,
+):
     conn = psycopg.connect(CONNECTION_STRING)
     cursor = conn.cursor()
     try:
         service_user_id = generate_service_user_id(provider_username, patient_name)
 
-        cursor.execute('''
-            INSERT INTO profiles (service_user_id, service_user_name, provider, location, status)
-            VALUES (%s, %s, %s, %s, %s)
+        cursor.execute(
+            """
+            INSERT INTO profiles (service_user_id, service_user_name, provider, location, status, custom_prompt)
+            VALUES (%s, %s, %s, %s, %s, %s)
             ON CONFLICT (service_user_id) DO NOTHING
-        ''', (service_user_id, patient_name, provider_username, location, "Active"))
+            """,
+            (service_user_id, patient_name, provider_username, location, "Active", custom_prompt),
+        )
 
         # ← this part was missing entirely
         if next_checkin:
@@ -270,6 +304,47 @@ def get_notification_settings(username):
     finally:
         conn.close()
 
+
+def fetch_account_custom_prompt(username: str):
+    """Return users.custom_prompt for the logged-in provider, or None."""
+    if not username:
+        return None
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT custom_prompt FROM users WHERE username = %s",
+                    (username,),
+                )
+                row = cur.fetchone()
+                if not row:
+                    return None
+                return row.get("custom_prompt")
+    except Exception as e:
+        print(f"[DB] fetch_account_custom_prompt error: {e}")
+        return None
+
+
+def update_account_custom_prompt(username: str, custom_prompt: Optional[str]):
+    """Persist users.custom_prompt (empty string clears to empty)."""
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "UPDATE users SET custom_prompt = %s WHERE username = %s",
+                    (custom_prompt if custom_prompt is not None else "", username),
+                )
+                n = cur.rowcount
+            conn.commit()
+        if n == 0:
+            return False, "User not found"
+        return True, "Updated"
+    except Exception as e:
+        print(f"[DB] update_account_custom_prompt error: {e}")
+        return False, str(e)
+
+
 def delete_service_user_checkin(check_in_id):
     try:
         with psycopg.connect(CONNECTION_STRING) as conn:
@@ -320,8 +395,9 @@ def update_service_user_profile(
     patientName: str = None,
     location: str = None,
     status: str = None,
+    custom_prompt: str = None,
 ):
-    """Update name, location, and/or status in the profiles table."""
+    """Update name, location, status, and/or custom_prompt in the profiles table."""
     fields = []
     values = []
 
@@ -334,6 +410,9 @@ def update_service_user_profile(
     if status is not None:
         fields.append("status = %s")
         values.append(status)
+    if custom_prompt is not None:
+        fields.append("custom_prompt = %s")
+        values.append(custom_prompt)
 
     if not fields:
         return True, "Nothing to update"

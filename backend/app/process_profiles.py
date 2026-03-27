@@ -12,7 +12,7 @@ def get_all_service_users(provider_username, organization):
     cursor = conn.cursor()
     cursor.execute('''
     SELECT DISTINCT ON (p.service_user_id)
-           p.service_user_id, p.service_user_name, p.location, p.status,
+           p.service_user_id, p.service_user_name, p.location, p.status, p.custom_prompt,
            o.id AS check_in_id,
            o.last_session, o.check_in, o.follow_up_message
     FROM profiles p

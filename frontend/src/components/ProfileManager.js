@@ -15,6 +15,7 @@ const INITIAL_FORM_STATE = {
   followUpMessage: '',
   location: '',
   status: '',
+  custom_prompt: '',
 };
 
 // Inline legend component — reused here and in OutreachCalendar
@@ -94,6 +95,7 @@ const ProfileManager = () => {
       followUpMessage: patient.follow_up_message || '',
       location: patient.location || '',
       status: patient.status || '',
+      custom_prompt: patient.custom_prompt || '',
     });
     setSidebar(true);
   }, []);
@@ -128,6 +130,7 @@ const ProfileManager = () => {
       if (updatedData.service_user_name !== undefined) patch.patientName = updatedData.service_user_name;
       if (updatedData.location !== undefined) patch.location = updatedData.location;
       if (updatedData.status !== undefined) patch.status = updatedData.status;
+      if (updatedData.custom_prompt !== undefined) patch.custom_prompt = updatedData.custom_prompt;
       if (Object.keys(patch).length > 0) {
         await apiPost('/update_service_user/', { service_user_id: currentPatient.service_user_id, ...patch });
       }
@@ -136,6 +139,7 @@ const ProfileManager = () => {
         service_user_name: updatedData.service_user_name ?? prev.service_user_name,
         location: updatedData.location ?? prev.location,
         status: updatedData.status ?? prev.status,
+        custom_prompt: updatedData.custom_prompt ?? prev.custom_prompt,
         last_session: updatedData.last_session ?? prev.last_session,
       }));
       await fetchServiceUsers();

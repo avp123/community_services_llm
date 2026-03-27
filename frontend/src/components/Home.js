@@ -21,7 +21,7 @@ function Home() {
   const [showMfaSetup, setShowMfaSetup] = useState(false);
   const [mfaEnabled, setMfaEnabled] = useState(false);
   const [mfaGloballyEnabled, setMfaGloballyEnabled] = useState(true);
-  
+
   const handleOrganizationChange = (e) => {
     const newOrg = e.target.value.toLowerCase();
     console.log("Setting organization to:", newOrg);
@@ -75,7 +75,6 @@ function Home() {
 
   const fetchSettings = async () => {
     try {
-      // authenticatedFetch handles the token automatically
       const response = await authenticatedFetch(`/api/notification-settings`, {
         method: 'GET',
       });
@@ -98,7 +97,6 @@ function Home() {
     setMessage('');
 
     try {
-      // authenticatedFetch handles the token automatically
       const response = await authenticatedFetch(`/api/notification-settings`, {
         method: 'POST',
         body: JSON.stringify({

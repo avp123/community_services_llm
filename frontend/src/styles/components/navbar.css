@@ -69,6 +69,58 @@
   padding-left: var(--spacing-md);
 }
 
+.navbar-footer-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.navbar-profile-link {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--color-text);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color var(--transition-slow);
+}
+
+.navbar-profile-link:hover {
+  background-color: var(--bg-hover);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.navbar-footer-actions .logout-button {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--color-text);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color var(--transition-slow);
+}
+
+.navbar-footer-actions .logout-button:hover {
+  background-color: var(--bg-hover);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
 
 /* ===========================
    ORGANIZATION SELECTOR
@@ -150,5 +202,10 @@
 @media (min-width: 769px) {
   .hamburger {
     display: none;
+  }
+
+  .navbar-links {
+    flex: 1;
+    min-height: 0;
   }
 }

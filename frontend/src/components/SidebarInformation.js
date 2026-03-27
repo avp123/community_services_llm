@@ -45,6 +45,7 @@ const SidebarInformation = ({
       location: patient.location || '',
       status: patient.status || '',
       last_session: formatDateForInput(patient.last_session),
+      custom_prompt: patient.custom_prompt || '',
     });
     setIsEditingProfile(true);
   };
@@ -198,6 +199,17 @@ const SidebarInformation = ({
                 <StatusSelect id="status" value={formData.status || ''} onChange={(v) => onFormChange('status', v)} />
               </div>
             </div>
+
+            <div className="input-section">
+              <div className="form-group">
+                <label className="section-label" htmlFor="newCustomPrompt">
+                  <img src={ChatIcon} alt="" className="icon" /> Profile prompt (optional)
+                </label>
+                <textarea id="newCustomPrompt" placeholder="Tone or style hints for chat when this member is selected"
+                  value={formData.custom_prompt || ''} onChange={(e) => onFormChange('custom_prompt', e.target.value)}
+                  style={{ width: '100%', minHeight: '70px', padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontFamily: 'inherit', fontSize: '14px', boxSizing: 'border-box', resize: 'vertical' }} />
+              </div>
+            </div>
           </>
         )}
 
@@ -239,6 +251,17 @@ const SidebarInformation = ({
               </div>
             </div>
 
+            <div className="input-section">
+              <div className="form-group">
+                <label className="section-label" htmlFor="editCustomPrompt">
+                  <img src={ChatIcon} alt="" className="icon" /> Profile prompt (optional)
+                </label>
+                <textarea id="editCustomPrompt" placeholder="Tone or style hints for chat when this member is selected"
+                  value={profileEdits.custom_prompt ?? ''} onChange={(e) => handleProfileFieldChange('custom_prompt', e.target.value)}
+                  style={{ width: '100%', minHeight: '70px', padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontFamily: 'inherit', fontSize: '14px', boxSizing: 'border-box', resize: 'vertical' }} />
+              </div>
+            </div>
+
             <div style={{ display: 'flex', gap: '8px', margin: '0 20px 12px' }}>
               <button type="button" className="save-button" onClick={handleSaveProfile}
                 disabled={isSubmitting} style={{ flex: 1 }}>
@@ -269,6 +292,12 @@ const SidebarInformation = ({
               <div className="info-section">
                 <div className="section-label"><img src={ProfileIcon} alt="" className="icon" /> Status</div>
                 <div className="section-content"><StatusBadge status={patient.status} /></div>
+              </div>
+            )}
+            {patient.custom_prompt && (
+              <div className="info-section">
+                <div className="section-label"><img src={ChatIcon} alt="" className="icon" /> Profile prompt</div>
+                <div className="section-content" style={{ whiteSpace: 'pre-wrap', fontSize: '13px', color: '#444' }}>{patient.custom_prompt}</div>
               </div>
             )}
           </>

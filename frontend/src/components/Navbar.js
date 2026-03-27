@@ -6,12 +6,14 @@ import WellnessGoalsIcon from '../icons/WellnessGoalsAssistant.png';
 import ProfileManagerIcon from '../icons/ProfileManager.png';
 import OutreachCalendarIcon from '../icons/OutreachCalendar.png';
 import { WellnessContext } from './AppStateContextProvider';
-import Logout from "./Logout.js"
+import Logout from "./Logout.js";
+import AccountProfilePanel from './AccountProfilePanel';
 
 
 function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [accountProfileOpen, setAccountProfileOpen] = useState(false);
   const { organization, user } = useContext(WellnessContext);
   
   const toggleMenu = () => {
@@ -85,9 +87,21 @@ function Navbar() {
           Outreach Calendar
         </Link>
 
+        <div className="navbar-footer-actions">
+          <button
+            type="button"
+            className="navbar-profile-link"
+            onClick={() => {
+              setAccountProfileOpen(true);
+              setMenuOpen(false);
+            }}
+          >
+            Profile
+          </button>
+          <Logout />
+        </div>
       </div>
-      <div className="navbar-spacer"></div>
-      <Logout />
+      <AccountProfilePanel open={accountProfileOpen} onClose={() => setAccountProfileOpen(false)} />
     </nav>
   );
 }
