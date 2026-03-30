@@ -96,6 +96,14 @@ function Navbar() {
         >
           Chat history
         </Link>
+        <Link
+          to="/analytics-trends"
+          className={`navbar-button ${
+            location.pathname === '/analytics-trends' ? 'active' : ''
+          }`}
+        >
+          Trends
+        </Link>
 
         <div className="navbar-footer-actions">
           <button

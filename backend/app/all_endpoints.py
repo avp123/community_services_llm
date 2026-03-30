@@ -45,6 +45,7 @@ from backend.app.database import (
     update_account_custom_prompt,
     list_conversation_summaries,
     get_user_conversation_global_stats,
+    get_user_weekly_usage_stats,
     get_conversation_messages_for_user,
     conversation_owned_by_user,
     get_session_feedback,
@@ -202,6 +203,18 @@ async def conversation_global_stats(
     success, result = get_user_conversation_global_stats(current_user.username)
     if success:
         return {"success": True, "stats": result}
+    raise HTTPException(status_code=400, detail=result)
+
+
+@app.get("/api/analytics/weekly")
+async def analytics_weekly(
+    current_user: UserData = Depends(get_current_user),
+    weeks: int = 12,
+):
+    """Weekly trend analytics for the current provider."""
+    success, result = get_user_weekly_usage_stats(current_user.username, weeks=weeks)
+    if success:
+        return {"success": True, "weeks": weeks, "rows": result}
     raise HTTPException(status_code=400, detail=result)
 
 

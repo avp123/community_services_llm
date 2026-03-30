@@ -843,6 +843,104 @@ def get_user_conversation_global_stats(username: str):
         return False, str(e)
 
 
+def get_user_weekly_usage_stats(username: str, weeks: int = 12):
+    """
+    Weekly usage trend aggregates for one provider account.
+    Returns (True, list[dict]) or (False, error str).
+    """
+    weeks = max(2, min(int(weeks), 52))
+    sql = """
+        WITH bounds AS (
+            SELECT date_trunc('week', NOW())::date AS this_week
+        ),
+        week_series AS (
+            SELECT (this_week - (gs * INTERVAL '1 week'))::date AS week_start
+            FROM bounds, generate_series(%s - 1, 0, -1) AS gs
+        ),
+        msg_week AS (
+            SELECT
+                date_trunc('week', m.created_at)::date AS week_start,
+                COUNT(*)::int AS messages_total,
+                COUNT(*) FILTER (WHERE m.sender = 'user')::int AS messages_user,
+                COUNT(*) FILTER (WHERE m.sender IN ('system', 'assistant'))::int AS messages_assistant,
+                COALESCE(SUM(CHAR_LENGTH(COALESCE(m.text, ''))), 0)::bigint AS total_chars,
+                COUNT(DISTINCT m.conversation_id)::int AS sessions_active
+            FROM messages m
+            JOIN conversations c ON c.id = m.conversation_id
+            WHERE c.username = %s
+              AND m.created_at >= ((SELECT this_week FROM bounds) - (%s - 1) * INTERVAL '1 week')
+            GROUP BY 1
+        ),
+        conv_started AS (
+            SELECT
+                date_trunc('week', c.created_at)::date AS week_start,
+                COUNT(*)::int AS sessions_started
+            FROM conversations c
+            WHERE c.username = %s
+              AND c.created_at >= ((SELECT this_week FROM bounds) - (%s - 1) * INTERVAL '1 week')
+            GROUP BY 1
+        ),
+        conv_created_week AS (
+            SELECT
+                date_trunc('week', c.created_at)::date AS week_start,
+                COALESCE(c.stats_tool_calls_total, 0)::bigint AS tool_calls_total
+            FROM conversations c
+            WHERE c.username = %s
+              AND c.created_at >= ((SELECT this_week FROM bounds) - (%s - 1) * INTERVAL '1 week')
+        ),
+        conv_tools_week AS (
+            SELECT
+                week_start,
+                SUM(tool_calls_total)::bigint AS tool_calls_total
+            FROM conv_created_week
+            GROUP BY week_start
+        )
+        SELECT
+            ws.week_start,
+            COALESCE(mw.sessions_active, 0) AS sessions_active,
+            COALESCE(cs.sessions_started, 0) AS sessions_started,
+            COALESCE(mw.messages_total, 0) AS messages_total,
+            COALESCE(mw.messages_user, 0) AS messages_user,
+            COALESCE(mw.messages_assistant, 0) AS messages_assistant,
+            COALESCE(mw.total_chars, 0)::bigint AS total_chars,
+            COALESCE(clw.tool_calls_total, 0)::bigint AS tool_calls_total
+        FROM week_series ws
+        LEFT JOIN msg_week mw ON mw.week_start = ws.week_start
+        LEFT JOIN conv_started cs ON cs.week_start = ws.week_start
+        LEFT JOIN conv_tools_week clw ON clw.week_start = ws.week_start
+        ORDER BY ws.week_start ASC
+    """
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(sql, (weeks, username, weeks, username, weeks, username, weeks))
+                rows = cur.fetchall()
+        out = []
+        for r in rows:
+            d = dict(r)
+            for key in (
+                "sessions_active",
+                "sessions_started",
+                "messages_total",
+                "messages_user",
+                "messages_assistant",
+                "total_chars",
+                "tool_calls_total",
+            ):
+                d[key] = int(d.get(key) or 0)
+            mt = d["messages_total"]
+            d["avg_chars_per_message"] = round(d["total_chars"] / mt, 2) if mt else 0.0
+            ws = d.get("week_start")
+            if ws is not None and hasattr(ws, "isoformat"):
+                d["week_start"] = ws.isoformat()
+            out.append(d)
+        return True, out
+    except Exception as e:
+        print(f"[DB] get_user_weekly_usage_stats error: {e}")
+        return False, str(e)
+
+
 def get_conversation_messages_for_user(conversation_id: str, owner_username: str):
     """
     Load messages if the conversation belongs to owner_username.

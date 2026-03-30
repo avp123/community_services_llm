@@ -10,6 +10,7 @@ import {WellnessContextProvider, WellnessContext} from './components/AppStateCon
 import ProfileManager from './components/ProfileManager';
 import OutreachCalendar from './components/OutreachCalendar';
 import ChatHistory from './components/ChatHistory';
+import AnalyticsTrends from './components/AnalyticsTrends';
 import Register from './components/Register';
 import { useInactivityTimeout } from './utils/useInactivityTimeout';
 import './styles/variable.css';
@@ -67,6 +68,7 @@ function AppContent() {
           <Route path="/profile-manager" element={<ProfileManager />} />
           <Route path="/outreach-calendar" element={<OutreachCalendar />} />
           <Route path="/chat-history" element={<ChatHistory />} />
+          <Route path="/analytics-trends" element={<AnalyticsTrends />} />
           <Route path="/audit-logs" element={<AuditLogs />} />
         </Routes>
       </div>
