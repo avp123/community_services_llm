@@ -26,7 +26,7 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 2 * 60  # 2 hours
 
 # Global MFA toggle
-MFA_GLOBALLY_ENABLED = False
+MFA_GLOBALLY_ENABLED = True
 
 router = APIRouter(prefix="/api/auth", tags=["authentication"])
 security = HTTPBearer()
