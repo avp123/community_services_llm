@@ -195,3 +195,127 @@
      background: var(--color-border);
      border-radius: var(--radius-xs);
    }
+
+/* ===========================
+   FEEDBACK SURVEY POPUP
+   =========================== */
+
+.feedback-survey-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.feedback-survey-dialog {
+  background: var(--bg-primary, #fff);
+  color: var(--color-text, #222);
+  border-radius: var(--radius-lg, 12px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.feedback-survey-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.feedback-survey-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.feedback-survey-close {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-text-light, #666);
+}
+
+.feedback-survey-sub {
+  margin-top: 0;
+  color: #666;
+}
+
+.feedback-survey-loading {
+  color: #666;
+}
+
+.feedback-survey-question {
+  margin-bottom: 14px;
+}
+
+.feedback-survey-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.feedback-survey-scale {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.feedback-scale-btn {
+  min-width: 42px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+}
+
+.feedback-scale-btn.selected {
+  background: #4f46e5;
+  color: #fff;
+  border: 1px solid #4f46e5;
+}
+
+.feedback-scale-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.feedback-survey-notes-wrap {
+  margin-top: 10px;
+}
+
+.feedback-survey-notes {
+  width: 100%;
+  min-height: 90px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.feedback-survey-save {
+  font-size: 12px;
+  color: #666;
+}
+
+.feedback-survey-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}

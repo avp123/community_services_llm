@@ -28,7 +28,6 @@ from backend.app.login import router as auth_router
 from backend.app.audit_viewer import router as audit_router
 
 from typing import Optional, Union
-import psycopg
 
 from backend.app.database import (
     update_conversation, 
@@ -47,6 +46,9 @@ from backend.app.database import (
     list_conversation_summaries,
     get_user_conversation_global_stats,
     get_conversation_messages_for_user,
+    conversation_owned_by_user,
+    get_session_feedback,
+    upsert_session_feedback_answer,
 )
 from backend.app.generate_outreach import generate_check_ins_rule_based
 from backend.app.notifications import notification_job
@@ -629,44 +631,47 @@ async def connect(sid, environ):
     await sio.emit("welcome", {"message": "Welcome from backend!"}, room=sid)
 
 class FeedbackRequest(BaseModel):
-    conversation_id: str
-    rating: int  # 1 for helpful, 0 for not (or 1-5 scale)
-    feedback_text: Optional[str] = ""
+    question_id: Optional[str] = None
+    value: Optional[int] = None
+    feedback_text: Optional[str] = None
 
-@app.post("/submit_feedback")
-def submit_feedback(feedback: FeedbackRequest):
-    """
-    Receives feedback for a specific conversation and saves it to the DB.
-    """
-    if not feedback.conversation_id:
-        raise HTTPException(status_code=400, detail="Conversation ID is required")
+@app.get("/api/conversations/{conversation_id}/feedback")
+async def get_conversation_feedback(
+    conversation_id: str,
+    current_user: UserData = Depends(get_current_user),
+):
+    ok, owned = conversation_owned_by_user(conversation_id, current_user.username)
+    if not ok:
+        raise HTTPException(status_code=400, detail=owned)
+    if not owned:
+        raise HTTPException(status_code=403, detail="Forbidden")
+    success, payload = get_session_feedback(conversation_id, current_user.username)
+    if not success:
+        raise HTTPException(status_code=400, detail=payload)
+    return {"success": True, "feedback": payload}
 
-    try:
-        # Use your existing connection string
-        with psycopg.connect(os.environ["DATABASE_URL"]) as conn:
-            with conn.cursor() as cur:
-                
-                # Optional: Verify conversation exists first
-                # cur.execute("SELECT 1 FROM conversations WHERE id = %s", (feedback.conversation_id,))
-                # if not cur.fetchone():
-                #     raise HTTPException(status_code=404, detail="Conversation not found")
 
-                cur.execute(
-                    """
-                    INSERT INTO conversation_feedback 
-                    (conversation_id, rating, feedback_text)
-                    VALUES (%s, %s, %s)
-                    """,
-                    (feedback.conversation_id, feedback.rating, feedback.feedback_text)
-                )
-            conn.commit()
-            
-        print(f"[Feedback] Saved for {feedback.conversation_id}: Rating {feedback.rating}")
-        return {"success": True, "message": "Feedback received"}
-
-    except Exception as e:
-        print(f"[Feedback Error] {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+@app.post("/api/conversations/{conversation_id}/feedback")
+async def autosave_conversation_feedback(
+    conversation_id: str,
+    feedback: FeedbackRequest,
+    current_user: UserData = Depends(get_current_user),
+):
+    ok, owned = conversation_owned_by_user(conversation_id, current_user.username)
+    if not ok:
+        raise HTTPException(status_code=400, detail=owned)
+    if not owned:
+        raise HTTPException(status_code=403, detail="Forbidden")
+    success, msg = upsert_session_feedback_answer(
+        conversation_id=conversation_id,
+        username=current_user.username,
+        question_id=feedback.question_id,
+        value=feedback.value,
+        feedback_text=feedback.feedback_text,
+    )
+    if not success:
+        raise HTTPException(status_code=400, detail=msg)
+    return {"success": True, "message": msg}
 
 @sio.event
 async def disconnect(sid):

@@ -224,20 +224,6 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
     }
   }, [selectedServiceUser]);
 
-  const handleFeedbackSubmit = async (rating, comment) => {
-    if (!conversationID) { alert("No active conversation to rate."); return; }
-    try {
-      await authenticatedFetch('/submit_feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ conversation_id: conversationID, rating, feedback_text: comment }),
-      });
-      alert("Thank you for your feedback!");
-    } catch (e) {
-      alert("Failed to save feedback.");
-    }
-  };
-
   const handleScroll = useCallback((e) => {
     const { scrollTop, clientHeight, scrollHeight } = e.target;
     setAutoScrollEnabled(scrollTop + clientHeight >= scrollHeight - SCROLL_THRESHOLD);
@@ -516,48 +502,166 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
             </button>
           )}
         </div>
-        <FeedbackModal isOpen={showFeedback} onClose={() => setShowFeedback(false)} onSubmit={handleFeedbackSubmit} />
+        <FeedbackModal
+          isOpen={showFeedback}
+          onClose={() => setShowFeedback(false)}
+          conversationID={conversationID}
+        />
       </div>
     </div>
   );
 }
 
-const FeedbackModal = ({ isOpen, onClose, onSubmit }) => {
-  const [rating, setRating] = useState(null);
+const SURVEY_QUESTIONS = [
+  { id: 'q1', label: 'How useful was this session for your work?' },
+  { id: 'q2', label: 'How easy was PeerCoPilot to use in this session?' },
+  { id: 'q3', label: 'How confident do you feel using the guidance provided?' },
+  { id: 'q4', label: 'How relevant were the responses/resources to your needs?' },
+  { id: 'q5', label: 'How likely are you to use PeerCoPilot again? (1=never, 5=definitely)' },
+];
+
+const FeedbackModal = ({ isOpen, onClose, conversationID }) => {
+  const [answers, setAnswers] = useState({});
   const [comment, setComment] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  if (!isOpen) return null;
-  const handleSubmit = async () => {
-    if (rating === null) return;
-    setIsSubmitting(true);
-    await onSubmit(rating, comment);
-    setIsSubmitting(false);
-    onClose();
-    setRating(null);
-    setComment('');
+  const [loading, setLoading] = useState(false);
+  const [questionSaving, setQuestionSaving] = useState({});
+  const [questionError, setQuestionError] = useState({});
+  const [commentSaving, setCommentSaving] = useState(false);
+  const [commentSavedAt, setCommentSavedAt] = useState(null);
+
+  const autosaveAnswer = async (questionId, value) => {
+    if (!conversationID) return;
+    setQuestionSaving((prev) => ({ ...prev, [questionId]: true }));
+    setQuestionError((prev) => ({ ...prev, [questionId]: '' }));
+    setAnswers((prev) => ({ ...prev, [questionId]: value }));
+    try {
+      const res = await authenticatedFetch(
+        `/api/conversations/${encodeURIComponent(conversationID)}/feedback`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question_id: questionId, value }),
+        }
+      );
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data?.detail || 'Could not save answer.');
+      }
+    } catch (e) {
+      setQuestionError((prev) => ({ ...prev, [questionId]: e.message || 'Could not save.' }));
+    } finally {
+      setQuestionSaving((prev) => ({ ...prev, [questionId]: false }));
+    }
   };
+
+  const saveComment = async () => {
+    if (!conversationID) return;
+    setCommentSaving(true);
+    try {
+      const res = await authenticatedFetch(
+        `/api/conversations/${encodeURIComponent(conversationID)}/feedback`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ feedback_text: comment }),
+        }
+      );
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data?.detail || 'Could not save comment.');
+      }
+      setCommentSavedAt(Date.now());
+    } catch (e) {
+      alert(e.message || 'Could not save comment.');
+    } finally {
+      setCommentSaving(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!isOpen || !conversationID) return;
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      try {
+        const res = await authenticatedFetch(
+          `/api/conversations/${encodeURIComponent(conversationID)}/feedback`
+        );
+        const data = await res.json();
+        if (!cancelled && res.ok && data?.success) {
+          const f = data.feedback || {};
+          setAnswers({
+            q1: f.q1 ?? null,
+            q2: f.q2 ?? null,
+            q3: f.q3 ?? null,
+            q4: f.q4 ?? null,
+            q5: f.q5 ?? null,
+          });
+          setComment(f.feedback_text || '');
+        }
+      } catch (e) {
+        if (!cancelled) console.error('[FeedbackModal] preload failed', e);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [isOpen, conversationID]);
+
+  if (!isOpen) return null;
+
   return (
-    <div className="modal-overlay">
-      <div className="modal-content" style={{ maxWidth: '400px' }}>
-        <h3>Rate this Session</h3>
-        <p>Was this conversation helpful?</p>
-        <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', margin: '20px 0' }}>
-          <button onClick={() => setRating(1)} className="submit-button"
-            style={{ background: rating === 1 ? '#4CAF50' : '#f0f0f0', color: rating === 1 ? 'white' : '#333', border: rating === 1 ? 'none' : '1px solid #ccc', flex: 1 }}>
-            👍 Helpful
-          </button>
-          <button onClick={() => setRating(0)} className="submit-button"
-            style={{ background: rating === 0 ? '#f44336' : '#f0f0f0', color: rating === 0 ? 'white' : '#333', border: rating === 0 ? 'none' : '1px solid #ccc', flex: 1 }}>
-            👎 Not Helpful
+    <div className="feedback-survey-overlay" role="presentation" onClick={onClose}>
+      <div className="feedback-survey-dialog" role="dialog" aria-labelledby="feedback-survey-title" onClick={(e) => e.stopPropagation()}>
+        <div className="feedback-survey-header">
+          <h3 id="feedback-survey-title">Session Feedback</h3>
+          <button type="button" className="feedback-survey-close" onClick={onClose} aria-label="Close">
+            ×
           </button>
         </div>
-        <textarea placeholder="Optional: What was missing or incorrect?" value={comment}
-          onChange={(e) => setComment(e.target.value)}
-          style={{ width: '100%', height: '80px', marginBottom: '15px', padding: '10px', borderRadius: '8px', border: '1px solid #ddd', fontFamily: 'inherit', resize: 'none' }} />
-        <div className="modal-buttons">
-          <button onClick={onClose} className="btn-cancel" disabled={isSubmitting}>Cancel</button>
-          <button onClick={handleSubmit} className="btn-confirm" disabled={rating === null || isSubmitting}>
-            {isSubmitting ? 'Sending...' : 'Submit Feedback'}
+        <p className="feedback-survey-sub">
+          Optional quick survey. Answers autosave as you click.
+        </p>
+        {loading ? <p className="feedback-survey-loading">Loading previous answers...</p> : null}
+        {!loading && SURVEY_QUESTIONS.map((q) => (
+          <div key={q.id} className="feedback-survey-question">
+            <div className="feedback-survey-label">{q.label}</div>
+            <div className="feedback-survey-scale">
+              {[1, 2, 3, 4, 5].map((v) => (
+                <button
+                  key={v}
+                  type="button"
+                  className={`feedback-scale-btn ${answers[q.id] === v ? 'selected' : ''}`}
+                  onClick={() => autosaveAnswer(q.id, v)}
+                  disabled={!!questionSaving[q.id]}
+                >
+                  {v}
+                </button>
+              ))}
+              <span className="feedback-survey-save">
+                {questionSaving[q.id] ? 'Saving...' : (questionError[q.id] || '')}
+              </span>
+            </div>
+          </div>
+        ))}
+        <div className="feedback-survey-notes-wrap">
+          <label className="feedback-survey-label">
+            Optional notes
+          </label>
+          <textarea
+            className="feedback-survey-notes"
+            placeholder="Any additional comments..."
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            onBlur={saveComment}
+          />
+          <div className="feedback-survey-save">
+            {commentSaving ? 'Saving note...' : (commentSavedAt ? 'Note saved.' : 'Notes save on blur.')}
+          </div>
+        </div>
+        <div className="feedback-survey-actions">
+          <button onClick={onClose} className="btn-cancel" type="button">
+            Close
           </button>
         </div>
       </div>

@@ -904,3 +904,108 @@ def get_conversation_messages_for_user(conversation_id: str, owner_username: str
     except Exception as e:
         print(f"[DB] get_conversation_messages_for_user error: {e}")
         return False, str(e)
+
+
+def conversation_owned_by_user(conversation_id: str, owner_username: str):
+    """Return (True, True/False) if conversation exists and is owned by user."""
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT username FROM conversations WHERE id = %s",
+                    (conversation_id,),
+                )
+                row = cur.fetchone()
+                if row is None:
+                    return True, False
+                return True, row[0] == owner_username
+    except Exception as e:
+        print(f"[DB] conversation_owned_by_user error: {e}")
+        return False, str(e)
+
+
+def get_session_feedback(conversation_id: str, username: str):
+    """Fetch autosaved 5-question feedback row for a conversation+user."""
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    SELECT q1, q2, q3, q4, q5, feedback_text, updated_at
+                    FROM conversation_feedback
+                    WHERE conversation_id = %s AND username = %s
+                    """,
+                    (conversation_id, username),
+                )
+                row = cur.fetchone()
+        if not row:
+            return True, {
+                "q1": None,
+                "q2": None,
+                "q3": None,
+                "q4": None,
+                "q5": None,
+                "feedback_text": "",
+                "updated_at": None,
+            }
+        out = dict(row)
+        ts = out.get("updated_at")
+        if ts is not None and hasattr(ts, "isoformat"):
+            out["updated_at"] = ts.isoformat()
+        return True, out
+    except Exception as e:
+        print(f"[DB] get_session_feedback error: {e}")
+        return False, str(e)
+
+
+def upsert_session_feedback_answer(
+    conversation_id: str,
+    username: str,
+    question_id: Optional[str] = None,
+    value: Optional[int] = None,
+    feedback_text: Optional[str] = None,
+):
+    """Upsert feedback row and update one answer and/or feedback text."""
+    allowed = {"q1", "q2", "q3", "q4", "q5"}
+    if question_id is None and feedback_text is None:
+        return False, "No update payload provided"
+    if question_id is not None and question_id not in allowed:
+        return False, "Invalid question_id"
+    if question_id is not None and (value is None or int(value) < 1 or int(value) > 5):
+        return False, "Value must be an integer between 1 and 5"
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    INSERT INTO conversation_feedback (conversation_id, username, updated_at)
+                    VALUES (%s, %s, NOW())
+                    ON CONFLICT (conversation_id, username)
+                    DO UPDATE SET updated_at = EXCLUDED.updated_at
+                    """,
+                    (conversation_id, username),
+                )
+                if question_id is not None:
+                    cur.execute(
+                        f"""
+                        UPDATE conversation_feedback
+                        SET {question_id} = %s, updated_at = NOW()
+                        WHERE conversation_id = %s AND username = %s
+                        """,
+                        (int(value), conversation_id, username),
+                    )
+                if feedback_text is not None:
+                    cur.execute(
+                        """
+                        UPDATE conversation_feedback
+                        SET feedback_text = %s, updated_at = NOW()
+                        WHERE conversation_id = %s AND username = %s
+                        """,
+                        (feedback_text, conversation_id, username),
+                    )
+            conn.commit()
+        return True, "Saved"
+    except Exception as e:
+        print(f"[DB] upsert_session_feedback_answer error: {e}")
+        return False, str(e)
