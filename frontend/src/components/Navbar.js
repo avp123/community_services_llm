@@ -8,12 +8,14 @@ import OutreachCalendarIcon from '../icons/OutreachCalendar.png';
 import { WellnessContext } from './AppStateContextProvider';
 import Logout from "./Logout.js";
 import AccountProfilePanel from './AccountProfilePanel';
+import AnalyticsPanel from './AnalyticsPanel';
 
 
 function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [accountProfileOpen, setAccountProfileOpen] = useState(false);
+  const [analyticsOpen, setAnalyticsOpen] = useState(false);
   const { organization, user } = useContext(WellnessContext);
   
   const toggleMenu = () => {
@@ -86,8 +88,26 @@ function Navbar() {
           />
           Outreach Calendar
         </Link>
+        <Link
+          to="/chat-history"
+          className={`navbar-button ${
+            location.pathname === '/chat-history' ? 'active' : ''
+          }`}
+        >
+          Chat history
+        </Link>
 
         <div className="navbar-footer-actions">
+          <button
+            type="button"
+            className="navbar-profile-link"
+            onClick={() => {
+              setAnalyticsOpen(true);
+              setMenuOpen(false);
+            }}
+          >
+            Analytics
+          </button>
           <button
             type="button"
             className="navbar-profile-link"
@@ -101,6 +121,7 @@ function Navbar() {
           <Logout />
         </div>
       </div>
+      <AnalyticsPanel open={analyticsOpen} onClose={() => setAnalyticsOpen(false)} />
       <AccountProfilePanel open={accountProfileOpen} onClose={() => setAccountProfileOpen(false)} />
     </nav>
   );

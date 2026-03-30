@@ -90,6 +90,41 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   const [checkIns, setCheckIns] = useState([]);
   const [version, setVersion] = useState('new');
 
+  const hydrateConversationFromDb = useCallback(async ({ allowRegression = true } = {}) => {
+    if (!conversationID || !user?.isAuthenticated) return;
+    try {
+      const res = await authenticatedFetch(
+        `/api/conversations/${encodeURIComponent(conversationID)}`
+      );
+      const data = await res.json();
+      if (!res.ok || !data?.success) return;
+      const rows = Array.isArray(data.messages) ? data.messages : [];
+
+      const hydratedConversation = rows.map((m) => ({
+        sender: m.sender === 'user' ? 'user' : 'bot',
+        text: m.text || '',
+      }));
+      const hydratedChatConvo = rows.map((m) => ({
+        role: m.sender === 'user' ? 'user' : 'assistant',
+        content: m.text || '',
+      }));
+
+      setConversation((prev) => {
+        if (allowRegression) return hydratedConversation;
+        // Guard: never replace local state with an older/shorter transcript.
+        if (hydratedConversation.length < prev.length) return prev;
+        return hydratedConversation;
+      });
+      setChatConvo((prev) => {
+        if (allowRegression) return hydratedChatConvo;
+        if (hydratedChatConvo.length < prev.length) return prev;
+        return hydratedChatConvo;
+      });
+    } catch (e) {
+      console.error('[GenericChat] Failed to hydrate conversation from DB:', e);
+    }
+  }, [conversationID, user?.isAuthenticated, setConversation, setChatConvo]);
+
   // Fetch service users ONCE when username is available.
   // Because serviceUsers lives in context, this only actually fetches if the
   // list is empty — subsequent tab switches find the list already populated.
@@ -100,6 +135,44 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
       .catch(console.error);
   }, [user?.username]); // eslint-disable-line react-hooks/exhaustive-deps
   // ^ intentionally omitting serviceUsers.length to avoid re-running when list updates
+
+  // Restore from DB when returning to an existing conversation with empty local state.
+  // This preserves smooth streaming during active generation (no mid-stream overwrites).
+  useEffect(() => {
+    if (!conversationID || isGenerating) return;
+    if (conversation.length > 0) return;
+    hydrateConversationFromDb({ allowRegression: false });
+  }, [conversationID, isGenerating, conversation.length, hydrateConversationFromDb]);
+
+  // If user returns from another tab/page, refresh once from DB to recover from missed socket events.
+  useEffect(() => {
+    if (!conversationID) return;
+    const onVisibleOrFocus = () => {
+      if (isGenerating) return;
+      hydrateConversationFromDb({ allowRegression: false });
+    };
+    document.addEventListener('visibilitychange', onVisibleOrFocus);
+    window.addEventListener('focus', onVisibleOrFocus);
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibleOrFocus);
+      window.removeEventListener('focus', onVisibleOrFocus);
+    };
+  }, [conversationID, isGenerating, hydrateConversationFromDb]);
+
+  // Watchdog: if the last bubble is still "Loading...", reconcile in background
+  // without regressing local state. This fixes missed generation_complete/update events.
+  useEffect(() => {
+    if (!conversationID) return;
+    const last = conversation[conversation.length - 1];
+    const waitingOnAssistant = last?.sender === 'bot' && last?.text === 'Loading...';
+    if (!waitingOnAssistant) return;
+
+    const intervalId = setInterval(() => {
+      hydrateConversationFromDb({ allowRegression: false });
+    }, 1800);
+
+    return () => clearInterval(intervalId);
+  }, [conversationID, conversation, hydrateConversationFromDb]);
 
   // Socket setup
   useEffect(() => {
@@ -129,12 +202,15 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
       setResources(data.resources);
     });
 
-    newSocket.on('generation_complete', () => setIsGenerating(false));
+    newSocket.on('generation_complete', () => {
+      setIsGenerating(false);
+      hydrateConversationFromDb({ allowRegression: false });
+    });
     newSocket.on('error', (e) => console.error('[Socket.io] Error:', e));
     newSocket.on('disconnect', (r) => console.log('[Socket.io] Disconnected:', r));
 
     return () => newSocket.disconnect();
-  }, [socketServerUrl, setConversation]);
+  }, [socketServerUrl, setConversation, hydrateConversationFromDb]);
 
   // Fetch check-ins when selected user changes
   useEffect(() => {

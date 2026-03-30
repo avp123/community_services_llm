@@ -44,6 +44,9 @@ from backend.app.database import (
     fetch_service_user_custom_prompt,
     fetch_account_custom_prompt,
     update_account_custom_prompt,
+    list_conversation_summaries,
+    get_user_conversation_global_stats,
+    get_conversation_messages_for_user,
 )
 from backend.app.generate_outreach import generate_check_ins_rule_based
 from backend.app.notifications import notification_job
@@ -172,6 +175,69 @@ async def set_account_prompt(
     if success:
         return {"success": True, "message": message}
     raise HTTPException(status_code=400, detail=message)
+
+
+@app.get("/api/conversations/summary")
+async def conversation_summary_list(
+    current_user: UserData = Depends(get_current_user),
+    limit: int = 50,
+    offset: int = 0,
+):
+    """List conversation aggregates for the current provider."""
+    success, result = list_conversation_summaries(
+        current_user.username, limit=limit, offset=offset
+    )
+    if success:
+        return {"success": True, "conversations": result}
+    raise HTTPException(status_code=400, detail=result)
+
+
+@app.get("/api/conversations/global-stats")
+async def conversation_global_stats(
+    current_user: UserData = Depends(get_current_user),
+):
+    """Aggregate analytics across all conversations for the current provider."""
+    success, result = get_user_conversation_global_stats(current_user.username)
+    if success:
+        return {"success": True, "stats": result}
+    raise HTTPException(status_code=400, detail=result)
+
+
+@app.get("/api/conversations/{conversation_id}")
+async def conversation_messages_detail(
+    conversation_id: str,
+    current_user: UserData = Depends(get_current_user),
+    req: Request = None,
+):
+    """Return transcript for one conversation if owned by the current user."""
+    success, payload = get_conversation_messages_for_user(
+        conversation_id, current_user.username
+    )
+    if not success:
+        if payload == "not_found":
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        if payload == "forbidden":
+            raise HTTPException(status_code=403, detail="Forbidden")
+        raise HTTPException(status_code=400, detail=payload)
+    service_user_id = payload.get("service_user_id") or ""
+    AuditLogger.log_phi_access(
+        username=current_user.username,
+        user_role=current_user.role,
+        action="view_conversation_transcript",
+        patient_id=service_user_id or "unknown",
+        ip_address=req.client.host if req and req.client else None,
+        details={"conversation_id": conversation_id},
+    )
+    return {
+        "success": True,
+        "conversation_id": conversation_id,
+        "service_user_id": service_user_id,
+        "title": payload.get("title"),
+        "stats_tool_calls_total": payload.get("stats_tool_calls_total"),
+        "stats_tool_calls_by_name": payload.get("stats_tool_calls_by_name"),
+        "messages": payload["messages"],
+        "summary": payload.get("summary"),
+    }
 
     
 # Health check endpoints
@@ -491,14 +557,16 @@ def _background_stream(
             )
         combined_custom_prompt = "\n\n".join(extra_prompt_parts) if extra_prompt_parts else None
         
-        # Send scrubbed content to GPT
+        # Send scrubbed content to GPT (tool_call names collected for per-chat analytics)
+        tool_names_this_turn = []
         gen = construct_response(
             scrubbed_text,  # Use scrubbed text
             scrubbed_history,  # Use scrubbed history
-            model, 
+            model,
             organization,
             version,
             profile_custom_prompt=combined_custom_prompt,
+            tool_call_names_out=tool_names_this_turn,
         )
         
         for accumulated_text in accumulate_chunks(gen):
@@ -513,9 +581,11 @@ def _background_stream(
             metadata,
             [
                 {'role': 'user', 'content': text},
-                {'role': 'system', 'content': accumulated_text}
+                {'role': 'system', 'content': accumulated_text},
             ],
-            service_user_id
+            service_user_id,
+            scrubbed_first_user_text=scrubbed_text,
+            tool_names_this_turn=tool_names_this_turn or None,
         )
         
         # Log completion

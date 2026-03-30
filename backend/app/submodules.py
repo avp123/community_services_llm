@@ -8,7 +8,7 @@ import os
 import json 
 import re
 import time
-from typing import Optional
+from typing import List, Optional
 import concurrent.futures
 import threading
 import numpy as np
@@ -582,6 +582,7 @@ def construct_response(
     organization: str,
     version: str = "new",
     profile_custom_prompt: Optional[str] = None,
+    tool_call_names_out: Optional[List[str]] = None,
 ):
     # Route to appropriate version implementation
     print(f"[construct_response] Version received: {version}")  # Add this
@@ -589,7 +590,12 @@ def construct_response(
         # NEW VERSION: Current implementation with all tools
         print("[construct_response] Routing to NEW VERSION")  # Add this
         return _construct_response_new(
-            situation, all_messages, model, organization, profile_custom_prompt
+            situation,
+            all_messages,
+            model,
+            organization,
+            profile_custom_prompt,
+            tool_call_names_out=tool_call_names_out,
         )
     elif version == "old":
         # OLD VERSION: RAG retrieval → inject into prompt → GPT call (no tools)
@@ -607,7 +613,12 @@ def construct_response(
         # Default to new version if unknown version
         print("[construct_response] Routing to NEW VERSION (default)")  # Add this
         return _construct_response_new(
-            situation, all_messages, model, organization, profile_custom_prompt
+            situation,
+            all_messages,
+            model,
+            organization,
+            profile_custom_prompt,
+            tool_call_names_out=tool_call_names_out,
         )
 
 def _construct_response_new(
@@ -616,6 +627,7 @@ def _construct_response_new(
     model: str,
     organization: str,
     profile_custom_prompt: Optional[str] = None,
+    tool_call_names_out: Optional[List[str]] = None,
 ):
     print("Organization", organization)
 
@@ -851,6 +863,8 @@ def _construct_response_new(
 
         for tool_call in choice.message.tool_calls:
             name = tool_call.function.name
+            if tool_call_names_out is not None:
+                tool_call_names_out.append(name)
             args = json.loads(tool_call.function.arguments)
 
             print(f"[DEBUG] Executing {name} with {args}")

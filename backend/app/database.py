@@ -4,9 +4,11 @@ Provides thin helpers for conversation and outreach CRUD operations.
 """
 
 import hashlib
-from typing import Optional
+import json
+from typing import Any, Dict, List, Optional
 
 import psycopg
+import psycopg.errors
 from psycopg.rows import dict_row
 import os
 from datetime import date as _date, datetime as _datetime
@@ -23,7 +25,174 @@ else:
 if _USE_LOCAL_DB:
     print("[DB] Local main DB mode enabled.")
 
-def update_conversation(metadata, previous_text, service_user_id):
+
+def _refresh_conversation_stats(cursor, conversation_id: str) -> None:
+    """Denormalize roll-up stats onto conversations after new messages (optional columns)."""
+    try:
+        cursor.execute(
+            """
+            UPDATE conversations c SET
+                stats_message_count = agg.cnt,
+                stats_user_messages = agg.ucnt,
+                stats_assistant_messages = agg.acnt,
+                stats_total_chars = agg.tchars,
+                stats_user_chars = agg.uchars,
+                stats_assistant_chars = agg.achars,
+                stats_first_message_at = agg.first_at,
+                stats_last_message_at = agg.last_at,
+                stats_updated_at = NOW()
+            FROM (
+                SELECT
+                    COUNT(*)::int AS cnt,
+                    COUNT(*) FILTER (WHERE sender = 'user')::int AS ucnt,
+                    COUNT(*) FILTER (WHERE sender IN ('system', 'assistant'))::int AS acnt,
+                    COALESCE(SUM(CHAR_LENGTH(COALESCE(text, ''))), 0)::bigint AS tchars,
+                    COALESCE(
+                        SUM(CHAR_LENGTH(COALESCE(text, ''))) FILTER (WHERE sender = 'user'),
+                        0
+                    )::bigint AS uchars,
+                    COALESCE(
+                        SUM(CHAR_LENGTH(COALESCE(text, '')))
+                        FILTER (WHERE sender IN ('system', 'assistant')),
+                        0
+                    )::bigint AS achars,
+                    MIN(created_at) AS first_at,
+                    MAX(created_at) AS last_at
+                FROM messages
+                WHERE conversation_id = %s
+            ) agg
+            WHERE c.id = %s
+            """,
+            (conversation_id, conversation_id),
+        )
+    except psycopg.errors.UndefinedColumn:
+        # If stats columns don't exist yet, Postgres marks the transaction aborted.
+        # Roll back just this failed statement's transaction so later updates can succeed.
+        cursor.connection.rollback()
+        return
+    except Exception as e:
+        print(f"[DB] _refresh_conversation_stats (non-fatal): {e}")
+
+
+def _try_set_conversation_title(cursor, conversation_id: str, scrubbed: str) -> None:
+    """Set conversations.title once when still empty (migration 002)."""
+    if not scrubbed or not str(scrubbed).strip():
+        return
+    try:
+        from backend.app.conversation_meta import derive_chat_title_from_scrubbed_text
+
+        title = derive_chat_title_from_scrubbed_text(scrubbed)
+        cursor.execute(
+            """
+            UPDATE conversations
+            SET title = %s
+            WHERE id = %s
+              AND (title IS NULL OR TRIM(COALESCE(title, '')) = '')
+            """,
+            (title, conversation_id),
+        )
+    except psycopg.errors.UndefinedColumn:
+        cursor.connection.rollback()
+        return
+    except Exception as e:
+        print(f"[DB] _try_set_conversation_title (non-fatal): {e}")
+
+
+def _merge_tool_usage_stats(cursor, conversation_id: str, tool_names: List[str]) -> None:
+    """Increment per-conversation tool counters (migration 002)."""
+    if not tool_names:
+        return
+    try:
+        cursor.execute(
+            """
+            SELECT stats_tool_calls_total, stats_tool_calls_by_name
+            FROM conversations WHERE id = %s
+            """,
+            (conversation_id,),
+        )
+        row = cursor.fetchone()
+        if not row:
+            return
+        prev_total = row[0] or 0
+        raw = row[1]
+        if raw is None:
+            by_name: Dict[str, int] = {}
+        elif isinstance(raw, dict):
+            by_name = {str(k): int(v) for k, v in raw.items()}
+        else:
+            by_name = {}
+        for t in tool_names:
+            by_name[t] = by_name.get(t, 0) + 1
+        new_total = prev_total + len(tool_names)
+        cursor.execute(
+            """
+            UPDATE conversations
+            SET stats_tool_calls_total = %s,
+                stats_tool_calls_by_name = %s::jsonb
+            WHERE id = %s
+            """,
+            (new_total, json.dumps(by_name), conversation_id),
+        )
+    except psycopg.errors.UndefinedColumn:
+        cursor.connection.rollback()
+        return
+    except Exception as e:
+        print(f"[DB] _merge_tool_usage_stats (non-fatal): {e}")
+
+
+def _summarize_message_rows(messages: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Build summary stats from loaded message dicts (sender, text, created_at)."""
+    user_n = ast_n = 0
+    total_chars = user_chars = ast_chars = 0
+    times: List[str] = []
+    for m in messages:
+        s = m.get("sender") or ""
+        text = m.get("text") or ""
+        ln = len(text)
+        total_chars += ln
+        if s == "user":
+            user_n += 1
+            user_chars += ln
+        elif s in ("system", "assistant"):
+            ast_n += 1
+            ast_chars += ln
+        ca = m.get("created_at")
+        if ca is not None:
+            times.append(ca if isinstance(ca, str) else ca.isoformat())
+    first_at = min(times) if times else None
+    last_at = max(times) if times else None
+    n = len(messages)
+    duration_seconds = None
+    if first_at and last_at:
+        try:
+            from datetime import datetime
+
+            a = datetime.fromisoformat(first_at.replace("Z", "+00:00"))
+            b = datetime.fromisoformat(last_at.replace("Z", "+00:00"))
+            duration_seconds = (b - a).total_seconds()
+        except (ValueError, TypeError):
+            pass
+    return {
+        "message_count": n,
+        "user_message_count": user_n,
+        "assistant_message_count": ast_n,
+        "total_chars": total_chars,
+        "user_chars": user_chars,
+        "assistant_chars": ast_chars,
+        "first_message_at": first_at,
+        "last_message_at": last_at,
+        "duration_seconds": duration_seconds,
+        "avg_chars_per_message": round(total_chars / n, 1) if n else 0.0,
+    }
+
+
+def update_conversation(
+    metadata,
+    previous_text,
+    service_user_id,
+    scrubbed_first_user_text: Optional[str] = None,
+    tool_names_this_turn: Optional[List[str]] = None,
+):
     """
     Update the information in the conversations database
         Based on a new message
@@ -31,7 +200,9 @@ def update_conversation(metadata, previous_text, service_user_id):
     Arguments:
         metadata: Dictionary with username and conversation_id
         previous_text: List of dictionaries with sender and text
-    
+        scrubbed_first_user_text: PHI-scrubbed first user line for one-time title (optional)
+        tool_names_this_turn: Tool function names invoked during this generation (optional)
+
     Returns: None
 
     Side Effects: Writes the text in previous_text to the database
@@ -57,6 +228,12 @@ def update_conversation(metadata, previous_text, service_user_id):
             (conversation_id, username,False, service_user_id)
         )
 
+    cursor.execute(
+        "SELECT COUNT(*) FROM messages WHERE conversation_id = %s",
+        (conversation_id,),
+    )
+    msg_count_before = cursor.fetchone()[0]
+
     for msg in previous_text:
         sender = msg["role"]
         text = msg["content"]
@@ -67,6 +244,20 @@ def update_conversation(metadata, previous_text, service_user_id):
                 "INSERT INTO messages (conversation_id, sender, text, text_hash, service_user_id) VALUES (%s, %s, %s, %s, %s) ON CONFLICT (conversation_id, sender, text_hash) DO NOTHING",
                 (conversation_id, sender, text, text_hash, service_user_id)
             )
+
+    # Commit base writes (conversation row + messages) first.
+    # This prevents a later "optional column" failure from rolling back/poisoning
+    # the core persistence, which would make chats disappear from history.
+    conn.commit()
+
+    # Start a fresh transaction for optional rollups (stats/title/tool counters).
+    cursor = conn.cursor()
+    _refresh_conversation_stats(cursor, conversation_id)
+
+    if msg_count_before == 0 and scrubbed_first_user_text:
+        _try_set_conversation_title(cursor, conversation_id, scrubbed_first_user_text)
+    if tool_names_this_turn:
+        _merge_tool_usage_stats(cursor, conversation_id, tool_names_this_turn)
 
     conn.commit()
     conn.close()
@@ -462,4 +653,254 @@ def update_last_session_db(service_user_id: str, last_session: str):
         return True, "Last session updated"
     except Exception as e:
         print(f"[DB] update_last_session_db error: {e}")
+        return False, str(e)
+
+
+def list_conversation_summaries(username: str, limit: int = 50, offset: int = 0):
+    """
+    Aggregate per-conversation stats for a provider. Returns (True, list[dict]) or (False, error str).
+    """
+    limit = max(1, min(int(limit), 200))
+    offset = max(0, int(offset))
+    sql = """
+        SELECT
+            c.id AS conversation_id,
+            c.service_user_id,
+            p.service_user_name,
+            c.title,
+            c.stats_tool_calls_total,
+            c.stats_tool_calls_by_name,
+            COUNT(m.id) AS message_count,
+            COUNT(m.id) FILTER (WHERE m.sender = 'user') AS user_message_count,
+            COUNT(m.id) FILTER (WHERE m.sender IN ('system', 'assistant')) AS assistant_message_count,
+            COALESCE(SUM(CHAR_LENGTH(COALESCE(m.text, ''))), 0)::bigint AS total_chars,
+            COALESCE(
+                SUM(CHAR_LENGTH(COALESCE(m.text, ''))) FILTER (WHERE m.sender = 'user'),
+                0
+            )::bigint AS user_chars,
+            COALESCE(
+                SUM(CHAR_LENGTH(COALESCE(m.text, '')))
+                FILTER (WHERE m.sender IN ('system', 'assistant')),
+                0
+            )::bigint AS assistant_chars,
+            MIN(m.created_at) AS first_message_at,
+            MAX(m.created_at) AS last_message_at
+        FROM conversations c
+        LEFT JOIN messages m ON m.conversation_id = c.id
+        LEFT JOIN profiles p
+            ON p.service_user_id = c.service_user_id AND p.provider = c.username
+        WHERE c.username = %s
+        GROUP BY c.id, c.service_user_id, p.service_user_name, c.title,
+                 c.stats_tool_calls_total, c.stats_tool_calls_by_name
+        ORDER BY MAX(m.created_at) DESC NULLS LAST, c.id DESC
+        LIMIT %s OFFSET %s
+    """
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(sql, (username, limit, offset))
+                rows = cur.fetchall()
+        out = []
+        for r in rows:
+            d = dict(r)
+            first_at = d.get("first_message_at")
+            last_at = d.get("last_message_at")
+            duration_seconds = None
+            if first_at is not None and last_at is not None:
+                try:
+                    duration_seconds = (last_at - first_at).total_seconds()
+                except (TypeError, AttributeError):
+                    duration_seconds = None
+            d["duration_seconds"] = duration_seconds
+            if first_at is not None and hasattr(first_at, "isoformat"):
+                d["first_message_at"] = first_at.isoformat()
+            if last_at is not None and hasattr(last_at, "isoformat"):
+                d["last_message_at"] = last_at.isoformat()
+            mc = d.get("message_count") or 0
+            d["avg_chars_per_message"] = (
+                round(d["total_chars"] / mc, 1) if mc else 0.0
+            )
+            for k in (
+                "message_count",
+                "user_message_count",
+                "assistant_message_count",
+                "total_chars",
+                "user_chars",
+                "assistant_chars",
+            ):
+                if d.get(k) is None:
+                    d[k] = 0
+            tc = d.get("stats_tool_calls_total")
+            d["stats_tool_calls_total"] = int(tc) if tc is not None else 0
+            raw_tools = d.get("stats_tool_calls_by_name")
+            if raw_tools is None:
+                d["stats_tool_calls_by_name"] = {}
+            elif isinstance(raw_tools, dict):
+                d["stats_tool_calls_by_name"] = {
+                    str(k): int(v) for k, v in raw_tools.items()
+                }
+            else:
+                d["stats_tool_calls_by_name"] = {}
+            out.append(d)
+        return True, out
+    except Exception as e:
+        print(f"[DB] list_conversation_summaries error: {e}")
+        return False, str(e)
+
+
+def get_user_conversation_global_stats(username: str):
+    """
+    Global conversation analytics for one provider account.
+    Returns (True, dict) or (False, error str).
+    """
+    sql = """
+        WITH per_conv AS (
+            SELECT
+                c.id AS conversation_id,
+                MIN(m.created_at) AS first_message_at,
+                MAX(m.created_at) AS last_message_at,
+                COUNT(m.id)::int AS message_count,
+                COUNT(m.id) FILTER (WHERE m.sender = 'user')::int AS user_message_count,
+                COUNT(m.id) FILTER (WHERE m.sender IN ('system', 'assistant'))::int AS assistant_message_count,
+                COALESCE(SUM(CHAR_LENGTH(COALESCE(m.text, ''))), 0)::bigint AS total_chars
+            FROM conversations c
+            LEFT JOIN messages m ON m.conversation_id = c.id
+            WHERE c.username = %s
+            GROUP BY c.id
+        )
+        SELECT
+            COUNT(*)::int AS conversation_count,
+            COALESCE(SUM(message_count), 0)::bigint AS message_count,
+            COALESCE(SUM(user_message_count), 0)::bigint AS user_message_count,
+            COALESCE(SUM(assistant_message_count), 0)::bigint AS assistant_message_count,
+            COALESCE(SUM(total_chars), 0)::bigint AS total_chars,
+            MIN(first_message_at) AS first_message_at,
+            MAX(last_message_at) AS last_message_at,
+            COALESCE(
+                AVG(EXTRACT(EPOCH FROM (last_message_at - first_message_at)))
+                FILTER (WHERE first_message_at IS NOT NULL AND last_message_at IS NOT NULL),
+                0
+            )::double precision AS avg_duration_seconds
+        FROM per_conv
+    """
+    tools_sql = """
+        SELECT c.stats_tool_calls_by_name
+        FROM conversations c
+        WHERE c.username = %s
+          AND c.stats_tool_calls_by_name IS NOT NULL
+    """
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(sql, (username,))
+                row = dict(cur.fetchone() or {})
+                cur.execute(tools_sql, (username,))
+                tool_rows = cur.fetchall()
+
+        conversation_count = int(row.get("conversation_count") or 0)
+        message_count = int(row.get("message_count") or 0)
+        user_message_count = int(row.get("user_message_count") or 0)
+        assistant_message_count = int(row.get("assistant_message_count") or 0)
+        total_chars = int(row.get("total_chars") or 0)
+
+        tool_totals: Dict[str, int] = {}
+        for r in tool_rows:
+            raw = r.get("stats_tool_calls_by_name")
+            if isinstance(raw, dict):
+                for k, v in raw.items():
+                    key = str(k)
+                    tool_totals[key] = tool_totals.get(key, 0) + int(v or 0)
+
+        top_tools = [
+            {"name": name, "count": count}
+            for name, count in sorted(tool_totals.items(), key=lambda kv: kv[1], reverse=True)[:5]
+        ]
+        total_tool_calls = sum(tool_totals.values())
+
+        first_at = row.get("first_message_at")
+        last_at = row.get("last_message_at")
+        avg_duration_seconds = float(row.get("avg_duration_seconds") or 0.0)
+
+        return True, {
+            "conversation_count": conversation_count,
+            "message_count": message_count,
+            "user_message_count": user_message_count,
+            "assistant_message_count": assistant_message_count,
+            "total_chars": total_chars,
+            "avg_messages_per_conversation": round(message_count / conversation_count, 2) if conversation_count else 0.0,
+            "avg_chars_per_message": round(total_chars / message_count, 2) if message_count else 0.0,
+            "avg_duration_seconds": round(avg_duration_seconds, 2),
+            "first_message_at": first_at.isoformat() if first_at is not None and hasattr(first_at, "isoformat") else None,
+            "last_message_at": last_at.isoformat() if last_at is not None and hasattr(last_at, "isoformat") else None,
+            "total_tool_calls": int(total_tool_calls),
+            "distinct_tool_count": len(tool_totals),
+            "top_tools": top_tools,
+        }
+    except Exception as e:
+        print(f"[DB] get_user_conversation_global_stats error: {e}")
+        return False, str(e)
+
+
+def get_conversation_messages_for_user(conversation_id: str, owner_username: str):
+    """
+    Load messages if the conversation belongs to owner_username.
+    Returns (True, list[dict]) | (False, 'forbidden'|'not_found'|error str).
+    """
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    SELECT id, username, service_user_id, title,
+                           stats_tool_calls_total, stats_tool_calls_by_name
+                    FROM conversations WHERE id = %s
+                    """,
+                    (conversation_id,),
+                )
+                conv = cur.fetchone()
+                if conv is None:
+                    return False, "not_found"
+                if conv.get("username") != owner_username:
+                    return False, "forbidden"
+                service_user_id = conv.get("service_user_id")
+                tc = conv.get("stats_tool_calls_total")
+                tool_total = int(tc) if tc is not None else 0
+                raw_tools = conv.get("stats_tool_calls_by_name")
+                if raw_tools is None:
+                    tool_by_name: Dict[str, int] = {}
+                elif isinstance(raw_tools, dict):
+                    tool_by_name = {str(k): int(v) for k, v in raw_tools.items()}
+                else:
+                    tool_by_name = {}
+                cur.execute(
+                    """
+                    SELECT sender, text, created_at
+                    FROM messages
+                    WHERE conversation_id = %s
+                    ORDER BY created_at ASC NULLS LAST
+                    """,
+                    (conversation_id,),
+                )
+                msgs = cur.fetchall()
+        result = []
+        for m in msgs:
+            row = dict(m)
+            ca = row.get("created_at")
+            if ca is not None and hasattr(ca, "isoformat"):
+                row["created_at"] = ca.isoformat()
+            result.append(row)
+        summary = _summarize_message_rows(result)
+        return True, {
+            "service_user_id": service_user_id,
+            "title": conv.get("title"),
+            "stats_tool_calls_total": tool_total,
+            "stats_tool_calls_by_name": tool_by_name,
+            "messages": result,
+            "summary": summary,
+        }
+    except Exception as e:
+        print(f"[DB] get_conversation_messages_for_user error: {e}")
         return False, str(e)

@@ -9,6 +9,7 @@ import {WellnessGoals} from './components/GenericChat';
 import {WellnessContextProvider, WellnessContext} from './components/AppStateContextProvider.js';
 import ProfileManager from './components/ProfileManager';
 import OutreachCalendar from './components/OutreachCalendar';
+import ChatHistory from './components/ChatHistory';
 import Register from './components/Register';
 import { useInactivityTimeout } from './utils/useInactivityTimeout';
 import './styles/variable.css';
@@ -65,6 +66,7 @@ function AppContent() {
           <Route path="/wellness-goals" element={<WellnessGoals />} />
           <Route path="/profile-manager" element={<ProfileManager />} />
           <Route path="/outreach-calendar" element={<OutreachCalendar />} />
+          <Route path="/chat-history" element={<ChatHistory />} />
           <Route path="/audit-logs" element={<AuditLogs />} />
         </Routes>
       </div>
