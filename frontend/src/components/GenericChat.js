@@ -79,6 +79,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   const conversationEndRef = useRef(null);
 
   const [socket, setSocket] = useState(null);
+  const socketRef = useRef(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [autoScrollEnabled, setAutoScrollEnabled] = useState(true);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -90,12 +91,64 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   const [checkIns, setCheckIns] = useState([]);
   const [version, setVersion] = useState('new');
 
+  // Keep latest values for hydrate 404 guard without putting `conversation` / `isGenerating`
+  // in hydrate's useCallback deps — those would change every stream chunk and were forcing the
+  // socket effect to tear down/reconnect (wiping server session_histories and breaking replies).
+  const isGeneratingRef = useRef(false);
+  const conversationHydrateGuardRef = useRef([]);
+  isGeneratingRef.current = isGenerating;
+  conversationHydrateGuardRef.current = conversation;
+
+  useEffect(() => {
+    socketRef.current = socket;
+  }, [socket]);
+
+  const performPlannerReset = useCallback(
+    (reason, socketMeta = null) => {
+      setConversation([]);
+      setChatConvo([]);
+      setConversationID('');
+      setGoals([]);
+      setResources([]);
+      setCheckIns([]);
+      setShowFeedback(false);
+      const s = socketRef.current;
+      if (s) {
+        s.emit('reset_session', {
+          reason,
+          previous_service_user_id:
+            socketMeta?.previous_service_user_id ?? (selectedServiceUser || 'general'),
+          new_service_user_id:
+            socketMeta?.new_service_user_id ?? (selectedServiceUser || 'general'),
+        });
+      }
+    },
+    [
+      selectedServiceUser,
+      setConversation,
+      setChatConvo,
+      setConversationID,
+    ]
+  );
+
   const hydrateConversationFromDb = useCallback(async ({ allowRegression = true } = {}) => {
     if (!conversationID || !user?.isAuthenticated) return;
     try {
       const res = await authenticatedFetch(
         `/api/conversations/${encodeURIComponent(conversationID)}`
       );
+      if (res.status === 404) {
+        // First DB write often happens after streaming; until then GET 404s. Never wipe the
+        // planner UI while we're generating or still showing the assistant loading placeholder.
+        const conv = conversationHydrateGuardRef.current;
+        const last = conv[conv.length - 1];
+        const pendingAssistant = last?.sender === 'bot' && last?.text === 'Loading...';
+        if (isGeneratingRef.current || pendingAssistant) {
+          return;
+        }
+        performPlannerReset('conversation_not_found');
+        return;
+      }
       const data = await res.json();
       if (!res.ok || !data?.success) return;
       const rows = Array.isArray(data.messages) ? data.messages : [];
@@ -123,7 +176,10 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
     } catch (e) {
       console.error('[GenericChat] Failed to hydrate conversation from DB:', e);
     }
-  }, [conversationID, user?.isAuthenticated, setConversation, setChatConvo]);
+  }, [conversationID, user?.isAuthenticated, setConversation, setChatConvo, performPlannerReset]);
+
+  const hydrateConversationFromDbRef = useRef(hydrateConversationFromDb);
+  hydrateConversationFromDbRef.current = hydrateConversationFromDb;
 
   // Fetch service users ONCE when username is available.
   // Because serviceUsers lives in context, this only actually fetches if the
@@ -174,6 +230,14 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
     return () => clearInterval(intervalId);
   }, [conversationID, conversation, hydrateConversationFromDb]);
 
+  useEffect(() => {
+    const onPlannerReset = (e) => {
+      performPlannerReset(e.detail?.reason || 'planner_reset');
+    };
+    window.addEventListener('peercopilot:planner-reset', onPlannerReset);
+    return () => window.removeEventListener('peercopilot:planner-reset', onPlannerReset);
+  }, [performPlannerReset]);
+
   // Socket setup
   useEffect(() => {
     const newSocket = io(socketServerUrl, SOCKET_CONFIG);
@@ -204,13 +268,13 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
 
     newSocket.on('generation_complete', () => {
       setIsGenerating(false);
-      hydrateConversationFromDb({ allowRegression: false });
+      hydrateConversationFromDbRef.current({ allowRegression: false });
     });
     newSocket.on('error', (e) => console.error('[Socket.io] Error:', e));
     newSocket.on('disconnect', (r) => console.log('[Socket.io] Disconnected:', r));
 
     return () => newSocket.disconnect();
-  }, [socketServerUrl, setConversation, hydrateConversationFromDb]);
+  }, [socketServerUrl]);
 
   // Fetch check-ins when selected user changes
   useEffect(() => {
@@ -256,15 +320,29 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   const handleSubmit = useCallback(() => {
     if (!inputText.trim() || isGenerating || !socket) return;
     const messageText = inputText.trim();
-    setConversation(prev => [...prev, { sender: 'user', text: messageText }, { sender: 'bot', text: 'Loading...' }]);
-    setChatConvo(prev => [...prev, { role: 'user', content: messageText }]);
+    // Build history from visible thread (not chatConvo): chatConvo can lag after navigation because
+    // hydrate is skipped when conversation already has bubbles. Server session is keyed by socket sid
+    // and resets on reconnect, so we always send the full prior transcript for the model.
+    const previous_text = conversation
+      .filter((m) => !(m.sender === 'bot' && m.text === 'Loading...'))
+      .map((m) => ({
+        role: m.sender === 'user' ? 'user' : 'assistant',
+        content: m.text || '',
+      }));
+
+    setConversation((prev) => [
+      ...prev,
+      { sender: 'user', text: messageText },
+      { sender: 'bot', text: 'Loading...' },
+    ]);
+    setChatConvo([...previous_text, { role: 'user', content: messageText }]);
     setInputText('');
     setIsGenerating(true);
 
     console.log('[GenericChat] start_generation, service_user_id:', selectedServiceUser);
     socket.emit('start_generation', {
       text: messageText,
-      previous_text: chatConvo,
+      previous_text,
       model: 'A',
       organization,
       tool,
@@ -273,7 +351,21 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
       service_user_id: selectedServiceUser || null,
       version,
     });
-  }, [inputText, isGenerating, socket, chatConvo, conversationID, organization, user, tool, version, selectedServiceUser, setConversation, setChatConvo, setInputText]);
+  }, [
+    inputText,
+    isGenerating,
+    socket,
+    conversation,
+    conversationID,
+    organization,
+    user,
+    tool,
+    version,
+    selectedServiceUser,
+    setConversation,
+    setChatConvo,
+    setInputText,
+  ]);
 
   const handleKeyDown = useCallback((e) => {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSubmit(); }
@@ -282,31 +374,26 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   // Service user switching
   const handleServiceUserChange = useCallback((e) => {
     const newUserId = e.target.value;
-    if (chatConvo.length > 0 && selectedServiceUser !== newUserId) {
+    const hasThread = conversation.some(
+      (m) => !(m.sender === 'bot' && m.text === 'Loading...')
+    );
+    if (hasThread && selectedServiceUser !== newUserId) {
       setPendingServiceUser(newUserId);
       setShowResetWarning(true);
     } else {
       setSelectedServiceUser(newUserId);
     }
-  }, [chatConvo.length, selectedServiceUser, setSelectedServiceUser]);
+  }, [conversation, selectedServiceUser, setSelectedServiceUser]);
 
   const confirmServiceUserSwitch = useCallback(() => {
-    setConversation([]);
-    setChatConvo([]);
-    setConversationID('');
-    setGoals([]);
-    setResources([]);
-    if (socket) {
-      socket.emit('reset_session', {
-        reason: 'service_user_switch',
-        previous_service_user_id: selectedServiceUser || 'general',
-        new_service_user_id: pendingServiceUser || 'general',
-      });
-    }
+    performPlannerReset('service_user_switch', {
+      previous_service_user_id: selectedServiceUser || 'general',
+      new_service_user_id: pendingServiceUser || 'general',
+    });
     setSelectedServiceUser(pendingServiceUser);
     setPendingServiceUser(null);
     setShowResetWarning(false);
-  }, [socket, selectedServiceUser, pendingServiceUser, setConversation, setChatConvo, setSelectedServiceUser]);
+  }, [performPlannerReset, pendingServiceUser, selectedServiceUser, setSelectedServiceUser]);
 
   const cancelServiceUserSwitch = useCallback(() => {
     setPendingServiceUser(null);
@@ -314,21 +401,8 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   }, []);
 
   const handleNewSession = useCallback(() => {
-    // Reset chat state without reloading the page (preserves selectedServiceUser)
-    setConversation([]);
-    setChatConvo([]);
-    setConversationID('');
-    setGoals([]);
-    setResources([]);
-    setCheckIns([]);
-    if (socket) {
-      socket.emit('reset_session', {
-        reason: 'new_session',
-        previous_service_user_id: selectedServiceUser || 'general',
-        new_service_user_id: selectedServiceUser || 'general',
-      });
-    }
-  }, [socket, selectedServiceUser, setConversation, setChatConvo]);
+    performPlannerReset('new_session');
+  }, [performPlannerReset]);
 
   const exportChatToPDF = useCallback(() => {
     const doc = new jsPDF(PDF_CONFIG);
@@ -356,7 +430,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   }, []);
 
   const handleGenerateCheckIns = async () => {
-    if (!selectedServiceUser) { alert("Please select a service user first"); return; }
+    if (!selectedServiceUser) { alert('Please select a member first'); return; }
     if (!conversationID) { alert("Please have a conversation first, then generate check-ins."); return; }
     setGeneratingCheckIns(true);
     try {
@@ -386,11 +460,11 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
     <div className="resource-recommendation-container">
       <div className="content-area">
         <div className={`left-section ${submitted ? 'submitted' : ''}`}>
-          <h1 className="page-title">{title}</h1>
+          {title ? <h1 className="page-title">{title}</h1> : null}
           <div style={{ display: 'flex', gap: '10px', marginBottom: '10px', alignItems: 'center' }}>
             <select value={selectedServiceUser} onChange={handleServiceUserChange} style={{ flex: 1 }}>
               <option value="">General Inquiry (not user-specific)</option>
-              <optgroup label="Service Users">
+              <optgroup label="Members">
                 {serviceUsers.map(u => (
                   <option key={u.service_user_id} value={u.service_user_id}>
                     {u.service_user_name}
@@ -413,7 +487,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
             {generatingCheckIns ? 'Generating...' : 'Generate Check-ins'}
           </button>
 
-          <h2 className="instruction">What is the service user's needs and goals for today's meeting?</h2>
+          <h2 className="instruction">What are the member&apos;s needs and goals for today&apos;s meeting?</h2>
 
           <div className={`conversation-thread ${submitted ? 'visible' : ''}`}
             onScroll={handleScroll} style={{ overflowY: 'auto', maxHeight: '80vh' }}>
@@ -463,7 +537,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
         )}
         <div className="input-box">
           <textarea className="input-bar" ref={inputRef}
-            placeholder={submitted ? 'Write a follow-up to update...' : "Describe the service user's situation..."}
+            placeholder={submitted ? 'Write a follow-up to update...' : "Describe the member's situation..."}
             value={inputText} onChange={handleInputChange} onKeyDown={handleKeyDown}
             rows={1} style={{ overflow: 'hidden', resize: 'none' }} />
           <button className="submit-button" onClick={handleSubmit}>➤</button>
@@ -670,8 +744,12 @@ const FeedbackModal = ({ isOpen, onClose, conversationID }) => {
 };
 
 export const WellnessGoals = () => (
-  <GenericChat context={WellnessContext} title="Wellness Goals"
-    socketServerUrl={`${API_URL}`} showLocation={false} tool="wellness" />
+  <GenericChat
+    context={WellnessContext}
+    socketServerUrl={`${API_URL}`}
+    showLocation={false}
+    tool="wellness"
+  />
 );
 
 export default GenericChat;

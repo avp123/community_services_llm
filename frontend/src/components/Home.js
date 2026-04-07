@@ -139,7 +139,7 @@ function Home() {
         <div className="tiles-container">
           <Link to="/wellness-goals" className="tile">
             <span>Tool 1</span>
-            <h2>Planner</h2>
+            <h2>Explore</h2>
           </Link>
         </div>
         <div className="tiles-container">
@@ -151,7 +151,7 @@ function Home() {
         <div className="tiles-container">
           <Link to="/outreach-calendar" className="tile">
             <span>Tool 3</span>
-            <h2>Outreach Calendar</h2>
+            <h2>Connect</h2>
           </Link>
         </div>
       </div>

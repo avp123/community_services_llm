@@ -59,8 +59,8 @@ function Navbar() {
             location.pathname === '/wellness-goals' ? 'active' : ''
           }`}
         >
-          <img src={WellnessGoalsIcon} alt="Wellness Goals Icon" className="navbar-icon" />
-          Planner
+          <img src={WellnessGoalsIcon} alt="" className="navbar-icon" />
+          Explore
         </Link>
         <Link
           to="/profile-manager"
@@ -83,29 +83,21 @@ function Navbar() {
         >
           <img
             src={OutreachCalendarIcon}
-            alt="Outreach Calendar Icon"
+            alt=""
             className="navbar-icon"
           />
-          Outreach Calendar
+          Connect
         </Link>
-        <Link
-          to="/chat-history"
-          className={`navbar-button ${
-            location.pathname === '/chat-history' ? 'active' : ''
-          }`}
-        >
-          Chat history
-        </Link>
-        <Link
-          to="/analytics-trends"
-          className={`navbar-button ${
-            location.pathname === '/analytics-trends' ? 'active' : ''
-          }`}
-        >
-          Trends
-        </Link>
-
         <div className="navbar-footer-actions">
+          <Link
+            to="/chat-history"
+            className={`navbar-profile-link navbar-footer-link ${
+              location.pathname === '/chat-history' ? 'active' : ''
+            }`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Chat history
+          </Link>
           <button
             type="button"
             className="navbar-profile-link"
@@ -114,7 +106,7 @@ function Navbar() {
               setMenuOpen(false);
             }}
           >
-            Analytics
+            Usage Analytics
           </button>
           <button
             type="button"
@@ -124,7 +116,7 @@ function Navbar() {
               setMenuOpen(false);
             }}
           >
-            Profile
+            My Profile
           </button>
           <Logout />
         </div>

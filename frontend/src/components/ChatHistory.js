@@ -78,7 +78,7 @@ function StatsBar({ summary, memberLabel, toolsLabel }) {
           <span className="chat-history-stat-pill chat-history-stat-member">{memberLabel}</span>
         ) : null}
         {toolsLabel ? (
-          <span className="chat-history-stat-pill chat-history-stat-tools" title="Tools invoked in this chat (new planner path)">
+          <span className="chat-history-stat-pill chat-history-stat-tools" title="Tools invoked in this chat (Explore path)">
             {toolsLabel}
           </span>
         ) : null}
@@ -95,7 +95,13 @@ function StatsBar({ summary, memberLabel, toolsLabel }) {
 }
 
 function ChatHistory() {
-  const { user } = useContext(WellnessContext);
+  const {
+    user,
+    conversationID,
+    setConversationID,
+    setConversation,
+    setChatConvo,
+  } = useContext(WellnessContext);
   const [rows, setRows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -105,6 +111,9 @@ function ChatHistory() {
   const [detailError, setDetailError] = useState('');
   const [messages, setMessages] = useState([]);
   const [liveSummary, setLiveSummary] = useState(null);
+  const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
+  const [deleteBusy, setDeleteBusy] = useState(false);
+  const [actionBanner, setActionBanner] = useState('');
   const threadEndRef = useRef(null);
 
   const fetchSummaries = useCallback(async () => {
@@ -197,6 +206,53 @@ function ChatHistory() {
     }
   }, [messages, selectedId]);
 
+  const clearSelectionIfDeleted = (deletedId) => {
+    setRows((prev) => prev.filter((r) => r.conversation_id !== deletedId));
+    if (selectedId === deletedId) {
+      setSelectedId(null);
+      setSelectedRow(null);
+      setMessages([]);
+      setLiveSummary(null);
+      setDetailError('');
+    }
+  };
+
+  const confirmDeleteConversation = async () => {
+    if (!selectedId || deleteBusy) return;
+    const id = selectedId;
+    setDeleteBusy(true);
+    setActionBanner('');
+    try {
+      const res = await authenticatedFetch(
+        `/api/conversations/${encodeURIComponent(id)}`,
+        { method: 'DELETE' }
+      );
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setActionBanner(data.detail || 'Could not delete conversation.');
+        return;
+      }
+      setDeleteConfirmOpen(false);
+      setActionBanner('Conversation deleted.');
+      clearSelectionIfDeleted(id);
+      if (conversationID === id) {
+        setConversation([]);
+        setChatConvo([]);
+        setConversationID('');
+        window.dispatchEvent(
+          new CustomEvent('peercopilot:planner-reset', {
+            detail: { reason: 'conversation_deleted' },
+          })
+        );
+      }
+      setTimeout(() => setActionBanner(''), 4000);
+    } catch (e) {
+      setActionBanner(e.message || 'Could not delete conversation.');
+    } finally {
+      setDeleteBusy(false);
+    }
+  };
+
   if (user.username === '' || !user.isAuthenticated) {
     return <Navigate to="/login" />;
   }
@@ -219,6 +275,12 @@ function ChatHistory() {
           Refresh
         </button>
       </header>
+
+      {actionBanner ? (
+        <p className="chat-history-action-banner" role="status">
+          {actionBanner}
+        </p>
+      ) : null}
 
       <div className="chat-history-layout">
         <aside className="chat-history-sidebar">
@@ -266,7 +328,17 @@ function ChatHistory() {
 
           {selectedId && (
             <>
-              <StatsBar summary={liveSummary} memberLabel={memberLabel} toolsLabel={toolsLabel} />
+              <div className="chat-history-detail-toolbar">
+                <StatsBar summary={liveSummary} memberLabel={memberLabel} toolsLabel={toolsLabel} />
+                <button
+                  type="button"
+                  className="chat-history-delete"
+                  onClick={() => setDeleteConfirmOpen(true)}
+                  disabled={detailLoading || Boolean(detailError)}
+                >
+                  Delete conversation
+                </button>
+              </div>
               {detailLoading && <p className="chat-history-loading">Loading messages…</p>}
               {detailError && <p className="chat-history-detail-error">{detailError}</p>}
               {!detailLoading && !detailError && (
@@ -302,6 +374,47 @@ function ChatHistory() {
           )}
         </main>
       </div>
+
+      {deleteConfirmOpen ? (
+        <div
+          className="chat-history-modal-overlay"
+          role="presentation"
+          onClick={() => !deleteBusy && setDeleteConfirmOpen(false)}
+        >
+          <div
+            className="chat-history-modal"
+            role="dialog"
+            aria-labelledby="chat-history-delete-title"
+            aria-modal="true"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 id="chat-history-delete-title">Delete this conversation?</h3>
+            <p className="chat-history-modal-body">
+              This permanently removes the transcript and related session data from your history. If this chat is
+              open in Explore, that session will be cleared. If the assistant is still responding there, wait
+              until it finishes before deleting to avoid odd behavior.
+            </p>
+            <div className="chat-history-modal-actions">
+              <button
+                type="button"
+                className="chat-history-modal-cancel"
+                onClick={() => setDeleteConfirmOpen(false)}
+                disabled={deleteBusy}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                className="chat-history-modal-delete"
+                onClick={confirmDeleteConversation}
+                disabled={deleteBusy}
+              >
+                {deleteBusy ? 'Deleting…' : 'Delete permanently'}
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

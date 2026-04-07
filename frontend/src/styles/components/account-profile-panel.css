@@ -15,7 +15,7 @@
   color: var(--color-text, #222);
   border-radius: var(--radius-lg, 12px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
-  max-width: 520px;
+  max-width: 860px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
@@ -29,6 +29,27 @@
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 8px;
+}
+
+.account-profile-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.account-profile-autosave {
+  font-size: 12px;
+  color: #667085;
+  white-space: nowrap;
+}
+
+.account-profile-autosave--ok {
+  color: #0d6832;
+}
+
+.account-profile-autosave--err {
+  color: #b42318;
 }
 
 .account-profile-header h2 {
@@ -58,9 +79,53 @@
   line-height: 1.45;
 }
 
+.account-profile-hint--lead {
+  margin-bottom: 10px;
+}
+
+.account-profile-prompt-intro {
+  margin-bottom: 4px;
+}
+
+.account-profile-prompt-intro .account-profile-hint:last-of-type {
+  margin-bottom: 10px;
+}
+
+.account-profile-hint-list {
+  margin: 0 0 14px;
+  padding-left: 1.25rem;
+  font-size: var(--font-sm, 0.875rem);
+  color: var(--color-text-light, #555);
+  line-height: 1.5;
+}
+
+.account-profile-hint-list li {
+  margin-bottom: 8px;
+}
+
+.account-profile-hint-list li:last-child {
+  margin-bottom: 0;
+}
+
 .account-profile-loading {
   margin: 16px 0;
   color: var(--color-text-light, #666);
+}
+
+.account-profile-section {
+  border: 1px solid var(--color-border-light, #e4e7ec);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.account-profile-section h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.account-profile-field {
+  margin-bottom: 10px;
 }
 
 .account-profile-form label {
@@ -68,6 +133,22 @@
   font-weight: 600;
   font-size: var(--font-sm, 0.875rem);
   margin-bottom: 8px;
+}
+
+.account-profile-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: var(--radius-xs, 6px);
+  border: 1px solid var(--color-border, #ccc);
+  font-family: inherit;
+  font-size: var(--font-base, 1rem);
+  margin-bottom: 4px;
+}
+
+.account-profile-form input:disabled {
+  background: #f7f8fa;
+  color: #667085;
 }
 
 .account-profile-form textarea {
@@ -79,7 +160,7 @@
   font-family: inherit;
   font-size: var(--font-base, 1rem);
   resize: vertical;
-  min-height: 160px;
+  min-height: 280px;
   margin-bottom: 16px;
 }
 
@@ -125,4 +206,14 @@
 
 .account-profile-message.error {
   color: #b42318;
+}
+
+.account-profile-note {
+  margin: 0 0 10px;
+  font-size: var(--font-sm, 0.875rem);
+  color: #475467;
+  background: #f8f9fc;
+  border: 1px solid #e4e7ec;
+  border-radius: 6px;
+  padding: 8px 10px;
 }

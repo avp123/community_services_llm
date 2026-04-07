@@ -1,0 +1,5 @@
+ALTER TABLE users
+ADD COLUMN IF NOT EXISTS display_name TEXT;
+
+ALTER TABLE users
+ADD COLUMN IF NOT EXISTS system_prompt_override TEXT;

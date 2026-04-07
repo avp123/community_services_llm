@@ -21,7 +21,10 @@ import socketio
 from backend.app.phi_scrubber import PHIScrubber
 
 from backend.app.audit_logger import AuditLogger
-from backend.app.submodules import construct_response
+from backend.app.submodules import (
+    construct_response,
+    get_default_peer_copilot_system_prompt,
+)
 from backend.app.process_profiles import get_all_outreach, get_all_service_users
 from backend.app.login import get_current_user, UserData
 from backend.app.login import router as auth_router
@@ -42,12 +45,17 @@ from backend.app.database import (
     update_last_session_db,
     fetch_service_user_custom_prompt,
     fetch_account_custom_prompt,
+    fetch_account_profile,
+    get_users_profile_storage_columns,
     update_account_custom_prompt,
+    update_account_profile,
     list_conversation_summaries,
     get_user_conversation_global_stats,
+    get_user_trend_usage_stats,
     get_user_weekly_usage_stats,
     get_conversation_messages_for_user,
     conversation_owned_by_user,
+    delete_conversation_for_user,
     get_session_feedback,
     upsert_session_feedback_answer,
 )
@@ -160,6 +168,11 @@ class AccountPromptUpdate(BaseModel):
     custom_prompt: Optional[str] = None
 
 
+class AccountProfileUpdate(BaseModel):
+    display_name: Optional[str] = None
+    system_prompt_override: Optional[str] = None
+
+
 @app.get("/api/account-prompt")
 async def get_account_prompt(current_user: UserData = Depends(get_current_user)):
     text = fetch_account_custom_prompt(current_user.username)
@@ -174,6 +187,49 @@ async def set_account_prompt(
     success, message = update_account_custom_prompt(
         current_user.username,
         body.custom_prompt if body.custom_prompt is not None else "",
+    )
+    if success:
+        return {"success": True, "message": message}
+    raise HTTPException(status_code=400, detail=message)
+
+
+@app.get("/api/account/profile")
+async def get_account_profile(current_user: UserData = Depends(get_current_user)):
+    ok, profile = fetch_account_profile(current_user.username)
+    if not ok:
+        raise HTTPException(status_code=400, detail=profile)
+    ok_cols, colmap = get_users_profile_storage_columns()
+    if not ok_cols:
+        colmap = {"display_name": False, "system_prompt_override": False}
+    default_prompt = get_default_peer_copilot_system_prompt(current_user.organization)
+    override = profile.get("system_prompt_override")
+    effective_prompt = override if isinstance(override, str) and override.strip() else default_prompt
+    return {
+        "success": True,
+        "profile": {
+            "username": profile.get("username") or current_user.username,
+            "organization": profile.get("organization") or current_user.organization,
+            "display_name": profile.get("display_name") or "",
+            "default_system_prompt": default_prompt,
+            "system_prompt_override": override,
+            "effective_system_prompt": effective_prompt,
+            "profile_storage": colmap,
+        },
+    }
+
+
+@app.put("/api/account/profile")
+async def put_account_profile(
+    body: AccountProfileUpdate,
+    current_user: UserData = Depends(get_current_user),
+):
+    fields_set = getattr(body, "model_fields_set", None) or getattr(body, "__fields_set__", None) or set()
+    success, message = update_account_profile(
+        current_user.username,
+        display_name=body.display_name,
+        system_prompt_override=body.system_prompt_override,
+        update_display_name="display_name" in fields_set,
+        update_system_prompt_override="system_prompt_override" in fields_set,
     )
     if success:
         return {"success": True, "message": message}
@@ -218,6 +274,29 @@ async def analytics_weekly(
     raise HTTPException(status_code=400, detail=result)
 
 
+@app.get("/api/analytics/trends")
+async def analytics_trends(
+    current_user: UserData = Depends(get_current_user),
+    granularity: str = "week",
+    periods: int = 12,
+):
+    """Trend analytics for the current provider by day/week/month buckets."""
+    success, result = get_user_trend_usage_stats(
+        current_user.username,
+        granularity=granularity,
+        periods=periods,
+    )
+    if success:
+        return {
+            "success": True,
+            "granularity": granularity,
+            "periods": periods,
+            "rows": result,
+            "tool_calls_bucket_basis": "conversation_created_period",
+        }
+    raise HTTPException(status_code=400, detail=result)
+
+
 @app.get("/api/conversations/{conversation_id}")
 async def conversation_messages_detail(
     conversation_id: str,
@@ -254,7 +333,38 @@ async def conversation_messages_detail(
         "summary": payload.get("summary"),
     }
 
-    
+
+@app.delete("/api/conversations/{conversation_id}")
+async def delete_conversation(
+    conversation_id: str,
+    current_user: UserData = Depends(get_current_user),
+    req: Request = None,
+):
+    """Delete a conversation and its messages if owned by the current user."""
+    success, msg = delete_conversation_for_user(conversation_id, current_user.username)
+    if not success:
+        if msg == "not_found":
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        if msg == "forbidden":
+            raise HTTPException(status_code=403, detail="Forbidden")
+        if msg == "migration_required":
+            raise HTTPException(
+                status_code=503,
+                detail="Server database is missing conversation_deletions migration (005_conversation_deletions.sql).",
+            )
+        raise HTTPException(status_code=400, detail=msg)
+    AuditLogger.log(
+        username=current_user.username,
+        user_role=current_user.role,
+        action="delete_conversation",
+        resource_type="conversation",
+        resource_id=conversation_id,
+        ip_address=req.client.host if req and req.client else None,
+        details={"conversation_id": conversation_id},
+    )
+    return {"success": True, "message": "Deleted"}
+
+
 # Health check endpoints
 @app.get("/")
 async def root():
@@ -541,14 +651,26 @@ def _background_stream(
         )
 
         username = metadata.get("username")
-        scrubbed_account_prompt = None
+        account_display_org = metadata.get("organization") or organization
+        default_base_prompt = get_default_peer_copilot_system_prompt(account_display_org)
+
+        raw_override_prompt = None
         if username:
-            raw_account = fetch_account_custom_prompt(username)
-            if raw_account:
-                scrubbed_account_prompt = PHIScrubber.scrub_for_gpt(
-                    raw_account,
-                    patient_id=service_user_id,
-                )
+            ok_profile, profile = fetch_account_profile(username)
+            if ok_profile:
+                raw_override_prompt = profile.get("system_prompt_override")
+
+        scrubbed_override_prompt = None
+        if isinstance(raw_override_prompt, str) and raw_override_prompt.strip():
+            scrubbed_override_prompt = PHIScrubber.scrub_for_gpt(
+                raw_override_prompt,
+                patient_id=service_user_id,
+            )
+
+        if scrubbed_override_prompt and str(scrubbed_override_prompt).strip():
+            effective_system_prompt_base = str(scrubbed_override_prompt).strip()
+        else:
+            effective_system_prompt_base = default_base_prompt
 
         scrubbed_profile_prompt = None
         if service_user_id:
@@ -558,19 +680,6 @@ def _background_stream(
                     raw_profile_prompt,
                     patient_id=service_user_id,
                 )
-
-        extra_prompt_parts = []
-        if scrubbed_account_prompt and str(scrubbed_account_prompt).strip():
-            extra_prompt_parts.append(
-                "ACCOUNT-LEVEL CUSTOM PROMPT (all chats):\n"
-                + str(scrubbed_account_prompt).strip()
-            )
-        if scrubbed_profile_prompt and str(scrubbed_profile_prompt).strip():
-            extra_prompt_parts.append(
-                "PROFILE-LEVEL CUSTOM PROMPT (this member):\n"
-                + str(scrubbed_profile_prompt).strip()
-            )
-        combined_custom_prompt = "\n\n".join(extra_prompt_parts) if extra_prompt_parts else None
         
         # Send scrubbed content to GPT (tool_call names collected for per-chat analytics)
         tool_names_this_turn = []
@@ -580,7 +689,8 @@ def _background_stream(
             model,
             organization,
             version,
-            profile_custom_prompt=combined_custom_prompt,
+            profile_custom_prompt=scrubbed_profile_prompt,
+            system_prompt_base=effective_system_prompt_base,
             tool_call_names_out=tool_names_this_turn,
         )
         
@@ -719,8 +829,27 @@ async def start_generation(sid, data):
         'conversation_id': conversation_id,
         'username': username
     }
-       
-    text = data.get("text", "")
+
+    # Client sends full prior transcript so context survives a new socket sid (e.g. planner remount
+    # after visiting chat history). When omitted/empty, keep accumulating on this sid as before.
+    client_prev = data.get("previous_text")
+    if isinstance(client_prev, list) and len(client_prev) > 0:
+        rebuilt = []
+        for m in client_prev:
+            if not isinstance(m, dict):
+                continue
+            r = m.get("role")
+            c = m.get("content")
+            if c is None:
+                continue
+            if r == "system":
+                r = "assistant"
+            if r not in ("user", "assistant"):
+                continue
+            rebuilt.append({"role": r, "content": str(c)})
+        if rebuilt:
+            session_histories[sid] = rebuilt
+
     session_histories[sid].append({"role": "user", "content": text})
 
     # fetch full conversation

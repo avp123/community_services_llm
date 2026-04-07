@@ -221,6 +221,17 @@ def update_conversation(
     conn = psycopg.connect(CONNECTION_STRING)
     cursor = conn.cursor()
 
+    try:
+        cursor.execute(
+            "SELECT 1 FROM conversation_deletions WHERE id = %s LIMIT 1",
+            (conversation_id,),
+        )
+        if cursor.fetchone():
+            conn.close()
+            return
+    except psycopg.errors.UndefinedTable:
+        conn.rollback()
+
     cursor.execute("SELECT id FROM conversations WHERE id = %s", (conversation_id,))
     if cursor.fetchone() is None:
         cursor.execute(
@@ -496,6 +507,33 @@ def get_notification_settings(username):
         conn.close()
 
 
+def get_users_profile_storage_columns():
+    """
+    Which optional profile columns exist on public.users (migration 004).
+    Returns (True, dict) or (False, error str).
+    """
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    SELECT column_name
+                    FROM information_schema.columns
+                    WHERE table_schema = 'public'
+                      AND table_name = 'users'
+                      AND column_name IN ('display_name', 'system_prompt_override')
+                    """,
+                )
+                found = {row[0] for row in cur.fetchall()}
+        return True, {
+            "display_name": "display_name" in found,
+            "system_prompt_override": "system_prompt_override" in found,
+        }
+    except Exception as e:
+        print(f"[DB] get_users_profile_storage_columns error: {e}")
+        return False, str(e)
+
+
 def fetch_account_custom_prompt(username: str):
     """Return users.custom_prompt for the logged-in provider, or None."""
     if not username:
@@ -517,6 +555,55 @@ def fetch_account_custom_prompt(username: str):
         return None
 
 
+def fetch_account_profile(username: str):
+    """Return account profile fields for the logged-in provider."""
+    if not username:
+        return False, "Missing username"
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    SELECT username, organization, display_name, custom_prompt, system_prompt_override
+                    FROM users
+                    WHERE username = %s
+                    """,
+                    (username,),
+                )
+                row = cur.fetchone()
+                if not row:
+                    return False, "User not found"
+                return True, dict(row)
+    except psycopg.errors.UndefinedColumn:
+        # Backward compatibility before migration 004.
+        try:
+            with psycopg.connect(CONNECTION_STRING) as conn:
+                conn.row_factory = dict_row
+                with conn.cursor() as cur:
+                    cur.execute(
+                        """
+                        SELECT username, organization, custom_prompt
+                        FROM users
+                        WHERE username = %s
+                        """,
+                        (username,),
+                    )
+                    row = cur.fetchone()
+                    if not row:
+                        return False, "User not found"
+                    data = dict(row)
+                    data["display_name"] = ""
+                    data["system_prompt_override"] = None
+                    return True, data
+        except Exception as e:
+            print(f"[DB] fetch_account_profile fallback error: {e}")
+            return False, str(e)
+    except Exception as e:
+        print(f"[DB] fetch_account_profile error: {e}")
+        return False, str(e)
+
+
 def update_account_custom_prompt(username: str, custom_prompt: Optional[str]):
     """Persist users.custom_prompt (empty string clears to empty)."""
     try:
@@ -533,6 +620,75 @@ def update_account_custom_prompt(username: str, custom_prompt: Optional[str]):
         return True, "Updated"
     except Exception as e:
         print(f"[DB] update_account_custom_prompt error: {e}")
+        return False, str(e)
+
+
+def update_account_profile(
+    username: str,
+    display_name: Optional[str] = None,
+    system_prompt_override: Optional[str] = None,
+    *,
+    update_display_name: bool = False,
+    update_system_prompt_override: bool = False,
+):
+    """
+    Persist users.display_name and/or users.system_prompt_override.
+    Use update_display_name / update_system_prompt_override to distinguish omitted vs explicit null (clear).
+    Skips columns that do not exist yet (before migration 004) so saves do not error.
+    """
+    ok_cols, colmap = get_users_profile_storage_columns()
+    if not ok_cols:
+        return False, colmap
+
+    fields: List[str] = []
+    values: List[Any] = []
+    skipped: List[str] = []
+
+    if update_display_name and colmap.get("display_name"):
+        fields.append("display_name = %s")
+        values.append(
+            display_name.strip() if isinstance(display_name, str) else display_name
+        )
+    elif update_display_name and not colmap.get("display_name"):
+        skipped.append("display_name")
+
+    if update_system_prompt_override and colmap.get("system_prompt_override"):
+        cleaned = (
+            system_prompt_override.strip()
+            if isinstance(system_prompt_override, str)
+            else system_prompt_override
+        )
+        fields.append("system_prompt_override = %s")
+        values.append(cleaned if cleaned else None)
+    elif update_system_prompt_override and not colmap.get("system_prompt_override"):
+        skipped.append("system_prompt_override")
+
+    if not fields:
+        if not update_display_name and not update_system_prompt_override:
+            return False, "No fields provided"
+        if skipped or (update_display_name or update_system_prompt_override):
+            return (
+                False,
+                "Database is missing profile columns. Apply migration backend/migrations/004_users_profile_prompt_override.sql to save display name and prompt overrides.",
+            )
+        return False, "No fields provided"
+
+    values.append(username)
+    sql = f"UPDATE users SET {', '.join(fields)} WHERE username = %s"
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(sql, tuple(values))
+                n = cur.rowcount
+            conn.commit()
+        if n == 0:
+            return False, "User not found"
+        msg = "Updated"
+        if skipped:
+            msg += f" (skipped unavailable columns: {', '.join(skipped)})"
+        return True, msg
+    except Exception as e:
+        print(f"[DB] update_account_profile error: {e}")
         return False, str(e)
 
 
@@ -843,23 +999,37 @@ def get_user_conversation_global_stats(username: str):
         return False, str(e)
 
 
-def get_user_weekly_usage_stats(username: str, weeks: int = 12):
+def get_user_trend_usage_stats(username: str, granularity: str = "week", periods: int = 12):
     """
-    Weekly usage trend aggregates for one provider account.
+    Trend aggregates for one provider account.
+    granularity: day | week | month
+    periods: number of buckets to return.
     Returns (True, list[dict]) or (False, error str).
     """
-    weeks = max(2, min(int(weeks), 52))
-    sql = """
+    granularity = (granularity or "week").strip().lower()
+    allowed = {
+        "day": {"interval": "1 day", "min_periods": 2, "max_periods": 62},
+        "week": {"interval": "1 week", "min_periods": 2, "max_periods": 52},
+        "month": {"interval": "1 month", "min_periods": 2, "max_periods": 36},
+    }
+    cfg = allowed.get(granularity)
+    if cfg is None:
+        return False, "Invalid granularity. Use day, week, or month."
+
+    periods = max(cfg["min_periods"], min(int(periods), cfg["max_periods"]))
+    trunc_expr = f"date_trunc('{granularity}', NOW())::date"
+    interval_expr = cfg["interval"]
+    sql = f"""
         WITH bounds AS (
-            SELECT date_trunc('week', NOW())::date AS this_week
+            SELECT {trunc_expr} AS this_bucket
         ),
-        week_series AS (
-            SELECT (this_week - (gs * INTERVAL '1 week'))::date AS week_start
+        bucket_series AS (
+            SELECT (this_bucket - (gs * INTERVAL '{interval_expr}'))::date AS period_start
             FROM bounds, generate_series(%s - 1, 0, -1) AS gs
         ),
-        msg_week AS (
+        msg_bucket AS (
             SELECT
-                date_trunc('week', m.created_at)::date AS week_start,
+                date_trunc('{granularity}', m.created_at)::date AS period_start,
                 COUNT(*)::int AS messages_total,
                 COUNT(*) FILTER (WHERE m.sender = 'user')::int AS messages_user,
                 COUNT(*) FILTER (WHERE m.sender IN ('system', 'assistant'))::int AS messages_assistant,
@@ -868,53 +1038,64 @@ def get_user_weekly_usage_stats(username: str, weeks: int = 12):
             FROM messages m
             JOIN conversations c ON c.id = m.conversation_id
             WHERE c.username = %s
-              AND m.created_at >= ((SELECT this_week FROM bounds) - (%s - 1) * INTERVAL '1 week')
+              AND m.created_at >= ((SELECT this_bucket FROM bounds) - (%s - 1) * INTERVAL '{interval_expr}')
             GROUP BY 1
         ),
         conv_started AS (
             SELECT
-                date_trunc('week', c.created_at)::date AS week_start,
+                date_trunc('{granularity}', c.created_at)::date AS period_start,
                 COUNT(*)::int AS sessions_started
             FROM conversations c
             WHERE c.username = %s
-              AND c.created_at >= ((SELECT this_week FROM bounds) - (%s - 1) * INTERVAL '1 week')
+              AND c.created_at >= ((SELECT this_bucket FROM bounds) - (%s - 1) * INTERVAL '{interval_expr}')
             GROUP BY 1
         ),
-        conv_created_week AS (
+        conv_created_bucket AS (
             SELECT
-                date_trunc('week', c.created_at)::date AS week_start,
+                date_trunc('{granularity}', c.created_at)::date AS period_start,
                 COALESCE(c.stats_tool_calls_total, 0)::bigint AS tool_calls_total
             FROM conversations c
             WHERE c.username = %s
-              AND c.created_at >= ((SELECT this_week FROM bounds) - (%s - 1) * INTERVAL '1 week')
+              AND c.created_at >= ((SELECT this_bucket FROM bounds) - (%s - 1) * INTERVAL '{interval_expr}')
         ),
-        conv_tools_week AS (
+        conv_tools_bucket AS (
             SELECT
-                week_start,
+                period_start,
                 SUM(tool_calls_total)::bigint AS tool_calls_total
-            FROM conv_created_week
-            GROUP BY week_start
+            FROM conv_created_bucket
+            GROUP BY period_start
         )
         SELECT
-            ws.week_start,
-            COALESCE(mw.sessions_active, 0) AS sessions_active,
+            bs.period_start,
+            COALESCE(mb.sessions_active, 0) AS sessions_active,
             COALESCE(cs.sessions_started, 0) AS sessions_started,
-            COALESCE(mw.messages_total, 0) AS messages_total,
-            COALESCE(mw.messages_user, 0) AS messages_user,
-            COALESCE(mw.messages_assistant, 0) AS messages_assistant,
-            COALESCE(mw.total_chars, 0)::bigint AS total_chars,
-            COALESCE(clw.tool_calls_total, 0)::bigint AS tool_calls_total
-        FROM week_series ws
-        LEFT JOIN msg_week mw ON mw.week_start = ws.week_start
-        LEFT JOIN conv_started cs ON cs.week_start = ws.week_start
-        LEFT JOIN conv_tools_week clw ON clw.week_start = ws.week_start
-        ORDER BY ws.week_start ASC
+            COALESCE(mb.messages_total, 0) AS messages_total,
+            COALESCE(mb.messages_user, 0) AS messages_user,
+            COALESCE(mb.messages_assistant, 0) AS messages_assistant,
+            COALESCE(mb.total_chars, 0)::bigint AS total_chars,
+            COALESCE(ctb.tool_calls_total, 0)::bigint AS tool_calls_total
+        FROM bucket_series bs
+        LEFT JOIN msg_bucket mb ON mb.period_start = bs.period_start
+        LEFT JOIN conv_started cs ON cs.period_start = bs.period_start
+        LEFT JOIN conv_tools_bucket ctb ON ctb.period_start = bs.period_start
+        ORDER BY bs.period_start ASC
     """
     try:
         with psycopg.connect(CONNECTION_STRING) as conn:
             conn.row_factory = dict_row
             with conn.cursor() as cur:
-                cur.execute(sql, (weeks, username, weeks, username, weeks, username, weeks))
+                cur.execute(
+                    sql,
+                    (
+                        periods,
+                        username,
+                        periods,
+                        username,
+                        periods,
+                        username,
+                        periods,
+                    ),
+                )
                 rows = cur.fetchall()
         out = []
         for r in rows:
@@ -931,14 +1112,19 @@ def get_user_weekly_usage_stats(username: str, weeks: int = 12):
                 d[key] = int(d.get(key) or 0)
             mt = d["messages_total"]
             d["avg_chars_per_message"] = round(d["total_chars"] / mt, 2) if mt else 0.0
-            ws = d.get("week_start")
-            if ws is not None and hasattr(ws, "isoformat"):
-                d["week_start"] = ws.isoformat()
+            ps = d.get("period_start")
+            if ps is not None and hasattr(ps, "isoformat"):
+                d["period_start"] = ps.isoformat()
             out.append(d)
         return True, out
     except Exception as e:
-        print(f"[DB] get_user_weekly_usage_stats error: {e}")
+        print(f"[DB] get_user_trend_usage_stats error: {e}")
         return False, str(e)
+
+
+def get_user_weekly_usage_stats(username: str, weeks: int = 12):
+    """Backward-compatible wrapper for weekly trends."""
+    return get_user_trend_usage_stats(username, granularity="week", periods=weeks)
 
 
 def get_conversation_messages_for_user(conversation_id: str, owner_username: str):
@@ -1019,6 +1205,51 @@ def conversation_owned_by_user(conversation_id: str, owner_username: str):
                 return True, row[0] == owner_username
     except Exception as e:
         print(f"[DB] conversation_owned_by_user error: {e}")
+        return False, str(e)
+
+
+def delete_conversation_for_user(conversation_id: str, owner_username: str):
+    """
+    Hard-delete a conversation and its messages for the owning provider.
+    Inserts a tombstone row so late update_conversation cannot recreate the same id.
+    Returns (True, 'deleted') | (False, 'not_found'|'forbidden'|'migration_required'|error str).
+    """
+    if not conversation_id or not owner_username:
+        return False, "not_found"
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT username FROM conversations WHERE id = %s",
+                    (conversation_id,),
+                )
+                row = cur.fetchone()
+                if row is None:
+                    return False, "not_found"
+                if row[0] != owner_username:
+                    return False, "forbidden"
+                cur.execute(
+                    """
+                    INSERT INTO conversation_deletions (id)
+                    VALUES (%s)
+                    ON CONFLICT (id) DO NOTHING
+                    """,
+                    (conversation_id,),
+                )
+                cur.execute(
+                    "DELETE FROM messages WHERE conversation_id = %s",
+                    (conversation_id,),
+                )
+                cur.execute(
+                    "DELETE FROM conversations WHERE id = %s AND username = %s",
+                    (conversation_id, owner_username),
+                )
+            conn.commit()
+        return True, "deleted"
+    except psycopg.errors.UndefinedTable:
+        return False, "migration_required"
+    except Exception as e:
+        print(f"[DB] delete_conversation_for_user error: {e}")
         return False, str(e)
 
 
