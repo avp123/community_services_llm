@@ -51,7 +51,8 @@ function Login() {
           username: username,
           role: role,
           isAuthenticated: true,
-          token: access_token, 
+          token: access_token,
+          displayName: '',
         });
         setOrganization(organization);
 

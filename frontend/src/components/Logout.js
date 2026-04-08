@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { WellnessContext } from './AppStateContextProvider';
 import { useNavigate } from 'react-router-dom';
+import { USER_DISPLAY_NAME_KEY } from '../utils/accountDisplayName';
 
 function Logout() {
-  const { setUser, setOrganization, setConversation } = useContext(WellnessContext);
+  const { setUser, setOrganization, resetContext } = useContext(WellnessContext);
   const navigate = useNavigate();
 
   const handleLogout = (reason = 'manual') => {
@@ -14,15 +15,17 @@ function Logout() {
       role: '',
       isAuthenticated: false,
       token: null,
+      displayName: '',
     });
     setOrganization('');
-    setConversation([]);
+    resetContext();
     
     localStorage.removeItem('accessToken');
     localStorage.removeItem('userRole');
     localStorage.removeItem('username');
     localStorage.removeItem('organization');
     localStorage.removeItem('loginTimestamp');
+    localStorage.removeItem(USER_DISPLAY_NAME_KEY);
     
     navigate('/login');
   };

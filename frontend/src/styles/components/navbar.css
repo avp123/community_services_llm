@@ -52,8 +52,11 @@
 }
 
 .navbar-icon {
-  width: 20px;
-  height: auto;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: block;
+  color: inherit;
 }
 
 .navbar-spacer {

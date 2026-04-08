@@ -4,6 +4,7 @@ import { Link, Navigate } from 'react-router-dom';
 import Logo from '../icons/Logo.png';
 import { WellnessContext } from './AppStateContextProvider';
 import { authenticatedFetch } from '../utils/api';
+import { getUserIdentityLabel } from '../utils/accountDisplayName';
 import MFASetup from './MFASetup';
 import '../styles/pages/home.css';
 
@@ -133,13 +134,13 @@ function Home() {
         <img src={Logo} alt="Logo" />
       </div>
       
-      <h1 className="home-heading">Welcome, {user.username}!</h1>
+      <h1 className="home-heading">Welcome, {getUserIdentityLabel(user)}!</h1>
       <p className="home-subheading">All Tools at One Glance:</p>
       <div className="tools">  
         <div className="tiles-container">
           <Link to="/wellness-goals" className="tile">
             <span>Tool 1</span>
-            <h2>Explore</h2>
+            <h2>Chat + Explore</h2>
           </Link>
         </div>
         <div className="tiles-container">
@@ -151,7 +152,7 @@ function Home() {
         <div className="tiles-container">
           <Link to="/outreach-calendar" className="tile">
             <span>Tool 3</span>
-            <h2>Connect</h2>
+            <h2>Connect with Members</h2>
           </Link>
         </div>
       </div>

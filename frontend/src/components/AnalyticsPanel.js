@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { authenticatedFetch } from '../utils/api';
+import { getExternalFunctionLabel } from '../utils/externalFunctionLabels';
 import '../styles/components/analytics-panel.css';
 
 const METRICS = [
@@ -10,7 +11,7 @@ const METRICS = [
   { key: 'messages_assistant', label: 'Assistant messages' },
   { key: 'total_chars', label: 'Total chars' },
   { key: 'avg_chars_per_message', label: 'Avg chars per message' },
-  { key: 'tool_calls_total', label: 'Tool calls' },
+  { key: 'tool_calls_total', label: 'External Function calls' },
 ];
 
 const PERIOD_OPTIONS = {
@@ -334,8 +335,8 @@ function AnalyticsPanel({ open, onClose }) {
                 <div className="analytics-card"><span>Conversations</span><strong>{stats.conversation_count}</strong></div>
                 <div className="analytics-card"><span>Total messages</span><strong>{stats.message_count}</strong></div>
                 <div className="analytics-card"><span>Avg msgs/chat</span><strong>{stats.avg_messages_per_conversation}</strong></div>
-                <div className="analytics-card"><span>Total tool calls</span><strong>{stats.total_tool_calls}</strong></div>
-                <div className="analytics-card"><span>Distinct tools used</span><strong>{stats.distinct_tool_count}</strong></div>
+                <div className="analytics-card"><span>Total External Function calls</span><strong>{stats.total_tool_calls}</strong></div>
+                <div className="analytics-card"><span>Distinct External Functions used</span><strong>{stats.distinct_tool_count}</strong></div>
                 <div className="analytics-card"><span>Avg conversation length</span><strong>{formatDuration(stats.avg_duration_seconds)}</strong></div>
                 <div className="analytics-card"><span>Total chars</span><strong>{(stats.total_chars || 0).toLocaleString()}</strong></div>
                 <div className="analytics-card"><span>Avg chars/msg</span><strong>{stats.avg_chars_per_message}</strong></div>
@@ -345,11 +346,11 @@ function AnalyticsPanel({ open, onClose }) {
             ) : null}
             {!overviewFetching && !overviewError && stats && Array.isArray(stats.top_tools) && stats.top_tools.length > 0 ? (
               <div className="analytics-top-tools">
-                <h3>Top tools</h3>
+                <h3>Top External Functions</h3>
                 <ul>
                   {stats.top_tools.map((t) => (
                     <li key={t.name}>
-                      <span>{t.name}</span>
+                      <span>{getExternalFunctionLabel(t.name)}</span>
                       <strong>{t.count}</strong>
                     </li>
                   ))}
@@ -425,7 +426,7 @@ function AnalyticsPanel({ open, onClose }) {
                         <th>User msgs</th>
                         <th>Assistant msgs</th>
                         <th>Avg chars/msg</th>
-                        <th>Tool calls</th>
+                        <th>External Function calls</th>
                       </tr>
                     </thead>
                     <tbody>

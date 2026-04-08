@@ -12,7 +12,7 @@ const METRICS = [
   { key: 'messages_assistant', label: 'Assistant messages' },
   { key: 'total_chars', label: 'Total chars' },
   { key: 'avg_chars_per_message', label: 'Avg chars per message' },
-  { key: 'tool_calls_total', label: 'Tool calls' },
+  { key: 'tool_calls_total', label: 'External Function calls' },
 ];
 
 function formatMetricValue(metricKey, value, opts = {}) {
@@ -277,7 +277,7 @@ function AnalyticsTrends() {
                   <th>User msgs</th>
                   <th>Assistant msgs</th>
                   <th>Avg chars/msg</th>
-                  <th>Tool calls (sessions started)</th>
+                  <th>External Function calls (sessions started)</th>
                 </tr>
               </thead>
               <tbody>

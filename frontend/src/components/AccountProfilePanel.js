@@ -1,8 +1,11 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { authenticatedFetch } from '../utils/api';
+import { WellnessContext } from './AppStateContextProvider';
+import { DISPLAY_NAME_MAX_LENGTH, writeStoredDisplayName } from '../utils/accountDisplayName';
 import '../styles/components/account-profile-panel.css';
 
 function AccountProfilePanel({ open, onClose }) {
+  const { setUser } = useContext(WellnessContext);
   const [username, setUsername] = useState('');
   const [displayName, setDisplayName] = useState('');
   const [defaultPrompt, setDefaultPrompt] = useState('');
@@ -39,6 +42,8 @@ function AccountProfilePanel({ open, onClose }) {
       }
       if (Object.prototype.hasOwnProperty.call(patch, 'display_name')) {
         serverDisplayNameRef.current = patch.display_name ?? '';
+        const dn = writeStoredDisplayName(patch.display_name);
+        setUser((prev) => (prev.isAuthenticated ? { ...prev, displayName: dn } : prev));
       }
       if (Object.prototype.hasOwnProperty.call(patch, 'system_prompt_override')) {
         serverOverrideRef.current = patch.system_prompt_override;
@@ -48,7 +53,7 @@ function AccountProfilePanel({ open, onClose }) {
     } catch {
       setSaveStatus('error');
     }
-  }, []);
+  }, [setUser]);
 
   useEffect(() => {
     if (!open) return;
@@ -68,6 +73,8 @@ function AccountProfilePanel({ open, onClose }) {
           const dn = profile.display_name || '';
           setDisplayName(dn);
           serverDisplayNameRef.current = dn;
+          const storedDn = writeStoredDisplayName(dn);
+          setUser((prev) => (prev.isAuthenticated ? { ...prev, displayName: storedDn } : prev));
           setDefaultPrompt(base);
           const editorPrompt =
             typeof override === 'string' && override.trim().length > 0
@@ -93,7 +100,7 @@ function AccountProfilePanel({ open, onClose }) {
     return () => {
       cancelled = true;
     };
-  }, [open]);
+  }, [open, setUser]);
 
   useEffect(() => {
     if (!open || fetching || !allowAutosaveRef.current) return undefined;
@@ -143,6 +150,29 @@ function AccountProfilePanel({ open, onClose }) {
     [persistPatch, profileStorage.display_name]
   );
 
+
+  const saveSystemPromptNow = useCallback(() => {
+    if (!profileStorage.system_prompt_override) return;
+    if (promptDebounceRef.current) {
+      clearTimeout(promptDebounceRef.current);
+      promptDebounceRef.current = null;
+    }
+    const trimmedEditor = (systemPrompt || '').trim();
+    const trimmedDefault = (defaultPrompt || '').trim();
+    const overrideToSave = trimmedEditor === trimmedDefault ? null : systemPrompt;
+    const server = serverOverrideRef.current;
+    const same =
+      (overrideToSave === null
+        && (server === null || server === undefined || String(server).trim() === ''))
+      || (overrideToSave !== null && String(server || '') === String(overrideToSave || ''));
+    if (same) {
+      setSaveStatus('saved');
+      setTimeout(() => setSaveStatus((state) => (state === 'saved' ? 'idle' : state)), 1200);
+      return;
+    }
+    persistPatch({ system_prompt_override: overrideToSave });
+  }, [defaultPrompt, persistPatch, profileStorage.system_prompt_override, systemPrompt]);
+
   useEffect(
     () => () => {
       if (displayDebounceRef.current) clearTimeout(displayDebounceRef.current);
@@ -150,6 +180,8 @@ function AccountProfilePanel({ open, onClose }) {
     },
     []
   );
+
+  const reachedDisplayNameMax = displayName.length >= DISPLAY_NAME_MAX_LENGTH;
 
   if (!open) return null;
 
@@ -191,7 +223,7 @@ function AccountProfilePanel({ open, onClose }) {
             <section className="account-profile-section">
               <h3>Account</h3>
               <p className="account-profile-hint">
-                Your username is fixed. Display name is optional and saves automatically.
+                Your username is fixed. Display name is optional and saves automatically (max 15 chars).
               </p>
               <div className="account-profile-field">
                 <label htmlFor="account-profile-username">Username</label>
@@ -203,6 +235,7 @@ function AccountProfilePanel({ open, onClose }) {
                   id="account-profile-display-name"
                   type="text"
                   value={displayName}
+                  maxLength={DISPLAY_NAME_MAX_LENGTH}
                   onChange={(e) => {
                     const v = e.target.value;
                     setDisplayName(v);
@@ -212,6 +245,11 @@ function AccountProfilePanel({ open, onClose }) {
                   placeholder="Enter your preferred name"
                   disabled={!profileStorage.display_name}
                 />
+                {profileStorage.display_name && reachedDisplayNameMax ? (
+                  <p className="account-profile-inline-note" role="status" aria-live="polite">
+                    15 character maximum reached.
+                  </p>
+                ) : null}
                 {!profileStorage.display_name ? (
                   <p className="account-profile-note">
                     This server&apos;s database has not been updated with profile columns yet (one-time admin
@@ -264,6 +302,14 @@ function AccountProfilePanel({ open, onClose }) {
                 disabled={!profileStorage.system_prompt_override}
               />
               <div className="account-profile-actions">
+                <button
+                  type="button"
+                  className="account-profile-save"
+                  onClick={saveSystemPromptNow}
+                  disabled={!profileStorage.system_prompt_override || saveStatus === 'saving'}
+                >
+                  Save
+                </button>
                 <button
                   type="button"
                   className="account-profile-cancel"

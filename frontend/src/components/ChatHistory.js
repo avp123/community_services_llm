@@ -5,6 +5,7 @@ import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import { WellnessContext } from './AppStateContextProvider';
 import { authenticatedFetch } from '../utils/api';
+import { getExternalFunctionLabel } from '../utils/externalFunctionLabels';
 import '../styles/components/chat.css';
 import '../styles/pages/chat-history.css';
 
@@ -61,12 +62,14 @@ function formatToolSummaryForRow(row) {
   if (!n) return '';
   const by = row.stats_tool_calls_by_name;
   if (by && typeof by === 'object' && Object.keys(by).length > 0) {
-    const names = Object.keys(by).sort();
-    const short = names.slice(0, 3).join(', ');
+    const names = Object.keys(by).sort((a, b) =>
+      getExternalFunctionLabel(a).localeCompare(getExternalFunctionLabel(b)),
+    );
+    const short = names.slice(0, 3).map(getExternalFunctionLabel).join(', ');
     const more = names.length > 3 ? '…' : '';
-    return `${n} tool${n === 1 ? '' : 's'} (${short}${more})`;
+    return `${n} external function${n === 1 ? '' : 's'} (${short}${more})`;
   }
-  return `${n} tool${n === 1 ? '' : 's'}`;
+  return `${n} external function${n === 1 ? '' : 's'}`;
 }
 
 function StatsBar({ summary, memberLabel, toolsLabel }) {
@@ -78,7 +81,7 @@ function StatsBar({ summary, memberLabel, toolsLabel }) {
           <span className="chat-history-stat-pill chat-history-stat-member">{memberLabel}</span>
         ) : null}
         {toolsLabel ? (
-          <span className="chat-history-stat-pill chat-history-stat-tools" title="Tools invoked in this chat (Explore path)">
+          <span className="chat-history-stat-pill chat-history-stat-tools" title="External functions used in this chat (Chat + Explore path)">
             {toolsLabel}
           </span>
         ) : null}
@@ -101,6 +104,8 @@ function ChatHistory() {
     setConversationID,
     setConversation,
     setChatConvo,
+    setGoals,
+    setResources,
   } = useContext(WellnessContext);
   const [rows, setRows] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -239,6 +244,8 @@ function ChatHistory() {
         setConversation([]);
         setChatConvo([]);
         setConversationID('');
+        setGoals([]);
+        setResources([]);
         window.dispatchEvent(
           new CustomEvent('peercopilot:planner-reset', {
             detail: { reason: 'conversation_deleted' },
@@ -391,7 +398,7 @@ function ChatHistory() {
             <h3 id="chat-history-delete-title">Delete this conversation?</h3>
             <p className="chat-history-modal-body">
               This permanently removes the transcript and related session data from your history. If this chat is
-              open in Explore, that session will be cleared. If the assistant is still responding there, wait
+              open in Chat + Explore, that session will be cleared. If the assistant is still responding there, wait
               until it finishes before deleting to avoid odd behavior.
             </p>
             <div className="chat-history-modal-actions">

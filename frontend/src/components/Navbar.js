@@ -1,11 +1,12 @@
 // Navbar.js - Top navigation used across the app
 import React, { useState, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import HomeIcon from '../icons/Home.png';
-import WellnessGoalsIcon from '../icons/WellnessGoalsAssistant.png';
-import ProfileManagerIcon from '../icons/ProfileManager.png';
-import OutreachCalendarIcon from '../icons/OutreachCalendar.png';
+import { ReactComponent as HomeIcon } from '../icons/navbar/home.svg';
+import { ReactComponent as ChatExploreIcon } from '../icons/navbar/chat-explore.svg';
+import { ReactComponent as ProfileManagerIcon } from '../icons/navbar/profile-manager.svg';
+import { ReactComponent as ConnectCalendarIcon } from '../icons/navbar/connect-calendar.svg';
 import { WellnessContext } from './AppStateContextProvider';
+import { getUserIdentityLabel } from '../utils/accountDisplayName';
 import Logout from "./Logout.js";
 import AccountProfilePanel from './AccountProfilePanel';
 import AnalyticsPanel from './AnalyticsPanel';
@@ -24,6 +25,7 @@ function Navbar() {
   
   // Convert organization to uppercase for display
   const displayOrganization = organization ? organization.toUpperCase() : '';
+  const navIdentity = getUserIdentityLabel(user);
   
   if (!user.isAuthenticated) {
     return (
@@ -39,7 +41,7 @@ function Navbar() {
     <nav className="navbar">
       <h1 className="navbar-title">PeerCoPilot</h1>
       <h3 className="navbar-subtitle">{displayOrganization}</h3>
-      <h3 className="navbar-subtitle">{user.username}</h3>
+      <h3 className="navbar-subtitle">{navIdentity}</h3>
       <div className="hamburger" onClick={toggleMenu}>
         &#9776; {/* Hamburger icon */}
       </div>
@@ -48,7 +50,7 @@ function Navbar() {
           to="/"
           className={`navbar-button ${location.pathname === '/' ? 'active' : ''}`}
         >
-          <img src={HomeIcon} alt="Home Icon" className="navbar-icon" />
+          <HomeIcon className="navbar-icon" aria-hidden />
           Home
         </Link>
         <div className="navbar-spacer"></div>
@@ -59,8 +61,8 @@ function Navbar() {
             location.pathname === '/wellness-goals' ? 'active' : ''
           }`}
         >
-          <img src={WellnessGoalsIcon} alt="" className="navbar-icon" />
-          Explore
+          <ChatExploreIcon className="navbar-icon" aria-hidden />
+          Chat + Explore
         </Link>
         <Link
           to="/profile-manager"
@@ -68,11 +70,7 @@ function Navbar() {
             location.pathname === '/profile-manager' ? 'active' : ''
           }`}
         >
-          <img
-            src={ProfileManagerIcon}
-            alt="Profile Manager Icon"
-            className="navbar-icon"
-          />
+          <ProfileManagerIcon className="navbar-icon" aria-hidden />
           Profile Manager
         </Link>
         <Link
@@ -81,12 +79,8 @@ function Navbar() {
             location.pathname === '/outreach-calendar' ? 'active' : ''
           }`}
         >
-          <img
-            src={OutreachCalendarIcon}
-            alt=""
-            className="navbar-icon"
-          />
-          Connect
+          <ConnectCalendarIcon className="navbar-icon" aria-hidden />
+          Connect with Members
         </Link>
         <div className="navbar-footer-actions">
           <Link

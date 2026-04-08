@@ -49,6 +49,7 @@ function Register() {
           role: role,
           isAuthenticated: true,
           token: access_token,
+          displayName: '',
         });
       
         // Set organization context

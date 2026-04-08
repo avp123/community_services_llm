@@ -1,5 +1,5 @@
 // App.js - Main React application routes and layout with auto-logout
-import React, { useContext, useCallback } from 'react';
+import React, { useContext, useCallback, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -12,6 +12,8 @@ import OutreachCalendar from './components/OutreachCalendar';
 import ChatHistory from './components/ChatHistory';
 import Register from './components/Register';
 import { useInactivityTimeout } from './utils/useInactivityTimeout';
+import { API_URL } from './config';
+import { USER_DISPLAY_NAME_KEY, writeStoredDisplayName } from './utils/accountDisplayName';
 import './styles/variable.css';
 import './styles/base/base.css';
 import './styles/layouts/content-layout.css';
@@ -21,7 +23,7 @@ import './styles/components/navbar.css';
 // Inner component that has access to Router context
 function AppContent() {
   const navigate = useNavigate();
-  const { user, setUser, setOrganization, setConversation } = useContext(WellnessContext);
+  const { user, setUser, setOrganization, resetContext } = useContext(WellnessContext);
 
   // Auto-logout handler
   const handleAutoLogout = useCallback(() => {
@@ -33,9 +35,10 @@ function AppContent() {
       role: '',
       isAuthenticated: false,
       token: null,
+      displayName: '',
     });
     setOrganization('');
-    setConversation([]);
+    resetContext();
     
     // Clear localStorage
     localStorage.removeItem('accessToken');
@@ -43,11 +46,35 @@ function AppContent() {
     localStorage.removeItem('username');
     localStorage.removeItem('organization');
     localStorage.removeItem('loginTimestamp');
+    localStorage.removeItem(USER_DISPLAY_NAME_KEY);
     
     // Redirect to login with message
     alert('Your session has expired due to inactivity. Please log in again.');
     navigate('/login');
-  }, [navigate, setUser, setOrganization, setConversation]);
+  }, [navigate, setUser, setOrganization, resetContext]);
+
+  useEffect(() => {
+    if (!user?.isAuthenticated || !user?.token) return undefined;
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/account/profile`, {
+          headers: { Authorization: `Bearer ${user.token}` },
+        });
+        const data = await res.json();
+        if (cancelled || !res.ok || !data?.success) return;
+        const dn = writeStoredDisplayName(data.profile?.display_name);
+        setUser((prev) =>
+          prev.token === user.token ? { ...prev, displayName: dn } : prev,
+        );
+      } catch {
+        /* keep cached display name */
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [user?.isAuthenticated, user?.token, setUser]);
 
   // Only activate inactivity timer if user is authenticated
   useInactivityTimeout(

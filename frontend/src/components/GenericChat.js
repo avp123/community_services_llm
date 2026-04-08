@@ -73,6 +73,8 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
     conversationID, setConversationID,
     selectedServiceUser, setSelectedServiceUser,  // from context — persists across tabs
     serviceUsers, setServiceUsers,                // from context — persists across tabs
+    goals, setGoals,
+    resources, setResources,
   } = useContext(context);
 
   const inputRef = useRef(null);
@@ -83,8 +85,6 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [autoScrollEnabled, setAutoScrollEnabled] = useState(true);
   const [showFeedback, setShowFeedback] = useState(false);
-  const [goals, setGoals] = useState([]);
-  const [resources, setResources] = useState([]);
   const [pendingServiceUser, setPendingServiceUser] = useState(null);
   const [showResetWarning, setShowResetWarning] = useState(false);
   const [generatingCheckIns, setGeneratingCheckIns] = useState(false);
@@ -128,6 +128,8 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
       setConversation,
       setChatConvo,
       setConversationID,
+      setGoals,
+      setResources,
     ]
   );
 
