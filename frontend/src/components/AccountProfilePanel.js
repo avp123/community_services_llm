@@ -181,6 +181,15 @@ function AccountProfilePanel({ open, onClose }) {
     []
   );
 
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
+
   const reachedDisplayNameMax = displayName.length >= DISPLAY_NAME_MAX_LENGTH;
 
   if (!open) return null;
@@ -190,6 +199,7 @@ function AccountProfilePanel({ open, onClose }) {
       <div
         className="account-profile-dialog"
         role="dialog"
+        aria-modal="true"
         aria-labelledby="account-profile-title"
         onClick={(e) => e.stopPropagation()}
       >

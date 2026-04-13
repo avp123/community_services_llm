@@ -153,6 +153,12 @@
     line-height: var(--line-height-normal);
     font-family: Arial, sans-serif;
   }
+
+  .input-bar:focus-visible,
+  .notes-bar:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
   
   .input-bar::placeholder {
     color: var(--color-text-muted);
@@ -178,6 +184,12 @@
   textarea:focus {
     border-color: var(--color-primary);
     outline: none;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
   }
   
   .form-group {

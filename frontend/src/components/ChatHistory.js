@@ -6,6 +6,11 @@ import remarkGfm from 'remark-gfm';
 import { WellnessContext } from './AppStateContextProvider';
 import { authenticatedFetch } from '../utils/api';
 import { getExternalFunctionLabel } from '../utils/externalFunctionLabels';
+import {
+  SESSION_FEEDBACK_QUESTIONS,
+  LEGACY_FEEDBACK_QUESTIONS,
+  feedbackPayloadHasAnyAnswer,
+} from '../utils/sessionFeedbackQuestions';
 import '../styles/components/chat.css';
 import '../styles/pages/chat-history.css';
 
@@ -119,6 +124,9 @@ function ChatHistory() {
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
   const [deleteBusy, setDeleteBusy] = useState(false);
   const [actionBanner, setActionBanner] = useState('');
+  const [feedbackSnapshot, setFeedbackSnapshot] = useState(null);
+  const [feedbackLoading, setFeedbackLoading] = useState(false);
+  const [showFeedbackReadonly, setShowFeedbackReadonly] = useState(false);
   const threadEndRef = useRef(null);
 
   const fetchSummaries = useCallback(async () => {
@@ -144,6 +152,39 @@ function ChatHistory() {
   useEffect(() => {
     fetchSummaries();
   }, [fetchSummaries]);
+
+  useEffect(() => {
+    setShowFeedbackReadonly(false);
+    if (!selectedId) {
+      setFeedbackSnapshot(null);
+      setFeedbackLoading(false);
+      return;
+    }
+    let cancelled = false;
+    setFeedbackLoading(true);
+    setFeedbackSnapshot(null);
+    (async () => {
+      try {
+        const res = await authenticatedFetch(
+          `/api/conversations/${encodeURIComponent(selectedId)}/feedback`
+        );
+        const data = await res.json().catch(() => ({}));
+        if (cancelled) return;
+        if (res.ok && data?.success) {
+          setFeedbackSnapshot(data.feedback || {});
+        } else {
+          setFeedbackSnapshot(null);
+        }
+      } catch {
+        if (!cancelled) setFeedbackSnapshot(null);
+      } finally {
+        if (!cancelled) setFeedbackLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedId]);
 
   const sortedRows = useMemo(() => {
     const copy = [...rows];
@@ -219,6 +260,8 @@ function ChatHistory() {
       setMessages([]);
       setLiveSummary(null);
       setDetailError('');
+      setFeedbackSnapshot(null);
+      setShowFeedbackReadonly(false);
     }
   };
 
@@ -268,6 +311,11 @@ function ChatHistory() {
     ? (selectedRow.service_user_name || selectedRow.service_user_id || 'General')
     : '';
   const toolsLabel = selectedRow ? formatToolSummaryForRow(selectedRow) : '';
+
+  const hasSavedFeedback =
+    feedbackSnapshot && typeof feedbackSnapshot === 'object'
+      ? feedbackPayloadHasAnyAnswer(feedbackSnapshot)
+      : false;
 
   return (
     <div className="chat-history-page">
@@ -337,14 +385,26 @@ function ChatHistory() {
             <>
               <div className="chat-history-detail-toolbar">
                 <StatsBar summary={liveSummary} memberLabel={memberLabel} toolsLabel={toolsLabel} />
-                <button
-                  type="button"
-                  className="chat-history-delete"
-                  onClick={() => setDeleteConfirmOpen(true)}
-                  disabled={detailLoading || Boolean(detailError)}
-                >
-                  Delete conversation
-                </button>
+                <div className="chat-history-toolbar-actions">
+                  {!feedbackLoading && hasSavedFeedback ? (
+                    <button
+                      type="button"
+                      className="chat-history-view-feedback"
+                      onClick={() => setShowFeedbackReadonly(true)}
+                      disabled={detailLoading || Boolean(detailError)}
+                    >
+                      View session feedback
+                    </button>
+                  ) : null}
+                  <button
+                    type="button"
+                    className="chat-history-delete"
+                    onClick={() => setDeleteConfirmOpen(true)}
+                    disabled={detailLoading || Boolean(detailError)}
+                  >
+                    Delete conversation
+                  </button>
+                </div>
               </div>
               {detailLoading && <p className="chat-history-loading">Loading messages…</p>}
               {detailError && <p className="chat-history-detail-error">{detailError}</p>}
@@ -381,6 +441,97 @@ function ChatHistory() {
           )}
         </main>
       </div>
+
+      {showFeedbackReadonly && feedbackSnapshot && hasSavedFeedback ? (
+        <div
+          className="feedback-survey-overlay"
+          role="presentation"
+          onClick={() => setShowFeedbackReadonly(false)}
+        >
+          <div
+            className="feedback-survey-dialog"
+            role="dialog"
+            aria-labelledby="chat-history-feedback-readonly-title"
+            aria-modal="true"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="feedback-survey-header">
+              <h3 id="chat-history-feedback-readonly-title">Session feedback (saved)</h3>
+              <button
+                type="button"
+                className="feedback-survey-close"
+                onClick={() => setShowFeedbackReadonly(false)}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+            <p className="feedback-survey-sub">Your saved ratings for this conversation (read-only).</p>
+            {SESSION_FEEDBACK_QUESTIONS.map((q) => {
+              const raw = feedbackSnapshot[q.id];
+              const rating =
+                raw !== null && raw !== undefined && raw !== '' ? Number(raw) : null;
+              return (
+                <div key={q.id} className="feedback-survey-question">
+                  <div className="feedback-survey-label">{q.label}</div>
+                  {q.helper ? <p className="feedback-survey-helper">{q.helper}</p> : null}
+                  <div className="feedback-survey-scale feedback-survey-scale-readonly">
+                    {[1, 2, 3, 4, 5].map((v) => (
+                      <span
+                        key={v}
+                        className={`feedback-scale-btn ${rating === v ? 'selected' : ''} feedback-scale-readonly`}
+                        aria-hidden="true"
+                      >
+                        {v}
+                      </span>
+                    ))}
+                  </div>
+                  {rating == null || Number.isNaN(rating) ? (
+                    <p className="feedback-readonly-unanswered">No rating saved.</p>
+                  ) : null}
+                </div>
+              );
+            })}
+            {LEGACY_FEEDBACK_QUESTIONS.some(
+              (q) =>
+                feedbackSnapshot[q.id] !== null &&
+                feedbackSnapshot[q.id] !== undefined &&
+                feedbackSnapshot[q.id] !== ''
+            ) ? (
+              <div className="feedback-legacy-block">
+                <div className="feedback-survey-label">Earlier saved ratings (legacy)</div>
+                {LEGACY_FEEDBACK_QUESTIONS.map((q) => {
+                  const raw = feedbackSnapshot[q.id];
+                  const rating =
+                    raw !== null && raw !== undefined && raw !== '' ? Number(raw) : null;
+                  if (rating == null || Number.isNaN(rating)) return null;
+                  return (
+                    <p key={q.id} className="feedback-legacy-line">
+                      <strong>{q.label}:</strong> {rating} / 5
+                    </p>
+                  );
+                })}
+              </div>
+            ) : null}
+            {typeof feedbackSnapshot.feedback_text === 'string' &&
+            feedbackSnapshot.feedback_text.trim() !== '' ? (
+              <div className="feedback-survey-notes-wrap">
+                <div className="feedback-survey-label">Optional notes</div>
+                <div className="feedback-readonly-notes">{feedbackSnapshot.feedback_text}</div>
+              </div>
+            ) : null}
+            <div className="feedback-survey-actions">
+              <button
+                type="button"
+                className="btn-cancel"
+                onClick={() => setShowFeedbackReadonly(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
 
       {deleteConfirmOpen ? (
         <div

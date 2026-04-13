@@ -1127,6 +1127,126 @@ def get_user_weekly_usage_stats(username: str, weeks: int = 12):
     return get_user_trend_usage_stats(username, granularity="week", periods=weeks)
 
 
+def get_user_feedback_trend_stats(username: str, granularity: str = "week", periods: int = 12):
+    """
+    Session feedback (q1/q2) averages per time bucket, aligned to conversation created_at.
+    Same granularity/period bounds as get_user_trend_usage_stats.
+    Returns (True, { rows, summary }) or (False, error str).
+    """
+    granularity = (granularity or "week").strip().lower()
+    allowed = {
+        "day": {"interval": "1 day", "min_periods": 2, "max_periods": 62},
+        "week": {"interval": "1 week", "min_periods": 2, "max_periods": 52},
+        "month": {"interval": "1 month", "min_periods": 2, "max_periods": 36},
+    }
+    cfg = allowed.get(granularity)
+    if cfg is None:
+        return False, "Invalid granularity. Use day, week, or month."
+
+    periods = max(cfg["min_periods"], min(int(periods), cfg["max_periods"]))
+    interval_expr = cfg["interval"]
+    trunc_expr = f"date_trunc('{granularity}', NOW())::date"
+
+    sql_rows = f"""
+        WITH bounds AS (
+            SELECT {trunc_expr} AS this_bucket
+        ),
+        bucket_series AS (
+            SELECT (this_bucket - (gs * INTERVAL '{interval_expr}'))::date AS period_start
+            FROM bounds, generate_series(%s - 1, 0, -1) AS gs
+        ),
+        feedback_agg AS (
+            SELECT
+                date_trunc('{granularity}', c.created_at)::date AS period_start,
+                COUNT(*) FILTER (WHERE cf.q1 IS NOT NULL)::int AS q1_count,
+                ROUND(AVG(cf.q1) FILTER (WHERE cf.q1 IS NOT NULL), 4)::double precision AS avg_q1,
+                COUNT(*) FILTER (WHERE cf.q2 IS NOT NULL)::int AS q2_count,
+                ROUND(AVG(cf.q2) FILTER (WHERE cf.q2 IS NOT NULL), 4)::double precision AS avg_q2
+            FROM conversation_feedback cf
+            INNER JOIN conversations c
+                ON c.id = cf.conversation_id AND c.username = cf.username
+            WHERE cf.username = %s
+              AND c.created_at >= (
+                  (SELECT this_bucket FROM bounds) - (%s - 1) * INTERVAL '{interval_expr}'
+              )
+            GROUP BY 1
+        )
+        SELECT
+            bs.period_start,
+            COALESCE(fa.q1_count, 0) AS q1_count,
+            fa.avg_q1,
+            COALESCE(fa.q2_count, 0) AS q2_count,
+            fa.avg_q2
+        FROM bucket_series bs
+        LEFT JOIN feedback_agg fa ON fa.period_start = bs.period_start
+        ORDER BY bs.period_start ASC
+    """
+
+    sql_summary = f"""
+        WITH bounds AS (
+            SELECT {trunc_expr} AS this_bucket
+        )
+        SELECT
+            COUNT(*) FILTER (WHERE cf.q1 IS NOT NULL)::int AS total_q1,
+            AVG(cf.q1) FILTER (WHERE cf.q1 IS NOT NULL) AS overall_avg_q1,
+            COUNT(*) FILTER (WHERE cf.q2 IS NOT NULL)::int AS total_q2,
+            AVG(cf.q2) FILTER (WHERE cf.q2 IS NOT NULL) AS overall_avg_q2
+        FROM conversation_feedback cf
+        INNER JOIN conversations c
+            ON c.id = cf.conversation_id AND c.username = cf.username
+        CROSS JOIN bounds b
+        WHERE cf.username = %s
+          AND c.created_at >= (b.this_bucket - (%s - 1) * INTERVAL '{interval_expr}')
+    """
+
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(sql_rows, (periods, username, periods))
+                raw_rows = cur.fetchall()
+                cur.execute(sql_summary, (username, periods))
+                summary_row = cur.fetchone()
+
+        out_rows = []
+        for r in raw_rows:
+            d = dict(r)
+            ps = d.get("period_start")
+            if ps is not None and hasattr(ps, "isoformat"):
+                d["period_start"] = ps.isoformat()
+            for key in ("avg_q1", "avg_q2"):
+                v = d.get(key)
+                if v is None:
+                    continue
+                d[key] = float(v)
+            out_rows.append(d)
+
+        summary = {
+            "total_q1": 0,
+            "total_q2": 0,
+            "overall_avg_q1": None,
+            "overall_avg_q2": None,
+        }
+        if summary_row:
+            sr = dict(summary_row)
+            summary["total_q1"] = int(sr.get("total_q1") or 0)
+            summary["total_q2"] = int(sr.get("total_q2") or 0)
+            o1 = sr.get("overall_avg_q1")
+            o2 = sr.get("overall_avg_q2")
+            summary["overall_avg_q1"] = float(o1) if o1 is not None else None
+            summary["overall_avg_q2"] = float(o2) if o2 is not None else None
+
+        return True, {
+            "rows": out_rows,
+            "summary": summary,
+            "periods": periods,
+            "granularity": granularity,
+        }
+    except Exception as e:
+        print(f"[DB] get_user_feedback_trend_stats error: {e}")
+        return False, str(e)
+
+
 def get_conversation_messages_for_user(conversation_id: str, owner_username: str):
     """
     Load messages if the conversation belongs to owner_username.
@@ -1301,8 +1421,10 @@ def upsert_session_feedback_answer(
         return False, "No update payload provided"
     if question_id is not None and question_id not in allowed:
         return False, "Invalid question_id"
-    if question_id is not None and (value is None or int(value) < 1 or int(value) > 5):
-        return False, "Value must be an integer between 1 and 5"
+    if question_id is not None and value is not None:
+        iv = int(value)
+        if iv < 1 or iv > 5:
+            return False, "Value must be an integer between 1 and 5"
     try:
         with psycopg.connect(CONNECTION_STRING) as conn:
             with conn.cursor() as cur:
@@ -1316,13 +1438,14 @@ def upsert_session_feedback_answer(
                     (conversation_id, username),
                 )
                 if question_id is not None:
+                    stored = None if value is None else int(value)
                     cur.execute(
                         f"""
                         UPDATE conversation_feedback
                         SET {question_id} = %s, updated_at = NOW()
                         WHERE conversation_id = %s AND username = %s
                         """,
-                        (int(value), conversation_id, username),
+                        (stored, conversation_id, username),
                     )
                 if feedback_text is not None:
                     cur.execute(

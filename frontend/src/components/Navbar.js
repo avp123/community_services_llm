@@ -42,10 +42,20 @@ function Navbar() {
       <h1 className="navbar-title">PeerCoPilot</h1>
       <h3 className="navbar-subtitle">{displayOrganization}</h3>
       <h3 className="navbar-subtitle">{navIdentity}</h3>
-      <div className="hamburger" onClick={toggleMenu}>
-        &#9776; {/* Hamburger icon */}
-      </div>
-      <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+      <button
+        type="button"
+        className="hamburger"
+        onClick={toggleMenu}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={menuOpen}
+        aria-controls="primary-navigation"
+      >
+        &#9776;
+      </button>
+      <div
+        id="primary-navigation"
+        className={`navbar-links ${menuOpen ? 'active' : ''}`}
+      >
         <Link
           to="/"
           className={`navbar-button ${location.pathname === '/' ? 'active' : ''}`}
@@ -65,15 +75,6 @@ function Navbar() {
           Chat + Explore
         </Link>
         <Link
-          to="/profile-manager"
-          className={`navbar-button ${
-            location.pathname === '/profile-manager' ? 'active' : ''
-          }`}
-        >
-          <ProfileManagerIcon className="navbar-icon" aria-hidden />
-          Profile Manager
-        </Link>
-        <Link
           to="/outreach-calendar"
           className={`navbar-button ${
             location.pathname === '/outreach-calendar' ? 'active' : ''
@@ -81,6 +82,15 @@ function Navbar() {
         >
           <ConnectCalendarIcon className="navbar-icon" aria-hidden />
           Connect with Members
+        </Link>
+        <Link
+          to="/profile-manager"
+          className={`navbar-button ${
+            location.pathname === '/profile-manager' ? 'active' : ''
+          }`}
+        >
+          <ProfileManagerIcon className="navbar-icon" aria-hidden />
+          Profile Manager
         </Link>
         <div className="navbar-footer-actions">
           <Link

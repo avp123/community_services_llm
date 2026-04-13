@@ -166,6 +166,11 @@
   border-color: var(--color-secondary);
 }
 
+.organization-dropdown:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 
 /* ===========================
    RESPONSIVE - MOBILE
@@ -211,6 +216,18 @@
     display: block;
     cursor: pointer;
     padding: var(--spacing-md);
+    margin: 0;
+    border: none;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    line-height: 1;
+  }
+
+  .hamburger:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 

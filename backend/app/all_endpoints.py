@@ -53,6 +53,7 @@ from backend.app.database import (
     get_user_conversation_global_stats,
     get_user_trend_usage_stats,
     get_user_weekly_usage_stats,
+    get_user_feedback_trend_stats,
     get_conversation_messages_for_user,
     conversation_owned_by_user,
     delete_conversation_for_user,
@@ -293,6 +294,30 @@ async def analytics_trends(
             "periods": periods,
             "rows": result,
             "tool_calls_bucket_basis": "conversation_created_period",
+        }
+    raise HTTPException(status_code=400, detail=result)
+
+
+@app.get("/api/analytics/feedback-trends")
+async def analytics_feedback_trends(
+    current_user: UserData = Depends(get_current_user),
+    granularity: str = "week",
+    periods: int = 12,
+):
+    """Session feedback (q1/q2) trend averages per period for the current provider."""
+    success, result = get_user_feedback_trend_stats(
+        current_user.username,
+        granularity=granularity,
+        periods=periods,
+    )
+    if success:
+        return {
+            "success": True,
+            "granularity": result.get("granularity", granularity),
+            "periods": result.get("periods", periods),
+            "rows": result.get("rows", []),
+            "summary": result.get("summary", {}),
+            "bucket_basis": "conversation_created_at",
         }
     raise HTTPException(status_code=400, detail=result)
 

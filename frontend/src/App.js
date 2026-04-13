@@ -84,8 +84,11 @@ function AppContent() {
 
   return (
     <div className="App">
+      <a href="#main-content" className="skip-to-main">
+        Skip to main content
+      </a>
       <Navbar />
-      <div className="content">
+      <main id="main-content" className="content" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -96,7 +99,7 @@ function AppContent() {
           <Route path="/chat-history" element={<ChatHistory />} />
           <Route path="/audit-logs" element={<AuditLogs />} />
         </Routes>
-      </div>
+      </main>
     </div>
   );
 }

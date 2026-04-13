@@ -144,15 +144,15 @@ function Home() {
           </Link>
         </div>
         <div className="tiles-container">
-          <Link to="/profile-manager" className="tile">
+          <Link to="/outreach-calendar" className="tile">
             <span>Tool 2</span>
-            <h2>Profile Manager</h2>
+            <h2>Connect with Members</h2>
           </Link>
         </div>
         <div className="tiles-container">
-          <Link to="/outreach-calendar" className="tile">
+          <Link to="/profile-manager" className="tile">
             <span>Tool 3</span>
-            <h2>Connect with Members</h2>
+            <h2>Profile Manager</h2>
           </Link>
         </div>
       </div>

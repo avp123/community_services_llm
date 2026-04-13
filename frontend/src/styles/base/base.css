@@ -44,6 +44,52 @@ body {
   background-color: var(--bg-primary);
 }
 
+/* Skip to main content — visible when focused (Tab) */
+.skip-to-main {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 100000;
+  padding: 10px 14px;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transform: translateY(-120%);
+  transition: transform 0.15s ease;
+}
+
+.skip-to-main:focus {
+  transform: translateY(0);
+  outline: none;
+}
+
+.skip-to-main:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Keyboard focus — :focus-visible avoids rings on most mouse clicks */
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* ===========================
    RESPONSIVE - MOBILE

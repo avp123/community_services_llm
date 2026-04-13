@@ -10,6 +10,7 @@ import { WellnessContext } from './AppStateContextProvider';
 import { apiGet } from '../utils/api';
 import { API_URL } from '../config';
 import { authenticatedFetch } from '../utils/api';
+import { SESSION_FEEDBACK_QUESTIONS } from '../utils/sessionFeedbackQuestions';
 
 const SOCKET_CONFIG = {
   transports: ['polling', 'websocket'],
@@ -491,8 +492,20 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
 
           <h2 className="instruction">What are the member&apos;s needs and goals for today&apos;s meeting?</h2>
 
-          <div className={`conversation-thread ${submitted ? 'visible' : ''}`}
-            onScroll={handleScroll} style={{ overflowY: 'auto', maxHeight: '80vh' }}>
+          <div role="status" className="chat-sr-status">
+            {isGenerating ? 'Assistant is replying.' : ''}
+          </div>
+
+          <div
+            className={`conversation-thread ${submitted ? 'visible' : ''}`}
+            role="region"
+            aria-label="Conversation messages"
+            aria-live="polite"
+            aria-relevant="additions text"
+            aria-busy={isGenerating}
+            onScroll={handleScroll}
+            style={{ overflowY: 'auto', maxHeight: '80vh' }}
+          >
             {conversation.map((msg, index) => (
               <div key={index} className={`message-blurb ${msg.sender}`}>
                 <MarkdownContent content={msg.text} />
@@ -588,14 +601,6 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   );
 }
 
-const SURVEY_QUESTIONS = [
-  { id: 'q1', label: 'How useful was this session for your work?' },
-  { id: 'q2', label: 'How easy was PeerCoPilot to use in this session?' },
-  { id: 'q3', label: 'How confident do you feel using the guidance provided?' },
-  { id: 'q4', label: 'How relevant were the responses/resources to your needs?' },
-  { id: 'q5', label: 'How likely are you to use PeerCoPilot again? (1=never, 5=definitely)' },
-];
-
 const FeedbackModal = ({ isOpen, onClose, conversationID }) => {
   const [answers, setAnswers] = useState({});
   const [comment, setComment] = useState('');
@@ -605,11 +610,20 @@ const FeedbackModal = ({ isOpen, onClose, conversationID }) => {
   const [commentSaving, setCommentSaving] = useState(false);
   const [commentSavedAt, setCommentSavedAt] = useState(null);
 
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [isOpen, onClose]);
+
   const autosaveAnswer = async (questionId, value) => {
     if (!conversationID) return;
     setQuestionSaving((prev) => ({ ...prev, [questionId]: true }));
     setQuestionError((prev) => ({ ...prev, [questionId]: '' }));
-    setAnswers((prev) => ({ ...prev, [questionId]: value }));
+    setAnswers((prev) => ({ ...prev, [questionId]: value ?? null }));
     try {
       const res = await authenticatedFetch(
         `/api/conversations/${encodeURIComponent(conversationID)}/feedback`,
@@ -669,9 +683,6 @@ const FeedbackModal = ({ isOpen, onClose, conversationID }) => {
           setAnswers({
             q1: f.q1 ?? null,
             q2: f.q2 ?? null,
-            q3: f.q3 ?? null,
-            q4: f.q4 ?? null,
-            q5: f.q5 ?? null,
           });
           setComment(f.feedback_text || '');
         }
@@ -688,7 +699,13 @@ const FeedbackModal = ({ isOpen, onClose, conversationID }) => {
 
   return (
     <div className="feedback-survey-overlay" role="presentation" onClick={onClose}>
-      <div className="feedback-survey-dialog" role="dialog" aria-labelledby="feedback-survey-title" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="feedback-survey-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="feedback-survey-title"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="feedback-survey-header">
           <h3 id="feedback-survey-title">Session Feedback</h3>
           <button type="button" className="feedback-survey-close" onClick={onClose} aria-label="Close">
@@ -699,16 +716,25 @@ const FeedbackModal = ({ isOpen, onClose, conversationID }) => {
           Optional quick survey. Answers autosave as you click.
         </p>
         {loading ? <p className="feedback-survey-loading">Loading previous answers...</p> : null}
-        {!loading && SURVEY_QUESTIONS.map((q) => (
+        {!loading && SESSION_FEEDBACK_QUESTIONS.map((q) => (
           <div key={q.id} className="feedback-survey-question">
             <div className="feedback-survey-label">{q.label}</div>
+            {q.helper ? (
+              <p className="feedback-survey-helper">{q.helper}</p>
+            ) : null}
             <div className="feedback-survey-scale">
               {[1, 2, 3, 4, 5].map((v) => (
                 <button
                   key={v}
                   type="button"
                   className={`feedback-scale-btn ${answers[q.id] === v ? 'selected' : ''}`}
-                  onClick={() => autosaveAnswer(q.id, v)}
+                  onClick={() => {
+                    if (answers[q.id] === v) {
+                      autosaveAnswer(q.id, null);
+                    } else {
+                      autosaveAnswer(q.id, v);
+                    }
+                  }}
                   disabled={!!questionSaving[q.id]}
                 >
                   {v}

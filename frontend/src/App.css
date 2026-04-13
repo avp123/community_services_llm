@@ -241,6 +241,11 @@ body, html {
   outline: none;
   border-color: #0056b3;
 }
+
+.organization-dropdown:focus-visible {
+  outline: 2px solid #254676;
+  outline-offset: 2px;
+}
 /* Login Page Styles */
 .login-container {
   display: flex;
@@ -313,6 +318,11 @@ body, html {
 .form-group input:focus {
   border-color: #254676;
   outline: none;
+}
+
+.form-group input:focus-visible {
+  outline: 2px solid #254676;
+  outline-offset: 2px;
 }
 
 .login-button {

@@ -107,6 +107,177 @@ function formatBucketLabel(isoDate, granularity) {
   }
 }
 
+const FEEDBACK_SHORT = {
+  q1: 'Effectiveness',
+  q2: 'Human connection',
+};
+
+function formatLikert(v) {
+  if (v == null || v === '') return '—';
+  const n = Number(v);
+  if (Number.isNaN(n)) return '—';
+  return n.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+}
+
+function buildDisconnectedPath(rows, key, pad, topHeadroom, innerH, innerW) {
+  let d = '';
+  let penUp = true;
+  rows.forEach((r, i) => {
+    const raw = r[key];
+    if (raw == null || raw === '') {
+      penUp = true;
+      return;
+    }
+    const v = Number(raw);
+    if (Number.isNaN(v)) {
+      penUp = true;
+      return;
+    }
+    const x = pad + (i * innerW) / Math.max(1, rows.length - 1);
+    const y = pad + topHeadroom + innerH - ((v - 1) / 4) * innerH;
+    if (penUp) {
+      d += `${d ? ' ' : ''}M ${x} ${y}`;
+      penUp = false;
+    } else {
+      d += ` L ${x} ${y}`;
+    }
+  });
+  return d;
+}
+
+function FeedbackTrendSvg({ rows, granularity }) {
+  const width = 880;
+  const height = 300;
+  const pad = 36;
+  const topHeadroom = 10;
+  const legendH = 28;
+  const innerW = width - pad * 2;
+  const innerH = height - pad * 2 - topHeadroom - legendH;
+  const minVal = 1;
+  const maxVal = 5;
+  const range = maxVal - minVal;
+  const ticks = [1, 2, 3, 4, 5];
+  const [hoveredIdx, setHoveredIdx] = useState(null);
+
+  const pathQ1 = buildDisconnectedPath(rows, 'avg_q1', pad, topHeadroom, innerH, innerW);
+  const pathQ2 = buildDisconnectedPath(rows, 'avg_q2', pad, topHeadroom, innerH, innerW);
+
+  const pointsQ1 = rows.map((r, i) => {
+    const x = pad + (i * innerW) / Math.max(1, rows.length - 1);
+    const v = r.avg_q1;
+    const ok = v != null && v !== '' && !Number.isNaN(Number(v));
+    const y = ok
+      ? pad + topHeadroom + innerH - ((Number(v) - minVal) / range) * innerH
+      : null;
+    return { x, y, ok, v: ok ? Number(v) : null, periodStart: r.period_start };
+  });
+  const pointsQ2 = rows.map((r, i) => {
+    const x = pad + (i * innerW) / Math.max(1, rows.length - 1);
+    const v = r.avg_q2;
+    const ok = v != null && v !== '' && !Number.isNaN(Number(v));
+    const y = ok
+      ? pad + topHeadroom + innerH - ((Number(v) - minVal) / range) * innerH
+      : null;
+    return { x, y, ok, v: ok ? Number(v) : null, periodStart: r.period_start };
+  });
+
+  const hovered = hoveredIdx == null ? null : {
+    x: pointsQ1[hoveredIdx]?.x,
+    periodStart: rows[hoveredIdx]?.period_start,
+    q1: rows[hoveredIdx]?.avg_q1,
+    q2: rows[hoveredIdx]?.avg_q2,
+    q1c: rows[hoveredIdx]?.q1_count,
+    q2c: rows[hoveredIdx]?.q2_count,
+  };
+  const labelEvery = rows.length > 16 ? 2 : 1;
+
+  return (
+    <div className="analytics-trends-chart-wrap analytics-feedback-chart-wrap">
+      <div className="analytics-feedback-legend" aria-hidden="true">
+        <span className="analytics-feedback-legend-item analytics-feedback-legend-q1">
+          <span className="analytics-feedback-legend-swatch" /> {FEEDBACK_SHORT.q1}
+        </span>
+        <span className="analytics-feedback-legend-item analytics-feedback-legend-q2">
+          <span className="analytics-feedback-legend-swatch" /> {FEEDBACK_SHORT.q2}
+        </span>
+      </div>
+      <svg className="analytics-trends-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Session feedback averages over time">
+        <line x1={pad} y1={pad} x2={pad} y2={height - pad - legendH} stroke="#c9ced6" />
+        <line x1={pad} y1={height - pad - legendH} x2={width - pad} y2={height - pad - legendH} stroke="#c9ced6" />
+        {ticks.map((tickVal) => {
+          const t = (tickVal - minVal) / range;
+          const y = pad + topHeadroom + innerH - t * innerH;
+          return (
+            <g key={`fb-tick-${tickVal}`}>
+              <line x1={pad} y1={y} x2={width - pad} y2={y} stroke="#eef1f5" />
+              <text x={6} y={y + 4} className="analytics-trends-axis-text">
+                {tickVal}
+              </text>
+            </g>
+          );
+        })}
+        {pathQ1 ? <path d={pathQ1} fill="none" stroke="#4f46e5" strokeWidth="2.5" /> : null}
+        {pathQ2 ? <path d={pathQ2} fill="none" stroke="#059669" strokeWidth="2.5" /> : null}
+        {pointsQ1.map((p, idx) => (p.ok ? (
+          <circle key={`p1-${p.periodStart}`} cx={p.x} cy={p.y} r="4" fill="#4f46e5" />
+        ) : null))}
+        {pointsQ2.map((p, idx) => (p.ok ? (
+          <circle key={`p2-${p.periodStart}`} cx={p.x} cy={p.y} r="4" fill="#059669" />
+        ) : null))}
+        {rows.map((_, idx) => {
+          const x = pad + (idx * innerW) / Math.max(1, rows.length - 1);
+          return (
+            <rect
+              key={`hit-${idx}`}
+              x={x - 12}
+              y={pad}
+              width="24"
+              height={innerH + topHeadroom}
+              fill="transparent"
+              onMouseEnter={() => setHoveredIdx(idx)}
+              onMouseLeave={() => setHoveredIdx(null)}
+            />
+          );
+        })}
+        {hovered && hovered.x != null ? (
+          <g>
+            <rect
+              x={Math.min(width - 240, hovered.x + 10)}
+              y={12}
+              rx="6"
+              ry="6"
+              width="230"
+              height="64"
+              fill="#111827"
+              opacity="0.92"
+            />
+            <text x={Math.min(width - 228, hovered.x + 18)} y={28} fill="#fff" fontSize="11">
+              {formatBucketLabel(hovered.periodStart, granularity)}
+            </text>
+            <text x={Math.min(width - 228, hovered.x + 18)} y={44} fill="#e0e7ff" fontSize="11">
+              {`${FEEDBACK_SHORT.q1}: ${formatLikert(hovered.q1)} (${hovered.q1c ?? 0} n)`}
+            </text>
+            <text x={Math.min(width - 228, hovered.x + 18)} y={60} fill="#d1fae5" fontSize="11">
+              {`${FEEDBACK_SHORT.q2}: ${formatLikert(hovered.q2)} (${hovered.q2c ?? 0} n)`}
+            </text>
+          </g>
+        ) : null}
+        {rows.map((r, idx) => (
+          <text
+            key={`fb-x-${r.period_start}`}
+            x={pad + (idx * innerW) / Math.max(1, rows.length - 1)}
+            y={height - 8}
+            textAnchor="middle"
+            className="analytics-trends-axis-text"
+          >
+            {idx % labelEvery === 0 ? formatBucketLabel(r.period_start, granularity) : ''}
+          </text>
+        ))}
+      </svg>
+    </div>
+  );
+}
+
 function TrendSvg({ rows, metricKey, granularity }) {
   const width = 880;
   const height = 280;
@@ -209,6 +380,10 @@ function AnalyticsPanel({ open, onClose }) {
   const [trendRows, setTrendRows] = useState([]);
   const [trendsLoading, setTrendsLoading] = useState(false);
   const [trendsError, setTrendsError] = useState('');
+  const [feedbackRows, setFeedbackRows] = useState([]);
+  const [feedbackSummary, setFeedbackSummary] = useState(null);
+  const [feedbackLoading, setFeedbackLoading] = useState(false);
+  const [feedbackError, setFeedbackError] = useState('');
 
   const loadOverview = useCallback(async () => {
     setOverviewFetching(true);
@@ -252,6 +427,44 @@ function AnalyticsPanel({ open, onClose }) {
     }
   }, [granularity, periods]);
 
+  const loadFeedbackTrends = useCallback(async () => {
+    if (!PERIOD_OPTIONS[granularity]?.includes(periods)) {
+      return;
+    }
+    setFeedbackLoading(true);
+    setFeedbackError('');
+    try {
+      const res = await authenticatedFetch(
+        `/api/analytics/feedback-trends?granularity=${encodeURIComponent(granularity)}&periods=${periods}`
+      );
+      const data = await res.json();
+      if (!res.ok || !data?.success) {
+        setFeedbackError(data?.detail || 'Could not load feedback trends.');
+        setFeedbackRows([]);
+        setFeedbackSummary(null);
+        return;
+      }
+      setFeedbackError('');
+      setFeedbackRows(Array.isArray(data.rows) ? data.rows : []);
+      setFeedbackSummary(data.summary || null);
+    } catch {
+      setFeedbackError('Could not load feedback trends.');
+      setFeedbackRows([]);
+      setFeedbackSummary(null);
+    } finally {
+      setFeedbackLoading(false);
+    }
+  }, [granularity, periods]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
+
   useEffect(() => {
     if (!open) return undefined;
     let cancelled = false;
@@ -275,6 +488,11 @@ function AnalyticsPanel({ open, onClose }) {
     loadTrends();
   }, [open, activeTab, granularity, periods, loadTrends]);
 
+  useEffect(() => {
+    if (!open || activeTab !== 'feedback') return;
+    loadFeedbackTrends();
+  }, [open, activeTab, granularity, periods, loadFeedbackTrends]);
+
   const summaryValue = useMemo(() => {
     if (!trendRows.length) return 0;
     if (metricKey === 'avg_chars_per_message') {
@@ -295,6 +513,7 @@ function AnalyticsPanel({ open, onClose }) {
       <div
         className="analytics-dialog"
         role="dialog"
+        aria-modal="true"
         aria-labelledby="analytics-title"
         onClick={(e) => e.stopPropagation()}
       >
@@ -318,6 +537,13 @@ function AnalyticsPanel({ open, onClose }) {
             onClick={() => setActiveTab('trends')}
           >
             Trends
+          </button>
+          <button
+            type="button"
+            className={`analytics-tab ${activeTab === 'feedback' ? 'active' : ''}`}
+            onClick={() => setActiveTab('feedback')}
+          >
+            Session feedback
           </button>
         </div>
 
@@ -358,7 +584,9 @@ function AnalyticsPanel({ open, onClose }) {
               </div>
             ) : null}
           </div>
-        ) : (
+        ) : null}
+
+        {activeTab === 'trends' ? (
           <div className="analytics-tab-body">
             <div className="analytics-subtabs">
               {[
@@ -448,7 +676,95 @@ function AnalyticsPanel({ open, onClose }) {
               </div>
             ) : null}
           </div>
-        )}
+        ) : null}
+
+        {activeTab === 'feedback' ? (
+          <div className="analytics-tab-body">
+            <div className="analytics-subtabs">
+              {[
+                { key: 'day', label: 'Daily' },
+                { key: 'week', label: 'Weekly' },
+                { key: 'month', label: 'Monthly' },
+              ].map((opt) => (
+                <button
+                  key={opt.key}
+                  type="button"
+                  className={`analytics-subtab ${granularity === opt.key ? 'active' : ''}`}
+                  onClick={() => {
+                    setGranularity(opt.key);
+                    setPeriods(PERIOD_OPTIONS[opt.key][0]);
+                  }}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+            <div className="analytics-trends-controls">
+              <label>
+                {periodLabel}
+                <select value={periods} onChange={(e) => setPeriods(Number(e.target.value))}>
+                  {PERIOD_OPTIONS[granularity].map((p) => (
+                    <option key={p} value={p}>
+                      Last {p}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <button type="button" onClick={loadFeedbackTrends} className="analytics-refresh" disabled={feedbackLoading}>
+                Refresh
+              </button>
+              {feedbackLoading ? <span className="analytics-trends-updating" aria-live="polite">Updating…</span> : null}
+            </div>
+            <p className="analytics-feedback-basis">
+              Averages use session feedback (1–5). Periods are grouped by when each conversation started.
+            </p>
+            {feedbackError ? <p className="analytics-error">{feedbackError}</p> : null}
+            {feedbackLoading && feedbackRows.length === 0 ? <p className="analytics-loading">Loading…</p> : null}
+            {!feedbackError && feedbackRows.length > 0 ? (
+              <div
+                className={`analytics-trends-body ${feedbackLoading ? 'analytics-trends-body--refreshing' : ''}`}
+                aria-busy={feedbackLoading}
+              >
+                <div className="analytics-feedback-summary-row">
+                  <div className="analytics-card">
+                    <span>{FEEDBACK_SHORT.q1}</span>
+                    <strong>{formatLikert(feedbackSummary?.overall_avg_q1)}</strong>
+                    <span className="analytics-feedback-n">({feedbackSummary?.total_q1 ?? 0} responses)</span>
+                  </div>
+                  <div className="analytics-card">
+                    <span>{FEEDBACK_SHORT.q2}</span>
+                    <strong>{formatLikert(feedbackSummary?.overall_avg_q2)}</strong>
+                    <span className="analytics-feedback-n">({feedbackSummary?.total_q2 ?? 0} responses)</span>
+                  </div>
+                </div>
+                {(feedbackSummary?.total_q1 ?? 0) === 0 && (feedbackSummary?.total_q2 ?? 0) === 0 ? (
+                  <p className="analytics-feedback-empty">No session feedback in this date range yet.</p>
+                ) : null}
+                <FeedbackTrendSvg rows={feedbackRows} granularity={granularity} />
+                <div className="analytics-trends-table-wrap">
+                  <table className="analytics-trends-table analytics-feedback-table">
+                    <thead>
+                      <tr>
+                        <th>{firstColumnLabel}</th>
+                        <th>{FEEDBACK_SHORT.q1}</th>
+                        <th>{FEEDBACK_SHORT.q2}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {feedbackRows.map((r) => (
+                        <tr key={`fb-${granularity}-${r.period_start}`}>
+                          <td>{formatBucketLabel(r.period_start, granularity)}</td>
+                          <td>{r.q1_count > 0 ? `${formatLikert(r.avg_q1)} (${r.q1_count})` : '—'}</td>
+                          <td>{r.q2_count > 0 ? `${formatLikert(r.avg_q2)} (${r.q2_count})` : '—'}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ) : null}
+          </div>
+        ) : null}
       </div>
     </div>
   );

@@ -11,6 +11,19 @@
   padding: var(--spacing-xl) 0;
 }
 
+/* Screen-reader-only status; no layout impact */
+.chat-sr-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
 .message-blurb {
   margin-bottom: 2px;
   max-width: 80%;
@@ -265,6 +278,13 @@
   display: block;
 }
 
+.feedback-survey-helper {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #666;
+  font-weight: normal;
+}
+
 .feedback-survey-scale {
   display: flex;
   gap: 8px;
@@ -318,4 +338,44 @@
   margin-top: 12px;
   display: flex;
   justify-content: flex-end;
+}
+
+.feedback-survey-scale-readonly {
+  pointer-events: none;
+}
+
+span.feedback-scale-btn.feedback-scale-readonly {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.feedback-readonly-unanswered {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #888;
+}
+
+.feedback-legacy-block {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.feedback-legacy-line {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.feedback-readonly-notes {
+  white-space: pre-wrap;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #111;
 }
