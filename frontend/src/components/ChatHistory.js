@@ -316,6 +316,7 @@ function ChatHistory() {
     feedbackSnapshot && typeof feedbackSnapshot === 'object'
       ? feedbackPayloadHasAnyAnswer(feedbackSnapshot)
       : false;
+  const visibleMessages = messages.filter((m) => typeof m.text === 'string' && m.text.trim() !== '');
 
   return (
     <div className="chat-history-page">
@@ -410,10 +411,10 @@ function ChatHistory() {
               {detailError && <p className="chat-history-detail-error">{detailError}</p>}
               {!detailLoading && !detailError && (
                 <div className="conversation-thread chat-history-thread">
-                  {messages.length === 0 ? (
+                  {visibleMessages.length === 0 ? (
                     <p className="chat-history-empty-transcript">No messages stored.</p>
                   ) : (
-                    messages.map((m, idx) => {
+                    visibleMessages.map((m, idx) => {
                       const isUser = m.sender === 'user';
                       const senderClass = isUser ? 'user' : 'bot';
                       return (

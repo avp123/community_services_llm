@@ -1,0 +1,924 @@
+@media (max-width: 1279px) {
+  html,
+  body,
+  .App,
+  .content {
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .content {
+    padding: var(--spacing-md);
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  /* Home dashboard: keep centered; other pages use stretch + flex-start */
+  .content:has(.home-container) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-content {
+    padding: var(--spacing-md);
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .main-content.shifted {
+    margin-right: 0;
+  }
+
+  .resource-recommendation-container {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: var(--spacing-md);
+  }
+
+  .content-area {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    overflow: visible;
+  }
+
+  .resource-recommendation-container .content-area > .planner-chrome,
+  .resource-recommendation-container .content-area > .conversation-thread,
+  .resource-recommendation-container .content-area > .right-section {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .left-section,
+  .planner-chrome {
+    padding: var(--spacing-md);
+    max-height: none;
+    overflow: visible;
+  }
+
+  .right-section {
+    position: static;
+    top: auto;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-search-box {
+    margin-right: 0;
+    min-width: 0;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .sidebar {
+    width: min(400px, 100vw);
+    max-width: 100vw;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-tabs,
+  .analytics-subtabs,
+  .analytics-trends-controls {
+    flex-wrap: wrap;
+  }
+
+  .analytics-trends-updating,
+  .account-profile-autosave {
+    white-space: normal;
+  }
+
+  .analytics-trends-table-wrap {
+    overflow: auto;
+  }
+
+  .analytics-trends-chart-wrap {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-heading {
+    font-size: clamp(2rem, 4vw, var(--font-5xl));
+  }
+
+  .home-subheading {
+    font-size: clamp(1rem, 2.2vw, var(--font-xl));
+  }
+
+  .tile {
+    width: min(220px, 100%);
+  }
+
+  .notification-settings-panel {
+    padding: 1.25rem;
+  }
+
+  .audit-logs-container {
+    padding: 14px;
+  }
+}
+
+/* Chat + Explore: larger half of the middle range uses desktop-style layout */
+@media (min-width: 1120px) and (max-width: 1279px) {
+  .content:has(.resource-recommendation-container) {
+    padding: var(--spacing-xl);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resource-recommendation-container {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .resource-recommendation-container .content-area {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: var(--spacing-xl);
+    min-height: 0;
+    overflow: hidden;
+    align-items: start;
+  }
+
+  .resource-recommendation-container .content-area > .planner-chrome {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .resource-recommendation-container .content-area > .conversation-thread {
+    grid-column: 1;
+    grid-row: 2;
+    flex: 1;
+    min-height: 0;
+    max-height: none !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-sizing: border-box;
+  }
+
+  .resource-recommendation-container .content-area > .right-section {
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
+
+  .resource-recommendation-container .planner-chrome {
+    padding: var(--spacing-xl);
+    gap: var(--spacing-xl);
+  }
+
+  .resource-recommendation-container .right-section {
+    position: sticky;
+    top: var(--spacing-xl);
+    height: calc(100vh - 200px);
+    max-height: none;
+    overflow: hidden;
+  }
+
+  .resource-recommendation-container .right-section .goals-box,
+  .resource-recommendation-container .right-section .resources-box {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resource-recommendation-container .right-section .scroll-area {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+  }
+
+  .resource-recommendation-container .input-section {
+    flex-shrink: 0;
+    margin-top: var(--spacing-sm);
+    margin-bottom: 0;
+  }
+}
+
+/* Chat + Explore: smaller half of the middle range uses mobile-style stacking */
+@media (min-width: 769px) and (max-width: 1119px) {
+  .App {
+    flex-direction: column;
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-navbar);
+    padding: 0 var(--spacing-md);
+  }
+
+  .navbar-title {
+    font-size: var(--font-xl);
+    margin: 0;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-tertiary);
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+    z-index: var(--z-navbar);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: var(--spacing-md);
+    margin: 0;
+    border: none;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    line-height: 1;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding-top: calc(60px + env(safe-area-inset-top, 0px) + var(--spacing-sm));
+  }
+
+  .content:has(.home-container) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Chat history: same stacked mobile-style layout as max-width 768 */
+  .content:has(.chat-history-page) {
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+    flex: 1 1 auto;
+  }
+
+  .chat-history-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+    max-height: none;
+    overflow: hidden;
+    width: 100%;
+    max-width: none;
+    align-self: stretch;
+    box-sizing: border-box;
+  }
+
+  .chat-history-header {
+    flex-shrink: 0;
+  }
+
+  .chat-history-action-banner {
+    flex-shrink: 0;
+  }
+
+  .chat-history-layout {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .chat-history-sidebar {
+    flex: 0 1 auto;
+    max-height: min(22dvh, 200px);
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .chat-history-list {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .chat-history-main {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .chat-history-placeholder {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .chat-history-detail-toolbar {
+    flex-shrink: 0;
+    position: static;
+    z-index: auto;
+    box-shadow: none;
+    margin: 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+  }
+
+  .chat-history-thread {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: none !important;
+    border-top: 1px solid var(--color-border-light, #e5e7eb);
+    padding: 10px 12px 14px;
+    margin-top: 0;
+  }
+
+  .content:has(.resource-recommendation-container) {
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: visible;
+    flex: 0 0 auto;
+    min-height: 0;
+    padding-bottom: calc(var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .resource-recommendation-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+    width: 100%;
+    align-self: stretch;
+    box-sizing: border-box;
+  }
+
+  .resource-recommendation-container .content-area {
+    flex: 0 0 auto;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .resource-recommendation-container .planner-chrome {
+    flex: 0 0 auto;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    max-height: none;
+    justify-content: flex-start;
+  }
+
+  .resource-recommendation-container .planner-chrome > .page-title,
+  .resource-recommendation-container .planner-chrome > .chat-top-controls,
+  .resource-recommendation-container .planner-chrome > .generate-checkins-button,
+  .resource-recommendation-container .planner-chrome > .instruction,
+  .resource-recommendation-container .planner-chrome > .chat-sr-status {
+    flex-shrink: 0;
+  }
+
+  .resource-recommendation-container .content-area > .conversation-thread {
+    flex: 0 1 auto;
+    min-height: min(28dvh, 260px);
+    max-height: min(52dvh, 560px) !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-sizing: border-box;
+  }
+
+  .resource-recommendation-container .right-section {
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: stretch;
+    width: 100%;
+    max-height: none;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+  }
+
+  .resource-recommendation-container .right-section .goals-box,
+  .resource-recommendation-container .right-section .resources-box {
+    flex: 0 1 auto;
+    min-width: 0;
+    min-height: 140px;
+    max-height: min(34dvh, 320px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resource-recommendation-container .right-section .goals-box h3,
+  .resource-recommendation-container .right-section .resources-box h3 {
+    flex-shrink: 0;
+  }
+
+  .resource-recommendation-container .right-section .scroll-area {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+  }
+
+  /* Stack composer like mobile: row + 100%-wide toolbar was crushing the textarea */
+  .resource-recommendation-container .input-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-md);
+    flex-shrink: 0;
+    margin-top: var(--spacing-sm);
+    margin-bottom: 0;
+  }
+
+  .resource-recommendation-container .input-section .input-box {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .resource-recommendation-container .backend-selector-div {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+    height: auto !important;
+    padding-left: 0;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .resource-recommendation-container .chat-toolbar-button {
+    min-width: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    min-height: 44px;
+    flex: 1 1 calc(50% - 8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: var(--spacing-sm);
+    padding-top: calc(60px + env(safe-area-inset-top, 0px) + var(--spacing-sm));
+    min-height: 0;
+  }
+
+  /* Chat history: (1) scroll past chats (2) stats/header (3) scroll transcript — contained */
+  .content:has(.chat-history-page) {
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+    flex: 1 1 auto;
+  }
+
+  .chat-history-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+    max-height: none;
+    overflow: hidden;
+    width: 100%;
+    max-width: none;
+    align-self: stretch;
+    box-sizing: border-box;
+  }
+
+  .chat-history-header {
+    flex-shrink: 0;
+  }
+
+  .chat-history-action-banner {
+    flex-shrink: 0;
+  }
+
+  .chat-history-layout {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .chat-history-sidebar {
+    flex: 0 1 auto;
+    max-height: min(22dvh, 200px);
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .chat-history-list {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .chat-history-main {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .chat-history-placeholder {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .chat-history-detail-toolbar {
+    flex-shrink: 0;
+    position: static;
+    z-index: auto;
+    box-shadow: none;
+    margin: 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+  }
+
+  .chat-history-thread {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: none !important;
+    border-top: 1px solid var(--color-border-light, #e5e7eb);
+    padding: 10px 12px 14px;
+    margin-top: 0;
+  }
+
+  /*
+   * Chat + Explore (mobile): let the *page* grow and scroll so the thread, sidebar,
+   * and composer are not crushed into one viewport height.
+   */
+  html:has(.resource-recommendation-container),
+  body:has(.resource-recommendation-container) {
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  .App:has(.resource-recommendation-container) {
+    height: auto;
+    min-height: 100dvh;
+    max-height: none;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .content:has(.resource-recommendation-container) {
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    min-height: 0;
+    padding-bottom: calc(var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .resource-recommendation-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+    width: 100%;
+    align-self: stretch;
+    box-sizing: border-box;
+  }
+
+  .resource-recommendation-container .content-area {
+    flex: 0 0 auto;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    /* Slightly larger gutters so more drags hit “page” scroll instead of a panel edge */
+    gap: var(--spacing-lg);
+  }
+
+  .resource-recommendation-container .planner-chrome {
+    flex: 0 0 auto;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    max-height: none;
+    justify-content: flex-start;
+  }
+
+  .resource-recommendation-container .planner-chrome > .page-title,
+  .resource-recommendation-container .planner-chrome > .chat-top-controls,
+  .resource-recommendation-container .planner-chrome > .generate-checkins-button,
+  .resource-recommendation-container .planner-chrome > .instruction,
+  .resource-recommendation-container .planner-chrome > .chat-sr-status {
+    flex-shrink: 0;
+  }
+
+  /* Thread: fixed band on screen; messages scroll inside (does not grow the page forever) */
+  .resource-recommendation-container .content-area > .conversation-thread {
+    flex: 0 1 auto;
+    min-height: min(28dvh, 260px);
+    max-height: min(52dvh, 560px) !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Allow scroll to chain to the page at top/bottom — avoids “trapped” feeling on small screens */
+    overscroll-behavior-y: auto;
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-sizing: border-box;
+  }
+
+  /* Stacked panels; list body scrolls inside each card */
+  .resource-recommendation-container .right-section {
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: stretch;
+    width: 100%;
+    max-height: none;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+  }
+
+  .resource-recommendation-container .right-section .goals-box,
+  .resource-recommendation-container .right-section .resources-box {
+    flex: 0 1 auto;
+    min-width: 0;
+    min-height: 140px;
+    max-height: min(34dvh, 320px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resource-recommendation-container .right-section .goals-box h3,
+  .resource-recommendation-container .right-section .resources-box h3 {
+    flex-shrink: 0;
+  }
+
+  .resource-recommendation-container .right-section .scroll-area {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+  }
+
+  .resource-recommendation-container .input-section {
+    flex-shrink: 0;
+    margin-top: var(--spacing-sm);
+    margin-bottom: 0;
+  }
+
+  .input-section {
+    flex-direction: column;
+    align-items: stretch;
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-md);
+    overflow: visible;
+  }
+
+  .resource-recommendation-container,
+  .chat-history-page,
+  .container {
+    margin-top: 0;
+    scroll-margin-top: calc(60px + env(safe-area-inset-top, 0px));
+  }
+
+  .chat-top-controls {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  .chat-service-user-select,
+  .chat-version-select,
+  .generate-checkins-button {
+    width: 100% !important;
+  }
+
+  .backend-selector-div {
+    width: 100%;
+    height: auto !important;
+    padding-left: 0;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .chat-toolbar-button {
+    min-width: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    min-height: 44px;
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .calendar-item-row {
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+  }
+
+  .calendar-item-content {
+    min-width: 0;
+  }
+
+  .calendar-item-action {
+    min-height: 44px;
+    width: 100%;
+    text-align: center;
+    white-space: normal !important;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .account-profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .account-profile-header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .account-profile-dialog,
+  .analytics-dialog,
+  .feedback-survey-dialog {
+    padding: var(--spacing-md);
+  }
+
+  .home-logo img {
+    width: 120px;
+  }
+
+  .tile {
+    width: min(280px, 100%);
+    height: auto;
+    min-height: 120px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .submit-button,
+  .chat-history-view-feedback,
+  .chat-history-delete {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: var(--spacing-sm);
+  }
+
+  .content,
+  .main-content,
+  .left-section,
+  .planner-chrome,
+  .right-section {
+    padding: var(--spacing-sm);
+  }
+
+  .content {
+    padding-top: calc(60px + env(safe-area-inset-top, 0px) + var(--spacing-xs));
+  }
+
+  .container {
+    padding: var(--spacing-sm);
+  }
+
+  .chat-history-page {
+    padding: 10px;
+  }
+
+  .chat-history-sidebar {
+    max-height: min(18dvh, 168px);
+  }
+
+  .sidebar {
+    width: 100vw;
+  }
+
+  .chat-toolbar-button {
+    flex: 1 1 100%;
+  }
+
+  .analytics-trends-chart {
+    min-width: 520px;
+    height: 240px;
+  }
+
+  .analytics-trends-table,
+  .analytics-feedback-table {
+    min-width: 520px;
+  }
+
+  .home-heading {
+    font-size: clamp(1.6rem, 7vw, 2.1rem);
+  }
+
+  .home-subheading {
+    font-size: 1rem;
+  }
+
+  .tile h2 {
+    font-size: var(--font-base);
+  }
+}
+

@@ -59,6 +59,7 @@ function Navbar() {
         <Link
           to="/"
           className={`navbar-button ${location.pathname === '/' ? 'active' : ''}`}
+          onClick={() => setMenuOpen(false)}
         >
           <HomeIcon className="navbar-icon" aria-hidden />
           Home
@@ -70,6 +71,7 @@ function Navbar() {
           className={`navbar-button ${
             location.pathname === '/wellness-goals' ? 'active' : ''
           }`}
+          onClick={() => setMenuOpen(false)}
         >
           <ChatExploreIcon className="navbar-icon" aria-hidden />
           Chat + Explore
@@ -79,6 +81,7 @@ function Navbar() {
           className={`navbar-button ${
             location.pathname === '/outreach-calendar' ? 'active' : ''
           }`}
+          onClick={() => setMenuOpen(false)}
         >
           <ConnectCalendarIcon className="navbar-icon" aria-hidden />
           Connect with Members
@@ -88,6 +91,7 @@ function Navbar() {
           className={`navbar-button ${
             location.pathname === '/profile-manager' ? 'active' : ''
           }`}
+          onClick={() => setMenuOpen(false)}
         >
           <ProfileManagerIcon className="navbar-icon" aria-hidden />
           Profile Manager

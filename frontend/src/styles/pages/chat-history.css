@@ -368,12 +368,7 @@
 
   .chat-history-sidebar {
     width: 100%;
-    max-height: 40vh;
     border-right: none;
     border-bottom: 1px solid var(--color-border-light, #e5e7eb);
-  }
-
-  .chat-history-thread {
-    max-height: 55vh;
   }
 }

@@ -19,6 +19,7 @@ import './styles/base/base.css';
 import './styles/layouts/content-layout.css';
 import './styles/components/common.css';
 import './styles/components/navbar.css';
+import './styles/responsive.css';
 
 // Inner component that has access to Router context
 function AppContent() {

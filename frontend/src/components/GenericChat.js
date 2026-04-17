@@ -79,7 +79,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   } = useContext(context);
 
   const inputRef = useRef(null);
-  const conversationEndRef = useRef(null);
+  const conversationThreadRef = useRef(null);
 
   const [socket, setSocket] = useState(null);
   const socketRef = useRef(null);
@@ -297,9 +297,14 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   }, []);
 
   useEffect(() => {
-    if (autoScrollEnabled && conversationEndRef.current) {
-      conversationEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (!autoScrollEnabled) return;
+    const el = conversationThreadRef.current;
+    if (!el) return;
+    // Pin to bottom inside the thread only — scrollIntoView pulls outer page/ancestors and feels jumpy.
+    const run = () => {
+      el.scrollTop = el.scrollHeight;
+    };
+    requestAnimationFrame(() => requestAnimationFrame(run));
   }, [conversation, autoScrollEnabled]);
 
   const adjustTextareaHeight = useCallback((textarea) => {
@@ -333,6 +338,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
         content: m.text || '',
       }));
 
+    setAutoScrollEnabled(true);
     setConversation((prev) => [
       ...prev,
       { sender: 'user', text: messageText },
@@ -462,10 +468,10 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   return (
     <div className="resource-recommendation-container">
       <div className="content-area">
-        <div className={`left-section ${submitted ? 'submitted' : ''}`}>
+        <div className={`planner-chrome ${submitted ? 'submitted' : ''}`}>
           {title ? <h1 className="page-title">{title}</h1> : null}
-          <div style={{ display: 'flex', gap: '10px', marginBottom: '10px', alignItems: 'center' }}>
-            <select value={selectedServiceUser} onChange={handleServiceUserChange} style={{ flex: 1 }}>
+          <div className="chat-top-controls" style={{ display: 'flex', gap: '10px', marginBottom: '10px', alignItems: 'center' }}>
+            <select className="chat-service-user-select" value={selectedServiceUser} onChange={handleServiceUserChange} style={{ flex: 1 }}>
               <option value="">General Inquiry (not user-specific)</option>
               <optgroup label="Members">
                 {serviceUsers.map(u => (
@@ -475,7 +481,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
                 ))}
               </optgroup>
             </select>
-            <select value={version} onChange={(e) => setVersion(e.target.value)}
+            <select className="chat-version-select" value={version} onChange={(e) => setVersion(e.target.value)}
               style={{ padding: '8px 12px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '14px', backgroundColor: 'white', cursor: 'pointer' }}>
               <option value="new">New Version</option>
               <option value="old">Old Version</option>
@@ -483,7 +489,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
             </select>
           </div>
 
-          <button className="submit-button"
+          <button className="submit-button generate-checkins-button"
             style={{ width: 'auto', padding: '8px 16px', fontSize: '14px', whiteSpace: 'nowrap' }}
             onClick={handleGenerateCheckIns}
             disabled={!selectedServiceUser || generatingCheckIns}>
@@ -494,24 +500,6 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
 
           <div role="status" className="chat-sr-status">
             {isGenerating ? 'Assistant is replying.' : ''}
-          </div>
-
-          <div
-            className={`conversation-thread ${submitted ? 'visible' : ''}`}
-            role="region"
-            aria-label="Conversation messages"
-            aria-live="polite"
-            aria-relevant="additions text"
-            aria-busy={isGenerating}
-            onScroll={handleScroll}
-            style={{ overflowY: 'auto', maxHeight: '80vh' }}
-          >
-            {conversation.map((msg, index) => (
-              <div key={index} className={`message-blurb ${msg.sender}`}>
-                <MarkdownContent content={msg.text} />
-              </div>
-            ))}
-            <div ref={conversationEndRef} />
           </div>
         </div>
 
@@ -541,6 +529,23 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
             </div>
           </div>
         </div>
+
+        <div
+          ref={conversationThreadRef}
+          className={`conversation-thread ${submitted ? 'visible' : ''}`}
+          role="region"
+          aria-label="Conversation messages"
+          aria-live="polite"
+          aria-relevant="additions text"
+          aria-busy={isGenerating}
+          onScroll={handleScroll}
+        >
+          {conversation.map((msg, index) => (
+            <div key={index} className={`message-blurb ${msg.sender}`}>
+              <MarkdownContent content={msg.text} />
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className={`input-section ${submitted ? 'input-bottom' : ''}`}>
@@ -568,24 +573,24 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
         )}
 
         <div className="backend-selector-div">
-          <button className="submit-button" style={{ width: '60px', height: '100%', marginLeft: '20px' }}
+          <button className="submit-button chat-toolbar-button" style={{ width: '60px', height: '100%', marginLeft: '20px' }}
             onClick={handleNewSession}>
             Reset Session
           </button>
-          <button className="submit-button" style={{ width: '80px', height: '100%', marginLeft: '20px' }}
+          <button className="submit-button chat-toolbar-button" style={{ width: '80px', height: '100%', marginLeft: '20px' }}
             onClick={() => setShowFeedback(true)} disabled={!conversationID}>
             Feedback
           </button>
-          <button className="submit-button" style={{ width: '60px', height: '100%', marginLeft: '20px' }}
+          <button className="submit-button chat-toolbar-button" style={{ width: '60px', height: '100%', marginLeft: '20px' }}
             onClick={exportChatToPDF}>
             Save Session History
           </button>
-          <button className="submit-button" style={{ width: '100px', height: '100%', marginLeft: '20px' }}
+          <button className="submit-button chat-toolbar-button" style={{ width: '100px', height: '100%', marginLeft: '20px' }}
             onClick={printSidebar} disabled={goals.length === 0 && resources.length === 0}>
             Print Sidebar
           </button>
           {tool === 'wellness' && (
-            <button className="submit-button" style={{ width: '60px', height: '100%', marginLeft: '20px' }}
+            <button className="submit-button chat-toolbar-button" style={{ width: '60px', height: '100%', marginLeft: '20px' }}
               onClick={() => window.open('https://www.youtube.com/watch?v=4rg1wmo2Y8w', '_blank')}>
               Tutorial
             </button>

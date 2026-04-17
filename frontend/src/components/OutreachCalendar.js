@@ -154,9 +154,10 @@ const OutreachCalendar = () => {
               const { color, bg, symbol } = item.cfg;
 
               return (
-                <li key={`${item.service_user_id}-${item.check_in}-${idx}`}
+                <li className="calendar-item-row" key={`${item.service_user_id}-${item.check_in}-${idx}`}
                   style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px' }}>
                   <span
+                    className="calendar-item-content"
                     style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', flex: 1 }}
                     onClick={() => handlePatientClick(item)}
                   >
@@ -173,6 +174,7 @@ const OutreachCalendar = () => {
                   </span>
 
                   <button
+                    className="calendar-item-action"
                     onClick={(e) => handleCompleteCheckIn(checkInId, e)}
                     disabled={isCompleting || checkInId == null}
                     title={checkInId == null ? 'No check-in ID — refresh page' : 'Mark complete & remove'}
