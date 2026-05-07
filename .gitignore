@@ -26,3 +26,7 @@ backend/data/*.db
 .env
 *.ipynb
 .local/
+
+# Large PDF and generated assets — keep locally, don't commit
+*.pdf
+frontend/public/pdf.worker.min.mjs

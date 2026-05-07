@@ -11,6 +11,7 @@ import secrets
 
 from fastapi import FastAPI, Request, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field 
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -396,6 +397,17 @@ class SnapQueryRequest(BaseModel):
     question: str
     conversation_history: Optional[list] = None
     mode: str = "expert"
+
+@app.get("/api/snap/pdf")
+async def serve_snap_pdf():
+    """Serve the SNAP policy manual PDF (public government document)."""
+    pdf_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), '..', '..', 'snap_manual.pdf'
+    )
+    if not os.path.exists(pdf_path):
+        raise HTTPException(status_code=404, detail="PDF not found — place snap_manual.pdf in the project root.")
+    return FileResponse(pdf_path, media_type='application/pdf', filename='snap-policy-manual.pdf')
+
 
 @app.post("/api/snap/query")
 async def snap_query_endpoint(

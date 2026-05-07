@@ -114,7 +114,7 @@ export default function SnapPdfPanel({ panel, onClose }) {
         {/* PDF viewer */}
         <div className="snap-pdf-viewer" ref={viewerRef}>
           <Document
-            file="/snap_manual.pdf"
+            file={`${process.env.REACT_APP_API_URL || ''}/api/snap/pdf`}
             onLoadSuccess={({ numPages }) => setNumPages(numPages)}
             loading={<div className="snap-pdf-status">Loading PDF…</div>}
             error={<div className="snap-pdf-status snap-pdf-status--err">Could not load PDF.</div>}
@@ -147,7 +147,7 @@ export default function SnapPdfPanel({ panel, onClose }) {
             >›</button>
           </div>
           <a
-            href={`/snap_manual.pdf#page=${currentPage}`}
+            href={`${process.env.REACT_APP_API_URL || ''}/api/snap/pdf#page=${currentPage}`}
             target="_blank"
             rel="noopener noreferrer"
             className="snap-pdf-footer-link"
