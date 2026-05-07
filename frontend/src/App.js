@@ -1,6 +1,6 @@
 // App.js - Main React application routes and layout with auto-logout
 import React, { useContext, useCallback, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import AuditLogs from './components/AuditLogs';
@@ -11,6 +11,7 @@ import ProfileManager from './components/ProfileManager';
 import OutreachCalendar from './components/OutreachCalendar';
 import ChatHistory from './components/ChatHistory';
 import Register from './components/Register';
+import SnapChat from './components/SnapChat';
 import { useInactivityTimeout } from './utils/useInactivityTimeout';
 import { API_URL } from './config';
 import { USER_DISPLAY_NAME_KEY, writeStoredDisplayName } from './utils/accountDisplayName';
@@ -82,6 +83,17 @@ function AppContent() {
     user?.isAuthenticated ? handleAutoLogout : () => {}, 
     30 // 30 minutes of inactivity
   );
+
+  const location = useLocation();
+  const isSnap = location.pathname === '/snap';
+
+  if (isSnap) {
+    return (
+      <Routes>
+        <Route path="/snap" element={<SnapChat />} />
+      </Routes>
+    );
+  }
 
   return (
     <div className="App">
