@@ -4,6 +4,7 @@ app/add_lat_lon_resources.py
 app/all_endpoints.py
 app/audit_logger.py
 app/audit_viewer.py
+app/conversation_meta.py
 app/database.py
 app/generate_outreach.py
 app/login.py
