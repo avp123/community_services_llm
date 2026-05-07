@@ -5,21 +5,6 @@ import remarkGfm from 'remark-gfm';
 import { authenticatedFetch } from '../utils/api';
 import '../styles/components/snap.css';
 
-// ── Citation parsing ────────────────────────────────────────────────────────
-
-function parseCitations(text) {
-  const parts = [];
-  const re = /\[(\d+)\]/g;
-  let last = 0, m;
-  while ((m = re.exec(text)) !== null) {
-    if (m.index > last) parts.push({ type: 'text', content: text.slice(last, m.index) });
-    parts.push({ type: 'cite', index: parseInt(m[1], 10) });
-    last = m.index + m[0].length;
-  }
-  if (last < text.length) parts.push({ type: 'text', content: text.slice(last) });
-  return parts;
-}
-
 // ── Inline citation badge with hover tooltip ────────────────────────────────
 
 function CiteBadge({ index, source }) {
@@ -43,9 +28,9 @@ function CiteBadge({ index, source }) {
           {source.key_fact && (
             <span className="snap-cite-tooltip-fact">{source.key_fact}</span>
           )}
-          {(source.snippet || source.excerpt) && (
+          {(source.quote || source.snippet) && (
             <span className="snap-cite-tooltip-quote">
-              "{(source.snippet || source.excerpt).slice(0, 220)}"
+              "{source.quote || source.snippet}"
             </span>
           )}
           <a
@@ -65,38 +50,29 @@ function CiteBadge({ index, source }) {
 // ── Answer with inline citation badges ─────────────────────────────────────
 
 function AnswerWithCitations({ text, sources }) {
-  const parts = parseCitations(text);
   const sourceMap = Object.fromEntries(sources.map(s => [s.index, s]));
+
+  // Replace [N] with <cite data-n="N"> inline — keeps lists/paragraphs intact
+  const mdText = text.replace(/\[(\d+)\]/g, (_, n) => `<cite data-n="${n}"></cite>`);
 
   return (
     <div className="snap-response-body">
-      {parts.map((part, i) => {
-        if (part.type === 'text') {
-          return (
-            <ReactMarkdown
-              key={i}
-              skipHtml={false}
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw]}
-              components={{
-                p: ({ children }) => <span className="snap-md-para">{children}</span>,
-                a: ({ href, children }) => (
-                  <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
-                ),
-              }}
-            >
-              {part.content}
-            </ReactMarkdown>
-          );
-        }
-        return (
-          <CiteBadge
-            key={i}
-            index={part.index}
-            source={sourceMap[part.index]}
-          />
-        );
-      })}
+      <ReactMarkdown
+        skipHtml={false}
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
+        components={{
+          cite: ({ node }) => {
+            const n = parseInt(node.properties?.dataN ?? '0', 10);
+            return <CiteBadge index={n} source={sourceMap[n]} />;
+          },
+          a: ({ href, children }) => (
+            <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+          ),
+        }}
+      >
+        {mdText}
+      </ReactMarkdown>
     </div>
   );
 }
@@ -122,8 +98,8 @@ function ReferencesPanel({ sources }) {
                 <span className="snap-ref-title">
                   §{s.section_number} {s.section_title}
                 </span>
-                {s.key_fact && (
-                  <span className="snap-ref-fact">{s.key_fact}</span>
+                {(s.quote || s.key_fact) && (
+                  <span className="snap-ref-fact">"{s.quote || s.key_fact}"</span>
                 )}
               </span>
               <a

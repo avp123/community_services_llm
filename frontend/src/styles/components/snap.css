@@ -420,15 +420,8 @@
   color: var(--snap-accent);
 }
 
-/* ── Inline markdown paragraphs (flow with citations) ── */
-.snap-md-para {
-  display: inline;
-}
-
-.snap-md-para + .snap-md-para::before {
-  content: '\A\A';
-  white-space: pre;
-}
+/* Reset browser default italic on <cite> */
+cite { font-style: normal; }
 
 /* ── Citation badge (superscript style) ── */
 .snap-cite-wrap {

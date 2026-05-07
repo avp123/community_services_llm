@@ -36,8 +36,10 @@ CITATION RULES:
 SOURCE_FACTS (append after your answer, no extra text, exactly this format):
 SOURCE_FACTS:
 FACT[1]: <one sentence — the specific figure, rule, or table row from source 1 most relevant to this question>
+QUOTE[1]: <copy 1-2 complete sentences verbatim from source 1 that directly support your answer — must be exact text from the source, no paraphrasing>
 FACT[2]: <one sentence for source 2>
-(one FACT line per cited source)
+QUOTE[2]: <verbatim 1-2 sentences from source 2>
+(one FACT + QUOTE pair per cited source, in the same order)
 """
 
 SYSTEM_PROMPT_EXPERT = (
@@ -138,21 +140,24 @@ def _retrieve(embedding: list[float], question: str, k: int = TOP_K) -> list[dic
     return sources
 
 
-def _parse_facts(text: str) -> tuple[str, dict[int, str]]:
+def _parse_facts(text: str) -> tuple[str, dict[int, str], dict[int, str]]:
     """
-    Split LLM output into (answer, {index: key_fact}).
-    Handles FACT[N] and FACT N (without brackets) since models vary.
+    Split LLM output into (answer, {index: key_fact}, {index: verbatim_quote}).
+    Handles FACT[N]/QUOTE[N] and bare FACT N/QUOTE N since models vary.
     """
-    # Match SOURCE_FACTS block — may appear mid-text or at end
     block = re.search(r'SOURCE_FACTS:\s*\n(.*)', text, re.DOTALL | re.IGNORECASE)
     key_facts: dict[int, str] = {}
+    quotes: dict[int, str] = {}
     if block:
         answer = text[:block.start()].strip()
-        for m in re.finditer(r'FACT\[?(\d+)\]?:\s*(.+)', block.group(1)):
+        body = block.group(1)
+        for m in re.finditer(r'FACT\[?(\d+)\]?:\s*(.+)', body):
             key_facts[int(m.group(1))] = m.group(2).strip()
+        for m in re.finditer(r'QUOTE\[?(\d+)\]?:\s*(.+)', body):
+            quotes[int(m.group(1))] = m.group(2).strip()
     else:
         answer = text.strip()
-    return answer, key_facts
+    return answer, key_facts, quotes
 
 
 def _order_by_appearance(cited_sources: list[dict], answer: str) -> list[dict]:
@@ -203,7 +208,7 @@ def query_snap(
     )
     raw = response.choices[0].message.content or ""
 
-    answer, key_facts = _parse_facts(raw)
+    answer, key_facts, quotes = _parse_facts(raw)
 
     cited = {int(m) for m in re.findall(r"\[(\d+)\]", answer)}
     cited_sources = [s for s in sources if s["index"] in cited]
@@ -214,6 +219,7 @@ def query_snap(
     for new_i, s in enumerate(cited_sources, 1):
         index_map[s["index"]] = new_i
         s["key_fact"] = key_facts.get(s["index"])
+        s["quote"] = quotes.get(s["index"])
         s["index"] = new_i
 
     # Rewrite [N] in answer to match new numbering
