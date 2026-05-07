@@ -3,11 +3,12 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import { authenticatedFetch } from '../utils/api';
+import SnapPdfPanel from './SnapPdfPanel';
 import '../styles/components/snap.css';
 
 // ── Inline citation badge with hover tooltip ────────────────────────────────
 
-function CiteBadge({ index, source }) {
+function CiteBadge({ index, source, onOpen }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -16,6 +17,7 @@ function CiteBadge({ index, source }) {
         className="snap-cite-badge"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
+        onClick={() => source && onOpen && onOpen(source)}
         aria-label={source ? `Source ${index}: ${source.section_title}` : `Source ${index}`}
       >
         {index}
@@ -49,7 +51,7 @@ function CiteBadge({ index, source }) {
 
 // ── Answer with inline citation badges ─────────────────────────────────────
 
-function AnswerWithCitations({ text, sources }) {
+function AnswerWithCitations({ text, sources, onOpen }) {
   const sourceMap = Object.fromEntries(sources.map(s => [s.index, s]));
 
   // Replace [N] with <cite data-n="N"> inline — keeps lists/paragraphs intact
@@ -64,7 +66,7 @@ function AnswerWithCitations({ text, sources }) {
         components={{
           cite: ({ node }) => {
             const n = parseInt(node.properties?.dataN ?? '0', 10);
-            return <CiteBadge index={n} source={sourceMap[n]} />;
+            return <CiteBadge index={n} source={sourceMap[n]} onOpen={onOpen} />;
           },
           a: ({ href, children }) => (
             <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
@@ -79,7 +81,7 @@ function AnswerWithCitations({ text, sources }) {
 
 // ── References panel (collapsible, minimal) ─────────────────────────────────
 
-function ReferencesPanel({ sources }) {
+function ReferencesPanel({ sources, onOpen }) {
   const [open, setOpen] = useState(true);
   if (!sources || sources.length === 0) return null;
 
@@ -93,7 +95,12 @@ function ReferencesPanel({ sources }) {
       {open && (
         <ol className="snap-refs-list">
           {sources.map(s => (
-            <li key={s.index} className="snap-ref-item">
+            <li
+              key={s.index}
+              className="snap-ref-item snap-ref-item--clickable"
+              onClick={() => onOpen && onOpen(s)}
+              title="Click to open in PDF viewer"
+            >
               <span className="snap-ref-body">
                 <span className="snap-ref-title">
                   §{s.section_number} {s.section_title}
@@ -102,14 +109,9 @@ function ReferencesPanel({ sources }) {
                   <span className="snap-ref-fact">"{s.quote || s.key_fact}"</span>
                 )}
               </span>
-              <a
-                href={s.pdf_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="snap-ref-link"
-              >
+              <span className="snap-ref-link">
                 p.{s.page_start} ↗
-              </a>
+              </span>
             </li>
           ))}
         </ol>
@@ -131,7 +133,7 @@ function LoadingDots() {
 
 // ── Message ─────────────────────────────────────────────────────────────────
 
-function Message({ msg }) {
+function Message({ msg, onOpen }) {
   if (msg.sender === 'user') {
     return (
       <div className="snap-message snap-message--user">
@@ -154,8 +156,8 @@ function Message({ msg }) {
 
   return (
     <div className="snap-message snap-message--bot">
-      <AnswerWithCitations text={msg.text} sources={msg.sources || []} />
-      <ReferencesPanel sources={msg.sources || []} />
+      <AnswerWithCitations text={msg.text} sources={msg.sources || []} onOpen={onOpen} />
+      <ReferencesPanel sources={msg.sources || []} onOpen={onOpen} />
     </div>
   );
 }
@@ -167,6 +169,15 @@ export default function SnapChat() {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [mode, setMode] = useState('expert');
+  const [pdfPanel, setPdfPanel] = useState(null);
+
+  const openPdf = useCallback((source) => {
+    setPdfPanel({
+      page: source.page_start,
+      quote: source.quote || source.key_fact || null,
+      section: `§${source.section_number} ${source.section_title}`,
+    });
+  }, []);
 
   const inputRef = useRef(null);
   const threadRef = useRef(null);
@@ -245,7 +256,8 @@ export default function SnapChat() {
   const hasMessages = messages.length > 0;
 
   return (
-    <div className="snap-root">
+    <div className={`snap-root ${pdfPanel ? 'snap-root--panel-open' : ''}`}>
+      <SnapPdfPanel panel={pdfPanel} onClose={() => setPdfPanel(null)} />
       <header className="snap-header">
         <div className="snap-header-inner">
           <div className="snap-logo">
@@ -302,7 +314,7 @@ export default function SnapChat() {
               </div>
             </div>
           )}
-          {messages.map((msg, i) => <Message key={i} msg={msg} />)}
+          {messages.map((msg, i) => <Message key={i} msg={msg} onOpen={openPdf} />)}
         </div>
       </main>
 

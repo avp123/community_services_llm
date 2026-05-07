@@ -611,6 +611,262 @@ cite { font-style: normal; }
   text-decoration: underline;
 }
 
+/* ── Reference items clickable ── */
+.snap-ref-item--clickable {
+  cursor: pointer;
+}
+
+.snap-ref-item--clickable:hover {
+  background: #fdf5f2;
+  border-radius: 6px;
+  margin: 0 -6px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.snap-ref-item--clickable:hover .snap-ref-link {
+  color: var(--snap-accent);
+}
+
+/* ── PDF panel ── */
+.snap-pdf-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 490;
+  display: none;
+}
+
+.snap-pdf-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 46%;
+  max-width: 680px;
+  height: 100vh;
+  background: #f8f6f3;
+  box-shadow: -6px 0 32px rgba(0,0,0,0.14);
+  transform: translateX(100%);
+  transition: transform 0.26s cubic-bezier(0.4,0,0.2,1);
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.snap-pdf-panel--open {
+  transform: translateX(0);
+}
+
+/* Shrink the main content area when panel is open */
+.snap-root--panel-open .snap-main,
+.snap-root--panel-open .snap-input-wrap,
+.snap-root--panel-open .snap-header {
+  right: 46%;
+  max-width: none;
+  transition: right 0.26s cubic-bezier(0.4,0,0.2,1);
+}
+
+.snap-pdf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  border-bottom: 1px solid var(--snap-border);
+  flex-shrink: 0;
+}
+
+.snap-pdf-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.snap-pdf-header-section {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--snap-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.snap-pdf-header-page {
+  font-size: 11px;
+  color: var(--snap-text-muted);
+}
+
+.snap-pdf-close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--snap-text-muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  transition: background 0.12s, color 0.12s;
+}
+
+.snap-pdf-close:hover {
+  background: #f0ebe5;
+  color: var(--snap-text);
+}
+
+/* Quoted text callout strip */
+.snap-pdf-callout {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 18px;
+  background: #fdf5f2;
+  border-bottom: 1px solid #f0ddd8;
+  flex-shrink: 0;
+}
+
+.snap-pdf-callout-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--snap-accent);
+}
+
+.snap-pdf-callout-quote {
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--snap-text);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Scrollable PDF area */
+.snap-pdf-viewer {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  background: #e8e3dd;
+}
+
+.snap-pdf-viewer .react-pdf__Page {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  border-radius: 2px;
+}
+
+/* Text highlight — keep text transparent so only the background color shows.
+   The canvas layer below already renders the text; making it visible here
+   causes a double/bold artifact due to font rendering offsets. */
+.snap-pdf-hl {
+  background: rgba(255, 200, 0, 0.45);
+  border-radius: 2px;
+  color: transparent;
+}
+
+.snap-pdf-status {
+  padding: 40px;
+  color: var(--snap-text-muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.snap-pdf-status--err {
+  color: #c94420;
+}
+
+/* Footer */
+.snap-pdf-header-scanned {
+  font-size: 10px;
+  color: var(--snap-text-muted);
+  margin-left: 4px;
+}
+
+.snap-pdf-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  background: #fff;
+  border-top: 1px solid var(--snap-border);
+  flex-shrink: 0;
+}
+
+.snap-pdf-footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.snap-pdf-nav-btn {
+  background: none;
+  border: 1px solid var(--snap-border);
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  color: var(--snap-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+}
+
+.snap-pdf-nav-btn:hover:not(:disabled) {
+  background: #f0ebe5;
+  color: var(--snap-text);
+}
+
+.snap-pdf-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.snap-pdf-footer-pages {
+  font-size: 12px;
+  color: var(--snap-text-muted);
+  min-width: 60px;
+  text-align: center;
+}
+
+.snap-pdf-footer-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--snap-accent);
+  text-decoration: none;
+}
+
+.snap-pdf-footer-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Mobile: panel is full-screen overlay ── */
+@media (max-width: 768px) {
+  .snap-pdf-backdrop {
+    display: block;
+  }
+
+  .snap-pdf-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .snap-root--panel-open .snap-main,
+  .snap-root--panel-open .snap-input-wrap,
+  .snap-root--panel-open .snap-header {
+    right: 0;
+  }
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .snap-thread {

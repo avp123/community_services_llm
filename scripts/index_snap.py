@@ -80,13 +80,20 @@ def naive_token_count(text: str) -> int:
     return int(len(text.split()) * 1.3)
 
 
-def chunk_section(section: dict) -> list[dict]:
+def chunk_section(section: dict, section_pages: list[dict]) -> list[dict]:
     """
-    Split a section's text into overlapping chunks of ~CHUNK_TOKENS tokens.
-    Each chunk carries section metadata.
+    Split a section into overlapping chunks, tracking which page each chunk starts on.
+    section_pages: [{page_num, text}] for the pages that belong to this section.
     """
-    words = section["text"].split()
-    # Convert token targets to word counts
+    # Build a flat list of (word, page_num) so each chunk knows its real page.
+    word_page_pairs: list[tuple[str, int]] = []
+    for p in section_pages:
+        for word in p["text"].split():
+            word_page_pairs.append((word, p["page_num"]))
+
+    if not word_page_pairs:
+        return []
+
     chunk_words = int(CHUNK_TOKENS / 1.3)
     overlap_words = int(OVERLAP_TOKENS / 1.3)
 
@@ -94,18 +101,23 @@ def chunk_section(section: dict) -> list[dict]:
     start = 0
     chunk_index = 0
 
-    while start < len(words):
-        end = min(start + chunk_words, len(words))
-        chunk_text = " ".join(words[start:end])
+    while start < len(word_page_pairs):
+        end = min(start + chunk_words, len(word_page_pairs))
+        pairs = word_page_pairs[start:end]
+        chunk_text = " ".join(w for w, _ in pairs)
+        # Use the page of the first word in this chunk as page_start
+        chunk_page_start = pairs[0][1]
+        chunk_page_end = pairs[-1][1]
+
         chunks.append({
             "section_number": section["section_number"],
             "section_title": section["section_title"],
             "chunk_index": chunk_index,
-            "page_start": section["page_start"],
-            "page_end": section["page_end"],
+            "page_start": chunk_page_start,
+            "page_end": chunk_page_end,
             "content": chunk_text,
         })
-        if end == len(words):
+        if end == len(word_page_pairs):
             break
         start = end - overlap_words
         chunk_index += 1
@@ -148,7 +160,10 @@ def main():
     print("[3/4] Chunking sections...")
     all_chunks = []
     for s in sections:
-        all_chunks.extend(chunk_section(s))
+        # Collect only the pages that fall within this section's page range
+        s_pages = [p for p in pages
+                   if p["page_num"] >= s["page_start"] and p["page_num"] <= s["page_end"]]
+        all_chunks.extend(chunk_section(s, s_pages))
     print(f"      {len(all_chunks)} chunks total")
 
     print("[4/4] Embedding and inserting into pgvector...")
