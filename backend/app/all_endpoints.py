@@ -62,6 +62,7 @@ from backend.app.database import (
 )
 from backend.app.generate_outreach import generate_check_ins_rule_based
 from backend.app.notifications import notification_job
+from backend.app.snap_query import query_snap
 
 # Environment configuration
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -388,6 +389,29 @@ async def delete_conversation(
         details={"conversation_id": conversation_id},
     )
     return {"success": True, "message": "Deleted"}
+
+
+# SNAP RAG endpoint
+class SnapQueryRequest(BaseModel):
+    question: str
+    conversation_history: Optional[list] = None
+    mode: str = "expert"
+
+@app.post("/api/snap/query")
+async def snap_query_endpoint(
+    request: SnapQueryRequest,
+    current_user: UserData = Depends(get_current_user),
+):
+    """RAG query against the Georgia SNAP Policy Manual."""
+    try:
+        result = query_snap(
+            request.question,
+            request.conversation_history or [],
+            mode=request.mode,
+        )
+        return {"success": True, **result}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # Health check endpoints

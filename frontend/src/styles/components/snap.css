@@ -78,8 +78,53 @@
   letter-spacing: -0.3px;
 }
 
+.snap-logo-pill {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--snap-accent);
+  background: #fdf0ec;
+  border: 1px solid #f5d5cb;
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin-left: 4px;
+}
+
+.snap-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ── Mode toggle ── */
+.snap-mode-toggle {
+  display: flex;
+  background: #f0ebe5;
+  border-radius: 20px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.snap-mode-btn {
+  padding: 5px 13px;
+  border-radius: 17px;
+  border: none;
+  background: transparent;
+  color: var(--snap-text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.snap-mode-btn--active {
+  background: #fff;
+  color: var(--snap-text);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
 .snap-new-btn {
-  padding: 7px 16px;
+  padding: 7px 14px;
   border-radius: 20px;
   background: var(--snap-accent);
   color: #fff;
@@ -344,6 +389,233 @@
   font-size: 11px;
   color: #b0a89e;
   text-align: center;
+}
+
+/* ── Example query buttons ── */
+.snap-example-queries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+  max-width: 600px;
+}
+
+.snap-example-btn {
+  background: #fdf5f2;
+  border: 1px solid #f0ddd8;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #4a3a34;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.snap-example-btn:hover {
+  background: #faeae4;
+  border-color: var(--snap-accent);
+  color: var(--snap-accent);
+}
+
+/* ── Inline markdown paragraphs (flow with citations) ── */
+.snap-md-para {
+  display: inline;
+}
+
+.snap-md-para + .snap-md-para::before {
+  content: '\A\A';
+  white-space: pre;
+}
+
+/* ── Citation badge (superscript style) ── */
+.snap-cite-wrap {
+  position: relative;
+  display: inline;
+}
+
+.snap-cite-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fdf0ec;
+  border: 1px solid #f0cfc5;
+  color: var(--snap-accent);
+  font-size: 9px;
+  font-weight: 700;
+  cursor: default;
+  vertical-align: super;
+  margin: 0 1px;
+  line-height: 1;
+  font-family: inherit;
+  transition: background 0.12s;
+}
+
+.snap-cite-badge:hover {
+  background: var(--snap-accent);
+  border-color: var(--snap-accent);
+  color: #fff;
+}
+
+/* ── Citation hover tooltip ── */
+.snap-cite-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-40%);
+  width: 310px;
+  background: #fff;
+  border: 1px solid var(--snap-border);
+  border-radius: 12px;
+  padding: 13px 15px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  pointer-events: none;
+  text-align: left;
+}
+
+.snap-cite-tooltip-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--snap-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.snap-cite-tooltip-fact {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--snap-text);
+  line-height: 1.45;
+}
+
+.snap-cite-tooltip-quote {
+  font-size: 12px;
+  color: var(--snap-text-muted);
+  line-height: 1.55;
+  font-style: italic;
+  border-left: 2px solid var(--snap-border);
+  padding-left: 8px;
+}
+
+.snap-cite-tooltip-link {
+  font-size: 12px;
+  color: var(--snap-accent);
+  font-weight: 600;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+/* ── References panel (OpenEvidence-style) ── */
+.snap-refs {
+  margin-top: 24px;
+  border-top: 1px solid var(--snap-border);
+  padding-top: 4px;
+}
+
+.snap-refs-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--snap-text);
+  text-align: left;
+}
+
+.snap-refs-icon {
+  color: var(--snap-text-muted);
+  font-size: 16px;
+}
+
+.snap-refs-arrow {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--snap-text-muted);
+}
+
+.snap-refs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.snap-ref-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid #f3ede7;
+  counter-increment: ref-counter;
+}
+
+.snap-ref-item:last-child {
+  border-bottom: none;
+}
+
+.snap-ref-item::before {
+  content: counter(ref-counter) ".";
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--snap-text-muted);
+  flex-shrink: 0;
+  width: 18px;
+  padding-top: 1px;
+}
+
+.snap-refs-list {
+  counter-reset: ref-counter;
+}
+
+.snap-ref-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.snap-ref-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--snap-text);
+  line-height: 1.4;
+}
+
+.snap-ref-fact {
+  font-size: 12px;
+  color: var(--snap-text-muted);
+  line-height: 1.4;
+}
+
+.snap-ref-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--snap-accent);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.snap-ref-link:hover {
+  text-decoration: underline;
 }
 
 /* ── Responsive ── */
