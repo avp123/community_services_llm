@@ -11,6 +11,7 @@ import secrets
 
 from fastapi import FastAPI, Request, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field 
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -62,6 +63,7 @@ from backend.app.database import (
 )
 from backend.app.generate_outreach import generate_check_ins_rule_based
 from backend.app.notifications import notification_job
+from backend.app.snap_query import query_snap
 
 # Environment configuration
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -388,6 +390,40 @@ async def delete_conversation(
         details={"conversation_id": conversation_id},
     )
     return {"success": True, "message": "Deleted"}
+
+
+# SNAP RAG endpoint
+class SnapQueryRequest(BaseModel):
+    question: str
+    conversation_history: Optional[list] = None
+    mode: str = "expert"
+
+@app.get("/api/snap/pdf")
+async def serve_snap_pdf():
+    """Serve the SNAP policy manual PDF (public government document)."""
+    pdf_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), '..', '..', 'snap_manual.pdf'
+    )
+    if not os.path.exists(pdf_path):
+        raise HTTPException(status_code=404, detail="PDF not found — place snap_manual.pdf in the project root.")
+    return FileResponse(pdf_path, media_type='application/pdf', filename='snap-policy-manual.pdf')
+
+
+@app.post("/api/snap/query")
+async def snap_query_endpoint(
+    request: SnapQueryRequest,
+    current_user: UserData = Depends(get_current_user),
+):
+    """RAG query against the Georgia SNAP Policy Manual."""
+    try:
+        result = query_snap(
+            request.question,
+            request.conversation_history or [],
+            mode=request.mode,
+        )
+        return {"success": True, **result}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # Health check endpoints

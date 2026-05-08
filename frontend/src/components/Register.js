@@ -130,6 +130,8 @@ function Register() {
                 <option value="cspnj">CSPNJ</option>
                 <option value="clhs">CLHS</option>
                 <option value="georgia">Georgia</option>
+                <option value="minimal">Minimal</option>
+                <option value="peer_valued">Peer Valued</option>
             </select>
           </div>
 
