@@ -11,7 +11,7 @@ import secrets
 
 from fastapi import FastAPI, Request, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field 
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -398,15 +398,26 @@ class SnapQueryRequest(BaseModel):
     conversation_history: Optional[list] = None
     mode: str = "expert"
 
+_snap_pdf_cache: bytes | None = None
+
 @app.get("/api/snap/pdf")
 async def serve_snap_pdf():
     """Serve the SNAP policy manual PDF (public government document)."""
+    global _snap_pdf_cache
     pdf_path = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), '..', '..', 'snap_manual.pdf'
     )
     if os.path.exists(pdf_path):
         return FileResponse(pdf_path, media_type='application/pdf', filename='snap-policy-manual.pdf')
-    return RedirectResponse(url="https://www.peercopilot.com/snap_manual.pdf")
+    if _snap_pdf_cache is None:
+        import asyncio, requests as _req
+        r = await asyncio.get_event_loop().run_in_executor(
+            None, lambda: _req.get("https://www.peercopilot.com/snap_manual.pdf", timeout=30)
+        )
+        r.raise_for_status()
+        _snap_pdf_cache = r.content
+    return Response(content=_snap_pdf_cache, media_type='application/pdf',
+                    headers={"Content-Disposition": 'inline; filename="snap-policy-manual.pdf"'})
 
 
 @app.post("/api/snap/query")
