@@ -11,7 +11,7 @@ import secrets
 
 from fastapi import FastAPI, Request, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 from pydantic import BaseModel, Field 
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -404,9 +404,9 @@ async def serve_snap_pdf():
     pdf_path = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), '..', '..', 'snap_manual.pdf'
     )
-    if not os.path.exists(pdf_path):
-        raise HTTPException(status_code=404, detail="PDF not found — place snap_manual.pdf in the project root.")
-    return FileResponse(pdf_path, media_type='application/pdf', filename='snap-policy-manual.pdf')
+    if os.path.exists(pdf_path):
+        return FileResponse(pdf_path, media_type='application/pdf', filename='snap-policy-manual.pdf')
+    return RedirectResponse(url="https://www.peercopilot.com/snap_manual.pdf")
 
 
 @app.post("/api/snap/query")
