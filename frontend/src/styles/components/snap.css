@@ -308,6 +308,164 @@
   color: var(--snap-text-muted);
 }
 
+/* ── Decision support flags panel ── */
+.snap-flags {
+  margin-top: 18px;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.snap-flags--expert {
+  background: #fff8f0;
+  border: 1px solid #f0d5b0;
+}
+
+.snap-flags--simple {
+  background: #f0f6ff;
+  border: 1px solid #c8ddf5;
+}
+
+.snap-flags-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 9px;
+}
+
+.snap-flags--expert .snap-flags-header {
+  color: #9a5a10;
+}
+
+.snap-flags--simple .snap-flags-header {
+  color: #2a5fa0;
+}
+
+.snap-flags-icon {
+  font-style: normal;
+  font-size: 13px;
+}
+
+.snap-flags-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.snap-flag-item {
+  font-size: 13.5px;
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+
+.snap-flags--expert .snap-flag-item {
+  color: #5a3a10;
+}
+
+.snap-flags--expert .snap-flag-item::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #c97a20;
+  font-weight: 700;
+}
+
+.snap-flags--simple .snap-flag-item {
+  color: #1a3a6a;
+}
+
+.snap-flags--simple .snap-flag-item::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #4a90d9;
+  font-weight: 700;
+}
+
+/* ── Follow-up questions panel (applicant mode) ── */
+.snap-questions {
+  margin-top: 18px;
+  border: 1px solid #c8ddf5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.snap-questions-header {
+  padding: 9px 14px;
+  background: #e8f0fb;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #2a5fa0;
+}
+
+.snap-questions-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.snap-question-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 14px;
+  background: #f7faff;
+  border: none;
+  border-top: 1px solid #ddeaf8;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.13s;
+}
+
+.snap-question-item:first-child {
+  border-top: none;
+}
+
+.snap-question-item:hover {
+  background: #e8f0fb;
+}
+
+.snap-question-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a3a6a;
+  line-height: 1.4;
+}
+
+.snap-question-reason {
+  font-size: 12px;
+  color: #5a7aa8;
+  line-height: 1.4;
+}
+
+/* ── Applicant mode learn-more link ── */
+.snap-learn-more {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--snap-accent);
+  text-decoration: none;
+  border: 1px solid #f0cfc5;
+  background: #fdf5f2;
+  border-radius: 20px;
+  padding: 5px 13px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.snap-learn-more:hover {
+  background: #faeae4;
+  border-color: var(--snap-accent);
+}
+
 /* ── Fixed bottom input ── */
 .snap-input-wrap {
   position: fixed;

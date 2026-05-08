@@ -120,6 +120,64 @@ function ReferencesPanel({ sources, onOpen }) {
   );
 }
 
+// ── Decision support flags panel ────────────────────────────────────────────
+
+function FlagsPanel({ flags, mode }) {
+  if (!flags || flags.length === 0) return null;
+  const isExpert = mode === 'expert';
+  return (
+    <div className={`snap-flags ${isExpert ? 'snap-flags--expert' : 'snap-flags--simple'}`}>
+      <div className="snap-flags-header">
+        <span className="snap-flags-icon">{isExpert ? '⚑' : '💡'}</span>
+        {isExpert ? 'Items to review' : 'Also helpful to know'}
+      </div>
+      <ul className="snap-flags-list">
+        {flags.map((f, i) => (
+          <li key={i} className="snap-flag-item">{f}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+// ── Follow-up questions panel (applicant mode) ───────────────────────────────
+
+function QuestionsPanel({ questions, onAsk }) {
+  if (!questions || questions.length === 0) return null;
+  return (
+    <div className="snap-questions">
+      <div className="snap-questions-header">To check your eligibility</div>
+      <div className="snap-questions-list">
+        {questions.map((q, i) => (
+          <button key={i} className="snap-question-item" onClick={() => onAsk(q.question)}>
+            <span className="snap-question-text">{q.question}</span>
+            <span className="snap-question-reason">{q.reason}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── Applicant mode: plain answer + single official link ─────────────────────
+
+
+function PlainAnswer({ text, resource, flags, questions, onAsk }) {
+  const plain = text.replace(/\[\d+\]/g, '');
+  return (
+    <div className="snap-response-body">
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{plain}</ReactMarkdown>
+      {resource && (
+        <a href={resource.url} target="_blank" rel="noopener noreferrer" className="snap-learn-more">
+          {resource.label} ↗
+        </a>
+      )}
+      <FlagsPanel flags={flags} mode="simple" />
+      <QuestionsPanel questions={questions} onAsk={onAsk} />
+    </div>
+  );
+}
+
 // ── Loading dots ────────────────────────────────────────────────────────────
 
 function LoadingDots() {
@@ -133,7 +191,7 @@ function LoadingDots() {
 
 // ── Message ─────────────────────────────────────────────────────────────────
 
-function Message({ msg, onOpen }) {
+function Message({ msg, mode, onOpen, onAsk }) {
   if (msg.sender === 'user') {
     return (
       <div className="snap-message snap-message--user">
@@ -154,9 +212,24 @@ function Message({ msg, onOpen }) {
     );
   }
 
+  if (mode === 'simple') {
+    return (
+      <div className="snap-message snap-message--bot">
+        <PlainAnswer
+          text={msg.text}
+          resource={msg.resource}
+          flags={msg.flags}
+          questions={msg.questions}
+          onAsk={onAsk}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="snap-message snap-message--bot">
       <AnswerWithCitations text={msg.text} sources={msg.sources || []} onOpen={onOpen} />
+      <FlagsPanel flags={msg.flags} mode="expert" />
       <ReferencesPanel sources={msg.sources || []} onOpen={onOpen} />
     </div>
   );
@@ -170,6 +243,11 @@ export default function SnapChat() {
   const [isLoading, setIsLoading] = useState(false);
   const [mode, setMode] = useState('expert');
   const [pdfPanel, setPdfPanel] = useState(null);
+
+  const onAsk = useCallback((question) => {
+    setInputText(question);
+    setTimeout(() => inputRef.current?.focus(), 0);
+  }, []);
 
   const openPdf = useCallback((source) => {
     setPdfPanel({
@@ -229,6 +307,9 @@ export default function SnapChat() {
           sender: 'bot',
           text: data.answer || 'Sorry, no answer was returned.',
           sources: data.sources || [],
+          flags: data.flags || [],
+          questions: data.questions || [],
+          resource: data.resource || null,
           loading: false,
         };
         return updated;
@@ -294,16 +375,23 @@ export default function SnapChat() {
               <div className="snap-welcome-logo">P</div>
               <h1 className="snap-welcome-title">Georgia SNAP Policy Assistant</h1>
               <p className="snap-welcome-sub">
-                Ask any question about Georgia SNAP eligibility, benefits, or procedures.<br />
-                Answers cite the official policy manual with links to the source page.
+                {mode === 'simple'
+                  ? <>Ask any question about applying for Georgia SNAP benefits.<br />Get plain-language answers with links to official resources.</>
+                  : <>Ask any question about Georgia SNAP eligibility, benefits, or procedures.<br />Answers cite the official policy manual with links to the source page.</>
+                }
               </p>
               <div className="snap-example-queries">
-                {[
+                {(mode === 'simple' ? [
+                  'Can I get SNAP benefits?',
+                  'How much could I receive each month?',
+                  'What do I need to apply?',
+                  'What happens if I\'m denied?',
+                ] : [
                   'What is the income limit for a household of 4?',
                   'How does categorical eligibility work?',
                   'What documents are needed to verify identity?',
                   'What are the ABAWD work requirements?',
-                ].map(q => (
+                ]).map(q => (
                   <button key={q} className="snap-example-btn" onClick={() => {
                     setInputText(q);
                     inputRef.current?.focus();
@@ -314,7 +402,7 @@ export default function SnapChat() {
               </div>
             </div>
           )}
-          {messages.map((msg, i) => <Message key={i} msg={msg} onOpen={openPdf} />)}
+          {messages.map((msg, i) => <Message key={i} msg={msg} mode={mode} onOpen={openPdf} onAsk={onAsk} />)}
         </div>
       </main>
 

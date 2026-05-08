@@ -42,27 +42,68 @@ QUOTE[2]: <verbatim 1-2 sentences from source 2>
 (one FACT + QUOTE pair per cited source, in the same order)
 """
 
+_EXPERT_FLAGS_RULES = """\
+
+DECISION SUPPORT — after SOURCE_FACTS, scan the full conversation for case facts and flag issues the worker may overlook.
+Watch especially for:
+- Self-employment/gig income: net profit after expenses, averaged over 12 months (or since start if shorter)
+- Student household members: most 18-49 students are ineligible unless they meet a specific exemption (working 20+ hrs/wk, caring for a child under 6, etc.)
+- Elderly or disabled members: excess medical deductions (over $35/month) are commonly missed
+- Shelter deduction: verify excess shelter costs (rent + utilities above 50% of net income) are being applied
+- Categorical eligibility: SSI, TANF, or GA Works receipt may confer automatic or broad-based eligibility
+- ABAWD requirements: able-bodied adults 18-49 without dependents — confirm work requirement compliance or exemption
+- Paystub/verification gaps: paystubs must cover required period; gaps = incomplete verification
+Only flag issues grounded in facts from this conversation. If no case facts have been shared, note 1-2 common watch-outs for this question's topic. Include 1-4 flags; omit if nothing substantive to flag.
+
+FLAGS:
+FLAG[1]: <specific actionable concern in 1 sentence>
+FLAG[2]: <another concern>
+"""
+
+_SIMPLE_FLAGS_RULES = """\
+
+HELPFUL TIPS — after SOURCE_FACTS, add 1-3 tips the person might not know:
+- Benefits or deductions they may qualify for (expedited SNAP, categorical eligibility, utility allowances)
+- Documents to gather before applying
+- Common misconceptions to correct
+
+FLAGS:
+FLAG[1]: <helpful tip in 1 plain sentence>
+FLAG[2]: <another tip>
+
+FOLLOW-UP QUESTIONS — after FLAGS, ask 1-3 specific questions that would help determine eligibility more precisely.
+Only ask questions not already answered in this conversation. Explain why each matters in plain language.
+Skip this block entirely if all relevant info has already been provided.
+
+QUESTIONS:
+QUESTION[1]: <short plain-English question> | <1-sentence plain reason why this matters>
+QUESTION[2]: <another question> | <why>
+"""
+
 SYSTEM_PROMPT_EXPERT = (
-    "You are a knowledgeable assistant helping Georgia SNAP caseworkers apply policy accurately.\n\n"
-    "Answer questions using ONLY the provided manual sections. Be precise and cite policy language.\n\n"
+    "You are a decision support system helping Georgia SNAP caseworkers make accurate eligibility determinations.\n\n"
+    "Your role is two-fold: (1) answer policy questions accurately with citations, and (2) proactively identify case-specific issues the worker may miss.\n\n"
     "RESPONSE STYLE:\n"
     "- Be concise and direct.\n"
     "- Bold key thresholds, income limits, and dates using **markdown bold**.\n"
     "- Use bullet points for lists of conditions or requirements.\n"
     "- Do NOT add a 'Sources' section — citations are inline only.\n\n"
     + _SHARED_CITATION_RULES
+    + _EXPERT_FLAGS_RULES
 )
 
 SYSTEM_PROMPT_SIMPLE = (
-    "You are a friendly assistant helping people understand if they might qualify for Georgia SNAP food benefits.\n\n"
-    "Answer questions using ONLY the provided manual sections. Use plain, everyday language.\n\n"
-    "RESPONSE STYLE:\n"
-    "- Write as if explaining to someone with no government experience.\n"
-    "- Avoid acronyms — spell them out (e.g. 'Supplemental Nutrition Assistance Program (SNAP)').\n"
-    "- Use short sentences. Lead with the direct answer, then explain why.\n"
-    "- Bold the most important numbers or dates.\n"
+    "You are a friendly, knowledgeable guide helping people navigate Georgia SNAP (food assistance) benefits.\n"
+    "Many users have never dealt with government benefits before and may not know where to start.\n\n"
+    "Your goals:\n"
+    "- Actually help them, not just recite rules. If there's something they can do, tell them.\n"
+    "- Use plain, everyday language. No jargon. Spell out acronyms the first time.\n"
+    "- Be warm but concise. Short sentences. One idea at a time.\n"
+    "- Name specific forms, websites, or phone numbers when they're relevant — don't be vague.\n"
+    "- Bold the most important numbers, dates, and form names so they're easy to scan.\n"
     "- Do NOT add a 'Sources' section — citations are inline only.\n\n"
     + _SHARED_CITATION_RULES
+    + _SIMPLE_FLAGS_RULES
 )
 
 
@@ -140,24 +181,91 @@ def _retrieve(embedding: list[float], question: str, k: int = TOP_K) -> list[dic
     return sources
 
 
-def _parse_facts(text: str) -> tuple[str, dict[int, str], dict[int, str]]:
+def _parse_facts(
+    text: str,
+) -> tuple[str, dict[int, str], dict[int, str], list[str], list[dict]]:
     """
-    Split LLM output into (answer, {index: key_fact}, {index: verbatim_quote}).
-    Handles FACT[N]/QUOTE[N] and bare FACT N/QUOTE N since models vary.
+    Split LLM output into (answer, key_facts, quotes, flags, questions).
+
+    Everything after SOURCE_FACTS: is treated as a metadata block and scanned
+    for FACT/QUOTE/FLAG/QUESTION patterns regardless of what section headers
+    the model uses (it varies: FLAGS, HELPFUL TIPS, FOLLOW-UP QUESTIONS, etc.).
     """
-    block = re.search(r'SOURCE_FACTS:\s*\n(.*)', text, re.DOTALL | re.IGNORECASE)
     key_facts: dict[int, str] = {}
     quotes: dict[int, str] = {}
+    flags: list[str] = []
+    questions: list[dict] = []
+
+    block = re.search(r'SOURCE_FACTS:\s*\n?(.*)', text, re.DOTALL | re.IGNORECASE)
     if block:
         answer = text[:block.start()].strip()
-        body = block.group(1)
-        for m in re.finditer(r'FACT\[?(\d+)\]?:\s*(.+)', body):
+        meta = block.group(1)
+
+        for m in re.finditer(r'FACT\[?(\d+)\]?:\s*(.+)', meta):
             key_facts[int(m.group(1))] = m.group(2).strip()
-        for m in re.finditer(r'QUOTE\[?(\d+)\]?:\s*(.+)', body):
+        for m in re.finditer(r'QUOTE\[?(\d+)\]?:\s*(.+)', meta):
             quotes[int(m.group(1))] = m.group(2).strip()
+        # FLAG without a pipe (not a QUESTION)
+        for m in re.finditer(r'^FLAG\[?\d*\]?:\s*(.+)', meta, re.MULTILINE | re.IGNORECASE):
+            val = m.group(1).strip()
+            if '|' not in val:
+                flags.append(val)
+        # QUESTION must contain a pipe separating question from reason
+        for m in re.finditer(r'^QUESTION\[?\d*\]?:\s*(.+?)\s*\|\s*(.+)', meta, re.MULTILINE | re.IGNORECASE):
+            questions.append({"question": m.group(1).strip(), "reason": m.group(2).strip()})
     else:
         answer = text.strip()
-    return answer, key_facts, quotes
+
+    return answer, key_facts, quotes, flags, questions
+
+
+_FORM_RESOURCES = {
+    "297a": {"url": "https://dfcs.georgia.gov/document/document/297a/download",                                          "label": "Download Form 297A (Rights & Responsibilities)"},
+    "297":  {"url": "https://dfcs.georgia.gov/document/document/297/download",                                           "label": "Download Form 297 (SNAP Application)"},
+    "298":  {"url": "https://dfcs.georgia.gov/media/16446/download",                                                     "label": "Download Form 298 (Senior SNAP Application)"},
+    "508":  {"url": "https://dfcs.georgia.gov/document/document/form-508-food-stampmedicaidtanf-renewal-form/download",  "label": "Download Form 508 (Renewal Form)"},
+    "528":  {"url": "https://dfcs.georgia.gov/document/document/528-english/download",                                   "label": "Download Form 528 (Periodic Report)"},
+    "846":  {"url": "https://pamms.dhs.ga.gov/dfcs/snap/_attachments/form-846.pdf",                                      "label": "Download Form 846 (Change Report)"},
+    "841":  {"url": "https://dfcs.georgia.gov/document/document/form-841-food-loss-replacement-form/download",           "label": "Download Form 841 (Food Loss Replacement)"},
+    "880":  {"url": "https://pamms.dhs.ga.gov/dfcs/snap/_attachments/form-880.pdf",                                      "label": "Download Form 880 (Verification Checklist)"},
+    "821":  {"url": "https://pamms.dhs.ga.gov/dfcs/snap/_attachments/form-821.pdf",                                      "label": "Download Form 821 (Shelter Cost Statement)"},
+    "104":  {"url": "https://pamms.dhs.ga.gov/dfcs/snap/_attachments/form-104.pdf",                                      "label": "Download Form 104 (Child Care Expense Statement)"},
+    "173":  {"url": "https://pamms.dhs.ga.gov/dfcs/snap/_attachments/form-173.pdf",                                      "label": "Download Form 173 (Verification Checklist)"},
+    "47":   {"url": "https://dfcs.georgia.gov/document/document/snap-form-47-english/download",                          "label": "Download Form 47 (SNAP Info Brochure)"},
+    "1":    {"url": "https://pamms.dhs.ga.gov/dfcs/snap/_attachments/form-1.pdf",                                        "label": "Download OSAH Form 1 (Fair Hearing Request)"},
+}
+
+_TOPIC_RESOURCES = [
+    (r'\bfair hearing\b|\bappeal\b|\bOSAH\b|\bdenied\b',
+     {"url": "https://pamms.dhs.ga.gov/dfcs/snap/_attachments/form-1.pdf", "label": "Request a Fair Hearing (OSAH Form 1)"}),
+    (r'\brenew\b|\brenewal\b|\brecertif',
+     {"url": "https://dfcs.georgia.gov/document/document/form-508-food-stampmedicaidtanf-renewal-form/download", "label": "Download Renewal Form (Form 508)"}),
+    (r'\bfood loss\b|\bspoiled\b|\bpower outage\b',
+     {"url": "https://dfcs.georgia.gov/document/document/form-841-food-loss-replacement-form/download", "label": "Request Food Loss Replacement (Form 841)"}),
+    (r'\bsenior snap\b|\belderly\b|\bage 60\b',
+     {"url": "https://dfcs.georgia.gov/media/16446/download", "label": "Senior SNAP Application (Form 298)"}),
+    (r'\bebt\b|\bbalance\b|\bpin\b',
+     {"url": "https://www.connectebt.com/ebtconnect/recipient/GA/", "label": "Check Your EBT Balance"}),
+    (r'\bapply\b|\bapplication\b|\bhow to (get|apply)\b',
+     {"url": "https://www.gateway.ga.gov/access/", "label": "Apply Online at Georgia Gateway"}),
+    (r'\bgateway\b',
+     {"url": "https://www.gateway.ga.gov/access/", "label": "Georgia Gateway — Apply or Manage Benefits"}),
+    (r'\blegal aid\b|\bright to\b|\bappeal\b',
+     {"url": "https://www.georgialegalaid.org/resource/what-should-i-know-about-food-stamps-snap", "label": "Georgia Legal Aid — SNAP Rights"}),
+]
+
+def _pick_resource(answer: str) -> dict | None:
+    """Return the most relevant form/resource link based on the answer content."""
+    # Form 297A must be checked before 297 (longer match first)
+    m = re.search(r'\bForm\s+(\d+[A-Za-z]?)\b', answer, re.IGNORECASE)
+    if m:
+        key = m.group(1).lower()
+        if key in _FORM_RESOURCES:
+            return _FORM_RESOURCES[key]
+    for pattern, resource in _TOPIC_RESOURCES:
+        if re.search(pattern, answer, re.IGNORECASE):
+            return resource
+    return {"url": "https://dfcs.georgia.gov/services/snap", "label": "Georgia DFCS — SNAP"}
 
 
 def _order_by_appearance(cited_sources: list[dict], answer: str) -> list[dict]:
@@ -204,11 +312,11 @@ def query_snap(
     response = chat_client.chat.completions.create(
         model=CHAT_MODEL,
         messages=messages,
-        max_tokens=1200,
+        max_tokens=1600,
     )
     raw = response.choices[0].message.content or ""
 
-    answer, key_facts, quotes = _parse_facts(raw)
+    answer, key_facts, quotes, flags, questions = _parse_facts(raw)
 
     cited = {int(m) for m in re.findall(r"\[(\d+)\]", answer)}
     cited_sources = [s for s in sources if s["index"] in cited]
@@ -228,4 +336,5 @@ def query_snap(
         return f"[{index_map[old]}]" if old in index_map else m.group(0)
     answer = re.sub(r"\[(\d+)\]", replace_cite, answer)
 
-    return {"answer": answer, "sources": cited_sources}
+    resource = _pick_resource(answer) if mode == "simple" else None
+    return {"answer": answer, "sources": cited_sources, "flags": flags, "questions": questions, "resource": resource}
