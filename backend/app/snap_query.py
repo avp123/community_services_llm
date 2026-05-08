@@ -312,7 +312,7 @@ def query_snap(
     response = chat_client.chat.completions.create(
         model=CHAT_MODEL,
         messages=messages,
-        max_tokens=1600,
+        max_completion_tokens=1600,
     )
     raw = response.choices[0].message.content or ""
 
