@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import Logo from '../icons/Logo.png';
 import { WellnessContext } from './AppStateContextProvider';
-import { authenticatedFetch } from '../utils/api';
+import { authenticatedFetch, apiGet } from '../utils/api';
 import { getUserIdentityLabel } from '../utils/accountDisplayName';
 import MFASetup from './MFASetup';
 import '../styles/pages/home.css';
@@ -22,6 +22,8 @@ function Home() {
   const [showMfaSetup, setShowMfaSetup] = useState(false);
   const [mfaEnabled, setMfaEnabled] = useState(false);
   const [mfaGloballyEnabled, setMfaGloballyEnabled] = useState(true);
+  const [azureQuota, setAzureQuota] = useState(null);
+  const [azureQuotaError, setAzureQuotaError] = useState(false);
 
   const handleOrganizationChange = (e) => {
     const newOrg = e.target.value.toLowerCase();
@@ -36,8 +38,21 @@ function Home() {
   useEffect(() => {
     if (showSettings) {
       fetchSettings();
+      fetchAzureQuota();
     }
   }, [showSettings]);
+
+  const fetchAzureQuota = async () => {
+    setAzureQuota(null);
+    setAzureQuotaError(false);
+    try {
+      const q = await apiGet('/api/azure-chat-quota');
+      setAzureQuota(q);
+    } catch (e) {
+      console.error('Error fetching Azure chat quota:', e);
+      setAzureQuotaError(true);
+    }
+  };
 
   useEffect(() => {
     checkMfaStatus();
@@ -224,6 +239,32 @@ function Home() {
               </div>
             )}
           </form>
+          <div
+            className="azure-quota-settings"
+            style={{
+              marginTop: '18px',
+              paddingTop: '14px',
+              borderTop: '1px solid #e0e0e0',
+              fontSize: '13px',
+              color: '#555',
+            }}
+          >
+            <div style={{ fontWeight: 600, marginBottom: '4px' }}>Site AI tokens (monthly)</div>
+            {azureQuotaError ? (
+              <span>Could not load usage.</span>
+            ) : !azureQuota ? (
+              <span style={{ color: '#888' }}>Loading…</span>
+            ) : (
+              <span>
+                {Number(azureQuota.used_tokens).toLocaleString()} /{' '}
+                {Number(azureQuota.budget_tokens).toLocaleString()} tokens
+                <span style={{ color: '#888', marginLeft: '6px' }}>
+                  (UTC {azureQuota.billing_month}
+                  {!azureQuota.allowed ? ' · limit reached' : ''})
+                </span>
+              </span>
+            )}
+          </div>
         </div>
       )}
       {mfaGloballyEnabled && (

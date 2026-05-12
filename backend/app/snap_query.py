@@ -280,7 +280,7 @@ def query_snap(
     question: str,
     conversation_history: list | None = None,
     mode: str = "expert",
-) -> dict:
+) -> tuple[dict, int]:
     """
     Run the full RAG pipeline for a SNAP policy question.
 
@@ -288,7 +288,7 @@ def query_snap(
         mode: "expert" (caseworker language) or "simple" (plain English for applicants)
 
     Returns:
-        {"answer": str, "sources": list[dict]}
+        ({"answer": str, "sources": list[dict], ...}, azure_chat_completion_tokens)
     """
     conversation_history = conversation_history or []
     system_prompt = SYSTEM_PROMPT_SIMPLE if mode == "simple" else SYSTEM_PROMPT_EXPERT
@@ -315,6 +315,10 @@ def query_snap(
         max_completion_tokens=1600,
     )
     raw = response.choices[0].message.content or ""
+    usage_tokens = 0
+    u = getattr(response, "usage", None)
+    if u is not None:
+        usage_tokens = int(getattr(u, "total_tokens", 0) or 0)
 
     answer, key_facts, quotes, flags, questions = _parse_facts(raw)
 
@@ -337,4 +341,13 @@ def query_snap(
     answer = re.sub(r"\[(\d+)\]", replace_cite, answer)
 
     resource = _pick_resource(answer) if mode == "simple" else None
-    return {"answer": answer, "sources": cited_sources, "flags": flags, "questions": questions, "resource": resource}
+    return (
+        {
+            "answer": answer,
+            "sources": cited_sources,
+            "flags": flags,
+            "questions": questions,
+            "resource": resource,
+        },
+        usage_tokens,
+    )
