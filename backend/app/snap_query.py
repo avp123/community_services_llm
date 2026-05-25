@@ -15,6 +15,7 @@ TOP_K = 6
 EXCERPT_CHARS = 2000
 SECTION_COMPLETE_MAX_CHUNKS = 12  # complete sections with at most this many total chunks
 SNIPPET_CHARS = 280   # shown in the source card quote
+HIGHLIGHT_CHARS = 400  # used by PDF viewer for text-layer highlighting
 
 PDF_URL = "https://pamms.dhs.ga.gov/dfcs/_exports/snap-policy-manual.pdf"
 
@@ -112,6 +113,72 @@ SYSTEM_PROMPT_SIMPLE = (
 )
 
 
+_META_LINE_RE = re.compile(
+    r"^\s*(?:"
+    r"\d{4}\s+(?:Previous MT|Policy Title|Effective Date|Chapter|Policy Number)"
+    r"|Previous MT Num\S*"
+    r"|Updated or Reviewed in MT"
+    r"|MT-\d+"
+    r"|Georgia Division of Family"
+    r"|SNAP Policy Manual"
+    r"|Policy Title:"
+    r"|Effective Date:"
+    r"|Chapter:\s*\d"
+    r"|Policy Number:"
+    r")[^\n]*",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+# Last-in-block metadata markers — we find the rightmost match within the
+# first 800 chars to locate where the header ends in a no-newline chunk.
+_META_END_RES = [
+    re.compile(r'Policy Number:\s*\d{4}'),
+    re.compile(r'Chapter:\s*\d+'),
+    re.compile(r'Effective Date:\s*\d'),
+    re.compile(r'MT-\d{2}-\d{4}'),
+    re.compile(r'Updated or Reviewed in MT'),
+    re.compile(r'SNAP Policy Manual'),
+    re.compile(r'Georgia Division of Family'),
+]
+
+
+def _highlight_text(content: str, section_title: str = "") -> str:
+    """Return first HIGHLIGHT_CHARS with section-header metadata stripped.
+
+    chunk_section() joins words with spaces (no newlines), so _META_LINE_RE
+    (anchored to ^ line-starts) can't strip inline metadata. When content
+    starts with a 4-digit section number we locate the end of the header block
+    by finding the last known metadata marker, then skip past any repeated
+    running header using the known section_title length."""
+    # Line-based stripping — works when content has real newlines
+    cleaned = _META_LINE_RE.sub("", content).strip()
+    working = cleaned or content
+
+    # Still starts with a section number? Metadata was inline (no newlines).
+    if re.match(r'^\d{4}\s', working):
+        search_area = working[:800]
+        meta_end = 0
+        for pat in _META_END_RES:
+            m = pat.search(search_area)
+            if m:
+                meta_end = max(meta_end, m.end())
+
+        if meta_end > 0:
+            rest = working[meta_end:].lstrip()
+            # Skip the repeated "NNNN SectionTitle" running header that often
+            # follows the metadata block. We know the title length, so we cap
+            # the skip to avoid consuming actual content.
+            if re.match(r'^\d{4}\s', rest) and section_title:
+                skip_cap = len(section_title) + 3  # title length + small variation buffer
+                m = re.match(rf'^\d{{4}}.{{0,{skip_cap}}}\s+', rest)
+                if m:
+                    rest = rest[m.end():]
+            if len(rest) >= 30:
+                return rest[:HIGHLIGHT_CHARS]
+
+    return working[:HIGHLIGHT_CHARS]
+
+
 def _embed(text: str) -> list[float]:
     return embed_client.embeddings.create(
         model=EMBED_MODEL, input=[text]
@@ -182,6 +249,7 @@ def _retrieve(embedding: list[float], question: str, k: int = TOP_K) -> list[dic
             "page_end": page_end,
             "excerpt": content[:EXCERPT_CHARS],
             "snippet": _find_snippet(content, question),
+            "highlight_text": _highlight_text(content, section_title),
             "similarity": round(float(similarity), 4),
             "pdf_url": f"{PDF_URL}#page={page_start}",
         })

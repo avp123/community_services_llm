@@ -252,7 +252,12 @@ export default function SnapChat() {
   const openPdf = useCallback((source) => {
     setPdfPanel({
       page: source.page_start,
+      // quote is shown in the callout box (LLM-generated, may be paraphrased)
       quote: source.quote || source.key_fact || null,
+      // highlight_text drives PDF text-layer search. Use the backend-computed
+      // field (metadata-stripped, ≤200 chars) so it fits within one page's
+      // extracted text and doesn't include PyPDF2 formatting artifacts.
+      highlight_text: source.highlight_text || source.snippet || source.quote || null,
       section: `§${source.section_number} ${source.section_title}`,
     });
   }, []);
