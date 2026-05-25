@@ -28,6 +28,32 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 SECTION_RE = re.compile(r"^\s*(\d{4})\s+([A-Z][^\n]{5,80})\s*$", re.MULTILINE)
 
+# Matches section-header metadata lines that PDF extraction puts at the top of
+# each section (policy title block, MT numbers, chapter/number lines).
+# Stripping these before embedding so the vector represents actual policy
+# content rather than administrative boilerplate.
+_META_LINE_RE = re.compile(
+    r"^\s*(?:"
+    r"\d{4}\s+(?:Previous MT|Policy Title|Effective Date|Chapter|Policy Number)"
+    r"|Previous MT Num\S*"
+    r"|Updated or Reviewed in MT"
+    r"|MT-\d+"
+    r"|Georgia Division of Family"
+    r"|SNAP Policy Manual"
+    r"|Policy Title:"
+    r"|Effective Date:"
+    r"|Chapter:\s*\d"
+    r"|Policy Number:"
+    r")[^\n]*",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+
+def clean_for_embedding(text: str) -> str:
+    """Strip administrative metadata lines before embedding."""
+    cleaned = _META_LINE_RE.sub("", text).strip()
+    return cleaned if cleaned else text
+
 
 def extract_pages(pdf_path: str) -> list[dict]:
     """Return list of {page_num, text} dicts, skipping TOC."""
@@ -50,12 +76,18 @@ def detect_sections(pages: list[dict]) -> list[dict]:
     """
     sections = []
     current = None
+    seen_sections: set[str] = set()  # prevents running page headers from re-triggering
 
     for p in pages:
         m = SECTION_RE.search(p["text"])
-        if m:
+        if m and m.group(1) not in seen_sections:
             if current:
+                # Text before the header on this page belongs to the previous section
+                text_before = p["text"][:m.start()]
+                if text_before.strip():
+                    current["text"] += "\n" + text_before
                 sections.append(current)
+            seen_sections.add(m.group(1))
             # Clean title — strip page-number suffixes like "| 27"
             title = re.sub(r"\|\s*\d+\s*$", "", m.group(2)).strip()
             current = {
@@ -63,7 +95,10 @@ def detect_sections(pages: list[dict]) -> list[dict]:
                 "section_title": title,
                 "page_start": p["page_num"],
                 "page_end": p["page_num"],
-                "text": p["text"],
+                "text": p["text"][m.start():],  # start from the header, not top of page
+                # store separately so chunk_section can use the sliced text
+                # instead of re-reading the full raw page
+                "_start_page_slice": p["text"][m.start():],
             }
         elif current:
             current["text"] += "\n" + p["text"]
@@ -160,9 +195,18 @@ def main():
     print("[3/4] Chunking sections...")
     all_chunks = []
     for s in sections:
-        # Collect only the pages that fall within this section's page range
-        s_pages = [p for p in pages
-                   if p["page_num"] >= s["page_start"] and p["page_num"] <= s["page_end"]]
+        # Collect pages within this section's range, substituting the correctly
+        # sliced text for the start page so cross-page section boundaries don't
+        # pull in trailing content from the preceding section.
+        start_slice = s.get("_start_page_slice")
+        s_pages = []
+        for p in pages:
+            if p["page_num"] < s["page_start"] or p["page_num"] > s["page_end"]:
+                continue
+            if p["page_num"] == s["page_start"] and start_slice is not None:
+                s_pages.append({"page_num": p["page_num"], "text": start_slice})
+            else:
+                s_pages.append(p)
         all_chunks.extend(chunk_section(s, s_pages))
     print(f"      {len(all_chunks)} chunks total")
 
@@ -179,7 +223,7 @@ def main():
     inserted = 0
     for i in range(0, len(all_chunks), BATCH):
         batch = all_chunks[i : i + BATCH]
-        texts = [c["content"] for c in batch]
+        texts = [clean_for_embedding(c["content"]) for c in batch]
         embeddings = embed_batch(texts)
 
         for chunk, emb in zip(batch, embeddings):

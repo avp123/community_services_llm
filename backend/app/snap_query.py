@@ -13,7 +13,9 @@ EMBED_MODEL = "text-embedding-3-large"
 CHAT_MODEL = "gpt-5-chat"
 TOP_K = 6
 EXCERPT_CHARS = 2000
+SECTION_COMPLETE_MAX_CHUNKS = 12  # complete sections with at most this many total chunks
 SNIPPET_CHARS = 280   # shown in the source card quote
+HIGHLIGHT_CHARS = 400  # used by PDF viewer for text-layer highlighting
 
 PDF_URL = "https://pamms.dhs.ga.gov/dfcs/_exports/snap-policy-manual.pdf"
 
@@ -83,6 +85,10 @@ QUESTION[2]: <another question> | <why>
 SYSTEM_PROMPT_EXPERT = (
     "You are a decision support system helping Georgia SNAP caseworkers make accurate eligibility determinations.\n\n"
     "Your role is two-fold: (1) answer policy questions accurately with citations, and (2) proactively identify case-specific issues the worker may miss.\n\n"
+    "BEFORE ANSWERING:\n"
+    "1. Identify every condition the relevant policy states must be met — including age ranges, numeric thresholds, time limits, and documentation requirements.\n"
+    "2. Confirm each condition applies to the facts given. If a section's scope (e.g. an age range) excludes this person, say so explicitly before applying that section's rules.\n"
+    "3. Only then state your conclusion, citing which conditions are and are not satisfied.\n\n"
     "RESPONSE STYLE:\n"
     "- Be concise and direct.\n"
     "- Bold key thresholds, income limits, and dates using **markdown bold**.\n"
@@ -105,6 +111,72 @@ SYSTEM_PROMPT_SIMPLE = (
     + _SHARED_CITATION_RULES
     + _SIMPLE_FLAGS_RULES
 )
+
+
+_META_LINE_RE = re.compile(
+    r"^\s*(?:"
+    r"\d{4}\s+(?:Previous MT|Policy Title|Effective Date|Chapter|Policy Number)"
+    r"|Previous MT Num\S*"
+    r"|Updated or Reviewed in MT"
+    r"|MT-\d+"
+    r"|Georgia Division of Family"
+    r"|SNAP Policy Manual"
+    r"|Policy Title:"
+    r"|Effective Date:"
+    r"|Chapter:\s*\d"
+    r"|Policy Number:"
+    r")[^\n]*",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+# Last-in-block metadata markers — we find the rightmost match within the
+# first 800 chars to locate where the header ends in a no-newline chunk.
+_META_END_RES = [
+    re.compile(r'Policy Number:\s*\d{4}'),
+    re.compile(r'Chapter:\s*\d+'),
+    re.compile(r'Effective Date:\s*\d'),
+    re.compile(r'MT-\d{2}-\d{4}'),
+    re.compile(r'Updated or Reviewed in MT'),
+    re.compile(r'SNAP Policy Manual'),
+    re.compile(r'Georgia Division of Family'),
+]
+
+
+def _highlight_text(content: str, section_title: str = "") -> str:
+    """Return first HIGHLIGHT_CHARS with section-header metadata stripped.
+
+    chunk_section() joins words with spaces (no newlines), so _META_LINE_RE
+    (anchored to ^ line-starts) can't strip inline metadata. When content
+    starts with a 4-digit section number we locate the end of the header block
+    by finding the last known metadata marker, then skip past any repeated
+    running header using the known section_title length."""
+    # Line-based stripping — works when content has real newlines
+    cleaned = _META_LINE_RE.sub("", content).strip()
+    working = cleaned or content
+
+    # Still starts with a section number? Metadata was inline (no newlines).
+    if re.match(r'^\d{4}\s', working):
+        search_area = working[:800]
+        meta_end = 0
+        for pat in _META_END_RES:
+            m = pat.search(search_area)
+            if m:
+                meta_end = max(meta_end, m.end())
+
+        if meta_end > 0:
+            rest = working[meta_end:].lstrip()
+            # Skip the repeated "NNNN SectionTitle" running header that often
+            # follows the metadata block. We know the title length, so we cap
+            # the skip to avoid consuming actual content.
+            if re.match(r'^\d{4}\s', rest) and section_title:
+                skip_cap = len(section_title) + 3  # title length + small variation buffer
+                m = re.match(rf'^\d{{4}}.{{0,{skip_cap}}}\s+', rest)
+                if m:
+                    rest = rest[m.end():]
+            if len(rest) >= 30:
+                return rest[:HIGHLIGHT_CHARS]
+
+    return working[:HIGHLIGHT_CHARS]
 
 
 def _embed(text: str) -> list[float]:
@@ -160,24 +232,55 @@ def _retrieve(embedding: list[float], question: str, k: int = TOP_K) -> list[dic
         (str(embedding), str(embedding), k),
     )
     rows = cur.fetchall()
-    conn.close()
 
+    seen: set[str] = set()  # content fingerprints to deduplicate
     sources = []
-    for i, row in enumerate(rows):
-        content = row[4]
-        sources.append(
-            {
-                "index": i + 1,
-                "section_number": row[0],
-                "section_title": row[1],
-                "page_start": row[2],
-                "page_end": row[3],
-                "excerpt": content[:EXCERPT_CHARS],
-                "snippet": _find_snippet(content, question),
-                "similarity": round(float(row[5]), 4),
-                "pdf_url": f"{PDF_URL}#page={row[2]}",
-            }
+
+    def _append(section_number, section_title, page_start, page_end, content, similarity):
+        fp = content[:80]
+        if fp in seen:
+            return
+        seen.add(fp)
+        sources.append({
+            "index": len(sources) + 1,
+            "section_number": section_number,
+            "section_title": section_title,
+            "page_start": page_start,
+            "page_end": page_end,
+            "excerpt": content[:EXCERPT_CHARS],
+            "snippet": _find_snippet(content, question),
+            "highlight_text": _highlight_text(content, section_title),
+            "similarity": round(float(similarity), 4),
+            "pdf_url": f"{PDF_URL}#page={page_start}",
+        })
+
+    for row in rows:
+        _append(row[0], row[1], row[2], row[3], row[4], row[5])
+
+    # Section completion: for any section with <= SECTION_COMPLETE_MAX_CHUNKS total
+    # chunks, pull in all remaining chunks so we never miss a scope guard or
+    # verification paragraph that landed outside the top-K.
+    retrieved_sections = {s["section_number"] for s in sources}
+    for sec_num in retrieved_sections:
+        cur.execute(
+            "SELECT COUNT(*) FROM snap_chunks WHERE section_number = %s",
+            (sec_num,),
         )
+        if cur.fetchone()[0] > SECTION_COMPLETE_MAX_CHUNKS:
+            continue
+        cur.execute(
+            """
+            SELECT section_number, section_title, page_start, page_end, content
+            FROM snap_chunks
+            WHERE section_number = %s
+            ORDER BY page_start, chunk_index
+            """,
+            (sec_num,),
+        )
+        for row in cur.fetchall():
+            _append(row[0], row[1], row[2], row[3], row[4], 0.0)
+
+    conn.close()
     return sources
 
 

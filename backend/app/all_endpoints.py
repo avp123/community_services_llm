@@ -90,19 +90,13 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        os.environ.get("FRONTEND_URL", ""),
-        "https://peercopilot.com",
-        "https://www.peercopilot.com",
-        "https://icy-dune-095a4b50f.4.azurestaticapps.net",
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+_CORS_ORIGINS = [
+    "http://localhost:3000",
+    os.environ.get("FRONTEND_URL", ""),
+    "https://peercopilot.com",
+    "https://www.peercopilot.com",
+    "https://icy-dune-095a4b50f.4.azurestaticapps.net",
+]
 
 app.include_router(auth_router)
 app.include_router(audit_router)
@@ -673,8 +667,17 @@ async def generate_check_ins_endpoint(
 
 # Handle Socket Messages
 
-sio = socketio.AsyncServer(async_mode="asgi", cors_allowed_origins="*")
+sio = socketio.AsyncServer(async_mode="asgi", cors_allowed_origins=[])
 socket_app = socketio.ASGIApp(sio, other_asgi_app=app)
+# CORS must wrap socket_app (the outermost ASGI layer that uvicorn serves),
+# not the inner FastAPI app — otherwise socket.io's layer can drop the headers.
+socket_app = CORSMiddleware(
+    socket_app,
+    allow_origins=_CORS_ORIGINS,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Utility functions
 def process_raw_chunk(raw_chunk: str) -> str:
