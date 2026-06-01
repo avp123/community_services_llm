@@ -1,0 +1,174 @@
+{
+  "method": "baseline (snap_test_old)",
+  "avg_score": 2.875,
+  "questions": [
+    {
+      "id": "Q01",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 7,
+      "reasoning": "The predicted answer correctly states that a Social Security card cannot verify citizenship and cites relevant sections, but it misses the points that SSA records are acceptable, that SSA issues cards to noncitizens, and lacks mention of verification exceptions and expedited processing. It also gives the right answer for the wrong reason, assuming SSA records are not listed."
+    },
+    {
+      "id": "Q02",
+      "score": 2,
+      "rubric_hit": 2,
+      "rubric_total": 7,
+      "reasoning": "The predicted answer identifies that VA benefits under 100% do not automatically indicate unfitness and cites policy 3350 on disability benefits, but it fails to distinguish between VA disability and VA education benefits and incorrectly implies that partial VA benefits may not qualify. It misses the key points about any-percentage disability benefits, the need for a VA award letter, and reliance on disability type, committing a significant error on policy interpretation."
+    },
+    {
+      "id": "Q03",
+      "score": 3,
+      "rubric_hit": 4,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly notes that age 51 exempts the client from student eligibility restrictions and that enrollment verification is needed for the work registration exemption, but it fails to confirm that lack of verification makes her a work registrant and ABAWD. It also introduces confusion by suggesting she would not automatically become an ABAWD, missing the explicit ABAWD linkage."
+    },
+    {
+      "id": "Q04",
+      "score": 1,
+      "rubric_hit": 0,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer fails to address any rubric points, does not classify begging correctly, omits verification guidance, and commits multiple key errors by not providing policy application or reasoning."
+    },
+    {
+      "id": "Q05",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly denies the request and explains that refrigerator failure is not a qualifying disaster or misfortune. It accurately mentions the 4-hour power outage requirement and that no qualifying event occurred. However, it omits mention that the denial notice must include fair hearing rights, so it misses one rubric point."
+    },
+    {
+      "id": "Q06",
+      "score": 1,
+      "rubric_hit": 0,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer contradicts policy by saying verification is not permissible under another name, fails to note that pay stubs verify earnings not identity, omits the need to document a reasonable explanation, and commits the main errors of wrongly disallowing the stubs and ignoring that the undocumented member\u2019s income must still be counted."
+    },
+    {
+      "id": "Q07",
+      "score": 1,
+      "rubric_hit": 0,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer fails to mention that the case can be reopened without a new application, incorrectly implies reapplication is needed, cites the wrong policy section (3110 instead of 3105), omits prorating rules, and thus commits multiple major errors."
+    },
+    {
+      "id": "Q08",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly states that homeless shelter residents remain eligible regardless of meals provided, identifies the homeless shelter exception, specifies public/private nonprofit shelters, notes that meal count doesn\u2019t affect eligibility, mentions standard eligibility requirements, and references checking the shelter deduction. It makes no common errors."
+    },
+    {
+      "id": "Q10",
+      "score": 4,
+      "rubric_hit": 4,
+      "rubric_total": 6,
+      "reasoning": "The answer correctly identifies that chores for housing qualify as in-kind work, cites policy language, and includes the 20-hour/80-hour requirement. However, it does not address verification requirements (parent statement) or distinguish from comparable workfare, so it misses two rubric points."
+    },
+    {
+      "id": "Q11",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "reasoning": "The answer correctly notes that there is no set periodic schedule and that obvious unfitness does not require a medical statement, with documentation needed. However, it omits that receipt of disability benefits substitutes for a medical statement and does not mention that new verification is only needed when status is questionable, so only about half the rubric points are covered."
+    },
+    {
+      "id": "Q12",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly states that no interview is required, contact attempts should be made, and a VCL should be sent with 10 days to respond, but it does not mention unresolved non-SRR discrepancies may carry to recertification or address adverse action procedures explicitly."
+    },
+    {
+      "id": "Q13",
+      "score": 1,
+      "rubric_hit": 0,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer did not address any of the rubric points, gave no correct age or policy explanation, and omitted the exception for ineligible students."
+    },
+    {
+      "id": "Q14",
+      "score": 1,
+      "rubric_hit": 0,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer does not mention that the entire lease is unnecessary, omits the six required elements, fails to note that signatures are required, and suggests the policy context is insufficient rather than providing a policy-based answer. It commits the error of not identifying specific required information or clarifying when additional pages are needed."
+    },
+    {
+      "id": "Q15",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly notes that the DDS interface is acceptable for verifying a current and valid Georgia Driver\u2019s License or ID card, but it fails to note that outdated or suspended IDs do not meet requirements, omits acceptance of any reasonable document and collateral contacts, and does not mention verifying both applicant and authorized representative identities. It also loosely references other interfaces, which could cause confusion about which are approved for ID verification."
+    },
+    {
+      "id": "Q16",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer correctly states that smartphone costs are not allowable as medical expenses and distinguishes phone costs as utility expenses, but it fails to mention elderly/disabled eligibility requirements and the exception for specialty telephone equipment with physician verification."
+    },
+    {
+      "id": "Q17",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "reasoning": "The answer correctly states the 30-day SOP and that benefits must be available by day 30, but it omits details that approvals must be processed by day 29, denials by day 30, and that the date of application is the date received with counting starting the day after; it also avoids the expedited confusion."
+    },
+    {
+      "id": "Q18",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 7,
+      "reasoning": "The predicted answer correctly states that residents cannot apply for themselves, that a facility employee must serve as their authorized representative, and that the resident is treated as a one-person AU. However, it omits mention of facility certification/licensing, regular participation requirements, and other eligibility criteria, so it does not fully meet all rubric points."
+    },
+    {
+      "id": "Q19",
+      "score": 4,
+      "rubric_hit": 4,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer correctly states that prior-month verification is not required, verification is only needed when there is a reported change, and contrasts periodic reporting with recertification. It does not explicitly state that verification for all months occurs at recertification, slightly weakening completeness."
+    },
+    {
+      "id": "Q20",
+      "score": 4,
+      "rubric_hit": 4,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer correctly excludes the roommate's rent payment as income, cites policy, and confirms separate AUs, but does not clearly mention the exception for excess payments over total housing costs."
+    },
+    {
+      "id": "Q21",
+      "score": 4,
+      "rubric_hit": 4,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer correctly explains that eligibility depends on meal plan coverage, defines the >50% rule, and distinguishes institutional residents. It does not explicitly mention the 18-49 student exemption requirement, so it slightly misses that point but avoids common errors."
+    },
+    {
+      "id": "Q22",
+      "score": 1,
+      "rubric_hit": 0,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer does not address any rubric points about how bonus income is budgeted, incorrectly states that the context lacks relevant information, and fails to classify or describe recurring/nonrecurring bonuses or documentation requirements."
+    },
+    {
+      "id": "Q23",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly explains that a periodic report must be signed, complete, and received, includes required sections, and distinguishes it from applications. However, it omits mention of the required verification and marking 'No' in Gateway, so it slightly misses full coverage."
+    },
+    {
+      "id": "Q24",
+      "score": 2,
+      "rubric_hit": 1,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer recognizes that dependent care deductions relate to employment/training but fails to state that school transportation is explicitly excluded. It does not connect the exclusion for educational expenses or contrast with allowable childcare transportation, and it commits the error of uncertainty rather than clearly saying 'No.'"
+    },
+    {
+      "id": "Q25",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly covers most rubric points, including the three verifications, separation of court order from payment proof, and timing of verification. It omits mention that DCSS records can verify both if payments go through DCSS, causing a minor miss."
+    }
+  ]
+}

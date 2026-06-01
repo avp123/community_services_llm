@@ -1,0 +1,90 @@
+{
+  "dataset": "SNAP Validation Set",
+  "description": "4 SNAP questions with rubrics for UAT validation, derived from Georgia DFCS SNAP Policy Manual and UAT review notes",
+  "questions": [
+    {
+      "id": "V01",
+      "question": "At periodic report, if a discrepancy is identified and the worker is unable to reach the customer, can we send an interview appointment?",
+      "policy_sections": ["3730"],
+      "correct_answer_summary": "No. An interview is not required for a periodic report, so sending an interview appointment is not the correct process. When a discrepancy is identified and the worker cannot reach the customer, the worker should: (1) attempt to contact the customer to resolve the discrepancy, (2) document the unsuccessful contact attempts, and (3) if verification is needed, send a Verification Checklist (VCL) to request the required information, giving the AU at least 10 calendar days to return the information.",
+      "key_rubric_points": [
+        "No — an interview is not required for a periodic report",
+        "Do NOT send an interview appointment",
+        "Worker should attempt to contact the customer to resolve the discrepancy",
+        "Document unsuccessful contact attempts",
+        "If verification needed: send a VCL (Verification Checklist) — not an interview appointment",
+        "Give the AU at least 10 calendar days to return the information"
+      ],
+      "common_errors": [
+        "Sending an interview appointment for a periodic report discrepancy",
+        "Not mentioning the VCL as the correct tool",
+        "Not specifying the 10-calendar-day response window"
+      ],
+      "uat_notes": "The corrected answer is what was given when this was first tested. References: https://gadhs.gitlab.io/pamms/dfcs/snap/3730/#procedures and https://gadhs.gitlab.io/pamms/dfcs/snap/3730/#basic-considerations"
+    },
+    {
+      "id": "V02",
+      "question": "What is the SOP for Expedited SNAP applications?",
+      "policy_sections": ["3110"],
+      "correct_answer_summary": "The Standard of Promptness (SOP) for expedited SNAP applications is 7 calendar days. The AU must be able to participate — meaning the EBT card, PIN, and benefits must all be available in the EBT account — by the 7th calendar day following the date of application or the date expedited eligibility is discovered. Identity is the only verification required before benefits are issued under expedited processing. All other verification may be postponed.",
+      "key_rubric_points": [
+        "SOP is 7 calendar days",
+        "Clock starts on date of application (date received by agency) OR date expedited eligibility is discovered — whichever applies",
+        "EBT card + PIN + benefits must all be AVAILABLE in the EBT account by day 7 — not just approved",
+        "If 7th day falls on a weekend or holiday, case must be processed in sufficient time for AU to participate by day 7",
+        "Identity is the only required verification before expedited benefits are issued",
+        "Other eligibility verification may be postponed"
+      ],
+      "common_errors": [
+        "Saying the clock starts from the interview date rather than the application received date",
+        "Confusing the 7-day expedited SOP with the 30-day standard SOP",
+        "Not specifying that benefits must be AVAILABLE (not just approved) by day 7",
+        "Including the sentence 'This expedited process ensures that eligible households can access their SNAP benefits quickly in urgent situations' — this should NOT be included as it is editorializing, not policy"
+      ],
+      "uat_notes": "UAT note: The last sentence 'This expedited process ensures that eligible households can access their SNAP benefits quickly in urgent situations' should NOT be included in the answer as it does not reflect policy language and is editorial."
+    },
+    {
+      "id": "V03",
+      "question": "Does expedited processing apply to renewals?",
+      "policy_sections": ["3710", "3110"],
+      "correct_answer_summary": "Yes, but only in specific circumstances. AUs that reapply after an expired certification period OR within 30 days following the last month of the certification period may be eligible for expedited services. The renewal application must be screened for expedited eligibility using the same criteria as initial applications. AUs reapplying BEFORE the end of their current certification period are NOT eligible for expedited services.",
+      "key_rubric_points": [
+        "Yes — expedited processing can apply to renewals in specific circumstances",
+        "Applies when AU reapplies after expired certification period",
+        "Applies when AU files within 30 days following the last month of the certification period (late renewal)",
+        "Renewal application must be screened for expedited eligibility",
+        "AUs reapplying BEFORE end of current certification period are NOT eligible for expedited services",
+        "Same expedited screening criteria apply as for initial applications"
+      ],
+      "common_errors": [
+        "Saying expedited processing never applies to renewals",
+        "Saying expedited processing always applies to all renewals",
+        "Not specifying that it only applies after expiration or within 30 days following the last month",
+        "Including a blanket statement that applies to all renewal applications — the last sentence of any summary should not suggest it applies universally"
+      ],
+      "uat_notes": "UAT note: The last sentence of the answer summary should be removed as it does not pertain to all renewal applications. Only late/post-expiration renewals qualify — timely and untimely renewals filed during the last month of the current certification period do not qualify."
+    },
+    {
+      "id": "V04",
+      "question": "What forms can be completed for a periodic report?",
+      "policy_sections": ["3730"],
+      "correct_answer_summary": "The primary form for periodic reporting is Form 528 (Periodic Report Form), available through the Georgia Gateway system. If Gateway is down, Form 339 (Simplified Reporting Requirement/SRR) may be used. Additional forms required depending on household circumstances include: Form 859 (SNAP Consolidated Work Requirements Notice) if work registrants are in the AU, and Form 846 (Change Report Form) if requested by the AU. A household is not required to use Form 528 — if they submit Form 297 (Application for Benefits) or Form 508 (SNAP/Medicaid/TANF Renewal Form) instead, all sections applicable to periodic reporting must be completed on those forms.",
+      "key_rubric_points": [
+        "Primary form: Form 528 — Periodic Report Form",
+        "Submitted through Georgia Gateway system",
+        "Form 339 (Simplified Reporting Requirement/SRR) — used if Gateway is down",
+        "Form 859 (SNAP Consolidated Work Requirements Notice) — required if work registrants are in the AU",
+        "Form 846 (Change Report Form) — if requested by the AU",
+        "Form 297 or Form 508 may also be used — but ALL applicable periodic report sections must be completed: household composition, change of address, ABAWD work requirements, income changes (including lottery/gambling winnings), child support deduction, and resources",
+        "Case note documentation must be added to explain use of Form 297 or 508 instead of Form 528"
+      ],
+      "common_errors": [
+        "Listing only Form 528 without noting the Form 297/508 alternatives",
+        "Not specifying that Form 297/508 require ALL periodic report sections to be completed",
+        "Omitting Form 859 for households with work registrants",
+        "Not noting the Gateway-down scenario for Form 339"
+      ],
+      "uat_notes": "Reference: https://pamms.dhs.ga.gov/dfcs/snap/3730/#periodic-report-forms. NOTE: If a household submits Form 297 or 508, they are not required to submit Form 528, but all periodic report applicable areas must be completed: household composition, change of address, ABAWD work requirements, income changes including lottery/gambling winnings, child support deduction, and resources. Case note documentation must be added to explain the use of Form 297 or 508."
+    }
+  ]
+}

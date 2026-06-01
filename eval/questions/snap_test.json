@@ -1,0 +1,468 @@
+{
+  "dataset": "SNAP Test Evaluation Set",
+  "description": "25 original caseworker-style SNAP questions with answer rubrics derived from Georgia DFCS SNAP Policy Manual review",
+  "questions": [
+    {
+      "id": "Q01",
+      "question": "Can a social security card alone verify citizenship?",
+      "policy_sections": ["3320"],
+      "correct_answer_summary": "No, a Social Security card alone cannot verify U.S. citizenship. The card only confirms an SSN was issued — SSA issues cards to noncitizens as well, so the card establishes nothing about citizenship or place of birth. However, the reason is NOT that SSA records are absent from the acceptable document list — 3320 explicitly includes 'any document that establishes place of birth or U.S. citizenship such as records from SSA, VA, local government agencies, hospitals, and a clinic's record of birth or parentage.' An SSA RECORD that establishes citizenship or place of birth would be acceptable. The card itself is not such a record.",
+      "key_rubric_points": [
+        "Correct conclusion: SSN card alone cannot verify citizenship",
+        "SSA RECORDS are explicitly on the 3320 acceptable document list",
+        "An SSN card is NOT an SSA record establishing citizenship — it only confirms an SSN was issued",
+        "SSA issues cards to noncitizens — the card establishes nothing about citizenship or place of birth",
+        "Citizenship verified through another program (Medicaid, TANF) is acceptable in lieu of re-verifying",
+        "Citizenship must be verified only once (with limited exceptions for good cause, newborns, new AU members)",
+        "Expedited processing: citizenship not required in first month"
+      ],
+      "common_errors": [
+        "Saying SSA records are NOT on the acceptable document list (they are)",
+        "Failing to distinguish between an SSN card and an SSA record establishing citizenship",
+        "Giving the right answer for the wrong reason"
+      ]
+    },
+    {
+      "id": "Q02",
+      "question": "The customer has filed a hearing because he was denied SNAP benefits as an ineligible student. The customer cited policy 3245 in the Fair Hearing Request. The customer is receiving VA Benefits (not 100%), along with a VA Education Grant and is a full-time student enrolled in higher education. Does the receipt of VA benefits which is less than 100% indicate that the A/R is physically or mentally unfit for employment, therefore qualifying him for a work registration exemption?",
+      "policy_sections": ["3245", "3350"],
+      "correct_answer_summary": "Yes, IF the VA benefits are disability-related. Per 3350, receipt of or certification for a disability benefit such as VA is sufficient verification of incapacity or disability — no percentage threshold is specified. However, the critical distinction is between VA DISABILITY benefits (which establish unfitness) and VA EDUCATION benefits (GI Bill, VA Education Grant, etc., which do not establish unfitness and are excluded educational income). If the VA benefits include disability compensation, receipt at any percentage qualifies the student for the 'physically or mentally unfit' exemption under both 3245 and 3350. The VA award letter must be obtained to confirm the nature of the benefit. The VA Education Grant alone does not establish unfitness.",
+      "key_rubric_points": [
+        "VA disability benefit at ANY percentage is sufficient — no 100% threshold in policy",
+        "Critical distinction: VA DISABILITY benefits vs. VA EDUCATION benefits (GI Bill, education grant)",
+        "Only VA disability compensation establishes the 'physically or mentally unfit' exemption",
+        "VA Education Grant = excluded educational income, does NOT establish unfitness",
+        "VA award letter is required verification to confirm benefit type",
+        "If disability confirmed → qualifies for unfit exemption under both 3245 and 3350",
+        "If education-only benefits → does not establish unfitness → must meet another student exemption"
+      ],
+      "common_errors": [
+        "Saying VA benefits must be 100% to establish unfitness",
+        "Treating VA Education Grant as establishing unfitness",
+        "Not making the disability vs. education benefit distinction",
+        "Leaving answer unresolved when policy is actually clear once benefit type is established"
+      ]
+    },
+    {
+      "id": "Q03",
+      "question": "A 51-year-old client is a full-time student who does not participate in work-study, with an expected graduation date of summer 2025. Since the customer is over age 49, she is an eligible student due to age. To support the work registration exemption status as a student, is it correct to request verification of her student status? And if the verification is not provided, then would the client be an ABAWD?",
+      "policy_sections": ["3245", "3350"],
+      "correct_answer_summary": "Yes, request enrollment verification to support the work registration exemption. Under 3350, students enrolled at least half-time in an IHE are exempt from work registration, but verification of enrollment is required. Age 51 places her outside the 18-49 student eligibility restriction scope of 3245, so she is automatically an eligible student. However, the work registration exemption under 3350 applies to any IHE student 18+ and requires enrollment verification. If she does not provide verification, she cannot be coded as a work registration student exemption, becomes a work registrant, and — since age 51 falls within the ABAWD age range (18-54 through July 3, 2025; 18-65 effective July 4, 2025) — she would be subject to ABAWD requirements.",
+      "key_rubric_points": [
+        "Age 50+ exempts her from 3245 student eligibility restrictions — she is automatically an eligible student",
+        "Work registration exemption under 3350 still requires enrollment verification for IHE students",
+        "Yes — request enrollment verification to support work registration exemption",
+        "If verification not provided → cannot grant student work registration exemption → work registrant",
+        "Age 51 falls within ABAWD range → would be ABAWD subject to work requirements",
+        "Chart 3035.1 shows student enrollment for higher education = AUS (not mandatory TPS) — verification required if questionable"
+      ],
+      "common_errors": [
+        "Saying verification is not required because she's over 49",
+        "Not addressing the ABAWD consequence if verification is not provided",
+        "Treating 'over age 49' as only an ABAWD concept rather than also a student eligibility exemption under 3245"
+      ]
+    },
+    {
+      "id": "Q04",
+      "question": "If a customer is a self-proclaimed beggar, is this considered self-employment or contributions? How would the income be verified?",
+      "policy_sections": ["3420", "3035"],
+      "correct_answer_summary": "Begging income is a contribution — unearned income. Per Chart 3420.2, contributions are money given as a gift from individuals or organizations. Begging involves receiving voluntary payments with no service rendered in exchange, distinguishing it from self-employment (which requires services provided). The 40% business expense deduction does NOT apply since there is no business enterprise. For verification: since the customer does not know the individual donors, there are no payment sources to contact. The client's written statement of income amount and frequency is acceptable as verification because no other sources are available.",
+      "key_rubric_points": [
+        "Begging = contribution (unearned income), NOT self-employment",
+        "Distinction: no service rendered in exchange — money is given as a gift",
+        "Contrast with odd jobs (lawn mowing, etc.) = self-employment because services are rendered",
+        "Do NOT apply the 40% self-employment expense deduction",
+        "Client's written statement is acceptable verification when no sources available (donors unknown)",
+        "Document that verification attempts were made and why no other sources available"
+      ],
+      "common_errors": [
+        "Classifying as self-employment because the person has no employer",
+        "Applying the 40% self-employment deduction",
+        "Not recognizing that AU statement is acceptable when no verifiable sources exist"
+      ]
+    },
+    {
+      "id": "Q05",
+      "question": "The client submitted form 841 - Food Loss Replacement because the motor on her refrigerator went out. When asked if it was due to a power outage related to a disaster, she said it wasn't. We can't honor this request, correct?",
+      "policy_sections": ["3810"],
+      "correct_answer_summary": "Correct — deny the request. A refrigerator motor failure is not a qualifying disaster or misfortune under 3810. The policy covers food loss due to a power outage of 4 or more hours caused by a disaster or misfortune (such as a fire, flood, or similar event) — mechanical appliance failure does not qualify. A declared disaster is NOT required (misfortune is sufficient), but the loss must result from a qualifying event — not routine appliance malfunction. The client confirmed no disaster or power outage occurred. Denial notice must include fair hearing rights.",
+      "key_rubric_points": [
+        "Correct — deny the request",
+        "Refrigerator motor failure = mechanical malfunction = not a qualifying disaster or misfortune",
+        "Policy requires disaster or misfortune (declared disaster NOT required)",
+        "Power outage must be 4+ hours if that is the qualifying event",
+        "Client confirmed no qualifying event — documentation of this supports adverse action",
+        "Denial notice must include fair hearing rights per 3810",
+        "Do NOT say 'must be a declared disaster' — that is too restrictive"
+      ],
+      "common_errors": [
+        "Saying a declared disaster is required (too restrictive — 'misfortune' is sufficient but appliance failure is neither)",
+        "Not including fair hearing rights in denial notice",
+        "Missing the 4-hour power outage requirement"
+      ]
+    },
+    {
+      "id": "Q06",
+      "question": "AU member is undocumented and employed under another name since he does not have an SSN. He provided check stubs under another name and stated they were his. Is this acceptable verification as long as it is documented?",
+      "policy_sections": ["3035"],
+      "correct_answer_summary": "Yes — with proper documentation. Per 3035 Verification of Questionable Information, when an AU member has reported earnings and provided pay stubs with a different name on the stub, the AU member has verified earnings as required by policy. The purpose of documenting the pay stubs is to verify EARNINGS, not identity. The household may attest to the accuracy of the stubs by providing a reasonable explanation for the name discrepancy. If the explanation is not questionable, the agency may use the stubs to determine eligibility. The worker should document the AU member's explanation and note that the stubs are being used for income verification only. Additionally, the undocumented member's income must still be counted for eligible AU members.",
+      "key_rubric_points": [
+        "Yes — acceptable with documented reasonable explanation per 3035",
+        "Pay stubs verify EARNINGS, not identity — different purpose",
+        "AU may provide reasonable explanation for name discrepancy",
+        "If explanation is not questionable, worker may use stubs to determine eligibility",
+        "Document the explanation in case notes",
+        "Undocumented member's income must still be counted for eligible AU members",
+        "Do NOT say this is 'not permissible' — policy explicitly addresses this scenario and allows it"
+      ],
+      "common_errors": [
+        "Saying it is 'not permissible' to use documentation under a different name (directly contradicts 3035)",
+        "Requiring employer confirmation when AU's reasonable explanation may suffice",
+        "Not budgeting the undocumented member's income for eligible AU members"
+      ]
+    },
+    {
+      "id": "Q07",
+      "question": "If an expedited case is approved for one month with postponed verification and the customer fails to return the requested verification by the end of that month, can the case be re-opened if the customer returns the verification within 60 days from the date of application?",
+      "policy_sections": ["3105", "3110"],
+      "correct_answer_summary": "Yes — the case can be reopened without a new application if verification is provided within 60 days from the application date. Per Chart 3105.3: if an application is denied for failure to provide verification and the AU provides verification after the denial but within 60 days of the application date, do not require a new application, update Gateway using the date verification is received as the application date, and prorate benefits beginning with the date all required verification is provided. The 60-day rule is in 3105, not 3110.",
+      "key_rubric_points": [
+        "Yes — reopen without a new application",
+        "60-day rule is in 3105 Chart 3105.3, NOT in 3110",
+        "Do not require a new application",
+        "Prorate benefits from the date verification is received (not back to original application date)",
+        "Benefits not issued for the gap period after month 1 ended until verification received",
+        "If only a deduction was missing (not eligibility), process without the deduction"
+      ],
+      "common_errors": [
+        "Saying customer must reapply (policy explicitly says no new application needed)",
+        "Citing 3110 as the source of the 60-day rule",
+        "Issuing benefits retroactive to original application date rather than prorating from verification date"
+      ]
+    },
+    {
+      "id": "Q08",
+      "question": "If a client is living in a homeless shelter and it provides them with 3 meals a day, are they still eligible for SNAP?",
+      "policy_sections": ["3230", "3205"],
+      "correct_answer_summary": "Yes. Homeless individuals residing in a public or private nonprofit shelter should not be denied SNAP participation on the grounds that they are residents of an institution. The number of meals provided by the shelter does not apply to the institutional residency rule for homeless shelters. Homeless shelter residents must meet the same eligibility criteria and verification requirements as any other AU. Also check whether the $199 homeless shelter deduction is more beneficial than the excess shelter expense deduction.",
+      "key_rubric_points": [
+        "Yes — eligible regardless of number of meals provided",
+        "Homeless shelter exception to the institutional residency meal provision rule",
+        "Must be a public or private nonprofit shelter",
+        "Number of meals provided does not affect eligibility under homeless shelter rules",
+        "Must meet same eligibility criteria as any other AU",
+        "Check whether $199 homeless shelter deduction is more beneficial than excess shelter deduction"
+      ],
+      "common_errors": [
+        "Applying the 50% meal provision test to homeless shelters",
+        "Denying based on institutional residency rules that don't apply to homeless shelters"
+      ]
+    },
+    {
+      "id": "Q09",
+      "question": "Can anyone submit a SNAP application for a customer?",
+      "policy_sections": ["3105"],
+      "correct_answer_summary": "Yes — anyone may apply for SNAP benefits, including: the head of the AU, other responsible adult AU members, an authorized representative, authorized representatives for residents of drug/alcohol treatment centers or group homes, and an IPV disqualified individual if they are the only adult AU member. Application may be submitted in person, by phone, by mail, by fax/electronic transmission, online via Georgia Gateway, during a home visit, through an outreach partner, or through an authorized representative. If an authorized representative applies, the application must be signed by either a responsible household member or the household's authorized representative.",
+      "key_rubric_points": [
+        "Yes — anyone may apply including head of AU, responsible adult AU members, authorized representative",
+        "IPV disqualified individual may apply if sole adult in AU",
+        "Multiple filing methods available",
+        "If AR applies, application must be signed by responsible household member OR the AR",
+        "Application is filed when it contains name, address, signature, and is received by agency",
+        "Same-day filing right — cannot be refused"
+      ],
+      "common_errors": [
+        "Leading with 'No' or 'Only certain people' — the policy says 'anyone may apply'",
+        "Missing the signature requirement when AR applies",
+        "Missing the IPV disqualified individual provision"
+      ]
+    },
+    {
+      "id": "Q10",
+      "question": "The client is an ABAWD and is residing with his parents, cleaning and doing chores around the house in exchange for living there. Can you please confirm or clarify if this is acceptable as an activity to meet the ABAWD work requirement?",
+      "policy_sections": ["3355"],
+      "correct_answer_summary": "Yes — this can count toward the ABAWD work requirement. Per 3355, 'working' includes work in exchange for wages, goods or services — explicitly including work in exchange for rent payment and in-kind work. Cleaning and chores in exchange for housing qualifies as work in exchange for goods/services (housing). However, the client must average at least 20 hours per week (80 hours per month). Hours must be tracked and verified — a written statement from the parents confirming the tasks, hours, and exchange arrangement is appropriate verification. Document the work-for-housing arrangement clearly.",
+      "key_rubric_points": [
+        "Yes — qualifies as 'work in exchange for goods or services' (housing)",
+        "Policy explicitly includes work in exchange for rent payment and in-kind work",
+        "Must average 20 hours/week (80 hours/month)",
+        "Hours must be tracked and verified",
+        "Written statement from parents confirming tasks, hours, and exchange is appropriate verification",
+        "Distinguish from comparable workfare (which has different hour calculation: allotment ÷ minimum wage)"
+      ],
+      "common_errors": [
+        "Saying chores for housing never qualify as ABAWD work activity",
+        "Not requiring the 80-hour monthly verification",
+        "Confusing with comparable workfare hour calculation"
+      ]
+    },
+    {
+      "id": "Q11",
+      "question": "For customers who are unfit for work, how often do they have to provide a medical statement?",
+      "policy_sections": ["3350"],
+      "correct_answer_summary": "There is no set periodic schedule for medical statements. The unfitness determination is re-evaluated at each recertification, but a new medical statement is only required if the unfitness is not obvious, the status becomes questionable, or prior verification is no longer sufficient. If the unfitness is obvious to the worker, exempt without requiring any medical statement and document the observation. If the customer receives a disability benefit (SSI, RSDI, VA, Railroad Retirement, Workers Compensation), that benefit is sufficient ongoing verification — no separate medical statement needed.",
+      "key_rubric_points": [
+        "No periodic schedule — re-evaluated at each recertification only",
+        "If obviously unfit → exempt without medical statement, document observation",
+        "Receipt of disability benefit (SSI, RSDI, VA, etc.) = sufficient ongoing verification",
+        "New medical statement only if status becomes questionable or prior verification insufficient",
+        "Worker documents observed condition/circumstances when obvious",
+        "Unfitness may be temporary or permanent"
+      ],
+      "common_errors": [
+        "Saying medical statement required at every recertification regardless",
+        "Not noting that disability benefits substitute for medical statements"
+      ]
+    },
+    {
+      "id": "Q12",
+      "question": "At periodic report, if a discrepancy is identified and the worker is unable to reach the customer, can we send an interview appointment?",
+      "policy_sections": ["3730"],
+      "correct_answer_summary": "No. An interview is not required for a periodic report. Sending an interview appointment is not the correct process. If a discrepancy is identified and the worker cannot reach the customer by phone, document the contact attempts. If verification is needed to resolve the discrepancy, send a Verification Checklist (VCL/Form 173) allowing at least 10 calendar days to respond — not an interview appointment. Non-SRR discrepancies that cannot be resolved may need to wait until recertification.",
+      "key_rubric_points": [
+        "No — interview is not required at periodic report",
+        "Do not send an interview appointment",
+        "Document phone contact attempts",
+        "Send VCL (Form 173) if verification needed to resolve discrepancy — allow 10 calendar days",
+        "Non-SRR discrepancies that cannot be resolved may carry to next recertification",
+        "Adverse action requires proper notice and verification deadline"
+      ],
+      "common_errors": [
+        "Sending an interview appointment for a periodic report discrepancy",
+        "Not mentioning the VCL as the correct tool"
+      ]
+    },
+    {
+      "id": "Q13",
+      "question": "At what age can a child have their own SNAP case if residing in the home with parent(s)?",
+      "policy_sections": ["3205"],
+      "correct_answer_summary": "A child cannot have their own SNAP case while residing with parents until age 22. Per 3205, parents and their children under age 22 (biological, adopted, or stepchild) living in the same household must be in the same AU, even if the child claims to purchase and prepare food separately, and even if the child is living with a spouse and/or their own children. At age 22, the individual may have a separate SNAP case if they purchase and prepare food separately from the parent(s).",
+      "key_rubric_points": [
+        "Children under age 22 must be in same AU as parents regardless of separate purchase/prepare claims",
+        "Applies to biological, adopted, and stepchildren",
+        "Applies even if child has own spouse or children",
+        "At age 22 → may be separate AU if purchases and prepares food separately",
+        "Exception: ineligible student must be excluded from AU even if under 22 living with parents"
+      ],
+      "common_errors": [
+        "Saying age 18 instead of age 22",
+        "Not noting the exception for ineligible students who must be excluded"
+      ]
+    },
+    {
+      "id": "Q14",
+      "question": "Is it acceptable for customers to provide only the first page of a lease or is the entire lease required to verify rent?",
+      "policy_sections": ["3617"],
+      "correct_answer_summary": "The entire lease is not necessarily required, but sufficient information must be obtained to determine correct eligibility and benefit level. The required information is: (1) the address, (2) the customer's name, (3) the landlord's name, (4) the rent amount, (5) the term (dates) of the lease, and (6) the signatures of all involved parties. This information is typically on the first and last pages of the lease but may vary. If all required elements are on the first page, it is acceptable. If not, request the additional pages containing the missing elements.",
+      "key_rubric_points": [
+        "Entire lease not required — sufficient pages needed",
+        "Six required elements: address, customer name, landlord name, rent amount, lease term/dates, signatures of all parties",
+        "Typically first and last pages contain all required information",
+        "If first page has all required elements → acceptable",
+        "If missing any required element → request additional pages",
+        "Signatures are required — not just rent amount and dates"
+      ],
+      "common_errors": [
+        "Saying only rent amount, address, and tenant name are needed (missing landlord name, term, and signatures)",
+        "Requiring the entire lease when only specific pages are needed"
+      ]
+    },
+    {
+      "id": "Q15",
+      "question": "Can we use interfaces to verify Identification?",
+      "policy_sections": ["3335", "3035"],
+      "correct_answer_summary": "Yes — but only the Georgia Department of Driver Services (DDS) interface is currently accepted for identity verification. The DDS interface may be used if it confirms the applicant has a current and valid Georgia Driver's License or Identification card. Any document that reasonably establishes identity must be accepted. If no document is available, a collateral contact may be used. If an authorized representative is applying, both the AR's identity AND the applicant's identity must be verified.",
+      "key_rubric_points": [
+        "Yes — DDS interface is the only currently acceptable interface for identity verification",
+        "DDS interface must confirm current and VALID Georgia Driver's License or ID card",
+        "Outdated or suspended IDs do not meet the requirement",
+        "Any document that reasonably establishes identity must be accepted",
+        "If no document: offer collateral contact verification",
+        "If AR applies: verify BOTH the AR's identity AND the applicant's identity"
+      ],
+      "common_errors": [
+        "Saying any interface can be used for identity verification",
+        "Forgetting the dual identity verification requirement when AR is applying"
+      ]
+    },
+    {
+      "id": "Q16",
+      "question": "Can we allow the monthly cost of a smartphone (cellular/internet services) as a medical expense since the customer states she uses it as a medical device to monitor her health condition(s)?",
+      "policy_sections": ["3614"],
+      "correct_answer_summary": "No. A standard smartphone and its service plan cannot be allowed as a medical deduction. Allowable telephone-related medical expenses are limited to telephone equipment specially equipped for a disabled person (TTY, TDD, amplified phones, captioned phones, etc.) with a physician's statement verifying medical need. A standard smartphone used to monitor health conditions does not meet this definition. The customer must also be elderly (60+) or disabled to claim any medical expense deduction.",
+      "key_rubric_points": [
+        "No — standard smartphone/service not allowable",
+        "Only specialty telephone equipment for disabled persons qualifies (TTY, TDD, amplified, captioned phones)",
+        "Physician's statement required to verify medical need for specialty equipment",
+        "Customer must be elderly (60+) or disabled to claim any medical deduction at all",
+        "Using a standard phone for health monitoring apps does not qualify it as specialty equipment"
+      ],
+      "common_errors": [
+        "Allowing because a doctor recommended it",
+        "Not confirming elderly/disabled status as prerequisite for any medical deduction"
+      ]
+    },
+    {
+      "id": "Q17",
+      "question": "What is the Standard of Promptness (SOP) to approve an unexpedited SNAP application?",
+      "policy_sections": ["3105"],
+      "correct_answer_summary": "For non-expedited SNAP applications, eligibility must be determined and benefits available by the 30th day following the date of application. To meet the 30-day SOP for an approved application, the case must be processed in the system by the 29th day (or the last workday prior to the 29th if it falls on a weekend/holiday). Denials are completed on the 30th day (or next business day if falls on weekend/holiday). The date of application is the date the form is received by the agency, not the interview date.",
+      "key_rubric_points": [
+        "30 calendar days from date of application",
+        "Benefits must be AVAILABLE (EBT card + PIN + funds) by day 30 — not just approved",
+        "Approvals processed by day 29 (or last workday before day 29 if weekend/holiday)",
+        "Denials completed by day 30 (or next business day if weekend/holiday)",
+        "Date of application = date received, NOT interview date",
+        "Count starts from the day FOLLOWING receipt"
+      ],
+      "common_errors": [
+        "Confusing the 30-day standard SOP with the 7-day expedited SOP",
+        "Not noting that approvals must be processed by day 29 (not day 30)"
+      ]
+    },
+    {
+      "id": "Q18",
+      "question": "Can a resident of a drug and alcohol treatment facility apply for SNAP benefits for him/herself?",
+      "policy_sections": ["3220"],
+      "correct_answer_summary": "No. A resident of a drug or alcohol treatment facility cannot apply for SNAP on their own behalf. An authorized representative — who must be an employee of the center or the organization that operates the center — must apply for and receive SNAP benefits on behalf of the resident. The resident is approved as a one-person AU (or including their children if residing there; spouses are excluded). The facility must be certified/licensed and the resident must regularly participate in the treatment program and meet all other SNAP eligibility criteria.",
+      "key_rubric_points": [
+        "No — cannot apply for themselves",
+        "Must have a facility employee serve as authorized representative",
+        "AR applies for and receives benefits on behalf of resident",
+        "One-person AU (or including resident's children who live there; NOT spouses)",
+        "Facility must be appropriately licensed/certified",
+        "Resident must regularly participate in treatment program",
+        "Must meet all other SNAP financial and nonfinancial eligibility criteria"
+      ],
+      "common_errors": [
+        "Saying any authorized representative can apply — must be a facility employee",
+        "Including spouses in the AU",
+        "Not noting facility certification requirements"
+      ]
+    },
+    {
+      "id": "Q19",
+      "question": "At periodic report, are we supposed to verify the ABAWD work requirements for ABAWD AU members for all the previous months?",
+      "policy_sections": ["3355", "3730"],
+      "correct_answer_summary": "No. At periodic report, it is not required to verify ABAWD work requirements for all previous months. If an employed ABAWD reports a change in employment, address the month the change occurred. Verification of employment hours for every month of the certification period is done at recertification (renewal), not at periodic reporting. Third-party verification at periodic report is only required if the household has reported a change.",
+      "key_rubric_points": [
+        "No — do not verify all prior months at periodic report",
+        "Only verify the month affected by a reported change",
+        "Full-period verification (all months) occurs at recertification",
+        "TPS only required if a change is reported",
+        "Contrast with recertification: all months of certification period must be verified"
+      ],
+      "common_errors": [
+        "Verifying all prior months at periodic report (recertification requirement, not periodic report)",
+        "Not noting that full verification happens at recertification"
+      ]
+    },
+    {
+      "id": "Q20",
+      "question": "If a customer has a roommate that is a separate AU and the roommate gives the customer money towards rent, does that count as income for him/her?",
+      "policy_sections": ["3617"],
+      "correct_answer_summary": "No — the roommate's rent contribution is excluded as income. Per 3617, if the other household gives the AU its portion of the rent payment to add to the AU's portion to make a rent payment to the landlord, exclude it as income. Payments made from one AU to another (regardless of ownership) are not considered income if multiple households share expenses. However, if the amount received from the roommate exceeds the monthly housing costs and is not for utilities, determine whether the excess is countable income. Confirm the roommate is truly a separate AU (purchases and prepares food separately).",
+      "key_rubric_points": [
+        "No — excluded as income when it's the roommate's share of shared housing costs",
+        "Policy explicitly: roommate's portion of rent given to AU to pay landlord = excluded income",
+        "Payments between AUs for shared expenses not considered income",
+        "Exception: if amount received exceeds total housing costs, excess may be countable",
+        "Confirm roommate is truly a separate AU",
+        "Only the AU's incurred share of rent is allowed as shelter deduction"
+      ],
+      "common_errors": [
+        "Counting the roommate's rent contribution as income",
+        "Not flagging the excess-over-housing-costs exception"
+      ]
+    },
+    {
+      "id": "Q21",
+      "question": "Can someone living in a college dormitory be eligible for SNAP?",
+      "policy_sections": ["3245", "3205"],
+      "correct_answer_summary": "Yes, sometimes — it depends on the meal plan arrangement and whether the student meets applicable student exemptions. If the institution provides more than 50% of three meals daily (e.g., mandatory meal plan included in tuition/fees), the student is considered a resident of an institution and is ineligible. If the student does not receive the majority of meals from a meal plan, they are not an institutional resident and may be eligible. Students aged 18-49 enrolled at least half-time in an IHE must also meet a student exemption (paid employment 20+ hrs/week, TANF, dependent care, disability, etc.) to be SNAP-eligible.",
+      "key_rubric_points": [
+        "Eligibility depends on meal plan: >50% of 3 daily meals = institutional resident = ineligible",
+        "No majority meal plan = not institutional resident = potentially eligible",
+        "Student aged 18-49 must still meet a student exemption under 3245",
+        "Dormitory type alone does not determine eligibility — meal provision is the test",
+        "Mandatory meal plan included in tuition/fees is the typical disqualifying arrangement"
+      ],
+      "common_errors": [
+        "Saying dorm residents are always ineligible",
+        "Forgetting the student exemption requirement for 18-49 students even if not institutionally resident"
+      ]
+    },
+    {
+      "id": "Q22",
+      "question": "How is bonus income budgeted?",
+      "policy_sections": ["3420", "3605"],
+      "correct_answer_summary": "Bonus income is earned income per Chart 3420.2. If the bonus is representative of ongoing income (recurring, predictable), include it in the SNAP budget using prospective budgeting — for an annual bonus, divide by 12 months and add to monthly earned income. If the bonus is not representative (one-time, nonrecurring), exclude it from ongoing representative pay. A nonrecurring bonus is NOT treated as a lump sum resource — it remains earned income. The worker must ask the customer about frequency and ongoing likelihood and document the basis for the representative determination.",
+      "key_rubric_points": [
+        "Bonus = EARNED income per Chart 3420.2 — never treat as a resource",
+        "If representative (recurring): annualize and include in monthly budget",
+        "If not representative (one-time): exclude from ongoing budget",
+        "Do NOT treat nonrecurring bonus as a lump sum resource",
+        "Document basis for representative/non-representative determination",
+        "Worker must ask about frequency, whether it will recur, and verify with employer documentation"
+      ],
+      "common_errors": [
+        "Treating a nonrecurring bonus as a lump sum resource (it is earned income, not a resource)",
+        "Not verifying and documenting the representative determination"
+      ]
+    },
+    {
+      "id": "Q23",
+      "question": "What is considered a completed periodic report?",
+      "policy_sections": ["3730"],
+      "correct_answer_summary": "A periodic report is considered filed/completed when it is: (1) signed, (2) completed in its entirety, and (3) received by the agency. Unlike applications and recertifications, a periodic report is NOT considered filed with only a name, address, and signature. All required sections must be completed: household composition, change of address/shelter costs, ABAWD work requirements, income changes (including lottery/gambling winnings), child support deductions, and resources. If verification was also requested and not returned, that must also be provided by the deadline.",
+      "key_rubric_points": [
+        "Three requirements: signed + completed in entirety + received by agency",
+        "NOT filed with only name/address/signature (unlike applications/recertifications)",
+        "All required sections must be answered: household composition, address/shelter, ABAWD work requirements, income, lottery/gambling, child support, resources",
+        "Incomplete or unsigned = not a completed periodic report",
+        "Required verification must also be provided by deadline",
+        "Mark 'No' in Gateway if incomplete to trigger combined notice"
+      ],
+      "common_errors": [
+        "Treating a signed but incomplete form as a completed periodic report",
+        "Applying the application filing standard to periodic reports"
+      ]
+    },
+    {
+      "id": "Q24",
+      "question": "If a customer pays someone to transport her children to a preferred school out of her school district, can this cost be allowed as a dependent care deduction?",
+      "policy_sections": ["3615"],
+      "correct_answer_summary": "No. Transportation for school attendance is not an allowable dependent care deduction. Dependent care costs are only allowable when necessary for an AU member to work, seek work, attend qualifying training/education preparatory to employment, or comply with E&T. Transporting children to school — even an out-of-district school — is an educational expense, and dependent care expenses explicitly exclude costs that are separate and identified solely as educational (including costs such as books, instruction materials, and tuition for private schools). School choice transportation falls into this excluded category.",
+      "key_rubric_points": [
+        "No — school transportation is not an allowable dependent care deduction",
+        "Dependent care requires work/training/E&T nexus",
+        "Explicitly excluded: costs 'separate and identified solely as educational'",
+        "School transportation for school choice = educational purpose = not dependent care",
+        "Contrast: transportation to a childcare/dependent care provider (not school) would be allowable"
+      ],
+      "common_errors": [
+        "Allowing because it's transportation for a dependent",
+        "Not noting the explicit exclusion for educational costs"
+      ]
+    },
+    {
+      "id": "Q25",
+      "question": "What must be verified to receive the child support deduction?",
+      "policy_sections": ["3035", "3616"],
+      "correct_answer_summary": "Three things must be verified: (1) the legal obligation to pay child support, (2) the amount legally obligated to pay, and (3) the actual monthly payments made (most current three-month period). The court-ordered document showing the legally obligated amount cannot be used to verify actual payments — actual payments must be verified separately. Acceptable sources for legal obligation: court order, administrative order, divorce/separation documents, or verbal confirmation from an official source (DCSS, probation, court). Acceptable sources for actual payments: receipts, canceled checks, money logs, DCSS records, statement from payer. Verify at initial application, recertification, interim change, periodic reporting, or when questionable.",
+      "key_rubric_points": [
+        "Three required verifications: legal obligation + obligated amount + actual payments made",
+        "Court order verifies legal obligation and amount — NOT actual payments",
+        "Actual payments must be verified separately for most current three-month period",
+        "DCSS records can verify both if payments made through DCSS",
+        "Verify at application, recertification, interim change, periodic report, or when questionable",
+        "If no legal obligation → no deduction regardless of payments made"
+      ],
+      "common_errors": [
+        "Treating a court order as sufficient verification of actual payments",
+        "Not requiring all three elements",
+        "Missing that three-month period of actual payments must be documented"
+      ]
+    }
+  ]
+}

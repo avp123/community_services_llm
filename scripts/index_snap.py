@@ -1,5 +1,5 @@
 """
-Index the Georgia SNAP Policy Manual into pgvector.
+Index the Georgia SNAP Policy Manual into pgvector with BM25 support.
 
 Usage:
     python scripts/index_snap.py --pdf snap_manual.pdf [--clear]
@@ -11,8 +11,8 @@ import re
 import sys
 import time
 
+import pdfplumber
 import psycopg
-import PyPDF2
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -20,18 +20,15 @@ load_dotenv()
 RESOURCE_DB_URL = os.getenv("RESOURCE_DB_URL")
 EMBED_MODEL = "text-embedding-3-large"
 CHUNK_TOKENS = 500       # target tokens per chunk
-OVERLAP_TOKENS = 80      # overlap between chunks
+OVERLAP_LINES = 3        # lines of overlap between chunks
 TOC_PAGES = 13           # skip table-of-contents pages at the start
+PARENT_SECTION_MIN_CHUNKS = 30  # store full section text for sections with at least this many chunks
 
 from openai import OpenAI
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 SECTION_RE = re.compile(r"^\s*(\d{4})\s+([A-Z][^\n]{5,80})\s*$", re.MULTILINE)
 
-# Matches section-header metadata lines that PDF extraction puts at the top of
-# each section (policy title block, MT numbers, chapter/number lines).
-# Stripping these before embedding so the vector represents actual policy
-# content rather than administrative boilerplate.
 _META_LINE_RE = re.compile(
     r"^\s*(?:"
     r"\d{4}\s+(?:Previous MT|Policy Title|Effective Date|Chapter|Policy Number)"
@@ -50,20 +47,64 @@ _META_LINE_RE = re.compile(
 
 
 def clean_for_embedding(text: str) -> str:
-    """Strip administrative metadata lines before embedding."""
     cleaned = _META_LINE_RE.sub("", text).strip()
     return cleaned if cleaned else text
 
 
+def table_to_prose(table: list[list]) -> str:
+    """Convert a pdfplumber table (list-of-lists) to readable key:value lines."""
+    if not table or len(table) < 2:
+        return ""
+    headers = [str(h or "").strip() for h in table[0]]
+    lines = []
+    for row in table[1:]:
+        cells = [str(c or "").strip() for c in row]
+        if any(cells):
+            pairs = [f"{h}: {v}" for h, v in zip(headers, cells) if v and h]
+            if pairs:
+                lines.append(" | ".join(pairs))
+    return "\n".join(lines)
+
+
 def extract_pages(pdf_path: str) -> list[dict]:
-    """Return list of {page_num, text} dicts, skipping TOC."""
+    """Return list of {page_num, text} dicts, skipping TOC. Uses pdfplumber.
+
+    Tables are rendered once, cleanly: raw table cells are excluded from the
+    flowing text and replaced with key:value prose appended at the end of the
+    page. This avoids the duplicated / garbled table content that results when
+    pdfplumber's text extractor and extract_tables() both emit the same cells.
+    """
     pages = []
-    with open(pdf_path, "rb") as f:
-        reader = PyPDF2.PdfReader(f)
-        for i, page in enumerate(reader.pages):
+    with pdfplumber.open(pdf_path) as pdf:
+        for i, page in enumerate(pdf.pages):
             if i < TOC_PAGES:
                 continue
-            text = page.extract_text() or ""
+
+            found_tables = page.find_tables() or []
+            table_bboxes = [t.bbox for t in found_tables]
+
+            if table_bboxes:
+                # Extract text only from characters that fall outside every table bbox.
+                def outside_tables(obj):
+                    if obj.get("object_type") != "char":
+                        return True
+                    x0, top = obj.get("x0", 0), obj.get("top", 0)
+                    for bx0, by0, bx1, by1 in table_bboxes:
+                        if bx0 - 2 <= x0 <= bx1 + 2 and by0 - 2 <= top <= by1 + 2:
+                            return False
+                    return True
+                text = page.filter(outside_tables).extract_text() or ""
+            else:
+                text = page.extract_text() or ""
+
+            table_prose = []
+            for t in found_tables:
+                prose = table_to_prose(t.extract())
+                if prose:
+                    table_prose.append(prose)
+            if table_prose:
+                text = text + "\n\n" + "\n\n".join(table_prose)
+
             if text.strip():
                 pages.append({"page_num": i + 1, "text": text})
     return pages
@@ -73,36 +114,50 @@ def detect_sections(pages: list[dict]) -> list[dict]:
     """
     Group pages into sections based on 4-digit section headers.
     Returns list of {section_number, section_title, page_start, page_end, text}.
+
+    Uses finditer() to catch multiple section headers on a single page (e.g. a
+    page that begins section 3200 and immediately defines section 3205).
     """
     sections = []
     current = None
-    seen_sections: set[str] = set()  # prevents running page headers from re-triggering
+    seen_sections: set[str] = set()
 
     for p in pages:
-        m = SECTION_RE.search(p["text"])
-        if m and m.group(1) not in seen_sections:
+        page_text = p["text"]
+        new_matches = [
+            (m.start(), m.group(1), m.group(2))
+            for m in SECTION_RE.finditer(page_text)
+            if m.group(1) not in seen_sections
+        ]
+
+        if not new_matches:
             if current:
-                # Text before the header on this page belongs to the previous section
-                text_before = p["text"][:m.start()]
-                if text_before.strip():
-                    current["text"] += "\n" + text_before
+                current["text"] += "\n" + page_text
+                current["page_end"] = p["page_num"]
+            continue
+
+        # Append the fragment before the first new section header to the current section
+        first_pos = new_matches[0][0]
+        if current and first_pos > 0:
+            fragment = page_text[:first_pos]
+            if fragment.strip():
+                current["text"] += "\n" + fragment
+
+        for i, (pos, sec_num, sec_title) in enumerate(new_matches):
+            if current:
                 sections.append(current)
-            seen_sections.add(m.group(1))
-            # Clean title — strip page-number suffixes like "| 27"
-            title = re.sub(r"\|\s*\d+\s*$", "", m.group(2)).strip()
+            seen_sections.add(sec_num)
+            end_pos = new_matches[i + 1][0] if i + 1 < len(new_matches) else len(page_text)
+            title = re.sub(r"\|\s*\d+\s*$", "", sec_title).strip()
+            section_text = page_text[pos:end_pos]
             current = {
-                "section_number": m.group(1),
+                "section_number": sec_num,
                 "section_title": title,
                 "page_start": p["page_num"],
                 "page_end": p["page_num"],
-                "text": p["text"][m.start():],  # start from the header, not top of page
-                # store separately so chunk_section can use the sliced text
-                # instead of re-reading the full raw page
-                "_start_page_slice": p["text"][m.start():],
+                "text": section_text,
+                "_start_page_slice": section_text,
             }
-        elif current:
-            current["text"] += "\n" + p["text"]
-            current["page_end"] = p["page_num"]
 
     if current:
         sections.append(current)
@@ -111,57 +166,68 @@ def detect_sections(pages: list[dict]) -> list[dict]:
 
 
 def naive_token_count(text: str) -> int:
-    """Rough token estimate: words × 1.3."""
     return int(len(text.split()) * 1.3)
 
 
 def chunk_section(section: dict, section_pages: list[dict]) -> list[dict]:
     """
-    Split a section into overlapping chunks, tracking which page each chunk starts on.
-    section_pages: [{page_num, text}] for the pages that belong to this section.
-    """
-    # Build a flat list of (word, page_num) so each chunk knows its real page.
-    word_page_pairs: list[tuple[str, int]] = []
-    for p in section_pages:
-        for word in p["text"].split():
-            word_page_pairs.append((word, p["page_num"]))
+    Split a section into chunks at line boundaries.
 
-    if not word_page_pairs:
+    Lines are the natural unit from pdfplumber (never mid-sentence). Chunks
+    accumulate lines until they approach CHUNK_TOKENS, then flush and begin
+    a new chunk with OVERLAP_LINES lines of shared context.
+    """
+    # Collect (line, page_num) pairs across all pages in this section
+    line_page: list[tuple[str, int]] = []
+    for p in section_pages:
+        for line in p["text"].split("\n"):
+            if line.strip():
+                line_page.append((line, p["page_num"]))
+
+    if not line_page:
         return []
 
-    chunk_words = int(CHUNK_TOKENS / 1.3)
-    overlap_words = int(OVERLAP_TOKENS / 1.3)
-
     chunks = []
+    chunk_idx = 0
     start = 0
-    chunk_index = 0
 
-    while start < len(word_page_pairs):
-        end = min(start + chunk_words, len(word_page_pairs))
-        pairs = word_page_pairs[start:end]
-        chunk_text = " ".join(w for w, _ in pairs)
-        # Use the page of the first word in this chunk as page_start
-        chunk_page_start = pairs[0][1]
-        chunk_page_end = pairs[-1][1]
+    while start < len(line_page):
+        current_lines: list[str] = []
+        current_tokens = 0
+        page_start = line_page[start][1]
+        page_end = line_page[start][1]
+
+        i = start
+        while i < len(line_page):
+            line, pg = line_page[i]
+            line_tokens = naive_token_count(line)
+            if current_tokens + line_tokens > CHUNK_TOKENS and current_lines:
+                break
+            current_lines.append(line)
+            current_tokens += line_tokens
+            page_end = pg
+            i += 1
 
         chunks.append({
             "section_number": section["section_number"],
             "section_title": section["section_title"],
-            "chunk_index": chunk_index,
-            "page_start": chunk_page_start,
-            "page_end": chunk_page_end,
-            "content": chunk_text,
+            "chunk_index": chunk_idx,
+            "page_start": page_start,
+            "page_end": page_end,
+            "content": "\n".join(current_lines),
         })
-        if end == len(word_page_pairs):
+
+        if i == len(line_page):
             break
-        start = end - overlap_words
-        chunk_index += 1
+
+        # Overlap: step back OVERLAP_LINES from where we stopped
+        start = max(start + 1, i - OVERLAP_LINES)
+        chunk_idx += 1
 
     return chunks
 
 
 def embed_batch(texts: list[str], retries: int = 3) -> list[list[float]]:
-    """Embed a batch of texts with retry."""
     for attempt in range(retries):
         try:
             resp = client.embeddings.create(model=EMBED_MODEL, input=texts)
@@ -174,6 +240,60 @@ def embed_batch(texts: list[str], retries: int = 3) -> list[list[float]]:
                 raise
 
 
+def ensure_schema(cur) -> bool:
+    """
+    Create snap_sections table, add ts_content column and GIN index if missing.
+    Returns True if ts_content is available, False if we lack privilege.
+    """
+    # snap_sections for parent-doc retrieval (graceful — warn but continue)
+    try:
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS snap_sections (
+                section_number TEXT PRIMARY KEY,
+                section_title  TEXT,
+                page_start     INT,
+                page_end       INT,
+                full_content   TEXT
+            )
+        """)
+    except Exception as e:
+        cur.connection.rollback()
+        print(f"      WARNING: cannot create snap_sections ({e})")
+        print("      Run as superuser:")
+        print("        CREATE TABLE snap_sections (")
+        print("          section_number TEXT PRIMARY KEY, section_title TEXT,")
+        print("          page_start INT, page_end INT, full_content TEXT);")
+
+    try:
+        cur.execute("""
+            ALTER TABLE snap_chunks
+            ADD COLUMN IF NOT EXISTS ts_content tsvector
+        """)
+        cur.execute("""
+            CREATE INDEX IF NOT EXISTS snap_chunks_ts_idx
+            ON snap_chunks USING gin(ts_content)
+        """)
+        return True
+    except Exception as e:
+        cur.connection.rollback()
+
+    # ALTER failed (insufficient privilege) — check if admin already added the column
+    try:
+        cur.execute("""
+            SELECT 1 FROM information_schema.columns
+            WHERE table_name = 'snap_chunks' AND column_name = 'ts_content'
+        """)
+        if cur.fetchone():
+            return True  # column exists; INSERT will populate it
+    except Exception:
+        pass
+
+    print("      WARNING: ts_content column missing. BM25 hybrid search disabled.")
+    print("      Run as superuser: ALTER TABLE snap_chunks ADD COLUMN ts_content tsvector;")
+    print("                        CREATE INDEX snap_chunks_ts_idx ON snap_chunks USING gin(ts_content);")
+    return False
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--pdf", required=True)
@@ -184,7 +304,7 @@ def main():
         print(f"PDF not found: {args.pdf}")
         sys.exit(1)
 
-    print(f"[1/4] Extracting text from {args.pdf}...")
+    print(f"[1/4] Extracting text from {args.pdf} (pdfplumber)...")
     pages = extract_pages(args.pdf)
     print(f"      {len(pages)} content pages")
 
@@ -192,12 +312,9 @@ def main():
     sections = detect_sections(pages)
     print(f"      {len(sections)} sections found")
 
-    print("[3/4] Chunking sections...")
+    print("[3/4] Chunking sections (line-boundary strategy)...")
     all_chunks = []
     for s in sections:
-        # Collect pages within this section's range, substituting the correctly
-        # sliced text for the start page so cross-page section boundaries don't
-        # pull in trailing content from the preceding section.
         start_slice = s.get("_start_page_slice")
         s_pages = []
         for p in pages:
@@ -214,10 +331,51 @@ def main():
     conn = psycopg.connect(RESOURCE_DB_URL)
     cur = conn.cursor()
 
+    has_ts = ensure_schema(cur)
+    conn.commit()
+
     if args.clear:
         cur.execute("DELETE FROM snap_chunks")
+        try:
+            cur.execute("DELETE FROM snap_sections")
+        except Exception:
+            conn.rollback()
+            print("      (snap_sections not yet created — skipping its clear)")
         conn.commit()
         print("      Cleared existing rows.")
+
+    # ── Populate snap_sections (full text for parent-doc retrieval) ───────────
+    print("      Populating snap_sections …")
+    sections_inserted = 0
+    sections_failed = False
+    for s in sections:
+        try:
+            cur.execute(
+                """
+                INSERT INTO snap_sections
+                    (section_number, section_title, page_start, page_end, full_content)
+                VALUES (%s, %s, %s, %s, %s)
+                ON CONFLICT (section_number) DO UPDATE
+                    SET section_title = EXCLUDED.section_title,
+                        page_start    = EXCLUDED.page_start,
+                        page_end      = EXCLUDED.page_end,
+                        full_content  = EXCLUDED.full_content
+                """,
+                (s["section_number"], s["section_title"],
+                 s["page_start"], s["page_end"], s["text"]),
+            )
+            sections_inserted += 1
+        except Exception as e:
+            conn.rollback()
+            print(f"      WARNING: snap_sections unavailable ({e})")
+            print("      Parent-doc retrieval disabled until admin creates snap_sections.")
+            sections_failed = True
+            break
+    if not sections_failed:
+        conn.commit()
+        print(f"      {sections_inserted} sections stored in snap_sections")
+    else:
+        print("      Skipped snap_sections population.")
 
     BATCH = 16
     inserted = 0
@@ -227,23 +385,34 @@ def main():
         embeddings = embed_batch(texts)
 
         for chunk, emb in zip(batch, embeddings):
-            cur.execute(
-                """
-                INSERT INTO snap_chunks
-                    (section_number, section_title, chunk_index,
-                     page_start, page_end, content, embedding)
-                VALUES (%s, %s, %s, %s, %s, %s, %s::vector)
-                """,
-                (
-                    chunk["section_number"],
-                    chunk["section_title"],
-                    chunk["chunk_index"],
-                    chunk["page_start"],
-                    chunk["page_end"],
-                    chunk["content"],
-                    str(emb),
-                ),
-            )
+            if has_ts:
+                cur.execute(
+                    """
+                    INSERT INTO snap_chunks
+                        (section_number, section_title, chunk_index,
+                         page_start, page_end, content, embedding, ts_content)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s::vector, to_tsvector('english', %s))
+                    """,
+                    (
+                        chunk["section_number"], chunk["section_title"],
+                        chunk["chunk_index"], chunk["page_start"], chunk["page_end"],
+                        chunk["content"], str(emb), chunk["content"],
+                    ),
+                )
+            else:
+                cur.execute(
+                    """
+                    INSERT INTO snap_chunks
+                        (section_number, section_title, chunk_index,
+                         page_start, page_end, content, embedding)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s::vector)
+                    """,
+                    (
+                        chunk["section_number"], chunk["section_title"],
+                        chunk["chunk_index"], chunk["page_start"], chunk["page_end"],
+                        chunk["content"], str(emb),
+                    ),
+                )
         conn.commit()
         inserted += len(batch)
         print(f"      {inserted}/{len(all_chunks)} chunks inserted", end="\r")
