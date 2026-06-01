@@ -1,0 +1,182 @@
+{
+  "method": "summary_llm",
+  "hybrid_k": 10,
+  "avg_score": 4.48,
+  "questions": [
+    {
+      "id": "T01",
+      "score": 2,
+      "rubric_hit": 2,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer recognizes that age 52 exempts her from student eligibility but incorrectly states no enrollment verification is required, fails to explain consequences for failing to verify, omits ABAWD status, and wrongly excludes work registration verification of IHE enrollment. It conflates the WIOA exclusion with verification rules and misses most rubric expectations."
+    },
+    {
+      "id": "T02",
+      "score": 5,
+      "rubric_hit": 8,
+      "rubric_total": 8,
+      "reasoning": "The predicted answer correctly states that a declared disaster is not required, includes the 4-hour outage requirement, notes that a surge alone does not qualify, mentions the 10-day submission window with weekend/holiday rule, includes the maximum replacement limit, discusses verification sources, and specifies the denial/fair hearing notice requirement. It commits none of the listed common errors."
+    },
+    {
+      "id": "T03",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly identifies that the payment should be treated as self-employment income and distinguishes boarder from roomer, but it fails to note that a boarder can never be a separate AU and omits the reasonable compensation test and its consequences. It also does not address what happens if compensation is insufficient, so several key rubric points are missed."
+    },
+    {
+      "id": "T04",
+      "score": 2,
+      "rubric_hit": 2,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer incorrectly says only the current and recent months must be verified at recertification, missing the explicit requirement in 3355 to verify all months of the certification period. It also lacks detail on acceptable verification methods and documentation of check stubs, and confuses recertification rules with periodic report rules."
+    },
+    {
+      "id": "T05",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer identifies the income as self-employment (services for pay), distinguishes it from contributions, correctly applies the 40% expense rule, lists verification sources including collateral contact, and mentions prospective budgeting. No rubric points are missed or errors present."
+    },
+    {
+      "id": "T06",
+      "score": 5,
+      "rubric_hit": 7,
+      "rubric_total": 7,
+      "reasoning": "The predicted answer addresses all rubric points, distinguishing dependent care and medical deductions, clearly noting the work/E&T nexus, confirming the elderly/incapacitated status, transportation permissibility, and alternative treatment as medical expense. No common errors are present."
+    },
+    {
+      "id": "T07",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "reasoning": "The answer correctly notes that the list in 3617 is not all-inclusive, equates the portal screenshot to a rent receipt if complete, references TPS requirement, and explains when to request more verification, but omits the specific signature requirement mentioned in the ground truth."
+    },
+    {
+      "id": "T08",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "reasoning": "The answer correctly says the case should be reactivated without a new application and that it falls within the 60-day window, but it wrongly cites \u00a73110 instead of 3105, omits mention of prorating benefits from day 45, and doesn\u2019t address the gap-period or missing-deduction handling, making it only partially correct."
+    },
+    {
+      "id": "T09",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer clearly addresses all rubric points including paid employment requirements, exclusion of educational grants, verification criteria, and institutional meal plan check. It commits no common errors."
+    },
+    {
+      "id": "T10",
+      "score": 4,
+      "rubric_hit": 6,
+      "rubric_total": 7,
+      "reasoning": "The predicted answer correctly states that bank statements are supporting documentation, requires a written AU statement, and addresses net income calculation. It omits explicit mention of documenting TPS attempts/reasons and SteadyIQ certification details, but otherwise follows policy accurately with no major errors."
+    },
+    {
+      "id": "T11",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly identifies that denial for failure to cooperate is inappropriate, distinguishes refusal from inability to reach, instructs to issue Form 173 with a 10\u2011day deadline, stresses documentation, and specifies the correct denial reason (failure to provide verification). It covers all rubric points and avoids common errors."
+    },
+    {
+      "id": "T12",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer correctly states that gym memberships are not allowable medical expenses even with a doctor's recommendation, identifies elderly/disabled eligibility, distinguishes wellness expenses as non-allowable, advises checking for other qualifying medical costs over $35/month, and correctly explains the threshold rule. It avoids all common errors."
+    },
+    {
+      "id": "T13",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The answer correctly notes that volunteer work can count, specifies 15 hours is below the 80-hour standard, explains the 20-hour requirement, mentions combining activities, tracking countable months, and confirms all GA counties are time-limited. No common errors present."
+    },
+    {
+      "id": "T14",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer correctly emphasizes the meal provision test, distinguishes apartment versus dorm based on meal plans, notes the need for student exemption if aged 18\u201349, covers both mandatory and voluntary meal plan conditions, and avoids treating housing type as determinative."
+    },
+    {
+      "id": "T15",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly distinguishes the parent/child rule from grandparents, explains how parental control affects AU composition, notes that ineligibility excludes from benefits but not AU membership, cites AU head and authorized representative rules, and avoids all listed common errors."
+    },
+    {
+      "id": "T16",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly identifies the bonus as earned income, annualizes it over 12 months due to its recurring and representative nature, distinguishes treatment for nonrecurring bonuses, states it is not a lump sum resource, and emphasizes verification and documentation. No rubric points are missed and no common errors are made."
+    },
+    {
+      "id": "T17",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly covers all verification requirements, distinguishes between legal obligation and actual payments, lists acceptable sources, clarifies that informal cash payments do not qualify, and notes that the court order alone cannot verify payments. No common errors are present."
+    },
+    {
+      "id": "T18",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer correctly states that no periodic medical statements are required, emphasizes re-evaluation only at recertification, explains that existing verification or disability benefits suffice, notes new statements are only needed if status is questionable, and includes the obvious-unfitness exemption. It avoids the common errors of requiring unnecessary re-verification."
+    },
+    {
+      "id": "T19",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly applies the 50% institutional meal rule, notes that one dinner equals ~33%, confirms eligibility if other criteria met, explains the meal is not counted as income, mentions verifying facility type and shelter cost deduction, and avoids all listed common errors."
+    },
+    {
+      "id": "T20",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly addresses all rubric points including completion requirements, distinction from applications, marking 'No' in Gateway, issuing a Form 173 VCL, and closing if incomplete by SOP. It commits no common errors and fully aligns with Georgia SNAP Section 3730 policy."
+    },
+    {
+      "id": "T21",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer covers all rubric points, including the >50% meal test, eligibility exceptions, non-licensed halfway house exclusion, separate purchase/prepare rule, and the homeless shelter check. It avoids common errors by not assuming eligibility and by noting the need to check for homeless shelter status."
+    },
+    {
+      "id": "T22",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly covers all required rubric points, including SAVE authorization, documentation of the Response Details page, document information for initiating the query, 3-5 day response timeframe, 6-month inclusion pending verification, and scan/upload guidance. It avoids all listed common errors."
+    },
+    {
+      "id": "T23",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "reasoning": "Predicted answer correctly states that an AR may submit change reports, must be designated in writing, must be an adult aware of circumstances, household remains liable for any incorrect information, and multiple submission methods are allowed. It makes no common errors."
+    },
+    {
+      "id": "T24",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly explains the 7-day SOP, participation requirements, start date, weekend/holiday rules, discovery date, and identity verification. However, it slightly misstates the clock as beginning the day after receipt instead of on the received date, which is a minor error."
+    },
+    {
+      "id": "T25",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly identifies that a U.S. passport (including the passport card) verifies both citizenship and identity, explains it is issued only to U.S. citizens and includes a photo, notes it must be current and unexpired, and mentions that AR and applicant identities must both be verified. No errors were made."
+    }
+  ]
+}

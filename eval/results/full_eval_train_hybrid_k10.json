@@ -1,0 +1,182 @@
+{
+  "method": "hybrid",
+  "hybrid_k": 10,
+  "avg_score": 4.4,
+  "questions": [
+    {
+      "id": "T01",
+      "score": 2,
+      "rubric_hit": 2,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly notes that age 52 exempts the client from student eligibility rules and mentions WIOA is not IHE, but it incorrectly states enrollment verification is not required and fails to address the work registration and ABAWD consequences, missing most key rubric points and committing major errors."
+    },
+    {
+      "id": "T02",
+      "score": 3,
+      "rubric_hit": 5,
+      "rubric_total": 8,
+      "reasoning": "The predicted answer correctly notes that a declared disaster is not required, cites the 4-hour outage rule, and includes 10-day reporting and fair-hearing requirements. However, it incorrectly concludes the situation cannot qualify as a misfortune, omits the weekend/holiday exception and maximum allotment limit, and fails to make the approval conditional on verification, thus missing key nuances."
+    },
+    {
+      "id": "T03",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly identifies payment as self-employment income and distinguishes boarder vs roomer, but misses the policy conflict that a boarder cannot be a separate AU and omits the reasonable compensation test. It also does not mention inclusion in the AU when compensation is inadequate."
+    },
+    {
+      "id": "T04",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer explicitly states that all months of the certification period must be verified at recertification, correctly contrasts it with periodic report procedures, explains the purpose for tracking the 3\u2011month time limit, lists acceptable verification sources, and notes documentation requirements for paystubs. No errors or omissions found."
+    },
+    {
+      "id": "T05",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "reasoning": "The answer correctly classifies the income as self-employment, contrasts it with a contribution, notes the 40% deduction requirement, and outlines appropriate verification methods. However, it omits explicit mention of SteadyIQ and collateral contact options, missing one rubric detail but containing no major errors."
+    },
+    {
+      "id": "T06",
+      "score": 5,
+      "rubric_hit": 7,
+      "rubric_total": 7,
+      "reasoning": "The predicted answer correctly addresses all rubric points, identifies the dependent care work/training nexus as the key condition, details allowable transportation, notes the neighbor is permissible, distinguishes dependent vs. medical deductions, and avoids all listed common errors."
+    },
+    {
+      "id": "T07",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "reasoning": "The answer covers the non\u2011exhaustive list, functional rent receipt elements, TPS requirement, conditional follow\u2011up, and third\u2011party nature. It omits explicit mention of the signature requirement from the ground truth, making it slightly incomplete but otherwise accurate."
+    },
+    {
+      "id": "T08",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "reasoning": "The answer correctly states that the case should be reactivated without a new application and describes prorating from the date verification is received, but it cites Section 3110 instead of 3105, omits the explicit reference to Chart 3105.3, and does not mention that benefits for the gap period are not issued or the deduction-only rule. It partially meets key rubric elements but misses critical policy citation and detail."
+    },
+    {
+      "id": "T09",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer clearly states that paid employment averaging 20 hours/week qualifies for the exemption, notes employment must be paid, explains that Pell Grants and state scholarships are excluded income, instructs verification of hours and pay, notes that the denial should be overturned if criteria are met, and mentions confirming institutional meal plan status. No common errors are present."
+    },
+    {
+      "id": "T10",
+      "score": 5,
+      "rubric_hit": 7,
+      "rubric_total": 7,
+      "reasoning": "The predicted answer correctly states that bank statements can only be used with a written AU statement, discusses required documentation of TPS attempts, recognizes SteadyIQ certification rules, confirms deposits must be business receipts, and includes correct net income calculation guidance. It avoids treating bank statements as sufficient alone and fully meets all rubric points."
+    },
+    {
+      "id": "T11",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer accurately covers all rubric points, clearly distinguishing between failure to cooperate and failure to provide verification, detailing the Form 173 process, the 10-day period, documentation requirements, and the correct denial reason. No rubric errors are present."
+    },
+    {
+      "id": "T12",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer correctly states that a gym membership is not allowable even with a doctor's recommendation, confirms the elderly/disabled requirement, distinguishes wellness/lifestyle expenses, advises checking for other qualifying medical costs exceeding $35/month, and accurately applies the threshold rule. No common errors are present."
+    },
+    {
+      "id": "T13",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "reasoning": "The answer notes that 15 hours per week is below the 20-hour/80-hour requirement and implies unpaid volunteering could count if structured, but it overemphasizes authorization requirements, omits combining activities, countable-month tracking, and time-limited county confirmation."
+    },
+    {
+      "id": "T14",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "reasoning": "Predicted answer correctly identifies meal provision as the key test, distinguishes apartment vs. dorm scenarios based on mandatory meal plans, notes the need for student exemption under 3245, and checks for required vs. voluntary meal plans; no rubric errors present."
+    },
+    {
+      "id": "T15",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly notes that the parent/child rule does not apply to grandparents, explains the effect of parental control and ineligibility on AU composition, identifies how the AU head and authorized representative should be assigned, and avoids all listed common errors."
+    },
+    {
+      "id": "T16",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly annualizes the recurring bonus, treats it as earned income (not a lump sum resource), recognizes the three-year history as representative, distinguishes the treatment for nonrecurring bonuses, and emphasizes verification and documentation \u2014 with no major omissions or errors."
+    },
+    {
+      "id": "T17",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly identifies and explains all required verification points, emphasizes that informal payments without a legal obligation do not qualify, distinguishes between verifying a court order and verifying payments, lists acceptable payment verification sources, and specifies the three-month timeframe. It commits no common errors."
+    },
+    {
+      "id": "T18",
+      "score": 4,
+      "rubric_hit": 4,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer clearly states no periodic medical statements are required, existing verification can suffice, disability benefits are sufficient, and new statements only if status is questionable. It omits the 'obviously unfit' exemption detail, so slightly short of full coverage but otherwise accurate with no major errors."
+    },
+    {
+      "id": "T19",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly explains the >50% meal test, states that one dinner equals about 33%, confirms the client is not institutionalized and can be SNAP\u2011eligible, notes the provided meal doesn\u2019t reduce benefits or count as income, discusses confirming facility type and possible shelter deduction, and avoids all common errors."
+    },
+    {
+      "id": "T20",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer accurately explains that the periodic report must be signed, completed in its entirety, and received; distinguishes the standard from applications; notes that blank sections mean incomplete; instructs to mark 'No' in Gateway, issue Form 173 with a 10-day deadline, and close if not completed by SOP. No errors present."
+    },
+    {
+      "id": "T21",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer addresses all rubric points, accurately explains the meal provision test, includes all five exempt institution types, clarifies that a non-licensed halfway house does not qualify as a drug/alcohol treatment facility, discusses when the client may apply on her own behalf, and includes the homeless shelter check; no common errors are present."
+    },
+    {
+      "id": "T22",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly states that SAVE is authorized to verify immigration status, explains that the SAVE Response Details page should be uploaded as verification, notes that document information is required to initiate the query, mentions the 3\u20135 day timeframe for additional verification and the 6\u2011month inclusion rule, and describes the Scan and Upload requirement. It also avoids common errors regarding paper documents and documentation of SAVE results."
+    },
+    {
+      "id": "T23",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "reasoning": "The predicted answer explicitly states that an Authorized Representative can submit change reports, must be designated in writing, should be an adult aware of household circumstances, that the AU remains liable for overpayments, and that multiple submission methods are acceptable. It avoids both common errors and fully aligns with the rubric."
+    },
+    {
+      "id": "T24",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly identifies the 7-day expedited SOP, defines participation as EBT card/PIN/benefits available, starts the clock from the received date (not interview), addresses after-hours/weekends as next business day, covers discovery date scenario, and notes identity as the only required verification. No errors present."
+    },
+    {
+      "id": "T25",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "reasoning": "The predicted answer correctly notes that a U.S. passport card serves as proof of both citizenship and identity, explains why it qualifies under Georgia SNAP Policy \u00a7\u00a73320 and 3335, and avoids all common errors. However, it does not explicitly mention the requirement that the passport card must be current/unexpired, which prevents a perfect score."
+    }
+  ]
+}

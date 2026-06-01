@@ -1,0 +1,485 @@
+{
+  "label": "TEST \u2014 live model (snap_test_generated_20260531_184146.json)",
+  "generated_at": "2026-05-31T18:46:51.208435",
+  "summary": {
+    "n": 22,
+    "avg_score": 4.364,
+    "avg_rubric_pct": 83.9,
+    "total_errors": 6
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "score": 4,
+      "rubric_hit": 4,
+      "rubric_total": 7,
+      "rubric_pct": 57.1,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Correct conclusion: SSN card alone cannot verify citizenship": true,
+        "SSA RECORDS are explicitly on the 3320 acceptable document list": true,
+        "An SSN card is NOT an SSA record establishing citizenship \u2014 it only confirms an SSN was issued": true,
+        "SSA issues cards to noncitizens \u2014 the card establishes nothing about citizenship or place of birth": true,
+        "Citizenship verified through another program (Medicaid, TANF) is acceptable in lieu of re-verifying": false,
+        "Citizenship must be verified only once (with limited exceptions for good cause, newborns, new AU members)": false,
+        "Expedited processing: citizenship not required in first month": false
+      },
+      "errors_detail": {
+        "Saying SSA records are NOT on the acceptable document list (they are)": false,
+        "Failing to distinguish between an SSN card and an SSA record establishing citizenship": false,
+        "Giving the right answer for the wrong reason": false
+      },
+      "reasoning": "The predicted answer correctly explains that the SSN card alone cannot verify citizenship and notes SSA records may be acceptable, addressing key distinctions accurately, but it omits several additional policy details required for full coverage."
+    },
+    {
+      "id": "Q02",
+      "score": 5,
+      "rubric_hit": 7,
+      "rubric_total": 7,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "VA disability benefit at ANY percentage is sufficient \u2014 no 100% threshold in policy": true,
+        "Critical distinction: VA DISABILITY benefits vs. VA EDUCATION benefits (GI Bill, education grant)": true,
+        "Only VA disability compensation establishes the 'physically or mentally unfit' exemption": true,
+        "VA Education Grant = excluded educational income, does NOT establish unfitness": true,
+        "VA award letter is required verification to confirm benefit type": true,
+        "If disability confirmed \u2192 qualifies for unfit exemption under both 3245 and 3350": true,
+        "If education-only benefits \u2192 does not establish unfitness \u2192 must meet another student exemption": true
+      },
+      "errors_detail": {
+        "Saying VA benefits must be 100% to establish unfitness": false,
+        "Treating VA Education Grant as establishing unfitness": false,
+        "Not making the disability vs. education benefit distinction": false,
+        "Leaving answer unresolved when policy is actually clear once benefit type is established": false
+      },
+      "reasoning": "The predicted answer correctly distinguishes disability vs. educational benefits, notes that any percentage of VA disability qualifies, requires verification, and applies both 3245 and 3350; no rubric points are missed and no common errors are present."
+    },
+    {
+      "id": "Q03",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Age 50+ exempts her from 3245 student eligibility restrictions \u2014 she is automatically an eligible student": true,
+        "Work registration exemption under 3350 still requires enrollment verification for IHE students": true,
+        "Yes \u2014 request enrollment verification to support work registration exemption": true,
+        "If verification not provided \u2192 cannot grant student work registration exemption \u2192 work registrant": true,
+        "Age 51 falls within ABAWD range \u2192 would be ABAWD subject to work requirements": true,
+        "Chart 3035.1 shows student enrollment for higher education = AUS (not mandatory TPS) \u2014 verification required if questionable": true
+      },
+      "errors_detail": {
+        "Saying verification is not required because she's over 49": false,
+        "Not addressing the ABAWD consequence if verification is not provided": false,
+        "Treating 'over age 49' as only an ABAWD concept rather than also a student eligibility exemption under 3245": false
+      },
+      "reasoning": "The predicted answer accurately addresses every rubric point, correctly distinguishes student eligibility and work registration rules, and avoids all listed common errors."
+    },
+    {
+      "id": "Q04",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Begging = contribution (unearned income), NOT self-employment": true,
+        "Distinction: no service rendered in exchange \u2014 money is given as a gift": true,
+        "Contrast with odd jobs (lawn mowing, etc.) = self-employment because services are rendered": true,
+        "Do NOT apply the 40% self-employment expense deduction": true,
+        "Client's written statement is acceptable verification when no sources available (donors unknown)": true,
+        "Document that verification attempts were made and why no other sources available": true
+      },
+      "errors_detail": {
+        "Classifying as self-employment because the person has no employer": false,
+        "Applying the 40% self-employment deduction": false,
+        "Not recognizing that AU statement is acceptable when no verifiable sources exist": false
+      },
+      "reasoning": "The predicted answer correctly identifies begging as unearned contributions, explains the gift distinction, addresses verification using the client's statement, and avoids all common errors."
+    },
+    {
+      "id": "Q05",
+      "score": 5,
+      "rubric_hit": 7,
+      "rubric_total": 7,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Correct \u2014 deny the request": true,
+        "Refrigerator motor failure = mechanical malfunction = not a qualifying disaster or misfortune": true,
+        "Policy requires disaster or misfortune (declared disaster NOT required)": true,
+        "Power outage must be 4+ hours if that is the qualifying event": true,
+        "Client confirmed no qualifying event \u2014 documentation of this supports adverse action": true,
+        "Denial notice must include fair hearing rights per 3810": true,
+        "Do NOT say 'must be a declared disaster' \u2014 that is too restrictive": true
+      },
+      "errors_detail": {
+        "Saying a declared disaster is required (too restrictive \u2014 'misfortune' is sufficient but appliance failure is neither)": false,
+        "Not including fair hearing rights in denial notice": false,
+        "Missing the 4-hour power outage requirement": false
+      },
+      "reasoning": "The predicted answer correctly covers all rubric points, does not commit any of the listed errors, and thoroughly explains policy details including fair hearing rights and the 4-hour outage rule."
+    },
+    {
+      "id": "Q06",
+      "score": 5,
+      "rubric_hit": 7,
+      "rubric_total": 7,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Yes \u2014 acceptable with documented reasonable explanation per 3035": true,
+        "Pay stubs verify EARNINGS, not identity \u2014 different purpose": true,
+        "AU may provide reasonable explanation for name discrepancy": true,
+        "If explanation is not questionable, worker may use stubs to determine eligibility": true,
+        "Document the explanation in case notes": true,
+        "Undocumented member's income must still be counted for eligible AU members": true,
+        "Do NOT say this is 'not permissible' \u2014 policy explicitly addresses this scenario and allows it": true
+      },
+      "errors_detail": {
+        "Saying it is 'not permissible' to use documentation under a different name (directly contradicts 3035)": false,
+        "Requiring employer confirmation when AU's reasonable explanation may suffice": false,
+        "Not budgeting the undocumented member's income for eligible AU members": false
+      },
+      "reasoning": "The predicted answer correctly covers all rubric points, aligns fully with policy, and does not commit any listed errors. It accurately emphasizes verification of earnings rather than identity and proper documentation of the explanation."
+    },
+    {
+      "id": "Q07",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "rubric_pct": 50.0,
+      "errors_committed": 1,
+      "rubric_coverage": {
+        "Yes \u2014 reopen without a new application": false,
+        "60-day rule is in 3105 Chart 3105.3, NOT in 3110": true,
+        "Do not require a new application": false,
+        "Prorate benefits from the date verification is received (not back to original application date)": true,
+        "Benefits not issued for the gap period after month 1 ended until verification received": true,
+        "If only a deduction was missing (not eligibility), process without the deduction": false
+      },
+      "errors_detail": {
+        "Saying customer must reapply (policy explicitly says no new application needed)": true,
+        "Citing 3110 as the source of the 60-day rule": false,
+        "Issuing benefits retroactive to original application date rather than prorating from verification date": false
+      },
+      "reasoning": "The answer recognizes the 60-day rule and correct proration but incorrectly states that a new application is required, missing two rubric points and committing one significant error."
+    },
+    {
+      "id": "Q08",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "rubric_pct": 83.3,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Yes \u2014 eligible regardless of number of meals provided": true,
+        "Homeless shelter exception to the institutional residency meal provision rule": true,
+        "Must be a public or private nonprofit shelter": true,
+        "Number of meals provided does not affect eligibility under homeless shelter rules": true,
+        "Must meet same eligibility criteria as any other AU": true,
+        "Check whether $199 homeless shelter deduction is more beneficial than excess shelter deduction": false
+      },
+      "errors_detail": {
+        "Applying the 50% meal provision test to homeless shelters": false,
+        "Denying based on institutional residency rules that don't apply to homeless shelters": false
+      },
+      "reasoning": "The predicted answer correctly explains eligibility and the homeless shelter exception but omits mention of the $199 homeless shelter deduction comparison, otherwise covering all major points and making no policy errors."
+    },
+    {
+      "id": "Q10",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Yes \u2014 qualifies as 'work in exchange for goods or services' (housing)": true,
+        "Policy explicitly includes work in exchange for rent payment and in-kind work": true,
+        "Must average 20 hours/week (80 hours/month)": true,
+        "Hours must be tracked and verified": true,
+        "Written statement from parents confirming tasks, hours, and exchange is appropriate verification": true,
+        "Distinguish from comparable workfare (which has different hour calculation: allotment \u00f7 minimum wage)": true
+      },
+      "errors_detail": {
+        "Saying chores for housing never qualify as ABAWD work activity": false,
+        "Not requiring the 80-hour monthly verification": false,
+        "Confusing with comparable workfare hour calculation": false
+      },
+      "reasoning": "The predicted answer correctly cites policy language about in-kind work for housing, specifies the 20-hour weekly average, verification requirements, and distinguishes it from comparable workfare; no rubric points missing or errors present."
+    },
+    {
+      "id": "Q11",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "No periodic schedule \u2014 re-evaluated at each recertification only": true,
+        "If obviously unfit \u2192 exempt without medical statement, document observation": true,
+        "Receipt of disability benefit (SSI, RSDI, VA, etc.) = sufficient ongoing verification": true,
+        "New medical statement only if status becomes questionable or prior verification insufficient": true,
+        "Worker documents observed condition/circumstances when obvious": true,
+        "Unfitness may be temporary or permanent": true
+      },
+      "errors_detail": {
+        "Saying medical statement required at every recertification regardless": false,
+        "Not noting that disability benefits substitute for medical statements": false
+      },
+      "reasoning": "The predicted answer accurately addresses every rubric point and avoids all listed errors, providing a clear and correct explanation of verification timing and conditions for SNAP unfit-for-work status."
+    },
+    {
+      "id": "Q13",
+      "score": 1,
+      "rubric_hit": 0,
+      "rubric_total": 5,
+      "rubric_pct": 0.0,
+      "errors_committed": 2,
+      "rubric_coverage": {
+        "Children under age 22 must be in same AU as parents regardless of separate purchase/prepare claims": false,
+        "Applies to biological, adopted, and stepchildren": false,
+        "Applies even if child has own spouse or children": false,
+        "At age 22 \u2192 may be separate AU if purchases and prepares food separately": false,
+        "Exception: ineligible student must be excluded from AU even if under 22 living with parents": false
+      },
+      "errors_detail": {
+        "Saying age 18 instead of age 22": true,
+        "Not noting the exception for ineligible students who must be excluded": true
+      },
+      "reasoning": "The predicted answer incorrectly uses age 18 instead of 22, fails to mention parental/stepchild rules or exceptions, and omits all key policy details, making it misleading."
+    },
+    {
+      "id": "Q14",
+      "score": 3,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "rubric_pct": 50.0,
+      "errors_committed": 1,
+      "rubric_coverage": {
+        "Entire lease not required \u2014 sufficient pages needed": true,
+        "Six required elements: address, customer name, landlord name, rent amount, lease term/dates, signatures of all parties": false,
+        "Typically first and last pages contain all required information": false,
+        "If first page has all required elements \u2192 acceptable": true,
+        "If missing any required element \u2192 request additional pages": true,
+        "Signatures are required \u2014 not just rent amount and dates": false
+      },
+      "errors_detail": {
+        "Saying only rent amount, address, and tenant name are needed (missing landlord name, term, and signatures)": true,
+        "Requiring the entire lease when only specific pages are needed": false
+      },
+      "reasoning": "The predicted answer correctly notes that the entire lease isn\u2019t required and that missing details should trigger a request for additional pages, but it omits several required elements like landlord name, lease term, and signatures, making it incomplete."
+    },
+    {
+      "id": "Q15",
+      "score": 2,
+      "rubric_hit": 3,
+      "rubric_total": 6,
+      "rubric_pct": 50.0,
+      "errors_committed": 2,
+      "rubric_coverage": {
+        "Yes \u2014 DDS interface is the only currently acceptable interface for identity verification": false,
+        "DDS interface must confirm current and VALID Georgia Driver's License or ID card": true,
+        "Outdated or suspended IDs do not meet the requirement": false,
+        "Any document that reasonably establishes identity must be accepted": true,
+        "If no document: offer collateral contact verification": true,
+        "If AR applies: verify BOTH the AR's identity AND the applicant's identity": false
+      },
+      "errors_detail": {
+        "Saying any interface can be used for identity verification": true,
+        "Forgetting the dual identity verification requirement when AR is applying": true
+      },
+      "reasoning": "The predicted answer incorrectly broadens acceptable interfaces beyond DDS and omits the AR dual verification requirement, covering only half of the rubric points and making two significant errors."
+    },
+    {
+      "id": "Q16",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "No \u2014 standard smartphone/service not allowable": true,
+        "Only specialty telephone equipment for disabled persons qualifies (TTY, TDD, amplified, captioned phones)": true,
+        "Physician's statement required to verify medical need for specialty equipment": true,
+        "Customer must be elderly (60+) or disabled to claim any medical deduction at all": true,
+        "Using a standard phone for health monitoring apps does not qualify it as specialty equipment": true
+      },
+      "errors_detail": {
+        "Allowing because a doctor recommended it": false,
+        "Not confirming elderly/disabled status as prerequisite for any medical deduction": false
+      },
+      "reasoning": "The predicted answer clearly addresses every key rubric requirement and avoids both common errors, providing the correct denial rationale with complete policy context."
+    },
+    {
+      "id": "Q17",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "30 calendar days from date of application": true,
+        "Benefits must be AVAILABLE (EBT card + PIN + funds) by day 30 \u2014 not just approved": true,
+        "Approvals processed by day 29 (or last workday before day 29 if weekend/holiday)": true,
+        "Denials completed by day 30 (or next business day if weekend/holiday)": true,
+        "Date of application = date received, NOT interview date": true,
+        "Count starts from the day FOLLOWING receipt": true
+      },
+      "errors_detail": {
+        "Confusing the 30-day standard SOP with the 7-day expedited SOP": false,
+        "Not noting that approvals must be processed by day 29 (not day 30)": false
+      },
+      "reasoning": "The predicted answer accurately covers all rubric points and avoids common SOP confusions, clearly stating the 30-day standard, processing by day 29, weekend/holiday adjustments, date-of-application rules, and availability of benefits by day 30."
+    },
+    {
+      "id": "Q18",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 7,
+      "rubric_pct": 71.4,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "No \u2014 cannot apply for themselves": true,
+        "Must have a facility employee serve as authorized representative": true,
+        "AR applies for and receives benefits on behalf of resident": true,
+        "One-person AU (or including resident's children who live there; NOT spouses)": true,
+        "Facility must be appropriately licensed/certified": true,
+        "Resident must regularly participate in treatment program": false,
+        "Must meet all other SNAP financial and nonfinancial eligibility criteria": false
+      },
+      "errors_detail": {
+        "Saying any authorized representative can apply \u2014 must be a facility employee": false,
+        "Including spouses in the AU": false,
+        "Not noting facility certification requirements": false
+      },
+      "reasoning": "The answer correctly addresses most rubric points and avoids common errors, but it does not mention participation in the treatment program or general SNAP eligibility requirements."
+    },
+    {
+      "id": "Q19",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "No \u2014 do not verify all prior months at periodic report": true,
+        "Only verify the month affected by a reported change": true,
+        "Full-period verification (all months) occurs at recertification": true,
+        "TPS only required if a change is reported": true,
+        "Contrast with recertification: all months of certification period must be verified": true
+      },
+      "errors_detail": {
+        "Verifying all prior months at periodic report (recertification requirement, not periodic report)": false,
+        "Not noting that full verification happens at recertification": false
+      },
+      "reasoning": "The predicted answer accurately distinguishes periodic reporting from recertification, addresses verification only for the month of change, and clearly notes that full-period verification occurs at recertification with TPS only upon changes. No errors are present."
+    },
+    {
+      "id": "Q20",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "No \u2014 excluded as income when it's the roommate's share of shared housing costs": true,
+        "Policy explicitly: roommate's portion of rent given to AU to pay landlord = excluded income": true,
+        "Payments between AUs for shared expenses not considered income": true,
+        "Exception: if amount received exceeds total housing costs, excess may be countable": true,
+        "Confirm roommate is truly a separate AU": true,
+        "Only the AU's incurred share of rent is allowed as shelter deduction": true
+      },
+      "errors_detail": {
+        "Counting the roommate's rent contribution as income": false,
+        "Not flagging the excess-over-housing-costs exception": false
+      },
+      "reasoning": "The predicted answer accurately excludes the roommate's rent share as income, cites SNAP policy rationale, addresses the excess-income caveat, and notes the need to confirm separate AUs, covering all rubric points with no errors."
+    },
+    {
+      "id": "Q21",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Eligibility depends on meal plan: >50% of 3 daily meals = institutional resident = ineligible": true,
+        "No majority meal plan = not institutional resident = potentially eligible": true,
+        "Student aged 18-49 must still meet a student exemption under 3245": true,
+        "Dormitory type alone does not determine eligibility \u2014 meal provision is the test": true,
+        "Mandatory meal plan included in tuition/fees is the typical disqualifying arrangement": true
+      },
+      "errors_detail": {
+        "Saying dorm residents are always ineligible": false,
+        "Forgetting the student exemption requirement for 18-49 students even if not institutionally resident": false
+      },
+      "reasoning": "The predicted answer thoroughly covers all rubric points, clearly explaining both the meal plan and student exemption requirements, and avoids common errors or misleading statements."
+    },
+    {
+      "id": "Q23",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Three requirements: signed + completed in entirety + received by agency": true,
+        "NOT filed with only name/address/signature (unlike applications/recertifications)": true,
+        "All required sections must be answered: household composition, address/shelter, ABAWD work requirements, income, lottery/gambling, child support, resources": true,
+        "Incomplete or unsigned = not a completed periodic report": true,
+        "Required verification must also be provided by deadline": true,
+        "Mark 'No' in Gateway if incomplete to trigger combined notice": true
+      },
+      "errors_detail": {
+        "Treating a signed but incomplete form as a completed periodic report": false,
+        "Applying the application filing standard to periodic reports": false
+      },
+      "reasoning": "The predicted answer thoroughly addresses all rubric points and avoids common errors, clearly describing completeness, signature, receipt, verification, and system handling requirements."
+    },
+    {
+      "id": "Q24",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "No \u2014 school transportation is not an allowable dependent care deduction": true,
+        "Dependent care requires work/training/E&T nexus": true,
+        "Explicitly excluded: costs 'separate and identified solely as educational'": true,
+        "School transportation for school choice = educational purpose = not dependent care": true,
+        "Contrast: transportation to a childcare/dependent care provider (not school) would be allowable": true
+      },
+      "errors_detail": {
+        "Allowing because it's transportation for a dependent": false,
+        "Not noting the explicit exclusion for educational costs": false
+      },
+      "reasoning": "The predicted answer correctly states that out\u2011of\u2011district school transportation is not an allowable dependent care deduction, explains the required work/training link, cites the educational exclusion, and clearly distinguishes school transport from transport to a child care provider, with no errors."
+    },
+    {
+      "id": "Q25",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "rubric_pct": 83.3,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Three required verifications: legal obligation + obligated amount + actual payments made": true,
+        "Court order verifies legal obligation and amount \u2014 NOT actual payments": true,
+        "Actual payments must be verified separately for most current three-month period": true,
+        "DCSS records can verify both if payments made through DCSS": true,
+        "Verify at application, recertification, interim change, periodic report, or when questionable": true,
+        "If no legal obligation \u2192 no deduction regardless of payments made": false
+      },
+      "errors_detail": {
+        "Treating a court order as sufficient verification of actual payments": false,
+        "Not requiring all three elements": false,
+        "Missing that three-month period of actual payments must be documented": false
+      },
+      "reasoning": "The predicted answer accurately covers nearly all rubric points and avoids common errors, omitting only the explicit statement that no deduction is allowed without a legal obligation; overall, it fully aligns with policy requirements."
+    }
+  ]
+}

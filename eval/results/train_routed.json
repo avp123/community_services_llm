@@ -1,0 +1,527 @@
+{
+  "label": "TRAIN \u2014 live model (snap_train_generated_20260531_223345.json)",
+  "generated_at": "2026-05-31T22:39:09.829456",
+  "summary": {
+    "n": 24,
+    "avg_score": 3.958,
+    "avg_rubric_pct": 72.5,
+    "total_errors": 12
+  },
+  "questions": [
+    {
+      "id": "T01",
+      "score": 2,
+      "rubric_hit": 2,
+      "rubric_total": 6,
+      "rubric_pct": 33.3,
+      "errors_committed": 1,
+      "rubric_coverage": {
+        "Age 50+ is a student eligibility exemption under 3245 \u2014 she is NOT subject to student eligibility restrictions": true,
+        "Enrollment verification IS still required under 3350 for the work registration exemption (applies to IHE students of any age)": false,
+        "Failure to verify enrollment \u2192 cannot grant work registration exemption \u2192 becomes work registrant": false,
+        "Age 51 falls within ABAWD range (18-54 through Jul 3 2025; 18-65 effective Jul 4 2025) \u2192 would be ABAWD if no other exemption": false,
+        "WIOA program contracted by a college is explicitly NOT IHE enrollment under 3245 \u2014 but this client is age 52 so student rules don't apply to her anyway": false,
+        "Do NOT say 'over age 49 exempts her from work registration' \u2014 that conflates student eligibility exemption with work registration exemption": true
+      },
+      "errors_detail": {
+        "Treating 'over age 49' as only an ABAWD concept rather than also a student eligibility exemption": false,
+        "Saying enrollment verification is not required at all": false,
+        "Failing to address the ABAWD consequence if verification is not provided": true,
+        "Treating WIOA participation as automatically creating a student exemption": false
+      },
+      "reasoning": "The predicted answer correctly identifies the age-based student exemption but fails to address the work registration verification requirement or ABAWD implications, missing key rubric points and demonstrating a significant policy misunderstanding."
+    },
+    {
+      "id": "T02",
+      "score": 4,
+      "rubric_hit": 6,
+      "rubric_total": 8,
+      "rubric_pct": 75.0,
+      "errors_committed": 1,
+      "rubric_coverage": {
+        "Declared disaster NOT required \u2014 policy says 'disaster or misfortune'": true,
+        "Power outage must be 4 or more hours \u2014 this is a required condition": true,
+        "Power surge does not automatically equal a 4-hour outage \u2014 must be verified": true,
+        "Form 841 or affidavit must be received within 10 calendar days of occurrence": true,
+        "If 10th day falls on weekend/holiday, next business day is acceptable": false,
+        "Maximum replacement is one month's allotment": true,
+        "Verification of misfortune via collateral contact, landlord, utility, maintenance documentation": true,
+        "Denial notice must include fair hearing rights": false
+      },
+      "errors_detail": {
+        "Saying a declared disaster IS required (too restrictive)": false,
+        "Missing the 4-hour power outage requirement entirely": false,
+        "Giving a definitive yes or no when the facts don't establish whether a 4-hour outage occurred": true
+      },
+      "reasoning": "The predicted answer covers most policy elements accurately, recognizing that a declared disaster is not required and detailing verification and timing rules. However, it gives a definitive denial without conditioning on the verified outage length and omits the weekend/holiday and fair hearing details."
+    },
+    {
+      "id": "T03",
+      "score": 2,
+      "rubric_hit": 2,
+      "rubric_total": 6,
+      "rubric_pct": 33.3,
+      "errors_committed": 2,
+      "rubric_coverage": {
+        "A boarder can NEVER participate as a separate AU \u2014 this is explicit in 3205": false,
+        "Reasonable compensation test: 2+ meals/day requires payment \u2265 max monthly SNAP allotment; 1-2 meals/day requires \u2265 2/3 of allotment": false,
+        "If reasonable compensation met \u2192 exclude boarder, budget payment as self-employment income per 3425": false,
+        "If less than reasonable compensation \u2192 must include in AU (not a boarder)": false,
+        "Roomer = lodging only, no meals \u2014 distinct from boarder": true,
+        "Payment is self-employment income (not rent, not unearned income)": true
+      },
+      "errors_detail": {
+        "Accepting the 'separate AU' premise without flagging the policy conflict": true,
+        "Treating payment as rent/lodging income rather than self-employment income": false,
+        "Missing the reasonable compensation test thresholds": true
+      },
+      "reasoning": "The answer correctly identifies payments from a boarder as self-employment income and distinguishes boarders from roomers, but it incorrectly treats the boarder as a separate AU and omits the reasonable compensation test, missing major policy requirements."
+    },
+    {
+      "id": "T04",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "ALL months of the certification period must be verified at recertification \u2014 explicitly stated in 3355": true,
+        "Contrast with periodic report: only month of reported change addressed at periodic report": true,
+        "Purpose is to track countable months toward the 3-month ABAWD time limit": true,
+        "Acceptable verification: Form 809, attendance sheets, check stubs, Truv, SteadyIQ": true,
+        "If check stubs used, document whether used for representative pay or just hours verification": true
+      },
+      "errors_detail": {
+        "Saying only the current month needs verification": false,
+        "Confusing periodic report rules with recertification rules": false
+      },
+      "reasoning": "The predicted answer correctly states that all months must be verified at recertification, contrasts this with periodic report rules, explains the purpose, lists acceptable verification methods, and discusses documenting paystub usage. No rubric points are missing or errors made."
+    },
+    {
+      "id": "T05",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Self-employment, not contribution \u2014 services rendered in exchange for payment": true,
+        "Contrast with begging/contributions: begging = money given as gift with no service = unearned contribution": true,
+        "40% standard expense deduction applies IF AU establishes at least one business cost (fuel, supplies, etc.)": true,
+        "Verification hierarchy: SteadyIQ \u2192 tax/receipts/records \u2192 work log \u2192 written AU statement as last resort": true,
+        "Collateral contact (neighbor who paid) is a valid verification option": true,
+        "Consider prospective budgeting \u2014 if irregular, use best estimate of ongoing income": true
+      },
+      "errors_detail": {
+        "Classifying as contribution rather than self-employment": false,
+        "Applying 40% deduction without confirming at least one business cost exists": false,
+        "Missing the collateral contact option for irregular cash income": false
+      },
+      "reasoning": "The predicted answer correctly classifies the income, distinguishes from contributions, explains expense deduction conditions, outlines full verification hierarchy including collateral contact, and notes prospective budgeting for irregular income. No errors present."
+    },
+    {
+      "id": "T06",
+      "score": 2,
+      "rubric_hit": 3,
+      "rubric_total": 8,
+      "rubric_pct": 37.5,
+      "errors_committed": 3,
+      "rubric_coverage": {
+        "Dependent care deduction requires work/training/E&T nexus \u2014 must enable AU member to work, seek work, train, or comply with E&T": true,
+        "Elderly mother qualifies as 'incapacitated person of any age' under 3615": false,
+        "Transportation to/from dependent care provider is an allowable dependent care cost": false,
+        "Neighbor (non-AU member) as driver is permissible \u2014 cannot be an AU member": true,
+        "Cannot be reimbursed by CAPS/TCC": false,
+        "Alternative: may qualify as medical transportation expense under 3614 if mother is elderly/disabled": true,
+        "Cannot allow under both deductions simultaneously": false,
+        "The question does not establish whether a work/E&T nexus exists \u2014 answer should flag this as the key condition to confirm": false
+      },
+      "errors_detail": {
+        "Categorically denying dependent care without addressing the work/E&T nexus question": true,
+        "Categorically redirecting to medical deduction without acknowledging dependent care may also apply": true,
+        "Missing that transportation to a care provider is an allowable dependent care cost under 3615": true
+      },
+      "reasoning": "The predicted answer correctly identifies that the work/training nexus is required and that the expense could qualify as a medical deduction, but it fails to acknowledge dependent care eligibility conditions, omits the incapacitated person provision, and categorically denies dependent care without exploring required nuances."
+    },
+    {
+      "id": "T07",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "rubric_pct": 83.3,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "List in 3617 is explicitly 'not all-inclusive' \u2014 portal screenshot can qualify": true,
+        "Must function as a rent receipt equivalent: show tenant, landlord, amount, period": true,
+        "TPS required for all shelter expenses effective 7/1/2024": true,
+        "If screenshot is incomplete or questionable \u2192 request lease, rent receipt, or landlord statement": true,
+        "A portal screenshot generated by the payment system is third-party in nature": true,
+        "Ground truth also identifies signatures as a required element": false
+      },
+      "errors_detail": {
+        "Treating the listed sources as exhaustive": false,
+        "Missing that TPS is required for all shelter expenses since 7/1/2024": false,
+        "Not flagging what must be present in the screenshot to be acceptable": false
+      },
+      "reasoning": "The answer covers all major rubric points except for the omission of signatures as a required element, showing strong alignment with policy and correct reasoning, but missing one detail keeps it from a perfect score."
+    },
+    {
+      "id": "T08",
+      "score": 1,
+      "rubric_hit": 0,
+      "rubric_total": 6,
+      "rubric_pct": 0.0,
+      "errors_committed": 2,
+      "rubric_coverage": {
+        "Yes \u2014 reactivate without a new application": false,
+        "60-day rule is in 3105 Chart 3105.3, not 3110": false,
+        "Do not require a new application": false,
+        "Prorate benefits from the date verification is received (day 45)": false,
+        "Benefits not issued for the gap period after month 1 ended until verification received": false,
+        "If only a deduction verification was missing (not eligibility), process without the deduction rather than denying": false
+      },
+      "errors_detail": {
+        "Saying customer must reapply (ground truth error \u2014 policy says no new application needed)": true,
+        "Citing 3110 as the source of the 60-day rule instead of 3105": true,
+        "Issuing benefits back to the original application date rather than prorating from day 45": false
+      },
+      "reasoning": "The predicted answer incorrectly indicates that a new application is required and misplaces the source of the 60\u2011day rule, failing to cover any core rubric points. It is therefore both inaccurate and misleading under Georgia SNAP policy."
+    },
+    {
+      "id": "T09",
+      "score": 4,
+      "rubric_hit": 4,
+      "rubric_total": 6,
+      "rubric_pct": 66.7,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Paid employment averaging 20 hours/week is an explicit student exemption under 3245": true,
+        "Employment must be PAID \u2014 in-kind income does not qualify for this exemption": true,
+        "Pell Grant and state scholarships are excluded educational income \u2014 do not count against eligibility": true,
+        "Denial should be overturned if employment is verified and other criteria met": true,
+        "Verify hours with pay stubs or employer statement": false,
+        "Confirm no institutional meal plan providing >50% of daily meals": false
+      },
+      "errors_detail": {
+        "Treating educational grants as countable income": false,
+        "Not verifying the employment is paid (not in-kind)": false
+      },
+      "reasoning": "The predicted answer correctly identifies the employment exemption, paid requirement, and treatment of scholarships but omits verification steps and institutional meal plan confirmation, so minor rubric points are missing."
+    },
+    {
+      "id": "T10",
+      "score": 5,
+      "rubric_hit": 7,
+      "rubric_total": 7,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Bank statements are acceptable as supporting documentation, not standalone verification": true,
+        "Must be combined with written AU statement describing business and income": true,
+        "Document all TPS attempts and why third-party verification unavailable": true,
+        "AU statement must be written (not verbal)": true,
+        "SteadyIQ data must be certified by customer to be considered verified": true,
+        "Confirm deposits are customer payments, not transfers or loans": true,
+        "Net income = gross receipts minus allowable business expenses": true
+      },
+      "errors_detail": {
+        "Treating bank statements as sufficient standalone verification": false,
+        "Forgetting to document why TPS was unavailable": false
+      },
+      "reasoning": "The predicted answer fully addresses all verification requirements and documentation standards, avoids common mistakes, and provides precise application guidance consistent with Georgia SNAP policy."
+    },
+    {
+      "id": "T11",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Do NOT deny for failure to cooperate based on two unanswered phone calls": true,
+        "Failure to cooperate = refusal (capable but deliberately declining) \u2014 not inability to reach": true,
+        "Required next step: issue Form 173 VCL specifying needed income verification with 10-day deadline": true,
+        "Document all contact attempts": true,
+        "After deadline passes without response \u2192 deny for failure to provide mandatory verification": true,
+        "Denial reason is 'failure to provide information' not 'failure to cooperate'": true
+      },
+      "errors_detail": {
+        "Denying for failure to cooperate without first issuing Form 173": false,
+        "Conflating inability to reach customer with refusal to cooperate": false
+      },
+      "reasoning": "The predicted answer correctly distinguishes refusal from non-contact, directs issuance of a VCL with a 10-day timeframe, includes documentation of contact attempts, and clearly states the proper denial reason. No rubric points are missed and no common errors are made."
+    },
+    {
+      "id": "T12",
+      "score": 3,
+      "rubric_hit": 2,
+      "rubric_total": 5,
+      "rubric_pct": 40.0,
+      "errors_committed": 1,
+      "rubric_coverage": {
+        "Gym membership not allowable as medical deduction even with doctor's recommendation": true,
+        "Customer must be elderly (60+) or disabled to claim any medical expense deduction": false,
+        "Wellness and lifestyle expenses (gym, vitamins, diet foods) are not allowable": true,
+        "Check for other qualifying medical expenses that may exceed $35/month threshold": false,
+        "Standard/actual medical deduction applies only when non-reimbursed medical expenses exceed $35/month for elderly/disabled member": false
+      },
+      "errors_detail": {
+        "Allowing the deduction because a doctor recommended it": false,
+        "Forgetting to confirm the customer is elderly or disabled before evaluating any medical expense": true
+      },
+      "reasoning": "The answer correctly denies the gym expense and notes wellness costs are unallowable, but it omits elderly/disabled eligibility and the $35 threshold, indicating partial rubric coverage and one significant omission."
+    },
+    {
+      "id": "T13",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Volunteer work CAN count as qualifying ABAWD work activity": true,
+        "15 hours/week = approximately 60 hours/month \u2014 below the 80-hour monthly threshold": true,
+        "Must average 20 hours/week / 80 hours/month": true,
+        "Could combine with other qualifying activities to reach threshold": true,
+        "Track countable months \u2014 3 months exhausted = must regain eligibility": true,
+        "Confirm time-limited county (all Georgia counties currently)": true
+      },
+      "errors_detail": {
+        "Saying volunteer work never counts": false,
+        "Not flagging that combined activities could still meet the threshold": false
+      },
+      "reasoning": "The predicted answer accurately covers every rubric point, clearly explains that volunteer work counts but 15 hours is insufficient, notes all counties are time-limited, and mentions combining activities and tracking countable months. No errors are present."
+    },
+    {
+      "id": "T14",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 5,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Test is meal provision (>50% of 3 meals daily), not housing type": true,
+        "On-campus apartment without majority meal plan \u2192 not institutional resident \u2192 potentially eligible": true,
+        "Must still meet student exemption under 3245 if aged 18-49": true,
+        "If apartment arrangement includes mandatory meal plan covering most meals \u2192 same as dormitory \u2192 ineligible": true,
+        "Confirm whether any meal plan is required vs. voluntary": true
+      },
+      "errors_detail": {
+        "Treating the housing type (apartment vs. dorm) as the determining factor": false,
+        "Forgetting the student must still meet a student exemption if 18-49": false
+      },
+      "reasoning": "The predicted answer accurately applies the majority-meal test rather than housing type, distinguishes apartment and dormitory cases correctly, notes meal plan requirements, and covers the student exemption rule with no errors."
+    },
+    {
+      "id": "T15",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Parent/child mandatory inclusion rule (under 22) does NOT apply to grandparents": true,
+        "Parental control by grandparent may require minor be in grandparent's AU even if grandparent is ineligible": true,
+        "Grandparent's ineligibility excludes them from BENEFITS, not necessarily from AU composition": true,
+        "When no adults in AU, any member may be selected as AU head per 3205": true,
+        "Authorized representative (grandparent or other adult) should act for the minor child": true,
+        "Grandparent is excluded from the AU under certain disqualification types but income may still be considered": true
+      },
+      "errors_detail": {
+        "Applying the parent/child under-22 rule to grandparents": false,
+        "Saying an authorized representative must be the AU head (any member can be head when no adults present)": false,
+        "Not addressing parental control question": false
+      },
+      "reasoning": "The predicted answer accurately addresses all rubric points, correctly differentiates parental control, and avoids all common errors."
+    },
+    {
+      "id": "T16",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Recurring annual bonus = annualize by dividing by 12 months": true,
+        "Include as earned income in each month's budget": true,
+        "Three-year consistent history makes it representative": true,
+        "A nonrecurring bonus is excluded from representative pay (not included in ongoing budget) \u2014 but is still EARNED INCOME, NOT a resource": true,
+        "Do NOT treat any bonus as a lump sum resource \u2014 bonuses are earned income per Chart 3420.2": true,
+        "Document basis for representative determination": true
+      },
+      "errors_detail": {
+        "Treating a nonrecurring bonus as a lump sum resource (it remains earned income)": false,
+        "Not annualizing a recurring annual bonus": false,
+        "Failing to verify and document representative pay determination": false
+      },
+      "reasoning": "The predicted answer accurately annualizes the recurring bonus, includes it as earned income, emphasizes verification, documentation, and representativeness, and correctly distinguishes treatment for nonrecurring payments. No rubric points missing and no errors committed."
+    },
+    {
+      "id": "T17",
+      "score": 5,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "rubric_pct": 83.3,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Three required verifications: legal obligation + obligated amount + actual payments made": true,
+        "No legal obligation (court order, admin order, etc.) = no deduction even if cash is being paid": true,
+        "Informal voluntary cash payments are not 'legally obligated' payments": true,
+        "Court order cannot verify actual payments \u2014 must be verified separately": true,
+        "Actual payment sources: receipts, checks, money logs, DCSS records, payer statement": true,
+        "Verify actual payments for most current three-month period": false
+      },
+      "errors_detail": {
+        "Allowing the deduction based on informal payments alone": false,
+        "Treating a court order as sufficient verification of actual payments": false,
+        "Not requiring all three elements of verification": false
+      },
+      "reasoning": "The predicted answer correctly states that both a legal obligation and verification of actual payments are required, lists acceptable sources for verification, and makes clear that informal cash payments do not qualify. It omits explicit mention of the 'most current three-month period' but otherwise fully aligns with policy and avoids all listed errors."
+    },
+    {
+      "id": "T18",
+      "score": 4,
+      "rubric_hit": 3,
+      "rubric_total": 5,
+      "rubric_pct": 60.0,
+      "errors_committed": 1,
+      "rubric_coverage": {
+        "No periodic medical statements required \u2014 re-evaluated at each recertification only": true,
+        "Existing verification can suffice at subsequent recertifications if condition is unchanged": true,
+        "Receipt of disability benefit (SSI, RSDI, VA, Workers Comp, Railroad Retirement) is sufficient ongoing verification": false,
+        "New medical statement only needed if status becomes questionable or worker cannot establish unfitness from existing record": true,
+        "If obviously unfit, worker must exempt without requiring any medical statement and document observation": false
+      },
+      "errors_detail": {
+        "Requiring new medical statements at every recertification regardless of permanence": false,
+        "Not noting that disability benefits serve as sufficient ongoing verification": true
+      },
+      "reasoning": "The predicted answer clearly reflects that no periodic medical statements are required, covers re-evaluation during recertification, and explains when a new statement is needed. However, it omits mention of disability benefits as sufficient verification and does not address the 'obviously unfit' scenario, leaving a minor gap."
+    },
+    {
+      "id": "T19",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Institutional residency test: >50% of three meals daily": true,
+        "One dinner = ~33% of daily meals = below 50% threshold = not an institutional resident": true,
+        "Client can be SNAP-eligible if other criteria met": true,
+        "The provided meal is NOT counted as income and does NOT reduce benefit level": true,
+        "Confirm facility type \u2014 if it qualifies as a homeless shelter, even full meals wouldn't disqualify": true,
+        "Verify shelter costs arrangement for potential shelter deduction": true
+      },
+      "errors_detail": {
+        "Treating the provided meal as income or benefit reduction": false,
+        "Applying the institutional residency rule without calculating whether 50% threshold is met": false
+      },
+      "reasoning": "The predicted answer addresses all rubric points accurately, applies the 50% meal threshold correctly, and avoids common errors, offering a complete and correct explanation."
+    },
+    {
+      "id": "T20",
+      "score": 5,
+      "rubric_hit": 6,
+      "rubric_total": 6,
+      "rubric_pct": 100.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Must be signed, completed in entirety, AND received \u2014 all three required": true,
+        "Blank required sections = not a completed periodic report": true,
+        "Different standard from applications/recertifications (signature alone sufficient to file those)": true,
+        "Mark 'No' in Gateway to trigger combined notice": true,
+        "Issue Form 173 VCL with at least 10-day deadline": true,
+        "Close case if not completed by end of applicable SOP": true
+      },
+      "errors_detail": {
+        "Treating a signed but incomplete form as a completed periodic report": false,
+        "Applying the application filing standard (signature alone) to periodic reports": false
+      },
+      "reasoning": "The predicted answer fully and accurately addresses all rubric points, distinguishes periodic report standards from applications, and avoids both common errors."
+    },
+    {
+      "id": "T22",
+      "score": 2,
+      "rubric_hit": 1,
+      "rubric_total": 6,
+      "rubric_pct": 16.7,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Yes \u2014 SAVE is expressly authorized as verification of immigration status": true,
+        "SAVE Response Details page must be printed/saved and uploaded to DIS/UCM as verification": false,
+        "Document information still needed to initiate the SAVE query (to run the search)": false,
+        "Additional verification response within 3-5 federal working days": false,
+        "6-month inclusion allowed pending secondary verification if initial SAVE inconclusive": false,
+        "Use Scan and Upload for front/back of documents at additional verification step to avoid 'Resubmit Doc' responses": false
+      },
+      "errors_detail": {
+        "Thinking paper documents are always required when SAVE is available": false,
+        "Not documenting the SAVE result in the case record": false
+      },
+      "reasoning": "The predicted answer correctly recognizes SAVE as authorized verification but omits key procedural details like uploading the SAVE Response page, timing, and 6\u2011month inclusion guidance. It avoids the common errors but lacks most rubric elements."
+    },
+    {
+      "id": "T23",
+      "score": 4,
+      "rubric_hit": 3,
+      "rubric_total": 5,
+      "rubric_pct": 60.0,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "Yes \u2014 AR can submit change reports": true,
+        "AR designation must be in writing \u2014 verbal authorization alone is not valid": true,
+        "AR must be an adult sufficiently aware of household circumstances": false,
+        "Household remains liable for overpayments from incorrect AR-reported information": true,
+        "Multiple submission methods available (in person, phone, mail, fax, Gateway)": false
+      },
+      "errors_detail": {
+        "Accepting verbal-only AR designation as sufficient": false,
+        "Not noting the AU's ongoing liability for AR-submitted information": false
+      },
+      "reasoning": "The answer correctly states that an AR can submit change reports, must be designated in writing, and that the AU remains liable for any errors. However, it omits the requirement for the AR to be an adult aware of household circumstances and does not mention the multiple submission methods, resulting in a slightly incomplete response."
+    },
+    {
+      "id": "T24",
+      "score": 4,
+      "rubric_hit": 5,
+      "rubric_total": 6,
+      "rubric_pct": 83.3,
+      "errors_committed": 0,
+      "rubric_coverage": {
+        "7 calendar days from application received date or date expedited eligibility discovered": true,
+        "EBT card + PIN + benefits must ALL be available by day 7 (not just approved)": true,
+        "Clock starts on received date \u2014 NOT interview date": true,
+        "After-hours/weekend applications: filed next business day": false,
+        "If discovered after initial screening, 7-day SOP runs from discovery date \u2014 document discovery date clearly": true,
+        "Identity is the only required verification before expedited benefits are issued": true
+      },
+      "errors_detail": {
+        "Starting the clock from the interview date instead of received date": false,
+        "Confusing 7-day expedited SOP with 30-day standard SOP": false
+      },
+      "reasoning": "The predicted answer accurately covers all major SOP rules and avoids key errors, but it omits the detail about after-hours or weekend filing counting as next business day; otherwise it is strong and complete."
+    },
+    {
+      "id": "T25",
+      "score": 4,
+      "rubric_hit": 4,
+      "rubric_total": 6,
+      "rubric_pct": 66.7,
+      "errors_committed": 1,
+      "rubric_coverage": {
+        "U.S. Passport (including passport card) is explicitly listed in 3320 as acceptable citizenship verification": true,
+        "Issued only to U.S. citizens \u2014 establishes citizenship": true,
+        "Contains photo ID \u2014 establishes identity": true,
+        "Single document serves both purposes": true,
+        "Must be current and unexpired": false,
+        "If AR is applying, both AR identity and applicant identity must be verified": false
+      },
+      "errors_detail": {
+        "Saying passport card is not listed (it falls under U.S. Passport category)": false,
+        "Not checking whether the document is current/unexpired": true
+      },
+      "reasoning": "The answer correctly identifies the passport card as verifying both citizenship and identity, but misses mentioning the requirement that it be current and unexpired and does not address verification for authorized representatives."
+    }
+  ]
+}

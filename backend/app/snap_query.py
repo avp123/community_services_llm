@@ -1,8 +1,11 @@
 """RAG query pipeline for the Georgia SNAP Policy Manual."""
 
+import json
 import os
 import re
+from pathlib import Path
 
+import numpy as np
 import psycopg
 from openai import AzureOpenAI, OpenAI
 
@@ -13,9 +16,35 @@ EMBED_MODEL = "text-embedding-3-large"
 CHAT_MODEL = "gpt-5-chat"
 TOP_K = 6
 EXCERPT_CHARS = 2000
-SECTION_COMPLETE_MAX_CHUNKS = 12  # complete sections with at most this many total chunks
+SECTION_COMPLETE_MAX_CHUNKS = 25  # complete sections with at most this many total chunks
+PARENT_SECTION_MIN_CHUNKS = 30    # use snap_sections full text for sections above this threshold
+RRF_K = 60                        # reciprocal rank fusion constant
 SNIPPET_CHARS = 280   # shown in the source card quote
 HIGHLIGHT_CHARS = 400  # used by PDF viewer for text-layer highlighting
+
+# Section-routing retrieval (two-stage hybrid)
+MAX_ROUTED_SECTIONS = 3      # how many sections the router may select
+MAX_SECTION_CHARS = 40_000   # cap per section passed to the answer LLM (~10K tokens)
+HYBRID_K = 5                 # RAG candidates per query passed to LLM re-ranker (union of rewritten+original = up to 10)
+
+# Load section vectors and summaries for hybrid routing
+_EVAL_DIR = Path(__file__).resolve().parents[2] / "eval"
+_VECTORS_FILE  = _EVAL_DIR / "section_vectors.json"
+_SUMMARIES_FILE = _EVAL_DIR / "section_summaries.json"
+
+def _load_section_index():
+    vecs: dict[str, np.ndarray] = {}
+    if _VECTORS_FILE.exists():
+        for sec, v in json.loads(_VECTORS_FILE.read_text()).items():
+            arr = np.array(v, dtype=np.float32)
+            norm = np.linalg.norm(arr)
+            vecs[sec] = arr / norm if norm > 0 else arr
+    summaries: dict[str, str] = {}
+    if _SUMMARIES_FILE.exists():
+        summaries = json.loads(_SUMMARIES_FILE.read_text())
+    return vecs, summaries
+
+_SECTION_VECTORS, _SECTION_SUMMARIES = _load_section_index()
 
 PDF_URL = "https://pamms.dhs.ga.gov/dfcs/_exports/snap-policy-manual.pdf"
 
@@ -86,9 +115,18 @@ SYSTEM_PROMPT_EXPERT = (
     "You are a decision support system helping Georgia SNAP caseworkers make accurate eligibility determinations.\n\n"
     "Your role is two-fold: (1) answer policy questions accurately with citations, and (2) proactively identify case-specific issues the worker may miss.\n\n"
     "BEFORE ANSWERING:\n"
-    "1. Identify every condition the relevant policy states must be met — including age ranges, numeric thresholds, time limits, and documentation requirements.\n"
-    "2. Confirm each condition applies to the facts given. If a section's scope (e.g. an age range) excludes this person, say so explicitly before applying that section's rules.\n"
-    "3. Only then state your conclusion, citing which conditions are and are not satisfied.\n\n"
+    "1. Extract EVERY requirement, condition, exception, and procedural step relevant to this question from the retrieved sections.\n"
+    "2. Check the question's premises against policy: if the question states something as true (e.g. 'since X applies...' or 'the customer is a Y...'), verify whether that premise is actually correct under policy. If a premise conflicts with or is incomplete relative to policy, flag it explicitly before continuing — do not silently accept a wrong premise.\n"
+    "3. If the question describes a sequence of events, reconstruct the timeline. Identify which policy rule governs each stage. A rule that closes or limits a case at one stage does not prevent a different rule from applying at a later stage.\n"
+    "4. Check each extracted item: does it apply to the specific facts given, at the correct stage?\n"
+    "5. Only then write your answer, ensuring every applicable item is addressed.\n\n"
+    "This matters because policy sections routinely contain:\n"
+    "- A primary rule plus secondary conditions that only apply in specific cases\n"
+    "- Date-triggered rule changes ('effective X date')\n"
+    "- Processing steps that follow from the primary determination\n"
+    "- Exception handling (e.g. if a deduction can't be verified, process without it)\n"
+    "- Requirements that apply when an Authorized Representative is involved\n"
+    "Missing any of these is as wrong as missing the primary rule.\n\n"
     "RESPONSE STYLE:\n"
     "- Be concise and direct.\n"
     "- Bold key thresholds, income limits, and dates using **markdown bold**.\n"
@@ -218,67 +256,146 @@ def _find_snippet(content: str, question: str) -> str:
     return '\n'.join(result).strip()
 
 
-def _retrieve(embedding: list[float], question: str, k: int = TOP_K) -> list[dict]:
+_REWRITE_PROMPT = (
+    "Rewrite this question using Georgia SNAP policy terminology. "
+    "Replace colloquial terms with official ones. Be concise — one sentence.\n\n"
+    "Examples:\n"
+    '"does my undocumented wife affect my food stamps"\n'
+    '→ "citizenship alien status impact on assistance unit eligibility"\n\n'
+    '"do I have to work to get benefits"\n'
+    '→ "ABAWD work requirement exemptions E&T participation"\n\n'
+    "Question: {question}\nRewritten:"
+)
+
+
+def _rewrite_query(question: str) -> str:
+    """Rewrite a colloquial question into SNAP policy terminology for better retrieval."""
+    try:
+        resp = chat_client.chat.completions.create(
+            model=CHAT_MODEL,
+            messages=[{"role": "user", "content": _REWRITE_PROMPT.format(question=question)}],
+            max_completion_tokens=40,
+        )
+        return resp.choices[0].message.content.strip()
+    except Exception:
+        return question
+
+
+def _route_to_sections(question: str, q_vec: np.ndarray, cur,
+                       orig_vec: np.ndarray | None = None) -> list[str]:
+    """Hybrid routing: union cosine-sim top-k (rewritten + original) → LLM re-ranker."""
+    if not _SECTION_VECTORS:
+        # Vectors not loaded — fall back to fetching section blurbs from DB
+        cur.execute(
+            "SELECT section_number, section_title, LEFT(full_content, 300) FROM snap_sections ORDER BY section_number"
+        )
+        rows = cur.fetchall()
+        lines = ["{} | {} | {}".format(n, t, re.sub(r'\s+', ' ', (b or ''))[:200]) for n, t, b in rows]
+        prompt = (
+            "You are routing a Georgia SNAP policy question.\n\n"
+            "SECTIONS (number | title | opening text):\n" + "\n".join(lines) +
+            f"\n\nQUESTION: {question}\n\n"
+            "Which 1-3 section numbers contain the specific policy needed?\n"
+            "Reply with ONLY the section number(s), comma-separated.\n"
+            'Examples: "3205"  or  "3205, 3425"  or  "3810b"'
+        )
+        resp = chat_client.chat.completions.create(
+            model=CHAT_MODEL, messages=[{"role": "user", "content": prompt}], max_completion_tokens=20,
+        )
+        raw = resp.choices[0].message.content.strip()
+        return [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$", s.strip())][:MAX_ROUTED_SECTIONS]
+
+    # Stage A: cosine-sim top-k from rewritten query; union with top-k from original if different
+    scores_rw = {sec: float(np.dot(q_vec, v)) for sec, v in _SECTION_VECTORS.items()}
+    candidate_set = set(sorted(scores_rw, key=scores_rw.__getitem__, reverse=True)[:HYBRID_K])
+    if orig_vec is not None:
+        scores_orig = {sec: float(np.dot(orig_vec, v)) for sec, v in _SECTION_VECTORS.items()}
+        candidate_set |= set(sorted(scores_orig, key=scores_orig.__getitem__, reverse=True)[:HYBRID_K])
+        candidates = sorted(candidate_set,
+                            key=lambda s: max(scores_rw.get(s, 0), scores_orig.get(s, 0)),
+                            reverse=True)
+    else:
+        candidates = sorted(candidate_set, key=scores_rw.__getitem__, reverse=True)
+
+    # Fetch titles for candidates
+    cur.execute(
+        "SELECT section_number, section_title FROM snap_sections WHERE section_number = ANY(%s)",
+        (candidates,),
+    )
+    titles = {row[0]: row[1] for row in cur.fetchall()}
+
+    # Stage B: LLM re-ranker over candidates only
+    lines = [
+        f"{sec} | {titles.get(sec, sec)} | {_SECTION_SUMMARIES.get(sec, '')}"
+        for sec in candidates
+    ]
+    prompt = (
+        f"You are routing a Georgia SNAP policy question. "
+        f"These are the most semantically similar sections:\n\n"
+        "CANDIDATES (number | title | summary):\n" + "\n".join(lines) +
+        f"\n\nQUESTION: {question}\n\n"
+        "Which 1-3 of these sections actually contain the policy needed to answer this question?\n"
+        "Reply with ONLY section number(s), comma-separated — no other text."
+    )
+    try:
+        resp = chat_client.chat.completions.create(
+            model=CHAT_MODEL, messages=[{"role": "user", "content": prompt}], max_completion_tokens=20,
+        )
+        raw = resp.choices[0].message.content.strip()
+        selected = [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$", s.strip())]
+        return selected[:MAX_ROUTED_SECTIONS] if selected else candidates[:MAX_ROUTED_SECTIONS]
+    except Exception:
+        return candidates[:MAX_ROUTED_SECTIONS]
+
+
+def _retrieve(embedding: list[float], question: str, routing_question: str, k: int = TOP_K) -> list[dict]:
+    """Hybrid retrieval: cosine-sim top-k → LLM re-rank → fetch full section text."""
     conn = psycopg.connect(RESOURCE_DB_URL)
     cur = conn.cursor()
-    cur.execute(
-        """
-        SELECT section_number, section_title, page_start, page_end, content,
-               1 - (embedding <=> %s::vector) AS similarity
-        FROM snap_chunks
-        ORDER BY embedding <=> %s::vector
-        LIMIT %s
-        """,
-        (str(embedding), str(embedding), k),
-    )
-    rows = cur.fetchall()
 
-    seen: set[str] = set()  # content fingerprints to deduplicate
+    # ── Stage 1: hybrid route (union of rewritten + original embeddings) ────────
+    q_vec = np.array(embedding, dtype=np.float32)
+    norm  = np.linalg.norm(q_vec)
+    if norm > 0:
+        q_vec = q_vec / norm
+    # Embed original question for union routing when rewrite differs
+    orig_vec = None
+    if routing_question != question:
+        orig_arr = np.array(_embed(question), dtype=np.float32)
+        orig_norm = np.linalg.norm(orig_arr)
+        orig_vec = orig_arr / orig_norm if orig_norm > 0 else orig_arr
+    selected = _route_to_sections(routing_question, q_vec, cur, orig_vec=orig_vec)
+
+    # ── Stage 2: fetch full section content ───────────────────────────────────
     sources = []
-
-    def _append(section_number, section_title, page_start, page_end, content, similarity):
-        fp = content[:80]
-        if fp in seen:
-            return
-        seen.add(fp)
-        sources.append({
-            "index": len(sources) + 1,
-            "section_number": section_number,
-            "section_title": section_title,
-            "page_start": page_start,
-            "page_end": page_end,
-            "excerpt": content[:EXCERPT_CHARS],
-            "snippet": _find_snippet(content, question),
-            "highlight_text": _highlight_text(content, section_title),
-            "similarity": round(float(similarity), 4),
-            "pdf_url": f"{PDF_URL}#page={page_start}",
-        })
-
-    for row in rows:
-        _append(row[0], row[1], row[2], row[3], row[4], row[5])
-
-    # Section completion: for any section with <= SECTION_COMPLETE_MAX_CHUNKS total
-    # chunks, pull in all remaining chunks so we never miss a scope guard or
-    # verification paragraph that landed outside the top-K.
-    retrieved_sections = {s["section_number"] for s in sources}
-    for sec_num in retrieved_sections:
-        cur.execute(
-            "SELECT COUNT(*) FROM snap_chunks WHERE section_number = %s",
-            (sec_num,),
-        )
-        if cur.fetchone()[0] > SECTION_COMPLETE_MAX_CHUNKS:
-            continue
+    for sec_num in selected:
         cur.execute(
             """
-            SELECT section_number, section_title, page_start, page_end, content
-            FROM snap_chunks
+            SELECT section_number, section_title, page_start, page_end, full_content
+            FROM snap_sections
             WHERE section_number = %s
-            ORDER BY page_start, chunk_index
             """,
             (sec_num,),
         )
-        for row in cur.fetchall():
-            _append(row[0], row[1], row[2], row[3], row[4], 0.0)
+        row = cur.fetchone()
+        if not row:
+            continue
+        sec_number, sec_title, page_start, page_end, content = row
+        content = content or ""
+        sources.append({
+            "index": len(sources) + 1,
+            "section_number": sec_number,
+            "section_title": sec_title,
+            "page_start": page_start,
+            "page_end": page_end,
+            "chunk_index": None,
+            "excerpt": content[:MAX_SECTION_CHARS],
+            "snippet": _find_snippet(content, question),
+            "highlight_text": _highlight_text(content, sec_title),
+            "similarity": 1.0,
+            "pdf_url": f"{PDF_URL}#page={page_start}",
+            "routed": True,
+        })
 
     conn.close()
     return sources
@@ -396,8 +513,9 @@ def query_snap(
     conversation_history = conversation_history or []
     system_prompt = SYSTEM_PROMPT_SIMPLE if mode == "simple" else SYSTEM_PROMPT_EXPERT
 
-    embedding = _embed(question)
-    sources = _retrieve(embedding, question)
+    routing_question = _rewrite_query(question)
+    embedding = _embed(routing_question)
+    sources = _retrieve(embedding, question, routing_question)
 
     sources_block = "\n\n".join(
         f"[{s['index']}] Section {s['section_number']}: {s['section_title']} "

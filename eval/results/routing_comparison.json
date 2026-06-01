@@ -1,0 +1,381 @@
+[
+  {
+    "id": "T01",
+    "question": "A 52-year-old client is enrolled full-time in a vocational training program funded by WIOA with an expected completion date of next spring. Since the customer is over age 49, she meets the age-based student eligibility criterion. Is verification of her enrollment required, and what happens if she fails to provide it?",
+    "rag": [
+      "3365",
+      "3035"
+    ],
+    "summary_llm": [
+      "3245"
+    ],
+    "hybrid": [
+      "3035",
+      "3245"
+    ]
+  },
+  {
+    "id": "T02",
+    "question": "A client submitted Form 841 - Food Loss Replacement stating he lost food due to a power surge caused by faulty wiring in his apartment building \u2014 not a declared disaster. Can this request be honored?",
+    "rag": [
+      "3810b",
+      "3125"
+    ],
+    "summary_llm": [
+      "3810b"
+    ],
+    "hybrid": [
+      "3810b"
+    ]
+  },
+  {
+    "id": "T03",
+    "question": "A customer lives with a boarder who is a separate AU. The boarder pays a flat monthly amount that covers both rent and food. How should the payment be treated \u2014 as income, lodging, or something else?",
+    "rag": [
+      "3420",
+      "3205"
+    ],
+    "summary_llm": [
+      "3425"
+    ],
+    "hybrid": [
+      "3420"
+    ]
+  },
+  {
+    "id": "T04",
+    "question": "At recertification, must the worker verify that an ABAWD member met work requirements for every month in the prior certification period, or only the current month?",
+    "rag": [
+      "3360",
+      "3355"
+    ],
+    "summary_llm": [
+      "3360"
+    ],
+    "hybrid": [
+      "3360",
+      "3355"
+    ]
+  },
+  {
+    "id": "T05",
+    "question": "A customer states he earns money by performing odd jobs such as lawn mowing and snow removal for neighbors, with no set schedule or pay rate. Is this considered self-employment income or a contribution, and how should it be verified?",
+    "rag": [
+      "3425",
+      "3420"
+    ],
+    "summary_llm": [
+      "3425"
+    ],
+    "hybrid": [
+      "3425",
+      "3035"
+    ]
+  },
+  {
+    "id": "T06",
+    "question": "A customer pays a neighbor $80 per week to drive her elderly mother, who is an AU member, to a medical adult day program. Can this transportation cost be allowed as a dependent care deduction?",
+    "rag": [
+      "3615",
+      "3614"
+    ],
+    "summary_llm": [
+      "3615",
+      "3614"
+    ],
+    "hybrid": [
+      "3615",
+      "3614"
+    ]
+  },
+  {
+    "id": "T07",
+    "question": "A customer provides only a screenshot of an online rental payment portal showing monthly charges and a landlord name, but no lease document. Is this acceptable verification of rent expense?",
+    "rag": [
+      "3617",
+      "3035"
+    ],
+    "summary_llm": [
+      "3617",
+      "3035"
+    ],
+    "hybrid": [
+      "3617",
+      "3035"
+    ]
+  },
+  {
+    "id": "T08",
+    "question": "An expedited case was approved with postponed verification. The customer returned the required verification 45 days after the application date, which is after the end of the first certification month but within 60 days. Should the case be reactivated?",
+    "rag": [
+      "3510",
+      "3035"
+    ],
+    "summary_llm": [
+      "3510"
+    ],
+    "hybrid": [
+      "3510",
+      "3110"
+    ]
+  },
+  {
+    "id": "T09",
+    "question": "A customer appealing a denial of SNAP benefits as an ineligible student cited policy 3245. She is enrolled full-time and receives a Pell Grant and a state scholarship. She also works 20 hours per week in an off-campus job. Does her employment status qualify her for a student exemption?",
+    "rag": [
+      "3245",
+      "3210"
+    ],
+    "summary_llm": [
+      "3245"
+    ],
+    "hybrid": [
+      "3245"
+    ]
+  },
+  {
+    "id": "T10",
+    "question": "An AU member is self-employed but has no business records. She provides bank statements showing regular deposits she says are from customers. Is this acceptable verification of self-employment income, and what documentation standards apply?",
+    "rag": [
+      "3425",
+      "3035"
+    ],
+    "summary_llm": [
+      "3425"
+    ],
+    "hybrid": [
+      "3425",
+      "3035"
+    ]
+  },
+  {
+    "id": "T11",
+    "question": "At recertification, a discrepancy is found between the customer's reported income and wage interface data. The worker has attempted contact twice without success. Is it appropriate to deny the case for failure to cooperate, or should another step be taken first?",
+    "rag": [
+      "3515",
+      "3035"
+    ],
+    "summary_llm": [
+      "3505",
+      "3305"
+    ],
+    "hybrid": [
+      "3515",
+      "3035"
+    ]
+  },
+  {
+    "id": "T12",
+    "question": "A customer requests that her monthly gym membership fee be allowed as a medical deduction, stating her doctor recommended exercise to manage her diabetes. Can this expense qualify as an allowable medical deduction?",
+    "rag": [
+      "3614",
+      "3615"
+    ],
+    "summary_llm": [
+      "3614"
+    ],
+    "hybrid": [
+      "3614"
+    ]
+  },
+  {
+    "id": "T13",
+    "question": "A client is an ABAWD who volunteers at a nonprofit thrift store 15 hours per week sorting and stocking donated items without pay. Does this volunteer activity satisfy the ABAWD work requirement?",
+    "rag": [
+      "3355",
+      "3360"
+    ],
+    "summary_llm": [
+      "3370",
+      "3355"
+    ],
+    "hybrid": [
+      "3370",
+      "3355"
+    ]
+  },
+  {
+    "id": "T14",
+    "question": "A student lives in an on-campus apartment (not a dormitory) leased directly from the university. Does this living arrangement affect SNAP eligibility differently than a traditional dormitory?",
+    "rag": [
+      "3245",
+      "3225"
+    ],
+    "summary_llm": [
+      "3245"
+    ],
+    "hybrid": [
+      "3245"
+    ]
+  },
+  {
+    "id": "T15",
+    "question": "A 15-year-old child is living with a grandparent but has no other household members. The grandparent is ineligible for SNAP. Can the child have their own SNAP case, and who may act as the AU head?",
+    "rag": [
+      "3205",
+      "3105"
+    ],
+    "summary_llm": [
+      "3205",
+      "3120"
+    ],
+    "hybrid": [
+      "3205",
+      "3105"
+    ]
+  },
+  {
+    "id": "T16",
+    "question": "A customer receives an annual performance bonus from her employer. She has received the same bonus amount for the past three years. How should this income be budgeted for SNAP purposes?",
+    "rag": [
+      "3605",
+      "3640"
+    ],
+    "summary_llm": [
+      "3605",
+      "3420"
+    ],
+    "hybrid": [
+      "3605",
+      "3610"
+    ]
+  },
+  {
+    "id": "T17",
+    "question": "A customer claims a child support deduction but says she has no court order \u2014 the father pays informally in cash. What verification is required in order to allow the child support deduction?",
+    "rag": [
+      "3616",
+      "3615"
+    ],
+    "summary_llm": [
+      "3616"
+    ],
+    "hybrid": [
+      "3616"
+    ]
+  },
+  {
+    "id": "T18",
+    "question": "A customer has been deemed unfit for work due to a chronic condition. Her physician says the condition is permanent and unlikely to improve. Is she still required to periodically provide a medical statement, and if so, how often?",
+    "rag": [
+      "3355",
+      "3730"
+    ],
+    "summary_llm": [
+      "3350",
+      "3355"
+    ],
+    "hybrid": [
+      "3355",
+      "3035"
+    ]
+  },
+  {
+    "id": "T19",
+    "question": "A client is residing in a transitional housing facility that provides dinner every evening but no other meals. Are they still eligible for SNAP, and does the provided meal affect their benefit calculation?",
+    "rag": [
+      "3215",
+      "3704"
+    ],
+    "summary_llm": [
+      "3230",
+      "3205"
+    ],
+    "hybrid": [
+      "3230",
+      "3220"
+    ]
+  },
+  {
+    "id": "T20",
+    "question": "At periodic report, a customer submits the form but leaves several required sections blank and does not provide any requested verifications. Does this constitute a completed periodic report?",
+    "rag": [
+      "3730",
+      "3720"
+    ],
+    "summary_llm": [
+      "3730"
+    ],
+    "hybrid": [
+      "3730"
+    ]
+  },
+  {
+    "id": "T21",
+    "question": "A client resides in a halfway house that is not a licensed drug or alcohol treatment facility. Can she apply for SNAP on her own behalf?",
+    "rag": [
+      "3220",
+      "3225"
+    ],
+    "summary_llm": [
+      "3225",
+      "3220"
+    ],
+    "hybrid": [
+      "3225",
+      "3230"
+    ]
+  },
+  {
+    "id": "T22",
+    "question": "Can data from the SAVE (Systematic Alien Verification for Entitlements) interface be used to verify immigration status in lieu of paper documents?",
+    "rag": [
+      "2009",
+      "3530"
+    ],
+    "summary_llm": [
+      "2009",
+      "3320"
+    ],
+    "hybrid": [
+      "2009",
+      "3320"
+    ]
+  },
+  {
+    "id": "T23",
+    "question": "Can an Authorized Representative submit a change report on behalf of a customer, or is that limited to the customer themselves?",
+    "rag": [
+      "3120",
+      "3720"
+    ],
+    "summary_llm": [
+      "3120",
+      "3715"
+    ],
+    "hybrid": [
+      "3120",
+      "3720"
+    ]
+  },
+  {
+    "id": "T24",
+    "question": "What is the Standard of Promptness (SOP) for processing an expedited SNAP application, and when does the clock start?",
+    "rag": [
+      "3110",
+      "3115"
+    ],
+    "summary_llm": [
+      "3110"
+    ],
+    "hybrid": [
+      "3110"
+    ]
+  },
+  {
+    "id": "T25",
+    "question": "Can a U.S. passport card alone be used to verify both identity and citizenship for SNAP purposes?",
+    "rag": [
+      "3320",
+      "3335"
+    ],
+    "summary_llm": [
+      "3320",
+      "3335"
+    ],
+    "hybrid": [
+      "3320",
+      "3035"
+    ]
+  }
+]
