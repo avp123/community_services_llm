@@ -180,6 +180,11 @@ _META_END_RES = [
 ]
 
 
+def _norm_text(text: str) -> str:
+    """Normalize text for fuzzy matching — same logic as the frontend norm()."""
+    return re.sub(r'\s+', ' ', re.sub(r'[^a-z0-9\s]', ' ', text.lower())).strip()
+
+
 def _highlight_text(content: str, section_title: str = "") -> str:
     """Return first HIGHLIGHT_CHARS with section-header metadata stripped.
 
@@ -424,7 +429,7 @@ def _parse_facts(
         for m in re.finditer(r'FACT\[?(\d+)\]?:\s*(.+)', meta):
             key_facts[int(m.group(1))] = m.group(2).strip()
         for m in re.finditer(r'QUOTE\[?(\d+)\]?:\s*(.+)', meta):
-            quotes[int(m.group(1))] = m.group(2).strip()
+            quotes[int(m.group(1))] = m.group(2).strip().strip('"\'“”‘’')
         # FLAG without a pipe (not a QUESTION)
         for m in re.finditer(r'^FLAG\[?\d*\]?:\s*(.+)', meta, re.MULTILINE | re.IGNORECASE):
             val = m.group(1).strip()
@@ -496,6 +501,149 @@ def _order_by_appearance(cited_sources: list[dict], answer: str) -> list[dict]:
     return sorted(cited_sources, key=first_pos)
 
 
+_PDF_PAGE_CACHE: dict[int, str] = {}
+
+def _pdf_page_text(page_num: int) -> str:
+    """Return pdfplumber-extracted text for a PDF page (1-indexed), cached."""
+    if page_num not in _PDF_PAGE_CACHE:
+        pdf_path = Path(__file__).resolve().parents[2] / "snap_manual.pdf"
+        try:
+            import pdfplumber
+            with pdfplumber.open(str(pdf_path)) as pdf:
+                if 1 <= page_num <= len(pdf.pages):
+                    _PDF_PAGE_CACHE[page_num] = pdf.pages[page_num - 1].extract_text() or ""
+        except Exception:
+            _PDF_PAGE_CACHE[page_num] = ""
+    return _PDF_PAGE_CACHE.get(page_num, "")
+
+
+def _anchor_quotes(sources: list[dict]) -> None:
+    """
+    For each cited source, search snap_chunks to find which chunk contains the
+    LLM quote and update page_start, highlight_text, and pdf_url in place.
+
+    Falls back to scanning the section's full_content + PDF page texts when
+    the quote lands in a chunk gap (e.g. the page-boundary fragment that the
+    indexer appended to full_content but didn't create a separate chunk for).
+    """
+    conn = psycopg.connect(RESOURCE_DB_URL)
+    cur = conn.cursor()
+    try:
+        for s in sources:
+            quote = s.get("quote")
+            if not quote or len(quote) < 15:
+                continue
+
+            # Mirror the frontend: strip editorial brackets and anchor on the
+            # first segment before any ellipsis. Multi-"…" quotes join text
+            # from different pages, so the full string never appears verbatim.
+            quote_anchor = re.sub(r'\[[^\]]*\]', '', quote)
+            quote_anchor = re.split(r'[…]|\.{3,}', quote_anchor)[0].strip()
+            if len(quote_anchor) < 15:
+                quote_anchor = quote
+            norm_q = _norm_text(quote_anchor)
+
+            # ── Stage 1: search chunks ────────────────────────────────────────
+            cur.execute(
+                "SELECT page_start, page_end, content FROM snap_chunks "
+                "WHERE section_number = %s ORDER BY chunk_index",
+                (s["section_number"],),
+            )
+            chunk_rows = cur.fetchall()
+            found = False
+            for frac in (1.0, 0.6, 0.4):
+                if found:
+                    break
+                target = norm_q[:max(15, int(len(norm_q) * frac))]
+                for chunk_page_start, chunk_page_end, content in chunk_rows:
+                    if target in _norm_text(content):
+                        # Chunk matched — now find the specific page within the
+                        # chunk's range so the viewer opens the right page.
+                        exact_page = chunk_page_start
+                        if chunk_page_end and chunk_page_end > chunk_page_start:
+                            for pg in range(chunk_page_start, chunk_page_end + 1):
+                                if target in _norm_text(_pdf_page_text(pg)):
+                                    exact_page = pg
+                                    break
+                        s["page_start"] = exact_page
+                        s["highlight_text"] = quote
+                        s["pdf_url"] = f"{PDF_URL}#page={exact_page}"
+                        found = True
+                        break
+            if found:
+                continue
+
+            # ── Stage 2: chunk gap — scan PDF pages in section range ──────────
+            # (quote is in full_content but missed by chunk boundaries)
+            # The quote is in full_content but not in any chunk (indexing gap).
+            # Scan each page from page_start to page_end (inclusive) to find it.
+            cur.execute(
+                "SELECT page_start, page_end FROM snap_sections WHERE section_number = %s",
+                (s["section_number"],),
+            )
+            sec_row = cur.fetchone()
+            if not sec_row:
+                continue
+            sec_page_start, sec_page_end = sec_row
+            # Also look one page past page_end — the DB page_end may be stale.
+            for pg in range(sec_page_start, (sec_page_end or sec_page_start) + 2):
+                page_text = _pdf_page_text(pg)
+                if not page_text:
+                    continue
+                norm_page = _norm_text(page_text)
+                for frac in (1.0, 0.6, 0.4):
+                    target = norm_q[:max(15, int(len(norm_q) * frac))]
+                    if target in norm_page:
+                        s["page_start"] = pg
+                        # Use the quote directly: it's verbatim PDF text and the
+                        # frontend normalizes before matching. Avoids the offset
+                        # mismatch that comes from indexing into the normalized string.
+                        s["highlight_text"] = quote
+                        s["pdf_url"] = f"{PDF_URL}#page={pg}"
+                        found = True
+                        break
+                if found:
+                    break
+
+            if found:
+                continue
+
+            # ── Stage 3: cross-section search ────────────────────────────────
+            # The LLM cited the wrong section — the quote doesn't appear anywhere
+            # in the cited section. Search all chunks to find the real source and
+            # correct the reference so the right page opens with a good highlight.
+            cur.execute(
+                "SELECT sc.section_number, sc.section_title, sc.page_start, sc.page_end, sc.content "
+                "FROM snap_chunks sc "
+                "WHERE sc.section_number != %s "
+                "ORDER BY sc.section_number, sc.chunk_index",
+                (s["section_number"],),
+            )
+            for frac in (1.0, 0.6, 0.4):
+                if found:
+                    break
+                target = norm_q[:max(15, int(len(norm_q) * frac))]
+                for alt_sec, alt_title, chunk_ps, chunk_pe, content in cur.fetchall():
+                    if target in _norm_text(content):
+                        exact_page = chunk_ps
+                        if chunk_pe and chunk_pe > chunk_ps:
+                            for pg in range(chunk_ps, chunk_pe + 1):
+                                if target in _norm_text(_pdf_page_text(pg)):
+                                    exact_page = pg
+                                    break
+                        s["section_number"] = alt_sec
+                        s["section_title"] = alt_title
+                        s["page_start"] = exact_page
+                        s["highlight_text"] = quote
+                        s["pdf_url"] = f"{PDF_URL}#page={exact_page}"
+                        found = True
+                        break
+                if not found:
+                    cur.scroll(0, mode='absolute')  # reset cursor for next frac
+    finally:
+        conn.close()
+
+
 def query_snap(
     question: str,
     conversation_history: list | None = None,
@@ -560,6 +708,10 @@ def query_snap(
         old = int(m.group(1))
         return f"[{index_map[old]}]" if old in index_map else m.group(0)
     answer = re.sub(r"\[(\d+)\]", replace_cite, answer)
+
+    # Update each source's page_start and highlight_text to the specific chunk
+    # containing the LLM quote, rather than the section's first page.
+    _anchor_quotes(cited_sources)
 
     resource = _pick_resource(answer) if mode == "simple" else None
     return (

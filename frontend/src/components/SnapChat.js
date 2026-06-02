@@ -106,7 +106,9 @@ function ReferencesPanel({ sources, onOpen }) {
                   §{s.section_number} {s.section_title}
                 </span>
                 {(s.quote || s.key_fact) && (
-                  <span className="snap-ref-fact">"{s.quote || s.key_fact}"</span>
+                  <span className="snap-ref-fact">
+                    "{(s.quote || s.key_fact).replace(/\//g, '/⁠')}"
+                  </span>
                 )}
               </span>
               <span className="snap-ref-link">

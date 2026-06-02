@@ -142,6 +142,10 @@ def detect_sections(pages: list[dict]) -> list[dict]:
             fragment = page_text[:first_pos]
             if fragment.strip():
                 current["text"] += "\n" + fragment
+                # The section's content bleeds onto this page; update page_end and
+                # store the fragment so chunk_section can assign the correct page.
+                current["page_end"] = p["page_num"]
+                current["_end_page_slice"] = (p["page_num"], fragment)
 
         for i, (pos, sec_num, sec_title) in enumerate(new_matches):
             if current:
@@ -316,12 +320,16 @@ def main():
     all_chunks = []
     for s in sections:
         start_slice = s.get("_start_page_slice")
+        end_slice = s.get("_end_page_slice")  # (page_num, fragment_text) or None
         s_pages = []
         for p in pages:
             if p["page_num"] < s["page_start"] or p["page_num"] > s["page_end"]:
                 continue
             if p["page_num"] == s["page_start"] and start_slice is not None:
                 s_pages.append({"page_num": p["page_num"], "text": start_slice})
+            elif end_slice and p["page_num"] == end_slice[0] and p["page_num"] != s["page_start"]:
+                # Last page of section: only the fragment before the next section started
+                s_pages.append({"page_num": p["page_num"], "text": end_slice[1]})
             else:
                 s_pages.append(p)
         all_chunks.extend(chunk_section(s, s_pages))
