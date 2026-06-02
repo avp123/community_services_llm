@@ -73,7 +73,22 @@ function findMatchedIndices(items, text) {
 
   if (toSearch.length < 20) return new Set();
 
-  const matchStart = fullText.indexOf(toSearch);
+  let matchStart = fullText.indexOf(toSearch);
+
+  // Fuzzy fallback: PDF.js extracts some acronyms and small-caps letter-by-letter
+  // (e.g. "TCOS" → items "T","C","O","S" → fullText "t c o s"). Build a regex
+  // that allows optional whitespace between characters of short words (≤4 chars).
+  if (matchStart === -1) {
+    try {
+      const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const fuzzyPat = toSearch.split(' ').map(w =>
+        w.length <= 4 ? w.split('').map(esc).join('[\\s]?') : esc(w)
+      ).join('[\\s]+');
+      const m = new RegExp(fuzzyPat).exec(fullText);
+      if (m) matchStart = m.index;
+    } catch (_) { /* ignore malformed patterns */ }
+  }
+
   // eslint-disable-next-line no-console
   console.log('[SNAP-HL] matchStart:', matchStart, '  fullText length:', fullText.length);
   // eslint-disable-next-line no-console
