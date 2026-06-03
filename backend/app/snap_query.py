@@ -161,7 +161,7 @@ _META_LINE_RE = re.compile(
     r"|SNAP Policy Manual"
     r"|Policy Title:"
     r"|Effective Date:"
-    r"|Chapter:\s*\d"
+    r"|Chapter:\s*(?:\d|Appendix)"
     r"|Policy Number:"
     r")[^\n]*",
     re.MULTILINE | re.IGNORECASE,
@@ -170,8 +170,8 @@ _META_LINE_RE = re.compile(
 # Last-in-block metadata markers — we find the rightmost match within the
 # first 800 chars to locate where the header ends in a no-newline chunk.
 _META_END_RES = [
-    re.compile(r'Policy Number:\s*\d{4}'),
-    re.compile(r'Chapter:\s*\d+'),
+    re.compile(r'Policy Number:\s*(?:\d{4}|Appendix)'),
+    re.compile(r'Chapter:\s*(?:\d+|Appendix)'),
     re.compile(r'Effective Date:\s*\d'),
     re.compile(r'MT-\d{2}-\d{4}'),
     re.compile(r'Updated or Reviewed in MT'),
@@ -308,7 +308,7 @@ def _route_to_sections(question: str, q_vec: np.ndarray, cur,
             model=CHAT_MODEL, messages=[{"role": "user", "content": prompt}], max_completion_tokens=20,
         )
         raw = resp.choices[0].message.content.strip()
-        return [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$", s.strip())][:MAX_ROUTED_SECTIONS]
+        return [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$|^Appendix[A-Z]$", s.strip())][:MAX_ROUTED_SECTIONS]
 
     # Stage A: cosine-sim top-k from rewritten query; union with top-k from original if different
     scores_rw = {sec: float(np.dot(q_vec, v)) for sec, v in _SECTION_VECTORS.items()}
@@ -347,7 +347,7 @@ def _route_to_sections(question: str, q_vec: np.ndarray, cur,
             model=CHAT_MODEL, messages=[{"role": "user", "content": prompt}], max_completion_tokens=20,
         )
         raw = resp.choices[0].message.content.strip()
-        selected = [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$", s.strip())]
+        selected = [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$|^Appendix[A-Z]$", s.strip())]
         return selected[:MAX_ROUTED_SECTIONS] if selected else candidates[:MAX_ROUTED_SECTIONS]
     except Exception:
         return candidates[:MAX_ROUTED_SECTIONS]
@@ -502,19 +502,38 @@ def _order_by_appearance(cited_sources: list[dict], answer: str) -> list[dict]:
 
 
 _PDF_PAGE_CACHE: dict[int, str] = {}
+_PDF_BYTES_CACHE: list[bytes | None] = [None]  # mutable so we avoid module-level global
 
 def _pdf_page_text(page_num: int) -> str:
-    """Return pdfplumber-extracted text for a PDF page (1-indexed), cached."""
-    if page_num not in _PDF_PAGE_CACHE:
+    """Return pdfplumber-extracted text for a PDF page (1-indexed), cached.
+
+    Falls back to fetching the PDF from the remote URL when the local file is
+    absent (e.g. on the Azure deployment where the file isn't on disk).
+    """
+    if page_num in _PDF_PAGE_CACHE:
+        return _PDF_PAGE_CACHE[page_num]
+    text = ""
+    try:
+        import io
+        import pdfplumber
         pdf_path = Path(__file__).resolve().parents[2] / "snap_manual.pdf"
-        try:
-            import pdfplumber
-            with pdfplumber.open(str(pdf_path)) as pdf:
+        if pdf_path.exists():
+            source = str(pdf_path)
+        else:
+            if _PDF_BYTES_CACHE[0] is None:
+                import requests
+                r = requests.get("https://www.peercopilot.com/snap_manual.pdf", timeout=30)
+                r.raise_for_status()
+                _PDF_BYTES_CACHE[0] = r.content
+            source = io.BytesIO(_PDF_BYTES_CACHE[0]) if _PDF_BYTES_CACHE[0] else None
+        if source is not None:
+            with pdfplumber.open(source) as pdf:
                 if 1 <= page_num <= len(pdf.pages):
-                    _PDF_PAGE_CACHE[page_num] = pdf.pages[page_num - 1].extract_text() or ""
-        except Exception:
-            _PDF_PAGE_CACHE[page_num] = ""
-    return _PDF_PAGE_CACHE.get(page_num, "")
+                    text = pdf.pages[page_num - 1].extract_text() or ""
+    except Exception:
+        pass
+    _PDF_PAGE_CACHE[page_num] = text
+    return text
 
 
 def _anchor_quotes(sources: list[dict]) -> None:

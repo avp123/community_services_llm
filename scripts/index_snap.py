@@ -27,7 +27,10 @@ PARENT_SECTION_MIN_CHUNKS = 30  # store full section text for sections with at l
 from openai import OpenAI
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-SECTION_RE = re.compile(r"^\s*(\d{4})\s+([A-Z][^\n]{5,80})\s*$", re.MULTILINE)
+SECTION_RE = re.compile(
+    r"^\s*(?P<num>\d{4}|Appendix\s+[A-Z])\s+(?P<title>[A-Z][^\n]{5,80})\s*$",
+    re.MULTILINE,
+)
 
 _META_LINE_RE = re.compile(
     r"^\s*(?:"
@@ -39,7 +42,7 @@ _META_LINE_RE = re.compile(
     r"|SNAP Policy Manual"
     r"|Policy Title:"
     r"|Effective Date:"
-    r"|Chapter:\s*\d"
+    r"|Chapter:\s*(?:\d|Appendix)"
     r"|Policy Number:"
     r")[^\n]*",
     re.MULTILINE | re.IGNORECASE,
@@ -112,11 +115,14 @@ def extract_pages(pdf_path: str) -> list[dict]:
 
 def detect_sections(pages: list[dict]) -> list[dict]:
     """
-    Group pages into sections based on 4-digit section headers.
+    Group pages into sections based on 4-digit section headers and Appendix headers.
     Returns list of {section_number, section_title, page_start, page_end, text}.
 
     Uses finditer() to catch multiple section headers on a single page (e.g. a
     page that begins section 3200 and immediately defines section 3205).
+    Appendix sections use a compact key like "AppendixA"; repeated headers for the
+    same appendix are treated as continuations (via seen_sections) so all Appendix A
+    content accumulates into one section entry.
     """
     sections = []
     current = None
@@ -124,11 +130,16 @@ def detect_sections(pages: list[dict]) -> list[dict]:
 
     for p in pages:
         page_text = p["text"]
-        new_matches = [
-            (m.start(), m.group(1), m.group(2))
-            for m in SECTION_RE.finditer(page_text)
-            if m.group(1) not in seen_sections
-        ]
+        # Build matches deduped against both prior pages (seen_sections) and
+        # same-page repeats (e.g. running headers). A second "Appendix A ..."
+        # line on the same page must not create a second section entry.
+        _seen_this_page: set[str] = set()
+        new_matches = []
+        for m in SECTION_RE.finditer(page_text):
+            num = m.group('num').replace(' ', '')
+            if num not in seen_sections and num not in _seen_this_page:
+                _seen_this_page.add(num)
+                new_matches.append((m.start(), num, m.group('title')))
 
         if not new_matches:
             if current:
