@@ -31,7 +31,7 @@ function Navbar() {
     return (
       <nav className="navbar">
         <h1 className="navbar-title">PeerCoPilot</h1>
-
+        <a href="/about.html" className="navbar-profile-link">About</a>
       </nav>
     );
 
@@ -126,6 +126,13 @@ function Navbar() {
           >
             My Profile
           </button>
+          <a
+            href="/about.html"
+            className="navbar-profile-link navbar-footer-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </a>
           <Logout />
         </div>
       </div>

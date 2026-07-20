@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="PeerCoPilot: a language model-powered assistant for behavioral health organizations. Project page for our IAAI 26 and CHI 26 papers.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PeerCoPilot</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <link rel="icon" href="./favicon.svg">
+
+  <style>
+    body { font-family: 'Noto Sans', sans-serif; }
+    .publication-title { font-family: 'Google Sans', sans-serif; }
+    .publication-authors .author-block { display: inline-block; }
+    .publication-links { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+    .hero.teaser img { max-width: 100%; display: block; margin: 0 auto; border-radius: 6px; }
+    .has-text-justified { text-align: justify; }
+    pre { text-align: left; }
+    .paper-card { border: 1px solid #ededed; border-radius: 10px; padding: 2rem; margin-bottom: 2rem; text-align: left; }
+    .container.is-max-desktop { max-width: 1200px; }
+    @media screen and (min-width: 1024px) {
+      .container.is-max-desktop { max-width: 1200px; }
+    }
+    .section { padding: 2rem 1rem; }
+    body { padding: 0 1rem; }
+    .paper-venue { display: inline-block; background: #363636; color: #fff; border-radius: 999px; padding: 0.15rem 0.85rem; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.03em; margin-bottom: 0.75rem; }
+    .paper-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PeerCoPilot</h1>
+          <h2 class="subtitle is-4">
+            A Language Model-Powered Assistant for Behavioral Health Organizations
+          </h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="#">Gao Mo</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Naveen Raman</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Megan Chai</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Cindy Peng</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Shannon Pagdon</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="#">Ningjing Tang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Nev Jones</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="#">Hong Shen</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Margaret Swarbrick</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="#">Fei Fang</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Carnegie Mellon University,</span>
+            <span class="author-block"><sup>2</sup>University of Pittsburgh,</span>
+            <span class="author-block"><sup>3</sup>CSPNJ / Rutgers University</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./about-img/teaser.jpg" alt="PeerCoPilot system diagram: a service user situation is passed from a peer provider to PeerCoPilot, which draws on trusted resources and an LLM to return a wellness plan, resources, and goals back to the peer provider for use in a peer session.">
+      <h2 class="subtitle has-text-centered">
+        PeerCoPilot connects peer providers to trusted resources and an LLM backend to generate
+        wellness plans, goals, and resource recommendations for service users.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            Behavioral health conditions, which include mental health and substance use disorders, are the
+            leading disease burden in the United States. Peer-run behavioral health organizations (PROs)
+            critically assist individuals facing these conditions by combining mental health services with
+            assistance for needs such as income, employment, and housing. However, limited funds and staffing
+            make it difficult for PROs to address all service user needs.
+          </p>
+          <p>
+            <strong>PeerCoPilot</strong> is a large language model (LLM)-powered assistant that helps peer
+            providers create wellness plans, construct step-by-step goals, and locate organizational resources
+            to support these goals. Below are our two papers describing the system and our work understanding
+            how peer specialists and service users perceive it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="paper-card">
+      <span class="paper-venue">IAAI 2026</span>
+      <div class="paper-title">PeerCoPilot: A Language Model-Powered Assistant for Behavioral Health Organizations</div>
+
+      <div class="publication-links" style="justify-content: flex-start;">
+        <span class="link-block">
+          <a href="https://arxiv.org/abs/2511.21721" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="ai ai-arxiv"></i></span>
+            <span>arXiv</span>
+          </a>
+        </span>
+        <span class="link-block">
+          <a href="https://github.com/avp123/community_services_llm" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>Code</span>
+          </a>
+        </span>
+      </div>
+
+      <div class="content has-text-justified" style="margin-top: 1.5rem;">
+        <p>
+          Behavioral health conditions, which include mental health and substance use disorders, are the
+          leading disease burden in the United States. Peer-run behavioral health organizations (PROs)
+          critically assist individuals facing these conditions by combining mental health services with
+          assistance for needs such as income, employment, and housing. However, limited funds and staffing
+          make it difficult for PROs to address all service user needs. To assist peer providers at PROs with
+          their day-to-day tasks, we introduce PeerCoPilot, a large language model (LLM)-powered assistant
+          that helps peer providers create wellness plans, construct step-by-step goals, and locate
+          organizational resources to support these goals. PeerCoPilot ensures information reliability through
+          a retrieval-augmented generation pipeline backed by a large database of over 1,300 vetted resources.
+          We conducted human evaluations with 15 peer providers and 6 service users and found that over 90% of
+          users supported using PeerCoPilot. Moreover, we demonstrated that PeerCoPilot provides more reliable
+          and specific information than a baseline LLM. PeerCoPilot is now used by a group of 5-10 peer
+          providers at CSPNJ, a large behavioral health organization serving over 10,000 service users, and we
+          are actively expanding PeerCoPilot's use.
+        </p>
+      </div>
+
+      <pre><code>@inproceedings{mo2026peercopilot,
+  title={PeerCoPilot: A Language Model-Powered Assistant for Behavioral Health Organizations},
+  author={Mo, Gao and Raman, Naveen Janaki and Chai, Megan and Peng, Cindy and Pagdon, Shannon and Jones, Nev and Shen, Hong and Swarbrick, Margaret and Fang, Fei},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={47},
+  pages={40351--40361},
+  year={2026}
+}</code></pre>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-venue">CHI 2026</span>
+      <div class="paper-title">Large Language Models in Peer-Run Community Behavioral Health Services: Understanding Peer Specialists and Service Users' Perspectives on Opportunities, Risks, and Mitigation Strategies</div>
+
+      <div class="publication-links" style="justify-content: flex-start;">
+        <span class="link-block">
+          <a href="https://arxiv.org/abs/2602.08187" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="ai ai-arxiv"></i></span>
+            <span>arXiv</span>
+          </a>
+        </span>
+      </div>
+
+      <div class="content has-text-justified" style="margin-top: 1.5rem;">
+        <p>
+          Peer-run organizations (PROs) provide critical, recovery-based behavioral health support rooted in
+          lived experience. As large language models (LLMs) enter this domain, their scale, conversationality,
+          and opacity introduce new challenges for situatedness, trust, and autonomy. Partnering with
+          Collaborative Support Programs of New Jersey (CSPNJ), a statewide PRO in the Northeastern United
+          States, we used comicboarding, a co-design method, to conduct workshops with 16 peer specialists and
+          10 service users exploring perceptions of integrating an LLM-based recommendation system into peer
+          support. Findings show that depending on how LLMs are introduced, constrained, and co-used, they can
+          reconfigure in-room dynamics by sustaining, undermining, or amplifying the relational authority that
+          grounds peer support. We identify opportunities, risks, and mitigation strategies across three
+          tensions: bridging scale and locality, protecting trust and relational dynamics, and preserving peer
+          autonomy amid efficiency gains. We contribute design implications that center
+          lived-experience-in-the-loop, reframe trust as co-constructed, and position LLMs not as clinical
+          tools but as relational collaborators in high-stakes, community-led care.
+        </p>
+      </div>
+
+      <pre><code>@inproceedings{peng2026large,
+  title={Large Language Models in Peer-Run Community Behavioral Health Services: Understanding Peer Specialists and Service Users’ Perspectives on Opportunities, Risks, and Mitigation Strategies},
+  author={Peng, Cindy and Chai, Megan and Mo, Gao and Raman, Naveen and Tang, Ningjing and Pagdon, Shannon and Swarbrick, Margaret and Jones, Nev and Fang, Fei and Shen, Hong},
+  booktitle={Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  pages={1--24},
+  year={2026}
+}</code></pre>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        This page was built using the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page template.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

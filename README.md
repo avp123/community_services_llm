@@ -3,9 +3,9 @@
     <img src="./img/small_pull.png" width="512">
 </p>
 
-This repository contains the implementation for the paper **"PeerCopilot: A Language Model-Powered Assistant for Behavioral Health Organizations"** (IAAI 2025).
+This repository contains the implementation for the paper **"PeerCopilot: A Language Model-Powered Assistant for Behavioral Health Organizations"** (IAAI 2026).
 
-**Paper:** [arXiv:2511.21721](https://arxiv.org/abs/2511.21721) | [PDF](https://arxiv.org/pdf/2511.21721)
+**Paper:** [arXiv](https://arxiv.org/abs/2511.21721) | [PDF](https://arxiv.org/pdf/2511.21721)
 
 This work was done by Gao Mo*, Naveen Raman*, Megan Chai, Cindy Peng, Shannon Pagdon, Nev Jones, Hong Shen, Peggy Swarbrick, Fei Fang.
 
