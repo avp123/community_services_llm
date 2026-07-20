@@ -2,6 +2,9 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "eslint-plugin-jest": "^27.9.0"
+  },
   "dependencies": {
     "@microsoft/fetch-event-source": "^2.0.1",
     "@testing-library/jest-dom": "^5.17.0",
@@ -34,8 +37,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
