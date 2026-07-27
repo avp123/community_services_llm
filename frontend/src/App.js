@@ -1,6 +1,6 @@
 // App.js - Main React application routes and layout with auto-logout
 import React, { useContext, useCallback, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import AuditLogs from './components/AuditLogs';
@@ -85,12 +85,14 @@ function AppContent() {
   );
 
   const location = useLocation();
-  const isSnap = location.pathname === '/snap';
+  const isSnap = location.pathname.startsWith('/snap');
 
   if (isSnap) {
     return (
       <Routes>
-        <Route path="/snap" element={<SnapChat />} />
+        <Route path="/snap" element={<Navigate to="/snap/caseworker" replace />} />
+        <Route path="/snap/caseworker" element={<SnapChat mode="expert" />} />
+        <Route path="/snap/applicant" element={<SnapChat mode="simple" />} />
       </Routes>
     );
   }

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
@@ -239,11 +240,10 @@ function Message({ msg, mode, onOpen, onAsk }) {
 
 // ── Main ─────────────────────────────────────────────────────────────────────
 
-export default function SnapChat() {
+export default function SnapChat({ mode }) {
   const [inputText, setInputText] = useState('');
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [mode, setMode] = useState('expert');
   const [pdfPanel, setPdfPanel] = useState(null);
 
   const onAsk = useCallback((question) => {
@@ -343,31 +343,25 @@ export default function SnapChat() {
 
   const hasMessages = messages.length > 0;
 
+  const isApplicant = mode === 'simple';
+
   return (
-    <div className={`snap-root ${pdfPanel ? 'snap-root--panel-open' : ''}`}>
+    <div className={`snap-root ${isApplicant ? 'snap-root--applicant' : 'snap-root--caseworker'} ${pdfPanel ? 'snap-root--panel-open' : ''}`}>
       <SnapPdfPanel panel={pdfPanel} onClose={() => setPdfPanel(null)} />
       <header className="snap-header">
         <div className="snap-header-inner">
           <div className="snap-logo">
             <span className="snap-logo-mark">P</span>
             <span className="snap-logo-text">PeerCoPilot</span>
-            <span className="snap-logo-pill">Georgia SNAP</span>
+            <span className="snap-logo-pill">Georgia SNAP · {isApplicant ? 'Applicant' : 'Caseworker'}</span>
           </div>
           <div className="snap-header-right">
-            <div className="snap-mode-toggle">
-              <button
-                className={`snap-mode-btn ${mode === 'expert' ? 'snap-mode-btn--active' : ''}`}
-                onClick={() => setMode('expert')}
-              >
-                Caseworker
-              </button>
-              <button
-                className={`snap-mode-btn ${mode === 'simple' ? 'snap-mode-btn--active' : ''}`}
-                onClick={() => setMode('simple')}
-              >
-                Applicant
-              </button>
-            </div>
+            <Link
+              className="snap-mode-switch-link"
+              to={isApplicant ? '/snap/caseworker' : '/snap/applicant'}
+            >
+              Switch to {isApplicant ? 'Caseworker' : 'Applicant'} view
+            </Link>
             <button className="snap-new-btn" onClick={() => setMessages([])}>
               + New
             </button>
