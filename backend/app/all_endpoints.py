@@ -60,6 +60,11 @@ from backend.app.database import (
     delete_conversation_for_user,
     get_session_feedback,
     upsert_session_feedback_answer,
+    save_snap_turn,
+    list_snap_conversations,
+    get_snap_conversation_messages,
+    delete_snap_conversation,
+    get_snap_usage_analytics,
 )
 from backend.app.generate_outreach import generate_check_ins_rule_based
 from backend.app.notifications import notification_job
@@ -391,6 +396,7 @@ class SnapQueryRequest(BaseModel):
     question: str
     conversation_history: Optional[list] = None
     mode: str = "expert"
+    conversation_id: Optional[str] = None
 
 _snap_pdf_cache: bytes | None = None
 
@@ -426,9 +432,73 @@ async def snap_query_endpoint(
             request.conversation_history or [],
             mode=request.mode,
         )
+        ok, conv_id_or_err = save_snap_turn(
+            current_user.username, request.mode, request.question, result,
+            conversation_id=request.conversation_id,
+        )
+        if ok:
+            result = {**result, "conversation_id": conv_id_or_err}
+        else:
+            print(f"[SNAP] save_snap_turn failed: {conv_id_or_err}")
         return {"success": True, **result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/snap/conversations")
+async def snap_conversations_list(
+    mode: str,
+    current_user: UserData = Depends(get_current_user),
+):
+    """List the current user's SNAP conversation history for one mode."""
+    success, result = list_snap_conversations(current_user.username, mode)
+    if not success:
+        raise HTTPException(status_code=500, detail=result)
+    return {"success": True, "conversations": result}
+
+
+@app.get("/api/snap/conversations/{conversation_id}")
+async def snap_conversation_detail(
+    conversation_id: str,
+    current_user: UserData = Depends(get_current_user),
+):
+    """Return the transcript for one SNAP conversation if owned by the current user."""
+    success, payload = get_snap_conversation_messages(conversation_id, current_user.username)
+    if not success:
+        if payload == "not_found":
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        if payload == "forbidden":
+            raise HTTPException(status_code=403, detail="Not your conversation")
+        raise HTTPException(status_code=500, detail=payload)
+    return {"success": True, **payload, "conversation_id": conversation_id}
+
+
+@app.delete("/api/snap/conversations/{conversation_id}")
+async def snap_conversation_delete(
+    conversation_id: str,
+    current_user: UserData = Depends(get_current_user),
+):
+    """Delete a SNAP conversation owned by the current user."""
+    success, msg = delete_snap_conversation(conversation_id, current_user.username)
+    if not success:
+        if msg == "not_found":
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        if msg == "forbidden":
+            raise HTTPException(status_code=403, detail="Not your conversation")
+        raise HTTPException(status_code=500, detail=msg)
+    return {"success": True, "message": "Deleted"}
+
+
+@app.get("/api/snap/analytics")
+async def snap_usage_analytics(
+    mode: str,
+    current_user: UserData = Depends(get_current_user),
+):
+    """Usage analytics (conversation/question counts, recent activity) for the current user + mode."""
+    success, result = get_snap_usage_analytics(current_user.username, mode)
+    if not success:
+        raise HTTPException(status_code=500, detail=result)
+    return {"success": True, **result}
 
 
 # Health check endpoints

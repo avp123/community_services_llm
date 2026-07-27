@@ -12,6 +12,9 @@ import OutreachCalendar from './components/OutreachCalendar';
 import ChatHistory from './components/ChatHistory';
 import Register from './components/Register';
 import SnapChat from './components/SnapChat';
+import SnapLogin from './components/SnapLogin';
+import SnapRegister from './components/SnapRegister';
+import SnapHistory from './components/SnapHistory';
 import { useInactivityTimeout } from './utils/useInactivityTimeout';
 import { API_URL } from './config';
 import { USER_DISPLAY_NAME_KEY, writeStoredDisplayName } from './utils/accountDisplayName';
@@ -21,6 +24,17 @@ import './styles/layouts/content-layout.css';
 import './styles/components/common.css';
 import './styles/components/navbar.css';
 import './styles/responsive.css';
+
+// Gates a SNAP route behind login, redirecting to the themed SNAP login (not the main /login)
+function SnapAuthGate({ mode, children }) {
+  const location = useLocation();
+  const hasToken = !!localStorage.getItem('accessToken');
+  if (!hasToken) {
+    const next = encodeURIComponent(location.pathname + location.search);
+    return <Navigate to={`/snap/login?mode=${mode}&next=${next}`} replace />;
+  }
+  return children;
+}
 
 // Inner component that has access to Router context
 function AppContent() {
@@ -91,8 +105,12 @@ function AppContent() {
     return (
       <Routes>
         <Route path="/snap" element={<Navigate to="/snap/caseworker" replace />} />
-        <Route path="/snap/caseworker" element={<SnapChat mode="expert" />} />
-        <Route path="/snap/applicant" element={<SnapChat mode="simple" />} />
+        <Route path="/snap/login" element={<SnapLogin />} />
+        <Route path="/snap/register" element={<SnapRegister />} />
+        <Route path="/snap/caseworker" element={<SnapAuthGate mode="expert"><SnapChat mode="expert" /></SnapAuthGate>} />
+        <Route path="/snap/applicant" element={<SnapAuthGate mode="simple"><SnapChat mode="simple" /></SnapAuthGate>} />
+        <Route path="/snap/caseworker/history" element={<SnapAuthGate mode="expert"><SnapHistory mode="expert" /></SnapAuthGate>} />
+        <Route path="/snap/applicant/history" element={<SnapAuthGate mode="simple"><SnapHistory mode="simple" /></SnapAuthGate>} />
       </Routes>
     );
   }

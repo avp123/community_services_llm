@@ -108,6 +108,12 @@
   transition: background 0.15s, color 0.15s;
 }
 
+.snap-logout-btn {
+  font: inherit;
+  cursor: pointer;
+  background: transparent;
+}
+
 .snap-mode-switch-link:hover {
   background: var(--snap-accent);
   border-color: var(--snap-accent);
