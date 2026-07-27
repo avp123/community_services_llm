@@ -16,6 +16,11 @@ import numpy as np
 
 from backend.app.rag_utils import get_model_and_indices
 from backend.app.tools import *
+from backend.app.llm_budget import (
+    accumulate_usage,
+    accumulate_usage_from_stream_event,
+    azure_chat_stream_options,
+)
 from backend.app.utils import (
     call_chatgpt_api_all_chats,
     stream_process_chatgpt_response,
@@ -226,6 +231,7 @@ def get_questions_resources(
     all_messages: list,
     organization: str,
     k: int = 5,
+    usage_accumulator: Optional[dict] = None,
 ) -> tuple:
     """
     Process user situation and generate goals, questions, and resources.
@@ -251,13 +257,13 @@ def get_questions_resources(
         message_lists.append(messages)
 
     # Parallel API calls
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        responses = list(
-            executor.map(
-                lambda msgs: call_chatgpt_api_all_chats(msgs, stream=False),
-                message_lists,
-            )
+    def _parallel_chat(msgs):
+        return call_chatgpt_api_all_chats(
+            msgs, stream=False, usage_accumulator=usage_accumulator
         )
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        responses = list(executor.map(_parallel_chat, message_lists))
 
     print(f"[Pipeline] Initial responses at {time.time()}")
 
@@ -312,6 +318,7 @@ def get_questions_resources(
             {"role": "user", "content": "\n".join(unique_resources)},
         ],
         stream=False,
+        usage_accumulator=usage_accumulator,
     )
 
     print(f"[Pipeline] Resources refined at {time.time()}")
@@ -411,6 +418,7 @@ def fetch_goals_and_resources(
     all_messages: list,
     organization: str,
     k: int = 25,
+    usage_accumulator: Optional[dict] = None,
 ) -> tuple:
     """
     Main entry point for legacy goals and resources pipeline.
@@ -424,6 +432,7 @@ def fetch_goals_and_resources(
         all_messages,
         organization,
         k=k,
+        usage_accumulator=usage_accumulator,
     )
 
     print(f"[Pipeline] Questions/resources done at {time.time()}")
@@ -532,6 +541,7 @@ def _legacy_construct_response(
     external_resources: str,
     raw_prompt: str,
     profile_custom_prompt: Optional[str] = None,
+    usage_accumulator: Optional[dict] = None,
 ):
     """
     Legacy response generation with streaming.
@@ -564,8 +574,9 @@ def _legacy_construct_response(
             chat_msgs,
             stream=True,
             max_tokens=500,
+            usage_accumulator=usage_accumulator,
         )
-        yield from stream_process_chatgpt_response(response)
+        yield from stream_process_chatgpt_response(response, usage_accumulator)
         return
 
     # Brief goals only branch (kept for completeness)
@@ -588,8 +599,9 @@ def _legacy_construct_response(
             msgs,
             stream=True,
             max_tokens=200,
+            usage_accumulator=usage_accumulator,
         )
-        yield from stream_process_chatgpt_response(response)
+        yield from stream_process_chatgpt_response(response, usage_accumulator)
         return
 
     # ChatGPT mode branch (not used in current integration, but retained)
@@ -614,8 +626,9 @@ def _legacy_construct_response(
             msgs,
             stream=True,
             max_tokens=750,
+            usage_accumulator=usage_accumulator,
         )
-        yield from stream_process_chatgpt_response(response)
+        yield from stream_process_chatgpt_response(response, usage_accumulator)
         return
 
     # Full copilot orchestration (main path)
@@ -641,8 +654,9 @@ def _legacy_construct_response(
         orchestration_messages,
         stream=True,
         max_tokens=1000,
+        usage_accumulator=usage_accumulator,
     )
-    yield from stream_process_chatgpt_response(response)
+    yield from stream_process_chatgpt_response(response, usage_accumulator)
 
 
 def construct_response(
@@ -654,6 +668,7 @@ def construct_response(
     profile_custom_prompt: Optional[str] = None,
     system_prompt_base: Optional[str] = None,
     tool_call_names_out: Optional[List[str]] = None,
+    usage_accumulator: Optional[dict] = None,
 ):
     # Route to appropriate version implementation
     print(f"[construct_response] Version received: {version}")  # Add this
@@ -668,18 +683,29 @@ def construct_response(
             profile_custom_prompt,
             system_prompt_base=system_prompt_base,
             tool_call_names_out=tool_call_names_out,
+            usage_accumulator=usage_accumulator,
         )
     elif version == "old":
         # OLD VERSION: RAG retrieval → inject into prompt → GPT call (no tools)
         print("[construct_response] Routing to OLD VERSION")  # Add this
         return _construct_response_old(
-            situation, all_messages, model, organization, profile_custom_prompt
+            situation,
+            all_messages,
+            model,
+            organization,
+            profile_custom_prompt,
+            usage_accumulator=usage_accumulator,
         )
     elif version == "vanilla":
         # VANILLA GPT: Simple prompt → GPT call (no RAG, no tools)
         print("[construct_response] Routing to VANILLA VERSION")  # Add this
         return _construct_response_vanilla(
-            situation, all_messages, model, organization, profile_custom_prompt
+            situation,
+            all_messages,
+            model,
+            organization,
+            profile_custom_prompt,
+            usage_accumulator=usage_accumulator,
         )
     else:
         # Default to new version if unknown version
@@ -692,6 +718,7 @@ def construct_response(
             profile_custom_prompt,
             system_prompt_base=system_prompt_base,
             tool_call_names_out=tool_call_names_out,
+            usage_accumulator=usage_accumulator,
         )
 
 def _construct_response_new(
@@ -702,6 +729,7 @@ def _construct_response_new(
     profile_custom_prompt: Optional[str] = None,
     system_prompt_base: Optional[str] = None,
     tool_call_names_out: Optional[List[str]] = None,
+    usage_accumulator: Optional[dict] = None,
 ):
     print("Organization", organization)
 
@@ -855,10 +883,11 @@ def _construct_response_new(
             response = client.chat.completions.create(
                 model="gpt-5-chat",
                 messages=messages + [{"role": "user", "content": "You have gathered sufficient information. Please provide your final comprehensive answer now."}],
-                stream=True
+                **azure_chat_stream_options(True),
             )
             for event in response:
-                if event.choices[0].delta.content:
+                accumulate_usage_from_stream_event(usage_accumulator, event)
+                if event.choices and event.choices[0].delta.content:
                     yield f"data: {event.choices[0].delta.content.replace(chr(10), '<br/>')}\n\n"
             break
         
@@ -866,8 +895,10 @@ def _construct_response_new(
             model="gpt-5-chat",
             messages=messages,
             tools=tools,
-            tool_choice="auto"
+            tool_choice="auto",
+            stream=False,
         )
+        accumulate_usage(usage_accumulator, response)
 
         choice = response.choices[0]
 
@@ -888,10 +919,11 @@ def _construct_response_new(
             response = client.chat.completions.create(
                 model="gpt-5-chat",
                 messages=messages + [{"role": "user", "content": "You have gathered sufficient information. Please provide your final comprehensive answer now."}],
-                stream=True
+                **azure_chat_stream_options(True),
             )
             for event in response:
-                if event.choices[0].delta.content:
+                accumulate_usage_from_stream_event(usage_accumulator, event)
+                if event.choices and event.choices[0].delta.content:
                     yield f"data: {event.choices[0].delta.content.replace(chr(10), '<br/>')}\n\n"
             break
 
@@ -993,6 +1025,7 @@ def _construct_response_old(
     model: str,
     organization: str,
     profile_custom_prompt: Optional[str] = None,
+    usage_accumulator: Optional[dict] = None,
 ):
     """
     Old version: recreate the legacy goals/questions/resources pipeline
@@ -1005,6 +1038,7 @@ def _construct_response_old(
         all_messages=all_messages,
         organization=organization,
         k=25,
+        usage_accumulator=usage_accumulator,
     )
 
     # 2) Stream the final response using the legacy orchestration logic.
@@ -1018,6 +1052,7 @@ def _construct_response_old(
         external_resources=external_resources,
         raw_prompt=raw_prompt,
         profile_custom_prompt=profile_custom_prompt,
+        usage_accumulator=usage_accumulator,
     )
 
 def _construct_response_vanilla(
@@ -1026,6 +1061,7 @@ def _construct_response_vanilla(
     model: str,
     organization: str,
     profile_custom_prompt: Optional[str] = None,
+    usage_accumulator: Optional[dict] = None,
 ):
     """Vanilla GPT: Simple prompt → GPT call (no RAG, no tools)."""
     # Build messages with simple system prompt
@@ -1044,11 +1080,12 @@ def _construct_response_vanilla(
     response = client.chat.completions.create(
         model="gpt-5-chat",
         messages=messages,
-        stream=True
+        **azure_chat_stream_options(True),
     )
     
     for event in response:
-        if event.choices[0].delta.content:
+        accumulate_usage_from_stream_event(usage_accumulator, event)
+        if event.choices and event.choices[0].delta.content:
             formatted_content = event.choices[0].delta.content.replace("\n", "<br/>")
             yield f"data: {formatted_content}\n\n"
     
