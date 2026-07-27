@@ -95,32 +95,35 @@
   gap: 10px;
 }
 
-/* ── Mode toggle ── */
-.snap-mode-toggle {
-  display: flex;
-  background: #f0ebe5;
-  border-radius: 20px;
-  padding: 3px;
-  gap: 2px;
-}
-
-.snap-mode-btn {
-  padding: 5px 13px;
+/* ── Switch-view link (replaces old in-page mode toggle) ── */
+.snap-mode-switch-link {
+  padding: 6px 13px;
   border-radius: 17px;
-  border: none;
-  background: transparent;
+  border: 1px solid var(--snap-border);
   color: var(--snap-text-muted);
   font-size: 12px;
   font-weight: 500;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
   white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
 }
 
-.snap-mode-btn--active {
-  background: #fff;
-  color: var(--snap-text);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+.snap-logout-btn {
+  font: inherit;
+  cursor: pointer;
+  background: transparent;
+}
+
+.snap-mode-switch-link:hover {
+  background: var(--snap-accent);
+  border-color: var(--snap-accent);
+  color: #fff;
+}
+
+/* ── Applicant theme: dark blue, distinct from caseworker red ── */
+.snap-root--applicant {
+  --snap-accent: #1b3a6b;
+  --snap-accent-hover: #142c52;
 }
 
 .snap-new-btn {

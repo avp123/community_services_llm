@@ -281,7 +281,8 @@ def _rewrite_query(question: str) -> str:
             messages=[{"role": "user", "content": _REWRITE_PROMPT.format(question=question)}],
             max_completion_tokens=40,
         )
-        return resp.choices[0].message.content.strip()
+        rewritten = (resp.choices[0].message.content or "").strip()
+        return rewritten or question
     except Exception:
         return question
 

@@ -1,9 +1,11 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import { authenticatedFetch } from '../utils/api';
 import SnapPdfPanel from './SnapPdfPanel';
+import SnapLogout from './SnapLogout';
 import '../styles/components/snap.css';
 
 // ── Inline citation badge with hover tooltip ────────────────────────────────
@@ -239,12 +241,38 @@ function Message({ msg, mode, onOpen, onAsk }) {
 
 // ── Main ─────────────────────────────────────────────────────────────────────
 
-export default function SnapChat() {
+export default function SnapChat({ mode }) {
   const [inputText, setInputText] = useState('');
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [mode, setMode] = useState('expert');
   const [pdfPanel, setPdfPanel] = useState(null);
+  const [conversationId, setConversationId] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Resume a past conversation when arriving via ?c=<id> (e.g. from History)
+  useEffect(() => {
+    const c = searchParams.get('c');
+    if (!c || c === conversationId) return;
+    (async () => {
+      try {
+        const res = await authenticatedFetch(`/api/snap/conversations/${c}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        setMessages((data.messages || []).map(m => ({
+          sender: m.sender === 'user' ? 'user' : 'bot',
+          text: m.text,
+          sources: m.sources || [],
+          flags: m.flags || [],
+          questions: m.questions || [],
+          resource: m.resource || null,
+        })));
+        setConversationId(c);
+      } catch {
+        /* leave chat empty if the conversation can't be loaded */
+      }
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   const onAsk = useCallback((question) => {
     setInputText(question);
@@ -305,7 +333,7 @@ export default function SnapChat() {
     try {
       const res = await authenticatedFetch('/api/snap/query', {
         method: 'POST',
-        body: JSON.stringify({ question, conversation_history: history, mode }),
+        body: JSON.stringify({ question, conversation_history: history, mode, conversation_id: conversationId }),
       });
       const data = await res.json();
       setMessages(prev => {
@@ -321,6 +349,10 @@ export default function SnapChat() {
         };
         return updated;
       });
+      if (data.conversation_id && data.conversation_id !== conversationId) {
+        setConversationId(data.conversation_id);
+        setSearchParams({ c: data.conversation_id }, { replace: true });
+      }
     } catch {
       setMessages(prev => {
         const updated = [...prev];
@@ -335,7 +367,7 @@ export default function SnapChat() {
     } finally {
       setIsLoading(false);
     }
-  }, [inputText, isLoading, messages, buildHistory, mode]);
+  }, [inputText, isLoading, messages, buildHistory, mode, conversationId, setSearchParams]);
 
   const handleKeyDown = useCallback((e) => {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSubmit(); }
@@ -343,34 +375,42 @@ export default function SnapChat() {
 
   const hasMessages = messages.length > 0;
 
+  const isApplicant = mode === 'simple';
+
   return (
-    <div className={`snap-root ${pdfPanel ? 'snap-root--panel-open' : ''}`}>
+    <div className={`snap-root ${isApplicant ? 'snap-root--applicant' : 'snap-root--caseworker'} ${pdfPanel ? 'snap-root--panel-open' : ''}`}>
       <SnapPdfPanel panel={pdfPanel} onClose={() => setPdfPanel(null)} />
       <header className="snap-header">
         <div className="snap-header-inner">
           <div className="snap-logo">
             <span className="snap-logo-mark">P</span>
             <span className="snap-logo-text">PeerCoPilot</span>
-            <span className="snap-logo-pill">Georgia SNAP</span>
+            <span className="snap-logo-pill">Georgia SNAP · {isApplicant ? 'Applicant' : 'Caseworker'}</span>
           </div>
           <div className="snap-header-right">
-            <div className="snap-mode-toggle">
-              <button
-                className={`snap-mode-btn ${mode === 'expert' ? 'snap-mode-btn--active' : ''}`}
-                onClick={() => setMode('expert')}
-              >
-                Caseworker
-              </button>
-              <button
-                className={`snap-mode-btn ${mode === 'simple' ? 'snap-mode-btn--active' : ''}`}
-                onClick={() => setMode('simple')}
-              >
-                Applicant
-              </button>
-            </div>
-            <button className="snap-new-btn" onClick={() => setMessages([])}>
+            <Link
+              className="snap-mode-switch-link"
+              to={isApplicant ? '/snap/caseworker' : '/snap/applicant'}
+            >
+              Switch to {isApplicant ? 'Caseworker' : 'Applicant'} view
+            </Link>
+            <Link
+              className="snap-mode-switch-link"
+              to={isApplicant ? '/snap/applicant/history' : '/snap/caseworker/history'}
+            >
+              History
+            </Link>
+            <button
+              className="snap-new-btn"
+              onClick={() => {
+                setMessages([]);
+                setConversationId(null);
+                setSearchParams({}, { replace: true });
+              }}
+            >
               + New
             </button>
+            <SnapLogout mode={mode} />
           </div>
         </div>
       </header>

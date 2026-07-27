@@ -1526,3 +1526,214 @@ def upsert_session_feedback_answer(
     except Exception as e:
         print(f"[DB] upsert_session_feedback_answer error: {e}")
         return False, str(e)
+
+
+# ── SNAP chat history ─────────────────────────────────────────────────────────
+# Separate from `conversations`/`messages` above: SNAP chats belong directly to
+# the logged-in user (no service_user_id) and are scoped by mode
+# ('expert' = caseworker, 'simple' = applicant). See migrations/006_snap_conversations.sql.
+
+def save_snap_turn(
+    username: str,
+    mode: str,
+    question: str,
+    answer_payload: Dict[str, Any],
+    conversation_id: Optional[str] = None,
+):
+    """
+    Persist one user question + bot answer to snap_conversations/snap_messages.
+    Creates the conversation (titled from the first question) if conversation_id is None.
+
+    Returns (True, conversation_id) or (False, error str).
+    """
+    import uuid
+
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                if conversation_id:
+                    cur.execute(
+                        "SELECT username FROM snap_conversations WHERE id = %s",
+                        (conversation_id,),
+                    )
+                    row = cur.fetchone()
+                    if row is None:
+                        conversation_id = None  # stale id — start a fresh conversation
+                    elif row[0] != username:
+                        return False, "forbidden"
+
+                if not conversation_id:
+                    conversation_id = str(uuid.uuid4())
+                    title = question.strip()[:80] or "New conversation"
+                    cur.execute(
+                        """
+                        INSERT INTO snap_conversations (id, username, mode, title)
+                        VALUES (%s, %s, %s, %s)
+                        """,
+                        (conversation_id, username, mode, title),
+                    )
+
+                cur.execute(
+                    "INSERT INTO snap_messages (conversation_id, sender, text) VALUES (%s, 'user', %s)",
+                    (conversation_id, question),
+                )
+                cur.execute(
+                    """
+                    INSERT INTO snap_messages
+                        (conversation_id, sender, text, sources, flags, questions, resource)
+                    VALUES (%s, 'bot', %s, %s, %s, %s, %s)
+                    """,
+                    (
+                        conversation_id,
+                        answer_payload.get("answer", ""),
+                        json.dumps(answer_payload.get("sources") or []),
+                        json.dumps(answer_payload.get("flags") or []),
+                        json.dumps(answer_payload.get("questions") or []),
+                        json.dumps(answer_payload.get("resource")),
+                    ),
+                )
+                cur.execute(
+                    "UPDATE snap_conversations SET updated_at = NOW() WHERE id = %s",
+                    (conversation_id,),
+                )
+            conn.commit()
+        return True, conversation_id
+    except Exception as e:
+        print(f"[DB] save_snap_turn error: {e}")
+        return False, str(e)
+
+
+def list_snap_conversations(username: str, mode: str, limit: int = 50, offset: int = 0):
+    """List SNAP conversation summaries for one user/mode, most recent first."""
+    limit = max(1, min(int(limit), 200))
+    offset = max(0, int(offset))
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    SELECT
+                        c.id AS conversation_id,
+                        c.title,
+                        c.created_at,
+                        c.updated_at,
+                        COUNT(m.id) FILTER (WHERE m.sender = 'user')::int AS question_count
+                    FROM snap_conversations c
+                    LEFT JOIN snap_messages m ON m.conversation_id = c.id
+                    WHERE c.username = %s AND c.mode = %s
+                    GROUP BY c.id
+                    ORDER BY c.updated_at DESC
+                    LIMIT %s OFFSET %s
+                    """,
+                    (username, mode, limit, offset),
+                )
+                rows = cur.fetchall()
+        for r in rows:
+            r["created_at"] = r["created_at"].isoformat() if r["created_at"] else None
+            r["updated_at"] = r["updated_at"].isoformat() if r["updated_at"] else None
+        return True, rows
+    except Exception as e:
+        print(f"[DB] list_snap_conversations error: {e}")
+        return False, str(e)
+
+
+def get_snap_conversation_messages(conversation_id: str, username: str):
+    """Return (True, {'title', 'mode', 'messages': [...]}) if owned by username, else (False, reason)."""
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT username, mode, title FROM snap_conversations WHERE id = %s",
+                    (conversation_id,),
+                )
+                conv = cur.fetchone()
+                if conv is None:
+                    return False, "not_found"
+                if conv["username"] != username:
+                    return False, "forbidden"
+                cur.execute(
+                    """
+                    SELECT sender, text, sources, flags, questions, resource, created_at
+                    FROM snap_messages
+                    WHERE conversation_id = %s
+                    ORDER BY created_at ASC, id ASC
+                    """,
+                    (conversation_id,),
+                )
+                messages = cur.fetchall()
+        for m in messages:
+            m["created_at"] = m["created_at"].isoformat() if m["created_at"] else None
+        return True, {"title": conv["title"], "mode": conv["mode"], "messages": messages}
+    except Exception as e:
+        print(f"[DB] get_snap_conversation_messages error: {e}")
+        return False, str(e)
+
+
+def delete_snap_conversation(conversation_id: str, username: str):
+    """Hard-delete a SNAP conversation (and its messages, via ON DELETE CASCADE) if owned by username."""
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT username FROM snap_conversations WHERE id = %s",
+                    (conversation_id,),
+                )
+                row = cur.fetchone()
+                if row is None:
+                    return False, "not_found"
+                if row[0] != username:
+                    return False, "forbidden"
+                cur.execute("DELETE FROM snap_conversations WHERE id = %s", (conversation_id,))
+            conn.commit()
+        return True, "deleted"
+    except Exception as e:
+        print(f"[DB] delete_snap_conversation error: {e}")
+        return False, str(e)
+
+
+def get_snap_usage_analytics(username: str, mode: str):
+    """Aggregate SNAP usage stats for one user/mode: conversation & question counts, activity window."""
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            conn.row_factory = dict_row
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    SELECT
+                        COUNT(DISTINCT c.id)::int AS conversation_count,
+                        COUNT(m.id) FILTER (WHERE m.sender = 'user')::int AS question_count,
+                        MIN(m.created_at) AS first_question_at,
+                        MAX(m.created_at) AS last_question_at
+                    FROM snap_conversations c
+                    LEFT JOIN snap_messages m ON m.conversation_id = c.id
+                    WHERE c.username = %s AND c.mode = %s
+                    """,
+                    (username, mode),
+                )
+                totals = cur.fetchone()
+                cur.execute(
+                    """
+                    SELECT DATE_TRUNC('day', m.created_at)::date AS day, COUNT(*)::int AS question_count
+                    FROM snap_messages m
+                    JOIN snap_conversations c ON c.id = m.conversation_id
+                    WHERE c.username = %s AND c.mode = %s AND m.sender = 'user'
+                      AND m.created_at >= NOW() - INTERVAL '30 days'
+                    GROUP BY 1
+                    ORDER BY 1
+                    """,
+                    (username, mode),
+                )
+                by_day = cur.fetchall()
+        totals["first_question_at"] = (
+            totals["first_question_at"].isoformat() if totals["first_question_at"] else None
+        )
+        totals["last_question_at"] = (
+            totals["last_question_at"].isoformat() if totals["last_question_at"] else None
+        )
+        totals["by_day"] = [{"day": r["day"].isoformat(), "question_count": r["question_count"]} for r in by_day]
+        return True, totals
+    except Exception as e:
+        print(f"[DB] get_snap_usage_analytics error: {e}")
+        return False, str(e)
