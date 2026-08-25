@@ -1073,14 +1073,13 @@ def _construct_response_vanilla(
     profile_custom_prompt: Optional[str] = None,
     usage_accumulator: Optional[dict] = None,
 ):
-    """Vanilla GPT (Version B): generic system prompt + web search tool, no RAG."""
-    system_prompt = _append_profile_custom_prompt(
-        _VANILLA_SYSTEM_PROMPT,
-        profile_custom_prompt,
-    )
+    """Vanilla GPT (Version B): generic system prompt + web search tool, no RAG.
 
+    Deliberately ignores profile_custom_prompt (unlike Version A) so this baseline
+    stays unbiased by any caseworker-authored custom instructions.
+    """
     messages = [
-        {"role": "system", "content": system_prompt}
+        {"role": "system", "content": _VANILLA_SYSTEM_PROMPT}
     ]
     messages += all_messages
     messages.append({"role": "user", "content": situation})
