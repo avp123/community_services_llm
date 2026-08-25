@@ -685,17 +685,6 @@ def construct_response(
             tool_call_names_out=tool_call_names_out,
             usage_accumulator=usage_accumulator,
         )
-    elif version == "old":
-        # OLD VERSION: RAG retrieval → inject into prompt → GPT call (no tools)
-        print("[construct_response] Routing to OLD VERSION")  # Add this
-        return _construct_response_old(
-            situation,
-            all_messages,
-            model,
-            organization,
-            profile_custom_prompt,
-            usage_accumulator=usage_accumulator,
-        )
     elif version == "vanilla":
         # VANILLA GPT: Simple prompt → GPT call (no RAG, no tools)
         print("[construct_response] Routing to VANILLA VERSION")  # Add this
@@ -1055,6 +1044,27 @@ def _construct_response_old(
         usage_accumulator=usage_accumulator,
     )
 
+_VANILLA_SYSTEM_PROMPT = "You are a helpful assistant. Answer the user's questions."
+
+_VANILLA_WEB_SEARCH_TOOL = [
+    {
+        "type": "function",
+        "function": {
+            "name": "web_search_tool",
+            "description": (
+                "Search the internet for nearby local services, addresses, hours, "
+                "or other information."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {"query": {"type": "string"}},
+                "required": ["query"],
+            },
+        },
+    }
+]
+
+
 def _construct_response_vanilla(
     situation: str,
     all_messages: list,
@@ -1063,31 +1073,59 @@ def _construct_response_vanilla(
     profile_custom_prompt: Optional[str] = None,
     usage_accumulator: Optional[dict] = None,
 ):
-    """Vanilla GPT: Simple prompt → GPT call (no RAG, no tools)."""
-    # Build messages with simple system prompt
+    """Vanilla GPT (Version B): generic system prompt + web search tool, no RAG."""
     system_prompt = _append_profile_custom_prompt(
-        "You are a helpful assistant for CSPNJ peer providers. Answer questions based on your general knowledge.",
+        _VANILLA_SYSTEM_PROMPT,
         profile_custom_prompt,
     )
-    
+
     messages = [
         {"role": "system", "content": system_prompt}
     ]
     messages += all_messages
     messages.append({"role": "user", "content": situation})
-    
-    # Call GPT without tools, without RAG
+
+    MAX_ITERATIONS = 10
+
+    for _ in range(MAX_ITERATIONS):
+        response = client.chat.completions.create(
+            model="gpt-5-chat",
+            messages=messages,
+            tools=_VANILLA_WEB_SEARCH_TOOL,
+            tool_choice="auto",
+            stream=False,
+        )
+        accumulate_usage(usage_accumulator, response)
+        choice = response.choices[0]
+
+        if choice.finish_reason != "tool_calls":
+            final_text = choice.message.content or ""
+            for chunk in final_text.split("\n"):
+                yield f"data: {chunk}<br/>\n\n"
+            yield "[DONE]\n\n"
+            return
+
+        messages.append(choice.message)
+        for tool_call in choice.message.tool_calls:
+            args = json.loads(tool_call.function.arguments)
+            output = web_search_tool(query=args.get("query", ""))
+            messages.append({
+                "role": "tool",
+                "tool_call_id": tool_call.id,
+                "content": output,
+            })
+
+    # Safety valve if the tool loop never converges.
     response = client.chat.completions.create(
         model="gpt-5-chat",
-        messages=messages,
+        messages=messages + [{"role": "user", "content": "Please give your final answer now."}],
         **azure_chat_stream_options(True),
     )
-    
     for event in response:
         accumulate_usage_from_stream_event(usage_accumulator, event)
         if event.choices and event.choices[0].delta.content:
             formatted_content = event.choices[0].delta.content.replace("\n", "<br/>")
             yield f"data: {formatted_content}\n\n"
-    
+
     yield "[DONE]\n\n"
 
