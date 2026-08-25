@@ -9,7 +9,8 @@ import os
 import json
 from datetime import datetime, timedelta
 from backend.app.utils import call_chatgpt_api_all_chats
-from backend.app.database import CONNECTION_STRING
+from backend.app.database import CONNECTION_STRING, increment_monthly_azure_chat_tokens
+from backend.app.llm_budget import accumulate_usage, utc_billing_month_first_day
 import spacy
 
 from openai import AzureOpenAI
@@ -60,7 +61,15 @@ def generate_followup_message(messages):
     for m in messages:
         prior_messages.append({'role': m['sender'], 'content': m['text']})
     all_message_list += prior_messages
-    response = call_chatgpt_api_all_chats(all_message_list, max_tokens=750, stream=False, response_format={"type": "json_object"})
+    acc = {"total": 0}
+    response = call_chatgpt_api_all_chats(
+        all_message_list,
+        max_tokens=750,
+        stream=False,
+        response_format={"type": "json_object"},
+        usage_accumulator=acc,
+    )
+    increment_monthly_azure_chat_tokens(acc["total"], utc_billing_month_first_day())
     return json.loads(response)
 
 
@@ -157,6 +166,10 @@ Rules:
             ],
             response_format={"type": "json_object"},
         )
+
+        acc = {"total": 0}
+        accumulate_usage(acc, response)
+        increment_monthly_azure_chat_tokens(acc["total"], utc_billing_month_first_day())
 
         raw = response.choices[0].message.content.strip()
 

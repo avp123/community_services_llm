@@ -91,6 +91,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   const [generatingCheckIns, setGeneratingCheckIns] = useState(false);
   const [checkIns, setCheckIns] = useState([]);
   const [version, setVersion] = useState('new');
+  const [azureQuotaBlocked, setAzureQuotaBlocked] = useState(false);
 
   // Keep latest values for hydrate 404 guard without putting `conversation` / `isGenerating`
   // in hydrate's useCallback deps — those would change every stream chunk and were forcing the
@@ -241,12 +242,38 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
     return () => window.removeEventListener('peercopilot:planner-reset', onPlannerReset);
   }, [performPlannerReset]);
 
+  useEffect(() => {
+    if (!user?.username) return undefined;
+    let cancelled = false;
+    (async () => {
+      try {
+        const q = await apiGet('/api/azure-chat-quota');
+        if (!cancelled) setAzureQuotaBlocked(!q.allowed);
+      } catch (_) {
+        if (!cancelled) setAzureQuotaBlocked(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [user?.username]);
+
   // Socket setup
   useEffect(() => {
     const newSocket = io(socketServerUrl, SOCKET_CONFIG);
     setSocket(newSocket);
 
-    newSocket.on('connect', () => console.log('[Socket.io] Connected'));
+    const refreshQuota = async () => {
+      try {
+        const q = await apiGet('/api/azure-chat-quota');
+        setAzureQuotaBlocked(!q.allowed);
+      } catch (_) {
+        /* ignore */
+      }
+    };
+
+    newSocket.on('connect', () => {
+      console.log('[Socket.io] Connected');
+      refreshQuota();
+    });
     newSocket.on('conversation_id', (data) => setConversationID(data.conversation_id));
     newSocket.on('welcome', (data) => console.log('[Socket.io] Welcome:', data));
 
@@ -271,7 +298,21 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
 
     newSocket.on('generation_complete', () => {
       setIsGenerating(false);
+      refreshQuota();
       hydrateConversationFromDbRef.current({ allowRegression: false });
+    });
+    newSocket.on('chat_quota_blocked', () => {
+      setAzureQuotaBlocked(true);
+      setIsGenerating(false);
+      setConversation((prev) => {
+        if (prev.length < 2) return prev;
+        const last = prev[prev.length - 1];
+        const second = prev[prev.length - 2];
+        if (last?.sender === 'bot' && last?.text === 'Loading...' && second?.sender === 'user') {
+          return prev.slice(0, -2);
+        }
+        return prev;
+      });
     });
     newSocket.on('error', (e) => console.error('[Socket.io] Error:', e));
     newSocket.on('disconnect', (r) => console.log('[Socket.io] Disconnected:', r));
@@ -326,7 +367,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   }, [setInputLocationText]);
 
   const handleSubmit = useCallback(() => {
-    if (!inputText.trim() || isGenerating || !socket) return;
+    if (azureQuotaBlocked || !inputText.trim() || isGenerating || !socket) return;
     const messageText = inputText.trim();
     // Build history from visible thread (not chatConvo): chatConvo can lag after navigation because
     // hydrate is skipped when conversation already has bubbles. Server session is keyed by socket sid
@@ -371,6 +412,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
     tool,
     version,
     selectedServiceUser,
+    azureQuotaBlocked,
     setConversation,
     setChatConvo,
     setInputText,
@@ -491,11 +533,17 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
           <button className="submit-button generate-checkins-button"
             style={{ width: 'auto', padding: '8px 16px', fontSize: '14px', whiteSpace: 'nowrap' }}
             onClick={handleGenerateCheckIns}
-            disabled={!selectedServiceUser || generatingCheckIns}>
+            disabled={azureQuotaBlocked || !selectedServiceUser || generatingCheckIns}>
             {generatingCheckIns ? 'Generating...' : 'Generate Check-ins'}
           </button>
 
           <h2 className="instruction">What are the member&apos;s needs and goals for today&apos;s meeting?</h2>
+
+          {azureQuotaBlocked ? (
+            <p className="chat-quota-notice" role="alert" style={{ margin: '8px 0', color: '#b45309', fontSize: '14px' }}>
+              Monthly AI limit reached for this site. Chat resets on the next calendar month (UTC). You can still browse history and use non-AI actions.
+            </p>
+          ) : null}
 
           <div role="status" className="chat-sr-status">
             {isGenerating ? 'Assistant is replying.' : ''}
@@ -558,8 +606,9 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
           <textarea className="input-bar" ref={inputRef}
             placeholder={submitted ? 'Write a follow-up to update...' : "Describe the member's situation..."}
             value={inputText} onChange={handleInputChange} onKeyDown={handleKeyDown}
-            rows={1} style={{ overflow: 'hidden', resize: 'none' }} />
-          <button className="submit-button" onClick={handleSubmit}>➤</button>
+            rows={1} style={{ overflow: 'hidden', resize: 'none' }}
+            disabled={azureQuotaBlocked} readOnly={azureQuotaBlocked} aria-disabled={azureQuotaBlocked} />
+          <button className="submit-button" onClick={handleSubmit} disabled={azureQuotaBlocked}>➤</button>
         </div>
 
         {showResetWarning && (

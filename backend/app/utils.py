@@ -7,6 +7,12 @@ import os
 
 from openai import AzureOpenAI
 
+from backend.app.llm_budget import (
+    accumulate_usage,
+    accumulate_usage_from_stream_event,
+    azure_chat_stream_options,
+)
+
 client = AzureOpenAI(
     api_key=os.environ.get("OPENAI_API_KEY_AZURE"),
     azure_endpoint=os.environ.get("OPENAI_AZURE_ENDPOINT"),
@@ -33,7 +39,7 @@ def write_text_pdf(text,pdf_loc):
     pdf.output(pdf_loc)
 
 
-def call_chatgpt_api(system_prompt,prompt,stream=True):
+def call_chatgpt_api(system_prompt,prompt,stream=True, usage_accumulator=None):
     """Run ChatGPT with the 4o-mini model for a system prompt
     
     Arguments:
@@ -43,23 +49,24 @@ def call_chatgpt_api(system_prompt,prompt,stream=True):
 
     Returns: String, result from ChatGPT"""
 
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",  
+    kwargs = dict(
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt}
         ],
-        stream=stream,
-
     )
+    kwargs.update(azure_chat_stream_options(stream))
+    response = client.chat.completions.create(**kwargs)
 
     if stream:
         return response
     else:
+        accumulate_usage(usage_accumulator, response)
         return response.choices[0].message.content
 
 
-def call_chatgpt_api_all_chats(all_chats,stream=True,max_tokens=750,response_format=None):
+def call_chatgpt_api_all_chats(all_chats,stream=True,max_tokens=750,response_format=None, usage_accumulator=None):
     """Run ChatGPT with the 4o-mini model for a system prompt
     
     Arguments:
@@ -70,25 +77,27 @@ def call_chatgpt_api_all_chats(all_chats,stream=True,max_tokens=750,response_for
     
     Returns: Either a Stream or String, result from ChatGPT"""
 
+    so = azure_chat_stream_options(stream)
     if response_format is not None:
         response = client.chat.completions.create(
             model="gpt-5-chat",  
             messages=all_chats,
-            stream=stream,
             # max_tokens=max_tokens,
-            response_format=response_format
+            response_format=response_format,
+            **so,
         )
     else:
         response = client.chat.completions.create(
             model="gpt-5-chat",  
             messages=all_chats,
-            stream=stream,
             # max_tokens=max_tokens,
+            **so,
         )
     
     if stream:
         return response
     else:
+        accumulate_usage(usage_accumulator, response)
         return response.choices[0].message.content
 
 
@@ -108,7 +117,7 @@ def extract_text_from_pdf(pdf_file_path):
     return text
 
 
-def stream_process_chatgpt_response(response):
+def stream_process_chatgpt_response(response, usage_accumulator=None):
     """Process a stream from ChatGPT
     
     Arguments:
@@ -117,7 +126,8 @@ def stream_process_chatgpt_response(response):
     Returns: Character-by-character stream from the response"""
     
     for event in response:
-        if event.choices[0].delta.content is not None:
+        accumulate_usage_from_stream_event(usage_accumulator, event)
+        if event.choices and event.choices[0].delta.content is not None:
             current_response = event.choices[0].delta.content
             current_response = current_response.replace("\n", "<br/>")
             yield "data: " + current_response + "\n\n"

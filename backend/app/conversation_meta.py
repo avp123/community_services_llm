@@ -22,7 +22,7 @@ def _fallback_title(scrubbed: str) -> str:
     return cut + "…"
 
 
-def derive_chat_title_from_scrubbed_text(scrubbed: str) -> str:
+def derive_chat_title_from_scrubbed_text(scrubbed: str, usage_accumulator=None) -> str:
     """
     Produce a short list label from already-scrubbed first user message text.
     Uses a small model; falls back to truncated text on failure.
@@ -38,7 +38,7 @@ def derive_chat_title_from_scrubbed_text(scrubbed: str) -> str:
             "no trailing punctuation, describe the topic only. "
             "Output nothing but the title, one line."
         )
-        out = call_chatgpt_api(system, snippet, stream=False)
+        out = call_chatgpt_api(system, snippet, stream=False, usage_accumulator=usage_accumulator)
         title = (out or "").strip().strip('"').strip("'")
         title = re.sub(r"^[\s\-–—]+|[\s\-–—]+$", "", title)
         title = re.sub(r"[\"':]+$", "", title)

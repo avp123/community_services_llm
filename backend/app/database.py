@@ -74,14 +74,18 @@ def _refresh_conversation_stats(cursor, conversation_id: str) -> None:
         print(f"[DB] _refresh_conversation_stats (non-fatal): {e}")
 
 
-def _try_set_conversation_title(cursor, conversation_id: str, scrubbed: str) -> None:
+def _try_set_conversation_title(
+    cursor, conversation_id: str, scrubbed: str, usage_accumulator=None
+) -> None:
     """Set conversations.title once when still empty (migration 002)."""
     if not scrubbed or not str(scrubbed).strip():
         return
     try:
         from backend.app.conversation_meta import derive_chat_title_from_scrubbed_text
 
-        title = derive_chat_title_from_scrubbed_text(scrubbed)
+        title = derive_chat_title_from_scrubbed_text(
+            scrubbed, usage_accumulator=usage_accumulator
+        )
         cursor.execute(
             """
             UPDATE conversations
@@ -192,6 +196,7 @@ def update_conversation(
     service_user_id,
     scrubbed_first_user_text: Optional[str] = None,
     tool_names_this_turn: Optional[List[str]] = None,
+    llm_usage_accumulator: Optional[dict] = None,
 ):
     """
     Update the information in the conversations database
@@ -266,7 +271,12 @@ def update_conversation(
     _refresh_conversation_stats(cursor, conversation_id)
 
     if msg_count_before == 0 and scrubbed_first_user_text:
-        _try_set_conversation_title(cursor, conversation_id, scrubbed_first_user_text)
+        _try_set_conversation_title(
+            cursor,
+            conversation_id,
+            scrubbed_first_user_text,
+            usage_accumulator=llm_usage_accumulator,
+        )
     if tool_names_this_turn:
         _merge_tool_usage_stats(cursor, conversation_id, tool_names_this_turn)
 
@@ -1406,6 +1416,61 @@ def get_session_feedback(conversation_id: str, username: str):
     except Exception as e:
         print(f"[DB] get_session_feedback error: {e}")
         return False, str(e)
+
+
+def get_monthly_azure_chat_tokens(billing_month: _date) -> int:
+    """Return recorded Azure chat completion tokens for UTC calendar month, or 0 if missing."""
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    SELECT total_tokens FROM monthly_azure_chat_usage
+                    WHERE billing_month = %s
+                    """,
+                    (billing_month,),
+                )
+                row = cur.fetchone()
+                return int(row[0]) if row else 0
+    except psycopg.errors.UndefinedTable:
+        print("[DB] get_monthly_azure_chat_tokens: table missing; apply migration 006.")
+        return 0
+    except Exception as e:
+        print(f"[DB] get_monthly_azure_chat_tokens error: {e}")
+        return 0
+
+
+def increment_monthly_azure_chat_tokens(delta: int, billing_month: _date) -> int:
+    """
+    Atomically add delta to the month's total. Returns new total after update.
+    Two requests can both pass a read-based pre-check and briefly exceed the soft
+    ceiling; increments are never lost thanks to single-statement upsert.
+    """
+    if delta <= 0:
+        return get_monthly_azure_chat_tokens(billing_month)
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    INSERT INTO monthly_azure_chat_usage (billing_month, total_tokens)
+                    VALUES (%s, %s)
+                    ON CONFLICT (billing_month)
+                    DO UPDATE SET
+                        total_tokens = monthly_azure_chat_usage.total_tokens + EXCLUDED.total_tokens
+                    RETURNING total_tokens
+                    """,
+                    (billing_month, int(delta)),
+                )
+                row = cur.fetchone()
+            conn.commit()
+            return int(row[0]) if row else 0
+    except psycopg.errors.UndefinedTable:
+        print("[DB] increment_monthly_azure_chat_tokens: table missing; apply migration 006.")
+        return 0
+    except Exception as e:
+        print(f"[DB] increment_monthly_azure_chat_tokens error: {e}")
+        return 0
 
 
 def upsert_session_feedback_answer(

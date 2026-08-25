@@ -65,6 +65,13 @@ from backend.app.database import (
     get_snap_conversation_messages,
     delete_snap_conversation,
     get_snap_usage_analytics,
+    get_monthly_azure_chat_tokens,
+    increment_monthly_azure_chat_tokens,
+)
+from backend.app.llm_budget import (
+    AZURE_CHAT_MONTHLY_TOKEN_BUDGET,
+    accumulate_usage,
+    utc_billing_month_first_day,
 )
 from backend.app.generate_outreach import generate_check_ins_rule_based
 from backend.app.notifications import notification_job
@@ -426,8 +433,14 @@ async def snap_query_endpoint(
     current_user: UserData = Depends(get_current_user),
 ):
     """RAG query against the Georgia SNAP Policy Manual."""
+    m = utc_billing_month_first_day()
+    if get_monthly_azure_chat_tokens(m) >= AZURE_CHAT_MONTHLY_TOKEN_BUDGET:
+        raise HTTPException(
+            status_code=503,
+            detail="Monthly AI token budget exceeded.",
+        )
     try:
-        result = query_snap(
+        result, usage_tokens = query_snap(
             request.question,
             request.conversation_history or [],
             mode=request.mode,
@@ -440,6 +453,7 @@ async def snap_query_endpoint(
             result = {**result, "conversation_id": conv_id_or_err}
         else:
             print(f"[SNAP] save_snap_turn failed: {conv_id_or_err}")
+        increment_monthly_azure_chat_tokens(usage_tokens, m)
         return {"success": True, **result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -499,6 +513,17 @@ async def snap_usage_analytics(
     if not success:
         raise HTTPException(status_code=500, detail=result)
     return {"success": True, **result}
+@app.get("/api/azure-chat-quota")
+async def azure_chat_quota(current_user: UserData = Depends(get_current_user)):
+    """Return global monthly Azure chat token usage for UI gating."""
+    m = utc_billing_month_first_day()
+    used = get_monthly_azure_chat_tokens(m)
+    return {
+        "allowed": used < AZURE_CHAT_MONTHLY_TOKEN_BUDGET,
+        "used_tokens": used,
+        "budget_tokens": AZURE_CHAT_MONTHLY_TOKEN_BUDGET,
+        "billing_month": m.isoformat(),
+    }
 
 
 # Health check endpoints
@@ -540,7 +565,7 @@ class SidebarState(BaseModel):
     goals: list[SidebarItem] = Field(description="Current, active goals based on the ENTIRE conversation.")
     resources: list[SidebarItem] = Field(description="All relevant resources mentioned so far.")
 
-def generate_sidebar_update(all_messages, sid, loop):
+def generate_sidebar_update(all_messages, sid, loop, usage_accumulator=None):
     """
     Analyzes the FULL conversation to produce a cumulative, detailed sidebar.
     """
@@ -578,6 +603,7 @@ def generate_sidebar_update(all_messages, sid, loop):
             messages=messages,
             response_format=SidebarState
         )
+        accumulate_usage(usage_accumulator, completion)
         
         state_data = completion.choices[0].message.parsed
         
@@ -690,7 +716,16 @@ class GenerateCheckInsRequest(BaseModel):
     conversation_id: str
 
 @app.post("/generate_check_ins/")
-async def generate_check_ins_endpoint(request: GenerateCheckInsRequest):
+async def generate_check_ins_endpoint(
+    request: GenerateCheckInsRequest,
+    _: UserData = Depends(get_current_user),
+):
+    m = utc_billing_month_first_day()
+    if get_monthly_azure_chat_tokens(m) >= AZURE_CHAT_MONTHLY_TOKEN_BUDGET:
+        raise HTTPException(
+            status_code=503,
+            detail="Monthly AI token budget exceeded.",
+        )
     success, result = generate_check_ins_rule_based(request.service_user_id, request.conversation_id)
     if success:
         return {"success": True, "check_ins": result}
@@ -757,6 +792,8 @@ def _background_stream(
 ):
     """Runs construct_response in its own OS thread."""
     accumulated_text = ""
+    usage_acc = {"total": 0}
+    billing_month = utc_billing_month_first_day()
 
     try:
         # Log GPT request
@@ -837,6 +874,7 @@ def _background_stream(
             profile_custom_prompt=scrubbed_profile_prompt,
             system_prompt_base=effective_system_prompt_base,
             tool_call_names_out=tool_names_this_turn,
+            usage_accumulator=usage_acc,
         )
         
         for accumulated_text in accumulate_chunks(gen):
@@ -856,6 +894,7 @@ def _background_stream(
             service_user_id,
             scrubbed_first_user_text=scrubbed_text,
             tool_names_this_turn=tool_names_this_turn or None,
+            llm_usage_accumulator=usage_acc,
         )
         
         # Log completion
@@ -876,7 +915,9 @@ def _background_stream(
             )
         else:
             print("[Background] Triggering sidebar update...")
-            generate_sidebar_update(session_histories[sid], sid, loop)
+            generate_sidebar_update(
+                session_histories[sid], sid, loop, usage_accumulator=usage_acc
+            )
 
     except Exception as e:
         print(f"[BackgroundStream] Error: {e}")
@@ -890,6 +931,9 @@ def _background_stream(
         )
 
     finally:
+        delta = int(usage_acc.get("total", 0))
+        if delta > 0:
+            increment_monthly_azure_chat_tokens(delta, billing_month)
         asyncio.run_coroutine_threadsafe(
             sio.emit(
                 "generation_complete", 
@@ -1001,6 +1045,15 @@ async def start_generation(sid, data):
             rebuilt.append({"role": r, "content": str(c)})
         if rebuilt:
             session_histories[sid] = rebuilt
+
+    m = utc_billing_month_first_day()
+    if get_monthly_azure_chat_tokens(m) >= AZURE_CHAT_MONTHLY_TOKEN_BUDGET:
+        await sio.emit(
+            "chat_quota_blocked",
+            {"allowed": False, "reason": "monthly_token_budget"},
+            room=sid,
+        )
+        return
 
     session_histories[sid].append({"role": "user", "content": text})
 
