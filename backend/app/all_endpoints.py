@@ -868,8 +868,15 @@ def _background_stream(
             response_length=len(accumulated_text)
         )
         session_histories[sid].append({"role": "assistant", "content": accumulated_text})
-        print("[Background] Triggering sidebar update...")
-        generate_sidebar_update(session_histories[sid], sid, loop)
+        if version == "vanilla":
+            # Vanilla GPT has no goals/resources tracking - keep the sidebar empty.
+            asyncio.run_coroutine_threadsafe(
+                sio.emit("goals_update", {"goals": [], "resources": []}, room=sid),
+                loop
+            )
+        else:
+            print("[Background] Triggering sidebar update...")
+            generate_sidebar_update(session_histories[sid], sid, loop)
 
     except Exception as e:
         print(f"[BackgroundStream] Error: {e}")

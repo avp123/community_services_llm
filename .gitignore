@@ -22,6 +22,7 @@ data_analysis/
 frontend-react/node_modules/
 frontend-react/build/
 backend/__pycache__/
+eval/**/__pycache__/
 backend/data/*.db
 .env
 *.ipynb

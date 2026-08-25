@@ -483,9 +483,8 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
             </select>
             <select className="chat-version-select" value={version} onChange={(e) => setVersion(e.target.value)}
               style={{ padding: '8px 12px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '14px', backgroundColor: 'white', cursor: 'pointer' }}>
-              <option value="new">New Version</option>
-              <option value="old">Old Version</option>
-              <option value="vanilla">Vanilla GPT</option>
+              <option value="new">Version A</option>
+              <option value="vanilla">Version B (Vanilla GPT)</option>
             </select>
           </div>
 

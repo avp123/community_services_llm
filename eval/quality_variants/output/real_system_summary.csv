@@ -1,0 +1,9 @@
+level,system,group,n,resource_accuracy,planning_actionability,peer_values_autonomy,responsiveness_contextual_fit,overall_usefulness,harmful_yes_count
+system_overall,Generic + web search,,81,4.52,4.89,4.99,5.0,4.93,0
+system_overall,PeerCoPilot,,81,4.33,4.36,5.0,4.98,4.65,0
+system_x_group,Generic + web search,peer_values,27,,4.89,5.0,5.0,5.0,0
+system_x_group,Generic + web search,planning,27,4.75,5.0,5.0,5.0,5.0,0
+system_x_group,Generic + web search,resource,27,4.48,4.78,4.96,5.0,4.78,0
+system_x_group,PeerCoPilot,peer_values,27,,4.15,5.0,5.0,4.59,0
+system_x_group,PeerCoPilot,planning,27,,4.63,5.0,5.0,4.85,0
+system_x_group,PeerCoPilot,resource,27,4.33,4.3,5.0,4.93,4.52,0
