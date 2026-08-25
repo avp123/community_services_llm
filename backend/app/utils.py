@@ -50,7 +50,7 @@ def call_chatgpt_api(system_prompt,prompt,stream=True, usage_accumulator=None):
     Returns: String, result from ChatGPT"""
 
     kwargs = dict(
-        model="gpt-4o-mini",
+        model="gpt-5-chat",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt}
@@ -162,7 +162,7 @@ def call_chatgpt_with_functions(messages, functions, stream=False, max_tokens=75
     Always returns a single ChatCompletion object.
     """
     response = client.chat.completions.create(
-        model="gpt-4o-mini", 
+        model="gpt-5-chat",
         messages=messages,
         functions=functions,
         function_call="auto",
