@@ -590,16 +590,16 @@ def generate_sidebar_update(all_messages, sid, loop, usage_accumulator=None):
 
         messages = [{"role": "system", "content": system_prompt}] + context_messages
 
-        # 2. Call GPT-4o-mini
+        # 2. Call the same deployment used for the main chat responses.
         from openai import AzureOpenAI
         client = AzureOpenAI(
             api_key=os.environ.get("OPENAI_API_KEY_AZURE"),
             azure_endpoint=os.environ.get("OPENAI_AZURE_ENDPOINT"),
             api_version="2024-12-01-preview"
         )
-        
+
         completion = client.beta.chat.completions.parse(
-            model="gpt-4o-mini", 
+            model="gpt-5-chat",
             messages=messages,
             response_format=SidebarState
         )

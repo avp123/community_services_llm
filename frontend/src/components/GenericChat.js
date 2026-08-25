@@ -98,8 +98,10 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
   // socket effect to tear down/reconnect (wiping server session_histories and breaking replies).
   const isGeneratingRef = useRef(false);
   const conversationHydrateGuardRef = useRef([]);
+  const conversationIDRef = useRef('');
   isGeneratingRef.current = isGenerating;
   conversationHydrateGuardRef.current = conversation;
+  conversationIDRef.current = conversationID;
 
   useEffect(() => {
     socketRef.current = socket;
@@ -137,10 +139,14 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
 
   const hydrateConversationFromDb = useCallback(async ({ allowRegression = true } = {}) => {
     if (!conversationID || !user?.isAuthenticated) return;
+    const requestedConversationID = conversationID;
     try {
       const res = await authenticatedFetch(
-        `/api/conversations/${encodeURIComponent(conversationID)}`
+        `/api/conversations/${encodeURIComponent(requestedConversationID)}`
       );
+      // The session may have been reset (or switched) while this fetch was in flight -
+      // don't let a stale response for an old conversation repopulate the current one.
+      if (conversationIDRef.current !== requestedConversationID) return;
       if (res.status === 404) {
         // First DB write often happens after streaming; until then GET 404s. Never wipe the
         // planner UI while we're generating or still showing the assistant loading placeholder.
@@ -154,6 +160,7 @@ function GenericChat({ context, title, socketServerUrl, showLocation, tool }) {
         return;
       }
       const data = await res.json();
+      if (conversationIDRef.current !== requestedConversationID) return;
       if (!res.ok || !data?.success) return;
       const rows = Array.isArray(data.messages) ? data.messages : [];
 
