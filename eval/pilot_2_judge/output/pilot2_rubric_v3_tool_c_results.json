@@ -1,0 +1,142 @@
+[
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "Identifies the key trade-off (steadier work vs benefits), asks useful clarifying questions, and lays out relevant considerations (accommodations, priorities), though it could go further in outlining specific decision tradeoffs and timelines."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Gives concrete next steps (DVRS, benefits counseling/WIPA), example job types, accommodation checklist, and sample language; could be more actionable with specific local contacts or instructions for locating certified benefits counselors."
+    },
+    "peer_support_alignment": {
+      "score": 5,
+      "reason": "Strongly centers the woman's goals, offers collaborative options rather than directives, respects autonomy, and supplies practical supports without replacing the provider's role."
+    },
+    "choice_priorities_autonomy": {
+      "score": 5,
+      "reason": "Clearly distinguishes possible priorities (predictability vs pay), suggests exploring the woman's preferences, and preserves multiple pathways rather than steering toward a single solution."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very helpful and relevant for a peer-support conversation with concrete questions and next steps; could be improved with immediate local resources or quick scripts for arranging benefits counseling."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly addresses the prompt, references New Jersey-specific services, and focuses on the two concerns the provider raised (accommodations and benefit impact)."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear headings, bullets, sample language, and a short stepwise plan that a provider could quickly use in-session."
+    },
+    "primary_strength": "Clear, well-organized guidance that centers the woman's priorities and offers concrete, collaborative next steps (benefits counseling, DVRS, accommodations).",
+    "primary_weakness": "It stops short of providing specific local contacts or immediate instructions for finding certified benefits counselors and could include brief examples of how common benefits respond to increased earnings.",
+    "conversation_id": "e1de23bc95fe763b2ea057c77931fef0_C",
+    "tool": "C",
+    "order_index": 1
+  },
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "The response identifies the central tension (family-defined milestones vs his priorities), suggests focused questions to clarify his perspective, and outlines useful alternatives, but it omits some potentially relevant considerations (e.g., current financial, housing, or mental-health factors) that could affect his goals."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Provides concrete, session-ready questions, next-step options, and sample language the provider can use immediately; could be improved by offering a few specific resource examples or prompts to assess basic needs that may shape choices."
+    },
+    "peer_support_alignment": {
+      "score": 5,
+      "reason": "Strongly aligned with peer-support principles: centers the person's priorities, avoids prescriptive solutions, supports self-definition, and offers collaborative tools for exploration and boundary-setting."
+    },
+    "choice_priorities_autonomy": {
+      "score": 5,
+      "reason": "Consistently preserves autonomy by distinguishing 'not now' from 'never,' encouraging personally defined markers of wellbeing, and offering non-directive options tied to the individual's interests (e.g., painting)."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and applicable for a peer conversation\u2014gives immediate questions and phrasing to use\u2014though slightly limited by not prompting assessment of practical constraints or mental-health needs that could materially affect plans."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly responds to the provider's vignette, incorporates details (painting hobby, recent retail job, fewer local friends), and tailors questions and steps to that context."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear headings, bullet points, and sample language, making it quick to scan and use during a conversation."
+    },
+    "primary_strength": "Succinctly names the core tension and supplies practical, session-ready questions and sample phrasing that a peer provider can use immediately.",
+    "primary_weakness": "Does not explicitly prompt assessment of basic needs, financial or housing status, or current mental-health/safety concerns that could influence what goals are realistic or appropriate right now.",
+    "conversation_id": "f1797c3de1eb030be95317f836c31170_C",
+    "tool": "C",
+    "order_index": 2
+  },
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "Identifies key priorities, highlights relevant clarifying questions (Medicaid plan, income, mobility), and outlines sensible options and tradeoffs; could have noted a few additional system-specific details (e.g., typical NEMT brokers/process timelines) but reasoning is solid and context-sensitive."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Gives concrete next steps, local contact (Camden County BSS), phone numbers, documents to gather, and practical alternatives (telehealth, clinic social work, FQHC help); could be improved by adding direct links to NJ OneApp/SNAP page or specific NEMT broker names and exact scheduling windows."
+    },
+    "peer_support_alignment": {
+      "score": 4,
+      "reason": "Centers the person\u2019s immediate concerns, suggests collaborative language and options without being prescriptive, and preserves autonomy; minor opportunity to emphasize person-defined goals even more explicitly."
+    },
+    "choice_priorities_autonomy": {
+      "score": 4,
+      "reason": "Supports the service user\u2019s priorities (food, transport, medical access) and offers multiple pathways rather than steering to a single solution, while prompting questions to refine choices; could more explicitly foreground the service user\u2019s own preferences when proposing next steps."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Practical, relevant, and usable guidance for a peer provider helping this woman to access SNAP and Medicaid transportation and prepare for a PCP visit, with minor missing system-specific details that would make it even more immediately actionable."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly addresses the provider\u2019s request, uses Camden-specific contact info, and focuses on Medicaid transportation and SNAP as requested\u2014well tailored to the scenario and context."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear headings, bullets, and sample language making it quick for a provider to scan and use during a conversation with the service user."
+    },
+    "primary_strength": "Provides clear, practical next steps and local contact information (Camden County BSS, NJ FamilyCare number) and helpful prompts to gather needed documents and plan details.",
+    "primary_weakness": "Lacks a few specific system details (e.g., the typical NEMT broker/process, direct NJ SNAP application link, and exact scheduling timelines) and an explicit reminder to verify contact info, which would increase immediate usability.",
+    "conversation_id": "499d14d9742f82e7af186d45ce4478a7_C",
+    "tool": "C",
+    "order_index": 3
+  },
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "Identifies key dynamics (autonomy vs parental fear), surfaces useful distinctions (no therapy vs no support), and offers clarifying questions to guide assessment; minor omission: it doesn't explicitly address practical constraints (e.g., who controls access/insurance) or a concrete approach to immediate safety assessment."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Provides concrete next steps, middle-ground options, and sample language the provider can use with both the young man and his parents; could be improved by adding brief, specific scripts for a boundary conversation and explicit steps for checking current safety or crisis risk."
+    },
+    "peer_support_alignment": {
+      "score": 5,
+      "reason": "Strongly centered on the person's perspective and autonomy, encourages collaborative exploration of acceptable supports, avoids prescriptive or clinical directives, and preserves the provider's role in supporting the person's choices."
+    },
+    "choice_priorities_autonomy": {
+      "score": 5,
+      "reason": "Consistently supports the service user's decision-making, emphasizes articulating his own definition of 'doing better,' and suggests strategies that preserve his autonomy while addressing family concerns."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful and practical for an in-the-moment peer-support interaction, offering clear questions, options, and phrasing; would be stronger with added safety-check steps and a couple of short, ready-to-use conversation scripts."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly addresses the provider's prompt, uses the limited context appropriately, and focuses on reconciling family concern with the young man's preferences without irrelevant tangents."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with headings, bullets, and sample language so a provider can quickly scan and use the suggestions while staying engaged with the service user."
+    },
+    "primary_strength": "Clear, well-organized, and actionable suggestions and questions that center the young man's perspective and support his autonomy.",
+    "primary_weakness": "Does not explicitly include brief guidance for assessing immediate safety risk or address practical constraints like parental control of finances/insurance that could affect available options.",
+    "conversation_id": "18d230ba6418d51ce4a88c5efcb45679_C",
+    "tool": "C",
+    "order_index": 4
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "per_response": [
+    {
+      "helped_think_through": 5,
+      "useful_actionable": 5,
+      "fits_my_approach": 4,
+      "supported_autonomy": 5,
+      "overall_useful": 5,
+      "confident_after": 4,
+      "minimal_effort": 5,
+      "helpful_aspect": "The AI gave clear, local, actionable resources (DVRS contact, WIPA/SSA number, Project HIRE, Access Link) and flagged getting benefits counseling before changing earnings \u2014 exactly the practical steps I needed to move forward.",
+      "wanted_different": "I would have liked more peer-style suggestions: sample questions to ask DVRS/WIPA, examples of steady job types that accommodate common physical limits, and local peer-run or community supports to help her through the process.",
+      "conversation_id": "e1de23bc95fe763b2ea057c77931fef0",
+      "tool": "B",
+      "order_index": 1
+    },
+    {
+      "helped_think_through": 5,
+      "useful_actionable": 4,
+      "fits_my_approach": 5,
+      "supported_autonomy": 5,
+      "overall_useful": 5,
+      "confident_after": 4,
+      "minimal_effort": 5,
+      "helpful_aspect": "I liked that it stayed rooted in his priorities, offered concrete questions to help him articulate what he wants, and pointed out strengths (painting, friends, prior work effort) and low-pressure ways to build connection.",
+      "wanted_different": "I would have liked a few phrasing examples or short scripts to use with him and his family, and more concrete, small bridge-goal examples (with timelines) to make it easier to turn the ideas into action.",
+      "conversation_id": "f1797c3de1eb030be95317f836c31170",
+      "tool": "A",
+      "order_index": 2
+    },
+    {
+      "helped_think_through": 5,
+      "useful_actionable": 5,
+      "fits_my_approach": 5,
+      "supported_autonomy": 5,
+      "overall_useful": 5,
+      "confident_after": 5,
+      "minimal_effort": 5,
+      "helpful_aspect": "The AI gave clear, practical next steps I could share right away \u2014 how to request non-emergency medical transportation through NJ FamilyCare, calling 2-1-1 for SNAP help, and a local Camden agency with a phone number. The tone was empathetic and it offered to narrow things by managed-care plan, which is useful.",
+      "wanted_different": "I would have liked a bit more detail about how NEMT scheduling works (how far in advance, one-way vs round-trip, documentation needed) and alternative local transport options (county senior/paratransit, volunteer driver programs) plus specific managed-care contact numbers to hand the person.",
+      "conversation_id": "499d14d9742f82e7af186d45ce4478a7",
+      "tool": "A",
+      "order_index": 3
+    },
+    {
+      "helped_think_through": 5,
+      "useful_actionable": 5,
+      "fits_my_approach": 5,
+      "supported_autonomy": 5,
+      "overall_useful": 5,
+      "confident_after": 5,
+      "minimal_effort": 5,
+      "helpful_aspect": "The concrete scripts, boundary language, and compromise options (single check-in, warning signs list) were especially helpful \u2014 I could picture saying these things to a family and use them right away.",
+      "wanted_different": "I would have liked more peer-specific options (peer support groups, mutual-help coaching), plus tips for calming anxious parents and de-escalation techniques; an explicit sample plan for what to do if parents call providers or refuse to respect the boundary would be useful.",
+      "conversation_id": "18d230ba6418d51ce4a88c5efcb45679",
+      "tool": "B",
+      "order_index": 4
+    }
+  ],
+  "comparison": {
+    "preference": "no_preference",
+    "pref_think_through": 2,
+    "pref_actionable": 4,
+    "pref_resources": 5,
+    "pref_peer_values": 1,
+    "pref_autonomy": 2,
+    "pref_easy": 4,
+    "pref_overall": 3,
+    "differences_noticed": "Tool A leaned toward reflective, person-centered phrasing that helped name values and validate feelings; Tool B focused on concrete steps, local programs, phone numbers, and scripts clients could use. Tone differed: A felt like in-session coaching, B felt like a practical referral sheet.",
+    "unique_help": "Tool A helped me shape language to hold a client's perspective and explore values in the moment, which kept the session grounded in peer-support principles. Tool B produced actionable, NJ-specific resources, contacts, and clear next steps I could hand a client to follow outside the session.",
+    "used_differently": "Yes \u2014 I used Tool A during the conversation to help frame the client's experience and to co-create goals, and I used Tool B when I needed concrete referrals, numbers, links, or scripts to give the client something to act on. I toggled between them depending on whether we were exploring or planning.",
+    "disagreed_or_changed": "Sometimes I wanted Tool B to be less directive and more autonomy-supporting in tone, so I would soften its language when sharing with clients. With Tool A I often wanted more concrete follow-up steps or local resource details, so I supplemented its suggestions with those specifics.",
+    "depended_on_situation": "Yes \u2014 for benefits, transportation, and job-search issues the concrete, local info from Tool B was far more useful; for family dynamics, motivation, and values conversations Tool A's reflective style worked better. I chose the tool based on whether the moment required validation and meaning-making or practical navigation.",
+    "what_to_change": "For Tool A: add an easy way to request tailored, local resource lists and brief safety/benefits checklists so its warm, reflective output can be paired with action. For Tool B: soften some prescriptive language and include more open-ended prompts and reflective lines to preserve peer-support values while staying actionable.",
+    "thinking_vs_concrete": "Both forms showed up clearly: Tool A provided thinking-through support (validation, values work, scripts for in-session use) and Tool B provided concrete items (contact info, program names, step-by-step actions). Both were useful in different ways \u2014 I relied on A to guide the conversation and on B to equip the client with next steps."
+  }
+}

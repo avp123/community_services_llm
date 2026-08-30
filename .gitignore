@@ -28,3 +28,4 @@ backend/data/*.db
 *.ipynb
 .local/
 
+eval/*.csv

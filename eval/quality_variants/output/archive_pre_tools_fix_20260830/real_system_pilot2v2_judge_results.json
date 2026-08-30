@@ -1,0 +1,2270 @@
+[
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides a practical, prioritized sequence plus specific local resources (coordinated entry, DFAB, 2-1-1), legal help, and document-replacement guidance that meaningfully expands what the provider can offer."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights several high-value considerations for this case (couch-surfing counts as homelessness for many programs, need for mailing address, starting benefits early, ID barriers) without major irrelevant tangents."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request about what to address first and what Newark/Essex County options exist, and prioritizes actions clearly."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supplements the peer's role with resource information and sequencing without prescribing scripts or taking over the interpersonal support role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated goals (stable housing, benefits, replacing ID), offers options rather than directing a single path, and preserves choice."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Gives concrete contacts and addresses that are plausible and helpful but may be outdated or slightly off; the claim of having 'verified' via web results is vague and should prompt the provider to confirm details before relying on them."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Organized, prioritized, and readable with clear action steps and contacts, though could better highlight the single highest-priority next step and flag the most reliable phone/contact first."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A practical, actionable response that meaningfully helps the provider plan next steps and locate local services; minor reliability/verification concerns are the main limitation."
+    },
+    "primary_strength": "Clear, actionable prioritization combined with specific local resources (coordinated entry, benefits access points, and legal aid) relevant to Newark/Essex County.",
+    "primary_weakness": "Some specific contact details and the verification claim are not clearly sourced and could be out of date, so the provider should confirm them before relying on them.",
+    "scenario_id": 1,
+    "group": "resource",
+    "title": "Housing + ID",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, practical next steps (coordinated entry, benefits, ID replacement), a local portal (NJHelps), and specific agencies/phone numbers that go beyond the provider's description."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key tradeoffs and constraints: housing intake/Coordinated Entry, Emergency Assistance while applications are pending, documentation barriers and the value of a case manager, and that health issues can affect priority."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers what to address first and lists relevant Newark/Essex County options and next steps tailored to the person's situation."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the peer role by supplying information and options without prescribing scripts or taking over the provider's relational work."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's stated goals (stable housing and benefits), preserves choice, and avoids imposing unrelated goals or intrusive assumptions."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Useful specifics (phone numbers, office location, MVC '6 Points') may be accurate but are not sourced or caveated; some details should be verified before relying on them."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with prioritized steps and concise bullets, so a provider could quickly use the key points in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Actionable and well-aligned with the request, but somewhat limited by unverifiable contact details and absence of a few Newark-specific shelter or program names."
+    },
+    "primary_strength": "Gives a clear, prioritized action plan with locally relevant portals and practical tips to overcome the missing-ID barrier.",
+    "primary_weakness": "Includes specific contact details and location claims without sourcing or an explicit recommendation to verify them, which could mislead if inaccurate.",
+    "scenario_id": 1,
+    "group": "resource",
+    "title": "Housing + ID",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally relevant steps and specific agencies (coordinated entry, Essex County BSS, NJ 211) plus practical ID and document-replacement tips that materially expand what the provider has to work with."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Surfaces the key tradeoffs and timing (start ID replacement while engaging housing system, SNAP as faster stabilization, couch-surfing can count as homelessness, mail/address barriers) without distracting speculation."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's question about what to address first and local options, prioritizing actions and naming applicable Newark/Essex resources."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the peer provider with information and options without taking over the interpersonal or case-management role or offering unnecessary scripts."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's stated goals (stable housing, benefits, ID) and presents multiple concurrent options without steering toward an unsupported outcome."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Generally plausible resources and reasonable caveats about verifying requirements, but includes specific contact details and a claim of verification that could be outdated or unverified and should be double-checked."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with prioritized first steps, a short list of local resources, and concise practical considerations that are easy to scan and use during a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful, actionable, and well-aligned with the provider's needs; limited mainly by modest reliability/verification concerns about specific contact details and the verification claim."
+    },
+    "primary_strength": "Clear, prioritized action steps plus specific, locally relevant resources (Essex County BSS, NJ 211, NJ DCA) that a peer can use immediately.",
+    "primary_weakness": "Includes some specific contact details and an assertion of verification without clear sourcing, so key facts should be confirmed before relying on them.",
+    "scenario_id": 1,
+    "group": "resource",
+    "title": "Housing + ID",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally relevant resources (NJOneApp, county social services, NEMT, senior services, PAAD) and practical steps that meaningfully expand what the provider can offer, though it could include a few additional local community supports and documentation tips."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Surfaces several high\u2011value considerations (Medicaid NEMT handled through managed care, advance scheduling, SNAP phone interviews, medical expenses affecting SNAP), but omits some application details to watch for (proof of income/identity, specific income limits)."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses both parts of the provider's request (eligibility/apply for benefits and transportation options) and prioritizes state and county contacts that are immediately useful."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer provider by supplying factual resources and options without replacing the provider's relational or support role or offering excessive scripting."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Stays focused on the service user's stated needs (financial assistance and transport), offers options rather than prescriptions, and preserves choice about next steps."
+    },
+    "reliability_verifiability": {
+      "score": 2,
+      "reason": "Gives specific phone numbers, addresses, and asserts links were verified 'today'\u2014a claim the model cannot reliably make\u2014so there's unjustified certainty about dynamic contact details and verification."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with short bullets, links, and clear action steps so a provider can quickly pick out next moves while with the service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful and actionable for the provider in helping the service user start applications and arrange transport, but undermined somewhat by an unwarranted verification claim and a few missing practical application details."
+    },
+    "primary_strength": "Gives concrete, locally relevant resources and clear, actionable steps for both benefits enrollment and non\u2011emergency medical transport.",
+    "primary_weakness": "Overstates certainty by claiming recent verification of links/contacts and provides specific contact details without acknowledging that such information can change and should be confirmed.",
+    "scenario_id": 2,
+    "group": "resource",
+    "title": "Benefits + transportation",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally relevant resources (211, Essex County services, legal aid) and a practical first-week plan that go beyond a generic checklist, but it includes one loosely relevant organization (Covenant House) and could have given slightly more specific ID-replacement steps or MVC details."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Correctly highlights that housing and ID tend to unlock other supports, that couch-surfing can still qualify for services, and the value of getting a case manager and coordinated entry; it could have flagged the immediacy of preserving the temporary stay and noted specific documentation timelines or common barriers."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's question about what to address first and what local options exist, giving prioritized steps and actionable starting points tailored to Newark/Essex County."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer role by offering resources and options rather than prescribing how the provider should conduct conversations or taking over case-management tasks."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated goals (stable housing, benefits, ID) and presents multiple pathways without steering toward an externally defined outcome."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Most resource mentions are accurate and appropriate (211, county social services, legal aid), and it appropriately notes uncertainty around ID processes, but it includes a youth-focused shelter (Covenant House) that is unlikely to apply to a 47-year-old and could have more clearly suggested verifying program eligibility/details."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Information is well organized with a clear prioritized list, local points of contact, and a concise week-one plan that a provider could use quickly during outreach."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A practical, actionable response that meaningfully helps the provider get the person connected to local housing and benefits resources, though it could be improved by removing irrelevant suggestions and adding a few specific steps for replacing IDs (e.g., MVC procedures or typical documents needed)."
+    },
+    "primary_strength": "Provides a clear, prioritized plan plus concrete Newark/Essex County resources (211, coordinated entry, county social services) that the provider can act on immediately.",
+    "primary_weakness": "Includes one loosely relevant service and lacks a few specific, verifiable details about ID-replacement procedures and immediate steps to protect the person's temporary housing situation.",
+    "scenario_id": 1,
+    "group": "resource",
+    "title": "Housing + ID",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, locally relevant resources (NJHelps, Camden County office, a community action agency) and practical options for NEMT that materially expand what the provider has to work with, though some claims (e.g., exact plan names) are slightly imprecise."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Surfaces several consequential points (SNAP vs. Medicaid, higher SNAP amounts for older adults with medical expenses, scheduling windows for NEMT, SSI as a factor) but misses a few other important practical details like typical documentation required for applications or hours/eligibility caveats."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's questions about where to start for benefits and how to get transportation to appointments, prioritizing local resources and actionable next steps without irrelevant tangents."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the peer provider with information and options without attempting to replace their relational work or giving unnecessary scripts; it leaves decisions and next-contact steps to the provider and client."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated needs (accessing benefits and transportation), presents options rather than prescriptions, and asks for minimal additional information only to refine eligibility guidance."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Most resources and the NJHelps referral are reliable and appropriate, but the reply includes specific phone numbers/addresses and at least one possibly outdated plan name without an explicit note to verify details or hours."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Information is well organized into short sections and bullets (starting point, SNAP, local office, community agency, transportation), making it quick to scan and act on during a conversation."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Practical, actionable, and locally focused guidance that a peer provider could immediately use to help the service user start benefit applications and arrange Medicaid transportation, with only minor verifiability caveats."
+    },
+    "primary_strength": "Provides concrete, locally relevant resources and clear next steps (NJHelps, county office, community agency, and Medicaid NEMT) that the provider can act on immediately.",
+    "primary_weakness": "Includes a few potentially outdated or unverified specifics (e.g., plan names, contact details) and does not remind the provider to confirm hours, required documents, or eligibility details before relying on them.",
+    "scenario_id": 2,
+    "group": "resource",
+    "title": "Benefits + transportation",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides a clear, practical sequence of steps plus local points of contact (211, Essex County Social Services, named nonprofits) that materially expand what the provider has to work with; could have included a few more specific Newark shelter/day-program options or verification caveats."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key trade-offs (coordinated entry first to unlock services, overlapping steps, doubled-up eligibility, ID replacement needs); it misses explicit mention of potential waitlists, prioritization rules, and the need to verify current office hours/acceptance criteria."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers what to address first and lists local options and an actionable first-week plan, matching the provider's request without irrelevant tangents."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the peer provider with resources and a plan without taking over the therapeutic or relational role; offers optional tools (scripts) only if the provider wants them."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated goals (stable housing, benefits, ID) and preserves options rather than steering toward unintended outcomes."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Most suggestions are reasonable (211, county services, nonprofits), but the response gives a specific office address and phone number without noting that details can change or suggesting verification."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized, prioritized, and concise with an easy-to-scan action plan and clear next steps the provider can use immediately."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A practical, focused, and usable set of next steps and local resources that will help the provider support the person; would be stronger with a brief verification caveat and a few additional Newark-specific shelter/day-program names or walk-in locations."
+    },
+    "primary_strength": "Clear, prioritized action plan with relevant local contacts (211, county social services, nonprofits) that the provider can use right away.",
+    "primary_weakness": "Provides specific contact details (address/phone) and procedural claims without a clear caveat to verify current accuracy or note potential waitlists and eligibility complexities.",
+    "scenario_id": 1,
+    "group": "resource",
+    "title": "Housing + ID",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides a clear, practical priority (get ID first) and names directly relevant local entry points (211/coordinated entry, NJHelps, Essex County services) that materially expand what the provider can act on."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights consequential issues (ID delays many processes, 'doubled up' status affects prioritization) and notes that steps can overlap; it could have added a couple more high-impact considerations (e.g., immigration or veteran status may affect eligibility) but otherwise identifies the key tradeoffs."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's question about what to address first and what local options exist, and offers to narrow to more specific program types on request."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supplies factual/organizational information and options without prescribing how the peer should run the conversation or replacing the peer's relational role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated goals (stable housing and benefits), preserves choice by describing options and overlap, and doesn't inappropriately impose other objectives."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Most resource names and portals are correct and useful, but the response includes specific address/phone details without sourcing and could more explicitly flag the need to verify contact details and current procedures."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized and concise: clear prioritized steps first, then a short list of local resources and ID-specific actions that are quick to scan and use during a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and directly usable for a peer provider working with this person, though it would be stronger with verified contact details and one or two concrete next steps for obtaining ID (e.g., which documents to gather, fee-waiver options, local nonprofits that assist)."
+    },
+    "primary_strength": "Gives a clear, actionable priority and names the most relevant local entry points (211/coordinated entry, NJHelps, county social services) so the provider can start concrete steps immediately.",
+    "primary_weakness": "Includes some specific contact details without explicit verification and lacks a few concrete, practical next-step details for obtaining ID (documents needed, fee assistance sources).",
+    "scenario_id": 1,
+    "group": "resource",
+    "title": "Housing + ID",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally relevant resources (NJHelps, Camden County Board contact, Modivcare number) and clear next steps that a peer could pass directly to the service user, though it could further detail required documents and immediate/expedited benefit options."
+    },
+    "important_things_to_notice": {
+      "score": 3,
+      "reason": "Notes key practical details for transportation (call number, Medicaid ID, advance notice, wheelchair access) but misses some consequential considerations such as documentation needed for SNAP/GA applications, expedited SNAP for emergency food needs, and possible wait times or broker limitations."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's questions about where to start for benefits and what transportation options exist, prioritizing the most relevant local resources and next steps."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer provider by supplying resources and options without imposing scripts, clinical directives, or replacing the provider's relational role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Stays grounded in the person's stated needs\u2014food/financial assistance and transportation\u2014without steering toward unrelated goals or presuming unwanted interventions."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Includes plausible and useful contact details and a real-state portal, but gives specific phone/address information without clear caveats to verify since such details can change; one number is hedged as 'commonly' used."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with the highest-value information up front (state portal, county office, transportation broker) and concise bullets that a provider could quickly relay to the service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful and actionable for a peer-support provider calling or meeting the person, offering concrete resources and next steps; could be improved by adding key documentation to bring, noting expedited SNAP options, and adding brief verification caveats."
+    },
+    "primary_strength": "Gives concrete, locally relevant resources and actionable next steps (NJHelps, Camden County Social Services contact, Modivcare NEMT information) that a peer can immediately use.",
+    "primary_weakness": "Omits some important practical details such as the typical documents required for SNAP/benefit applications, expedited benefit options for urgent needs, and a clearer caveat to verify phone/address details.",
+    "scenario_id": 2,
+    "group": "resource",
+    "title": "Benefits + transportation",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, locally relevant resources (county office, 211, NJ SNAP site), specific contacts for NEMT and county senior services, and sensible program suggestions that materially expand what the provider has to work with."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key eligibility factor (income/household size) and that Medicaid NEMT is arranged via managed-care plans and needs advance scheduling; but it omits other practical considerations like required documents and expedited SNAP rules for people with very low resources."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses both parts of the provider's question (benefits eligibility/start points and transportation options) and offers immediately usable next steps."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the provider with factual resources and options without taking over the peer role or giving prescriptive scripts; leaves room for the provider's relationship and judgment."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's stated needs (financial help and transportation), offers options rather than prescriptions, and asks only for income/household details before estimating eligibility."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Links to official NJ resources and gives plausible local contacts, but includes a managed-care plan name that may be outdated and provides phone numbers that should be confirmed; could more clearly flag that program details change."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with short bullets and clearly prioritized contacts and actions, so the provider can quickly use the information during a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and actionable for helping the person start SNAP and access transportation, with only minor gaps (documentation checklist, expedited SNAP, slight verification cautions)."
+    },
+    "primary_strength": "Provides concrete, locally relevant contacts and clear next steps for both SNAP/benefits and Medicaid non-emergency transportation.",
+    "primary_weakness": "Omits some practical application details (what documents to bring, expedited SNAP criteria) and includes a minor managed-care naming/detail risk that should be verified.",
+    "scenario_id": 2,
+    "group": "resource",
+    "title": "Benefits + transportation",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally specific programs, offices, links and next steps that meaningfully expand what the provider likely already knew, though it could have added a bit more about required documents and application timing."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Flags the most relevant program areas (SNAP, cash assistance, Medicaid transportation, county senior services) and gives pragmatic next steps, but omits some consequential details like scheduling requirements for non-emergency medical transportation and typical documentation needed for benefits screening."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request about eligibility and transportation options and prioritizes actionable local contacts and steps."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Stays in an informational role that complements peer work without prescribing conversation scripts or replacing the provider's relational support role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated concerns (food assistance, financial help, and transportation) and offers resources and options without steering toward unwanted goals."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Gives concrete phone numbers and contacts that may be useful but does not caution that details can change or explicitly recommend verifying hours/eligibility, so some specifics could be outdated or inaccurate."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with concise bullets and clear next steps that a provider could quickly use while engaged with the service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and actionable for a first step\u2014local offices, links, and a simple action plan\u2014though it should have flagged verification of contact details and explained transportation booking/eligibility and documents to bring."
+    },
+    "primary_strength": "Provides clear, locally relevant resources and concrete next steps the provider can use immediately.",
+    "primary_weakness": "Offers specific contact details without flagging that phone numbers, plan-specific transportation procedures, and eligibility rules should be verified and without noting typical documentation or scheduling requirements.",
+    "scenario_id": 2,
+    "group": "resource",
+    "title": "Benefits + transportation",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, actionable resources the provider might not recall offhand (DVRS, local office, WIPA hotline, Centers for Independent Living) and names specific work\u2011incentive programs relevant to benefits concerns."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the key consideration\u2014benefits interactions\u2014and points to benefits counseling (WIPA) and vocational rehab; it could have more detail on eligibility, typical wait times, or which benefits are most affected, but it surfaces the most consequential issues."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the request by identifying appropriate local and national supports for steady, disability\u2011accommodating work and addressing the benefit\u2011impact concern."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Stays within a complementary role by supplying resources and options without prescribing how the provider should conduct the peer conversation or replacing the provider\u2019s judgment."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person\u2019s goals (steadier, accommodating work and concerns about benefits) and offers options and referrals rather than steering toward a single outcome."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Program names and the WIPA/Ticket\u2011to\u2011Work hotline are appropriate, but the specific DVRS office address/phone may change and wasn\u2019t qualified beyond a brief 'call ahead' note; more explicit caveats or sourcing would improve reliability."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Concise, well organized and prioritized\u2014the most actionable items (local DVRS, WIPA hotline, types of supports) appear up front and are easy to use quickly."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Practical and directly usable for a peer provider looking for next steps and referrals, with minor limitations around verification of the local office contact and more detail on eligibility/process."
+    },
+    "primary_strength": "Provides concrete, locally relevant resources (DVRS Paterson, WIPA/Ticket to Work) and clear next steps addressing both employment supports and benefits concerns.",
+    "primary_weakness": "Includes a specific local office address/phone without clear verification and omits more detailed caveats about eligibility, waitlists, and how to initiate services.",
+    "scenario_id": 3,
+    "group": "resource",
+    "title": "Employment + disability",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, age-appropriate, low-pressure options (library events, walking groups, volunteer roles), practical entry strategies, and a simple micro-goal that go beyond the provider's initial prompt."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key barriers (uncertainty tolerance, mobility/hearing, fear of being stuck) and suggests focused questions to uncover preferences; could have noted transport/affordability or accessibility concerns more explicitly."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the request for a comfortable first step with prioritized, relevant suggestions and a clear, low-pressure action plan tailored to someone hesitant about groups."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the provider with options and prompts while leaving the interpersonal work to the peer; avoids prescriptive scripts or clinical takeover."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated goal of 'getting out more,' offers choice-preserving small experiments, and avoids steering toward a single definition of success."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Uses generic, verifiable suggestions without inventing specific programs, contacts, or eligibility claims and appropriately offers to look up local options if location is provided."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with concise bullets, prioritized options, targeted questions, and a simple 20\u201330 minute micro-goal that a provider can use immediately in conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and ready-to-use guidance for a peer provider, though it could be slightly more complete by briefly flagging transportation, cost, and accessibility considerations."
+    },
+    "primary_strength": "Concrete, low-pressure, age-appropriate options and a clear, easy-to-follow micro-goal that the provider can use immediately.",
+    "primary_weakness": "Omits brief attention to practical barriers like transportation, cost, and accessibility that could affect whether suggested activities are actually feasible for this person.",
+    "scenario_id": 4,
+    "group": "planning",
+    "title": "Isolation + interests",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides practical, concrete low-pressure options and a helpful reframing (lower social risk) that go beyond the provider's prompt, but stops short of probing likely practical barriers (transport, mobility, hearing, cost) or offering specific local resources without location details."
+    },
+    "important_things_to_notice": {
+      "score": 5,
+      "reason": "Selectively highlights high-value considerations: reduce social risk, prefer structured/time-limited activities, use one-to-one/buddy entry points, and reframe the goal as rebuilding rhythm rather than immediately making friends."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the request with actionable first-step options and concrete ways to make trying something feel manageable; stays focused on the client's hesitation about new groups."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer provider by offering options and framing without prescribing scripts or supplanting the provider's relationship or judgment."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the man's stated wish to 'get out more' and his hesitancy, offering low-pressure choices and 'try once' framing that preserve his choice and control."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Makes general, non-specific recommendations and avoids inventing local facts; appropriately offers to look up local options only if given location details."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullet points and prioritized suggestions that a peer provider can quickly use in conversation."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Practical, well-aligned, and readily usable: gives the provider both mindset (lower social risk) and concrete, low-pressure activity options to suggest as a comfortable first step."
+    },
+    "primary_strength": "Clear, practical low-pressure options and a helpful reframing (lowering social risk) that make a comfortable first step tangible.",
+    "primary_weakness": "Doesn't ask about or flag common practical barriers (transportation, mobility, hearing/vision, cost, anxiety severity) that could affect which options are feasible.",
+    "scenario_id": 4,
+    "group": "planning",
+    "title": "Isolation + interests",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, relevant resources (DVRS, WIPA, Ticket to Work, One-Stop/Career services), local office contact and actionable next steps that expand what the provider brought, though it could offer a few more specific work\u2011incentive details or verified local contacts."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Flags the key considerations the provider should notice (need for benefits counseling, monthly SSI reporting, Medicaid nuances, recordkeeping for irregular work); it could be slightly stronger by singling out SGA thresholds and Trial Work Period timing when SSDI is involved."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the request for supports and options for preserving benefits while increasing earnings, supplies next steps and asks for which benefits she receives for more tailored guidance."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Provides informational support and resources without replacing the peer\u2019s role or offering unsolicited scripts or clinical directives; leaves room for the peer provider\u2019s relationship and judgment."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person\u2019s goals (steadier accessible work and protecting benefits), presents options rather than steering to a single outcome, and invites follow-up for more specific tailoring."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Links to authoritative SSA and NJ government pages are reliable and the response explicitly cautions that local office details were not independently verified, but providing an unverified phone/address is a minor risk."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Information is well organized into short bullet points and clear next steps, making it quick to scan and use during a conversation with the service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful and practical for a peer-support provider looking for concrete resources and considerations, with minor limitations (unverified local contact details and a lack of a few specific work\u2011incentive figures)."
+    },
+    "primary_strength": "The response provides concrete, locally relevant resources and directs the provider to benefits counseling (WIPA/Ticket to Work) which directly addresses the client's dual concerns about work and benefits.",
+    "primary_weakness": "It includes an unverified local office address/phone and stops short of giving a few specific work\u2011incentive details (e.g., SGA thresholds, Trial Work Period mechanics) that would help tailor immediate guidance.",
+    "scenario_id": 3,
+    "group": "resource",
+    "title": "Employment + disability",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, relevant programs (DVRS, WIPA, WorkAbility, Ticket to Work, One-Stop) and links that materially expand what the provider can offer beyond generic advice, though it could add a few local contacts (e.g., Centers for Independent Living) or more actionable next steps."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the key, case-specific issue \u2014 benefits interactions and need for individualized benefits counseling \u2014 and notes work incentives and gradual impacts, but omits a few practical considerations (eligibility timing, typical wait times, local CILs)."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request by naming programs and supports relevant to finding steadier, disability-accommodating work and concerns about benefit effects, without introducing unrelated material."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Adds resource- and policy-focused information without attempting to replace the provider's peer role with scripts, prescriptive coaching, or clinical management."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated goals (steadier, accommodating work) and concern (benefit impact) and recommends individualized counseling rather than steering to a single outcome."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Cites plausible official program links and transparently notes an inability to fully verify office details, but includes a local address/phone presented as 'often listed' without verification and makes a slightly imprecise generalization about SSI/earnings."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with concise bullets and links so a provider can quickly identify useful resources and next priorities (benefits counseling, DVRS, One-Stop)."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful: gives targeted programs, explains why benefits counseling matters, and supplies local entry points; minor weaknesses are a lack of certain local alternatives (CILs, verified WIPA contact) and a bit of unverified contact info."
+    },
+    "primary_strength": "Clearly identifies and links the most relevant state and federal supports (DVRS, WIPA, WorkAbility, Ticket to Work) and explains why benefits counseling matters.",
+    "primary_weakness": "Includes some unverified local contact details and misses a few practical local options and concrete next steps the provider could immediately use.",
+    "scenario_id": 3,
+    "group": "resource",
+    "title": "Employment + disability",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally relevant resources (Camden County office, NJhelps, 2-1-1), a clear list of likely programs, and practical next steps (who to call, what to have) that go beyond the provider's initial description."
+    },
+    "important_things_to_notice": {
+      "score": 3,
+      "reason": "Notes key actions (call Medicaid plan for NEMT, county benefits screening) but misses some consequential details\u2014e.g., documents commonly required for SNAP/benefits, expedited SNAP for emergencies, and local paratransit/volunteer-ride options\u2014that could materially affect next steps."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request: lists likely programs, gives local starting points and contact details, and offers follow-up help tailored to SNAP eligibility and transportation tied to the Medicaid plan."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer-provider role by supplying information and options without prescribing interpersonal approaches, scripting, or taking over case-management responsibilities."
+    },
+    "service_user_goals_autonomy": {
+      "score": 4,
+      "reason": "Centers the user's stated needs (finding programs and transportation) and preserves choice by offering options and contacts, though it lightly includes senior-specific programs that may not apply to a 61\u2011year\u2011old without clarifying eligibility."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Gives specific local contacts and official portals (NJhelps, county site) that are verifiable; factual claims are generally accurate but the response could better note that program details and phone numbers can change and should be confirmed."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with a short program list, clear 'where to start' steps, and contact details\u2014easy to scan and act on quickly during a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Overall very useful: actionable local resources and next steps that a peer provider can use immediately, with minor gaps around documentation requirements and alternative transportation specifics."
+    },
+    "primary_strength": "Provides concrete, locally specific resources and clear next steps (county office, state portal, 2-1-1) that the provider can act on right away.",
+    "primary_weakness": "Omits some important eligibility nuances and practical details (required documents for SNAP/applications, expedited benefits options, and specific local paratransit or volunteer-ride programs) that would help ensure smoother follow-through.",
+    "scenario_id": 2,
+    "group": "resource",
+    "title": "Benefits + transportation",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides clear, concrete New Jersey\u2013specific resources (DVRS, WIPA, NJ WorkAbility, One-Stop centers, Centers for Independent Living) and a useful state link that meaningfully expands what the provider can offer the service user."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the central tradeoff (work may not automatically cause loss of benefits) and the need for benefits counseling, but stops short of naming a few high-value specifics (e.g., SGA thresholds, trial work period for SSDI, exact differences between SSI and SSDI) that could materially affect planning."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request about supports and benefits concerns for someone in Paterson seeking steadier, accommodated work and offers reasonable follow-up actions."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Adds informational and resource support without prescribing how the provider should do their peer work or replacing the provider's relational role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated goals (steadier, accommodated work and concern about benefits) and avoids steering toward unrelated outcomes."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Information and programs named are appropriate and a state link is provided, but the response could better qualify that eligibility rules and thresholds change and should be confirmed with WIPA/DVRS (and it omits some benefit-specific technical details)."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Concise bullets and clearly prioritized resources make the response quick to scan and act on in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful starter guidance with actionable NJ resources and offer of next steps; would be stronger with immediate local contact details and a couple of concrete benefit-rule highlights."
+    },
+    "primary_strength": "Concise, locally relevant list of programs and supports (DVRS, WIPA, NJ WorkAbility) with a clear next-step offer.",
+    "primary_weakness": "Omits a few important benefit-specific details (e.g., SSI vs SSDI differences, SGA/trial work period) and lacks immediate local contact information that would make it more actionable.",
+    "scenario_id": 3,
+    "group": "resource",
+    "title": "Employment + disability",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally relevant resources (DVRS office, Ticket to Work helpline), practical program options (benefits counseling, WIPA), and specific topics to explore (PASS, IRWE, trial work period) that materially expand what a peer provider could offer."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the key distinctions and tradeoffs the client needs to understand (SSI vs SSDI, gradual phase-out, reporting requirements, Medicaid continuation) but could have named a few additional NJ-specific programs (e.g., Medicaid Buy-In/WorkAbility-type options) or employer/ADA considerations."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request by naming appropriate supports, local contact information, and specific benefit-planning issues relevant to someone considering increased work hours."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Sticks to supplying factual resources and considerations without prescribing how the peer should manage the relationship or offering unsolicited scripts, leaving implementation to the provider."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated goals (steadier, accommodated work and concern about benefits) and offers options to explore without steering toward a specific outcome."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Generally reliable and appropriately cautious about verifying the WIPA provider, but it presents specific DVRS contact details and verification claims that could be out of date and should have been accompanied by a stronger caveat to confirm before sharing."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Information is well organized and prioritized (key supports, local contact, phone/website), making it easy to use in a conversation, though a brief next-step checklist could improve quick use."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful: gives the peer provider concrete, actionable resources and the essential benefit-related topics to raise with the client, with minor limitations around explicit verification and a few omitted state-specific program names."
+    },
+    "primary_strength": "The response gives concrete, locally relevant resources and clearly identifies the main benefit-planning issues the client needs to address.",
+    "primary_weakness": "It presents specific contact details and a verification claim without a sufficiently clear caution that these details should be confirmed, creating some reliability risk.",
+    "scenario_id": 3,
+    "group": "resource",
+    "title": "Employment + disability",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, relevant programs (DVRS, WIPA, Ticket to Work, NJ WorkAbility), local resource types, and practical next steps that materially expand what the provider can offer, though it could have included a few additional SSA-specific work rules."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Correctly surfaces the key consideration\u2014benefits/work incentives counseling\u2014and distinctions like WorkAbility and ADA accommodations; it misses a couple of high-value specifics (e.g., SSDI Trial Work Period or PASS options) that could also matter."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request by listing applicable programs, local resources, what to bring when contacting them, and offering further targeted help."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the provider with factual resources and options without prescribing how to conduct peer conversations or replacing the provider's role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's stated goals (steadier, disability-accommodating work while protecting benefits) and suggests options that preserve choices rather than steering to a single outcome."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Most program references are accurate and appropriate, but the specific local office address/phone should be verified before use and the response doesn't cite sources for eligibility details."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets and prioritized actions (who to contact, what to ask, what to bring), making it quick to scan and use in a live conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very helpful and actionable for a peer-support provider preparing the person to explore steadier work while protecting benefits; minor omissions (extra SSA work-rule details) and unverified local contact data limit it from being exceptional."
+    },
+    "primary_strength": "Provides concrete, locally relevant programs and clear next steps (benefits counseling, DVRS, WIPA, WorkAbility) that the provider can act on immediately.",
+    "primary_weakness": "Includes specific local contact details that may be unverified and omits some useful SSA-specific work incentives (e.g., Trial Work Period or PASS) that could matter for benefits planning.",
+    "scenario_id": 3,
+    "group": "resource",
+    "title": "Employment + disability",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, practical options (side-by-side activities, recon visits, one-person outings, specific program types) that go beyond a generic suggestion to 'get out more' and would meaningfully expand the provider's toolkit."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Flags key, relevant barriers (low confidence, grief, depression, mobility, hearing, transportation) and highlights distinctions like task-focused versus social-focused activities that materially affect what first steps will feel doable."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request for a comfortable first step with prioritized, low-pressure strategies and applicable examples rather than unrelated material."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer role by offering suggestions and resources without replacing the provider's relationship or prescribing detailed scripts or clinical interventions."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's stated desire to 'get out more,' offers a range of low-commitment options, and avoids steering toward any single outcome or assuming goals the person hasn't expressed."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Recommendations are realistic and avoid inventing specifics; however some program names are generic and the response doesn't note the need to verify local availability or accessibility."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets and practical examples so a provider can quickly pick a few concrete suggestions to try in conversation or planning."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and usable guidance for a comfortable first step, though it could be improved by adding a few highly actionable next steps (e.g., transportation/buddy options, short phone-based groups, or how to arrange a recon visit) or prompts to assess mobility/hearing constraints."
+    },
+    "primary_strength": "Gives practical, low-pressure, and varied activity options tailored to someone hesitant about unfamiliar social groups.",
+    "primary_weakness": "Omits some immediately actionable supports (transportation/buddy options, brief online alternatives, or explicit next-step wording the provider could use) that would make implementation easier.",
+    "scenario_id": 4,
+    "group": "planning",
+    "title": "Isolation + interests",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, actionable small steps and a short phased plan that go beyond the original vignette, but it doesn't offer locale-specific resources or tailoring to benefit/health constraints."
+    },
+    "important_things_to_notice": {
+      "score": 5,
+      "reason": "Selectively surfaces the key distinctions that often cause paralysis (routine vs. applications, separating schedule/skills/re-entry level, delaying gap explanations) and the useful tradeoff of consistency over speed."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request for manageable first steps with a clear, prioritized sequence and low-pressure actions."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer role with practical options and encouragement without replacing the provider or prescribing clinical interventions."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's desire to return to work, offers multiple re-entry options, and emphasizes choice and pacing rather than steering to a single outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Makes no dubious factual claims or invented specifics and frames suggestions as general options to be adapted and verified locally."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with short bullets, a week-by-week plan, and simple exercises that a provider could quickly use in session."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Highly practical and immediately usable for supporting a person overwhelmed about returning to work, with clear next steps and mindset shifts."
+    },
+    "primary_strength": "Gives clear, concrete, low-pressure steps and distinctions that directly reduce overwhelm and are easy to implement.",
+    "primary_weakness": "Doesn't mention checking for local supports or potential constraints (e.g., benefits, health accommodations) that might affect which steps are realistic.",
+    "scenario_id": 5,
+    "group": "planning",
+    "title": "Returning to work",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides practical, concrete low-pressure options (situations vs commitments, side-by-side activities, short experiments) that expand the provider's repertoire beyond the brief scenario without being redundant."
+    },
+    "important_things_to_notice": {
+      "score": 3,
+      "reason": "Surfaces useful distinctions (familiarity over intensity, time of day, quiet vs lively) and normalizes hesitation, but misses other consequential practical factors (mobility/transportation, finances, health or safety limitations) that could change which first steps are realistic."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the requested 'comfortable first step' with focused, actionable suggestions and brief decision questions tailored to someone hesitant about joining groups."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer provider by offering options and a low-pressure experiment rather than prescribing how to run the conversation or taking over the peer role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's stated goal of 'getting out more' and preserves choice through small, optional experiments and questions to tailor next steps rather than steering to a single outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Makes no factual claims or specific resource assertions that could be wrong; advice is general and appropriately cautious."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized and concise: key framing, clarifying questions, concrete first-step options and a short experiment are easy to scan and use in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful practical guidance for a peer provider to offer the person, with clear, low-pressure options; slightly held back by omission of some practical barriers (mobility, transport, finances) that would commonly affect next steps for a 70-year-old living alone."
+    },
+    "primary_strength": "Gives clear, low-pressure, repeatable first-step experiments and a helpful 'situations vs commitments' framing that the provider can easily use in conversation.",
+    "primary_weakness": "Fails to flag several practical constraints (mobility, transportation, health, finances, safety) that could materially affect which suggested activities are realistic for this 70-year-old.",
+    "scenario_id": 4,
+    "group": "planning",
+    "title": "Isolation + interests",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, practical first-step ideas (low-pressure activities, a 1-time experiment plan, a brief organizer script) that go beyond generic advice but doesn't offer localized resources or address logistical barriers."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the useful distinction between activity-focused outings versus social-pressure settings, the value of framing outings as information-gathering, and the usefulness of a time-limited trial, though it omits some logistical considerations (transport, mobility)."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request with prioritized, actionable first steps tailored to someone hesitant to join groups and unsure what they'd enjoy."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer-support role by offering options and a simple experiment framework without taking over the interpersonal or therapeutic work the provider would do with the person."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's stated goal to 'get out more,' preserves choice with low-commitment options and explicit permission to leave early, and avoids steering toward a specific outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Avoids invented facts or unreliable specifics, offers general strategies that don't depend on changing external details, and suggests confirmatory contact with organizers when relevant."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well-structured and concise: high-value suggestions and a short experiment plan appear early and are easy for a provider to relay in conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and usable for a peer provider working with this person, though it would be stronger with brief prompts the provider could use directly with the person and attention to likely logistical barriers (transport, mobility, cost)."
+    },
+    "primary_strength": "Clear, practical, low-pressure first-step options and a simple one-time experiment plan that a peer can readily suggest to the 70-year-old.",
+    "primary_weakness": "Doesn't address common logistical barriers (transportation, mobility, cost, accessibility) or provide ready-to-use phrasing for the provider to use in the next conversation.",
+    "scenario_id": 4,
+    "group": "planning",
+    "title": "Isolation + interests",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, actionable first steps (resume, skills list, low-stakes routines), realistic bridge options (volunteering, temp work, supported employment), and specific local resources which meaningfully expand what the peer provider can offer beyond generic encouragement."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key distinctions (what 'work' means now vs. immediate employment), practical constraints (energy, transport, scheduling), and the psychological impact of employment gaps \u2014 all consequential considerations the provider should notice."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the request for manageable first steps and a gradual approach, prioritizing low-pressure, practical options and including relevant resource suggestions without tangents."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Compliments the peer role by offering options and resources rather than prescriptive scripting or clinical direction, leaving room for the provider to apply lived-experience judgement in supporting the person."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's own definition of 'work' and offers varied, optional pathways so the person can choose steps that match their priorities and current capacity."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Resource links are plausible and the conditional phrasing 'If you\u2019re in New Jersey' is appropriate, but the explicit claim 'Verified: NJ state pages accessible as of today' asserts a real-time check the AI cannot reliably make, reducing trustworthiness."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Information is well organized with clear bullets and prioritized, easy-to-scan suggestions the provider could quickly use during a conversation with the service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Overall very useful \u2014 practical steps, bridge options, and resources that a peer can apply \u2014 but slightly weakened by an unsupported claim of real-time verification and lack of brief follow-up questions to personalize recommendations."
+    },
+    "primary_strength": "Gives clear, concrete, low-pressure first steps and bridge options (resume drafting, volunteering, temp work, supported employment) that make returning to work feel manageable.",
+    "primary_weakness": "Asserts that NJ webpages were 'verified' immediately, an unsupported real-time claim, and it could have asked a couple quick personalization questions (location, health/transport constraints) to tailor suggestions further.",
+    "scenario_id": 5,
+    "group": "planning",
+    "title": "Returning to work",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, actionable options (parallel socializing, role-focused activities), a clear low-pressure experiment, and useful questions to narrow preferences \u2014 but it stops short of offering tailored/local resource suggestions without more details."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Surfaces key considerations (redefining success, repeat exposure, activity with a role/focus, low-pressure examples) that the provider might not immediately articulate; it could have more explicitly flagged practical barriers like mobility, sensory limitations, or transport."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request for a comfortable first step with prioritized, concrete advice and a simple stepwise experiment, and offers to tailor suggestions further."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the provider with options and framing without replacing their peer role or giving prescriptive scripts; leaves room for the provider's judgment and relationship with the person."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's stated goal to 'get out more,' offers choice-based, low-pressure options, and emphasizes observing the person's own comfort and preferences rather than pushing a particular outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no invented facts or misleading specifics; advice is general and appropriately uncertain and invites follow-up for tailoring to concrete constraints."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with short bullets, clear examples, and a simple 4-step experiment \u2014 easy to scan and use in a live conversation."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Practical, well-targeted guidance that the provider can immediately use to help the person try a low-pressure outing; the main limitation is lack of immediate local/resource suggestions and brief attention to mobility/safety factors."
+    },
+    "primary_strength": "Provides practical, low-pressure, and actionable steps (including the 'observe once, return once' experiment and the idea of parallel socializing) that the provider can use right away.",
+    "primary_weakness": "Doesn't proactively address practical barriers (mobility, transport, sensory or health limitations) or offer any concrete local resource suggestions without further details.",
+    "scenario_id": 4,
+    "group": "planning",
+    "title": "Isolation + interests",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, actionable 'work-adjacent' options, small step ideas, and NJ-specific resources/links that expand the provider's toolkit beyond generic encouragement."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key distinctions (readiness vs career direction, normalizing resume gaps) and critical considerations (benefits/eligibility), though it doesn't explicitly flag some common practical barriers (childcare, transportation) that might matter for this person."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the request for manageable first steps with prioritized, practical options and examples appropriate for someone feeling overwhelmed about returning to work."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Provides resources and options without prescribing how the provider should run the conversation or taking over the peer-support role; leaves room for the provider's judgment and relationship."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's readiness and offers very small, voluntary next steps while warning about benefits-related risks, preserving the service user's choice and pace."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Includes plausible NJ links and programs but asserts a 'verified as of today' claim and could better qualify that program details, eligibility, and availability change and should be confirmed."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well-organized bullets and short example next steps make it quick to scan and use in-session; high-value items appear early."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Highly usable and practical for a peer provider working with someone overwhelmed about returning to work, though it would be stronger with clearer caveats about verifying program details and a brief prompt to check for the person's specific practical barriers."
+    },
+    "primary_strength": "Provides concrete, prioritized next steps and locally relevant resources (including URLs) that a peer provider can immediately use with the service user.",
+    "primary_weakness": "Overstates verification of resources and omits explicit attention to some practical, person-specific barriers (e.g., childcare, transport) and a stronger caveat to confirm current eligibility/availability.",
+    "scenario_id": 5,
+    "group": "planning",
+    "title": "Returning to work",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 3,
+      "reason": "Provides useful, concrete small steps, transitional options, and actionable ideas (resume refresh, volunteering, tiny goals) that complement a peer's work, but much of it is general and the AI unnecessarily introduced state-specific resources (New Jersey) without that context."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key distinctions the provider should notice (why she wants work, separating preparation from applying, benefits implications, low-pressure transitional options) though it could have explicitly flagged missing facts like location or specific barriers (transportation, childcare)."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly answers the request with prioritized, practical first steps and offers follow-up help, but includes an unwarranted geographic assumption (NJ) that slightly reduces relevance for many users."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer-support role by offering options and resources rather than prescribing how the provider should intervene or supplying scripts, leaving room for the peer's lived-experience judgment."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's own goals by recommending clarifying what 'work again' means and offering a menu of low-pressure options rather than pushing a single outcome."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Most general advice is sound, but the response invents a location (New Jersey) and supplies state links without basis; it also makes general claims about benefits and programs without noting the need to verify specifics for the individual's situation."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullet points and very actionable micro-tasks, making it easy for a provider to scan and use in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Overall a practical, actionable response that meaningfully helps plan manageable first steps, though the unsolicited NJ-specific resources and lack of a prompt to clarify location or concrete barriers are notable limitations."
+    },
+    "primary_strength": "Gives clear, practical, low-pressure first steps and distinctions (e.g., separate preparation from applying; tiny concrete goals) that a peer can readily use.",
+    "primary_weakness": "Assumes the service user is in New Jersey and provides state-specific resources without any location information, which could mislead or be irrelevant.",
+    "scenario_id": 5,
+    "group": "planning",
+    "title": "Returning to work",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, actionable small steps, exercises (three lists), and realistic backfill options (temp, part-time, volunteering) that go beyond generic encouragement but is not highly specialized or resource-specific."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key considerations (energy, schedule, practical barriers, identity vs. chronology, expectation of discomfort) that matter for planning a gradual return, though it omits some consequential items like benefits/eligibility or workplace accommodations."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request for manageable first steps toward returning to work and prioritizes small, doable actions and alternatives to immediate job applications."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements a peer-provider role by offering suggestions and brief wording while leaving room for the provider's lived-experience judgment; it doesn't replace the peer with prescriptive clinical or case-management instructions."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's stated goal of a gradual return to work, offers multiple options and preserves choice rather than steering to a single assumed outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no invented facts or unverifiable claims; recommendations are generic and appropriately presented without misleading specifics."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullet points and brief, actionable suggestions that a provider could quickly use in conversation or to co-create a plan."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful practical guidance for starting a return-to-work process, but could be improved with a few additional specifics (e.g., benefit interactions, examples of low-pressure roles, or a simple 30-day template) that many clients find helpful."
+    },
+    "primary_strength": "Provides concise, practical, and incremental steps and alternatives that make returning to work feel manageable rather than overwhelming.",
+    "primary_weakness": "Does not address some consequential practicalities (such as checking benefit/eligibility implications, workplace accommodations, or offering a ready 30-day template/local resource examples) that could materially affect next steps.",
+    "scenario_id": 5,
+    "group": "planning",
+    "title": "Returning to work",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, stage-based steps and specific small actions (routine, inventory, bridge activities) that go beyond generic encouragement, though it could have added targeted resources or prompts to assess practical constraints (childcare, benefits, accommodations)."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key psychological barriers (fears about gaps, overwhelm) and reframes gap years as valuable experience, but doesn't explicitly flag some consequential practical uncertainties (e.g., caregiving responsibilities, benefit impacts, transportation or disability accommodations) that might change recommended next steps."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request for manageable first steps, prioritizes small low-pressure actions, and offers to help build a 30-day plan or other concrete next steps."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer-support role by offering ideas and options without taking over; it avoids prescriptive scripts and leaves room for the provider and service user to choose which suggestions fit their lived experience."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's stated goal (wanting to return to work) and emphasizes small, self-directed steps and flexible options (part-time, temp, volunteering) rather than steering toward a single outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no invented factual claims or specific resource details and frames statements appropriately as general guidance rather than certainty, so there is little risk of misleading factual error."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets and prioritized, actionable items early in the response, making it easy to scan and use in a live conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and immediately usable for planning low-pressure re-entry steps, though it would be more complete if it briefly prompted assessing concrete barriers (benefits, caregiving, transport, accommodations) or suggested where to find local vocational supports."
+    },
+    "primary_strength": "Clear, practical, staged steps and small, low-pressure actions that a peer provider can readily use to help the person begin returning to work.",
+    "primary_weakness": "Doesn't explicitly prompt assessment of important practical constraints (e.g., benefits, caregiving, disability accommodations) or point to potential local resources that could alter the plan.",
+    "scenario_id": 5,
+    "group": "planning",
+    "title": "Returning to work",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, actionable frameworks (categorizing contacts, 'levels' of reconnection, pacing, and a suggested low-risk first step) that meaningfully expand what the provider can offer beyond the scenario, without unnecessary filler."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key, decision-relevant distinctions (emotional safety vs. obligation, types of desired closeness, reciprocity, pacing and boundaries) though it does not explicitly flag potential safety or abuse concerns that might matter in some reunification efforts."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request for ways to start reconnecting and prioritizing relationships, offering prioritized, practical options and suggestions tailored to the situation."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer-support role by offering options and frameworks for the provider to use rather than prescribing scripts or taking over the relational work; suggestions are non-prescriptive and supportive of the provider's work."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's preferences and choice (pace, level of disclosure, boundaries), and explicitly preserves permission not to reconnect or to set limits, supporting autonomy."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Makes no factual claims or verifiable assertions that could be wrong; advice is appropriately non-specific and framed as common experiences or options rather than definitive statements."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized into short bullets and categories with clear, usable steps and examples that a provider could quickly apply during a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful practical guidance that the provider can readily use with the service user; minor omissions include checking for safety concerns and offering a couple of brief example phrases or prompts if the provider wanted wording to use in-session."
+    },
+    "primary_strength": "Clear, actionable frameworks (categories of contacts, levels of reconnection, and pacing guidance) that make the task feel manageable and give the provider concrete options to offer.",
+    "primary_weakness": "Does not explicitly prompt consideration of safety/abuse risk or provide a few brief example phrases the provider could use to help the service user initiate contact.",
+    "scenario_id": 6,
+    "group": "planning",
+    "title": "Rebuilding relationships",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, practical frameworks (categorizing relationships, low-stakes vs high-emotional-weight, sample starter actions and phrases) that expand what a peer provider might suggest without simply restating the prompt; not truly exceptional but clearly useful."
+    },
+    "important_things_to_notice": {
+      "score": 5,
+      "reason": "Selectively surfaces key distinctions (guilt vs missing someone, harmful/draining relationships, differing desired roles, testing contact rather than committing) that materially shape how to prioritize and start reconnecting."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request to help the person think through where to begin and how quickly, offering prioritized options and small-step approaches tailored to the presented goals."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer-support role by offering options and language the provider can use while leaving judgement and pacing to the provider and service user; does not attempt to replace the peer's role with clinical or case-management directives."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's preferences and emphasizes experimentation, choice, and that reconnection need not restore prior closeness, preserving autonomy and multiple pathways forward."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no factual claims or unverifiable specifics and appropriately avoids invented details; recommendations are general and clearly applicable without misleading certainty."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized into short categories, reflective questions, concrete examples, and sample phrases so a provider can quickly scan and use the most relevant parts in conversation."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Highly practical and ready-to-use guidance that complements peer work, offering safe, low-pressure starting options and ways to prioritize relationships while preserving autonomy."
+    },
+    "primary_strength": "Clear, practical, and well-organized suggestions (categories, low-stakes actions, and sample language) that a peer provider can immediately use with the service user.",
+    "primary_weakness": "Doesn't explicitly mention preparing for possible negative reactions or planning self-care/support if reconnection attempts go poorly, which could be important for higher-risk or emotionally charged relationships.",
+    "scenario_id": 6,
+    "group": "planning",
+    "title": "Rebuilding relationships",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides practical, actionable frameworks (priority categories, 'cost' factors, layered pacing) that meaningfully expand what the provider can offer, though it could include a few additional prompts or safety checks."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Selectively surfaces key considerations (expectation management, varied responses, selective reconnection, changed relationships) but omits an explicit note about assessing safety or past harm before reconnecting."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request with focused, practical suggestions for how to prioritize and start reconnecting and offers a concrete next step (mapping people)."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer-support role by offering tools and options without taking over the relationship or prescribing detailed scripts; leaves room for the provider's judgment and lived-experience input."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's preferences and preserves choice by emphasizing selective reconnection, pacing, and that restoration may take different forms rather than assuming a single goal."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no factual claims requiring verification and frames suggestions as options rather than definitive facts, avoiding unsupported specifics."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized into clear categories and short lists, making it quick to scan and apply in a real-time conversation with the service user."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Practical, focused, and directly usable: offers a clear decision framework, pacing steps, and considerations the provider can readily use to help the person map next steps."
+    },
+    "primary_strength": "Provides clear, practical frameworks and layered, low-stakes steps that the provider can use immediately to help the person prioritize and begin reconnecting.",
+    "primary_weakness": "Does not explicitly prompt assessment of safety or past harm in relationships, which could be important before encouraging reconnection.",
+    "scenario_id": 6,
+    "group": "planning",
+    "title": "Rebuilding relationships",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides practical, concrete frameworks (categorization, pacing, sample openers, a 3-question exercise) that substantially expand what the provider could offer the person, though it omits guidance about reconnecting after abusive or high-risk situations."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key distinctions (genuine curiosity vs. guilt), tradeoffs (start easy vs. tackle loaded relationships), and realistic expectations about responses; could more explicitly flag safety/boundary concerns for high-conflict contacts."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider\u2019s request with focused, practical suggestions for which relationships to prioritize and how to start at a comfortable pace."
+    },
+    "peer_role_alignment": {
+      "score": 4,
+      "reason": "Complements a peer\u2019s work by offering options and brief scripts without taking over clinical decision-making, though it includes some unsolicited sample wording and coaching."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person\u2019s preferences (start small, choose pace and level of closeness) and preserves multiple options rather than prescribing a single \u2018right\u2019 outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Advice is general, non-factual, and appropriately cautious; it does not invent or assert verifiable claims that could mislead."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets, example phrases, and a simple 3-question exercise that a provider can quickly use in-session."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Actionable, empathetic, and well-targeted guidance that a peer provider could readily use with the person; slightly weakened by lack of an explicit brief note about safety or boundary planning for high-conflict or potentially harmful relationships."
+    },
+    "primary_strength": "Practical, well-structured strategies (categorization, small consistent steps, scripts, and a quick decision exercise) that the provider can immediately use with the person.",
+    "primary_weakness": "Fails to explicitly flag safety, boundary-setting, or when to avoid reconnecting (e.g., abusive or high-risk relationships), which is an important omission for some reconnection scenarios.",
+    "scenario_id": 6,
+    "group": "planning",
+    "title": "Rebuilding relationships",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, actionable frameworks (triage questions, categories, sample scripts, pacing options) that expand the provider's toolkit beyond the basic scenario, though it could have briefly flagged higher-risk situations or support options."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key distinctions (miss vs safe vs regret), the value of low-stakes first contact, pacing, and expectation-management; it misses a brief prompt to consider safety/abuse or need for mediation in highly conflicted relationships."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request for a comfortable way to start reconnecting and prioritizes practical, relevant steps and language."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements peer work by offering options and sample phrasing without assuming the provider's role or imposing clinical directives; leaves decisions and judgment to the provider and service user."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's preferences, encourages gradual choices, and preserves multiple options rather than steering to a single outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Advice is general, nontechnical, and appropriately cautious; it does not assert unverifiable facts or misleading specifics."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well-structured with clear bullets, triage questions, short scripts, and concrete pace options that are easy to scan and use in a live conversation."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Practical, focused, and directly usable in session: gives the provider multiple concrete ways to help the person begin reconnecting, with only minor omissions about handling high-risk or abusive contacts."
+    },
+    "primary_strength": "Gives a clear, usable roadmap (questions to decide priority, simple contact scripts, and pacing options) that the provider can immediately apply.",
+    "primary_weakness": "Does not explicitly flag safety concerns or when to avoid direct reconnection or seek additional support/mediation for highly conflicted or abusive relationships.",
+    "scenario_id": 6,
+    "group": "planning",
+    "title": "Rebuilding relationships",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides practical frameworks (outcome vs personal recovery goals), concrete questions, and an easy-two-column exercise that add useful options the peer provider can use beyond basic validation."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key distinctions the provider should notice\u2014family fear about long-term security, timing vs values, and smaller/alternative forms of milestones\u2014without introducing speculative concerns."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses both parts of the request (help clarifying the person's recovery definition and how to explain it to family) with relevant tools, questions, and communication guidance."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the peer provider with prompts, framing, and an exercise while leaving room for the provider's lived-experience skills and relationship to shape the conversation."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's priorities, explicitly preserves choice, and avoids imposing family-defined outcomes or reframing the user's goals as inherently wrong."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Makes no factual claims requiring external verification and appropriately frames suggestions as options rather than definitive facts."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets, sample questions, and a simple two-column exercise that the provider can quickly use in session."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Gives actionable, well-targeted tools and considerations the peer can apply immediately to help the person clarify values and prepare family conversations, with minimal irrelevant material."
+    },
+    "primary_strength": "Provides clear, actionable frameworks and specific questions/exercises that concretely help the provider explore the person's self-defined recovery and prepare to explain it to family.",
+    "primary_weakness": "Doesn't offer brief example sentences or a short script the person could use immediately when talking with family\u2014only an outline of what to communicate and an offer to help further.",
+    "scenario_id": 7,
+    "group": "peer_values",
+    "title": "Different ideas about recovery",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides a clear, structured approach (categories to prioritize, pacing options, sample message, and post-contact cues) that meaningfully expands what the peer provider can offer beyond a generic prompt to 'reach out.'"
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Flags several key considerations (guilt versus genuine interest, starting light, testing mutual connection, noticing emotional reactions) though it omits some potentially important issues like handling rejection or safety concerns if relationships were harmful."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the exact request\u2014how to start reconnecting comfortably\u2014with prioritized, actionable suggestions and an example message, and avoids irrelevant tangents."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the peer provider with concrete options and phrasing without replacing their relational role or giving prescriptive clinical instructions; the guidance is usable by a peer."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's preferences (allowed to prioritize nourishing relationships, take exploratory steps, and avoid overcommitment) and preserves choice rather than steering toward a specific outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no factual claims that require verification and avoids presenting uncertain information as certain; recommendations are prudently framed as options rather than prescriptions."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with short bullets, a concrete sample message, and clear quick checks (emotional cues) so a provider could readily use this while talking with the service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and directly usable for helping the person plan a gentle reconnection, though it would be stronger if it briefly covered how to handle nonresponse, negative reactions, or relationships that may be unsafe to reopen."
+    },
+    "primary_strength": "Clear, practical, and well-structured guidance (prioritization categories, pacing tips, sample wording, and post-contact cues) that a peer provider can use immediately.",
+    "primary_weakness": "Does not address how to handle nonresponse, rejection, or potentially unsafe/harmful relationships when attempting reconnection.",
+    "scenario_id": 6,
+    "group": "planning",
+    "title": "Rebuilding relationships",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Offers a concrete, values-based framework, targeted reflection questions, example progress domains, and resource links that go beyond the provider's initial summary, though it stops short of offering ready-to-use short scripts or a concrete exercise."
+    },
+    "important_things_to_notice": {
+      "score": 5,
+      "reason": "Selectively highlights high-value distinctions and dynamics (values vs milestones, 'never' vs 'not now', family fear, private vs public goals, ambivalence) that are central to this situation."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses both parts of the request\u2014helping the person define recovery/progress for themselves and how to explain it to family\u2014and uses relevant, prioritized content."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer role by offering frameworks, options, and short example language without taking over the relationship or imposing clinical directives; it leaves application to the provider and service user."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers person-defined recovery, preserves choice with private/public goal framing, and explicitly avoids imposing family-defined milestones."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Advice is sensible and resource links appear appropriate, but the response could more explicitly note that resources or examples should be checked for updates and local applicability."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets, prioritized suggestions, and quick example phrases that a provider could use or adapt in-session."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Provides immediately usable framing, reflective prompts, communication structure, and reputable resource pointers that meaningfully help the provider support the person in defining and explaining recovery."
+    },
+    "primary_strength": "Practical, person-centered framework (values-based questions and clear distinctions) that directly supports defining recovery and explaining it to family.",
+    "primary_weakness": "Doesn't include brief, ready-to-use scripts or a small step-by-step exercise the provider could hand the person immediately to use with their family.",
+    "scenario_id": 7,
+    "group": "peer_values",
+    "title": "Different ideas about recovery",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, actionable material the provider can use (diagnostic questions, recovery domains, and phrasing to share with family) that goes beyond the initial case description, though it could add a few concrete negotiation or next-step tactics."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the key distinction between externally imposed milestones and internally meaningful recovery, family motives, timeline differences, and the possibility of avoidance versus values \u2014 the most consequential considerations for this situation \u2014 but omits a couple of pragmatic risks (e.g., how family may respond or escalate)."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses both parts of the provider's request: helping the person define recovery/progress for themselves and offering ways to explain that perspective to family; content stays focused on those needs."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer-provider role by offering tools, reflective questions, and example language while leaving judgment and implementation to the provider and service user, without replacing the provider's relationship work."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's values and choice throughout, emphasizing self-directed goals and the option to adopt conventional milestones on a different timeline rather than imposing external goals."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Makes no factual claims that require verification and frames suggestions (e.g., seeing a therapist) as optional support, avoiding invented specifics or misleading certainty."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear sections (questions to ask, domains, example scripts) and concise, ready-to-use phrasing that a provider could quickly deploy in conversation."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Offers highly practical, well-targeted support that helps the provider guide the service user to clarify personal recovery goals and communicate them to family, while respecting autonomy and the peer role."
+    },
+    "primary_strength": "Clear, actionable tools and ready-to-use scripts that help the person define personally meaningful recovery and communicate it to family.",
+    "primary_weakness": "Doesn't offer a few pragmatic next steps for handling likely family pushback (e.g., setting boundaries, proposing a trial plan, or arranging a mediated conversation).",
+    "scenario_id": 7,
+    "group": "peer_values",
+    "title": "Different ideas about recovery",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives practical frameworks, concise prompts to use in conversation, example family-facing phrasing, and specific resource links \u2014 concrete material the provider can use beyond what was in the prompt."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key distinctions (self-directed recovery, timing, obligation vs value) and calls out the practical tension when family supplies housing/finances; could have additionally flagged checking for safety/crisis or coercive dynamics explicitly."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses both parts of the provider's request: ways to help the person define recovery/progress and clear, realistic strategies for explaining that to family."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer role by offering prompts, frameworks, and optional phrasing without taking over the relationship or prescribing detailed clinical interventions."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's own priorities, preserves options and timing, and resists imposing the family's goals \u2014 supporting autonomy throughout."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Resource links provided are plausible and relevant, but the response doesn't note that local availability or specifics should be checked and doesn't cite verifiable details about those resources."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with short bullets, clear prompts and a simple example phrasing \u2014 easy to scan and use in a live conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and usable for a peer-support provider, though it could be improved by briefly flagging safety/coercion checks and offering one or two very short example scripts or next-step actions."
+    },
+    "primary_strength": "Provides actionable, peer-oriented prompts and family-facing phrasing that center the person's self-directed definition of recovery.",
+    "primary_weakness": "Does not explicitly flag safety or coercion risks and could have included one or two very brief example scripts or concrete next steps and a note to verify resource availability.",
+    "scenario_id": 7,
+    "group": "peer_values",
+    "title": "Different ideas about recovery",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, usable additions the peer can share (questions for self-reflection, example definitions of progress, wording to say to family, and a simple two-list exercise) that go beyond merely restating the problem."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key distinctions (external milestones vs. personal progress; intentional choice vs. avoidance) and the family\u2019s need for signs of direction, though it doesn't probe family dynamics or safety concerns."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request by offering ways to help the person define recovery and practical language/strategies for explaining that definition to family."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer role with concrete tools and wording without replacing the provider or prescribing clinical interventions; suggested referrals are optional and appropriately framed."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's own values and priorities, emphasizes self-definition of recovery, and avoids imposing conventional goals while encouraging clarity that preserves choice."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no factual claims that require verification and appropriately frames suggestions as options rather than definitive facts."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets, sample phrasing, and a simple exercise making it quick to use in a conversation or to share with the person."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and actionable for supporting the person to define recovery and communicate with family; minor omissions include limited attention to complex family dynamics, cultural context, or safety/coercion risks."
+    },
+    "primary_strength": "Provides clear, concrete questions, examples of meaningful progress, and ready-to-use phrasing to help the person articulate and communicate their personal definition of recovery.",
+    "primary_weakness": "Doesn't sufficiently address how to handle potentially difficult family dynamics, coercion, cultural differences, or when safety concerns might alter the approach.",
+    "scenario_id": 7,
+    "group": "peer_values",
+    "title": "Different ideas about recovery",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, practical framing, reflective questions, example definitions of progress, and ready-to-use phrasing that meaningfully expand what the provider can offer, though much of it is general rather than tailored to specific family dynamics."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Surfaces key distinctions (family expectations vs. personal priorities), reasons families push visible milestones, and the value of offering a concrete alternative, but it could more explicitly flag possible harmful pressure or how to handle strong resistance."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the request by helping define personally meaningful recovery and giving practical language and examples for explaining that definition to family."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer provider by supplying options, reflective prompts, and sample dialogue without substituting for the provider's relationship or taking over case management."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the individual's definition of progress, emphasizes ownership and timing, and avoids imposing external goals while suggesting ways to communicate boundaries and choices."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Makes no factual claims that require verification; recommendations are reasonable and appropriately cautious."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets, reflection prompts, examples of progress, and short sample phrases that a provider can quickly use in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Very useful: gives the provider actionable framing, reflective tools, and concrete language to help the service user clarify personal recovery goals and communicate them to family, with only minor omissions."
+    },
+    "primary_strength": "Clear, practical guidance that combines reflective questions, alternative definitions of progress, and ready-to-use language for conversations with family.",
+    "primary_weakness": "Does not explicitly address how to handle strong family resistance, coercive pressure, or escalate to safety/boundary strategies if conversations become conflictual.",
+    "scenario_id": 7,
+    "group": "peer_values",
+    "title": "Different ideas about recovery",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Offers concrete, practical decision-making tools (keep/change/unsure lists, question lists, outcome tracking), useful distinctions (types of dissatisfaction) and a relevant resource that go beyond a typical peer prompt without overprescribing a single solution."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the most consequential considerations for this decision (what 'better' means, tradeoffs, provider vs treatment vs decision-making dissatisfaction, continuity/transition risks) without introducing speculative concerns."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request to help the service user make a decision aligned with her values and prioritizes practical steps and framing that are on point for that goal."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer role by supplying tools and perspective for the provider to use while avoiding unnecessary scripting, clinical directives, or takeover of the peer\u2013service user relationship."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's priorities and emphasizes supporting her to define what she wants rather than steering toward a particular treatment outcome."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Most content is general and reliable; the included New Jersey PAD link is usefully caveated but introduces a location-specific resource that may not apply to the user and should have been offered more conditionally."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Clear, well-organized bullets and concrete suggestions make it quick to scan and apply during a conversation with the service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A practical, well-targeted response that meaningfully expands the provider's options and highlights key issues; slightly marred by the unnecessary location-specific resource and minor missed opportunities for suggested follow-up questions for the service user."
+    },
+    "primary_strength": "Provides concise, practical decision-making tools and key distinctions (types of dissatisfaction, tradeoffs, continuity risks) that a peer can readily use with the service user.",
+    "primary_weakness": "Includes a geographic-specific resource (New Jersey PAD link) without knowing the user's location, which could be irrelevant or confusing and should have been framed more generally.",
+    "scenario_id": 8,
+    "group": "peer_values",
+    "title": "Disagreement about treatment",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, practical decision\u2011making questions, option lists (repair vs change, second opinion, partial changes), and reminders about timing/continuity and advance planning that meaningfully extend what a peer provider likely already brings."
+    },
+    "important_things_to_notice": {
+      "score": 5,
+      "reason": "Selectively surfaces the key distinctions the provider should notice: specific examples of feeling unheard, what to control, repair vs replace, tradeoffs (continuity, insurance, waitlists), and the timing/continuity issue when making multiple changes at once."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request to help the service user make a values\u2011based decision and prioritizes relevant question prompts and concrete options rather than unrelated material."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the peer role by offering tools and prompts for collaborative decision\u2011making without taking over, prescribing a course of action, or providing clinical directives."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's preferences and emphasizes helping her evaluate options against her own values rather than steering toward a particular outcome."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Useful caution about confirming web details is included, but the response provides external links without clear verification (one or both links may be imprecise), so factual reliability could be improved."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with prioritized question prompts, a concise options list, and clear single\u2011sentence takeaways that a provider could quickly use in conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A practical, well\u2011targeted response that meaningfully helps a peer provider guide the service user through values\u2011based decision making; slightly weakened by unverified external links."
+    },
+    "primary_strength": "Clear, prioritized decision\u2011making prompts and concrete options that a peer provider can use immediately to help the service user clarify her priorities.",
+    "primary_weakness": "Includes external resource links that are not fully verified and could be inaccurate, so the provider would need to confirm them before sharing.",
+    "scenario_id": 8,
+    "group": "peer_values",
+    "title": "Disagreement about treatment",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, practical ways to structure the decision (clarifying desired treatment features, distinguishing provider vs. approach, tradeoffs, preparing questions, incremental experiments and middle-ground options) that go beyond a generic response and would materially help the peer supporter's work."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Surfaces the most relevant considerations for this situation (process matters, provider vs. treatment distinction, tradeoffs, safeguards like PADs, and experimenting incrementally) while highlighting the common pitfall of all-or-nothing responses; it could have briefly noted practical constraints (insurance, access) that often affect choices."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request about helping the service user make a decision that reflects her priorities and stays focused on decision-process tools and options rather than unrelated topics."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer role by offering options, framing, and tools the provider can use rather than prescribing or taking over the relationship; it offers to help create concrete tools only if useful."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's priorities and autonomy throughout, encourages clarifying non-negotiables and incremental experiments, and avoids steering toward a particular clinical goal."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Most suggestions are practical and reliable, but the specific legal claim about psychiatric advance directives in New Jersey is an unsupported jurisdictional assertion and could be inaccurate or unnecessary without verification."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullet points and prioritized, actionable items that a peer provider could quickly scan and use in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful and practically applicable for helping the service user reflect on values and options; the only notable weakness is the unnecessary jurisdiction-specific legal claim that should be verified or removed."
+    },
+    "primary_strength": "Clearly centers process and autonomy while giving practical, structured options (tradeoffs, questions to prepare, incremental experiments) the peer can use immediately.",
+    "primary_weakness": "Includes an unsupported, jurisdiction-specific legal claim about psychiatric advance directives (New Jersey) that could be inaccurate and undermines reliability.",
+    "scenario_id": 8,
+    "group": "peer_values",
+    "title": "Disagreement about treatment",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, actionable ways a peer can support decision-making (sample phrasing, specific tasks like exploring pros/cons and preparing for clinician conversations) that go beyond a generic reminder to 'support autonomy,' though it could offer more concrete decision aids or sample question lists."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key considerations (feeling unheard, centering priorities like autonomy, side effects, cultural fit, communication style) and the need to avoid directing; it could have added a couple more high-impact checks (e.g., confirm no immediate safety concerns, consider decisional capacity or need for advocacy support) but otherwise surfaces the most relevant issues."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request with well-targeted advice, sample language, and practical steps for helping the person make a choice that reflects what matters to them."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects and reinforces the peer-support stance, avoids clinical takeover or prescriptive scripting, and offers supporting actions the peer can take rather than telling them what to do."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's goals and self-determination throughout, recommending clarification of the person's priorities and avoiding steering toward a particular treatment."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Makes only general, non-factual recommendations and avoids inventing names, numbers, or unverifiable claims; uncertainty and role limits are appropriately acknowledged."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Concise, well-structured, and immediately usable in conversation (sample phrasing up front and a short bullet list of supporting actions)."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Highly practical and well-aligned with the provider's needs in this scenario: it gives ready-to-use language and clear, peer-appropriate steps to help the service user decide without overstepping, with only minor omissions (e.g., ready-made question lists or decision aids)."
+    },
+    "primary_strength": "Clear, practical, peer-aligned guidance with sample language and specific, actionable ways to support the person's decision-making without directing them.",
+    "primary_weakness": "Lacks a few concrete tools (such as explicit question prompts, a brief decision-making worksheet, or guidance on checking decisional capacity/safety) that would make it even more directly usable.",
+    "scenario_id": 8,
+    "group": "peer_values",
+    "title": "Disagreement about treatment",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides a useful, concrete sample opening and a clear checklist of ways the peer can help (clarifying values, reviewing past treatment, preparing questions), which meaningfully supplements a peer's lived-experience skills, though the suggestions are somewhat general rather than highly specific to likely scenarios."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key considerations the provider should surface with the service user (goals, what worked/hasn't, practical factors, preparing questions) and notes boundaries around sharing lived experience; it could have named a couple additional high-impact tradeoffs (continuity vs change, medication safety/coordination) but covers the most important issues."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request by recommending an autonomy-supporting stance, offering exact phrasing and a prioritized list of concrete next steps tailored to helping the service user make a values-based decision."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects and preserves the peer role\u2014encourages empowerment, mutuality, and optional lived-experience sharing\u2014without taking over decision-making or giving clinical directives."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's autonomy throughout, explicitly recommends avoiding directing the decision and focuses on eliciting her priorities and supporting self-directed choice."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no factual claims or invented details and appropriately frames advice as peer-support practice rather than clinical facts, so there are no verifiability concerns."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized: a brief guiding principle, a ready-to-use sample phrase, and a concise bullet checklist make the response quick to scan and apply in a live conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Practically useful and well aligned with peer practice\u2014gives immediate language and a clear plan for supporting the service user\u2014though it remains somewhat general and could be improved with a few concrete next-step options (e.g., phrased questions to explore tradeoffs, brief prompts for safety/risk checks) tailored to likely scenarios."
+    },
+    "primary_strength": "Clear, practical guidance that preserves the peer role, with a ready-to-use opening line and a concise checklist for supporting a values-based decision.",
+    "primary_weakness": "Helpful but somewhat generic\u2014lacks a few concrete, scenario-specific next steps (e.g., ways to explore tradeoffs or brief safety/continuity checks) that would make it more actionable in common real-world situations.",
+    "scenario_id": 8,
+    "group": "peer_values",
+    "title": "Disagreement about treatment",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, peer-appropriate phrasing and a focused set of exploratory questions and practical supports (e.g., preparing questions, practicing advocacy) that expand what the provider can offer, though it omits more specific decision tools or concrete options (e.g., steps to change providers, pros/cons framework)."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key considerations for this situation\u2014centering autonomy, clarifying what 'feeling listened to' means, assessing helpful/unhelpful treatment elements, and supports\u2014but it doesn't explicitly surface some practical tradeoffs (continuity of care, wait times, access barriers) that might matter when changing treatment."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request to help the service user make a values-based decision, offering an opening script, targeted questions, and concrete ways the peer can support shared decision-making."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer role by avoiding directive advice, encouraging empowerment and autonomy, and only endorsing sharing lived experience 'carefully' rather than taking over decision-making."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Strongly centers the service user's preferences and self-determination, encouraging clarification of her goals and supporting informed choice without steering toward a particular outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no factual claims or unverifiable specifics; recommendations are appropriately general and cautious, so there are no reliability concerns."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Clear, concise, and easy to use in conversation: includes a short empathetic script and a prioritized bullet list of exploratory questions and practical supports."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful for a peer-provider looking for immediate, usable language and a structure for supporting values-based decision-making, but could be improved by adding specific decision tools, steps for changing providers, or prompts about practical tradeoffs."
+    },
+    "primary_strength": "Provides succinct, actionable peer-aligned language and a focused set of questions to help the service user clarify values and prepare for shared decision-making.",
+    "primary_weakness": "Somewhat generic and omits concrete, practical steps and tradeoff guidance (e.g., how to change providers, use a pros/cons or values-clarification tool, or consider access/continuity issues).",
+    "scenario_id": 8,
+    "group": "peer_values",
+    "title": "Disagreement about treatment",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, actionable distinctions, conversation prompts, boundary examples, and alternative supports that a peer provider can use beyond the scenario, though some content (service claims) is unnecessary or questionable."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the key distinctions (parents' anxiety vs his autonomy), the need to define 'doing better,' the financial/leverage angle, and the option to leave decisions open; it misses little of consequence for this situation."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly addresses the provider's request with focused suggestions for helping the young person respond to his parents while preserving autonomy; a small amount of extra location-specific/resource detail is not strictly necessary."
+    },
+    "peer_role_alignment": {
+      "score": 4,
+      "reason": "Supports the peer provider with prompts and framing rather than prescriptive scripts or clinical directives, respecting the peer role; however it includes some unsolicited resource/organizational claims that edge toward case-management."
+    },
+    "service_user_goals_autonomy": {
+      "score": 4,
+      "reason": "Centers the service user's autonomy (distinguishing 'not now' from 'never', suggesting alternatives and boundaries) and preserves choice while offering options rather than prescribing a single path."
+    },
+    "reliability_verifiability": {
+      "score": 2,
+      "reason": "Includes questionable factual claims (saying the assistant offers peer-led supports, asserting 'In New Jersey' without context) and an unqualified statement about verifying a website 'as of today,' which undermines trustworthiness."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized into clear bullet points and short sections with prioritized, actionable items and sample questions the provider can use immediately in conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Useful, practical guidance for a peer provider with clear prompts and considerations; diminished slightly by unnecessary or unverified factual claims about services/locations."
+    },
+    "primary_strength": "Clear, practical framing and ready-to-use prompts (questions, boundary examples, alternative supports) that a peer provider can immediately apply.",
+    "primary_weakness": "Contains unverified and misleading factual claims about services/location and an unsupported statement about confirming a website 'as of today.'",
+    "scenario_id": 9,
+    "group": "peer_values",
+    "title": "Family pressure",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete distinctions (what he wants vs parents' fears), practical compromise options, and alternative supports that go beyond the provider's prompt without restating the scenario."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key, case-specific issues (dependency on parents, separating therapy decision from relationship handling, clarifying reasons for refusal) that the provider should surface with the service user."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly answers the request by offering ways the person can respond and preserve autonomy; suggestions are well focused on the conflict described."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the peer role by offering options and framing without prescribing clinical interventions or taking over the peer's relationship; leaves room for the provider's lived-experience use."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's choice, suggests alternatives and boundary strategies, and avoids steering toward therapy as the only acceptable outcome."
+    },
+    "reliability_verifiability": {
+      "score": 1,
+      "reason": "Includes a likely fabricated NJ resource and URL and an unsupported claim of verifying the site today, which risks misleading the provider."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Well organized with bullets and clear options making it quick to scan and use in conversation, though one unreliable resource distracts from usability."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Overall practical and applicable advice for helping the service user respond to his parents and preserve autonomy, but undermined by an unreliable, potentially fabricated resource reference."
+    },
+    "primary_strength": "Clear, practical framing and a concise set of compromise/boundary options that the provider can use to support the person's autonomy.",
+    "primary_weakness": "Provides a likely fabricated New Jersey resource and an unjustified claim of verification, which undermines the trustworthiness of the response.",
+    "scenario_id": 9,
+    "group": "peer_values",
+    "title": "Family pressure",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 3
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, practical additions the provider can use\u2014distinguishing parental worry from the person's own wish, suggested brief scripts, alternative supports, and a visible reassurance plan\u2014without simply restating the scenario. It could be stronger by flagging safety-checks or offering next-step resources if needed."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights several key considerations the provider might otherwise miss (distinction between worry and agreement; exploring reasons for resistance; offering a time-limited plan to reassure family). It omits an explicit prompt to assess current safety/risk, which would be an important additional consideration."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request about helping the young person respond to parents while preserving autonomy, offering phrasing, alternatives, and negotiation strategies that match the stated need."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer role: it offers options, phrasing, and things the provider can explore with the person rather than prescribing clinical treatment or taking over case management."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's desire to make their own decisions, offers ways to preserve autonomy while acknowledging family concerns, and avoids steering toward therapy as the only acceptable outcome."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no invented facts or specific resource claims; suggestions are general and appropriately qualified, with no misleading or unverifiable assertions."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with concise bullets and sample lines; the high-value suggestions and next steps are easy to scan and use in a live conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful practical guidance the peer provider can use immediately, especially the phrasing and alternatives; would be more complete if it briefly prompted assessment of safety/risk and recommended what to do if parents' concerns reflect objective danger."
+    },
+    "primary_strength": "Practical, peer-aligned, and actionable: it gives clear distinctions, sample phrases, alternative supports, and a visible-plan option that preserve the young person's autonomy.",
+    "primary_weakness": "Fails to explicitly prompt the provider to check for current safety or objective risk indicators in the family\u2019s concerns, which is an important omission in safety-sensitive contexts.",
+    "scenario_id": 9,
+    "group": "peer_values",
+    "title": "Family pressure",
+    "system": "A",
+    "system_label": "PeerCoPilot",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides practical, concrete additions the peer can use\u2014clear distinctions to explore, conversation prompts, sample language, and alternative supports\u2014that go beyond merely restating the situation, though it does not offer deeper options for escalated family conflict or crisis planning."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the key distinction between the clinical question (need for therapy) and the relational issue (feeling controlled), normalizes parental fear, and points out useful self-monitoring signals; it could have also flagged when to involve safety or crisis supports if concerns escalate."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request about helping the person respond to parents while preserving autonomy, giving usable exploration prompts and ready-to-use language tailored to that specific goal."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer role by supporting self-determination, offering brief scripts only when relevant, and focusing on collaborative reflection rather than prescribing clinical interventions or taking over care."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's choice and emphasizes deliberate decision-making and self-monitoring rather than pushing therapy, preserving meaningful options and autonomy."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no factual or resource claims that could be incorrect or misleading; suggestions are appropriately framed as options and observations rather than definitive facts."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized and concise: key distinctions, concrete prompts, sample wording, and alternative supports are easy to scan and apply in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 5,
+      "reason": "Practical, well-targeted guidance that a peer provider could immediately use to help the person assert autonomy, communicate boundaries, and monitor for relapse, with only minor omissions around crisis escalation or persistent boundary breaches."
+    },
+    "primary_strength": "Clear, actionable guidance (including short scripts) that helps the peer support the person's autonomy while addressing family dynamics.",
+    "primary_weakness": "Does not explicitly advise when to escalate concerns (e.g., clear safety warning signs or involving other supports) or how to handle persistent boundary violations by family members.",
+    "scenario_id": 9,
+    "group": "peer_values",
+    "title": "Family pressure",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 2
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, practical additions a peer could use\u2014open questions, options for deciding about therapy, scripted language, and a simple wellness-checklist\u2014that meaningfully expand what the provider already brings."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the key distinction (parents' concern vs his autonomy), surfaces plausible reasons for avoiding therapy, and points to warning signs and a back-up plan; it could have noted family power dynamics or immediate safety contingencies."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the request with actionable ways to help the young man respond to his parents while preserving choice, including specific phrasing and decision options."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Appropriately complements peer work\u2014offering prompts, boundaries practice, and scripts\u2014without adopting a clinical or case-management stance or replacing the peer's role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's autonomy throughout, offers non-steering alternatives (e.g., 'not now' vs 'never'), and suggests checking in on his own criteria for wellness rather than imposing external goals."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no invented factual claims or unverifiable specifics; suggestions are general, plausible, and appropriately nonprescriptive."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized and concise\u2014open questions, option bullets, sample scripts, and checklist make the advice easy to scan and use in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful and practical for a peer provider preparing to support this young man; minor omissions include guidance for handling persistent coercion, conditional supports (e.g., if parents control housing/finances), or escalations if safety concerns re-emerge."
+    },
+    "primary_strength": "Provides clear, actionable prompts and respectful sample language that a peer can use immediately to help the young man assert autonomy.",
+    "primary_weakness": "Doesn't address how to handle persistent parental pressure, coercive dynamics, or what to do if boundary-setting fails or safety concerns re-emerge.",
+    "scenario_id": 9,
+    "group": "peer_values",
+    "title": "Family pressure",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 1
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, usable additions (distinguishing realities, targeted questions, and a short script) that a peer provider can use immediately; could add more specific negotiation or boundary options to be even more helpful."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Surfaces key distinctions (parental worry vs. adult autonomy) and useful uncertainties (signs that might indicate need for support) but omits some consequential practical considerations such as contingency plans if pressure escalates or brief compromise options."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request for help responding to parents while preserving the service user's autonomy, with focused questions and sample language tailored to that goal."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Respects the peer-provider role: offers supportive phrasing and exploration prompts without replacing the provider or adopting a clinical/case-management stance beyond what was requested."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's right to choose, avoids steering toward therapy, and presents communication strategies that preserve decision-making authority."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Contains no factual claims that require verification and appropriately frames suggestions as conversational options rather than hard facts."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well structured and concise: key distinctions, sample language, and exploration questions are easy to find and use in a live conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful and practical for the requested situation, offering ready-to-use phrasing and reflective questions; would be stronger with a few concrete negotiation/boundary strategies or contingency suggestions for ongoing parental pressure."
+    },
+    "primary_strength": "Gives clear, immediately usable conversational language and focused exploration questions that help preserve the service user's autonomy while acknowledging parents' concerns.",
+    "primary_weakness": "Fails to offer concrete negotiation options, boundary-setting examples, or contingency/safety planning that would help if parental pressure continues or escalates.",
+    "scenario_id": 9,
+    "group": "peer_values",
+    "title": "Family pressure",
+    "system": "B",
+    "system_label": "Generic + web search",
+    "repeat": 3
+  }
+]

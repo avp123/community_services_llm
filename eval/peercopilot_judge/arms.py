@@ -3,12 +3,15 @@ Response generation for the three experiment arms (protocol.md section 1).
 
 Arm A: PeerCoPilot — full RAG + tools, exactly as run in production
         (backend.app.submodules.construct_response, version="new").
-Arm B: generic LLM + web search tool only.
-Arm C: generic LLM, no tools.
-
-Arms B/C share the minimal system prompt mandated by the protocol so the
-contrast stays "generic assistant" vs "assistant built for this work" —
-no peer-support framing is added to the baseline.
+Arm B: PeerCoPilot's vanilla baseline, as run in production
+        (backend.app.submodules.construct_response, version="vanilla") --
+        generic system prompt, but as of 2026-08-30 the SAME tool access as
+        Arm A (resources_tool, library_tool, directions_tool,
+        calculator_tool, web_search_tool, check_eligibility), so an A/B
+        comparison isolates the system prompt rather than being confounded
+        by B having weaker tools.
+Arm C: generic LLM, no tools (kept as a local reimplementation since there's
+       no production "no tools at all" version to route through).
 """
 import json
 from typing import Dict, List
@@ -112,9 +115,16 @@ def _run_generic(conversation_history: List[Dict], situation: str, with_search: 
     return (response.choices[0].message.content or "").strip()
 
 
-def run_arm_b(conversation_history: List[Dict], situation: str) -> str:
-    """Arm B: generic LLM with web search tool."""
-    return _run_generic(conversation_history, situation, with_search=True)
+def run_arm_b(conversation_history: List[Dict], situation: str, organization: str = "cspnj") -> str:
+    """Arm B: PeerCoPilot's vanilla baseline, as run in production (same tools as Arm A)."""
+    gen = construct_response(
+        situation=situation,
+        all_messages=conversation_history,
+        model=RESPONSE_MODEL,
+        organization=organization,
+        version="vanilla",
+    )
+    return _collect_sse_stream(gen)
 
 
 def run_arm_c(conversation_history: List[Dict], situation: str) -> str:
@@ -124,6 +134,6 @@ def run_arm_c(conversation_history: List[Dict], situation: str) -> str:
 
 ARM_RUNNERS = {
     "A": lambda history, situation, organization: run_arm_a(history, situation, organization),
-    "B": lambda history, situation, organization: run_arm_b(history, situation),
+    "B": lambda history, situation, organization: run_arm_b(history, situation, organization),
     "C": lambda history, situation, organization: run_arm_c(history, situation),
 }

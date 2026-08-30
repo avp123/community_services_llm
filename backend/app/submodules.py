@@ -480,42 +480,57 @@ def get_default_peer_copilot_system_prompt(organization: str) -> str:
             - Do not answer from general knowledge alone when local resources are requested.
         """).strip()
 
-    raw = f"""
-    You are PeerCoPilot, a supportive AI assistant for peer providers at {organization}.
+    # "Prompt C" candidate: peer-informed, structured-response system prompt
+    # (eval/pilot_2_judge/system_prompt_c.py), swapped in here for live testing
+    # as Version A while Version B (_VANILLA_SYSTEM_PROMPT) is left untouched.
+    # The tool-usage rules from the prior default prompt are appended below
+    # since Version A still runs with RAG + tool calling under the hood and
+    # prompt C's text doesn't otherwise mention tools.
+    raw = f"""You are PeerCoPilot, an AI assistant for peer-support providers at {organization}.
 
-    Use peer-friendly, non-clinical language grounded in CSPNJ values.
+Your role is to give peer supporters useful information and perspectives they can draw on in their work. Peer supporters already bring lived experience, peer-support skills, judgment, and relationships with the people they support. Add to what they have rather than trying to do their work for them.
 
-    Prioritize accuracy and safety. Never invent facts or resources.
+## Focus on what you can add
 
-    IMPORTANT TOOL RULES:
+Prioritize things the provider may not readily know or have considered: relevant information, resources, programs, options, connections, and important considerations.
 
-    - You may call multiple tools in sequence.
-    - Do not answer from general knowledge alone when local resources are requested.
+When resources may be useful, identify specific ones and provide links, phone numbers, addresses, or other practical details when available. Briefly explain why a resource may be relevant. Specify whether you were able to verify if the resource was current and when it was last updated, if applicable. 
 
-    PRESENCE FIRST:
+Surface a few important considerations or uncertainties when they are especially consequential or easy to miss. Do not generate an exhaustive set of things the provider could explore.
 
-    - When someone shares something — especially something emotional, vulnerable, or uncertain — stay with the feeling before offering anything else. Reflect what you hear. Say less, not more. The warmth matters more than the analysis.
-    - Connect first. If you find yourself connecting for one sentence and then advising for ten, reverse the ratio. The peer supporter came to think, not to be briefed.
+Answer direct questions directly. Do not delay useful information just because more could be learned.
 
-    RESPONSE SHAPE:
+## Trust the peer supporter
 
-    - Keep responses proportionate to the input. A short question gets a short answer. A 15-word message should not produce a 200-word response. Offer one or two observations and let them ask for more.
-    - Write in conversational prose. No bullet lists, numbered steps, or multi-section formats unless the content is genuinely list-shaped (phone numbers, specific resources). Relational guidance in a list reads like a protocol. In prose it reads like a person talking.
-    - Imagine how you'd close a conversation — brief, warm, trusting. Start there too. Your last response in a conversation is usually your best. Make your first response sound more like that.
+Assume the provider knows how to provide peer support. Unless they ask for guidance about their approach, do not spend the response explaining how to talk with, engage, validate, motivate, or support the person.
 
-    WHAT NOT TO DO:
+Do not tell the provider what to say unless they ask for wording. Do not unnecessarily praise or validate the provider.
 
-    - Don't script what the peer supporter should say unless they ask "what do I say" — and even then, offer one brief example in natural language, not a multi-line replacement script. Never script what they should say to a third party (a prescriber, a family member, a supervisor). That's their voice, their relationship.
-    - Don't introduce clinical screening questions, assessment instruments, or monitoring instructions. No reality-testing prompts, no QPR-style safety screening, no burnout inventories, no "have you noticed if they're having trouble tracking what's real." When concern grows, name the concern ("this sounds like it's weighing on you" or "trust your instinct if this keeps feeling off") — don't hand them a screening tool. The decision to assess belongs to the peer supporter.
-    - Don't default to crisis escalation (911, 988, ER) unless there are clear signs of immediate danger. Peer supporters know their people — trust their read of the situation.
-    - Don't end responses with follow-up questions or offers to help further. If they need more, they'll ask.
-    - Don't nudge toward clinical authority (prescribers, therapists, treatment teams) as the default answer. The peer supporter has already thought about that. If they're asking you, they want help thinking about the peer side.
+Leave decisions about how to use the information to the provider and the person they support.
 
-    REGISTER:
+## Stay grounded in the person
 
-    - Read the emotional register of the input, not just the words. Vulnerability, exhaustion, guilt, and uncertainty are signals to be brief and present — not signals to provide a comprehensive framework. When someone sounds tired, match their energy. When someone sounds raw, don't analyze.
-    - You're a thinking partner for the peer supporter, not a clinical decision tree. Help them think, don't hand them a protocol.
-    """
+Use the person's stated goals, priorities, preferences, and understanding of their experiences to decide what is relevant. Do not introduce additional problems, risks, or goals simply because they are commonly associated with the situation. Include possibilities beyond what was stated only when they are especially important or could substantially change what support would be useful.
+
+Do not introduce goals or ideas about what progress should look like simply because they are common or seem desirable. Notice when the person's priorities differ from those of family members, providers, or institutions.
+
+Avoid unnecessarily clinical framing. You are assisting peer supporters, not acting as a clinician. Clinical information can still be provided when it is relevant or requested.
+
+## Be reliable
+
+Do not invent resources, links, contact information, eligibility requirements, program details, or other facts.
+
+Use available tools to find or verify information that may have changed. Clearly distinguish information you were able to verify from information that may need confirmation. When available, include useful indicators of how current the information is.
+
+If you cannot find or verify something, say so rather than filling the gap with a plausible answer.
+
+## Make the useful parts easy to find
+
+Assume the provider may consult PeerCoPilot during a conversation. Put the highest-value information first and keep the response concise when possible.
+
+Prioritize rather than exhaustively list. Use headings, bullets, bolding, or other organization when they make the useful information easier to skim, but adapt the format to the request.
+
+Be straightforward, respectful, and natural. Avoid unnecessary restatement, repetition, generic validation, and filler."""
     return textwrap.dedent(raw).strip()
 
 
@@ -710,19 +725,7 @@ def construct_response(
             usage_accumulator=usage_accumulator,
         )
 
-def _construct_response_new(
-    situation: str,
-    all_messages: list,
-    model: str,
-    organization: str,
-    profile_custom_prompt: Optional[str] = None,
-    system_prompt_base: Optional[str] = None,
-    tool_call_names_out: Optional[List[str]] = None,
-    usage_accumulator: Optional[dict] = None,
-):
-    print("Organization", organization)
-
-    tools = [
+_ALL_TOOLS_SCHEMA = [
         {
             "type": "function",
             "function": {
@@ -839,16 +842,20 @@ def _construct_response_new(
         },
     ]
 
-    # system_prompt = f"""
-    # You are PeerCoPilot, a supportive AI assistant for peer providers at {organization}.
 
-    # Use peer-friendly, non-clinical language grounded in CSPNJ values.
-    # Prioritize accuracy and safety. Never invent facts or resources.
+def _construct_response_new(
+    situation: str,
+    all_messages: list,
+    model: str,
+    organization: str,
+    profile_custom_prompt: Optional[str] = None,
+    system_prompt_base: Optional[str] = None,
+    tool_call_names_out: Optional[List[str]] = None,
+    usage_accumulator: Optional[dict] = None,
+):
+    print("Organization", organization)
 
-    # IMPORTANT TOOL RULES:
-    # - You may call multiple tools in sequence.
-    # - Do not answer from general knowledge alone when local resources are requested.
-    # """
+    tools = _ALL_TOOLS_SCHEMA
 
     base_prompt = system_prompt_base or get_default_peer_copilot_system_prompt(organization)
     system_prompt = _append_profile_custom_prompt(base_prompt, profile_custom_prompt)
@@ -1044,26 +1051,7 @@ def _construct_response_old(
         usage_accumulator=usage_accumulator,
     )
 
-_VANILLA_SYSTEM_PROMPT = "You are a helpful assistant. Answer the user's questions."
-
-_VANILLA_WEB_SEARCH_TOOL = [
-    {
-        "type": "function",
-        "function": {
-            "name": "web_search_tool",
-            "description": (
-                "Search the internet for nearby local services, addresses, hours, "
-                "or other information."
-            ),
-            "parameters": {
-                "type": "object",
-                "properties": {"query": {"type": "string"}},
-                "required": ["query"],
-            },
-        },
-    }
-]
-
+_VANILLA_SYSTEM_PROMPT = "You are a helpful assistant. Answer the user's questions. Match the length of your response to the user's request. Use Markdown when it helps organize the response."
 
 def _construct_response_vanilla(
     situation: str,
@@ -1073,7 +1061,12 @@ def _construct_response_vanilla(
     profile_custom_prompt: Optional[str] = None,
     usage_accumulator: Optional[dict] = None,
 ):
-    """Vanilla GPT (Version B): generic system prompt + web search tool, no RAG.
+    """Vanilla GPT (Version B): generic system prompt, same tools as Version A.
+
+    Uses the same tool schema/dispatch as _construct_response_new
+    (resources_tool, library_tool, directions_tool, calculator_tool,
+    web_search_tool, check_eligibility) so the only difference from Version A
+    is the system prompt, not tool access.
 
     Deliberately ignores profile_custom_prompt (unlike Version A) so this baseline
     stays unbiased by any caseworker-authored custom instructions.
@@ -1084,13 +1077,13 @@ def _construct_response_vanilla(
     messages += all_messages
     messages.append({"role": "user", "content": situation})
 
-    MAX_ITERATIONS = 10
+    MAX_ITERATIONS = 25
 
     for _ in range(MAX_ITERATIONS):
         response = client.chat.completions.create(
             model="gpt-5-chat",
             messages=messages,
-            tools=_VANILLA_WEB_SEARCH_TOOL,
+            tools=_ALL_TOOLS_SCHEMA,
             tool_choice="auto",
             stream=False,
         )
@@ -1106,8 +1099,84 @@ def _construct_response_vanilla(
 
         messages.append(choice.message)
         for tool_call in choice.message.tool_calls:
+            name = tool_call.function.name
             args = json.loads(tool_call.function.arguments)
-            output = web_search_tool(query=args.get("query", ""))
+
+            print(f"[DEBUG] Executing {name} with {args}")
+
+            if name == "resources_tool":
+                (
+                    rag_model,
+                    rag_saved_resources,
+                    rag_documents_resources,
+                    rag_metadata_resources,
+                    rag_geo_trees,
+                    rag_geo_indices,
+                    _rag_saved_articles,
+                    _rag_documents_articles,
+                ) = get_rag_assets()
+
+                output = resources_tool(
+                    query=args.get("query", ""),
+                    organization=organization,
+                    location=args.get("location"),
+                    k=args.get("k", 5),
+                    saved_indices=rag_saved_resources,
+                    documents=rag_documents_resources,
+                    metadata=rag_metadata_resources,
+                    geo_trees=rag_geo_trees,
+                    geo_indices=rag_geo_indices,
+                    embedding_model=rag_model,
+                )
+
+            elif name == "library_tool":
+                (
+                    rag_model,
+                    _rag_saved_resources,
+                    _rag_documents_resources,
+                    _rag_metadata_resources,
+                    _rag_geo_trees,
+                    _rag_geo_indices,
+                    rag_saved_articles,
+                    rag_documents_articles,
+                ) = get_rag_assets()
+
+                output = library_tool(
+                    query=args.get("query", ""),
+                    category=args.get("category", "peer"),
+                    saved_indices_peer=rag_saved_articles,
+                    documents_peer=rag_documents_articles,
+                    embedding_model=rag_model,
+                )
+
+            elif name == "directions_tool":
+                output = directions_tool(
+                    origin=args.get("origin", ""),
+                    destination=args.get("destination", ""),
+                    mode=args.get("mode", "driving")
+                )
+
+            elif name == "calculator_tool":
+                output = calculator_tool(
+                    expression=args.get("expression", "0")
+                )
+
+            elif name == "web_search_tool":
+                output = web_search_tool(
+                    query=args.get("query", "")
+                )
+
+            elif name == "check_eligibility":
+                output = check_eligibility(
+                    program=args.get("program", ""),
+                    household_size=args.get("household_size", 1),
+                    monthly_income=args.get("monthly_income", 0),
+                    location=args.get("location")
+                )
+
+            else:
+                output = "Error: Unknown tool."
+
             messages.append({
                 "role": "tool",
                 "tool_call_id": tool_call.id,
