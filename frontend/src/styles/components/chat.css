@@ -119,6 +119,24 @@
   margin-bottom: 0;
 }
 
+.message-blurb h1,
+.message-blurb h2,
+.message-blurb h3,
+.message-blurb h4,
+.message-blurb h5,
+.message-blurb h6 {
+  font-weight: bold;
+  line-height: var(--line-height-normal);
+  margin: 0.75em 0 0.25em;
+}
+
+.message-blurb h1 { font-size: var(--font-xl); }
+.message-blurb h2 { font-size: var(--font-lg); }
+.message-blurb h3,
+.message-blurb h4,
+.message-blurb h5,
+.message-blurb h6 { font-size: var(--font-base); }
+
 
 /* ===========================
    RESOURCE ITEMS
