@@ -1,0 +1,290 @@
+{
+  "BASELINE": {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally relevant programs (SSDI/SSI, NJ WorkAbility, Paterson Housing Authority) and contacts that meaningfully expand what the provider already knows."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights high-impact considerations (SGA, work incentives, documentation, immigration-category nuance, housing waitlists) that materially affect eligibility, though it could name a few specific local assistance options."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's question about disability benefits and housing subsidies for a Paterson resident and offers appropriate next steps and local contacts."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Stays in an informational/complementary role\u2014provides resources and facts without prescribing how the peer should conduct the conversation or replacing the provider's role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Respects the user's wish to keep working and emphasizes work-friendly options (SSI work incentives, SSDI trial work rules, Medicaid for working disabled)."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Generally accurate and cautious with links and national SSA contact, but some program details and eligibility nuances (and local phone numbers) should be verified and were not exhaustively sourced."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets and prioritized actions so a provider can quickly use the information in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful and practical for next steps (benefits office, advocacy, local housing authority) though it could be improved by naming additional local supports (e.g., 2-1-1, county social services, emergency rental assistance) and clarifying immigration-category implications."
+    },
+    "primary_strength": "Clear, actionable, locally tailored information linking disability programs, housing contacts, and important work-related exceptions that directly address the service user's concerns.",
+    "primary_weakness": "Omits some additional local assistance options (like 2-1-1/county social services and emergency rental assistance) and lacks more precise guidance on how different documented immigration categories affect eligibility."
+  },
+  "complementary_value_down": {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides relevant, concrete distinctions (SSDI vs SSI, SGA, work incentives, housing counting rules) that go beyond the prompt, but stops short of listing actionable local resources or specific next steps for Paterson/NJ."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the most consequential nuances for this case (substantial gainful activity, documentation of limitations, SSI treatment of in-kind housing, immigration-category differences), though it omits some other practical details like asset limits, reporting rules, or likely timelines."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly addresses the provider's questions about disability benefits and housing subsidies and respects the client's wish to keep working, offering appropriate options and next-step help."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Information complements the peer-provider role without prescribing scripts or replacing the provider; it offers factual guidance and suggests a benefits planner rather than directing provider behavior."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the client's stated preference to continue working and explains options (trial work, SSI work incentives) that preserve that choice rather than steering toward full work cessation."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Claims are generally accurate and appropriately cautious about immigration variation, but some statements are broad and would benefit from local verification (e.g., NJ Medicaid continuation options, exact eligibility rules)."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized, concise bullets with the highest-value points up front, making it quick to scan and use during a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A clear, practical overview that meaningfully helps the provider advise the client, but it could be improved with specific local resources, concrete steps to check work credits, and brief action items the client can take next."
+    },
+    "primary_strength": "Concise, targeted overview of disability eligibility issues and work incentives that align with the client's desire to keep working.",
+    "primary_weakness": "Lacks concrete local resources and specific next-step actions (e.g., how to check SSDI work credits, local housing programs or waitlist contacts) that the provider could use immediately."
+  },
+  "important_things_to_notice_down": {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally relevant information (SSA basics, work incentives, NJ Medicaid/workability, local housing authority and advocacy orgs) that meaningfully expands what the provider has to work with, though it could have included a few additional NJ-specific safety-net options (e.g., emergency rental assistance) and clearer next steps for the client."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Surfaces key considerations (SGA, work credits, interaction of earnings with benefits, housing waitlists, documentation challenges) that will materially affect eligibility, but omits a few consequential local program details (e.g., ERAP, TANF/General Assistance pathways) and the timing effects of SSDI/Medicare."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's question about disability benefits and housing subsidies for a working person in Paterson, NJ and tailors suggestions and resources to her desire to continue working."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Sticks to informational support and resources without prescribing how the peer should interact with the client or taking over the peer-support role; offers to provide deeper factual help on request."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Respects and centers her goal of continuing to work by highlighting work incentives, Medicaid-for-working-disabled options, and partial-benefit pathways rather than suggesting she stop working."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Most factual claims and links are appropriate and likely accurate (SSA link, org names); however, some phone numbers and program details are presented without explicit verification and the response could better flag the need to confirm current local waitlist/status information."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized into short bullets with clear headings and actionable links/contacts, so a provider can quickly identify next steps and resources while with the client."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Overall very useful \u2014 practical, locally oriented, and aligned with the client's preference to keep working \u2014 but would be stronger with a couple more NJ-specific benefit options, clearer verification disclaimers for contact details, and brief suggested next steps the provider could offer the client."
+    },
+    "primary_strength": "Practical, locally relevant synthesis of disability and housing options (including work incentives) plus concrete contacts and links the provider can use immediately.",
+    "primary_weakness": "Omits a few important local safety-net options (e.g., emergency rental assistance, TANF/General Assistance) and presents some phone numbers/details without explicit verification or caveats about changing program statuses."
+  },
+  "responsiveness_relevance_down": {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, relevant information the provider may not have recalled (SSDI/SSI distinctions, SGA concept, NJ WorkAbility, local housing contacts) and actionable next steps like a benefits planner, though not exhaustive."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key eligibility nuances (substantial gainful activity, work incentives, immigration-category differences, SSI housing income effects and long housing waitlists) that materially affect decisions, though it also raises secondary clinical issues that are less central to the request."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly addresses disability and housing questions for a Paterson, NJ resident and offers local resources; includes an extraneous suggestion about mental-health screening that was not requested."
+    },
+    "peer_role_alignment": {
+      "score": 3,
+      "reason": "Mostly complements the peer role by supplying resources and eligibility details, but crosses slightly into clinical territory by recommending screening/tools and therapy/medication referrals without being asked."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's desire to continue working, explains programs and work incentives that preserve part-time work options, and does not push an alternative goal."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Information about federal programs and national SSA contact is accurate and cautious; local phone numbers and program details appear plausible but are time-sensitive and not fully verified within the response."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets and prioritized points (key concepts first, then programs and local resources), making it quick to scan and use in a conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A practical, actionable response that meaningfully helps the provider advise the service user and identify next steps, with minor weaknesses (unrequested clinical suggestions and limited verification of some local details)."
+    },
+    "primary_strength": "Clear, practical explanation of benefit eligibility nuances (SGA, work incentives) plus locally relevant resources for Paterson/NJ.",
+    "primary_weakness": "Unsolicited clinical screening and treatment suggestions and minor lack of explicit verification for some local contact details, which slightly oversteps the peer role and risks outdated specifics."
+  },
+  "peer_role_alignment_down": {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, relevant information the peer might not recall quickly\u2014clear distinction between SSDI and SSI, work-incentive notes, local NJ programs and offices, and specific local resources (Paterson Housing Authority, Disability Rights NJ, NJ WorkAbility) that materially expand what the provider can offer."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key nuances the provider should watch for (substantial gainful activity standard, immigration-category differences, documentation of household contributions affecting SSI) though it could have more explicitly flagged missing facts to gather first (exact immigration category, work credits, current income/benefits, housing application status)."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly addresses the provider's core questions about disability benefits and housing subsidies with actionable next steps and resources, but includes an unsolicited detailed conversational script that wasn't strictly necessary to answer the practical eligibility/resource question."
+    },
+    "peer_role_alignment": {
+      "score": 3,
+      "reason": "Useful factual support is appropriate, but the response shifts into prescriptive coaching with an exact script and active-listening instructions that risk taking over the provider's interpersonal role rather than simply offering supplementary options or prompts."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the user's stated goal of continuing to work by emphasizing work incentives, programs that allow part-time work, and options to preserve benefits while working, without steering toward stopping work or imposing external goals."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Most factual claims are appropriately cautious and key contact info (SSA number, SSA URL) is accurate and verifiable; however some local program links/details and phone numbers should be double-checked before relying on them and the response could more clearly flag that verification is needed."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Well organized with bullets and clear resource entries so a provider can scan quickly for next steps, though the long prescriptive script interrupts the flow of the practical resource information."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A solid, actionable response that meaningfully helps the peer provider identify benefits pathways and local resources while preserving the service user's preference to keep working; its main weaknesses are an unnecessary scripted coaching section and minor unverifiable local details."
+    },
+    "primary_strength": "Gives concrete, locally relevant benefits and housing resources plus clear distinctions about SSI vs SSDI and work incentives that directly support the user's desire to keep working.",
+    "primary_weakness": "Unsolicited, prescriptive scripting and active-listening instructions that intrude on the peer's relational role and slightly distract from the most useful practical information."
+  },
+  "service_user_goals_autonomy_down": {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, relevant information beyond the prompt \u2014 distinguishes SSI vs SSDI, explains SGA/work incentives, and lists local resources and contacts that a peer provider can act on."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the right high-impact considerations (substantial gainful activity, immigration-category nuances, impact of temporary housing on SSI, long housing waitlists, and value of a benefits planner)."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly addresses disability benefits and housing subsidy questions and offers next steps, though it also introduces somewhat prescriptive advice about work/health that goes beyond the factual help requested."
+    },
+    "peer_role_alignment": {
+      "score": 3,
+      "reason": "Mostly complements the peer role by supplying facts and local resources, but includes unsolicited, directive recommendations about stopping or scaling back work and following treatment that begin to replace the provider's peer judgment."
+    },
+    "service_user_goals_autonomy": {
+      "score": 3,
+      "reason": "Acknowledges she doesn't want to stop working and mentions work incentives that preserve part-time work, but also pushes a recommendation to consider reducing work that could conflict with her stated preference."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Program descriptions and the SSA link are reliable and appropriate, but the response gives specific local phone numbers and program links without clear sourcing or caveats and could benefit from noting the need to verify current local contact details and eligibility rules."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Organized, concise bullets and a clear resources list make it quick to scan and use during a conversation with the service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Practical, actionable, and locally oriented guidance that meaningfully helps a peer provider plan next steps, though it would be stronger with less prescriptive language and clearer sourcing for contact details."
+    },
+    "primary_strength": "Clearly explains the difference between SSI and SSDI, work incentives, and provides local resources and contacts the provider can use right away.",
+    "primary_weakness": "Includes unnecessary prescriptive advice about reducing work/focusing on health and presents specific local contact details without explicit verification, which could overstep the peer role and risk minor factual errors."
+  },
+  "reliability_verifiability_down": {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides clear, practical distinctions (SSDI vs SSI, SGA), work-incentive info, local resource leads, and a reasonable next step (benefits planner) that meaningfully expand what the provider can offer."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights key, case-specific considerations\u2014that part-time work doesn't automatically disqualify benefits, SGA is the test, immigration category matters, and housing contributions can affect SSI\u2014while noting the complexity."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly addresses the client's questions about disability benefits and housing subsidies and tailors information to her desire to continue working, though it could have asked for specific income/work-credit or immigration-category details."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the provider with factual resources and options without attempting to replace the peer role or giving unnecessary scripts; leaves room for the provider's relationship and judgment."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the client's stated preference to keep working by explaining work incentives and options that allow part-time employment while accessing supports."
+    },
+    "reliability_verifiability": {
+      "score": 2,
+      "reason": "Contains some reliable elements (SSA phone/link) but also gives specific local statistics and program-unit counts that appear unverified or likely fabricated and could mislead; it should flag uncertainty and advise verifying local details."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Well organized with concise bullets and resource links so a provider can quickly pull key points and referrals, though the inclusion of dubious specific numbers distracts slightly."
+    },
+    "overall_usefulness": {
+      "score": 3,
+      "reason": "Useful, practical guidance and local resource leads that a peer provider can act on, but the presence of unverified/specific claims reduces trust and requires the provider to double-check details before sharing with the client."
+    },
+    "primary_strength": "Clear, actionable overview of SSI vs SSDI, work-incentives, and relevant local resource types that align with the client's desire to keep working.",
+    "primary_weakness": "Includes specific local statistics and program details that are unverified and likely inaccurate, which could mislead the provider or client if taken at face value."
+  },
+  "ease_of_extracting_assistance_down": {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, locally relevant information (SSDI vs SSI distinctions, work incentives, NJ WorkAbility, Paterson Housing Authority contact, Disability Rights NJ) that meaningfully expands what the provider knows, though some material is broadly framed rather than deeply specific."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights several key, case-specific considerations (SGA/work credits, interaction of earnings with SSI and housing, immigration-status nuance, Medicaid-for-working-disabled) without extraneous speculation; could have briefly flagged other local safety-net options (county emergency assistance, vocational rehab)."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's question about disability benefits and housing subsidies for a Paterson resident who wants to keep working and tailors advice to that context with actionable resources."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Complements the peer-support role by offering information and resources without prescribing scripts or taking over the provider's relationship or decision-making responsibilities."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's desire to continue working by explaining work incentives and pathways that allow part-time work while pursuing benefits, preserving choice and autonomy."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Generally careful (notes that some items should be checked and that housing openings can change) and uses correct high-level facts about SSI/SSDI, but includes specific phone numbers/contacts and program links that may need local verification."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Information is organized and the most useful points appear early (benefit types, work incentives, local contacts), though clearer bullets or prioritized next steps would make it even faster to use in a live conversation."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A practical, well-targeted response that gives the provider immediate, actionable options and local resources while respecting the service user's wish to keep working; minor gaps in verified contact details and deeper immigration-eligibility specifics limit perfection."
+    },
+    "primary_strength": "Gives practical, locally relevant information and resources while emphasizing work-friendly benefit options that align with the service user's goal to keep working.",
+    "primary_weakness": "Includes some unverified contact details and stops short of specifying which documented immigration statuses qualify for particular benefits or listing immediate next-step actions (e.g., benefits planner referral, county emergency assistance)."
+  }
+}

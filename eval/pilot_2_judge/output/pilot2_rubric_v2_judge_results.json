@@ -1,0 +1,142 @@
+[
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "The response surfaced key considerations (vocational rehab, benefits counseling, transportation), suggested clear next steps, and asked for missing but relevant details; it could have gone further by outlining specific benefit tradeoffs (e.g., SSDI trial work periods, SSI earned income exclusions) or clarifying common assumptions about phased work increases."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Provides concrete local resources, phone numbers, and links (DVRS office, WIPA/Ticket to Work, Project HIRE, Access Link) and practical actions to take; it could be improved with sample questions to ask at appointments, documents to bring, or a suggested order/timeline for contacting services."
+    },
+    "peer_support_alignment": {
+      "score": 4,
+      "reason": "The reply is person-centered and collaborative (asks about her limitations and benefits, offers to tailor support) and avoids directive language, though it uses third-person framing rather than suggesting collaborative language the provider might use with the woman."
+    },
+    "choice_priorities_autonomy": {
+      "score": 4,
+      "reason": "Supports autonomy by offering options and asking for the woman's priorities and specifics to tailor guidance, without steering toward a single solution; could more explicitly emphasize incremental/voluntary trial approaches to preserve choice."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Practical, locally tailored, and immediately usable for a provider helping this woman, with useful referrals and clear next steps; minor gaps (detailed benefit-rule examples, sample scripts) limit it from being exceptional."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly addresses Paterson/NJ context, the physical limitations and benefits concern, and includes local contacts and NJ-specific programs (NJ WorkAbility), matching the provider's actual request."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with numbered sections, bullet points, and immediate contact details so a provider can quickly pick specific next actions while engaged with the service user."
+    },
+    "primary_strength": "Clear, locally specific, and actionable resource recommendations (DVRS, WIPA/Ticket to Work, Project HIRE, Access Link) that address both employment and benefits concerns.",
+    "primary_weakness": "Lacks some concrete benefit-rule details (e.g., SSDI/SSI work incentives, trial work periods, sample questions/scripts and document checklists) that would help the provider and service user make safer, stepwise decisions.",
+    "conversation_id": "e1de23bc95fe763b2ea057c77931fef0",
+    "tool": "B",
+    "order_index": 1
+  },
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "The response identifies key considerations (values gap, pressure/timeline, strengths) and suggests useful questions to clarify priorities, though it doesn't probe practical constraints (e.g., finances, safety, daily functioning) or tradeoffs in detail."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Provides concrete conversational prompts, examples of 'bridge goals,' and practical ideas for low-pressure social connection and reframing with family; could be stronger with specific scripts or step-by-step next actions."
+    },
+    "peer_support_alignment": {
+      "score": 5,
+      "reason": "Strongly person-centered and collaborative, centers his perspective, avoids prescriptive language, and focuses on validating lived experience and supporting his self-defined goals."
+    },
+    "choice_priorities_autonomy": {
+      "score": 5,
+      "reason": "Consistently centers the service user's goals and values, preserves options, and avoids steering toward conventional milestones or imposing a timeline."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and directly applicable for a peer-support provider working with this client; missing a few concrete tools (scripts, assessment prompts) that would increase immediate usability."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly addresses the specific situation described (family pressure, recent retail job, non-local friends, painting hobby) and tailors recommendations to those details."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Clear, concise guidance with usable questions and examples; organized prose is readable though bullet points or short scripts would make it even quicker to use during a live conversation."
+    },
+    "primary_strength": "Centers the service user's values and offers concrete, non-prescriptive questions and 'bridge goal' ideas that a peer can use immediately.",
+    "primary_weakness": "Doesn't provide ready-to-use scripts or a brief stepwise plan for family conversations or immediate next steps (e.g., assessing practical needs), which would improve actionability.",
+    "conversation_id": "f1797c3de1eb030be95317f836c31170",
+    "tool": "A",
+    "order_index": 2
+  },
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "The response identifies the key issues (SNAP, Medicaid non-emergency transportation) and sensible next steps, and it offers alternatives (211, local agency), but it could have gone further on eligibility rules, scheduling timelines for NEMT, or other local transport options (paratransit, ride brokers)."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Gives concrete, immediately usable actions (call Member Services on the Medicaid card, dial 211, contact Camden County Council on Economic Opportunity with phone/address) and offers to tailor guidance if the plan name is provided, though it omits some practical details like documents needed for SNAP applications and how far in advance to book NEMT."
+    },
+    "peer_support_alignment": {
+      "score": 5,
+      "reason": "Tone is collaborative and person-centered, offers options rather than directives, validates the person's situation, and invites the provider to supply more info so guidance can be tailored."
+    },
+    "choice_priorities_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's priority (financial strain, getting to PCP), presents multiple pathways without steering to a single solution, and asks for more details to preserve choice."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and relevant for immediate next steps and local help, but would be more useful with brief specifics about SNAP documentation/eligibility and common NEMT procedures or timelines."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly addresses the provider's question, uses Camden/NJ-specific resources, and requests the managed-care plan name to refine guidance\u2014well tailored to the scenario."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Information is concise and the key actions are easy to spot (call member services, dial 211, local agency contact), though structuring into bullets or short steps would make it slightly quicker to use during a live conversation."
+    },
+    "primary_strength": "Provides clear, actionable next steps with relevant local resources and an invitation to tailor guidance based on the managed-care plan.",
+    "primary_weakness": "Lacks some practical specifics (SNAP application documents/eligibility details and typical NEMT scheduling/authorization procedures) that would make the advice immediately complete.",
+    "conversation_id": "499d14d9742f82e7af186d45ce4478a7",
+    "tool": "A",
+    "order_index": 3
+  },
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "Identifies key dynamics (autonomy, family anxiety, trust), surfaces reasonable tradeoffs (boundary vs reassurance) and suggests alternatives and safety contingencies; could have probed more into family motives, cultural context, or how to assess whether parents' pressure reflects real risk vs anxiety."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Gives concrete scripts, specific compromise options, and clear next steps (check-in session, warning signs, family session). It could be improved with brief wording for handling immediate escalation, timing/setting advice, or role-play prompts for practice."
+    },
+    "peer_support_alignment": {
+      "score": 4,
+      "reason": "Response is collaborative and respects the young man's autonomy, offering non\u2011prescriptive options and reassurance plans; it could more explicitly draw on shared lived-experience framing or emphasize exploring his reasons for refusing therapy before setting firm boundaries."
+    },
+    "choice_priorities_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's decision-making throughout, preserves meaningful alternatives to therapy, and provides ways to reassure parents without undermining his autonomy."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Practical, immediately usable guidance and scripts plus an important safety reminder; minor gaps (de-escalation tactics, more context-specific tailoring) limit it from being exceptional."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly addresses the provider's scenario, offers context-appropriate scripts and options, and asks for the specific nature of the prior 'difficult period' to tailor advice further."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear headings, bullets, and short scripts so a provider can quickly pick phrases and options during a conversation."
+    },
+    "primary_strength": "Provides concrete, well-structured scripts and practical compromise options that a provider (or the young man) can use immediately.",
+    "primary_weakness": "Doesn't sufficiently probe family dynamics or the specifics of the earlier difficult period and omits brief tactical advice for de-escalation and handling immediate pushback.",
+    "conversation_id": "18d230ba6418d51ce4a88c5efcb45679",
+    "tool": "B",
+    "order_index": 4
+  }
+]

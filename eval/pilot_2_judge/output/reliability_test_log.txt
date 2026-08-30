@@ -1,0 +1,55 @@
+[reliability] ('M1', 'A') rep 1/5 done
+[reliability] ('M1', 'A') rep 2/5 done
+[reliability] ('M1', 'A') rep 3/5 done
+[reliability] ('M1', 'A') rep 4/5 done
+[reliability] ('M1', 'A') rep 5/5 done
+[reliability] ('S3', 'A') rep 1/5 done
+[reliability] ('S3', 'A') rep 2/5 done
+[reliability] ('S3', 'A') rep 3/5 done
+[reliability] ('S3', 'A') rep 4/5 done
+[reliability] ('S3', 'A') rep 5/5 done
+[reliability] ('S2', 'B') rep 1/5 done
+[reliability] ('S2', 'B') rep 2/5 done
+[reliability] ('S2', 'B') rep 3/5 done
+[reliability] ('S2', 'B') rep 4/5 done
+[reliability] ('S2', 'B') rep 5/5 done
+
+=== Per-dimension score spread across 5 repeated judge calls (same response) ===
+
+('M1', 'A'):
+  complementary_value              scores=[4, 4, 4, 4, 4]  range=0  stdev=0.00
+  important_things_to_notice       scores=[4, 4, 4, 4, 4]  range=0  stdev=0.00
+  responsiveness_relevance         scores=[5, 5, 5, 4, 5]  range=1  stdev=0.40
+  peer_role_alignment              scores=[5, 5, 5, 5, 5]  range=0  stdev=0.00
+  service_user_goals_autonomy      scores=[5, 5, 5, 5, 5]  range=0  stdev=0.00
+  reliability_verifiability        scores=[4, 3, 4, 4, 3]  range=1  stdev=0.49
+  ease_of_extracting_assistance    scores=[5, 4, 5, 5, 5]  range=1  stdev=0.40
+  overall_usefulness               scores=[4, 4, 5, 4, 4]  range=1  stdev=0.40
+
+('S3', 'A'):
+  complementary_value              scores=[3, 3, 3, 3, 3]  range=0  stdev=0.00
+  important_things_to_notice       scores=[4, 4, 4, 4, 4]  range=0  stdev=0.00
+  responsiveness_relevance         scores=[4, 4, 4, 4, 4]  range=0  stdev=0.00
+  peer_role_alignment              scores=[5, 5, 5, 5, 5]  range=0  stdev=0.00
+  service_user_goals_autonomy      scores=[5, 5, 5, 5, 5]  range=0  stdev=0.00
+  reliability_verifiability        scores=[2, 2, 2, 1, 2]  range=1  stdev=0.40
+  ease_of_extracting_assistance    scores=[4, 5, 5, 5, 5]  range=1  stdev=0.40
+  overall_usefulness               scores=[3, 3, 3, 2, 3]  range=1  stdev=0.40
+
+('S2', 'B'):
+  complementary_value              scores=[4, 3, 3, 3, 3]  range=1  stdev=0.40
+  important_things_to_notice       scores=[4, 4, 3, 3, 4]  range=1  stdev=0.49
+  responsiveness_relevance         scores=[4, 4, 4, 3, 4]  range=1  stdev=0.40
+  peer_role_alignment              scores=[5, 5, 4, 4, 5]  range=1  stdev=0.49
+  service_user_goals_autonomy      scores=[5, 5, 5, 5, 5]  range=0  stdev=0.00
+  reliability_verifiability        scores=[2, 2, 2, 2, 2]  range=0  stdev=0.00
+  ease_of_extracting_assistance    scores=[4, 4, 4, 4, 5]  range=1  stdev=0.40
+  overall_usefulness               scores=[3, 3, 3, 3, 3]  range=0  stdev=0.00
+
+=== Token usage per judge call ===
+avg prompt_tokens: 4093
+avg completion_tokens: 1444
+avg total_tokens: 5537
+n calls: 15
+
+[exited with code 0]

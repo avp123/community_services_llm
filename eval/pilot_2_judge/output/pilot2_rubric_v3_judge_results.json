@@ -1,0 +1,142 @@
+[
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "Identifies key considerations (vocational rehab, benefits counseling, transportation) and distinguishes that impacts depend on which benefits she has; could give a bit more on tradeoffs (e.g., SSI vs SSDI rules, trial work periods) and stepwise strategies for trying increased hours safely."
+    },
+    "useful_actionable_assistance": {
+      "score": 5,
+      "reason": "Provides concrete, local, and directly usable actions (DVRS office, WIPA referral via Ticket to Work, Project HIRE, Access Link) plus specific things to ask for (written summary of benefit impacts), which a provider could use immediately."
+    },
+    "peer_support_alignment": {
+      "score": 4,
+      "reason": "Respects the woman's stated goals and focuses on supports that preserve choice (benefits counseling, accommodations); mostly collaborative and non-prescriptive, though it could further foreground asking about her priorities and preferences before recommending particular programs."
+    },
+    "choice_priorities_autonomy": {
+      "score": 5,
+      "reason": "Centers concern about benefits and offers options that preserve autonomy (get tailored benefits counseling, vocational supports) and asks for information needed to tailor next steps rather than pushing a single solution."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and relevant to the Paterson/NJ context with usable contacts and next steps; minor weakness is that one NJ-specific claim (WorkAbility income limits) could use a clearer caveat and more detail on different benefit rules."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly answers the provider's prompt with locally relevant resources and targeted next steps, and requests specific follow-up information to tailor advice."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with numbered sections, bullets, contact info, links, and a short checklist of follow-up questions\u2014easy to scan and use in conversation."
+    },
+    "primary_strength": "Gives clear, concrete, locally relevant resources and immediate next steps (DVRS, WIPA/Ticket to Work, supported employment, paratransit) the provider can act on right away.",
+    "primary_weakness": "Makes a specific NJ WorkAbility claim without an explicit caveat and could provide more detail on how SSI vs SSDI/Medicaid rules differ and on trial/gradual-work strategies.",
+    "conversation_id": "e1de23bc95fe763b2ea057c77931fef0",
+    "tool": "B",
+    "order_index": 1
+  },
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "Identifies key considerations (values gap with family, pressure vs timing, strengths to build on) and suggests useful lines of questioning, but doesn't probe deeper into possible barriers (e.g., mental-health, practical constraints) that might change priorities."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Offers concrete next steps (questions to ask, strengths to leverage, bridge-goal examples, reframing for family) that a provider could use in-session; could be improved with more specific scripts, prioritized steps, or local resource suggestions."
+    },
+    "peer_support_alignment": {
+      "score": 5,
+      "reason": "Strongly peer-aligned: centers the person's own definition of \u2018doing well,\u2019 supports autonomy, avoids prescriptive framing, and encourages collaborative exploration rather than directing outcomes."
+    },
+    "choice_priorities_autonomy": {
+      "score": 5,
+      "reason": "Solidly preserves the service user's choices and priorities by recommending support for self-defined goals and offering noncoercive, legible 'bridge' options rather than assuming conventional milestones."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful for a peer provider\u2014clear framing, practical ideas, and conversational prompts\u2014though adding sample wording and a brief prioritized plan would make it more immediately usable."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly responds to the provider's situation and uses the details given (painting hobby, friends not local, brief retail job) to tailor suggestions and examples."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Clear and concise with practical recommendations that are easy to apply in-session, but could be easier to scan quickly with bullets or explicit short action steps and sample phrases."
+    },
+    "primary_strength": "Centers the service user's own goals and offers practical, nonprescriptive options (bridge goals, reframes, use of strengths) that support autonomy.",
+    "primary_weakness": "Lacks brief sample scripts and a prioritized, step-by-step plan (and doesn't probe potential barriers like mental-health or logistics) that would make the advice immediately actionable in-session.",
+    "conversation_id": "f1797c3de1eb030be95317f836c31170",
+    "tool": "A",
+    "order_index": 2
+  },
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "Identifies the key issues (SNAP eligibility, Medicaid NEMT) and suggests a sensible pathway (call member services, 211) and follow-up question (managed-care plan), but could have surfaced additional alternatives and details (e.g., paratransit, transportation brokers, typical documentation needed for SNAP) to deepen reasoning."
+    },
+    "useful_actionable_assistance": {
+      "score": 4,
+      "reason": "Provides clear, concrete next steps (call the number on the card for NEMT, dial 211, contact a local Camden organization with address and phone) that a provider could use immediately; it could be more actionable by listing typical documents for SNAP, links/forms, or specific transportation vendor contacts for common NJ plans."
+    },
+    "peer_support_alignment": {
+      "score": 4,
+      "reason": "Tone and suggestions are collaborative and autonomy-respecting (offers to help narrow contacts and gives options rather than ordering actions), though it could better elicit the woman's own priorities and barriers (e.g., phone access, when she prefers appointments) to fully embody peer-support practice."
+    },
+    "choice_priorities_autonomy": {
+      "score": 4,
+      "reason": "Centers the financial concern and preserves options by offering multiple routes to help, but doesn't explicitly ask which issue she wants to prioritize or propose ways the provider might support her (e.g., help with calls/forms), which would further support autonomy."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Practical and directly relevant to the provider's request with local contacts and clear first steps, but missing some useful specifics (SNAP application steps/documents, alternative transport options) that would make it more complete."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly addresses the Camden/NJ Medicaid context, answers the transportation question, suggests realistic starting points (member services, 211, local agency) and asks for the managed-care plan to tailor help further \u2014 well matched to the prompt."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Information is concise, prioritized, and actionable (call member services, dial 211, contact CCCOEO with phone/address), making it easy for a provider to pick up and use while remaining engaged with the service user."
+    },
+    "primary_strength": "Clear, practical next steps and local resources (member services, 211, and a Camden agency) that the provider can act on immediately.",
+    "primary_weakness": "Lacks some useful details (specific SNAP application steps/documents and other transport alternatives) and doesn't sufficiently explore the woman's preferences or barriers to tailor the support further.",
+    "conversation_id": "499d14d9742f82e7af186d45ce4478a7",
+    "tool": "A",
+    "order_index": 3
+  },
+  {
+    "thinking_reasoning_support": {
+      "score": 4,
+      "reason": "Identifies key issues (autonomy, family anxiety, trust), outlines tradeoffs and alternatives, and suggests a safety-focused compromise, but could more explicitly prompt the provider to explore the young man's own goals, reasons for refusing therapy, and family dynamics before choosing an approach."
+    },
+    "useful_actionable_assistance": {
+      "score": 5,
+      "reason": "Provides concrete, ready-to-use scripts, specific compromise options, clear early-warning signs and an example agreement, all of which the provider could immediately use in coaching or role-play."
+    },
+    "peer_support_alignment": {
+      "score": 5,
+      "reason": "Strongly centers the person's autonomy, offers collaborative alternatives rather than prescriptive commands, and preserves person-defined recovery while addressing family concerns and safety."
+    },
+    "choice_priorities_autonomy": {
+      "score": 5,
+      "reason": "Respects and preserves the service user's decision-making, offers noncoercive reassurances and boundary-setting strategies, and keeps options open rather than directing toward a single outcome."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very practical and well-aligned with peer-support aims, giving tangible language and plans; would be improved by adding suggested questions the provider can use to elicit the service user's priorities and by brief coaching tips for practicing the scripts."
+    },
+    "responsiveness_contextual_fit": {
+      "score": 5,
+      "reason": "Directly addresses the situation described, uses the provided information appropriately, includes a safety note, and asks for relevant missing details to tailor the plan further."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear headings, bullets, and short scripts so a provider can quickly find and use the most important points while remaining engaged with the service user."
+    },
+    "primary_strength": "Concrete, usable scripts and compromise options that balance respect for autonomy with practical safety planning.",
+    "primary_weakness": "Lacks explicit prompts and brief coaching guidance for the provider to explore the young man's own goals, reasons for refusing therapy, and to practice the suggested language with him.",
+    "conversation_id": "18d230ba6418d51ce4a88c5efcb45679",
+    "tool": "B",
+    "order_index": 4
+  }
+]
