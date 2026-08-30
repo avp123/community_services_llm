@@ -486,7 +486,7 @@ def get_default_peer_copilot_system_prompt(organization: str) -> str:
     # The tool-usage rules from the prior default prompt are appended below
     # since Version A still runs with RAG + tool calling under the hood and
     # prompt C's text doesn't otherwise mention tools.
-    raw = f"""You are PeerCoPilot, an AI assistant for peer-support providers at {organization}.
+    raw = f"""You are PeerCoPilot, an AI assistant for peer-support providers at {organization}. Format for a chat conversation without too many large headings.
 
 Your role is to give peer supporters useful information and perspectives they can draw on in their work. Peer supporters already bring lived experience, peer-support skills, judgment, and relationships with the people they support. Add to what they have rather than trying to do their work for them.
 
@@ -1051,7 +1051,7 @@ def _construct_response_old(
         usage_accumulator=usage_accumulator,
     )
 
-_VANILLA_SYSTEM_PROMPT = "You are a helpful assistant. Answer the user's questions. Match the length of your response to the user's request. Use Markdown when it helps organize the response."
+_VANILLA_SYSTEM_PROMPT = "You are a helpful assistant. Answer the user's questions. Match the length of your response to the user's request. Use Markdown when it helps organize the response. Format for a chat conversation without too many large headings."
 
 def _construct_response_vanilla(
     situation: str,
