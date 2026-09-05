@@ -155,7 +155,6 @@ function QuestionsPanel({ questions, onAsk }) {
         {questions.map((q, i) => (
           <button key={i} className="snap-question-item" onClick={() => onAsk(q.question)}>
             <span className="snap-question-text">{q.question}</span>
-            <span className="snap-question-reason">{q.reason}</span>
           </button>
         ))}
       </div>
@@ -166,17 +165,45 @@ function QuestionsPanel({ questions, onAsk }) {
 // ── Applicant mode: plain answer + single official link ─────────────────────
 
 
-function PlainAnswer({ text, resource, flags, questions, onAsk }) {
+function ReadAloudButton({ text }) {
+  const [speaking, setSpeaking] = useState(false);
+
+  const toggle = () => {
+    if (!('speechSynthesis' in window)) return;
+    if (speaking) {
+      window.speechSynthesis.cancel();
+      setSpeaking(false);
+      return;
+    }
+    const utter = new SpeechSynthesisUtterance(text.replace(/[*_#]/g, ''));
+    utter.rate = 0.95;
+    utter.onend = () => setSpeaking(false);
+    utter.onerror = () => setSpeaking(false);
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utter);
+    setSpeaking(true);
+  };
+
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
+
+  return (
+    <button className="snap-listen-btn" onClick={toggle} aria-label={speaking ? 'Stop reading answer aloud' : 'Read answer aloud'}>
+      {speaking ? '⏹ Stop reading' : '🔊 Listen to this'}
+    </button>
+  );
+}
+
+function PlainAnswer({ text, resource, questions, onAsk }) {
   const plain = text.replace(/\[\d+\]/g, '');
   return (
     <div className="snap-response-body">
+      <ReadAloudButton text={plain} />
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{plain}</ReactMarkdown>
       {resource && (
         <a href={resource.url} target="_blank" rel="noopener noreferrer" className="snap-learn-more">
           {resource.label} ↗
         </a>
       )}
-      <FlagsPanel flags={flags} mode="simple" />
       <QuestionsPanel questions={questions} onAsk={onAsk} />
     </div>
   );
@@ -209,7 +236,9 @@ function Message({ msg, mode, onOpen, onAsk }) {
       <div className="snap-message snap-message--bot">
         <div className="snap-synthesizing">
           <span className="snap-chevron">›</span>
-          <span className="snap-synthesizing-text">Synthesizing relevant information</span>
+          <span className="snap-synthesizing-text">
+            {mode === 'simple' ? 'Looking that up for you' : 'Synthesizing relevant information'}
+          </span>
           <LoadingDots />
         </div>
       </div>
@@ -222,7 +251,6 @@ function Message({ msg, mode, onOpen, onAsk }) {
         <PlainAnswer
           text={msg.text}
           resource={msg.resource}
-          flags={msg.flags}
           questions={msg.questions}
           onAsk={onAsk}
         />
@@ -248,6 +276,21 @@ export default function SnapChat({ mode }) {
   const [pdfPanel, setPdfPanel] = useState(null);
   const [conversationId, setConversationId] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [largeText, setLargeText] = useState(() => {
+    try {
+      return localStorage.getItem('snap-large-text') === '1';
+    } catch {
+      return false;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('snap-large-text', largeText ? '1' : '0');
+    } catch {
+      /* ignore storage errors (private browsing, etc.) */
+    }
+  }, [largeText]);
 
   // Resume a past conversation when arriving via ?c=<id> (e.g. from History)
   useEffect(() => {
@@ -378,7 +421,7 @@ export default function SnapChat({ mode }) {
   const isApplicant = mode === 'simple';
 
   return (
-    <div className={`snap-root ${isApplicant ? 'snap-root--applicant' : 'snap-root--caseworker'} ${pdfPanel ? 'snap-root--panel-open' : ''}`}>
+    <div className={`snap-root ${isApplicant ? 'snap-root--applicant' : 'snap-root--caseworker'} ${pdfPanel ? 'snap-root--panel-open' : ''} ${largeText ? 'snap-root--large-text' : ''}`}>
       <SnapPdfPanel panel={pdfPanel} onClose={() => setPdfPanel(null)} />
       <header className="snap-header">
         <div className="snap-header-inner">
@@ -388,17 +431,25 @@ export default function SnapChat({ mode }) {
             <span className="snap-logo-pill">Georgia SNAP · {isApplicant ? 'Applicant' : 'Caseworker'}</span>
           </div>
           <div className="snap-header-right">
-            <Link
-              className="snap-mode-switch-link"
-              to={isApplicant ? '/snap/caseworker' : '/snap/applicant'}
-            >
-              Switch to {isApplicant ? 'Caseworker' : 'Applicant'} view
-            </Link>
+            {isApplicant && (
+              <button
+                className="snap-mode-switch-link"
+                onClick={() => setLargeText(v => !v)}
+                aria-pressed={largeText}
+              >
+                {largeText ? 'Smaller text' : 'Larger text'}
+              </button>
+            )}
+            {!isApplicant && (
+              <Link className="snap-mode-switch-link" to="/snap/applicant">
+                Switch to Applicant view
+              </Link>
+            )}
             <Link
               className="snap-mode-switch-link"
               to={isApplicant ? '/snap/applicant/history' : '/snap/caseworker/history'}
             >
-              History
+              {isApplicant ? 'Past questions' : 'History'}
             </Link>
             <button
               className="snap-new-btn"
@@ -408,7 +459,7 @@ export default function SnapChat({ mode }) {
                 setSearchParams({}, { replace: true });
               }}
             >
-              + New
+              {isApplicant ? '+ Ask a new question' : '+ New'}
             </button>
             <SnapLogout mode={mode} />
           </div>

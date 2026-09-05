@@ -2,194 +2,38 @@
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Provides concrete, actionable local entry points (county DSS, county human services, Office on Aging), phone numbers and links that usefully expand what a peer provider might recall, but it omits specific human-food pantries in the county and detailed LIHEAP/utility contacts without a ZIP."
+      "reason": "Provides concrete, locally specific entry points (county HHS, Office on Aging, pet pantry, SCOOT) with contact details and a practical next-step offer, which meaningfully expands what the provider has to work with; could have included more direct food pantry names and SNAP/enrollment routes."
     },
     "important_things_to_notice": {
       "score": 4,
-      "reason": "Flags key practical considerations (need for ZIP/town, utility company, shut-off timing, transportation barriers, pet food needs) that affect which resources apply, though it could have also noted emergency/short-term crisis options or seasonal LIHEAP timing."
-    },
-    "responsiveness_relevance": {
-      "score": 4,
-      "reason": "Directly answers the request with local county-level resources and next steps and asks appropriate follow-up questions to refine results; it stops short of listing specific human-food pantries and utility-assistance contacts without more location detail."
-    },
-    "peer_role_alignment": {
-      "score": 5,
-      "reason": "Stays in a supportive, informational role (resources and referrals) without providing unsolicited scripts, clinical direction, or replacing the provider's peer-support role."
-    },
-    "service_user_goals_autonomy": {
-      "score": 5,
-      "reason": "Centers the service user's stated needs (food and utilities), preserves options, and asks for the user\u2019s ZIP/utility details rather than assuming additional goals or steering toward particular outcomes."
-    },
-    "reliability_verifiability": {
-      "score": 4,
-      "reason": "Gives URLs, phone numbers and an address and appropriately notes unverified items and the need to confirm pantry hours; generally careful but includes some specifics that should be double-checked."
-    },
-    "ease_of_extracting_assistance": {
-      "score": 5,
-      "reason": "Well organized with short sections, clear headings, and prioritized contact information so a provider can quickly scan and act while with the service user."
-    },
-    "overall_usefulness": {
-      "score": 4,
-      "reason": "A very useful starting set of local contacts and sensible follow-up questions; would be stronger if it included the nearest human-food pantries and exact LIHEAP/community action contacts for Salem County without needing more location info."
-    },
-    "primary_strength": "Provides clear, actionable county-level contacts and URLs and asks targeted follow-up (ZIP, utility) to produce precise referrals.",
-    "primary_weakness": "Does not include specific human-food pantry listings or exact LIHEAP/utility-assistance entry points for Salem County without additional location details.",
-    "scenario_id": "S1",
-    "tool": "A",
-    "rubric": "v2_general"
-  },
-  {
-    "complementary_value": {
-      "score": 4,
-      "reason": "Provides concrete, actionable information (SSDI vs SSI distinctions, documentation to gather, local housing routes, ADA/accommodation options) that meaningfully expands what the peer already has, though it mainly covers familiar topics and includes limited jurisdiction-specific detail."
-    },
-    "important_things_to_notice": {
-      "score": 4,
-      "reason": "Highlights the most consequential issues (work credits, SGA threshold, immigration limits for SSI, long Section 8 waitlists, and the option to apply while continuing limited work) and asks useful clarifying questions, but omits a few potentially relevant program details (e.g., trial work period, SSI resource exceptions)."
+      "reason": "Highlights key distinctions (age/disability eligibility, transportation barriers, shutoff notices) and points to LIHEAP/USF as program pathways; it reasonably flags the need for town/ZIP-level narrowing but omits some other important eligibility issues (e.g., SNAP application help)."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly addresses the provider's scenario and the service user's goal of keeping part-time work while exploring benefits and housing, and prioritizes the relevant options and next steps."
+      "reason": "Directly answers the provider's question with relevant local resources and an appropriate offer to refine referrals based on town/utility details."
     },
     "peer_role_alignment": {
       "score": 5,
-      "reason": "Supports the provider with information and concrete referrals without taking over the peer role or giving prescriptive scripts; leaves decisions and relationship work to the provider."
+      "reason": "Stays within an informational role, supplying resources and next-step options without directing how the provider should conduct peer support or substituting for the provider's relationship work."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Centers the service user's stated preference to continue working and offers pathways that preserve that choice (apply while working, seek accommodations, target programs that allow partial earnings)."
-    },
-    "reliability_verifiability": {
-      "score": 3,
-      "reason": "Generally accurate about program distinctions and processes and provides correct SSA contact info, but it gives a specific SGA dollar amount (2025) and a local agency phone without clear sourcing; those figures should be verified."
-    },
-    "ease_of_extracting_assistance": {
-      "score": 5,
-      "reason": "Well organized with clear headings, bullets, and a short list of concrete next steps and clarifying questions that make the advice easy to scan and use in a conversation."
-    },
-    "overall_usefulness": {
-      "score": 4,
-      "reason": "Very useful practical guidance tailored to the user's priorities with clear next steps and local leads; limited mainly by a couple of unverified specifics that should be checked before relying on them."
-    },
-    "primary_strength": "Clearly maps the realistic options (SSDI, SSI, housing assistance, workplace accommodations) and gives practical next steps and documentation to gather while respecting the user's wish to keep working.",
-    "primary_weakness": "Includes at least one specific numeric detail (SGA amount) and a local contact without explicit verification, which could mislead unless confirmed.",
-    "scenario_id": "M1",
-    "tool": "B",
-    "rubric": "v2_general"
-  },
-  {
-    "complementary_value": {
-      "score": 4,
-      "reason": "Clearly explains that SSI is federal (so no separate state 'income limit'), describes countable income and the role of the federal benefit rate, and confirms New Jersey provides an OSS \u2014 information that meaningfully answers the question without simply repeating it."
-    },
-    "important_things_to_notice": {
-      "score": 4,
-      "reason": "Flags the key distinctions the provider needs to consider (countable vs. gross income, earned vs. unearned income, living arrangement, individual vs. couple) that materially affect eligibility and payment amounts."
-    },
-    "responsiveness_relevance": {
-      "score": 5,
-      "reason": "Directly answers both parts of the question: explains there isn't a separate NJ income limit for SSI and confirms New Jersey does provide a state supplement, and offers a clear next step if more detail is wanted."
-    },
-    "peer_role_alignment": {
-      "score": 5,
-      "reason": "Provides factual information and options without taking over the peer's relational role or offering unsolicited scripts; offers to calculate estimates only if the provider supplies additional details."
-    },
-    "service_user_goals_autonomy": {
-      "score": 5,
-      "reason": "Stays focused on the user's stated question and does not introduce new goals or steer the user toward particular outcomes; offers to provide tailored estimates if asked."
+      "reason": "Centers the service user's immediate needs (food and utilities), avoids imposing extra goals, and invites input (town/ZIP, type of utility, shutoff status) to tailor assistance."
     },
     "reliability_verifiability": {
       "score": 4,
-      "reason": "Avoids inventing 2026 figures and appropriately cautions that FBRs are published annually, but it does not point to specific authoritative sources or provide the actual 2026 numbers or a citation for the NJ OSS details."
+      "reason": "Includes specific addresses, phone numbers, and a county website which are verifiable and appropriate, but some program claims are generic and the response lacks explicit caveats that details (hours, eligibility) should be confirmed."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Concise, well-structured response with clear headings and bullets so a provider can quickly find the main points and next steps while with a service user."
+      "reason": "Well organized with concise bullets, prioritized local contacts up front, and a clear immediate action (call county HHS or provide ZIP) making it easy to use quickly."
     },
     "overall_usefulness": {
       "score": 4,
-      "reason": "Very useful framing and confirmation that NJ adds a supplement; would be more immediately actionable if it included the 2026 FBR and specific NJ OSS categories or a pointer to where to verify current amounts."
+      "reason": "Very useful as a starting set of local contacts and pathways, but would be more actionable if it included key additional resources (local food pantry names, SNAP application support, and brief notes on typical eligibility/hours)."
     },
-    "primary_strength": "The response clearly and accurately reframes the question by explaining SSI is federal (so no state-specific 'income limit') and confirms New Jersey provides an optional state supplement.",
-    "primary_weakness": "It omits concrete 2026 figures (the SSI federal benefit rate and New Jersey supplement amounts or sources) that the provider likely wanted for an immediate answer.",
-    "scenario_id": "S2",
-    "tool": "B",
-    "rubric": "v2_general"
-  },
-  {
-    "complementary_value": {
-      "score": 4,
-      "reason": "Provides concrete, local, high-leverage options (county welfare office, 2-1-1, NEMT, TRADE, Access Link, TDI/UI) and practical next steps that materially expand what the peer already has to work with; a few resources/contacts could be narrower or more fully verified."
-    },
-    "important_things_to_notice": {
-      "score": 5,
-      "reason": "Highlights the key decision points that change next steps\u2014Medicaid enabling NEMT, whether the injury is work-related (Workers\u2019 Comp vs TDI), and the benefit of one front-door application\u2014and notes required documents and uncertainty about program funding."
-    },
-    "responsiveness_relevance": {
-      "score": 5,
-      "reason": "Directly addresses the provider\u2019s needs (stabilize utilities, get income/coverage, arrange medical transport) and prioritizes immediate, realistic actions for a person in Trenton with no car and limited benefits experience."
-    },
-    "peer_role_alignment": {
-      "score": 5,
-      "reason": "Supports the provider with factual/local resources and options without prescribing scripts or replacing the peer\u2019s relational work; leaves decision-making and follow-up to the provider and service user."
-    },
-    "service_user_goals_autonomy": {
-      "score": 5,
-      "reason": "Centers the person\u2019s practical needs (utilities, appointments, income) and offers options rather than steering toward a single imposed outcome; asks clarifying questions to tailor next steps."
-    },
-    "reliability_verifiability": {
-      "score": 4,
-      "reason": "Includes helpful links, phone numbers, and addresses and appropriately notes some items weren\u2019t freshly verified, but providing specific contact details that may change introduces modest risk and would benefit from a verification step."
-    },
-    "ease_of_extracting_assistance": {
-      "score": 5,
-      "reason": "Well organized into prioritized numbered sections with clear action items and what to bring\u2014easy to scan and use in a live conversation."
-    },
-    "overall_usefulness": {
-      "score": 4,
-      "reason": "Very practical and usable for immediate next steps with the service user; minor weaknesses are unverified contact details and a few missing local charity or emergency-assistance options that could be helpful."
-    },
-    "primary_strength": "Provides prioritized, actionable local resources and clear decision points (Medicaid \u2192 NEMT; Workers\u2019 Comp vs TDI) that directly address the person\u2019s utility, income, and transportation needs.",
-    "primary_weakness": "Some phone numbers and program availability are presented with limited verification, which could mislead unless the provider confirms them before relying on them.",
-    "scenario_id": "M3",
-    "tool": "A",
-    "rubric": "v2_general"
-  },
-  {
-    "complementary_value": {
-      "score": 4,
-      "reason": "Provides concrete local entry points (county DHHS, Office on Aging), LIHEAP pathway, and transportation options that are practical and directly usable beyond a generic suggestion, though it omits other key resources (e.g., SNAP/211/specific pantries)."
-    },
-    "important_things_to_notice": {
-      "score": 4,
-      "reason": "Highlights the LIHEAP pathway, senior/disability referrals, and transportation barriers and asks for ZIP to narrow options; it could have also called out SNAP/EBT and the typical documentation needed for intake."
-    },
-    "responsiveness_relevance": {
-      "score": 4,
-      "reason": "Directly answers the request with local contacts and clear next steps tailored to Salem County; slightly limited by not listing more specific food pantries or statewide intake routes like 2-1-1/SNAP."
-    },
-    "peer_role_alignment": {
-      "score": 5,
-      "reason": "Supplies resource-focused information and brief action steps without prescribing how the provider should deliver peer support, leaving relational work to the provider."
-    },
-    "service_user_goals_autonomy": {
-      "score": 5,
-      "reason": "Centers the user's immediate goals (food and utility help), offers actionable referrals, and invites the provider to supply ZIP/town to tailor options rather than imposing choices."
-    },
-    "reliability_verifiability": {
-      "score": 4,
-      "reason": "Gives plausible local phone numbers, addresses, and county websites and avoids over-specific claims, but does not flag that hours/eligibility should be confirmed or include alternative verified statewide resources (2-1-1, SNAP links)."
-    },
-    "ease_of_extracting_assistance": {
-      "score": 5,
-      "reason": "Well organized with clear headings, prioritized 'do this next' steps, and a simple actionable phone-first plan that is easy to use while engaged with the service user."
-    },
-    "overall_usefulness": {
-      "score": 4,
-      "reason": "A practical, usable starting point for connecting the service user to local help with clear next steps, but could be improved by adding SNAP/211, a few specific local food pantries, and a note to verify eligibility/hours."
-    },
-    "primary_strength": "Clear, actionable local entry points (Salem County DHHS and Office on Aging), plus a concise next-step plan the provider can use immediately.",
-    "primary_weakness": "Omits some important statewide intake routes and specific pantry options (e.g., 2-1-1, SNAP application help, named local pantries) and does not explicitly advise confirming hours/eligibility.",
+    "primary_strength": "Gives clear, locally specific contact points and a sensible next-step offer to tailor referrals by town and utility status.",
+    "primary_weakness": " Omits several directly relevant resources and enrollment pathways (e.g., local food pantry listings, SNAP/benefits application assistance, and brief eligibility/hours guidance) that would make immediate help more actionable.",
     "scenario_id": "S1",
     "tool": "B",
     "rubric": "v2_general"
@@ -197,38 +41,155 @@
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Provides targeted, practical information the provider likely doesn\u2019t have offhand\u2014clear SSDI vs SSI distinctions, SGA threshold, work-incentive options, documentation focus, and local Paterson contacts\u2014though it could have added a bit more verified local resource detail and specific immigration-eligibility rules."
+      "reason": "Provides concrete, relevant programs (211, LIHEAP/USF, NJ FamilyCare, SNAP, NEMT/Modivcare), a practical checklist, and a useful link \u2014 materially more than the provider supplied, though it could include a few Mercer-County-specific contacts or transit options."
     },
     "important_things_to_notice": {
-      "score": 5,
-      "reason": "Selectively surfaces the most consequential factors for this case (work credits vs asset limits, SGA earnings impact, the importance of documenting functional limits, and immigration category), which materially change eligibility and advice."
+      "score": 4,
+      "reason": "Highlights key distinctions (utility medical/shutoff holds, retroactive Medicaid, Workers' Comp vs TDI) and asks for crucial missing facts (utility company, income), but omits a couple of consequential details (e.g., NEMT often requires prior authorization/scheduling rules)."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly addresses the provider\u2019s request\u2014options that allow her to keep working while pursuing income/housing stability\u2014and asks for the precise additional facts needed to narrow referrals."
+      "reason": "Directly addresses the provider's implicit request for a low-stress, actionable plan to keep utilities on, get benefits, and secure medical transportation, using the given Trenton/Mercer context."
     },
     "peer_role_alignment": {
       "score": 5,
-      "reason": "Stays in an informational/consultative role that complements the peer provider rather than replacing them, avoids unsolicited scripting, and leaves next interactions to the provider while offering to fetch verified local contacts if asked."
+      "reason": "Complements the peer provider with practical resources and steps without taking over the relationship or providing unnecessary scripting or clinical direction."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Centers the stated goal of continuing to work and emphasizes options (SSI/SSDI work incentives, gradual benefit reductions) that preserve her autonomy and multiple paths rather than pushing a single outcome."
+      "reason": "Centers the user's stated priorities (utilities, health coverage, transport), preserves choice by suggesting assistance options and application help rather than presuming a single 'right' path."
     },
     "reliability_verifiability": {
       "score": 4,
-      "reason": "Generally careful (notes inability to verify waitlists, offers targeted search), but includes specific figures and local phone numbers without clear verification and omits explicit summary of how immigration categories affect eligibility."
+      "reason": "Information and program names are accurate and appropriately cautious; avoids invented specifics, though it would be stronger with local agency contacts, phone numbers, or explicit caveats about NEMT rules to verify."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Well organized into numbered lanes with concise bullets and clear decision points at the top and bottom, making it quick to scan and act on during a conversation."
+      "reason": "Well organized with clear headings, a short checklist, and prioritized steps so a provider can quickly act or share items with the service user."
     },
     "overall_usefulness": {
       "score": 4,
-      "reason": "Very useful and actionable for a peer provider, offering the right distinctions and local starting points; limited mainly by some unverified details and a lack of explicit immigration-eligibility guidance."
+      "reason": "Very useful, actionable, and well-aligned with the scenario; minor omissions (local Mercer County contacts, more NEMT details) limit it from being exceptional."
     },
-    "primary_strength": "Clear, well-structured, actionable breakdown of benefit and housing options that aligns with her goal of keeping work while stabilizing income and housing.",
-    "primary_weakness": "Includes a few specific figures and local contact details without verification and doesn\u2019t summarize how different immigration statuses concretely affect SSI/SSDI eligibility.",
+    "primary_strength": "Clear, prioritized, actionable plan tying the service user's immediate needs to specific NJ programs and simple next steps.",
+    "primary_weakness": "Lacks some Mercer County\u2013specific contacts and a few practical details (e.g., NEMT prior-authorization rules, local transit or county office phone numbers) that would make it immediately actionable on the ground.",
+    "scenario_id": "M3",
+    "tool": "B",
+    "rubric": "v2_general"
+  },
+  {
+    "complementary_value": {
+      "score": 3,
+      "reason": "Provides useful conceptual detail about how SSI eligibility is determined (countable income, earned vs unearned income) and notes New Jersey does offer an SSP, but it does not deliver the specific 2026 dollar amounts the provider asked for."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the key distinctions that change the effective 'income limit' (countable income vs gross income, earned vs unearned, living arrangement, individual vs couple) which are the most consequential factors for this question."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly addresses the question by explaining why a single income limit doesn't exist and confirms NJ provides a supplement, and appropriately asks for clarifying details needed to give exact numbers."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Stays informational and does not intrude on the peer-support role with unsolicited coaching or scripts; it complements the provider by supplying factual context and asking clarifying questions."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Respects the service user's likely priorities by focusing on eligibility mechanics and asking targeted questions before calculating precise cutoffs, rather than assuming outcomes or steering decisions."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Avoids inventing specific 2026 figures (appropriate given potential data changes) and correctly describes SSA rules and NJ's SSP in general, but could have pointed to authoritative sources or noted that amounts change annually."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 4,
+      "reason": "Answer is concise, well-organized, and the most important points appear early; however it stops short of giving the concrete numbers requested, which the provider must still pursue."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A useful, accurate explanation of why the question has no single answer and what additional details are needed to compute exact cutoffs, but it doesn't provide the specific 2026 amounts the provider requested."
+    },
+    "primary_strength": "Clearly explains the mechanics behind SSI 'income limits' (countable income, earned vs unearned) and correctly notes New Jersey offers a state supplement while asking sensible follow-up questions.",
+    "primary_weakness": "Fails to provide the actual 2026 SSI federal rate or New Jersey supplement amounts despite the user explicitly asking for the income limit and supplement for 2026.",
+    "scenario_id": "S2",
+    "tool": "B",
+    "rubric": "v2_general"
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Gives concrete, locally relevant resources (county HHS page, NJ211 pantry guide, Salem County Board of Social Services, SCOOT) and contact details that materially expand what the provider can give a service user, rather than restating the request."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Surfaces the most consequential distinctions (utility company/fuel type, presence of a shutoff notice, household composition, transportation barriers) and notes the dated NJ211 PDF and verification limits; it could have also highlighted typical documentation required for LIHEAP/utility applications."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's question with local starting points, prioritized connectors, and a clear, practical offer to narrow results by town and utility company."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Provides resources and clarifying questions without prescribing how the provider should interact with the service user or replacing the provider's peer-support role."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Stays focused on the service user's stated needs (food and utilities), offers options and connectors, and asks for details before narrowing recommendations, preserving choice and direction from the user."
+    },
+    "reliability_verifiability": {
+      "score": 4,
+      "reason": "Includes links and phone/address details and flags some uncertainty (rate-limit, dated PDF), but some specifics (phone numbers/addresses) should be explicitly prefaced as needing confirmation since local details can change."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear headings, prioritized items, and succinct follow-up questions so a provider can quickly identify next steps while with a service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very helpful as a practical starting kit of local contacts and considerations; minor omissions (e.g., direct LIHEAP application link or utility-specific emergency contact info) limit it from being exceptional."
+    },
+    "primary_strength": "Provides concrete, locally specific resources and contact information plus practical clarifying questions to quickly direct a service user.",
+    "primary_weakness": "Omits some direct state-level application links and explicit caveats to confirm phone/hours, so a provider should still verify a few details before relying on them.",
+    "scenario_id": "S1",
+    "tool": "A",
+    "rubric": "v2_general"
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides targeted, practical options (SSDI vs SSI distinctions, SGA threshold, DVRS, Section 8) and local contacts that go beyond what a peer would recall from memory, though it could include a few more jurisdiction-specific eligibility details."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the most consequential issues (work credits, 12+ month rule, need for medical documentation, housing waitlists, type of temporary housing), but omits a couple important jurisdictional specifics (e.g., noncitizen SSI rules and SSDI\u2192Medicare waiting period)."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly answers the provider's request by focusing on benefits that allow continued work, housing subsidy pathways in Paterson, and concrete next steps and clarifying questions tailored to the situation."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Supports the peer-provider role by supplying factual options and local contacts without imposing scripts or trying to replace the provider's relationship or clinical judgment."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the service user's stated preference to keep working by emphasizing work-friendly benefits, vocational rehab, and options that adjust benefits rather than force stopping employment."
+    },
+    "reliability_verifiability": {
+      "score": 3,
+      "reason": "Most factual points are reasonable and some uncertainty is acknowledged, but the response makes an unsupported claim about likely income-eligibility and includes specific numbers/contacts (SGA amount, local phone) without noting possible change or verifying noncitizen eligibility nuances."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear headings, concise bullets, prioritized actions, and a short list of targeted clarifying questions the provider can ask immediately."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful: gives the provider concrete, actionable pathways and questions to narrow next steps while preserving the service user's work goals; limited mainly by a couple missing eligibility nuances and a small amount of unsupported inference about income-eligibility."
+    },
+    "primary_strength": "Clear, practical, work-preserving options and local connectors (SSA contacts, DVRS, Section 8 / NJCDC) that the provider can act on immediately.",
+    "primary_weakness": "Makes an unsupported assumption about income-eligibility and omits key eligibility details (notably noncitizen SSI rules and the Medicare waiting period after SSDI) and does not fully qualify some local/contact specifics as needing verification.",
     "scenario_id": "M1",
     "tool": "A",
     "rubric": "v2_general"
@@ -236,77 +197,38 @@
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Provides concrete, practical options (CBTp, harm-reduction, peer support), NJ-wide referral points, sample language for calls, and a usable home plan \u2014 material the peer provider can act on beyond the scenario alone."
-    },
-    "important_things_to_notice": {
-      "score": 4,
-      "reason": "Highlights key distinctions (respecting spiritual meaning, focusing on functioning not diagnosis), safety escalation signs, family/child-safety considerations, and the value of peer/voice-hearing groups; a few additional specifics about local family services or child-safety reporting nuances are missing."
-    },
-    "responsiveness_relevance": {
-      "score": 5,
-      "reason": "Directly addresses the provider\u2019s implicit request for how to support this person without forcing medication or diagnostic debate, and prioritizes relevant actions, resources, and next questions."
-    },
-    "peer_role_alignment": {
-      "score": 5,
-      "reason": "Complements the peer provider with options, phrasing to use, and peer-support-oriented resources while leaving relational and clinical decisions to the provider and service user."
-    },
-    "service_user_goals_autonomy": {
-      "score": 5,
-      "reason": "Clearly centers the man\u2019s stated preferences (keeping spiritual meaning, avoiding medication) and proposes non-coercive supports that preserve his choices."
-    },
-    "reliability_verifiability": {
-      "score": 5,
-      "reason": "Avoids inventing local specifics, gives accurate statewide referral sources with URLs, and explicitly notes uncertainty about local directory results \u2014 appropriately cautious."
-    },
-    "ease_of_extracting_assistance": {
-      "score": 5,
-      "reason": "Well organized with clear headings, bullet points, and prioritized actionables (what to ask, home plan, escalation signs), making it easy to use in real time."
-    },
-    "overall_usefulness": {
-      "score": 4,
-      "reason": "Very useful and practical for a peer provider working with this person and family; minor limitation is the absence of immediate Newark-area clinic/group names (though the reply requests ZIP/insurance to supply them)."
-    },
-    "primary_strength": "Respects the service user's spiritual framing and autonomy while offering concrete, non-coercive supports, referral routes, and ready-to-use language for engaging services.",
-    "primary_weakness": "Does not provide specific Newark-area clinics or groups up front (only statewide contacts), delaying immediate local referrals until ZIP/insurance are provided.",
-    "scenario_id": "M2",
-    "tool": "B",
-    "rubric": "v2_general"
-  },
-  {
-    "complementary_value": {
-      "score": 4,
-      "reason": "Provides concrete, practical targets (shared agreements, early-warning plans), relevant peer-friendly resources (Hearing Voices, NAMI) and family-focused options that go beyond the scenario; minor limitation is that some local details are unverified and could have included a couple more immediately actionable next steps."
+      "reason": "Provides concrete, practical strategies (harm-reduction framing, family-impact targets, communication tools, crisis-planning language) and modality suggestions that go beyond the scenario and are directly usable by a peer provider."
     },
     "important_things_to_notice": {
       "score": 5,
-      "reason": "Selectively highlights the most consequential considerations for this case: focusing on impact not beliefs, protecting children, partner support, early-warning signs, and modifiable factors like sleep/substance use."
+      "reason": "Highlights the key distinctions (keeping spiritual meaning vs reducing family harm), surfaces useful assessment questions, notes absence of violence/crisis, and flags missing details (insurance, willingness for groups) that would change recommendations."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly addresses the provider\u2019s apparent task\u2014finding non-pathologizing, family-focused support options\u2014and prioritizes actions that match the service user\u2019s preferences (no meds, retains spiritual meaning)."
+      "reason": "Directly addresses the provider\u2019s brief: respects his spiritual meaning, honors refusal of meds/diagnosis, and focuses on family-impact interventions and local resource pathways."
     },
     "peer_role_alignment": {
-      "score": 5,
-      "reason": "Advice is framed to complement a peer-support approach (practical targets, community peer groups) without replacing the peer\u2019s relationship or imposing clinical directives or detailed scripts."
+      "score": 4,
+      "reason": "Respects the peer role and offers options rather than clinical directives, but includes some suggested wording and structured plans that slightly move into coaching territory (useful but somewhat prescriptive)."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Centers the person\u2019s wish to keep meaning in his experiences and avoid medication, while offering supports that respect that stance and focus on family impact and choice."
+      "reason": "Centers the person\u2019s stated priorities (retain meaning, avoid medication, reduce family distress) and presents options that preserve choice rather than trying to change beliefs or impose treatment."
     },
     "reliability_verifiability": {
       "score": 4,
-      "reason": "Most resource references (Hearing Voices national site, NAMI helpline, 988) are accurate and correctly caveated; one local program entry (Rutgers EISS address/phone) is presented with partial verification and should be confirmed."
+      "reason": "Appropriately caveats local-search limits and gives a small number of stable resources (988, NAMI NJ link, NJ Mental Health Cares number) with a clear suggestion to verify details, though a few resource specifics remain unverified."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Well organized with clear bullets and headings; high-priority suggestions appear early, making it easy to scan and use during engagement with the family."
+      "reason": "Well organized with numbered sections and bullet points so a provider can quickly scan for assessment questions, concrete interventions, and next steps to offer the family."
     },
     "overall_usefulness": {
-      "score": 4,
-      "reason": "Very practical, respectful, and well-targeted to the situation; small shortcomings are unverified local specifics and a missed opportunity to offer one or two brief sample conversation prompts or immediate first steps for the provider to try."
+      "score": 5,
+      "reason": "Highly practical and aligned with the service user\u2019s goals; offers immediately usable strategies for family impact, peer-focused modality options, basic crisis planning, and sensible next-step resource guidance."
     },
-    "primary_strength": "Clear, pragmatic, non-pathologizing recommendations (impact-focused goals, shared agreements, peer-group and family resources) that align with the person\u2019s preferences.",
-    "primary_weakness": "Includes some specific local program details that are not fully verified and could mislead unless the provider confirms eligibility and contact information.",
+    "primary_strength": "Practical, non-pathologizing, family-centered options that honor the person's spiritual meaning while reducing household harm.",
+    "primary_weakness": "Doesn't provide fully verified Newark/Essex-specific supports or eligibility details (requested insurance/engagement info to narrow recommendations).",
     "scenario_id": "M2",
     "tool": "A",
     "rubric": "v2_general"
@@ -314,77 +236,116 @@
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Provides concrete, locally relevant programs (2\u20111\u20111, LIHEAP, NJ FamilyCare, NEMT) and a prioritized action plan that meaningfully expands what the provider can offer beyond the initial scenario."
+      "reason": "Provides concrete, actionable alternatives (CBTp, Hearing Voices, Open Dialogue), a practical home plan, and vetted entry-point resources (211, NAMI, MHA) that go beyond the basic scenario and would materially help a peer provider support this person."
     },
     "important_things_to_notice": {
       "score": 4,
-      "reason": "Surfaces the most consequential short\u2011term priorities (preventing shutoff, getting coverage, transport) and distinguishes UI vs TDI vs workers' comp; it could have called out a few additional local specifics (county DSS, paratransit) and documentation likely needed."
+      "reason": "Highlights key, situationally important considerations (sleep as a trigger, family-focused harm reduction, early-warning signs, child-safety buffers) while noting non-crisis status; it omits some system-level issues (e.g., mandated reporting thresholds) but otherwise surfaces the main tradeoffs."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly addresses the provider's scenario with focused, practical steps for utilities, benefits, food, transportation, and income options and asks two useful follow\u2011ups."
+      "reason": "Directly addresses the provider's scenario and request with relevant approaches, a concrete household plan, and local entry points; stays focused on supporting family distress without pushing diagnosis or medication."
     },
     "peer_role_alignment": {
-      "score": 5,
-      "reason": "Compliments the peer\u2011support role by offering resources, a short script, and referral suggestions without replacing the provider's relational work or giving prescriptive clinical instructions."
+      "score": 4,
+      "reason": "Supports the peer role by offering practical, non-clinical strategies and resources while largely leaving relational decisions to the provider, though it includes some prescriptive steps/scripts that slightly encroach on how the provider might conduct conversations."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Centers immediate goals the person likely has (stabilize utilities, access care, replace income) and offers options and enrollment assistance without steering toward unfamiliar goals."
+      "reason": "Respects the service user's stated priorities (keeps spiritual meaning, refuses medication) and offers options that preserve his autonomy while addressing family impact, without steering toward unwanted clinical goals."
     },
     "reliability_verifiability": {
       "score": 4,
-      "reason": "Most program references are accurate and appropriately non\u2011specific (no phone numbers or claims about eligibility), but a few program names (e.g., 'Fresh Start') and scope could use verification or local confirmation."
+      "reason": "Avoids inventing local program details, gives accurate, verifiable entry points (211, NAMI, Hearing Voices, 988) and warns about local-search limits; could do more to note variability in availability and eligibility for specific therapies locally."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Well organized into numbered sections and bullets so a provider can quickly scan and use the most important steps during or between client contacts."
+      "reason": "Well organized with clear headings, bullets, and a numbered home plan so a provider can quickly scan and use the most practical suggestions during contact with the family."
     },
     "overall_usefulness": {
       "score": 4,
-      "reason": "A practical, actionable plan that a peer provider can use immediately, though it would be stronger with a couple Mercer County\u2011specific contacts (county DSS, paratransit options, hospital presumptive Medicaid) and a short checklist of documents to gather."
+      "reason": "Very useful and actionable for a peer-support provider working with this family\u2014strong non-coercive strategies and resource entry points\u2014though it lacks some local specificity and brief system-level cautions (e.g., child-welfare/mandated-reporting guidance)."
     },
-    "primary_strength": "A concise, prioritized, locally tailored action plan with concrete programs and immediate next steps.",
-    "primary_weakness": "Missing a few Mercer County\u2013specific contacts/options (county Board of Social Services, paratransit or county ride programs, and typical documents needed) and slight uncertainty around some program names that should be verified.",
-    "scenario_id": "M3",
+    "primary_strength": "Clear, autonomy-respecting, and practical guidance that centers family-focused harm-reduction strategies and gives reliable entry points to local supports.",
+    "primary_weakness": "Lacks a few system-level cautions and specific Newark-area program recommendations (e.g., concrete clinics or how/when child-welfare or mandated-reporting might apply).",
+    "scenario_id": "M2",
     "tool": "B",
     "rubric": "v2_general"
   },
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Explains why SSI has no single income cutoff, summarizes the key income exclusions and gives a usable rule-of-thumb for estimating when SSI phases out, and flags that NJ offers a state supplement \u2014 all of which materially help the provider beyond the original question."
+      "reason": "Gives concrete, actionable distinctions between SSDI and SSI, notes NJ TDI and housing-voucher realities, lists useful documentation to gather, and offers local contacts \u2014 all of which materially expand what the provider can use."
     },
     "important_things_to_notice": {
       "score": 4,
-      "reason": "Flags the most consequential issues: SSI is federal, countable income rules (the $20/$65/50% mechanics), the need to know earned vs unearned income and living arrangement for NJ SSP, and that exact 2026 figures require looking up the 2026 FBR/SSP tables."
+      "reason": "Highlights the most consequential factors (SGA, work credits, immigration category, waitlists, evidence needed) that determine benefit eligibility and tradeoffs; minor omissions (e.g., explicit Medicaid linkage timing) do not materially limit understanding."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly answers both parts of the question: explains why there isn't a single income limit and confirms NJ does provide state supplements for some recipients, and it prioritizes what additional facts are needed to give precise 2026 numbers."
+      "reason": "Directly answers the provider's question about disability benefits and housing subsidies, prioritizes options compatible with keeping part-time work, and requests the right follow-up details to give a clearer recommendation."
     },
     "peer_role_alignment": {
       "score": 5,
-      "reason": "Provides factual, practical information and options without taking over the peer-provider role or offering unsolicited scripts or clinical directives."
+      "reason": "Supports the provider with background, resources, and questions to ask without replacing the peer's role or offering unnecessary scripting or clinical directives."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Stays neutral and centered on the service user's likely priorities (eligibility and supplement), asks for relevant details before producing estimates, and does not push a specific outcome."
+      "reason": "Centers the user's preference to continue working and emphasizes benefit pathways that permit part-time work and work incentives rather than steering toward full disability-only solutions."
     },
     "reliability_verifiability": {
-      "score": 4,
-      "reason": "Appropriately refuses to state unverified 2026 amounts and links to authoritative sources; the general income-exclusion rules cited are standard, though the simplified formula may gloss over calculation order/details that can affect exact results."
+      "score": 2,
+      "reason": "Includes specific numeric and contact details (e.g., a 2025 SGA figure, SSI amount estimate, phone numbers) without clear sourcing or caveats; some details may be outdated or inaccurate and should be verified."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Well organized (clear sections, short bullets, and specific next steps/questions), so a provider can quickly use it or ask for a targeted web lookup."
+      "reason": "Well organized with clear headings, concise bullets, and a short list of exactly what additional facts are needed \u2014 easy to scan and use in a conversation."
     },
     "overall_usefulness": {
       "score": 4,
-      "reason": "Very useful as an explanation and for guiding next steps, but it does not give the specific 2026 dollar figures the provider asked for and the phase-out formula is presented as a simplification."
+      "reason": "Very practical and directly usable guidance about likely benefit pathways, documentation, and local resources, but its usefulness is reduced by unverified specific figures/contacts that the provider should confirm."
     },
-    "primary_strength": "Clearly explains why SSI lacks a single income cutoff and gives concrete, usable rules about how income is counted and when SSI phases out.",
-    "primary_weakness": "Fails to provide the actual 2026 SSI and New Jersey SSP dollar amounts the provider asked for and presents a simplified formula that could be misleading without verification.",
+    "primary_strength": "Clear, practical breakdown of SSDI vs SSI and how part-time work and immigration status affect eligibility, plus a focused list of documentation and next questions.",
+    "primary_weakness": "Contains specific numeric and contact information presented without sourcing or caveats, which could be inaccurate and should be verified before acting on it.",
+    "scenario_id": "M1",
+    "tool": "B",
+    "rubric": "v2_general"
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Explains how SSI countable income is calculated (general $20, $65 earned exclusion, $1-for-$1 and $1-for-$2 rules) and how to estimate when benefits drop to $0, and it flags that NJ may add a state supplement \u2014 information the provider likely did not supply and that materially helps interpret 'income limit.'"
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "Highlights the key rules and exclusions that determine an effective income cutoff and notes that SSP eligibility and amounts depend on living arrangement; it also correctly points out the need to check the 2026 federal benefit rate, which is decisive for exact thresholds."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly answers the two parts of the question by explaining the federal income-counting rules that set the practical 'limit' and confirming New Jersey does provide a supplement, while noting it cannot verify exact 2026 dollar figures without the FBR."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Provides factual, decision-relevant information and suggested next steps without attempting to replace the provider's peer role or prescribing how to interact with the service user."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Stays neutral and informational, avoids imposing goals or assumptions about the service user's choices, and asks only for clarifying details if the provider wants exact calculations."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Accurately describes SSI counting rules and exclusions, correctly notes that precise 2026 dollar amounts require the SSA's published FBR and NJ SSP schedules, and points the provider to authoritative sources rather than inventing figures."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with clear bullets and rule-of-thumb formulas up front, making it quick to scan and apply (and offering a simple follow-up to compute exact numbers if the provider supplies more details)."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Very useful in explaining how to think about an 'income limit' and confirming the presence of a state supplement and where to verify numbers, but it stops short of providing the 2026 dollar values the provider likely wanted."
+    },
+    "primary_strength": "Clearly and accurately explains the SSI income-counting rules and practical formulas for when benefits hit $0, and confirms that New Jersey offers a state supplement.",
+    "primary_weakness": "It does not provide the specific 2026 federal benefit rate or New Jersey SSP dollar amounts the provider likely expected, instead only pointing to sources for verification.",
     "scenario_id": "S2",
     "tool": "A",
     "rubric": "v2_general"
@@ -392,155 +353,77 @@
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Provides concrete, practical alternatives (med adjustments, LAIs, PRN, tapering) and non-medical supports (CBT for psychosis, sleep, relapse plans) that go beyond generic advice and would materially expand the provider\u2019s options."
+      "reason": "Provides concrete, NJ-specific resources (211, DCA, FamilyCare, SNAP, TDI/UI) and actionable next steps that a peer provider can use immediately, but it omits some Mercer County\u2013specific transportation options and a couple of direct local contacts that would further increase practicality."
     },
     "important_things_to_notice": {
       "score": 4,
-      "reason": "Highlights key, situation-specific concerns (imminent risk, legal/forensic pressure, reasons for refusal, akathisia, abrupt discontinuation) that meaningfully affect what to do, though it omits an explicit note about assessing decisional capacity."
+      "reason": "Highlights high-impact considerations (need for shutoff notice/account info, household rules for benefits, possible workers' comp) that the provider might miss, though it could have flagged urgent deadlines or typical documentation timelines more explicitly."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly answers the provider\u2019s question with prioritized, actionable steps and a short menu of immediate options, and asks concise clarifying questions to tailor next steps."
+      "reason": "Directly addresses the provider's stated priorities (utilities, benefits/income, and rides) and proposes immediately relevant actions and follow-up questions without introducing unrelated topics."
     },
     "peer_role_alignment": {
       "score": 5,
-      "reason": "Supports the peer-provider role by offering options and talking points without prescribing a clinician\u2019s actions or replacing the provider\u2019s judgment; advice is framed to respect the service user\u2019s choices."
+      "reason": "Compliments the peer role by offering resources and clarifying options while leaving interaction, rapport, and decision-making to the provider rather than prescribing scripts or taking over the peer-support role."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Centers the person\u2019s autonomy (\u2019on his terms\u2019), asks for his reasons, and presents alternatives that preserve choice rather than steering toward a single outcome."
+      "reason": "Centers the user's unease and preserves choice (e.g., reassurance about SNAP scope, asking whether he has income/utilities details) rather than steering toward unwarranted goals."
     },
     "reliability_verifiability": {
       "score": 4,
-      "reason": "Recommendations are generally accurate and cautiously framed (e.g., legal consequences noted without specifics), but some clinical/legal items would benefit from explicit prompts to verify local rules or clinician guidance."
+      "reason": "Most recommendations are accurate and use reliable entry points (211, official NJ sites) and the reply flags some uncertainty, but it includes a specific DCA contact and general NEMT process statements that should be verified locally."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Well organized with numbered sections and brief bullets; the highest-value actions are easy to find and could be used quickly in conversation or planning."
+      "reason": "Well organized into clear categories (utilities, income/coverage, rides, food) with prioritized actions and a short set of targeted follow-up questions that make it quick to use in a live conversation."
     },
     "overall_usefulness": {
       "score": 4,
-      "reason": "Very useful and practical for a peer-support provider needing immediate, actionable options and safety notes; minor gaps (explicit capacity assessment and local legal/urgency thresholds) limit it from being exceptional."
+      "reason": "Very practical and directly usable for next steps; would be stronger with a couple of Mercer County\u2013specific transit/paratransit contacts and a brief note about urgent timelines for shutoff/benefit applications."
     },
-    "primary_strength": "Clear, structured, and actionable set of alternatives and harm-reduction steps that respect the service user\u2019s autonomy.",
-    "primary_weakness": "Does not explicitly mention assessing the service user\u2019s decision-making capacity or give guidance on when/how to escalate to involuntary/legal pathways, which can be a crucial omission in some cases.",
-    "scenario_id": "S4",
-    "tool": "A",
-    "rubric": "v2_general"
-  },
-  {
-    "complementary_value": {
-      "score": 4,
-      "reason": "The response goes beyond a restatement by searching for a likely match (Camden Life Center), reporting its current evening schedule, and providing a website link and a next-step (ask which center)."
-    },
-    "important_things_to_notice": {
-      "score": 4,
-      "reason": "It correctly highlights the ambiguity in 'drop-in center in Camden' and that multiple sites exist, notes the absence of a Tuesday listing for the matched center, and requests a more specific identifier to verify."
-    },
-    "responsiveness_relevance": {
-      "score": 5,
-      "reason": "Directly addresses the question by attempting verification, reports findings, and asks for the specific center when the original query was ambiguous."
-    },
-    "peer_role_alignment": {
-      "score": 5,
-      "reason": "Acts as an information lookup assistant without giving unsolicited peer-support coaching or scripts, leaving the provider to use the information in their own role."
-    },
-    "service_user_goals_autonomy": {
-      "score": 5,
-      "reason": "Does not impose goals or choices on a service user and stays focused on the provider's factual verification request, asking for clarification rather than assuming preferences."
-    },
-    "reliability_verifiability": {
-      "score": 3,
-      "reason": "Provides a concrete website and schedule but implicitly assumes a specific Camden (Camden, NJ) without clarifying geographic scope; the answer is appropriately cautious but could better flag location ambiguity and verify contact details."
-    },
-    "ease_of_extracting_assistance": {
-      "score": 5,
-      "reason": "Concise, prioritized answer: key finding and link first, clear caveat, and a single clear next-step request\u2014easy to scan and act on while engaged with a service user."
-    },
-    "overall_usefulness": {
-      "score": 4,
-      "reason": "Useful and actionable for follow-up (identifies a likely center and next steps), but somewhat limited by an unstated geographic assumption and lack of direct contact verification for the Tuesday group."
-    },
-    "primary_strength": "Provides a concise, actionable lookup with a specific site and website link while clearly noting uncertainty and asking for clarification.",
-    "primary_weakness": "Implicitly assumes which 'Camden' the provider meant (Camden, NJ) and doesn't explicitly confirm or ask about the geographic location, which could lead to a mismatched result.",
-    "scenario_id": "S6",
+    "primary_strength": "Provides concise, prioritized, NJ-specific resources and practical documentation/next-step guidance tailored to the person's immediate needs and unease.",
+    "primary_weakness": "Lacks some Mercer County\u2013specific transportation/paratransit options and a few direct local contacts or immediate next-step details for urgent utility assistance.",
+    "scenario_id": "M3",
     "tool": "A",
     "rubric": "v2_general"
   },
   {
     "complementary_value": {
       "score": 3,
-      "reason": "Gives concrete gross and net monthly thresholds and notes about gross/net and exceptions, which are the kind of facts the provider likely wanted, but it does not cite a source or date and may be unverified."
+      "reason": "Provides a concrete gross monthly limit for a 3-person household (useful), but offers only one figure without source, timeframe, or the corresponding net-income limit and resource rules that are also important for SNAP eligibility."
     },
     "important_things_to_notice": {
       "score": 3,
-      "reason": "Correctly distinguishes gross vs net income and mentions elderly/disabled rule and typical deductions, but fails to note that income limits change annually and does not flag the need to verify the 'current' year or state source."
+      "reason": "Correctly flags that deductions and elderly/disabled exceptions matter, but omits the net-income test (and how gross vs. net tests operate) and doesn't note that limits change by year or require confirmation from an official source."
     },
     "responsiveness_relevance": {
       "score": 4,
-      "reason": "Directly answers the question with specific numbers and brief clarifications, though it doesn't clarify which year or provide a source for 'current' limits."
+      "reason": "Directly answers the provider's question with a single, prioritized figure and a brief caveat; however, it could be more responsive by citing the date/source and including the net-income threshold or guidance to verify the number."
     },
     "peer_role_alignment": {
       "score": 5,
-      "reason": "Provides factual information without giving unsolicited coaching or replacing the peer's role; leaves decisions and next steps to the provider and offers an optional follow-up."
+      "reason": "Supports the provider with factual information and offers follow-up options without attempting to replace the provider's role or giving unsolicited interpersonal scripting."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Does not impose goals or steer decisions; offers to help check eligibility only if the provider supplies county/ZIP and income, preserving the user's autonomy."
+      "reason": "Does not impose goals or steer choices; it simply supplies eligibility information and offers to refine it if the provider supplies more context."
     },
     "reliability_verifiability": {
       "score": 2,
-      "reason": "Presents precise monthly figures without a citation, effective date, or qualification; this kind of numeric claim should be sourced or labeled as approximate."
+      "reason": "Presents a precise monthly figure but fails to cite a source or date and uses vague wording about an 'eligibility tool,' making the claim hard to verify and potentially outdated."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Short, clearly formatted bullets with the most important numbers and a brief explanatory note make the answer quick to read and use in conversation."
+      "reason": "Very concise and easy to scan: the key number is highlighted up front and caveats are short and clear."
     },
     "overall_usefulness": {
       "score": 3,
-      "reason": "Potentially helpful as a quick answer, but the lack of sourcing and an explicit date for 'current' limits reduces trustworthiness and practical utility."
+      "reason": "Useful as a quick reference point, but limited by lack of sourcing, no net-income threshold, and no confirmation of currency\u2014so the provider should verify before relying on it for case decisions."
     },
-    "primary_strength": "Concise, directly actionable answer with a clear gross vs net distinction and an offer to help check eligibility further.",
-    "primary_weakness": "Gives specific numeric thresholds without citing a source or specifying the effective date, making the figures potentially unreliable.",
-    "scenario_id": "S3",
-    "tool": "B",
-    "rubric": "v2_general"
-  },
-  {
-    "complementary_value": {
-      "score": 3,
-      "reason": "Provides a concrete gross monthly figure (useful), but omits the net-income limit, effective date, and any source or citation, limiting its practical value."
-    },
-    "important_things_to_notice": {
-      "score": 4,
-      "reason": "Flags the distinction between gross and net tests and notes older-adult/disability exceptions and that the net limit/effective date were not provided\u2014these are the most important caveats for this question."
-    },
-    "responsiveness_relevance": {
-      "score": 5,
-      "reason": "Directly answers the exact question with a clear numeric threshold and offers a sensible follow-up request; it stays on topic."
-    },
-    "peer_role_alignment": {
-      "score": 5,
-      "reason": "Sticks to factual information without prescribing how the provider should act or inserting unsolicited scripts\u2014appropriate for supporting a peer provider."
-    },
-    "service_user_goals_autonomy": {
-      "score": 5,
-      "reason": "Does not impose goals or decisions on the service user and only gently suggests applying as an option when exceptions might apply, preserving choice."
-    },
-    "reliability_verifiability": {
-      "score": 2,
-      "reason": "Gives a specific dollar amount but provides no authoritative source, effective date, or documentation; the claim may be inaccurate and should be verified."
-    },
-    "ease_of_extracting_assistance": {
-      "score": 5,
-      "reason": "Very concise and scannable: the key number appears immediately and caveats are brief and clear."
-    },
-    "overall_usefulness": {
-      "score": 3,
-      "reason": "Useful as a quick, direct answer, but its lack of sourcing, missing net-income limit, and no effective date reduce confidence and limit practical use."
-    },
-    "primary_strength": "Gives a clear, specific gross monthly income figure and highlights relevant exceptions (older adult/disability).",
-    "primary_weakness": "Presents an un-cited numeric threshold without the source, effective date, or the net-income limit, making its accuracy and completeness uncertain.",
+    "primary_strength": "Gives a single, easy-to-find gross monthly income figure and briefly flags that deductions and exceptions can affect eligibility.",
+    "primary_weakness": "Fails to cite a source or date and omits the net-income test and other verification details, so the figure's reliability is uncertain.",
     "scenario_id": "S3",
     "tool": "A",
     "rubric": "v2_general"
@@ -548,77 +431,116 @@
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Provides a clear, structured plan (safety check, exploring reasons, prescriber involvement, adherence supports, crisis planning) and practical options (dose change, switching meds, LAIs, side-effect management) that meaningfully expand what the provider can use, though it omits some documentation and capacity-assessment detail."
+      "reason": "Provides concrete, actionable options (clarifying refusal, med alternatives, harm-reduction, safety thresholds, next steps) that go beyond the provider's initial question and are directly useful in peer work."
     },
     "important_things_to_notice": {
       "score": 4,
-      "reason": "Highlights the key, situation-defining issues (immediate danger, capacity, reasons for refusal, need to involve prescriber and create a relapse plan). It could have more explicitly noted documenting informed refusal and the specific components of capacity assessment."
+      "reason": "Surfaces the key distinctions (all meds vs one med, side-effect drivers, safety red flags) and tradeoffs; could have explicitly noted documenting refusal or assessing decision-making capacity when relevant."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly answers 'what should he do' with prioritized, actionable steps appropriate to both emergency and non-emergency contexts and asks for contextual details to tailor next steps."
+      "reason": "Directly answers 'what should he do' with prioritized options, escalation criteria, and a concrete next step tailored to a peer-support context."
     },
     "peer_role_alignment": {
       "score": 5,
-      "reason": "Respects the peer-support role by offering options, brief conversational phrasing, and practical supports without taking over clinical decision-making or providing prescriptive clinician-only instructions."
+      "reason": "Framed for peer work, respects autonomy, avoids coercive language or clinical takeover, and leaves decision-making to the provider and service user."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Centers autonomy (explicitly notes informed refusal and capacity), advocates shared decision-making, avoids coercive language, and preserves meaningful choice while recommending monitoring and supports."
+      "reason": "Centers the person's preferences, offers alternatives and harm-reduction rather than assuming medication is required, and explicitly preserves choice."
     },
     "reliability_verifiability": {
-      "score": 5,
-      "reason": "Avoids inventing specifics, appropriately frames legal/capacity points as setting-dependent, and sticks to generally accepted clinical and practical practices without unsupported claims."
+      "score": 4,
+      "reason": "Most factual claims are reasonable and the NJ resource numbers are plausible; the response responsibly notes the hotline number should be confirmed, but any phone numbers or program availability should still be verified locally."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Well organized into numbered sections and bullets, with clear signposts and a short example script\u2014easy to scan and apply quickly while engaged with a service user."
+      "reason": "Well-organized numbered sections and bullets make the high-value actions and red flags quick to find and use in a real-time peer interaction."
     },
     "overall_usefulness": {
-      "score": 5,
-      "reason": "Highly useful: gives a practical, balanced approach that a peer-support provider can act on immediately, with reasonable caution about emergencies and capacity and an offer to tailor advice to local context."
+      "score": 4,
+      "reason": "Very practical and applicable for a peer-support provider with only minor omissions (e.g., brief mention of documenting refusal or considering capacity/legal implications) that could make it more complete."
     },
-    "primary_strength": "Clear, well-prioritized, and practical steps that balance safety, autonomy, and actionable next moves.",
-    "primary_weakness": "Doesn't explicitly mention documenting informed refusal or provide more detailed guidance on conducting and recording a formal capacity assessment and local legal processes.",
+    "primary_strength": "Clear, peer-aligned, actionable options that respect autonomy while identifying safety escalation criteria.",
+    "primary_weakness": "Doesn't explicitly mention documenting the refusal or when to involve clinical/legal assessment of capacity, which can be important in some cases.",
     "scenario_id": "S4",
-    "tool": "B",
+    "tool": "A",
     "rubric": "v2_general"
   },
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Provides a concise, honest assessment of its inability to confirm and offers immediately actionable next steps (ask which center, call or check the centre's website/social media), which meaningfully helps the provider move forward given missing details."
+      "reason": "Provides practical, concrete next steps (call, check social media) and requests the specific drop-in center to enable a targeted lookup, which meaningfully helps beyond the provider's single question."
     },
     "important_things_to_notice": {
       "score": 4,
-      "reason": "Flags key practical issue \u2014 schedules change seasonally and online info may be incomplete \u2014 and asks for the specific centre, though it could also have noted ambiguity about which 'Camden' (e.g., Camden, NJ vs Camden, London)."
+      "reason": "Clearly surfaces the central limitation (AI can't confirm without a specific program name) and the most consequential action (direct contact), though it could note a couple more alternatives (municipal calendars, partner agencies)."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly addresses the question, states its limitation, requests the clarifying detail needed to answer, and offers practical alternatives to get a reliable answer."
+      "reason": "Directly answers the provider's question about current knowledge, explains the limitation, and asks for the exact drop-in center to proceed \u2014 fully on point."
     },
     "peer_role_alignment": {
       "score": 5,
-      "reason": "Supports the provider with factual lookup and verification options without attempting to replace the provider's peer role or giving unsolicited interpersonal guidance."
+      "reason": "Respects the provider's role by offering brief, practical support and asking for clarification rather than providing unsolicited scripts or replacing the provider's judgment."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Stays focused on the user's apparent goal (confirming whether the Tuesday group runs) and preserves choice by proposing ways the provider can verify the schedule."
+      "reason": "Stays neutral and preserves choice by asking for the specific program the provider means and suggesting ways the provider can verify status without steering toward any particular outcome."
     },
     "reliability_verifiability": {
-      "score": 5,
-      "reason": "Avoids making unsupported claims, clearly states uncertainty about current schedules, and recommends primary sources (call, website, Facebook) for verification."
+      "score": 4,
+      "reason": "Appropriately acknowledges inability to confirm and avoids inventing facts, though the casual examples of centers could be misinterpreted as verified if the provider doesn't notice the qualifier."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Very concise and well prioritized: inability to confirm, request for clarifying information, and immediate next steps are all easy to spot and act on."
+      "reason": "Short, well-organized suggestions and a clear next-step request make it easy to act on while remaining engaged with a service user."
     },
     "overall_usefulness": {
       "score": 4,
-      "reason": "Clear, honest, and actionable given the limited information, but could be slightly more helpful by resolving the 'Camden' ambiguity or offering to search likely local centres proactively."
+      "reason": "Useful and pragmatic given the limited prompt; would be stronger if it proactively offered quick lookup of likely Camden drop-in programs or suggested specific search methods/contact sources without waiting for clarification."
     },
-    "primary_strength": "Honest about its limits and quickly provides clear, practical next steps (ask which centre, call or check website/social media) to get a reliable answer.",
-    "primary_weakness": "Did not clarify which 'Camden' was meant and could have proactively suggested likely local centres or offered to search common Camden drop-in centres without waiting for the provider to specify.",
+    "primary_strength": "Concise, practical guidance that acknowledges uncertainty and asks for the specific program so a targeted lookup can be done.",
+    "primary_weakness": "Doesn't attempt any targeted lookup or offer specific local contacts/search methods upfront, leaving the provider to supply more details before getting concrete information.",
+    "scenario_id": "S6",
+    "tool": "A",
+    "rubric": "v2_general"
+  },
+  {
+    "complementary_value": {
+      "score": 3,
+      "reason": "The reply correctly avoids fabricating an answer and offers to look up schedules, but it adds limited new information beyond asking a clarifying question and listing a few possible organizations."
+    },
+    "important_things_to_notice": {
+      "score": 4,
+      "reason": "The response rightly highlights the ambiguity of 'Camden' (multiple locations) and that public listings are inconsistent, and it signals that the specific drop\u2011in center name/address is needed to proceed."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "It directly addresses the provider's question by explaining the current inability to confirm and asks the necessary clarifying question while offering a concrete next action (look up schedule/contact info)."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "The AI stays in an assistant role, asking for more detail and offering to fetch information rather than prescribing how the provider should interact with the service user or taking over peer-support tasks."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "The reply preserves choice and centers the provider's request without introducing new goals or steering the situation; it seeks the minimal additional info needed to help."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "The response appropriately communicates uncertainty, avoids inventing details, and correctly indicates it would verify schedules and contact info before asserting anything."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Short, clear, and action-oriented: the provider can quickly see why a follow-up question is needed and what the assistant will do next."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "Useful and appropriately cautious: it prevents misinformation and sets a clear next step, but it could be more helpful by suggesting immediate ways the provider could check themselves (phone/website/social media/search tips) while waiting to clarify which Camden site is meant."
+    },
+    "primary_strength": "Clearly communicates uncertainty, avoids making unsupported claims, and asks the precise clarifying question needed to proceed.",
+    "primary_weakness": "Doesn't offer quick, practical interim steps the provider could take right away to check the Tuesday group (e.g., call tips, likely local contacts, or search suggestions).",
     "scenario_id": "S6",
     "tool": "B",
     "rubric": "v2_general"
@@ -626,38 +548,116 @@
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Provides concrete, practical options (sleep plan, grounding, containment, family rules, advance plan) and program types the peer can offer or suggest\u2014useful material beyond a typical peer's immediate checklist\u2014though it stops short of listing specific local resources which the provider asked for."
+      "reason": "Provides concrete, practical steps (risk signs, who to contact, medication alternatives, relapse-plan elements, and example wording) that go beyond a generic response and give the provider usable options."
     },
     "important_things_to_notice": {
       "score": 4,
-      "reason": "Highlights key tradeoffs (respecting spiritual meaning vs. reducing family harm), triggers to watch (sleep, stress, substances), and the value of shared goals and neutral tracking; it could more strongly flag child-safety reporting limits or other legal/ethical thresholds relevant to parenting situations."
+      "reason": "Highlights the key distinctions to check (immediate risk vs. reasons for refusal vs. capacity) and the tradeoffs (changing meds, harm reduction, documentation), though it omits a few contextual details (e.g., privacy/consent when involving family)."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly addresses the provider's request to 'help me think about this person' with relevant formulations, engagement principles, concrete steps, and clarifying questions tailored to the scenario."
+      "reason": "Directly answers the provider's question with prioritized actions and asks for essential missing context (country/setting and current risk) to tailor next steps."
     },
     "peer_role_alignment": {
-      "score": 5,
-      "reason": "Advice complements a peer-support role\u2014it avoids clinical coercion, offers collaborative framing, and leaves room for the provider's lived-experience judgment rather than prescribing clinician-style interventions."
+      "score": 3,
+      "reason": "Useful peer-oriented suggestions and scripts are included, but the reply also gives clinical/legal instructions (capacity assessment, AMHP/escalation) that risk encroaching on clinical or statutory roles the peer may not hold."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Centers the man's stated preferences (keeps experiences, declines meds) and recommends non-medication-first supports and harm-reduction strategies that preserve choice."
+      "reason": "Centers the person's choice throughout, emphasizes non\u2011coercion, collaborative planning, and offers alternatives rather than pushing medication, preserving autonomy."
     },
     "reliability_verifiability": {
-      "score": 5,
-      "reason": "Avoids inventing program names or specifics, frames suggestions cautiously (offers to fetch local resources given zip/insurance), and communicates uncertainty appropriately."
+      "score": 4,
+      "reason": "Advice is general and appropriately cautious (urges contacting prescriber/crisis team and following local pathways); it avoids invented specifics but uses some region-specific terms without full qualification."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Well organized with clear headings and bullet points so a provider can quickly scan for engagement principles, concrete supports, risk-management steps, and follow-up questions."
+      "reason": "Well organized with clear headings, prioritized steps, and brief scripts\u2014easy to scan and apply during engagement with the service user."
+    },
+    "overall_usefulness": {
+      "score": 4,
+      "reason": "A practical, actionable response that a peer-support provider could readily use; limited by some clinical/legal guidance that may exceed a peer's remit and minor contextual omissions."
+    },
+    "primary_strength": "Provides clear, actionable, prioritized steps (risk checking, reasons, alternatives, relapse planning) and ready-to-use wording that support immediate engagement.",
+    "primary_weakness": "Mixes peer-appropriate actions with clinical/legal instructions (capacity assessment, AMHP escalation) and mildly UK-centric terminology without clarifying role boundaries or jurisdictional variation.",
+    "scenario_id": "S4",
+    "tool": "B",
+    "rubric": "v2_general"
+  },
+  {
+    "complementary_value": {
+      "score": 2,
+      "reason": "Gives a single gross-monthly number and brief notes, which could be useful, but it adds little beyond the direct ask and provides no source or date to verify the figure."
+    },
+    "important_things_to_notice": {
+      "score": 3,
+      "reason": "Correctly flags the net-income test and elderly/disabled exceptions, but fails to note that SNAP limits change annually and should be confirmed with NJ DHS or USDA guidance."
+    },
+    "responsiveness_relevance": {
+      "score": 4,
+      "reason": "Directly answers the asked question with a clear gross-income threshold and a relevant follow-up question about household composition; it stays on topic."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Does not attempt to replace the peer provider\u2019s role or give unsolicited coaching; it supplies factual information and invites clarification about the household."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Stays neutral and factual without imposing goals or steering decisions; asks a clarifying question that preserves the household's individual circumstances."
+    },
+    "reliability_verifiability": {
+      "score": 2,
+      "reason": "Provides a specific numeric threshold without citing a source or date; because SNAP limits change regularly this unsupported specificity could be misleading."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Very concise and scannable: the key number is up front with brief, relevant notes and a clear prompt for needed clarification."
+    },
+    "overall_usefulness": {
+      "score": 3,
+      "reason": "Useful as a quick answer in form but undermined by lack of sourcing and date; the additional note about net tests is helpful but the unsourced figure limits trustworthiness."
+    },
+    "primary_strength": "Gives a concise, direct gross-monthly threshold and brief, relevant caveats (net test, elderly/disabled exceptions).",
+    "primary_weakness": "Provides an unsourced, potentially outdated specific number without indicating when or where it was obtained, which risks misleading the provider.",
+    "scenario_id": "S3",
+    "tool": "B",
+    "rubric": "v2_general"
+  },
+  {
+    "complementary_value": {
+      "score": 4,
+      "reason": "Provides concrete, actionable frameworks (harm-reduction goals, assessment questions, a family protection plan) and specific non-medication options (CBTp, Hearing Voices, Open Dialogue) that materially expand what the peer provider can offer beyond a generic summary."
+    },
+    "important_things_to_notice": {
+      "score": 5,
+      "reason": "Selectively highlights the most consequential issues for this case\u2014respecting spiritual meaning, separating experiences from responses, sleep/substance contributors, functional/parenting risks, and early warning signs\u2014without introducing distracting speculation."
+    },
+    "responsiveness_relevance": {
+      "score": 5,
+      "reason": "Directly addresses the provider's request to 'help me think about this person' with prioritized lenses, practical steps, and follow-up questions tailored to the exact scenario described."
+    },
+    "peer_role_alignment": {
+      "score": 5,
+      "reason": "Strongly complements the peer-support role by offering background, options, and suggested language while leaving decision-making and relationship work to the provider rather than taking over as a clinician or case manager."
+    },
+    "service_user_goals_autonomy": {
+      "score": 5,
+      "reason": "Centers the person's stated goals (keeping the experiences, refusing meds) and consistently frames interventions as optional, preference-respecting tools focused on reducing family distress rather than overriding his choices."
+    },
+    "reliability_verifiability": {
+      "score": 5,
+      "reason": "Avoids inventing local facts or specifics, names well-established approaches appropriately, and explicitly offers to find neighborhood resources if the provider supplies ZIP/insurance\u2014clearly signalling where verification would be needed."
+    },
+    "ease_of_extracting_assistance": {
+      "score": 5,
+      "reason": "Well organized with numbered sections, bullets, and concrete scripts/plans so a provider can quickly scan for assessment items, immediate actions, and conversation language while with the service user."
     },
     "overall_usefulness": {
       "score": 5,
-      "reason": "A practical, well-calibrated, and usable set of conceptual and actionable options that a peer-support provider could apply immediately while preserving the person's autonomy\u2014no major omissions for the stated request."
+      "reason": "Highly useful: balances respect for the person\u2019s spiritual stance with pragmatic family-focused safety strategies, gives concrete interventions that fit his preferences, and offers clear next questions to tailor local supports."
     },
-    "primary_strength": "Clear, practical harm-reduction and family-focused strategies that respect the person's spiritual meaning while addressing real-life impacts.",
-    "primary_weakness": "Does not explicitly mention child-protection reporting responsibilities or other legal/ethical limits that may be important when children are involved.",
+    "primary_strength": "Clear, practical harm-reduction framework that respects the person's spiritual meaning while offering concrete strategies to reduce family distress.",
+    "primary_weakness": "Doesn't include immediate local contacts or specific Newark-area programs without further input, so the provider would still need to request ZIP/insurance to get concrete resource referrals.",
     "scenario_id": "S5",
     "tool": "B",
     "rubric": "v2_general"
@@ -665,38 +665,38 @@
   {
     "complementary_value": {
       "score": 4,
-      "reason": "Provides practical, non-medical strategies (impact-focused goals, harm-reduction, values-based boundaries), peer frameworks (HVN, IPS), and concrete planning ideas that expand what a peer provider can offer, though it stops short of giving specific Newark-area programs beyond state-level leads."
+      "reason": "Provides concrete, non-clinical frameworks (harm-reduction; separating meaning/intensity/impact), practical targets (sleep, routines, communication agreements), and peer-aligned support options that go beyond the provider's initial description."
     },
     "important_things_to_notice": {
-      "score": 5,
-      "reason": "Selectively highlights the key distinction between meaning and impact, family-centered concerns, early warning signs, the partner's need for support, and the usefulness of a shared safety/preferences plan \u2014 the considerations most likely to matter here."
+      "score": 4,
+      "reason": "Selectively surfaces the key distinctions and tradeoffs (preserve meaning vs reduce impact), family-focused priorities, advance planning for capacity, and child-focused boundaries \u2014 the most consequential issues for this case are noted."
     },
     "responsiveness_relevance": {
       "score": 5,
-      "reason": "Directly addresses the provider's prompt to 'help me think' and tailors suggestions to the client's stated goals (no meds, spiritual meaning, reduce family distress), while asking targeted follow-up questions to refine recommendations."
+      "reason": "Directly addresses the provider's request to 'help me think' about this person, stays focused on non-medical supports the person would accept, and asks an appropriate clarifying question to narrow next steps."
     },
     "peer_role_alignment": {
       "score": 5,
-      "reason": "Complements the peer role by offering non-clinical frameworks, lived-experience\u2013friendly resources, and collaborative planning ideas without imposing clinical directives or detailed scripts the provider didn't request."
+      "reason": "Advice complements a peer-support approach (peer groups, HVN, IPS, home agreements) without taking over the provider's role or prescribing coercive clinical interventions."
     },
     "service_user_goals_autonomy": {
       "score": 5,
-      "reason": "Consistently centers the person's preference to retain spiritual meaning and refuse medication, focusing on minimizing family impact and offering options that preserve his autonomy."
+      "reason": "Centers the person's stated goals (retain meaning, refuse meds) and suggests supports that preserve autonomy while addressing family distress, rather than redirecting toward unwanted clinical aims."
     },
     "reliability_verifiability": {
-      "score": 4,
-      "reason": "Resource names and links (Hearing Voices Network, NAMI NJ, 988) are appropriate and caveated; however, local availability claims are left vague and some program availability statements would benefit from explicit verification."
+      "score": 5,
+      "reason": "Resource suggestions are appropriately qualified (not claiming unverified local groups), includes plausible statewide contacts (NAMI NJ, NJ Mental Health Cares) and explicitly notes uncertainty about local HVN/NAMI meeting availability."
     },
     "ease_of_extracting_assistance": {
       "score": 5,
-      "reason": "Well-structured with clear numbered sections and concise bullets so a provider can quickly scan and pull practical next steps while engaged with the service user."
+      "reason": "Well-structured numbered sections and bullets make the main ideas and concrete actions quick to scan and use in a conversation or planning session."
     },
     "overall_usefulness": {
-      "score": 5,
-      "reason": "Highly useful: gives actionable, peer-appropriate strategies, relevant resources, and sensible follow-up questions that align with the client's goals and the provider's role, with only minor gaps in local resource specifics."
+      "score": 4,
+      "reason": "Very practical, peer-aligned guidance that gives a clear path for supporting the person and family; would be stronger with a few verified local Newark/Essex resources or sample templates (home agreement, early-warning plan)."
     },
-    "primary_strength": "Clear, practical, non-pathologizing strategies and peer-aligned resources that directly match the person's goal of keeping meaningful experiences while reducing family distress.",
-    "primary_weakness": "Lacks specific Newark-area or local group contacts and concrete next-step referrals beyond state-level resources, which the provider may need to implement the plan quickly.",
+    "primary_strength": "Offers a clear harm-reduction framework that preserves the person's spiritual meaning while translating family distress into concrete, negotiable targets.",
+    "primary_weakness": "Stops short of providing verified, specific local Newark/Essex supports or ready-to-use templates for home agreements or crisis-prevention plans.",
     "scenario_id": "S5",
     "tool": "A",
     "rubric": "v2_general"
