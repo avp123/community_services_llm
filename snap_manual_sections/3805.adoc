@@ -1,0 +1,179 @@
+= 3805 Electronic Benefits Transfer (EBT)
+:chapter-number: 3800
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3805
+:policy-title: Electronic Benefits Transfer (EBT)
+:previous-mt-number: MT-79
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 273.2
+
+== Requirements
+
+Supplemental Nutrition Assistance Program (SNAP) benefits are issued to an Electronic Benefits Transfer (EBT) card using an Electronic Funds Transfer (EFT) process and a client-established Personal Identification Number (PIN).
+
+== Basic Considerations
+
+SNAP benefits are issued when a case is approved and authorized through the Gateway system or when benefits are added to an account manually.
+A case approved through the Gateway system sends that information to the EBT Application System (EBTAS).
+EBTAS then sends that information to the EBT Service Provider's Electronic Payment Processing and Information Control (EPPIC) Administrative Terminal, where the authorized benefit is posted to the customer's account.
+
+The EPPIC Administrative Terminal (AT) is available through an intranet link.
+That link is https://138.69.25.74:51532/gaebtmanage/login.eppic.
+
+=== EBT Card
+
+EBT accounts are established upon authorization of the case in the Gateway system, or the EBT Unit can set up an account online in EBTAS.
+An EBT card will be sent to the applicant/recipient (A/R).
+A card mailer and brochure to explain how to use the card will accompany this card.
+Since EBT cards do not expire and can be used for future issuances, cards will not be created for subsequent cases with the same client ID.
+EBT cards have sixteen digits.
+
+
+The phone number for the EBT Service Provider's Customer Service Center is on the back of the card and included in the brochure.
+The Service Provider's customer service phone number is 1-888-421-3281.
+Customers can also access Customer Service and view account information through the online portal by logging onto: https://connectebt.com/ebtconnect/recipient/GA/ or by downloading the ConnectEBT app from their mobile device’s app store.
+
+Once an EBT account is set up, the EBT card is produced and mailed.
+Upon receipt of the initial EBT card, the A/R must call Customer Service (1-888-421-3281), use the online portal, or log onto the ConnectEBT mobile app to activate their initial card and select a PIN.
+
+[caption=Exception]
+NOTE: GA Disaster SNAP EBT cards are active upon receipt.
+
+The Head of Household (HOH) will receive one EBT card to access all SNAP benefits for the entire household.
+The Client ID in the Gateway system and EBT equals the case number on EPPIC AT.
+
+Requests for replacement EBT cards due to loss, theft, or damage may be completed by calling the EBT Service Provider's Customer Service, through the online portal, or by having the county worker request a replacement card through the State Office EBT Team at EBT@dhs.ga.gov.
+Replacement cards are mailed in active status; the existing PIN will transfer to the new card.
+
+=== Personal Identification Number (PIN)
+
+An A/R may change their PIN by making a call to Customer Service  through the EBT online portal, or through the mobile app.
+The A/R will select the PIN of their choice and the new PIN will be updated effective immediately.
+There are specific restrictions on the creation of the PIN number, such as no repeating numbers, no sequential numbers, etc.
+These restrictions are also included in the brochure that is mailed with the EBT card.
+
+If the customer makes four (4) incorrect PIN attempts, the EBT account will be locked until midnight of the day the fourth attempt is made.
+
+=== Access Sites
+
+SNAP EBT benefits can be accessed through point of sale (POS) devices at retailers who carry the QUEST logo.
+
+=== Account Setup
+
+EBT accounts are set up when an initial case is processed in the Gateway system and if the A/R has never had a GA EBT account.
+
+Assigning additional EDG numbers and/or Client IDs in the Gateway system creates new account numbers, which are then displayed in EBTAS.
+The most current account number in EBTAS is the one that should be used for data entry transactions.
+The EBT Service Provider defaults to the original account number.
+
+=== Account Status
+
+EBT accounts not debited for six months (180 days) may have stale unused benefits that can be used to repay any outstanding claims.
+
+=== Expunged Benefits
+
+Expungement is the removal of benefits from an EBT account.
+This process occurs when there has been no credit or debit activity initiated by the client.
+Once benefits are expunged, they can no longer be accessed by the household.
+After 9 months of inactivity, benefits are expunged from the account one month at a time, first in, first out, as each month ages to 274 days.
+Any client-initiated debit or credit will stop the expungement process, and the 274-day clock resets to zero.
+
+=== Cards Received at County Office
+
+EBT cards may be received at county DFCS offices for different reasons.
+For example, a lost card may be found in the community; A/R may return their card as they are no longer interested in participating in the program; A/R may not have a home address, therefore their mail is delivered to DFCS, or A/R may have difficulty receiving their mail at their home address, therefore their mail is delivered to DFCS.
+EBT cards received at the DFCS office must be logged, accounted for, and secured properly. Counties must have procedures in place for receiving, logging, and storing EBT cards received.
+
+EBT cards, which have been mailed to the DFCS office, will be retained for at least 60 days.
+If the A/R has not picked up the card at the end of 60 days, the card should be destroyed.
+The destruction of EBT cards requires a witness.
+
+EBT cards returned to the office (found, unwanted, etc.) must be logged in and then can be destroyed immediately upon receipt.
+
+When EBT cards are maintained at the county office for an agency representative to handle an A/R's financial dealings, they must complete an xref:attachment$form-ebt-4.pdf[EBT Form 4] - _Control Log – Receipt of Card/PIN - Benefit Representative/Guardian_, and it must be maintained to document the receipt of these EBT cards.
+
+=== Accounts Accessed by Agency Employees
+
+It is necessary for agency employees to complete EBT transactions for A/Rs from time to time as part of their job.
+To ensure the safety of A/R's accounts and to protect workers, the following procedures must be followed:
+
+. The County Director (or designee) must complete an xref:attachment$form-ebt-7.pdf[EBT Form 7] _- EBT Card Sign Out Authorization Form_ for each worker authorized to transact A/R's accounts.
+This form is completed on a per-case basis.
+
+. Cards maintained at the county office for A/Rs must be logged in upon receipt and out/in whenever used on xref:attachment$form-ebt-5.pdf[EBT Form 5] - _Control Log.
+EBT Card Sign In/Sign Out – Benefit Representative/Guardian_ and xref:attachment$form-ebt-6.pdf[EBT Form 6], _Control Log - EBT PIN Sign In/Sign Out - Benefit Representative/Guardian._ The cards and PIN information must be stored in separate locations in the county office.
+
+. Each time an agency employee completes an EBT transaction for an A/R, they must complete an xref:attachment$form-ebt-8.pdf[EBT Form 8] – _Family Service Worker/Recipient Receipt_ and maintain a copy in the A/R's case record.
+
+=== Manually Issued Benefits
+
+Benefits can be manually issued to an EBT account when one of the following occurs:
+
+* benefits cannot be issued via the Gateway system due to system problems
+* an administrative law judge directs the county to pay a corrective on a closed case
+* a corrective would be offset to repay a claim, and the offset is not appropriate.
+(e.g., hardship situations)
+
+The county will send the request for manual issuance to the Food and Nutrition Unit within the OFI Section at the State Office via xref:attachment$form-ebt-9.pdf[EBT Form 9] - _Request for Manual Issuance of Benefits_ for approval.
+The EBT Unit will process the manual issuance and email confirmation back to the county.
+The case should be brought to finalization in the Gateway system for the ongoing month at the time the manual issuance request is submitted, if appropriate.
+The amount and months of the manual issuance(s) will be entered in the Gateway system by the SNAP Field Program Specialist in the Quality Section or the SNAP Policy Specialist in the Food and Nutrition Unit at the State Office.
+Benefits may also be issued outside of the Gateway system when FNS provides a directive/approval to issue benefits to specific populations.
+
+=== Voiding Benefits
+
+When appropriate for policy reasons, pending SNAP benefits may be voided in EBTAS from the time the benefit information is sent to EBT through the day prior to being posted in the A/R's EBT account.
+Only full months' benefit amounts are voided.
+Benefits waiting to be posted to an A/R's EBT account can be viewed on EPPIC on the Receipt Benefit Management screen.
+
+Only pending ongoing monthly benefits can be voided.
+Initial benefits, restorations, correctives, and/or supplementals cannot be voided.
+
+=== Re-obligation
+
+Benefits can be re-obligated from one EBT account to another in the case of an extreme emergency.
+The accounts must have different client IDs and different case numbers.
+The benefits being re-obligated must be re-obligated to an account of the same type-SNAP to SNAP.
+The county will send the request for re-obligation to the Food and Nutrition Unit, SNAP Policy Team within the OFI Section at the State Office via xref:attachment$form-ebt-10.pdf[EBT Form 10] - _Request for Re-obligation of Benefits_ for approval.
+The EBT Unit Section will process the re-obligation and send confirmation back to the county.
+
+=== Erroneous Debits
+
+EBT accounts are sometimes erroneously debited, preventing an AU from accessing the benefits for which it is eligible due to a system error.
+When this happens, the A/R must call EBT Customer Service and file a claim.
+The A/R must provide the card number, the date the error occurred, the dollar amount of the erroneous debit, and the location where the error occurred.
+Erroneous debit claims must be resolved within 10 business days.
+
+NOTE: The A/R is not eligible for restored benefits via the Gateway system because of an erroneous debit.
+The correction is made directly by the EBT Service Provider to the EBT account.
+
+=== Card Skimming & Cloning
+
+The Consolidated Appropriations Act of 2023 included provisions for the replacement of certain benefits stolen through skimming, cloning, or other fraudulent methods, *October 1, 2022, through September 30, 2024*, with federal funds. The Continuing Appropriations and Extensions Act of 2025 extended the end date of the benefit period to *December 20, 2024*.  The American Relief Act, 2025 did not extend this authority for benefits stolen beyond December 20, 2024. This was a federally instituted and funded program. SNAP benefits stolen on or after December 21, 2024, are ineligible for replacement with federal funds. *The program officially ended in Georgia on June 20, 2025. SNAP recipients can no longer submit claims for the replacement of stolen benefits.*
+
+Unlike erroneous debits attributed to system errors, EBT benefits are sometimes stolen due to skimming, cloning, or other fraudulent methods.
+Skimming involves the use of electronic equipment to capture a recipient's EBT card information without the recipient's knowledge.
+Criminals can use the data captured by skimming or other means to create fake EBT cards (card cloning) and then use those to steal from households' accounts.
+Other similar fraudulent methods of obtaining EBT card data may include, but are not limited to, scamming through fraudulent phone calls or text messaging that mimic official state agency messaging and phishing.
+
+
+=== Adjustment Rule
+
+In the situation of an EBT system problem, which causes an account to be debited or credited incorrectly, a retailer may request that the account be corrected.
+A/R will be sent a SNAP EBT Adjustment Notice from the Service Provider, which explains:
+
+* the reason for the error
+* the place, date, and time the error occurred
+* the amount of the error
+* that the amount will be debited from their account.
+If the full amount is not available in their account, the debit will be made in the next month
+* Right to a Fair Hearing
+
+Questions and hearing requests regarding these situations will be directed to the Personal Advocates at the State Office.
+
+

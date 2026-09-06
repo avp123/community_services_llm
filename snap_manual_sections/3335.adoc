@@ -1,0 +1,50 @@
+= 3335 Identity
+:chapter-number: 3300
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3335
+:policy-title: Identity
+:previous-mt-number: MT-82
+
+include::partial$policy-header.adoc[]
+== Codes and References
+
+7 CFR § 273.2(f)(1)(vii)
+
+== Requirements
+
+The identity of a person applying for SNAP benefits must be verified.
+
+== Basic Considerations
+
+When an authorized representative (AREP) applies on behalf of the assistance unit (AU), both identities, the applicant and the AREP,  must be verified.
+
+== Verification
+
+Verify identity through documents or a collateral contact that can reasonably establish identity.
+The following list contains suggested third-party sources that may be used to verify identity:
+
+* birth certificate
+* driver's license
+* Georgia Department of Driver Services (DDS) interface if the results from the interface verify that the customer has a current and valid Georgia Driver's License or Identification card
+* ID for health benefits or another assistance or social services program
+* voter registration card
+* wage stubs
+* work or school ID
+
+This is not an all-inclusive list.
+
+NOTE: Any document that reasonably establishes identity must be accepted. No requirement for a specific type of document, such as a birth certificate, may be imposed.
+
+If an A/R cannot provide verification, verify identity through readily available documentary evidence or through a collateral contact.
+
+If the customer provides identity verification that is fraudulent and/or appears to be altered, the worker should contact the customer to explain the concern and ask that the person provide acceptable identity verification.
+If the customer does not, then the case can be denied as “verification not returned” since the household has failed to verify the true identity of the applicant.
+The eligibility specialist should then submit a request for a case review to OIG.
+Staff should *NOT* approve the case based on questionable and/or fraudulent identity documents.
+
+Collateral contacts should not be allowed in suspected fraudulent cases.
+The State agency is not required to use a collateral contact designated by the household if the collateral contact cannot be expected to provide accurate third-party verification.
+
+
+Assist the applicant in obtaining verification if requested.

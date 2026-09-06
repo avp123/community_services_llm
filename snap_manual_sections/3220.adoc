@@ -1,0 +1,165 @@
+= 3220 Residents of Drug and Alcohol Treatment Centers
+:chapter-number: 3200
+:effective-date: January 2025
+:mt: MT-80
+:policy-number: 3220
+:policy-title: Residents of Drug and Alcohol Treatment Centers
+:previous-mt-number: MT-55
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Individuals who live in a drug or alcohol treatment facility and who regularly participate in a treatment program may be eligible for SNAP benefits through an authorized representative. They are considered institutional care residents.
+
+== Basic Considerations
+
+Refer to xref:3205.adoc[] for policy regarding non-resident participants of drug addiction or alcohol treatment programs.
+
+=== Resident Eligibility
+
+A resident(s) of a treatment facility must take the following steps to be eligible for benefits:
+
+* have an employee of the center or organization that operates the center serve as the authorized representative.
+An authorized representative applies for and receives benefits on behalf of the resident.
++
+NOTE: If the Food and Nutrition Service (FNS) disqualifies the authorized representative who is an employee of the center as an authorized retailer, DFCS must suspend the employee's authorized representative status for the same period of time.
+The resident(s) may continue to be eligible for benefits.
+
+* apply as an assistance unit of one or an assistance unit which includes the resident and his/her children who live with the resident at the treatment facility.
+Spouses cannot be included.
+
+* meet all non-financial and financial eligibility criteria;
+determine the work registration status of the resident as exempt due to unfit for employment.
+Children must register for work, if mandatory.
+
+* regularly participate in the treatment program.
+
+The resident(s) has the same rights and responsibilities as all other SNAP recipients.
+
+=== Facility Eligibility
+
+Drug and Alcohol Treatment Centers such as Private Non-Profit Organizations, Faith Based and Community Organizations, or Publicly Operated Community Health Centers are certified to operate as drug and alcohol treatment centers if they operate to provide drug and alcohol treatment services that can lead to the rehabilitation of drug addicts and/or alcoholics under part B of Title XIX of the Public Health Service Act.
+
+In Georgia, the Department of Behavioral Health and Developmental Disabilities (DBHDD), Division of Addictive Diseases (DAD) is the Title XIX agency responsible for determining whether a community or faith-based organization is operating for the purposes of providing drug and alcohol treatment services under part B of Title XIX.
+
+To obtain certification to operate as a *drug and alcohol treatment center*, the facility must provide evidence that it is tax-exempt and must contact the following agency:
+
+* The *Department of Behavioral Health and Developmental Disabilities (DBHDD)*, Division of Addictive Diseases (DAD), which provides licenses/certifications for both drug and alcohol treatment programs.
++
+NOTE: See contact information below.
+
+To obtain drug abuse treatment and education program services, contact the *Department of Community Health (DCH), Healthcare Facility Regulation Division (HFRD)*.
+
+In order for the _resident_ to be eligible for benefits, the organization or facility must meet [.underline]#*one*# of the following criteria:
+
+* Become an authorized retailer through the Food and Nutrition Service (FNS).
+An authorized retailer is a retailer that has been approved by FNS to accept government benefits electronically by an Electronic Benefits Transfer (EBT) card to pay for food.
+An authorized retailer is issued a *SNAP [.underline]#Authorization Permit*# once it has been licensed by FNS to operate as a retailer or meal service provider.
++
+--
+
+*OR*
+--
+
+* Be a licensed tax-exempt organization and provide certification or approval to operate as a drug and/or alcohol treatment facility by DCH/HFR or DBHDD/DAD as defined by SNAP regulations.
++
+*OR*
+
+* Be an unlicensed tax-exempt organization and provide a statement of acknowledgment as a drug and alcohol treatment facility as defined by SNAP regulations.
+
+For information on how to become a meal service provider, go to the FNS website at https://www.fns.usda.gov or contact:
+
+[%hardbreaks]
+*USDA, Food and Nutrition Service
+Supplemental Nutrition Assistance Program
+Atlanta Field Office
+61 Forsyth Street, Suite 8T36
+Atlanta, Georgia 30303
+Phone: (404) 562-1801*
+
+*For assistance with drug and alcohol treatment centers contact DBHDD/DAD:*
+
+[%hardbreaks]
+Division of Addictive Diseases
+200 Piedmont Avenue, SE
+West Tower, Suite 1406
+Atlanta, Georgia 30334
+(404) 657-2252
+
+*For assistance with drug abuse treatment and education programs, contact DCH/HRFD:*
+
+[%hardbreaks]
+Health Facility Regulation Division
+2 Martin Luther King Jr Dr, SE
+East Tower
+Atlanta, Georgia 30334
+(404) 656-4507
+
+Procedures for drug and alcohol treatment facilities that *are* FNS authorized retailers.
+
+. Provide DFCS office with a copy of the FNS SNAP Authorization Permit as proof of authorized status.
+FNS authorization is required if the treatment center accepts SNAP benefits from residents in exchange for meals and purchases food from wholesalers.
+
+. Be assigned a seven-digit SNAP authorization number, if approved by FNS.
+The authorization number is electronically transmitted to the (EBT) contractor.
+
+. Be provided with instructions to obtain a point of sale (POS) device, to set up EBT accounts for transactions and other information.
+If the center is authorized by FNS to purchase food from a wholesaler, the residents' benefits are transferred to the treatment center's bank account.
+
+
+*For information on how to obtain POS Services, contact:*
+
+[%hardbreaks]
+Division of Family and Children Services
+Office of Family Independence EBT Unit
+47 Trinity Ave, NW, 1st Floor
+Atlanta, Georgia 30334
+Phone: (404) 657-3706
+Email: ebt@dhs.ga.gov
+
+Procedures for drug and alcohol treatment facilities that *are not* FNS authorized retailers:
+
+. Provide the local DFCS office with verification of tax-exempt status.
+
+. Provide certification from DCH/HFR or DBHDD/DAD.
+
+. Designate an employee to act as the authorized representative who must comply with all program requirements on behalf of the residents.
+The authorized representative receives the resident's EBT card and personal identification number (PIN).
+The EBT card and PIN are used to access the residents' benefits.
+When the AU leaves the center, the employee cannot continue to serve as the authorized representative.
+
+. Maintain a monthly listing of residents who receive SNAP including dates of arrival and departure.
+The listings are made available for review by DFCS staff who make random periodic on-site visits to the center.
+
+. Return the EBT card to the resident upon the departure of the resident from the center.
+The authorized representative advises the resident to report a change of address to DFCS and to change his/her PIN.
+If the resident leaves the EBT card, the authorized representative must return it to DFCS.
+
+. Be responsible for any IPV resulting from information knowingly misrepresented on behalf of the AU.
+
+When the AU leaves the center, the following policies are applicable:
+
+* If the AU leaves the center at any time and no portion of the monthly allotment has been spent, the full monthly allotment is returned to the AU.
+* If the AU leaves the center on or before the 15^th^ of the month, one-half of the monthly allotment must remain in the EBT account.
+* If the AU leaves the center on or after the 16^th^ of the month, any remaining portion of the monthly allotment must remain in the EBT account.
+
+=== Special Considerations
+
+The following procedures are for non-addicted family members (other than the addict's children or spouse) who, due to the stipulations of the treatment plan, are enrolled and housed with the addicted AU member at the treatment center.
+
+* Approve the resident addict/alcoholic as a one-person AU using an authorized representative.
+
+* If the center provides meals to the non-addicted family members, deny SNAP participation as residents of an institution.
+
+* If the non-addicted family members purchase and prepare their own food apart from meals prepared by the center, process an application for the non-addicted members (excluding the addicted family member from the AU).
+
+* The appropriate certification period will be established based on the AU composition.
+
+The following procedures are for the addict's children (biological, adopted, or step) who live with the addicted AU member at the treatment center.
+
+* Include the children in the resident addict/alcoholic's AU.
+
+* The appropriate certification period will be established based on the AU composition
+
+

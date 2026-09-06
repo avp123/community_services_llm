@@ -1,0 +1,745 @@
+= 3105 Application Processing
+:chapter-number: 3100
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3105
+:policy-title: Application Processing
+:previous-mt-number: MT-86
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 273.2(a)(2)
+
+== Requirements
+
+The application process begins with the request for Supplemental Nutrition Assistance Program (SNAP) benefits and ends with notification to the assistance unit (AU) of its eligibility for benefits.
+
+== Basic Considerations
+
+The application process includes filing and completing an application, being interviewed, having certain information verified, and processing information in the eligibility system within the required standard of promptness.
+
+Anyone may apply for SNAP benefits, including the following individuals:
+
+* Head of the AU
+* Other responsible adult AU members
+* Authorized representative (Refer to xref:3120.adoc[])
+* Authorized representatives for residents of drug and alcohol treatment centers (Refer to xref:3120.adoc[])
+* Residents of a group home
+* IPV disqualified individual if that individual is the only adult member of the AU.
+
+=== Head of the AU
+
+A SNAP AU, consisting of only one adult member, will have that member designated as the head of the AU.
+
+If a SNAP AU consists of two or more adult AU members and one of the adults is a parent to children living in the AU, then the AU may select the adult parent or an adult serving in a parental role to children less than 18 years of age in the AU, as the head of the AU.
+The adults in the AU must agree on the designation of the head of the AU for SNAP purposes.
+
+[.underline]#An adult is defined as an individual who is:#
+
+* age 18 and over
+* head of the AU if under 18
+
+[.underline]#A parent is defined as:#
+
+* a natural
+* adoptive
+* stepparent, or
+* a person serving in a parental role
+
+An AU, which consists of no adults, is allowed to select any member as the head of the AU.
+The person selected should be the person with responsibility for the AU's business affairs.
+
+If the AU does not decide who will be the head of the AU, the assigned Eligibility Specialist (ES) will make that determination.
+
+The person designated as the head of the AU should appear as the first entry on the computer database for that case.
+
+SNAP AUs may select the head of the AU at each initial application or recertification (renewal) and when there is a change in AU composition.
+The agency must explain to all AUs at the time of application and when changes in AU composition occur (which could affect the head of the AU designation), the AU's right to select a head of the AU.
+The explanation shall include a discussion of the household's option to select the head of the AU, the circumstances under which an AU may change its designation, and how that change should be reported.
+Refer to xref:3715.adoc[] for policy on changes in the head of the AU.
+
+=== Availability of Application Forms
+
+The application form must be provided to the AU upon request.
+The county office that receives a request for an application form must give or mail the form to the AU and inform the AU of where and how to apply.
+
+=== Initial Application
+
+An initial application is an application that is filed following any period in which the AU has not been certified for benefits.
+A recertification (renewal) application is an application filed within the last month of the certification period or within 30 days following the last month of the current certification period.
+
+NOTE: Refer to xref:3710.adoc#chart-3710-1[Chart 3710.1, Recertification (Renewals)], for procedures on how to process applications received within 30 days following the end of a certification period.
+
+=== Right to Same-Day Filing
+
+The “Right to Same-Day Filing” allows individuals to begin the application process and have access to SNAP benefits at any time they make a request for assistance.
+
+An individual has the right to file an application on the day of the initial request for benefits.
+The agency cannot refuse anyone the right to same-day filing and must inform the individual of the right to file an application form on the same day he/she or his/her representative contacts the agency, in person or by phone, expressing interest in obtaining assistance.
+
+If an individual requests an application by mail, the right to same-day filing is met if the application is mailed on the day the person makes the request to the agency.
+The date of application is the date the application form is received by the agency.
+
+The “Right to Same-Day Filing” affects the following:
+
+* date to begin the processing standards
+* date to begin proration of initial benefits
+
+=== Filing an Application
+
+An AU may file an application by submitting a completed application in one of the following ways:
+
+* in person
+* through an authorized representative (Refer to  xref:3120.adoc[])
+* by phone via the Customer Contact Center
+* by fax or other electronic transmission
+* by mail
+* via the Social Security Administration (Refer to xref:3115.adoc[])
+* during a home visit with DFCS staff
+* through a SNAP outreach partner
+* through the Georgia Gateway system
+
+Staff should do the following:
+
+* Assist the AU as needed to complete the application form.
+* Accept a signed application on the day the applicant comes to the office to apply.
+* Annotate or date-stamp the application with the date the application is received in the county office, not the date of the interview.
+
+
+NOTE: If an authorized representative applies on behalf of a customer, the application must be signed by either a responsible member of the household or the household's authorized representative.
+
+AUs may be given a copy of their application regardless of the method by which the application is filed (i.e., paper or electronic online format) if requested by the AU.
+
+AUs that complete an online application in person at the local county office may also be allowed to review the information on their application.
+A copy of the application may be provided via electronic email, the Gateway Portal, or a jump drive.
+
+An application is considered filed when it contains an applicant's name and address, is signed by a responsible member or authorized representative, and is received in the Local County or SSA office.
+Refer to xref:3115.adoc[] for policy on filing an application at the SSA office.
+
+[caption=Exception]
+NOTE: Homeless AUs do not have to provide an actual address but must provide sufficient information to establish residency in the State of GA.
+The applicant/recipient's (A/R) statement is acceptable unless conflicting information is known to the agency.
+
+=== Electronic Signatures
+
+Electronic signatures utilizing Adobe Signature or other E-Signature software will be acceptable for all SNAP forms. Examples of electronic signatures are the use of a Personal Identification Number (PIN), a computer password, clicking on an “I accept these conditions” button on a screen, or clicking on a “Submit” button on a screen. Adobe Signature, DocuSign, and Dropbox Sign are common software that offer E-Signature.
+A completed application consists of a signed application submitted with a name and address.
+A typed name on the signature line of a paper application is not acceptable.
+
+
+
+=== Withdrawing Applications
+
+An AU may voluntarily withdraw its application at any time prior to an eligibility determination.
+If an application is withdrawn, contact the AU by phone or mail to confirm the withdrawal.
+Documentation of the reason for withdrawal, if stated by the AU, should be provided in the case file.
+Send a notice of ineligibility notifying the AU that the application was denied because of the withdrawal.
+The AU may reapply at any time after withdrawing the application.
+
+=== Cooperation with the Application Process
+
+The AU is required to cooperate with the application process by completing and signing an application, participating in an interview, and providing the required verification.
+
+If the AU fails to cooperate because of an inability to do so, then the assigned Eligibility Specialist must provide assistance with the application process.
+
+If the AU refuses to cooperate, the application is denied. The AU is considered to be refusing to cooperate if they are capable of taking the necessary steps to complete the application process but deliberately do not. Denial based on refusal to cooperate requires the AU to refuse the interview and refuse to provide the necessary information for an eligibility determination. Proper documentation must be included in the case notes to explain.
+
+=== Resident of an Institution
+
+When a resident of an institution is jointly applying for SSI and SNAP prior to leaving the institution, the filing date of the application is the date of release of the applicant from the institution.
+Applications for these applicants are processed in accordance with normal processing standards, including entitlement to expedited services.
+
+=== Outreach Applications
+
+When an application is received from SNAP outreach partners such as the Food Banks, the filing date of the application is the date the application is received by the State Office or any local DFCS office.
+
+These applications are processed according to normal processing procedures and are entitled to expedited services if applicable.
+Eligibility staff are encouraged to complete telephone interviews when completing these applications to ensure households receive benefits by the appropriate standard of promptness.
+Refer to “Interviewing Requirements” in this section below.
+
+=== Expedited Screening
+
+Screen all SNAP applications (including applications filed within 30 days following the end of an expired certification period for expedited services using the expedited processing criteria in xref:3110.adoc[].
+Refer to xref:3710.adoc[] for policy on processing recertification (renewal) applications.
+
+=== Interviewing Requirements
+
+The interview at initial application can be a telephone or face-to-face interview.
+The applicant can request a face-to-face interview, or the agency can determine that a face-to-face interview may be appropriate, such as in suspected fraudulent cases.
+However, if the client indicates a hardship, the client must be given a telephone interview.
+
+Conduct an interview with the applicant prior to making an eligibility determination (i.e. approval or denial).
+The face-to-face interview may be held at the local county office, at the home of the AU (if prearranged), or at any other mutually acceptable location.
+If a location cannot be agreed upon, then the interview must be held in the local office.
+
+The type of interview conducted (e.g., telephone or face-to-face) must be documented.
+
+Discuss all points of eligibility with the applicant during an interview.
+Inform the applicant about the program orally and by using appropriate information pamphlets and other printed materials.
+
+Document in the case notes the results of the interview.
+
+Interview applicants on the date of application, when possible.
+Document the interview appointment in the eligibility system or file the appointment letter in the applicant's case file.
+
+=== Scheduling Interviews
+
+Schedule an interview for all applicants who are not interviewed on the day they submit their applications, *if* the AU is [.underline]#not# eligible for an On-Demand interview.
+
+NOTE: If an On-Demand eligible AU requests a scheduled telephone or face-to-face interview, then the ES must schedule an appointment.
+
+The interview must be scheduled to accommodate the needs of AUs with special circumstances, such as the following:
+
+* working AUs
+* AUs with elderly or disabled members
+* AUs with ill members
+* AUs in rural areas or who have transportation issues
+* AUs in prolonged severe weather
+* AUs residing on reservations
+* AUs with adult members who do not speak English.
+
+The interview must be scheduled as promptly as possible following the date of application to ensure that an eligible AU receives an opportunity to participate within 30 calendar days following the date of application.
+
+For scheduled interviews, the Eligibility Specialist must provide a notice to the AU that specifies a date and time for the AU to complete the interview.
+
+
+
+[caption=Exception]
+NOTE: If an applicant is interviewed on the date of application, then no scheduled appointment is needed.
+If it is later discovered that the AU failed to keep the scheduled appointment on the date of application, then a notice of missed interview (NOMI) must be sent to the AU.
+The initial appointment for the date of application should be documented in the Gateway system or written documentation provided on the appointment letter.
+
+Refer to the subsection Refer to xref:3105.adoc#_issuing_notices_of_missed_interview_nomi[Issuing Notices of Missed Interview (NOMI)] in this section.
+
+Customers eligible for an On-Demand interview, will receive an On-Demand Interview Notice and text message (if applicable) to inform them that they need to contact DFCS to complete their required interview. Even though these customers will not receive scheduled appointments, an interview is still required. The customers must call the agency to complete the interview by the application SOP date.
+
+Use the following procedures when the applicant is given a scheduled appointment  for an interview:
+
+* Reschedule the appointment if the applicant misses the initial appointment and contacts the agency within the 30-day processing period to schedule another appointment.
+* Deny the application on the 30^th^ calendar day following the date of application if the applicant misses the appointment and makes no subsequent contact with the agency.
+* Deny the application any time after the verification deadline or by the 30^th^ day following the date of application.
+
+NOTE: Give the AU at least 10 calendar days to provide any required verification.
+If verification is not provided by the due date, then the case may be denied the day following the date the verification is due.
+
+If the verification is received after the denial date but prior to the 30-day SOP, reopen the case and provide benefits back to the original date of application.
+The ES should process the case within five (5) working days after receiving the verification.
+
+If verification of a deduction is not received by the 10th day, the case may be approved the following day without the deduction.
+
+[#_issuing_notices_of_missed_interview_nomi]
+=== Issuing Notices of Missed Interview (NOMI)
+
+The agency must send a “Notice of Missed Interview (NOMI)” when an initial appointment has been missed.
+The AU must be informed that it is the AU's responsibility to reschedule a missed interview. This applies to scheduled appointments and On-Demand interviews.
+
+The “NOMI” must be sent in sufficient time to allow the AU to contact the agency and be interviewed prior to the 30th day.
+
+If the initial application interview is rescheduled PRIOR to the initial appointment date, the NOMI is sent for the appointment that was initially scheduled.
+
+The NOMI may be generated either by the Gateway system or as a manually written notice.
+Copies of any manual NOMIs must be scanned into DIS and documented in case notes along with the transaction number.
+
+=== Who Must Be Interviewed
+
+Conduct an interview with one of the following individuals:
+
+* head of the AU
+* responsible adult member of the AU
+* the authorized representative (Refer to xref:3120.adoc[]).
+
+NOTE: The applicant may bring any person he or she chooses to the interview.
+
+=== What the Interview Must Include
+
+Provide or explain the following information to the applicant during the interview:
+
+* the services provided by DFCS and the right to apply for them.
+* what information/verification is required to establish eligibility and the applicant's responsibility to provide the information necessary to establish eligibility and the benefit level, including the following:
+** expedited criteria
+** budgeting method
+** basic eligibility requirements
+*** income limits
+*** resources, if applicable
+*** deductions (shelter, child support paid for a child outside of the home, childcare, and medical deductions)
+** Clearinghouse and other computer matches
+** work exemptions (must be explained and documented in the eligibility system)
+** work registration and employment and training requirements (must be explained and documented in the eligibility system)
+** simplified reporting requirements and reports of substantial lottery/gambling winnings
+** assignment and responsibilities of an authorized representative
+** failure to cooperate with TANF requirements and the effects on SNAP eligibility
+** the Quality Control processes and procedures, and the importance of cooperating with federal and state reviewers
+** penalties for intentional program violations (IPV)
+** information on the Earned Income Tax Credit and how to apply for advanced payments (Provide the applicant with a copy of the IRS brochure)
+** issuance procedures via Electronic Benefit Transfer (EBT)
+** appropriate use and limitations of SNAP benefits.
+* the applicant's rights to the following:
+** a fair hearing
+** prompt action within the standard of promptness
+** confidentiality
+** non-discrimination in the processing of the application
+** how to register to vote
+
+Explain to the applicant that receiving SNAP has no bearing on another program's time limits.
+
+The interviewer must not simply review the information that appears on the application but must explore and resolve all unclear and incomplete information with the AU.
+The client must be offered a genuine, private interview in a confidential setting.
+The interviewer must conduct the interview as an official agency representative and discuss the AU's circumstances in a confidential discussion.
+
+== Screening and Referral to SNAP Employment and Training (E&T)
+
+The eligibility specialist is required to screen all AU members who meet the following criteria during the interview to determine if a referral is appropriate to the SNAP E&T Program, also known as SNAP Works:
+
+* are 16 or 17 years of age or older *and* the head of household
+* are at least 18 years or older
+* are not receiving TANF benefits
+* are fit for employment
+
+For each AU member who meets the criteria, the SNAP Screening and Referral Tool page in Gateway (Form 864) must be completed, even if they are not available during the interview. If Gateway is down and screening cannot be completed in the system, a manual form 864 must be completed and uploaded. However, once Gateway becomes available, staff are also required to complete the SNAP Screening & Referral Tool page.
+
+The Primary Individual (PI) can respond for other AU members who need to be screened if they wish to do so.
+If the PI provides screening information for other AU members but is unsure if they are ready to volunteer to be referred, then the Eligibility Specialist should document accordingly.
+
+If the PI states that they do not feel comfortable answering for other AU members regarding a referral, the Eligibility Specialists should try to complete the screening and referral process and document accordingly.
+
+If the screening and referral process is not completed at application or recertification (renewal) for absent AU members, the Eligibility Specialist should document accordingly.
+In that case, those AU members would need to go through the screening and referral process at the next application or recertification (renewal).
+
+=== Mandatory Forms
+
+Complete, provide and/or mail the following forms when processing a SNAP application:
+
+* xref:attachment$form-297.pdf[Form 297 Application for Benefits]
+* xref:attachment$form-297a.pdf[Form 297A Rights and Responsibilities]
+* National Voter Registration Act (NVRA) packet
+* xref:attachment$form-846.pdf[Form 846 Change Report Form] if requested
+*  xref:attachment$form-859.pdf[Form 859 SNAP Consolidated Work Requirements Notice] (if work registrants are in the AU)
+* Form 5460, NPP/HIPAA Notification Form (Refer to xref:3040.adoc[]).
+
+Complete other forms as needed based on the AU's circumstances.
+Complete mandatory Clearinghouse requirements and obtain the required verification.
+
+=== Standard of Promptness (SOP)
+
+Determine eligibility and, if eligible, provide the opportunity to participate by the appropriate SOP.
+Participation is defined as the AU having their EBT card, PIN, and benefits available in their EBT account by the 7^th^ day for expedited applications and by the 30^th^ day for non-expedited applications following the date of application.
+
+=== Cases with a 30-day SOP
+
+Calculate the SOP by the following method:
+
+* Start with the day following the day the application is received in the county office.
+* Complete the application as follows, if the SOP falls on a weekend or holiday:
+** Complete approvals no later than the 29^th^ day or the last workday prior to the 29^th^ day if it falls on a weekend or holiday.
+** Complete denials on the 30^th^ day or the first workday following a weekend or holiday.
+
+To meet the 30-day SOP for an approved application, the application must be processed in the system by the 29^th^ day.
+
+=== Cases Pending Over SOP
+
+The cause of delay must be determined and documented in the case if the agency is unable to determine the AU's eligibility, and the AU is unable to participate by the application SOP.
+The agency must determine if the delay is caused by the agency's failure or the client's failure to meet requirements during the application process.
+
+=== Agency Delay
+
+An agency delay occurs when the SOP is not met, even though the AU has complied with and met all verification requirements.
+
+=== Client Delay
+
+A client delay occurs when the client fails to do one of the following:
+
+* Fails to appear for an initial interview within 30 calendar days from the date of application, and a subsequent interview is postponed at the AU's request or cannot be rescheduled until after the 20^th^ calendar day, but prior to the 30^th^ calendar day following the date of application, [.underline]#*and*# after the interview, additional verification is needed to process the case.
+
+* Register mandatory work registrants for work, if the AU has been provided with at least 10 calendar days to respond.
+
+=== Proration
+
+An AU's initial month's benefits will be prorated from the date of application to the end of the month of application.
+
+If an AU reapplies at any time after the 30th calendar day following the last month of the previous certification period, prorate benefits for the first month of the new certification period from the date of application.
+Refer to xref:3710.adoc[].
+
+NOTE: If the case was closed for failure to complete recertification (renewal) requirements, refer to xref:3710.adoc#chart-3710-1[Chart 3710.1] for procedures on how to prorate benefits for recertification (renewal) applications.
+
+[caption=Exception]
+NOTE: Do not prorate the first month's benefits for migrant and seasonal farm worker AUs unless there is a break of more than one month between the end of their last certification period and the date they apply.
+
+=== Certification Period
+
+A certification period is the specific timeframe in which an AU is certified as eligible to receive benefits.
+
+Consider the AU's circumstances when assigning a certification period.
+The certification period should be consistent with the AU's circumstances.
+Refer to <<chart-3105-1,Chart 3105.1, Assigning Certification Periods>>.
+
+Do not extend the certification period.
+No AU may participate beyond the expiration of the certification period.
+Each AU must submit a new application or recertification (renewal) application and must comply with the interview and verification requirements to continue participation in the program.
+Refer to xref:3710.adoc[] for procedures on recertification (renewal) applications.
+Refer to xref:3730.adoc[] for procedures on periodic reports.
+
+Use the chart below to determine an AU's certification period.
+Certify each AU for a specific period.
+
+[#chart-3105-1]
+.Chart 3105.1 - Assigning Certification Periods
+|===
+^| Type of AU ^| Maximum Length of Certification Period
+
+| Expedited AUs
+| Expedited AUs are certified using the normal certification periods provided in this chart, unless the AU was certified under expedited services criteria using postponed verification procedures.
+Refer to xref:3110.adoc[].
+
+
+
+
+| AUs with ABAWDs (Including Aged ABAWDs)
+a| Four (4) months
+
+NOTE: This is the only certification period that can be assigned to these AUs.
+Do not shorten the SRR certification period.
+
+| Seasonal and Migrant Farm Workers
+a| Seasonal and Migrant Farm Workers AUs authorized *on or after March 2, 2026*, are assigned *six (6)* month certification periods.
+
+NOTE: This is the only certification period that can be assigned to these AUs.
+Do not shorten the SRR certification period.
+
+| All other AUs
+a| All other AUs authorized *on or after March 2, 2026*, are assigned *six (6)* month certification periods.
+
+NOTE: This is the only certification period that can be assigned to these AUs.
+Do not shorten the SRR certification period.
+
+| AUs in which ALL [.underline]#*adult*# members are elderly, or SNAP disabled, and there is no earned income.
+a| AUs in which ALL adult members are elderly, or SNAP disabled, and there is no earned income authorized *on or after March 2, 2026*, are assigned *twelve (12)* month certification periods.
+
+NOTE: This is the only certification period that can be assigned to these AUs.
+Do not shorten the SRR certification period.
+
+| Senior SNAP AUs
+a| Thirty-Six (36) months
+
+NOTE: This is the only certification period that can be assigned to these AUs.
+Do not shorten the SRR certification period.
+|===
+
+== Procedures
+
+Use the chart below to determine how to complete an application.
+
+[#chart-3105-2]
+.Chart 3105.2 - Application Filing Procedures
+|===
+^| IF THE ^| THEN
+
+| AU is a resident of the county and files an application in the office of that county,
+| Accept and date the application on the day the AU makes the initial request for assistance.
+
+| AU is not a resident of the county in which the application is filed,
+| The date of application is the date the application is first received in *any* office in the county/state.
+
+| AU files a SNAP application at the SSA office,
+| Accept and date the application with the date the application was filed at the office of the Social Security Administration (SSA).
+Refer to xref:3115.adoc[].
+
+| AU files a SNAP application with a SNAP outreach partner,
+| Accept and date the application with the date the application is received by the State Office or any county DFCS office.
+
+| AU moves to Georgia and files a new application
+
+*AND*
+
+is currently receiving benefits in another state,
+| Accept and date the application.
+
+Verify closure of benefits in the other state.
+Do not approve benefits until it has been established that the other state did not issue benefits for the month of application or that benefits for the month of application were returned to the other state.
+If benefits were received in the month of application, determine eligibility for the ongoing month.
+
+| AU is applying for SSI prior to release from an institution under the Social Security Administration's Pre-release Program for the Institutionalized and is permitted to apply for SNAP benefits at the same time.
+a| SSA shall notify DFCS of the date of release of the applicant from the institution.
+
+The date recorded on the SNAP application will be the date of release.
+
+NOTE: If the agency is not notified in a timely manner of the applicant's release date, the agency shall provide benefits back to the release date.
+
+| AU files another SNAP application while one is still pending,
+| The application has already been accepted and dated in the county in which it was filed or submitted via GA Gateway.
+
+The assigned Eligibility Specialist will process the application by the appropriate SOP.
+
+
+If a pending application was denied due to verification and the AU has reapplied, then the assigned Eligibility Specialist will reopen the case using the date the verification is received as the date of application.
+*IF* all required verification is received after the 30th day but prior to 60 days from the date of application.
+If verification is received within the initial 30-day period, then the assigned Eligibility Specialist will reopen the case and provide benefits back to the date of application.
+
+If a new application is submitted while one is pending completion, the later application must be VOIDED and documentation added to explain why. The assigned Eligibility Specialist will inform the AU that his/her application will be completed based on the originally filed application.
+
+| AU files a SNAP application online through the Gateway Customer Portal,
+a| The date of application is the date received and documented by the system.
+
+NOTE: If an application is received during business hours, the application is considered to be filed and accepted on that day.
+If an application is received after business hours or on a weekend or holiday, then the application is considered to be filed and received on the next business day.
+(This policy also applies to recertification (renewal) applications and periodic reports).
+
+| AU fails to complete the initial interview
+
+*AND*
+
+has made no contact with the agency to reschedule the interview,
+a| Deny the application on the 30^th^ calendar day following the date of application.
+
+NOTE: If the 30^th^ calendar day falls on a weekend or holiday, the application is denied on the next business day.
+This denial is not reported as OSOP.
+
+| AU is eligible for the month of application
+
+*BUT*
+
+is ineligible for the month following the month of application
+
+*AND*
+
+ineligible for the ongoing month(s),
+| Issue benefits for the month of application only.
+
+Deny the second month and the ongoing month's benefits.
+
+| Application is processed in the month following the month of application
+
+*AND*
+
+the AU is eligible for the month of application
+
+*AND*
+
+ineligible for the month following the month of application
+
+*BUT*
+
+is eligible for ongoing benefits,
+| Issue benefits for the month of application.
+
+Deny the second month's benefits.
+
+Approve ongoing benefits based on anticipated circumstances.
+
+| AU is ineligible for the month of application
+
+*BUT*
+
+eligible for ongoing months,
+| Deny for the month of application.
+Issue benefits for the ongoing months.
+
+Do not prorate benefits for the first eligible month.
+Proration is not applicable because the month of application has been denied.
+|===
+
+.Chart 3105.3 - Disposition of SNAP Applications
+[#chart-3105-3]
+|===
+^| IF THE ^| THEN
+
+| AU fails to provide all verification required to determine eligibility,
+| Deny the application any time after the day following the verification deadline, but no later than 30 days from the date of application.
+
+
+If the 30^th^ calendar day falls on a weekend or holiday, the application is denied on the next business day.
+This denial is not reported as OSOP.
+
+| AU fails to provide all required verification by the due date
+
+*AND*
+
+AU provides verification after the due date
+
+*BUT*
+
+no later than the 30^th^ calendar day following the date of application,
+a| Complete the application by the 30^th^ day and prorate benefits from the date of application.
+
+NOTE: If the verification is received after the case has been denied but is received prior to the 30^th^ day following the date of application, reopen the case *and* provide benefits back to the date of application.
+If the requested verification is for an allowable expense, issue a restoration for the month of application.
+
+ES should process the case within five (5) business days after receipt of the verification.
+
+| AU fails to provide verification by the 10-day deadline but requests an extension
+
+*AND*
+
+the extended deadline is after the 30^th^ day but prior to 60 days from the date of application,
+a| Prorate benefits from the date all required verification is provided.
+
+NOTE: The maximum amount of time the AU is allowed to provide verification is 60 days from the date of application.
+
+| AU postpones the initial interview until [.underline]#*on or after the 20^th^ calendar day from the date*# of application
+
+*AND*
+
+the 10 calendar days to provide verification is after the 30- day SOP,
+a| Give the AU 10 calendar days to provide verification.
+
+Process the application in one of the following ways:
+
+. If verification is provided _by the 30_^th^ _calendar day_, process on the 30^th^ calendar day and prorate benefits from the date of application.
+Add documentation to the case notes to explain the circumstances of why the case is OSOP and that it is due to the client's delay.
+
+. If verification is provided _by the 10-day deadline_, process the application and prorate benefits from the date of application.
+Add documentation to the case notes to explain the circumstances of why the case is OSOP and that it is due to the client’s delay.
+
+. If verification is provided _after the 10-day deadline,_ process the application and prorate benefits from the date the verification is provided.
+Add documentation to the case notes to explain the circumstances of why the case is OSOP and that it is due to the client’s delay.
+
+NOTE: For these instances, the application is pending OSOP due to the client's delay.
+
+NOTE: If verification to determine eligibility (such as income) is required and is not provided by the deadline, deny the application the day after the verification deadline.
+
+NOTE: If verification is not required to determine eligibility (such as expenses) and is not provided by the deadline, process the application without the deduction.
+
+If verification is provided after the deadline but prior to the 60^th^ calendar day from the date of application, prorate benefits from the date verification is provided.
+
+| AU reports a change in circumstances by the 30^th^ calendar day
+
+*AND*
+
+the 10 calendar days to provide verification expires after the 30^th^ calendar day
+
+*AND*
+
+AU provides verification by the deadline given but after the 30^th^ day,
+a| Mail a system-generated Verification Checklist (VCL) or xref:attachment$form-173.pdf[Form 173 Verification Checklist Form], at the time the change is reported, allowing 10 calendar days to provide verification.
+
+Authorize benefits upon receipt of verification as described below:
+
+* Do not require a new application.
+* Update the Gateway system with the information received.
+* Prorate benefits beginning with the date of application.
+
+| AU reports a change in circumstances by the 30^th^ calendar day
+
+*AND*
+
+the 10 calendar days to provide verification expires after the 30^th^ calendar day
+
+*AND*
+
+AU fails to provide verification by the deadline given
+
+*BUT*
+
+AU provides the verification by the 60^th^ calendar day following the date of application,
+a| Mail a system-generated Verification Checklist (VCL) or xref:attachment$form-173.pdf[Form 173 Verification Checklist Form], at the time the change is reported, allowing 10 calendar days to provide verification.
+
+Deny the application on the day following the deadline to provide verification.
+
+Authorize benefits upon receiving verification as described below.
+
+* Do not require a new application.
+* Update the Gateway system with the information received, using the date verification is provided as the application date.
+* Prorate benefits beginning with the date the AU provides all required verification.
+
+| Application is [.underline]#*denied on the 30^th^ calendar day*# because the AU failed to provide verification
+
+*AND*
+
+the AU provides verification any time after the 30^th^ calendar day but by the 60^th^ calendar day following the date of application,
+a| Authorize benefits as follows:
+
+* Do not require a new application.
+* Update the Gateway system with the information received using the date verification is provided as the date of application.
+* Prorate benefits beginning with the date the AU provides all required verification.
+
+| Application is not processed by the 30^th^ calendar day because of the agency's failure to take action
+
+*AND*
+
+the AU is determined eligible at any time prior to the 60^th^ calendar day following the date of application,
+| Authorize benefits retroactive to the date of application.
+
+| Application is denied on the 30^th^ calendar day because of agency error
+
+*AND*
+
+the AU is determined eligible at any time prior to the 60^th^ calendar day following the date of application,
+| Authorize benefits retroactive to the original date of application by updating the Gateway system.
+
+Do not require a new application.
+
+a| AU refuses to cooperate with completing the application process,
+
+NOTE: To refuse, the AU must be capable of taking the necessary steps to complete the application process, but deliberately does not.
+
+| Deny the application at the time of refusal.
+
+| AU withdraws an application
+| Deny the application at the time of withdrawal.
+
+| Application is severely delayed and has not been processed in more than 12 months (one year) because of the agency's failure to take action.
+| Authorize benefits retroactive for 12 months (one year) only.
+
+If benefits were lost for more than 12 months, notify the AU of their entitlement for the 12-month period, the benefit amount to be restored, any offset of benefits, and how benefits will be restored.
+Refer to Section 3810, Issuance, for policy regarding underpayment and overpayment of benefits.
+|===
+
+Refer to <<chart-3105-2,Chart 3105.2, Application Filing Procedures>>.
+
+
+The application can be completed by the applicant, an authorized representative, or an agency representative.
+
+Accept a signed application when the AU first makes a request for assistance.
+DO NOT require an interview or other screening process prior to accepting an application.
+
+Record on the application form the date it is received in the county office.
+Screen the application to determine the following:
+
+* current receipt of SNAP
+* eligibility for expedited SNAP processing
+* current receipt of other benefits
+
+Use the following guidelines to schedule an interview with the applicant (if required):
+
+* Schedule either a telephone or face-to-face interview if they [.underline]#*do not*# meet the On-Demand criteria.
+* Reschedule the appointment if the applicant requests to reschedule the appointment prior to the interview.
+Send the applicant a Notice of Missed Interview (NOMI) for the appointment that was initially missed.
+* Schedule an interview immediately if the applicant is eligible for expedited services and [.underline]#*does not*# meet the On-Demand criteria.
+* Consider the applicant as the primary source of information for the individuals who have requested assistance.
+* Provide the applicant with the necessary forms to complete the application process.
+* Refer to other appropriate services as requested by the applicant or as determined by the agency.
+
+Verify information required to determine eligibility for SNAP benefits:
+
+* Determine if verification is available from agency sources prior to requesting verification from the AU.
+* Request verification both verbally and in writing.
+* Require the applicant to provide the names of the sources from which verification will be obtained.
+* Inform the applicant of any contacts that will be made with the sources.
+* Give at least 10 calendar days to obtain the verification.
+* Give additional time, within 30 days of the initial request, to provide verification if the applicant requests.
+* Consider verification received for one program to be received for all programs.
+* Accept the applicant's statement as verification for some eligibility criteria, when appropriate.
+* Assist the AU in obtaining verification.
+* Do not require verification if the applicant's statement establishes ineligibility.
++
+[caption=Exception]
+NOTE: If the applicant's statement of income establishes ineligibility, verification from a third-party source is required.
++
+NOTE: Refer to xref:3035.adoc[].
+
+=== Notification
+
+Provide written notification of the eligibility determination.
+The notice must explain the following:
+
+* The basis for the approval/denial.
+* The initial benefit amount and the ongoing benefit amount.
+* The certification period.
+* The reason for the action.
+* The AU's right to request a fair hearing.
+* The telephone number of the agency.
+* The telephone number of legal services.
+* For denials, the action the AU must take to reopen the application (if the action is taken within 60 days from the date of application).
+*AND*
+* That the AU must submit a new application if at the end of the 60-day period, the AU has not taken the required action to reopen the application.

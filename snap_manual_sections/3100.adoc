@@ -1,0 +1,35 @@
+= 3100 Application Process Overview
+:chapter-number: 3100
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: 3100
+:policy-title: Application Process Overview
+:previous-mt-number: MT-55
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The application process begins with the request for the Supplemental Nutrition Assistance Program (SNAP) and ends with notification to the Assistance Unit (AU) of its eligibility status.
+Refer to Section 3205 for definitions of an Assistance Unit.
+
+== Basic Considerations
+
+An inquiry regarding SNAP can be made at any time.
+Information regarding SNAP is provided to an individual without requiring an application to be filed.
+
+An application must be provided to anyone who requests one.
+
+An application can be requested in person, by mail, over the phone, electronically, or at any designated agency.
+
+Pursuant to section 11(e)(2)(b)(v)(II) of the Food and Nutrition Act of 2008, Title 7 of the Electronic Code of Federal Regulations (7CFR), section 273.2 (f)(1)(ii), and the Social Security Act §1137(a); 42 U.S.C. § 1320b-7(a), individuals who are applying for SNAP benefits must verify their citizenship, immigration status and/or provide or apply for an SSN.
+The AU may withdraw its application [.underline]#*or*# participate without an AU member if that individual does not verify his/her citizenship, immigration status, or provide or apply for an SSN.
+
+Individuals who [.underline]#*are not*# applying for SNAP benefits may be designated as non-applicants.
+Non-applicant AU members are not required to provide an SSN, verify citizenship or immigration status, and are ineligible for SNAP benefits.
+The income and resources of non-applicant AU members are counted to determine the eligibility and benefit level for the remaining AU members.
+
+The agency must take and process all applications in a timely manner.
+Applicants must be screened for expedited processing.
+
+All AUs must be notified of their eligibility for benefits.

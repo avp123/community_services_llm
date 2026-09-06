@@ -1,0 +1,152 @@
+= 3725 Senior Supplemental Nutrition Assistance Program (Senior SNAP)
+:chapter-number: 3700
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3725
+:policy-title: Senior Supplemental Nutrition Assistance Program (Senior SNAP)
+:previous-mt-number: MT-86
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+ESAP Waiver Approval - WIMS case #13440
+
+== Definition of Senior SNAP
+
+Senior SNAP is a simplified application project designed to reinvent the SNAP process for elderly assistance units (AU) that have traditionally proven to be stable households with fixed incomes, and few reportable changes in household composition and deductions.
+
+This segment of the population faces barriers to participation in SNAP due to the complexities of the application process and challenges associated with age, such as transportation, mobility, and disability.
+
+The program is designed to increase the efficiency of SNAP,
+improve the delivery of SNAP benefits to eligible households, and to raise the levels of nutrition among low-income households and individuals who are elderly.
+
+Senior SNAP is administered by the Senior SNAP Unit, a centralized unit that processes all Senior SNAP applications and recertifications, and maintains the eligibility functions of the project.
+
+== Determining Eligibility for Senior SNAP
+
+To be eligible for Senior SNAP, the household must meet the following requirements:
+
+* All household members must be 65 years or older (effective May 1, 2026) and purchase and prepare their meals together;
+
+NOTE: Effective February 2, 2026 – April 30, 2026, the age requirement was 66.
+Before February 2, 2026, the age requirement was 60 years or older.
+
+* The household has *no earned income* (this includes countable and excluded earned income);
+* The household has a fixed income such as RSDI, SSI, Federal or State Retirement, Railroad Retirement, VA, or Disability Income.
+
+NOTE: Due to the enactment of the One Big Beautiful Bill (OBBBA) on July 4, 2025, individuals aged 65 may be considered Aged ABAWDs if they do not meet an exemption.
+If any AU member is identified as an ABAWD, then the case *does not* qualify for Senior SNAP and will be classified as regular SNAP.
+Seniors aged 65 and older and not considered ABAWDs will follow the normal rules in the assignment of Senior SNAP.
+
+Senior SNAP eligibility is determined based on information provided on the application and any information provided through state and federal computer matches (SDX, BENDEX, IEVS, etc.). Households are not required to verify any additional income information, unless the information is questionable or cannont be verified through a state or federal computer match.
+
+All Senior SNAP households authorized on or after *February 1, 2023* are assigned thirty-six (36) month certification periods.
+
+=== Verification Requirements
+
+Households must verify the following current information by a third-party source:
+
+* Identity
+* Citizenship
+* Non-citizen status
+* Income that cannot be verified through a state or federal computer match
+* Medical expenses reported on the application
+* Residency
+* Shelter Expenses
+* Questionable information
+
+The client's statement is accepted for any additional information, unless it is questionable.
+
+Refer to xref:3035.adoc[] for any other points of eligibility related to verification requirements.
+
+== Senior SNAP Procedures
+
+Senior SNAP benefits are calculated the same as any regular SNAP household.
+Refer to xref:3610.adoc[] for policy on how to budget SNAP cases.
+
+Notification of Senior SNAP eligibility includes the number of household members participating in Senior SNAP, the benefit amount, the certification period, and instructions for receipt and use of the EBT card.
+In addition, Senior SNAP households receive a Rights and Responsibilities page and Simplified Reporting Requirements page that explain the household's rights and responsibilities and reporting requirements.
+
+The following procedures describe the operations of the Senior SNAP project.
+
+=== Initial Applications
+
+*All Senior SNAP households must be interviewed at initial application*.
+
+Senior SNAP will follow regular SNAP procedures for scheduling interviews for initial applications.
+Schedule an interview for all applicants who are not interviewed on the day they submit their applications.
+All Senior SNAP assistance units (AU) entitled to expedited services must be able to participate by the 7^th^ calendar day following the date of application or the date of eligibility for expedited services is discovered.
+
+When applying with Form 298 and the customer does not qualify for Senior SNAP, Gateway will automatically determine eligibility for the household as a regular SNAP AU.
+The household will not be required to submit a new application for regular SNAP.
+The case manager should document that the customer applied for Senior SNAP and that Gateway determined the customer to be eligible for regular SNAP.
+[.text-center]
+Senior SNAP Applications should be mailed/faxed to:
+[.text-center]
+[%hardbreaks]
+*Georgia Senior SNAP
+P.O. Box 450149
+Atlanta, GA 31145-0149
+Fax: 678-717-5585*
+
+=== Recertifications
+
+The household must self-declare all information on the Senior SNAP renewal form (Form 298 or Form 508).
+Senior SNAP will use the completed form to determine eligibility.
+An interview is not required [.underline]#*except*# in the following situations:
+
+* Prior to closing or denying a Senior SNAP recertification;
+* If information supplied by the household or authorized representative is questionable, incomplete, contradictory; or
+* If the Senior SNAP household requests an interview.
+
+NOTE: A Senior SNAP recertification application may not be denied without first attempting to schedule a recertification interview.
+
+Households will renew their eligibility for Senior SNAP every thirty-six months (36) to continue SNAP participation.
+The renewal form is used to determine continued eligibility and should be returned to the Senior SNAP address listed above.
+
+NOTE: Senior SNAP households will receive an annual notification reminding the household of their reporting requirements and how to report changes.
+
+The Senior SNAP worker will evaluate the information on the renewal form and make any changes that are needed to determine continued eligibility.
+
+Failure of the household to return a completed Senior SNAP renewal form will result in a system-generated closure.
+Senior SNAP staff will attempt to contact the household prior to closure of the case.
+
+In situations at recertification, where the household composition changes, and all members are no longer elderly and/or have earned income, Georgia Gateway will cascade from Senior SNAP to regular SNAP without the household having to reapply.
+If at recertification, a regular SNAP household now meets the criteria to be considered Senior SNAP, Georgia Gateway will convert the case to Senior SNAP without the household having to reapply.
+The household's certification period will be adjusted based on the reported changes.
+
+=== Periodic Reporting
+
+Periodic reporting is required for households that are certified for longer than 6 months.
+Periodic reporting is currently waived for Senior SNAP households, unless the household becomes ineligible for Senior SNAP, but remains eligible for SNAP during their 36-month certification period.
+See Section xref:3730.adoc[].
+
+=== Changes
+
+Senior SNAP households have simplified reporting requirements and are required to report when their total gross monthly income goes over the income limit for the household size.
+This change must be reported no later than the 10^th^ day from the end of the month in which the change occurs.
+
+Senior SNAP staff will send notifications regarding the effect of any change in benefit amount based on regular SNAP regulations.
+
+If during the certification period, a household becomes ineligible for Senior SNAP but remains eligible for SNAP, the AU will cascade to a regular SNAP AU.
+The cascaded AU is still entitled to the 36-month certification period, with simplified reporting, but will be required to submit periodic reports until the next recertification.
+See xref:3730.adoc[].
+
+At the time of conversion, the household will be notified of the changes in their status and responsibilities.
+At the end of the 36-month certification period, the household must be recertified according to normal SNAP recertification requirements.
+
+NOTE: *Certification periods will not be shortened based on changes reported during the current certification.
+Certification periods are only updated at recertification.*
+
+=== Electronic Signatures
+
+Electronic signatures utilizing Adobe Signature or other E-Signature software will be acceptable for all SNAP forms. Examples of electronic signatures are the use of a Personal Identification Number (PIN), a computer password, clicking on an “I accept these conditions” button on a screen, or clicking on a “Submit” button on a screen. Adobe Signature, DocuSign, and Dropbox Sign are common software that offer E-Signature. Electronic signatures utilizing Adobe Signature or other E-Signature software will be acceptable for all SNAP forms.
+A completed application consists of a signed application submitted with a name and address.
+A typed name on the signature line of a paper application is not acceptable.
+
+NOTE: If an authorized representative applies on behalf of a customer, the application must be signed by either a responsible member of the household or the household's authorized representative.
+
+=== Claims
+
+Senior SNAP recipient claims will be routed to the Office of Inspector General (OIG) Benefit Integrity and Recovery Unit (BIRU)  Unit for processing.

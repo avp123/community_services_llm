@@ -1,0 +1,306 @@
+= 3810 Issuance
+:chapter-number: 3800
+:effective-date: October 2025
+:mt: MT-84
+:policy-number: 3810
+:policy-title: Issuance
+:previous-mt-number: MT-82
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+SNAP benefits are issued in the form of an electronic funds transfer (EFT) using an electronic benefits transfer (EBT) card and personal identification number (PIN).
+
+== Basic Considerations
+
+SNAP benefits are issued as follows:
+
+* initial benefits
+* ongoing monthly benefits
+* restorations
+* supplemental benefits
+* replacements for the loss of destroyed food
+* manually issued benefits (Refer to Section 3805)
+
+SNAP benefits [.underline]#may# be used to purchase any food or food product intended for human consumption such as:
+
+* breads and cereals
+* fruits and vegetables
+* meats, fish and poultry
+* dairy products
+* seeds and plants, which produce food for the AU to eat
+* meals prepared and delivered by an authorized meal delivery to AUs eligible for delivered meals
+* meals served by an authorized communal dining facility for elderly AUs and SSI AUs
+* meals prepared and served by a drug or alcohol treatment facility for AUs receiving treatment
+* meals prepared and served by a group living arrangement for its residents
+* meals prepared and served by a shelter for battered women and children to its residents
+
+SNAP benefits [.underline]#*may not*# be used to purchase:
+
+* beer and wine
+* liquor
+* cigarettes or tobacco
+* pet foods
+* soaps, paper products
+* household supplies
+
+SNAP benefits [.underline]#*may not*# be:
+
+* sold, traded or given away
+* used to allow retailers to buy benefits in exchange for cash
+* used to pay credit accounts
+
+=== Initial Month Issuance
+
+Approving the application authorizes the initial month's benefits.
+Gateway will do the following:
+
+* authorize the initial benefits in the nightly processing cycle when the case is finalized
+* post benefits to the EBT account after processing
+* include all eligible benefit amounts, prorated from the date of application, and for any intervening months, in the issuance in the month of finalization.
+
+=== Prorating Initial Month's Benefits
+
+Prorated initial benefits are:
+
+* rounded down to the next lower even dollar
+* not issued if the amount is less than $24
++
+NOTE: Eligible one and two person AUs are not issued the minimum benefit amount for the initial month of application when:
+
+* The AU's normal ongoing benefit amount is less than the minimum benefit, but the AU will receive a monthly ongoing benefit of the minimum amount.
+
+To determine the amount of benefits to issue for the initial application month, use the chart and follow the procedures below:
+
+* Find the application date in Column I
+* Identify the appropriate multiplication factor in Column II
+* Apply the appropriate multiplication factor to the AU's full monthly allotment, rounding the amount down to the nearest whole dollar
+* The amount is the prorated amount for the initial month of application
+
+NOTE: The AU's full monthly allotment is determined by the system or manually after determining the AU's net income and comparing it to the Basis of Issuance Tables (BOI) for AU sizes 1-10 or BOI Tables for AU sizes 11-20.
+
+.CHART 3810-1 - PRORATING THE INITIAL MONTH'S BENEFITS
+[#chart-3801-1%autowidth,cols="^,^"]
+|===
+| Column I Date of Application | Column II Multiplication Factor
+
+| 1
+| 1.000
+
+| 2
+| .9667
+
+| 3
+| .9334
+
+| 4
+| .9000
+
+| 5
+| .8667
+
+| 6
+| .8334
+
+| 7
+| .8000
+
+| 8
+| .7667
+
+| 9
+| .7334
+
+| 10
+| .7000
+
+| 11
+| .6667
+
+| 12
+| .6334
+
+| 13
+| .6000
+
+| 14
+| .5667
+
+| 15
+| .5334
+
+| 16
+| .5000
+
+| 17
+| .4667
+
+| 18
+| .4334
+
+| 19
+| .4000
+
+| 20
+| .3667
+
+| 21
+| .3334
+
+| 22
+| .3000
+
+| 23
+| .2667
+
+| 24
+| .2334
+
+| 25
+| .2000
+
+| 26
+| .1667
+
+| 27
+| .1334
+
+| 28
+| .1000
+
+| 29
+| .0667
+
+| 30
+| .0334
+
+| 31
+| .0334
+|===
+
+=== Regular Monthly Benefits
+
+AUs with one or two members who are eligible for an allotment of less than the minimum benefit amount will receive the minimum benefit amount.
+
+In households with three or more members where the AU's net income is less than the maximum, but the AU is eligible for zero benefits, or eligible for less than the minimum allotment, the Gateway system will automatically close the case.
+
+Ongoing monthly SNAP benefits are posted to EBT accounts according to the last two digits of the head of household's client ID number.
+
+The benefit schedule is as follows:
+
+[%autowidth,cols="^,^"]
+|===
+| Client ID #s End In | Benefits Available On
+
+| 00-09
+| 5^th^ of the month
+
+| 10-19
+| 7^th^ of the month
+
+| 20-29
+| 9^th^ of the month
+
+| 30-39
+| 11^th^ of the month
+
+| 40-49
+| 13^th^ of the month
+
+| 50-59
+| 15^th^ of the month
+
+| 60-69
+| 17^th^ of the month
+
+| 70-79
+| 19^th^ of the month
+
+| 80-89
+| 21^st^ of the month
+
+| 90-99
+| 23^rd^ of the month
+|===
+
+=== Restoration
+
+Authorize a restoration to correct an under issuance in the following situations:
+
+* agency errors in benefit calculations
+* reversal of an IPV disqualification
+* specific policy requiring restored benefits
+* restoration ordered by an administrative law judge
+
+Benefits will be restored for not more than twelve months prior to whichever of the following occurred first:
+
+* The date the State agency receives a request for restoration from a household
++
+or
+
+* The date the State agency is notified or otherwise discovers that a loss to a household has occurred.
+
+Restore to households in which benefits were found by any judicial action to have been wrongfully withheld.
+If the judicial action is the first action the recipient has taken to obtain restoration of lost benefits, then benefits will be restored for a period of not more than twelve months from the date the court action was initiated.
+When the judicial action is a review of an agency action, the benefits will be restored for a period of not more than twelve months from the first of the following dates:
+
+* The date the agency receives a request for restoration:
+** If no request for restoration is received, the date the fair hearing action was initiated; but
+** Never more than one year from when the agency is notified of, or discovers, the loss.
+
+Benefits will be restored even if the household is currently ineligible.
+
+Restorations will be offset to pay on active unpaid claims *but* do not apply a restoration against an unpaid claim when:
+
+* an initial allotment is issued
+* benefits are reinstated
+* benefits are replaced as a result of loss through a disaster
+* initial benefits are expunged
+* supplemental benefits are issued as a result of an expedited change (i.e., addition of an AU member or a decrease in gross monthly income of $50 or more)
+
+Issue a notification form to inform the AU of all of the following:
+
+* the amount of benefits restored
+* the reason for the restoration
+* the amount offset against the unpaid claim, if any
+* the 90-day period allowed requesting a hearing to contest the amount or the denial of restored benefits.
+
+If one AU becomes two or more AUs before a restoration is paid, issue benefits according to the following guidelines:
+
+* to the AU with the majority of the members from the original AU
+* if each current AU has an equal number of members from the original AU, to the AU which contains the head of the original AU
+* if unable to locate the head of the original AU, prorate the benefits equally between the AUs containing the members of the original AU
+
+=== Supplemental Benefits
+
+Issue supplemental benefits for either of the following reasons:
+
+* The addition of a new AU member causes an increase in the benefit amount.
+* A decrease in income of $50.00 or more occurs in a prospectively budgeted AU.
+
+If a reported change results in an increase in benefits, the change is made effective no later than the first allotment issued 10 calendar days after the date the change was reported.
+
+Supplemental allotments will be posted to EBT accounts after system processing.
+
+=== Replacing Food Destroyed in a Disaster or Misfortune When Food Was Purchased with SNAP Benefits
+
+Replace benefits for loss of food purchased with SNAP benefits when a household experiences a power outage of 4 or more hours due to a disaster or misfortune, and it is reported within 10 calendar days of the occurrence. The maximum amount of the replacement cannot exceed one month’s allotment.
+
+Follow the steps below when an AU reports a loss of food destroyed in a disaster or misfortune, which was purchased with SNAP benefits:
+
+. Verify that a disaster or misfortune, such as, but not limited to, a fire or flood, occurred. This may be verified through a collateral contact, documentation from a community agency, including but not limited to the fire department, the Red Cross, or a home visit.
+
+. Have the AU complete and sign a  xref:attachment$form-841.pdf[Food Loss Replacement Form (Form 841)] or file an affidavit attesting to the loss of food within 10 calendar days of the occurence. If the 10th day falls on a weekend or holiday, and the form or affidavit is received the next business day after the weekend or holiday, the agency shall consider the statement received timely. If the signed form or affidavit is not received by the agency within 10 calendar days of the date of the reported food loss, no replacement shall be made.
++
+NOTE: The AU may mail the Form 841 or affidavit to the county office, submit it in person at the county office, or place it in the drop box located outside of the county office. When the agency has approval to allow web submissions, the form may be submitted via the agency’s website.
+
+. If approved, provide a replacement as an underpayment claim in the amount of the loss, not to exceed a maximum of one month's allotment within 10 calendar days of the reported loss.
+
+. If restored benefits were part of the month's allotment, replace the amount of the restoration.
+
+. The agency shall deny or delay replacement requests in cases where documentation indicates that the household's request for replacement appears to be fraudulent.
+
+. 	Inform the household of its right to a fair hearing to contest the denial or delay of a replacement issuance. Replacements shall not be made while the denial or delay is being appealed.
++
+NOTE: There is no limit to the number of replacement benefits for food destroyed in a disaster.

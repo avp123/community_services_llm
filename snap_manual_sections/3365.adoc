@@ -1,0 +1,120 @@
+= 3365 E&T Enrollment Process
+:chapter-number: 3300
+:effective-date: December 2023
+:mt: MT-76
+:policy-number: 3365
+:policy-title: E&T Enrollment Process
+:previous-mt-number: MT-68
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+All SNAP Works participants are required to take part in the following enrollment process, which includes program orientation, employability assessments, individual employment plan development, and enrollment in an allowable work activity.
+
+== Basic Considerations
+
+Participation in a work activity may begin at any time.
+
+=== Orientation
+
+The purpose of orientation is to engage the participant and to set the tone for the program.
+Participants are given appropriate information regarding what the program is, what it is designed to do, how it will be done, and how it can benefit the participant.
+
+The following information must be provided to participants during orientation:
+
+* The purpose of the SNAP Works Program,
+* The program components,
+* Participation requirements,
+* Rights and responsibilities of participants,
+* Work Support services available,
+* Resource list of local employment and training resources.
+
+=== Assessment
+
+The participant's work history, educational background, skills, and employability are assessed to determine the educational, training, and support needs of the participant.
+The assessment is documented in the Gateway system.
+The purpose of the assessment is to evaluate the participant's potential for employment and the need for support services and training.
+
+In examining the participant's background, the following points should be considered:
+
+Education:
+
+What was the highest grade completed?
+If a drop out, why did participant leave school?
+How does the participant feel about participating in school or training?
+What classes did the participant enjoy the most in school?
+Why?
+What classes did the participant enjoy the least in school?
+Why?
+What were the participant's extracurricular activities in school?
+Can they be related to vocational and employment possibilities?
+Did the participant have extracurricular involvement, why not?
+What educational needs does the participant have?
+
+Employment:
+
+Is the participant working?
+Where is the participant working?
+What are the job duties?
+How many hours a week does the participant work?
+What is the pay?
+What is their length of time on the job?
+
+Work History:
+
+What jobs has the participant held?
+For how long?
+What were the reasons the participant left each of the prior jobs?
+What jobs did the participant like the most?
+Why?
+What jobs did participant like the least?
+Why?
+What specific skills did the participant develop on the job?
+What tasks/skills did the participant have the most difficulty performing?
+Possession of what skills would have made the jobs easier to do?
+What characteristics would make a job attractive to the participant?
+
+Personal/Family:
+
+Review ABAWD work status to make sure the individual does not meet any exemptions.
+Does the participant have any health or emotional problems?
+Is there a history of substance abuse?
+Does the participant have an arrest record?
+
+Are there any children in the home under age 18?
+Does any family member have health problems, or special needs?
+Does the participant have adequate living accommodations?
+What are the usual means of transportation?
+
+Previous Job Search Efforts:
+
+Is the participant looking for work?
+What sources/resources have been used to locate a job?
+What were the results of any interviews?
+What reasons were given for non-hire?
+What kind of jobs has the participant applied for?
+What local employment opportunities does the participant know of in the community?
+How does the participant feel about prior job search efforts?
+
+=== Individual Employment Plan
+
+The information obtained during the assessment is used to develop an Individual Employment Plan with the participant.
+The Individual Employment Plan provides the following information:
+
+* provides the overall employment goal(s).
+* outlines the necessary steps to achieve the employment goal(s).
+* provides a timeline for accomplishing each step of the plan.
+* outlines the participation requirements agreed upon by the participant.
+* details the services including work support services that DFCS provides.
+* specifies the activities in which the individual is required to participate.
+* provides the timeframe to accomplish the overall employment goal(s)
+* provides an explanation of good reasons for nonparticipation.
+
+=== Individual Employment Plan Update
+
+The Individual Employment Plan is reviewed at the timeframes established for achieving each step.
+The participant's progress and any modifications in activities or services are noted on the Individual Employment Plan and documented in the Gateway system using the case note feature when there is a change or achievement of a step or goal.
+
+A face-to-face review is not required for an Individual Employment Plan update.
+The update may be completed via telephone and the changed plan mailed to the participant for signature.

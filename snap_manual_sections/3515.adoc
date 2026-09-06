@@ -1,0 +1,120 @@
+= 3515 Clearinghouse
+:chapter-number: 3500
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3515
+:policy-title: Clearinghouse
+:previous-mt-number: MT-83
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 272.8
+
+== Requirements
+
+Clearinghouse is an automatic online computer system through which wage and benefit information on applicants and recipients is matched with files in other state and federal agencies.
+
+== Basic Considerations
+
+Clearinghouse matches are performed with the following agencies and contain the following information:
+
+* Georgia Department of Labor (DOL) Wage Files – provides five quarters of employment history by employer name, employer number, and amount of wages earned.
++
+NOTE: Information that appears on this wage file is one (1)  quarter behind the current quarter.
+
+* Georgia Department of Labor (DOL) Employer Address Files – the work location and/or the address of the accounting office of the employer
+
+* Georgia Department of Labor (DOL) Unemployment Compensation Benefits (UCB) Files – the monthly UCB amounts for the most recent 13 months and a list of individual checks for the last ten weeks
+
+* Georgia Department of Labor (DOL) Unemployment Compensation Benefits (UCB) Claimant Address File – the address of each UCB recipient
+
+* BENDEX – RSDI benefit information on individuals who are current or past recipients of public assistance
+
+* State Data Exchange (SDX) – SSI benefit information
+
+* Department of Labor (DOL) W-4 Employer Reporting System New Hire Information Inquiry – the name and address of any new employer upon hiring, and the date of hire.
+
+Clearinghouse files are accessed on any individual who is in active or pending status,  and who may affect eligibility for benefits such as the following:
+
+* Applicants
+* Recipients
+* Disqualified individuals
+* Ineligible aliens
+* Sanctioned individuals
+* Ineligible students
+* Individuals whose presence in the AU is questionable
+
+Consider UCB information received on a computer match as verified.
+
+Clearinghouse is automatically accessed on pending or active AUs at the following times:
+
+* at registration
+* finalization of a new AU
+* reopening of an AU
+* in the month prior to the review month, when the AU is selected for review
+* if a primary SSN is changed
+* when adding a person to the AU as an interim change
+
+=== DOL Wage Quarters
+
+DOL wage files are as follows:
+
+* *1st Quarter - January, February, March*
+* *2nd Quarter – April, May, June*
+* *3rd Quarter – July, August, September*
+* *4th Quarter – October, November, December*
+
+=== Addressing DOL Wage Files
+
+DOL wage files are reviewed for individuals 16 and older at initial application, when an AU member is added, and at each renewal.
+
+Review DOL wage files to determine:
+
+* if wages have been reported
+* if wages should be reported
+* if wages are correctly budgeted
+* if termination of employment is verified
+
+== Procedures
+
+*Use Chart 3515.1 below to address DOL wages at initial application.*
+
+[#chart-3515-1]
+.CHART 3515.1 - DOL WAGE CHART FOR INITIAL APPLICATION
+|===
+^| IF ^| THEN
+
+| Employment was prior to SNAP benefits,
+a| Document wages received prior to SNAP benefits.
+
+NOTE: If employment has terminated within the last 30 days, verify terminated income and termination of employment.
+Refer to xref:3035.adoc[].
+
+| Employment was reported,
+| Document employment was reported and correctly budgeted.
+
+| Employment was during receipt of SNAP benefits, over the SRR income limit, and was *not* reported,
+| Complete a fraud referral using the IPV Investigation module in Gateway.
+|===
+
+*Follow the steps below to address DOL wages at renewal.*
+
+. Review DOL wage data for all quarters available since the last application or renewal to determine what action is required
+
+. If the AU member is still employed with a company that shows in more than one quarter, review the income to ensure what is showing in the budget is representative of what is being reported on the wage file.
+
+. If employers are listed for the period being addressed (this may be the last quarter showing or the last two quarters), determine if the AU is currently employed.
+** If AU is currently employed, verify the wages of the employer(s) and budget the income ongoing.
+** If AU is no longer employed and the job is budgeted in Gateway, termination of employment must be verified, regardless of when the job ended, to remove the income.
+
+NOTE: If any terminated income will be counted in the new certification period, verification of that income is also required to determine the correct final month’s income.
+
+** If the job is shown in DOL and is not budgeted in Gateway, verify if the employment has terminated within the last 30 days.
+Verify terminated income and termination of employment
+Refer to xref:3035.adoc[].
+If the job ended more than 30 days from the recertification month, the client's statement is accepted.
+
+4 .  If employers are listed, but employment was not reported, and the income exceeds 130% of the gross income ceiling (GIC), determine if potential overpayments exist.
+If overpayments exist, complete a fraud referral in Gateway for all historical months that show pay on DOL over 130% of the GIC.

@@ -1,0 +1,241 @@
+= 3375 Work Support Services
+:chapter-number: 3300
+:effective-date: December 2023
+:mt: MT-76
+:policy-number: 3375
+:policy-title: Participant Support Services
+:previous-mt-number: MT-68
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Participant support services are provided to participants for needs directly related to participation in the assigned component(s).
+All work support services must be reasonable and necessary for participation in the SNAP Works Program.
+
+== Basic Considerations
+
+Participant support services are provided in order to encourage and support participants in their efforts to achieve and maintain employment.
+Participants are informed of all available participant support services during their initial contact with the E&T Provider.
+If services are needed to eliminate barriers to work and/or training, the SNAP Works employment services specialist or the E & T Provider may provide participant support services to the participant.
+
+=== Participant Support Services
+
+The SNAP Works Program provides participant support services to those participants enrolled in an allowable E&T component and the support is needed to participate.
+Services include, but are not limited to:
+
+* Background check
+* Books, tools and training supplies
+* Childcare
+* Clothing
+* Drug tests
+* State ID or driver's license
+* Transportation Assistance
+* Tuition
+* Uniforms
+
+NOTE: Case management services are provided by the E&T provider and the SNAP Works Staff.
+
+=== Transportation Assistance
+
+Participants may receive transportation assistance if needed to participate in training, educational or work activities.
+
+* An upfront payment of $25.00 for the first month of activity.
+* A reimbursement payment of $50.00 per month.
+* Arranged transportation services up to $200.00 per month paid to the TRIPS provider.
+
+=== Upfront Payments
+
+Upfront transportation payments are given only to participants who need them to begin participation in SNAP Works Program activities.
+An upfront payment of $25 may be given to begin participation only for the first month of an activity.
+
+
+=== Reimbursement of Expenses
+
+In lieu of up-front payments, participants may be reimbursed for transportation expenses at the end of participation each month.
+The Provider must provide documentation of participant attendance during the month to validate the need for transportation payments.
+
+=== Arranged Transportation
+
+Transportation services may be arranged by DFCS with a transportation provider in lieu of up-front payments or reimbursement of expenses.
+Transportation is arranged for participants who have no dependable source of transportation.
+This service may be arranged with public transit systems via weekly or monthly transportation cards or daily tokens or arranged with other services such as private van services or taxi services.
+A private driver in the community may be used if no other resource is available.
+Negotiate the lowest rate possible.
+
+Participants cannot receive a transportation payment when transportation services are purchased for them with a transportation provider.
+The participant makes the decision to accept the individual transportation payment or to accept services purchased by DFCS.
+
+The arranged/provider transportation limit is up to $200.00 per month.
+Since SNAP Works funds are limited by budget constraints, it is important that the most economical and efficient means of transportation is arranged for the participant.
+The maximum amount should only be allowed under special conditions.
+The SNAP Works funds will be monitored regularly to determine expenditures.
+The maximum amount may be reduced at any time in order to meet budgetary needs.
+Arranged transportation is charged to UAS Budget Code 549, Entitlement Code 23.
+Refer to Chart 3375, SNAP Works Transportation Services for appropriate UAS and Entitlement Codes.
+
+The Chart 3375.1 below provides the guidelines for using UAS Code 549.
+
+.CHART 3375.1 – TRANSPORTATION SERVICES UAS CODE 549
+[#chart-3375-1,cols="^,^2,4"]
+|===
+| UAS Code | Entitlement Code ^| Description
+
+| 549
+| 23
+| Arranged Transportation up to $200.00 per month to provider.
+
+| 549
+| 25
+| E&T Transportation - $50 Monthly Minimum Reimbursement to participant.
+
+| 549
+| 34
+| Upfront $25 Payment to participant.
+
+| 549
+| 59
+| $25 Monthly Maximum Reimbursement to the Job Retention Participant.
+May not exceed 90 days.
+|===
+
+NOTE: Do not use the above Entitlement Codes with UAS Codes 559 or 569 or 589.
+
+=== Duration of Services
+
+Participants are eligible for continuous participant support services while participating in SNAP Works Program activities.
+Monthly verification of continued enrollment in the activity, participation in the activity, and continued eligibility for food stamp benefits is completed to make sure the participant continues to be eligible for participant support services.
+
+=== Incidentals
+
+Incidental services are other services needed by participants to complete their participation in component activities.
+These services are purchased only when they are not available from other sources at no cost.
+The need to purchase incidental services is documented in the Gateway system.
+
+NOTE: For those incidentals limited to “per participation”, participation begins with referral and ends when the participant exits from the program.
+All services or items purchased must be directly related to the registrant's participation in the SNAP Works Program activity.
+Refer to <<chart-3375-3,Chart 3375.3, Incidental Participant Support Services>>, for a list of participation incidentals.
+
+=== UAS Codes
+
+The following UAS codes are used to report incidental participant support services.
+
+.CHART 3375.2 – DESCRIPTION OF INCIDENTAL SERVICES CODES
+[#chart-3375-2,cols="^,4"]
+|===
+| UAS Code ^| Description
+
+| 559
+| Incidentals for Participants in Work Activity.
+
+| 569
+| Incidentals for Participants in Education or Training activities.
+
+| 589
+| Incidentals for Participants in Job Retention activities.
+|===
+
+Incidentals are purchased only for participants currently enrolled in SNAP Works Program activities.
+Incidentals needed to accept employment are not allowable, unless part of the job retention component.
+Reimbursement for incidentals is not allowed.
+
+Participants may have the following items purchased for them.
+
+NOTE: All incidentals require approval by the SNAP Works Supervisor.
+
+.CHART 3375.3 – INCIDENTAL PARTICIPANT SUPPORT SERVICES
+[#chart-3375-3,cols="4,4,^"]
+|===
+3+^s| UAS CODE 559 Incidentals
+
+Incidentals for Participants in Work Activity
+
+^| *Incidental*
+^| *Limitation/Description*
+^| *Entitlement Code*
+
+| Expenses which are necessary, reasonable and directly related to participation in E & T activities such as drug screens, physicals, and criminal background checks.
+a| Dependent upon available funds.
+Use services at no cost when available.
+
+NOTE: Expense must be required as condition of participation.
+| 26
+
+3+^s| UAS CODE 569 Incidentals
+
+Incidentals for Participants in Education or Training Activities
+
+^| *Incidental*
+^| *Limitation/Description*
+^| *Entitlement Code*
+
+| Adult Education GED Tuition
+| Use services at no cost when available.
+| 21
+
+| Other Tuition
+| Dependent upon available funds.
+Pay only for short-term training of 6 months or less.
+| 22
+
+| Expenses which are necessary, reasonable and directly related to participation in E & T activities such as drug screens, physicals, and criminal background checks
+a| Dependent upon available funds.
+Use services at no cost when available.
+
+NOTE: Expense must be required as condition of participation.
+| 26
+
+| Books, Registration, Educational Testing Fees
+| Dependent upon available funds.
+| 37
+
+3+^s| UAS CODE 589 Incidentals
+
+Incidentals for Participants in Job Retention
+
+^| *Incidental*
+^| *Limitation/Description*
+^| *Entitlement Code*
+
+| Books, Registration, Educational Testing Fees
+| Dependent upon available funds.
+| 37
+
+| Required Wearing Apparel
+| Dependent upon available funds.
+| 38
+
+| Tools and Supplies
+| Dependent upon available funds.
+| 39
+
+| Occupational Licensing Fees
+| Dependent upon available funds.
+Use services at no cost when available.
+| 40
+
+| Work Support Payment
+| Dependent upon available funds.
+One-time payment may not exceed $75.00.
+| 98
+|===
+
+NOTE: This is an all-inclusive list of incidentals allowed for the SNAP Works Program.
+
+=== Other Services
+
+Funds are not available through the SNAP Works Program to purchase services other than transportation and incidentals.
+However, employment services specialists will provide appropriate referrals to local resources for customers to receive any other needed resources.
+
+=== Guidelines for Purchase of Services
+
+Services are purchased only when not available through other resources at no cost to the participant.
+*Duplication of payment is prohibited*.
+Payments for transportation and incidentals are coordinated with other direct service providers such as the Workforce Innovation Opportunity Act Programs and Fatherhood Initiative, to prevent duplication of services.
+
+Services provided or purchased are not to exceed the normal cost of such services in the local area.
+Participation activities are arranged in the most efficient manner possible to meet the work goals and minimize expenses.
+
+=== Documentation and Verification of Participant Support Services
+
+The appropriate documentation of participation in activities and/or components are recorded in the Gateway system to substantiate the need for participant support services.

@@ -310,6 +310,7 @@ def _route_to_sections(question: str, q_vec: np.ndarray, cur,
             "SELECT section_number, section_title, LEFT(full_content, 300) FROM snap_sections ORDER BY section_number"
         )
         rows = cur.fetchall()
+        valid_ids = {n for n, t, b in rows}
         lines = ["{} | {} | {}".format(n, t, re.sub(r'\s+', ' ', (b or ''))[:200]) for n, t, b in rows]
         prompt = (
             "You are routing a Georgia SNAP policy question.\n\n"
@@ -323,7 +324,7 @@ def _route_to_sections(question: str, q_vec: np.ndarray, cur,
             model=CHAT_MODEL, messages=[{"role": "user", "content": prompt}], max_completion_tokens=20,
         )
         raw = resp.choices[0].message.content.strip()
-        return [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$|^Appendix[A-Z]$", s.strip())][:MAX_ROUTED_SECTIONS]
+        return [s.strip() for s in re.split(r"[\s,]+", raw) if s.strip() in valid_ids][:MAX_ROUTED_SECTIONS]
 
     # Stage A: cosine-sim top-k from rewritten query; union with top-k from original if different
     scores_rw = {sec: float(np.dot(q_vec, v)) for sec, v in _SECTION_VECTORS.items()}
@@ -362,7 +363,8 @@ def _route_to_sections(question: str, q_vec: np.ndarray, cur,
             model=CHAT_MODEL, messages=[{"role": "user", "content": prompt}], max_completion_tokens=20,
         )
         raw = resp.choices[0].message.content.strip()
-        selected = [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$|^Appendix[A-Z]$", s.strip())]
+        candidate_set = set(candidates)
+        selected = [s.strip() for s in re.split(r"[\s,]+", raw) if s.strip() in candidate_set]
         return selected[:MAX_ROUTED_SECTIONS] if selected else candidates[:MAX_ROUTED_SECTIONS]
     except Exception:
         return candidates[:MAX_ROUTED_SECTIONS]

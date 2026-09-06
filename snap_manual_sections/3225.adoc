@@ -1,0 +1,176 @@
+= 3225 Residents of Group Living Arrangements
+:chapter-number: 3200
+:effective-date: January 2025
+:mt: MT-80
+:policy-number: 3225
+:policy-title: Residents of Group Living Arrangements
+:previous-mt-number: MT-55
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Disabled and blind individuals (as defined under SNAP policy), who live in a group living residential setting may be eligible for benefits. They are considered institutional care residents.
+
+== Basic Considerations
+
+Group living arrangement is a term used in the Supplemental Nutrition Assistance Program (SNAP) to define residential settings, such as personal care homes, group homes, and/or supportive living homes, in which physically/mentally disabled individuals reside under supervised care.
+
+A resident of a personal care home may apply for benefits in one of the following ways:
+
+* Have an authorized representative apply for and/or receive benefits on his/her behalf.
+The resident may designate an employee of the home to act as the authorized representative.
++
+NOTE: If the Food and Nutrition Service (FNS) disqualifies the authorized representative who is an employee of the home as an authorized retailer, DFCS must suspend the employee's authorized representative status for the same period of time.
+Residents may continue to be eligible.
+
+* May apply as an assistance unit of one or an assistance unit of any group of residents with a resident member of the group applying on behalf of the AU.
++
+NOTE: Residents who apply through the personal care home's authorized representative must apply as an AU of one.
+
+* May apply on his/her behalf.
+
+Residents must meet all non-financial and financial eligibility criteria.
+
+Residents have the same rights and responsibilities as all other recipients.
+
+In order for the residents of a personal care home to be eligible for benefits, the organization that operates the home must take the following steps:
+
+* Obtain non-profit private tax status or be publicly operated.
+* Obtain certification from the Department of Community Health (DCH), Health Facility Regulation Division (HFRD)  under regulations contained in Section 1616(e) of the Social Security Act or under comparable standards as per SNAP regulations.
++
+--
+*To obtain certification, contact:*
+
+[%hardbreaks]
+DCH, Health Facility
+Regulation Division
+2 Martin Luther King Jr Dr, SE
+East Tower
+Atlanta, Georgia 30334
+ (404) 656-4507
+--
+
+* Provide the local DFCS office with verification of non-profit tax status and certification from DCH/HFR as a personal care home as defined by SNAP regulations.
+
+* Serve no less than two and no more than sixteen residents who are disabled and/or blind as defined by SNAP regulations.
+Residents most often receive Social Security disability or Supplemental Security Income (SSI).
+
+* Maintain a monthly listing of residents who receive SNAP including dates of arrival and departure.
+The listings are made available for review by county DFCS staff who make quarterly on-site visits to the home.
+
+* Be responsible for any IPV resulting from information knowingly misrepresented on behalf of the AU, if an employee of the home serves as the authorized representative.
+
+*OPTIONAL*
+
+* May obtain authorization to receive and use SNAP benefits to purchase food from wholesalers.
++
+--
+*To obtain authorization to purchase as a USDA wholesaler, contact:*
+
+[%hardbreaks]
+USDA, Food and Nutrition Service
+SNAP Atlanta Field Office
+61 Forsyth Street
+Suite 8T36
+Atlanta, Georgia 30303-3415
+(404) 562-1801
+
+FNS authorization is required if the home accepts SNAP benefits from residents in exchange for meals and purchases food from wholesalers.
+If food is purchased from retail stores, FNS authorization is not required.
+--
+
+* Be assigned a seven-digit SNAP authorization number, if authorized by FNS.
+The authorization number is electronically transmitted to the electronic benefits transfer (EBT) contractor.
+
+Obtain instructions regarding a point-of-sale device, set up EBT accounts for transactions and other information.
+If the home is authorized by FNS to purchase food from a wholesaler, the resident's benefits are transferred to the organization's bank account.
+
+*For information on how to obtain a POS device, contact:*
+
+[%hardbreaks]
+Division of Family and Children Services
+Office of Family Independence EBT Unit
+47 Trinity Ave, NW, 1st Floor
+Atlanta, GA 30334
+Phone: (404) 657-3706
+Email: ebt@dhs.ga.gov
+
+If the resident leaves the home and an employee of the home is the authorized representative who receives and uses benefits on behalf of the AU, the home must take the following steps:
+
+* If the AU leaves the home at any time and no portion of the monthly allotment has been spent, the full monthly allotment must remain in the EBT account.
+
+* If the AU leaves the home on or before the 15th of the month, one-half of the monthly allotment must remain in the EBT account.
+
+* If the AU leaves the home on or after the 16^th^ of the month, any remaining portion of the monthly allotment must remain in the EBT account.
+
+* If an employee of the personal care home is the authorized representative and the AU leaves the home, the employee cannot continue to act as the authorized representative.
+
+EBT cards left with the authorized representative after the AU leaves the home are returned to DFCS.
+
+Individuals who reside in a group living arrangement may have one of the following paid through the Supportive Living Program/Community Residential Services of the Department of Behavioral Health and Developmental Diseases (DBHDD).
+
+* a portion of their personal allowance
+* a portion of their room/board
+
+A DBHDD case manager determines which expense is supplemented and the amount of the supplement.
+
+=== Group Home Provider
+
+An individual who is a group home provider may apply for SNAP as a separate AU.
+The income from the group home is budgeted as self-employment income.
+
+== Procedures
+
+Follow the steps below for residents of group living arrangements.
+
+Step 1:: Determine non-profit status through one of the following sources:
+
+* Letter of tax-exempt status from the Internal Revenue Service (IRS)
+* Certificate of Registration from the Office of the Secretary of State to a charitable organization that receives contributions from the public
+* Articles of Incorporation that state the corporation is a non-profit.
+
+Step 2:: Verify that the facility is licensed as a personal care home by the Compliance Monitoring Section of the DCH, Health Facility Regulation Division.
+
+Step 3:: Verify that the facility is licensed to serve two through sixteen residents based on the capacity designated on the Personal Care Home Permit.
+
+NOTE: Verify all points of eligibility in Steps 1, 2, and 3 at the following times:
+
+* At initial application
+* When an AU member becomes a resident of the facility
+* When information known to the agency conflicts with the A/R's statement.
+
+[arabic,start=4]
+
+Step 4:: If the facility does not meet the requirements in Steps 1-3, deny the application or terminate benefits.
+If the facility does meet the requirements, proceed to Step 5.
+
+Step 5:: Budget all the income of the AU member, even when the income goes directly to the group home.
+
+Step 6:: Determine *room/board supplements* paid through the Supportive Living Program Community Residential Services of the Department of Behavioral Health and Developmental Diseases (DBHDD) according to the following criteria:
+
+* verify the amount of the room/board supplement through the DBHDD case manager
+* count the room/board supplement as unearned income and add it to any other gross countable income of the resident.
+
+Step 7:: Determine *personal allowance supplements* according to the following criteria:
+
+* verify the amount of the personal allowance supplement from the DBHDD case manager
+* count the allowance as unearned income and add it to any other gross countable income of the resident.
+
+NOTE: Some residents receive income sufficient to pay for room/board and the personal allowance without supplements from DBHDD.
+
+Step 8:: If the AU member pays for shelter and meals in a combined amount, determine shelter/utility costs by deducting the maximum benefit amount for a one-person AU from the combined amount.
+If the AU has more than one member, determine the shelter/utility costs by deducting the maximum allotment for a one-person AU from each AU member's payment and adding the results together to get the total shelter/utility costs.
+
+NOTE: Some group homes charge a basic rate for shelter and meals and increased amounts for medical care.
+If that is the situation, the basic rate minus the SNAP maximum benefit amount for a one-person AU may be used to determine the shelter costs for a person and the difference between the basic rate and the higher rate may be medical costs.
+
+[caption=Exception]
+NOTE: If a provider can itemize specific charges for shelter, count these charges as a shelter deduction.
+
+Step 9:: Allow medical expenses as deductions if the facility or resident can provide verification and the expenses are identified separately.
+
+NOTE: If the amount paid for medical and shelter costs cannot be separately identified, no deduction is allowed for the costs.
+
+Step 10:: Determine eligibility and the benefit level based on income and expenses using the budgeting criteria appropriate to the AU.
+Refer to Chapter 3600, Budgeting Overview.

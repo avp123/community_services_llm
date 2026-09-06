@@ -1,0 +1,53 @@
+= Appendix B Responsibilities of the Office of State Administrative Hearings (OSAH)
+:chapter-number: Appendix B
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: Appendix B
+:policy-title: Responsibilities of the OSAH
+:previous-mt-number: MT-59
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The Office of State Administrative Hearings (OSAH) has specific duties regarding the conduct and requirements of a hearing.
+
+== Basic Considerations
+
+OSAH must take the following actions as needed:
+
+* provide at least ten days prior to the hearing of advance written notice to all responsible parties and representatives involved to permit adequate preparation of the case
+* change the time and place of the hearing upon its own motion or for good cause shown by the AU
+* adjourn, postpone, or reopen the hearing for receipt of additional information at any time prior to the mailing of the state’s decision on the case
+* conduct a single group hearing, consolidating cases where the sole issue involved is one of state and/or federal law, regulation, or policy
+* conduct a single hearing for both programs if a change in the AU’s TANF circumstances requires a reduction or termination of SNAP benefits
+* conduct the hearing on a newly emerged issue if at the hearing it becomes evident that the issue involved is different from the one on which the hearing was originally requested
+* order an independent medical assessment or professional evaluation at the agency’s expense if the hearing involves medical issues such as a diagnosis, an examining physician's report, or a medical review team’s decision. The source of the evaluation must be satisfactory to the AU and the agency.
+
+NOTE: Members of the medical review team may not be subpoenaed.
+
+* determine the number of persons who may attend the hearing
+* deny or dismiss a hearing request
+* utilize only those facts or opinions which are evidence of the record, or which may be officially noticed and are therefore, subject to the rights of objection, rebuttal, and/or cross-examination by the parties. The Administrative Law Judge (ALJ) is the sole trier of fact.
+* complete the hearing and make a decision within 60 days from the date of receipt of the oral or written hearing request
+* mail the hearing decision to the claimant and the local office
+* inform the claimant of appeal rights and that an appeal may result in a reversal of the decision.
+
+== The Hearing Decision
+
+Hearing decisions must meet the following criteria:
+
+* comply with federal law, regulations, or policy
+* take into consideration only those issues directly related to the action being appealed
+* be based on evidence and other material introduced at the hearing
+* be accessible to the public, with the identity of the AU protected
+* become part of the case record.
+
+== The Administrative Law Judge’s Official Record
+
+The Administrative Law Judge's (ALJ) official record must meet the following criteria:
+
+* contain the substance of what transpired at the hearing and all papers and requests filed in the official proceedings
+* be available to the AU or its representative by appointment for copying and inspection.
+
+

@@ -1,0 +1,106 @@
+= 3215 Residents of Battered Women and Children Shelters
+:chapter-number: 3200
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: 3215
+:policy-title: Residents of Battered Women and Children Shelters
+:previous-mt-number: MT-55
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Women and children who leave their normal residence to seek protection in a shelter for battered women and children may be eligible for Supplemental Nutrition Assistance Program (SNAP) benefits.
+
+== Basic Considerations
+
+The following policy applies to a resident of a battered women and children shelter:
+
+* May apply or have an authorized representative apply for and/or receive benefits on her behalf.
+The resident may designate an employee of the shelter to act as the authorized representative.
+
+* May apply as an assistance unit of one or an assistance unit which includes the resident and her children who live with her at the shelter.
+
+* Must meet all non-financial and financial eligibility criteria with the following exceptions.
+
+* The resident and her children who live with her at the shelter may receive benefits as dual participants.
+Dual participation means that the resident and her children may be certified for the same months in two different assistance units, if the abuser is included in one of the assistance units.
+
+* Only the resident and her children's countable resources, income and expenses are considered in the eligibility determination.
+Resources owned jointly with the household of the former abuser are considered inaccessible to the battered woman's AU.
+
+Residents of a shelter for battered women and children have the same rights and responsibilities as all other applicants/recipients in the program.
+
+In order for the _residents_ of a shelter for battered women and children to become eligible for benefits, the organization that operates the shelter must take the following steps:
+
+* Be publicly operated or a nonprofit private entity.
+
+* Have a portion of the facility designated exclusively for battered women and children, if other individuals are served in the facility.
+
+
+* Provide the local DFCS office with verification of nonprofit tax status and certification or proof of recognition as a shelter for battered women and children as defined by SNAP regulations.
+
+* Maintain a monthly listing of residents who receive SNAP including dates of arrival and departure.
+The listings are made available for review by DFCS staff that makes quarterly on-site visits to the shelter.
+
+* Obtain authorization to purchase food from a USDA wholesaler.
+USDA authorization is primary evidence that the shelter meets the requirements under SNAP regulations.
++
+--
+*To obtain authorization, contact:*
+
+[%hardbreaks]
+USDA, FNS
+Atlanta Field Office
+61 Forsyth Street, Suite 8T36
+Atlanta, Georgia 30303-3415
+(404) 562-1801
+--
+
+FNS authorization is required if the shelter accepts SNAP benefits from residents in exchange for meals and purchases food from wholesalers.
+If food is purchased from retail stores, FNS authorization is not required.
+
+
+*Optional*
+
+* May obtain authorization to receive and use SNAP benefits to purchase food from wholesalers
+
+* Is assigned a seven-digit SNAP authorization number, if authorized by FNS.
+The authorization number is electronically transmitted to the electronic benefits transfer (EBT) contractor.
+
+* Is provided with instructions to obtain a point of sale device and/or set up EBT accounts for transactions and other information.
+If the shelter is authorized by FNS to purchase food from a wholesaler, the residents' benefits are transferred to the shelter's bank account.
++
+--
+*For information contact:*
+
+[%hardbreaks]
+Division of Family and Children Services
+Office of Family Independence EBT Unit
+47 Trinity Ave. SW, 1st Floor
+Atlanta, Georgia 30334
+Phone: 404-657-3706
+Email: ebt@dhs.ga.gov
+--
+
+== Procedures
+
+Follow the procedures below if the A/R states she is a resident of a battered women and children shelter.
+
+Step 1:: Determine if the facility meets the definition of a SNAP approved shelter for battered women and children.
+
+Step 2:: Determine if the shelter resident is currently certified as a member of any other assistance unit (AU) that includes the abuser.
+
+* If certified in an AU with the abuser, then the A/R may receive an additional allotment as a separate AU as follows:
+** The AU may receive an additional allotment as a separate AU only once in a specified month.
+** Benefits are prorated from the date of the application.
+* If certified in any other AU, the A/R may be certified in the month the deletion from the other AU is completed.
+
+Step 3:: Count only the resources available to the A/R (if applicable).
+Resources jointly owned by the household of the abuser are considered inaccessible.
+
+Step 4:: Count only the income of the A/R.
+
+Step 5:: Include any room payments made by the A/R to the battered women's shelter as a shelter expense.
+
+Step 6:: Make required changes to the former AU's eligibility and benefit level.

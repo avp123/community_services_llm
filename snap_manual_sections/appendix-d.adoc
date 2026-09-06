@@ -1,0 +1,133 @@
+= Appendix D Case Record Maintenance and Document Management
+:chapter-number: Appendix D
+:effective-date: July 2025
+:mt: MT-83
+:policy-number: Appendix D
+:policy-title: Case Record Maintenance and Document Management
+:previous-mt-number: MT-61
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The Web-Center Enterprise Capture (WEC) system, used to scan and upload documents directly into the Gateway System, must be maintained in a manner that ensures it is readily accessible and contains the documents necessary to support all actions taken regarding the case.
+
+== Basic Considerations
+
+This section outlines statewide business processes to add, search, and view documents in WEC.
+Georgia's Gateway System maintains an electronic case file for all scanned information for the AU, eliminating the need for a hard copy case record.
+
+A document gets scanned to WEC or is uploaded directly to Gateway using the Document Management module (DMM).
+
+A case record is organized into three sections as outlined below:
+
+* Permanent verification
+* Benefits support
+* Claims
+
+=== Permanent Verification Section
+
+All documents that verify information that does not change must be filed in document management.
+When needed, the following items must be filed:
+
+* documents verifying age, identity, and citizenship
+* copies of Social Security cards
+* Form 189, Referral for Social Security Application
+* other legal documents such as divorce decree, verification of death, and custody or guardianship papers
+* any other documents, such as verification of shelter, that may be considered permanent verification by the county department
+* most current signed HIPAA forms
+
+=== Benefit Support Section
+
+Information that supports an AU's eligibility and its benefit level at application, recertification, or interim change must be filed.
+When needed, the following items must be filed:
+
+* Hearing decisions
+* Quality Control referrals
+* Manual notices
+
+=== Initial Application
+
+The following types of information related to an initial application for assistance must be filed in WEC:
+
+* Form 297, Application for Benefits, if manually completed by the AU
+* Form 297A, Rights and Responsibilities (Signature Page)
+* Copies of written referrals
+* All verification provided for the application process, other than permanent verification
+* Copies of all communications with the AU that are not maintained in the system
+* All paperwork completed and/or signed by the AU
+
+=== Recertifications (Renewals)
+
+The following types of information related to a recertification of eligibility must be filed in WEC:
+
+* Application form, if manually completed by the AU
+* Form 297A, Rights and Responsibilities (Signature Page)
+* Copies of written referrals
+* All verification provided for the recertification process
+* Copies of all communications with the AU that are not maintained in the system
+* All paperwork completed and/or signed by the AU
+
+=== Periodic Reporting
+
+The following types of information related to a periodic report (PR) must be filed in WEC:
+
+•	Form submitted for the PR, if manually completed by the AU
+•	All verification provided for the PR process
+•	All paperwork completed and/or signed by the AU
+•	Copies of all communications with the AU that are not maintained in the system
+•	Copies of written referrals
+
+
+=== Interim Changes
+
+The following types of information related to interim changes must be filed in WEC:
+
+* Copies of written referrals
+* All verification provided for the process of the interim change
+* Copies of all communications with the AU that are not maintained in the system
+* All paperwork completed or signed by the AU
+
+=== Claims
+
+The following types of information related to claims must be filed in WEC:
+
+* Report of claim determination
+* Form 5667, Request for Case Review (if a manual form was completed)
+* Repayment and/or Form 5640, Waiver of Disqualification Hearing, or court consent agreement (PAC counties, court order)
+* Disqualification hearing decision
+* Paperwork relating to a claim as determined in the Office of Inspector General (OIG) Benefit Recovery, Volume IV Manual
+
+NOTE: Refer to OFI Benefit Recovery Manual, Volume IV, for additional policy regarding claims files and destruction of claims files.
+
+=== Retention of Materials for Inactive Cases
+
+Case record material must be retained for a period of three years dating from the calendar month in which the most recent activity took place.
+Case material may be purged or destroyed when no activity has taken place for a period of 36 consecutive calendar months.
+
+=== Retention of Materials for Active Cases
+
+Case record material relative to the establishment of eligibility must be retained for three years.
+All materials three years and older may be destroyed with the following exception:
+
+* Any verification used to establish eligibility factors on which current eligibility is based.
+
+NOTE: The forms and/or materials listed above must be retained in the case record until they are no longer applicable to current eligibility or until the case record is destroyed in the same manner as an inactive record.
+
+=== Computer-Generated Reports
+
+Computer-generated reports are considered case record material, if documented with information.
+Documented computer-generated reports must also be retained for three years as provided in this section.
+
+=== Claims Files Retention
+
+Closed claims files must be retained for three years, dating from the end of the federal fiscal year in which the last claim was paid in full or terminated, and/or through one fiscal audit.
+The portion of the claim file supporting intentional program violation must be retained permanently.
+
+Case material and/or claims material that supports a disqualification for an intentional program violation are permanent documents and cannot be destroyed.
+
+=== Case Record or Material Case Record
+
+When destroying a case record or any document carrying the names of applicants or recipients, or social security numbers or other identifying or confidential information, the materials must be shredded or burned.
+
+Refer to Section 3005, Confidentiality; Section 3010, Voter Registration; Section 3040, Health Information Portability and Accountability Act of 1996 (HIPAA); Section 3500, Computer Matches and the OIG Benefit Recovery, Volume IV Manual, about policies governing case record information and materials.

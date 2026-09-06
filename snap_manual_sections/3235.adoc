@@ -1,0 +1,114 @@
+= 3235 Seasonal Farmworkers (Migrant or Non-Migrant)
+:chapter-number: 3200
+:effective-date: January 2025
+:mt: MT-80
+:policy-number: 3235
+:policy-title: Seasonal Farmworkers (Migrant or Non-Migrant)
+:previous-mt-number: MT-55
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+A migrant or seasonal farmworker who is employed in agricultural work of a seasonal or temporary nature is subject to special treatment.
+
+== Basic Considerations
+
+Migrant *AND* seasonal farmworkers have both of the following characteristics:
+
+* are engaged in seasonal work such as planting, harvesting, packing, canning, freezing, etc.
+related to an agricultural crop, and
+
+* are hired on a temporary basis when a job requires more workers than the farm employs regularly.
+
+Migrant farmworkers move from one home base region or locale to another to engage in or seek seasonal farm, land, or crop cultivation activities.
+The move may be within a state or across state lines.
+
+A seasonal farmworker is not required to be absent from his permanent place of residence.
+
+NOTE: If the season for the crop has not occurred at the time of application or recertification (renewal), the AU may still be treated as a seasonal farmworker AU if this work is the pattern from past years.
+
+An AU is a migrant or seasonal farmworker AU if at least one adult member of the AU meets the above criteria.
+Only AUs with a migrant or seasonal farmworker(s) are defined as destitute.
+
+A migrant or seasonal farmworker AU who meets destitute criteria is entitled to expedited processing.
+Refer to xref:3110.adoc[].
+
+=== Destitute AUs
+
+If one of the following situations exists for the AU and the AU has liquid resources that do not exceed $100, consider the AU destitute.
+
+=== Terminated Source of Income
+
+The AU's only income for the month of application was received from a terminated source prior to the date of application.
+
+If one of the following situations exists, the income is considered to be from a terminated source:
+
+* The AU's income is received on a monthly or more frequent basis and will not be received after the date of application or during the following month,
+
+* The AU's income is received less often than monthly and will not be received in the month in which the next payment would normally be received.
+
+=== New Income Source
+
+The AU's only income for the month of application is from a new source and income from the new source will not be received by the 10^th^ calendar day after the date of application.
+
+If one of the following situations exists, the income is considered to be from a new source:
+
+* The AU's income is received monthly or more frequently, but income of more than $25 will not be received within 30 days before the date of application.
+* The AU's income is received less often than monthly and income of no more than $25 has been received since the last normal payday and will not be received at the next normal payday.
+
+=== Income from Terminated and New Sources
+
+The AU's only income for the month is from both a terminated source before the date of application and a new source after the date of application.
+
+* If the AU receives no income from the terminated source after the date of application and income of more than $25 from the new source will not be received by the 10^th^ day after the date of application, then the income is considered to be from a terminated or new source.
+
+=== Same Source of Income
+
+If one of the following situations exists, consider income as being received from the same source and is not a new or terminated source:
+
+* The AU member changes jobs but continues to work for the same employer.
+* A self-employed person secures contracts or other work from different customers.
+* The AU moves from one crew chief to another, but the income is received from the same grower.
+
+NOTE: If income is received from a different grower, it is considered to be from a different source.
+
+== Procedures
+
+Follow the procedures below to calculate the income of destitute AUs.
+
+* Exclude reimbursements for travel expenses.
+
+* Count as income a travel advance that is an advance on future wages and will be subtracted from future wages.
++
+NOTE: Wage advances, whether excluded as reimbursements or included as income, are not considered when determining if the AU meets the definition of destitute.
+
+* For the month of application, consider only the income received between the first of the month and the date of application.
+
+* For the month of application, do not count the income from a new source anticipated to be received *after* the date of application.
+
+The following program exemptions are applied to a migrant or seasonal farmworker AU:
+
+* Exempt from work registration any AU member who is under an agreement with an employer or crew chief to begin employment when the season begins.
+
+* Exempt the entire value of a licensed vehicle when the vehicle is necessary for long-distance travel to follow the workstream.
++
+--
+Budget prospectively using the conversion factor.
+
+Do not prorate the initial month’s benefits of migrant and seasonal farmworker households unless they have not been certified for at least one month prior to the new application.
+--
+
+* At recertification (renewal), do not count a new source of income in the first month of the  certification period if the following occurs:
+
+* the income is less than $25.00
++
+*AND*
+
+* the new income will not be received from the new source by the 10^th^ calendar day after the date of the AU's normal issuance cycle.
+
+* At application or recertification (renewal), prospectively budget income that is expected to be received over the remainder of the certification period.
+Refer to xref:3605.adoc[].
+
+Process as an expedited services application, if destitute.
+Refer to xref:3110.adoc[].

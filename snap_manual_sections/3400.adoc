@@ -1,0 +1,59 @@
+= 3400 Financial Eligibility Criteria Overview
+:chapter-number: 3400
+:effective-date: October 2024
+:mt: MT-79
+:policy-number: 3400
+:policy-title: Financial Eligibility Criteria Overview
+:previous-mt-number: MT-69
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The countable resources and income of all Assistance Unit (AU) members are considered when determining eligibility and the benefit level of the AU.
+
+== Basic Considerations
+
+The resource limits are set by federal law.
+
+=== Resource Limits
+
+The resource limits are as follows:
+
+* $4,500 for AUs that contain at least one AU member aged 60 or older or disabled per SNAP policy.
++
+NOTE: If the only member in the AU is age 60 or older or disabled and is ineligible or sanctioned for any reason, then the resource limit will revert to the $3,000 limit.
+
+* $3,000 for all other AUs.
++
+NOTE: The resources of individuals who are categorically eligible for SNAP (Supplemental Nutrition Assistance Program) benefits (i.e. TANF or SSI recipients, and AUs receiving TANF Community Outreach Services (TCOS) are not counted toward the resource limit).
+
+The SNAP resource policy is the same as the TANF Community Outreach Services policy, which excludes all non-liquid resources from the eligibility determination.
+The liquid resources are counted for AUs that [.underline]*are not* categorically eligible for SNAP benefits.
+
+All countable resources that are available to the AU are applied to the resource limit.
+
+If the countable resources are less than or equal to the resource limit, then the AU is eligible for SNAP benefits based on resources.
+
+If the countable resources exceed the resource limit, then the AU is ineligible for SNAP benefits based on resources.
+
+=== Income Limits
+
+The income limits for SNAP are based on the federal poverty level (FPL), which are set by the U.S. Department of Labor.
+The income limits are the same for all 48 states with the exception of Alaska and Hawaii.
+
+Most AUs are subject to the maximum gross monthly income limit, which is 130% of the FPL.
+
+An AU that contains a member aged 60 or older and/or disabled as defined by SNAP policy is [.underline]*not subject* to the gross income limit.
+Eligibility is based on the net monthly income limit which is 100% of the FPL.
+
+An AU that contains all TANF and/or SSI recipients is not subject to the gross monthly income limit.
+
+=== Income Limits and Benefit Levels
+
+An AU whose income is at or below the income limit is eligible to receive a benefit amount based on AU size and countable net income.
+
+An AU in which all members receive TANF, SSI or TCOS services is [.underline]*categorically* eligible for SNAP benefits and has met the gross and net income limits for the program.
+Refer to xref:3210.adoc[].
+
+Refer to Appendix A, Financial Standards, for the Allotment and Proration Tables.

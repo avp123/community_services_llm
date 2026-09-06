@@ -1,0 +1,240 @@
+= 3380 Failure to Comply with Work Requirements
+:chapter-number: 3300
+:effective-date: April 2025
+:mt: MT-82
+:policy-number: 3380
+:policy-title: Failure to Comply with Work Requirements
+:previous-mt-number: MT-68
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Failure to comply with general work requirements applies to work registrants, which includes ABAWDs and mandatory registrants. Those who fail to comply with general work requirements without good cause, and have committed a violation may result in a sanction against an assistance unit (AU) member.
+
+== Basic Considerations
+
+The responsibility for determining compliance with work registration requirements lies with the eligibility staff.
+
+The responsibility for determining compliance with the SNAP Works Program participation requirements lies with the SNAP Works Employment Services (ES) staff.
+
+NOTE: Currently, the SNAP Works Program is a voluntary program.
+SNAP Works volunteer participants are not subject to sanctions for failure to participate in the program.
+
+=== Failure to Comply
+
+A determination of failure to comply with general work requirements results in the application of a Failure to Perform a Required Action.
+SNAP benefits cannot increase as a result of the application of the work sanction.
+Refer to xref:3385.adoc[].
+
+As a condition of eligibility for SNAP benefits, each household member who is not exempt must comply with the following general work requirements:
+
+* Register for work or be registered by the State at the time of application and every 12 months after initial registration.
+
+* Participate in a SNAP Works Program, if required by the State.
+
+* Participate in a workfare program, if required by the State.
+
+* Provide sufficient information for the agency to determine the employment status, job availability, or activity participation of the individual.
+
+* Produce required documentation to verify completion of participation in work, education, training, or workfare activities.
+
+* Accept an offer of employment paying at least the minimum wage, at a site or plant not subject to strike or lockout at the time of refusal.
+
+* Do not voluntarily and without good cause quit a job of 30 or more hours a week or reduce work effort to less than 30 hours a week.
+
+** 30 hours or more per week or weekly earnings equivalent to the federal minimum wage multiplied by 30 hours
++
+*and*
+
+** quit within 30 days of the date of application or anytime thereafter.
+
+If the work registrant fails to meet the above general work requirements, then they may be subject to sanction for failure to adhere to the requirements.
+
+If voluntary quit or voluntary reduction of hours being worked to less than 30 hours per week is determined on an SR case at recertification, apply the appropriate sanction beginning with the first month of the new certification period.
+
+A notice of the minimum sanction period must be sent on all voluntary quit or voluntary reduction decisions.
+
+NOTE: Terminating a self-employment enterprise or resigning from a job at the request of the employer shall not be considered a voluntary quit.
+
+NOTE: If the case remains active, the worker must enter an alert to contact the A/R to determine eligibility at the end of the minimum sanction period.
+
+=== Good Cause
+
+A determination of good cause is made prior to applying a work sanction.
+Prior to applying a sanction, contact is made with the AU to determine if good cause exists.
+
+Good cause is not considered prior to continuing a sanction because the work registrant fails to follow through after requesting compliance.
+
+Good cause includes circumstances beyond the AU's control such as, but not limited to the following situations:
+
+* illness, either temporary or permanent,
+* illness of another household member that requires the presence of the mandatory registrant OR ABAWD,
+* a household emergency,
+* unavailability of transportation,
+* barriers beyond the AU's control,
+* temporary absence from work due to holidays or breaks or due to workload, and the employee retains employment,
+* leaving employment due to:
+** discrimination by an employer due to age, race, sex, color, disability, religious belief, national origin, or political beliefs,
+** work demands or conditions that render continued employment unreasonable, such as working without being paid on schedule,
+** acceptance of employment or enrollment of at least half-time in any recognized school, training program, or institution of higher education,
+** acceptance by an AU member of employment or enrollment in any recognized school or training program or institution of higher learning in another county or state which requires AU members to quit employment,
+** retirement (employer designates person as retired),
+** leaving employment in connection with patterns of employment such as migrant farm labor, seasonal work, or construction work,
+** acceptance of a bona fide offer of employment which fails to materialize or fails to result in at least 30 hours of employment or 30 hours multiplied by federal minimum wage, due to the employer or circumstances beyond the AU'S ability to control, or
+** childcare needs and the availability of services.
+* leaving employment which is unsuitable.
+Unsuitable employment is defined as:
+** a wage less than the federal minimum wage or 80% of the federal minimum wage if the job is not subject to minimum wage limits,
+** employment offered on a piece-rate basis with the average hourly yield expected to be less than the federal minimum wage,
+** a job which requires the A/R to join, resign from, or refrain from joining a legitimate labor organization,
+** employment involving an unreasonable degree of risk to health and/or safety,
+** a work site subject to a strike or lockout at the time the offer of employment is made, unless the strike is prohibited by the Taft-Hartley Act or an injunction has been issued under the Railroad Labor Act,
+** work for which the A/R is unfit to perform as documented by medical evidence or other reliable sources,
+** a job in which the working hours or nature of employment interfere with the work registrant's religious observances, convictions, or beliefs,
+** a job in which the distance between the work site and the home residence exceeds 2 hours per day commuting time, not including childcare transportation, and in which distance prohibits walking to employment and there is no public or private transportation available,
+** leaving a job in connection with patterns of employment in which workers frequently move from one employer to another, such as migrant farm labor or construction work.
+
+NOTE: An employee of the Federal or State Government or a political subdivision of the State who is dismissed from that employment for participating in a strike is considered to have voluntarily quit without good cause.
+
+=== Violations
+
+Penalties for violations of work requirements are as follows:
+
+* First violation - The AU member is ineligible for a minimum of one month or until compliance, whichever is later.
+* Second violation - The AU member is ineligible for a minimum of three months or until compliance, whichever is later.
+* Third and subsequent violations – The AU member is ineligible for a minimum of six months or until compliance, whichever is later.
++
+NOTE: An individual AU member may remain sanctioned indefinitely.
+
+[caption=Exception]
+NOTE: Sanction periods for voluntary quit and voluntary reduction of work hours to less than 30 hours per week are no longer than the minimum sanction period.
+The mandatory registrant or ABAWD is potentially eligible following the minimum sanction period.
+
+The sanction begins the month after the timely notice expires.
+
+Provide the AU with an option to request a fair hearing.
+
+Apply the sanction even if the case is closed using xref:attachment$form-333.pdf[SNAP Sanction/Penalty Notice form 333].
+
+=== Notice to AU
+
+Notify the AU that a sanction will be imposed.
+Imposition of a sanction requires timely notice if the case is active and the action taken is an interim change.
+If the case is closed, or the AU is in the last month of the certification period, give the AU adequate notice of the sanction.
+
+Provide the AU with a notice of the following information:
+
+* name of person who failed to comply
+* the particular act of non-compliance
+* the sanction period
+* a statement that the individual may regain eligibility at the end of the sanction period
+* the requirements for ending the sanction.
+
+This information must be manually added to the system-generated notice or use xref:attachment$form-333.pdf[SNAP Sanction/Penalty Notice form 333].
+
+=== Imposition Sanctions
+
+When a sanction is imposed, the countable resources and income of the sanctioned individual are counted in their entirety.
+Refer to xref:3625.adoc[].
+
+=== Work Sanction Is Not Imposed
+
+A work sanction is not imposed if one of the following conditions exists:
+
+* the AU member is exempt from work registration,
+* good cause exists for failure to comply,
+* the work registrant, including mandatory registrant and/or ABAWD, complies by the effective month of sanction,
+* the AU requests a hearing and continuation of benefits during the timely notice period.
+
+=== Work Sanction Is Imposed
+
+The following criteria apply to a SNAP work sanction:
+
+* imposed for a specific period of time.
+* imposed even if the mandatory registrant or ABAWD is already sanctioned for violations of work requirements or other SNAP requirements.
+Impose a sanction for a third violation even though the mandatory registrant or ABAWD member is currently serving out a second violation.
+Work sanctions run concurrently with other work sanctions or program violations.
+* imposed regardless of the status of the mandatory registrant or ABAWD (active or closed).
+The sanction may begin with the first day following the last day of the certification period and continue for the minimum period even if the AU does not reapply.
+
+NOTE: The violation must occur when the mandatory registrant or ABAWD is in pending or active status.
+
+The mandatory registrant or ABAWD cannot be re-certified for benefits until the minimum sanction period is served.
+
+At application, compliance or regaining of eligibility must be completed by the end of the 30-day application SOP.
+
+For ongoing cases, compliance or regaining of eligibility is completed in a month in which the work registrant can receive benefits.
+Work registrants may not be required to participate in work activities in sanction months.
+
+Prior to imposing a sanction, determine if the individual is exempt from work registration or has good cause for failure to comply.
+
+The sanction follows the mandatory registrant or ABAWD from one AU to another.
+In the case of ABAWDs, a failure to participate sanction follows the ABAWD from a non-exempt county to another county, regardless of the county's exemption status.
+At the end of the minimum sanction period, re-determine work registration status and lift the sanction if appropriate.
+If the individual is still an ABAWD in an exempt county, re-registration lifts the sanction.
+
+If the AU requests continuation of benefits pending a fair hearing and the sanction period is upheld, the sanction period begins the first month after the agency receives the hearing decision.
+
+If an application for benefits is filed in the final month of the sanction period, deny the case for the application month and certify the case for the ongoing months, if all other eligibility requirements are met.
+
+In cases of voluntary quit or voluntary reduction of work hours to less than 30 hours per week for a newly approved application, the sanction begins from the date of the reduction of wages or quit, if the date is within 30 days of the date of initial application.
+
+In cases of voluntary quit or voluntary reduction of work hours to less than 30 hours per week for an ongoing AU, the sanction begins the month following the month in which timely notice ends.
+
+=== Lifting Sanctions, Before or After, The Minimum Sanction Period Ends
+
+If the mandatory registrant and/or ABAWD becomes exempt from work registration prior to completing the minimum sanction period, lift the sanction.
+
+=== Compliance After Minimum Period is Served
+
+If the sanctioned mandatory registrant or ABAWD requests to comply after the minimum sanction period has been served, then the eligibility worker (EW) starts the compliance process by completing the certification process.
+Once the minimum sanction period has been served, review the work registration status.
+
+If a request to comply occurs at the same time as an initial application for SNAP, benefits for the sanctioned individual are certified back to the date of application if compliance is completed within the standard of promptness (SOP).
+
+If compliance is not completed within the SOP, the AU member remains sanctioned until compliance.
+
+=== Sanctioned AU Member Moves
+
+If the sanctioned individual moves and is added to another AU, review the work registration of the sanctioned individual in the new AU and take the appropriate action.
+
+Review the work registration status for members of the old AU.
+
+=== ES TANF Sanctioned AU Member
+
+SNAP recipients who are sanctioned in TANF for failure to comply with work requirements will also have a SNAP work sanction applied.
+The sanction is applied even when the individual is exempt from SNAP work requirements.
+
+The SNAP work sanction is applied for as long as the individual is TANF sanctioned.
+The sanction may last for no more than 12 months when the registrant is permanently sanctioned for TANF ES violations.
+
+Re-determine the SNAP work registration status following the twelfth month of the sanction.
+
+In addition, a SNAP _failure to perform a required action_ penalty is imposed.
+Refer to xref:3385.adoc[] for the policy.
+
+Use the following chart to determine compliance for all work registrants including mandatory registrants and ABAWDs.
+
+[#chart-3380-1]
+.CHART 3380.1 – METHODS TO COMPLY WITH WORK REQUIREMENTS
+|===
+^| CAUSE OF SANCTION ^| COMPLIANCE
+
+| Refusal to register.
+| Register to work.
+
+| Failure to provide information to determine work status.
+| Provide information to determine work status.
+
+| Refusal to accept a bona fide offer of suitable employment at a wage not less than the higher of the state or federal minimum wage.
+| Acceptance of this employment or other employment.
+
+| Voluntary quit or voluntary reduction of work hours to less than 30 hours.
+| Serve the minimum sanction period and comply with the general work requirements.
+
+| Failure to comply with TANF/ES.
+(not applicable to ABAWDs)
+| Compliance with TANF/ES.
+If TANF/ES non-compliance results in closure of the TANF AU, the sanctioned AU member is not sanctioned for longer than 12 months.
+|===

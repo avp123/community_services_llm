@@ -1,0 +1,348 @@
+= 3710 Recertifications (Renewals)
+:chapter-number: 3700
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3710
+:policy-title: Recertifications (Renewals)
+:previous-mt-number: MT-86
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+7 CFR § 273.14
+
+== Requirements
+
+A review of the Assistance Unit's (AU) circumstances is required to continue Supplemental Nutrition Assistance Program (SNAP) benefits.
+The recertification (renewal) process includes filing an application, having an interview (if required), and providing required information.
+
+Notification is sent to the AU regarding its eligibility status.
+
+== Basic Considerations
+
+A renewal application is an application to continue SNAP benefits.
+All points of eligibility are reestablished, and all discrepancies are resolved.
+Benefits [.underline]*are not* continued beyond the end of the certification period without reestablishing the AU's eligibility.
+
+An AU must complete the renewal process in the last month of the current certification period to receive uninterrupted benefits. The date of the renewal application is the date the form is received by the agency.
+
+=== Types of Recertifications (Renewals)
+
+Renewals are identified and processed as follows:
+
+* Timely
+* Untimely
+* Late
+
+=== Timely Recertification (Renewals)
+
+A *timely renewal* is an application for continued benefits submitted by the AU between the 1^st^ and 15^th^ day of the last month of the certification period.
+Eligible AUs are entitled to receive uninterrupted benefits (i.e., benefits are available by their normal issuance cycle).
+
+NOTE: A renewal application received in the month prior to the last month of the certification period is processed as a timely renewal.
+
+
+=== Untimely Recertifications (Renewals)
+
+An *untimely renewal* is an application for continued benefits submitted by the AU between the 16^th^ and the last day of the month of the current certification period.
+
+AUs filing untimely renewals lose the right to receive uninterrupted benefits.
+
+=== Late Recertifications (Renewals)
+
+A late renewal is an application filed within 30 days following the expired certification period if the AU [.underline]#fails to file a renewal application# in the last month of the certification period.
+
+Forms received in the month following the last month of the current certification period are treated as *late renewals*, and *benefits are prorated* from the date the valid form is received.
+Refer to <<chart-3710-1,Chart 3710.1, Processing SNAP Recertifications (Renewals)>>, in this section.
+
+=== Expedited Services
+
+AUs that reapply after an expired certification period or within the 30 days following the last month of the certification period may be eligible for expedited services.
+Screen the renewal application to determine potential eligibility for expedited services.
+
+NOTE: AUs reapplying before the end of their current certification period are not eligible for expedited services.
+
+=== Reported Changes
+
+Changes reported during the renewal are effective the first month of the new certification period.
+
+=== Expedited Changes
+
+Expedited changes reported in the month preceding the last month of the certification period are processed according to the Interim Changes policy in Section 3715 of the manual. Refer to xref:3715.adoc[]
+
+=== Periodic Reporting
+
+Periodic reporting is required for households that are certified for longer than 6 months when the agency implements extended certification periods. Effective March 2, 2026,  Periodic Reporting will be phased out for regular SNAP AUs since the agency has terminated extended certification periods.
+Active households that have not yet completed their recertification will continue to complete Periodic Reports as required until their next recertification.
+Once the household is assigned a new certification period at recertification, periodic reports will no longer be required.
+
+Periodic reporting is currently waived for Senior SNAP households, unless the household becomes ineligible for Senior SNAP, but remains eligible for SNAP during their 36-month certification period.
+Upon the transition, the household must complete periodic reports until the next recertification.
+At recertification, the appropriate certification period will be assigned, and periodic reports will no longer be required.
+
+NOTE: *Periodic reporting is not a recertification.*
+
+See xref:3730.adoc[] for Periodic Reporting policy.
+
+=== Standard of Promptness (SOP)
+
+For timely renewals, approvals, and denials must be completed by the end of the last month of the current certification period.
+Eligible AUs must receive notification of their eligibility and notification of receipt of their benefits by the next issuance cycle.
+Ineligible AUs must receive notification of their denial by the end of the last month of the current certification period.
+
+An untimely renewal must be approved in sufficient time for the AU to receive benefits by the 30^th^ day from the date of the renewal application.
+Denials must be completed by the 30^th^ day from the date of the renewal application.
+Refer to <<chart-3710-1,Chart 3710.1, Processing SNAP Recertifications (Renewals)>>, in this section.
+
+=== Recertification (Renewal) Notices
+
+A renewal notice, either system-generated or manual, is used to notify the AU that the certification period is about to end.
+Copies of manual notices are uploaded to the Document Imaging System (DIS).
+Notification that a renewal is due and is about to expire must contain the following information:
+
+* the date on which the certification period ends
+* the date by which the AU must file an application for renewal to receive uninterrupted benefits
+* the consequences of failing to file an application for renewal in a timely manner
+* the right to receive a renewal application and have it accepted if it contains a name, address, and signature
+* the right to file a request for a renewal application, by mail, online, or in person
+* that the AU must complete an interview if an interview is required
+* that it is the AU's responsibility to reschedule a missed interview
+* that the AU must complete the renewal process and provide the required verification
+* the consequences of failing to comply with the renewal process
+* the address of the county office where the application can be filed
+* the telephone number of the agency
+* that AUs with SSI-only members may file an application for renewal at the SSA office
+* the right to request a fair hearing
+
+[#interview-requirements]
+=== Interviewing Requirements
+
+If the AU fails to attend the initial interview but contacts the agency to request another interview, then the assigned eligibility specialist (ES) must reschedule the interview.
+
+Customers eligible for an On-Demand interview will receive an On-Demand Interview Notice and text message (if applicable) to inform them that they need to contact DFCS to complete their required interview.
+Even though these customers will not receive scheduled appointments, an interview is still required.
+The customers must call the agency to complete the interview by the application SOP date.
+
+An interview with the head of the AU, an authorized representative, or another responsible AU member, is required at least once every 12 months for households certified for 12 months and every 4 months for ABAWD households. Households certified for 24 months are required to be interviewed at every recertification. The interview should be a telephone interview unless the AU requests a face-to-face interview. For policy on Senior SNAP interviews, refer to xref:3725.adoc[]
+
+NOTE: Effective March 2, 2026, households are not assigned 24-month certification periods.
+
+When the AU reports difficulty completing a scheduled interview, explore all interview options.
+To the extent practical, the interview must be scheduled to accommodate the needs of AUs with special circumstances, such as the following:
+
+* Working AUs
+* AUs with elderly and/or disabled members
+* AUs with ill members
+* AUs in rural areas or who have transportation issues
+* AUs in prolonged severe weather
+* AUs residing on reservations
+* AUs with adult members who do not speak English
+
+== Screening and Referral to SNAP Employment and Training (E&T)
+
+The eligibility specialist is required to screen all AU members who meet the following criteria during the interview to determine if a referral is appropriate to the SNAP E&T Program, also known as SNAP Works:
+
+* are at least 16 or 17 years of age [.underline]*and* the head of the household
+* are at least 18 years or older
+* are not receiving TANF benefits
+* are fit for employment
+
+For each AU member who meets the criteria, the SNAP Screening and Referral Tool page in Gateway (Form 864) must be completed, even if they are unavailable during the interview. If Gateway is down and screening cannot be completed in the system, a manual form 864 must be completed and uploaded. Once Gateway becomes available, staff are also required to complete the Screening & Referral Tool page.
+
+The Primary Individual (PI) can respond for other AU members who need to be screened if they wish to do so.
+
+If the PI provides screening information for other AU members but is unsure if they are ready to volunteer to be referred, then the eligibility specialist should document accordingly.
+
+If the PI states that they do not feel comfortable answering for other AU members regarding a referral, eligibility specialists should try to complete the screening and referral process and document accordingly.
+
+If the screening and referral process is not completed at application or recertification for absent AU members, the eligibility specialist should document accordingly.
+In that case, those AU members would need to go through the screening and referral process at the next application or recertification, even if the next recertification is an alternate renewal.
+
+=== Recertification (Renewal) Application Forms
+
+The following forms must be completed and/or signed by the AU or the household's authorized representative, where applicable, when processing a SNAP renewal:
+
+* xref:attachment$form-297.pdf[Form 297, Application for Benefits] and xref:attachment$form-297a.pdf[Form 297A, Rights and Responsibilities], if Form 297 is used
+* xref:attachment$form-508.pdf[Form 508, SNAP/Medicaid/TANF Renewal Form]
+* xref:attachment$form-859.pdf[Form 859, SNAP Consolidated Work Requirements Notice] (if work registrants are in the AU) This must be mailed manually if not sent out by Gateway.
+* xref:attachment$form-846.pdf[Form 846, Change Report Form], if requested by the AU
+
+=== Electronic Signatures
+
+Electronic signatures utilizing Adobe Signature or other E-Signature software will be acceptable for all SNAP forms. Examples of electronic signatures are the use of a Personal Identification Number (PIN), a computer password, clicking on an “I accept these conditions” button on a screen, or clicking on a “Submit” button on a screen. Adobe Signature, DocuSign, and Dropbox Sign are common software that offer E-Signature.
+A completed application consists of a signed application submitted with a name and address.
+A typed name on the signature line of a paper application is not acceptable.
+
+NOTE: If an authorized representative applies on behalf of a customer, the application must be signed by either a responsible member of the household or the household's authorized representative.
+
+== Procedures
+
+=== Standard Renewals
+
+A standard renewal is a review of eligibility that [.underline]*requires* either a telephone or face-to-face interview.
+Refer to <<interview-requirements, Interviewing Requirements>> in this section.
+
+NOTE: All AUs containing an ABAWD must receive a standard renewal.
+This is to determine the correct work registration status of the recipient.
+
+Follow the steps below to complete a standard renewal.
+
+[horizontal,labelwidth=10]
+*Step 1:* Mail the AU a renewal notice in the month preceding the last month of the certification period in sufficient time so that the AU may submit a renewal application by the 15th day of the last month of the certification period.
+
+*Step 2:* Review the form received and screen in the Gateway system to confirm it is a valid renewal.
+If it is a valid renewal,conduct an interview with the appropriate individual.
+A Notice of Missed Interview (NOMI) is sent if the interview appointment is missed or if the customer fails to call for their On-Demand interview.
+
+*Step 3:* Review the last initial or renewal application and all points of eligibility.
+Obtain verification when required.
+Refer to xref:3035.adoc#chart-3035-1[Chart 3035.1], in Section 3035, Verification, for the Summary Verification Chart for Recertification.
+
+*Step 4:* Review all interfaces (EIVS, DOL WI, DOL UCB, SDX, BENDEX, CS, Truv (if available), NAC, and eDRS, etc).
+
+*Step 5:* Document the information obtained and verified during the renewal process in the Gateway system.
+
+*Step 6:* Update the Gateway system to reflect changes and to indicate that the renewal is complete, assigning a new certification period.
+* xref:3105.adoc[Refer to Section 3105, Application Processing], xref:3105.adoc#chart-3105-1[Chart 3105.1, Assigning Certification Periods].
+
+*Step 7:* If all required verification is not received by the deadline, close the case no later than the appropriate SOP.
+If an interview is not conducted, the case must be closed on the last day of the appropriate SOP.
+
+=== Alternate Renewals
+:table-caption: Chart
+
+An alternate renewal is a review of all points of eligibility that does not require an interview.
+For regular SNAP cases, they are only applicable to households assigned 6-month certification periods that do not include an ABAWD AU member and may be conducted at every other recertification.
+Back-to-back alternate renewals cannot be conducted.
+If a customer requests a standard interview when the AU is due for an alternate renewal, the ES must schedule an interview appointment.
+
+NOTE: AUs containing an ABAWD may *NOT* receive an alternate renewal.
+
+For details regarding alternate renewals for Senior SNAP households, please refer to xref:3725.adoc[Section 3725, Senior SNAP].
+
+Previously, alternate renewals were not applicable for regular SNAP cases authorized on or after November 18, 2023, due to policy changes surrounding the implementation of Periodic Reports.
+
+Effective March 2, 2026, households assigned a 6-month certification period that do not contain an ABAWD AU member can have their cases processed as an alternate renewal at every other recertification due to the policy change of phasing out Periodic Reports.
+
+Follow the steps below to complete an alternate renewal.
+
+Step 1: Mail the AU a renewal notice in the month preceding the last month of the certification period in sufficient time, so that the AU may submit a renewal application by the 15th day of the last month of the certification period.
+
+Step 2: Review the form received and screen in the Gateway system to confirm it is a valid renewal.
+If it is a valid renewal, review the last initial or renewal application and all points of eligibility.
+Obtain verification when required. xref:3035.adoc[Refer to Section 3035, Verification], xref:3035.adoc#chart-3035-1[Chart 3035.1], for the Summary Verification Chart for Recertification.
+
+Step 3: Review all interfaces (EIVS, DOL WI, DOL UB, SDX, BENDEX, CS, Truv (when available), NAC, eDRS, etc.).
+
+Step 4: Document the information obtained and verified during the renewal process in the Gateway system.
+
+Step 5: If a valid form and all required information are received by the appropriate SOP, update the Gateway system to reflect the changes and to indicate that the renewal is complete, assigning a new certification period.
+xref:3105.adoc[Refer to Section 3105, Application Processing], xref:3105.adoc#chart-3105-1[Chart 3105.1, Assigning Certification Periods].
+
+Step 6: If all required verification is not received by the deadline, close the case no later than the appropriate SOP date. If a valid form is NOT received, the case must be closed on the last day of the month of the current certification period.
+
+NOTE: For late alternate renewals, an interview is still not required if a standard interview was completed at the last recertification and was within the last 12 months.
+
+
+*Use the information in the chart below to process SNAP renewals.*
+
+[#chart-3710-1]
+.3710.1 - PROCESSING SNAP RECERTIFICATIONS (RENEWALS)
+|===
+^| IF THE ^| THEN
+
+| AU files a renewal application on or before the 15^th^ day of the last month of the current certification period *(timely renewal)*
+
+*AND*
+
+has met all renewal requirements
+| Process the renewal application by the end of the last month of the current certification period.
+If the end of the current certification period falls on a weekend or holiday, process the renewal application by the last workday prior to the end of the current certification period.
+
+| AU files a renewal application on or before the 15^th^ day of the last month of the current certification period *(timely renewal)*
+
+*AND*
+
+[.underline]#has not completed an interview# or has made no contact with the agency by the last day of the current certification period
+a| Send a NOMI if the scheduled interview is missed or the AU failed to complete their On-Demand renewal interview. Deny the renewal application by the end of the last month of the current certification period.
+If the end of the current certification period falls on a weekend or holiday, deny the renewal application by the last workday prior to the end of the current certification period.
+
+A new application is required if the AU wants to participate in the program again.
+
+
+
+| AU files a renewal application on or before the 15^th^ day of the last month of the current certification period *(timely renewal)*
+
+*AND*
+
+[.underline]#fails to return required verification# by the requested deadline (This does not include allowable deductions.  See scenario further down for how to process deductions.)
+| Deny the renewal application after the verification deadline, but no later than the end of the last month of the current certification period.
+If the end of the current certification period falls on a weekend or holiday, deny the renewal application by the last workday prior to the end of the current certification period.
+
+If verification is submitted before the last day of the certification period, re-open the renewal application and provide a full month of benefits beginning with the first month of the new certification period.
+
+| AU files a renewal application between the 16^th^ and last day of the month of the current certification period *(untimely renewal)*
+
+*AND*
+
+has met all renewal requirements
+| Process the renewal application by the 29^th^ day following the date of the renewal application.
+
+| AU files a renewal application between the 16^th^ and last day of the month of the current certification period *(untimely renewal)*
+
+*AND*
+
+[.underline]#has not completed an interview# or made any contact with the agency by the 30th day following the renewal application date
+a| Send a NOMI if the scheduled interview is missed or the AU failed to complete their On-Demand renewal interview. Deny the renewal application on the 30^th^ day following the date of application.
+If the 30^th^ day falls on a weekend or holiday, the application should be denied on the next business day.
+
+A new application is required if the AU wants to participate in the program again.
+
+| AU files a renewal application between the 16^th^ and last day of the month of the current certification period *(untimely renewal)*
+
+*AND*
+
+[.underline]#fails to return required verification# by the requested deadline (This does not include allowable deductions.  See scenario further down for how to process deductions.)
+| Deny the renewal application on the day after the verification deadline, but [.underline]#no later than# the 30^th^ day following the date of application.
+If the 30^th^ day falls on a weekend or holiday, the application should be denied on the next business day.
+
+| AU files a timely or untimely application, and the application was denied for failure to return verification, and/or the SOP has expired
+
+*BUT*
+
+Verification was returned within 30 days following the last month of the current certification period
+| Prorate benefits from:
+
+The date the verification is received, and all renewal requirements are met.
+Process the case within 5 workdays after receipt of the verification.
+
+| AU [.underline]#fails to file a renewal application# in the last month of the current certification period, but files an application within 30 days following the last month of the current certification period (late renewal)
+| Screen the application to determine if the AU is eligible for expedited services.
+If eligible, provide benefits by the appropriate SOP based on the expedited or non-expedited processing policy.
+Use the renewal verification requirements to process the case.
+
+Prorate benefits from the date of application.
+
+| AU fails to provide verification for an allowable deduction, the case is approved without the deduction
+
+*AND*
+
+Verification is received prior to the first month of the new certification period
+| Issue a restoration retroactive to the first month of the new certification period.
+
+| AU fails to provide verification of an allowable deduction; the case is approved without the deduction
+
+*AND*
+
+Verification is provided on or after the first day of the first month of the new certification period
+| Update the case as a reported change effective the month following the month the verification is received.
+
+| Renewal is severely delayed and has not been processed in more than 12 months (one year) because the agency failed to take action
+| Authorize benefits retroactive to 12 months (one year) only.
+
+If benefits were lost for more than 12 months, notify the AU of their entitlement for the 12-month period, the benefit amount to be restored, any offset of benefits, and how benefits will be restored.
+Refer to xref:3810.adoc[], for policy regarding underpayment and overpayment of benefits.
+|===
+
+NOTE: The agency must give assistance units (AU) at least 10 calendar days to provide any required verification.
+Refer to xref:3035.adoc[].

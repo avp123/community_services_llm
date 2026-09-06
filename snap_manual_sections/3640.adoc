@@ -1,0 +1,58 @@
+= 3640 Contract Employment Budgeting
+:chapter-number: 3600
+:effective-date: December 2019
+:mt: MT-58
+:policy-number: 3640
+:policy-title: Contract Employment Budgeting
+:previous-mt-number: MT-35
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Contract or self-employment income, which is the household's annual income and received in a period of time shorter than one year, is averaged over a 12-month period if the income is not received on an hourly or piecework basis.
+Contract income which is not the household's annual income and is not paid on an hourly or piecework basis is prorated over the period of time the income is intended to cover.
+
+== Basic Considerations
+
+Contract employees include truckers, school employees, sharecroppers, farmers, and other self-employed individuals who contract to work on a renewable annual basis.
+
+The contract renewal process may involve one of the following:
+
+* signing a new contract each year,
+* automatic renewal of a contract,
+* implied renewal precluding the use of a written contract.
+
+Contract employees are considered compensated for an entire year even during predetermined nonwork periods such as summer breaks or vacations.
+
+Income received is considered compensation for a full year regardless of the frequency of pay stipulated in the terms of the contract.
+
+The individual continues to be exempt from E&T during nonwork periods if the average weekly earnings are at least equal to thirty hours times the federal minimum wage.
+
+== Procedures
+
+Follow the steps below in the order listed below to determine the benefit level for contract employees:
+
+[horizontal,labelwidth=10]
+Step 1:: Determine that the AU member is a contract employee.
+
+Step 2:: Determine the frequency of pay to compute the monthly gross income.
+
+Step 3:: Multiply the monthly gross income by the number of times received to determine the annual gross income.
+
+Step 4:: Divide the annual gross income by twelve to determine the average monthly gross income.
+
+Step 5:: Add the contract income to all other monthly income to determine the total gross monthly income.
+
+Step 6:: Apply income deductions as for any other AU.
+
+Step 7:: Assign an appropriate period of eligibility.
+
+[NOTE,caption=Exceptions]
+====
+Do not apply the above budgeting procedures in the following situations:
+
+* expedited processing when an application is filed during a non-work period/non-pay period
+* when payments are not made as specified in the contract
+* a labor dispute interrupts the flow of earnings as specified in the contract
+====

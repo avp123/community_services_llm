@@ -1,0 +1,150 @@
+= 3310 Lawbreakers
+:chapter-number: 3300
+:effective-date: April 2025
+:mt: MT-82
+:policy-number: 3310
+:policy-title: Lawbreakers
+:previous-mt-number: MT-65
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Individuals who are convicted of certain crimes, who are probation or parole violators, or who are fleeing to avoid prosecution, custody or confinement for a felony are ineligible for the Supplemental Nutrition Assistance Program (SNAP) benefits and are not included in the SNAP assistance unit (AU).
+
+== Basic Considerations
+
+Individuals who, after August 22, 1996, have committed and were convicted of an offense classified as a felony related to the possession, use or distribution of a controlled substance (i.e., drug felons), and which does not involve SNAP, are permanently disqualified in SNAP, and are not included in the SNAP AU, [.underline]#*unless*# the State legislature where the individual resides has enacted legislation limiting the period of disqualification.
+The period of ineligibility is equal to the period provided by the State legislature.
+
+Individuals who, after February 7, 2014, have committed and were convicted as an adult of aggravated sexual abuse, murder, sexual exploitation, and other abuse of children, a Federal or State offense involving sexual assault, or an offense under State law determined by the Attorney General to be substantially similar to such an offense shall be ineligible for SNAP benefits if they are not in compliance with the terms of their probation or parole or are fleeing prosecution.
+
+=== Controlled Substance Abuse Felons (Drug Felons)
+
+*On July 1, 2016*, the Georgia State Legislature lifted the permanent disqualification for individuals who after August 22, 1996, were convicted of a felony related to the possession, use or distribution of a controlled substance.
+
+This means these individuals are no longer disqualified from SNAP and may be potentially eligible for SNAP benefits effective *July 1, 2016*.
+
+If a drug felon *has been incarcerated and is released from prison*, then they may become eligible for benefits if they remain compliant with the general and special conditions of their parole or probation.
+If they are noncompliant with the terms of their parole or probation, they will become ineligible for SNAP benefits.
+
+If a drug felon *violates the terms of their probation as determined by a court order or violates the terms of their parole as determined by a State Board of Pardons and Paroles order*, they will become ineligible for SNAP benefits.
+If these individuals complete the original sentence imposed on them, then they will become eligible for SNAP benefits.
+
+=== Additional Convicted Felons
+
+Section 4008, of The Agricultural Act of 2014, prohibits anyone convicted of aggravated sexual abuse, murder, sexual exploitation and abuse of children, sexual assault as defined in the Violence Against Women Act of 1994, or a similar State law after February 7, 2014, and who is also not in compliance with the terms of their sentence or a fleeing felon from receiving SNAP benefits.
+Applicants must attest to whether he or she, or any other member of the household, have been convicted of such a crime.
+Convictions for conduct that occurred on or before the date of enactment do not apply.
+
+=== Lawbreakers Becoming Eligible for SNAP Benefits
+
+Discuss SNAP policy regarding lawbreakers with the applicant or recipient (A/R) at initial application and recertification.
+
+Accept and document the A/R's statement of his/her parole or probation status unless questionable.
+If questionable, verify with the appropriate law enforcement agency or court.
+
+Address the eligibility of clients who were previously disqualified as drug felons at initial application or at the time the individual requests to be added to a SNAP case.
+
+=== First Offender Status
+
+An individual who meets the definition of a lawbreaker, but who has been granted first offender status by the court, is not subject to a SNAP disqualification.
+
+=== Minors
+
+A minor adjudicated as a delinquent through the juvenile court system has not been convicted of a crime and is not subject to the SNAP disqualification as a lawbreaker.
+
+A minor who is prosecuted and convicted as an adult is subject to a penalty or disqualification as a lawbreaker.
+
+=== Parole/Probation Violators
+
+Any individual who is violating a condition of his/her parole or probation is ineligible for SNAP benefits and is not included in the SNAP AU.
+The individual is disqualified in SNAP until he/she is no longer a parole or probation violator.
+
+=== Fleeing Felons
+
+Individuals who are fleeing to avoid custody or confinement for a felony conviction or fleeing to avoid prosecution for a felony are ineligible for SNAP benefits and are not eligible to be included in the SNAP AU.
+The individual is disqualified in SNAP until he/she is no longer fleeing.
+
+==== Determining Fleeing Felon Status Four-Part Test
+
+To establish if an individual is a fleeing felon, verify that:
+
+. The individual has an outstanding felony warrant with a Federal, State or local law enforcement agency and the cause of the warrant is for committing or attempting to commit a felony crime under the law of the place from which the individual is fleeing;
+. The individual is aware of or should reasonably have been able to expect that the felony warrant has already or would have been issued;
+. The individual has taken some action to avoid being arrested or jailed; and
+. The Federal, State or local law enforcement agency is *actively seeking* the individual.
+
+==== Definition of Actively Seeking a Fleeing Felon
+
+*Actively seeking* is defined as:
+
+[upperalpha]
+. When a Federal, State or local law enforcement agency *_informs the DHS-DFCS agency that it intends to enforce an outstanding felony warrant or to arrest an individual for a probation or parole violation within 20 days of submitting a request for information_* about the individual to the agency;
+
+. When a Federal, State or local law enforcement agency *_presents a felony arrest warrant_*; and
+
+. When a Federal, State or local law enforcement agency *_states that it intends to enforce an outstanding felony warrant or to arrest an individual for a probation or parole violation within 30 days of the date of the request_* from DHS-DFCS about a specific outstanding felony warrant or probation or parole violation.
+
+=== Agency Response Time
+
+The address, SSN and photograph, if available, of a member of a SNAP AU will be provided to Federal, State or local law enforcement officers if any of the following criteria are met:
+
+* the AU member is fleeing to avoid prosecution, custody or confinement for a felony
+* the AU member is a probation or parole violator
++
+*OR*
+
+* the AU member has information that is necessary for the officer to conduct official duties, and the location or apprehension of the AU member is within those official duties.
+
+The law enforcement agency must provide the request in writing.
+
+The agency must give the law enforcement agency 20 days to respond to a request for information about the conditions of a felony warrant or a probation/parole violation and whether the law enforcement agency intends to actively pursue the individual.
+
+If the law enforcement agency [.underline]#*does not*# indicate that it intends to enforce the felony warrant or arrest the individual for the probation/parole violation within 30 days of the date of the agency's request for information, the agency must determine that the individual is not a fleeing felon or probation/parole violator and document the case accordingly.
+
+If the law enforcement agency [.underline]#*does*# indicate that it intends to enforce the felony warrant or arrest the individual for probation/parole violation within 30 days of the date of the agency's request for information, the agency will postpone action on the case until the 30-day SOP.
+Once 30 days have expired, the agency must verify with the law enforcement agency whether it has attempted to execute the felony warrant or arrest the probation/parole violator.
+If the law enforcement agency has, the individual has been determined to be a fleeing felon or probation/parole violator, and the agency must deny the applicant or remove the individual from the SNAP case.
+
+If law enforcement agency has not taken action within 30 days, the agency must not consider the individual a fleeing felon or probation/parole violator and must document the case file and take no further action on the case.
+
+=== Disqualification Periods
+
+The disqualification periods for lawbreakers are as follows:
+
+.CHART 3310 – LAWBREAKERS
+[#chart-3310,cols=2*]
+|===
+| Individuals who commit and are convicted after August 22, 1996, of a felony related to possession, use or distribution of a controlled substance.
+(Crime does not involve SNAP benefits.)
+| Disqualified until no longer a fleeing felon or parole/probation violator.
+
+| Individuals who, after February 7, 2014, have committed and were convicted as an adult of aggravated sexual abuse, murder, sexual exploitation, and other abuse of children, a Federal or State offense involving sexual assault, or an offense under State law determined by the Attorney General to be substantially similar to such an offense
+| Disqualified until no longer a fleeing felon or parole/probation violator.
+
+| Individuals fleeing to avoid prosecution, custody or confinement for a felony.
+| Disqualified until no longer fleeing to avoid prosecution, custody or confinement.
+
+| Individuals violating a condition of their probation or parole.
+| Disqualified until no longer a probation or parole violator.
+|===
+
+== Procedures
+
+=== Procedures for Disqualifying Lawbreakers
+
+[horizontal,labelwidth=10]
+Step 1:: If the individual is a lawbreaker and is noncompliant with the terms or conditions of his/her parole or probation or is a fleeing felon, then disqualify the individual in the case.
+
+Step 2:: Determine eligibility for the remaining AU members, counting the income and resources of the disqualified individual.
+Refer to xref:3625.adoc[].
+
+Step 3:: At application, provide adequate notice to the AU.
+Include in the notice the reason for the penalty/disqualification and the time period for the disqualification, if applicable.
+
+Step 4:: At the recertification, provide adequate notice to the AU prior to imposing the disqualification.
+Include in the notice the reason for the penalty/disqualification and the time period for the disqualification, if applicable.
+
+Step 5:: At interim change, provide timely notice to the AU prior to imposing the disqualification.
+Include in the notice the reason for the penalty/disqualification and the time period for the disqualification, if applicable.

@@ -1,0 +1,117 @@
+= 3005 Confidentiality
+:chapter-number: 3000
+:effective-date: September 2019
+:mt: MT-55
+:policy-number: 3005
+:policy-title: Confidentiality
+:previous-mt-number: MT-31
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Information concerning food stamp (FS) applicants or recipients (A/R) is restricted to purposes directly connected to the administration of the Food Stamp Program.
+
+== Basic Considerations
+
+The state statute that provides the legal basis for safeguarding the confidentiality of assistance-related information is the Official Code of Georgia Annotated 49-4-14.
+This statute restricts the use or disclosure of information concerning applicants for or recipients of public assistance to purposes directly connected to the administration of public assistance.
+
+In addition, various Federal regulations specifically forbid the release of Food Stamp Program (FSP) information to unauthorized persons or agency representatives.
+
+All case record material is confidential, including names and addresses of applicants and recipients (A/R), as well as the types and amounts of benefits provided.
+
+Interviews should be conducted in a confidential setting.
+
+Records, information and communication of the Division, including county Departments of Family and Children Services, that identify applicants for, or recipients of the FSP are confidential and are not considered public records.
+
+=== Release of Information Without the Consent of the Applicant/Recipient
+
+The disclosure of information concerning applicants and recipients is limited to purposes directly connected with the administration of the FSP Division, and to the administration of other federal assistance programs and federally assisted state programs which provide assistance on a means-tested basis to low-income individuals.
+Assistance includes cash, in-kind payments, and services.
+These programs include TANF, Child Support, IV-E Foster Care, Adoption Assistance, SSI, Medicaid, Office of Inspector General-Benefits Recovery Unit, Human Services, Social Security Administration, IEVS, and the General Office of the U.S. Such purposes include the establishment of eligibility, determining the amount of benefits and providing services to applicants and recipients.
+Information used solely for these purposes can be released without the consent of the applicant or recipient.
+
+Confidential information can also be released without the consent of the A/R in the following situations:
+
+. To authorized persons conducting an investigation, prosecution, or criminal proceeding in connection with the administration of any of the programs listed above.
+Such investigations include, but are not limited to, audits, quality control reviews, and fraud investigations.
+. To authorized persons for research purposes if the research findings will be useful in the administration of any of the programs listed above.
+This decision must be made by the Division Director, Section Director, Field Director or County Director.
+A researcher who wishes to collect information directly from an A/R must be authorized by the Division Director and must comply with DHS policy concerning confidentiality and access to records.
+. During an emergency in which previous attempts to obtain the A/R's consent have been unsuccessful, and it is the judgment of the Division Director, Section Director, Field Director or County Director that the release of information is necessary to prevent loss of life or a risk to life or health.
+Notification must be sent immediately to the last known address of the A/R when information is released in such a situation.
+. Confidential information may be disclosed to other divisions within the Department of Human Services, including county departments, or to staff of federal or federally funded programs that provide financial assistance or services to the A/R if the information is to be used for the purpose of service delivery or program administration.
+A/Rs should be informed about policy concerning the exchange of information between service providers.
+. The current address of a FS recipient who is a fleeing felon or parole violator to avoid prosecution, custody or confinement for a felony may be disclosed to a law enforcement officer if the officer provides the A/R's name and Social Security number to the agency and if the officer demonstrates to the satisfaction of the agency that the A/R is a fleeing felon or parole violator.
+
+The case record must be clearly documented regarding the evidence presented, including the name of the law enforcement official to whom the information was given.
+
+The release of confidential A/R information in any of the aforementioned situations is restricted to persons or agency representatives who are subject to standards of confidentiality comparable to those employed by the GA DHS.
+
+Certain information in an A/R's case record may have come from another office or agency and may be marked as prohibited from release without the A/R's written consent, e.g., confidential medical information.
+Such information can only be released to the A/R, the A/R's legal representative, or the court.
+Any other request for the document must be made to the office or agency that was the source of the document.
+
+Information about FS applicants and recipients may be provided to a committee or legislative body without the A/R's written consent if it can be verified that the information is needed for any of the aforementioned reasons.
+If it cannot be shown that the request meets any of these criteria, the requested information cannot be provided to a committee or legislative body.
+
+=== Release of Information to an Applicant/Recipient
+
+If requested, the case record must be made available for examination by the A/R and/or the A/R's legal representative.
+Material presented at a hearing that constitutes the basis for a decision must be made available to the A/R and/or the A/R's legal representative.
+Refer to xref:appendix-b-hearings-toc.adoc[], for policy regarding release of case information for hearings.
+
+Medical information marked “confidential” by a physician or mental health professional may be withheld from the A/R if it is believed that release of the information could be harmful to the A/R.
+If the A/R requests information that cannot be released, the A/R should be referred to the health professional, who provided the information and determined that it needed to remain confidential.
+
+Information regarding a pending criminal prosecution cannot be released to the A/R.
+The state agency may withhold confidential information, such as the names of individuals who have disclosed information about the AU without the AU's knowledge.
+
+Information obtained from/through an IRS/BEER match or IRS cannot be released to the A/R.
+
+When an A/R's request to examine information in his/her own case record is denied, the reason for denial and any plan for subsequent action must be documented.
+
+Any identifying A/R information requested for a purpose not described above can only be released with the A/R's written consent.
+
+=== Other Requests for Information
+
+Whenever a request for information is received from a source not mentioned in this section, the A/R's written permission must be obtained prior to the information's release.
+A signed authorization from the A/R entitles the person requesting the information to all relevant information in the case record described or encompassed in the A/R's authorization.
+The authorization expires after 90 days unless the A/R specifies a shorter authorization period.
+
+If an A/R is a minor or mentally incompetent, any authorization for release must be signed by the A/R's parent, guardian, legally responsible agent, or a person authorized by the A/R's legally responsible agent to act on behalf of the A/R.
+If the A/R is incapable of signing such an authorization, the authorization must be signed either by the A/R's legally responsible agent or a person with the written permission of the A/R or the A/R's legally responsible agent to act in the A/R's behalf.
+
+The same policies already described in this section also apply to requests for information received from other government agencies, the courts, or law enforcement officials outside of the program areas described above.
+
+When an A/R or legal representative requests information from or inspection of the case record, the request should be made in advance of the time by which the information is needed.
+The agency shall cooperate by establishing a time and place convenient for the A/R or the A/R's legal representative for receipt of the information or inspection of the case record.
+
+Economic Support Services (ESS) staff can release information only in compliance with the aforementioned guidelines.
+
+A staff person must consult with his/her immediate supervisor should there be any question regarding the propriety of releasing a piece of information.
+
+Any person violating this law shall be guilty of a misdemeanor.
+
+=== General Information
+
+General information that is not identified with an individual does not need to be safeguarded.
+Such information may be released upon request.
+Examples include statistical information of the numbers of FS recipients, total expenditures of FS funds, or system-derived social data.
+
+DFCS may charge for copies of case record material.
+
+=== Employee Cases
+
+An employee may be eligible for certain public assistance benefits.
+Employees who apply for or are receiving benefits as a member of a household must notify their supervisor.
+All employees' cases must be handled by a supervisor or supervisor designee.
+Each county should develop a plan for limited access to these cases by other staff members and the employee himself.
+The Regional Manager must approve the plan for handling employee cases and is to be notified of any employee receiving benefits.
+
+Employees should not handle relatives or personal friend's applications or cases and should notify his/her supervisor when such situations occur.
+Employees should not be authorized representatives unless approved by the Regional Manager.
+
+The employee/client must comply with all requirements of the program in which he or she is participating including the prompt and accurate reporting of all changes in income or household circumstances, as required by simplified reporting requirements (SRR).
+If an employee takes action on or views the case of another employee, a relative or an individual of personal interest, he may be subject to disciplinary action and/or prosecution for a second or third degree felony.

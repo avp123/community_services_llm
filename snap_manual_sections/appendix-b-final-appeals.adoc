@@ -1,0 +1,64 @@
+= Appendix B Final Appeals
+:chapter-number: Appendix B
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: Appendix B
+:policy-title: Final Appeals
+:previous-mt-number: MT-59
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Assistance Units (AU) that disagree with an initial hearing decision have the right to request a final judicial appeal of the initial decision.
+
+== Basic Considerations
+
+Effective May 8, 2018, with the passing of House Bill (HB) 790, any decision by an OSAH administrative law judge is a final decision that may only be appealed by filing a petition for judicial review in the Fulton County Superior Court or in the Superior Court in the County of residence of the petitioner.
+
+== AU Appeals the Hearing Decision
+
+The AU or representative has the right:
+
+* To appeal an initial decision within 30 days from the date of the notice.
+
+The AU has the right to request continuation of benefits pending a final appeal decision. Use Chart B3 to determine eligibility for continuation of benefits pending a final appeals decision.
+
+== Procedures
+
+[.text-center]
+*Processing a Final Appeal*
+
+Follow the steps below if the AU or the county requests a Final Appeal of the initial decision.
+
+*Step 1.*: The AU requests an appeal through the Office of General Counsel (OGC) or DFCS. If received by DFCS, refer the AU to instructions on filing for a judicial review contained in the initial hearing decision.
+
+*Step 2.*: Clearance from the SNAP Policy Unit should be obtained to ensure the appeal request meets the hearing criteria before submitting an appeal. If an appeal is warranted, Form 136 and supporting documentation should be sent to the Fair Hearing Coordinator Supervisor who will e-mail all documents to OGC. OGC will review the request to determine the validity of the appeal and submit it to the Special Assistant Attorney General (SAAG) for filing in Superior Court. The petition must be filed in the appropriate court within 30 days after service of the initial decision.
+
+*Step 3.*: The Superior Court reviews the AU’s Appeal, renders a final decision and notifies all parties (AU, DFCS). THE AU’S APPEALS PROCESS ENDS.
+
+Use the following chart to determine whether to continue, reinstate, or change benefits pending judicial review of a hearing decision.
+
+[.noheader,cols=2*]
+|===
+2+^| *CHART B3 - CONTINUATION OF BENEFITS PENDING A FINAL APPEAL DECISION*
+^| *If the AU Requests a Final Appeal*
+^| *Then*
+| Within 30 days of the hearing decision and chooses to continue benefits
+| Continue any benefits pending the INITIAL hearing decision.
+| And *claims good cause* for not appealing during the 30-day time period
+| Reinstate benefits only after approval.
+| And the hearing *decision determines that
+the issue was federal law*, regulation or policy & benefits have been reduced or terminated
+| Do [.underline]#not# reinstate benefits.
+| And a *change affecting eligibility occurs* while the final appeal decision is pending
+| Change the benefits appropriately unless the A/R requests a hearing on the subsequent change.
+| And a *change results in benefits not being reduced* to the amount in the hearing decision
+| Adjust the benefits without waiting for the final appeal decision
+| And a *mass change is required* while the final decision is pending
+| Change the benefits appropriately. Continuation or reinstatement is appropriate only if the mass change is incorrectly applied.
+| On an *IPV disqualification*
+| Do not reinstate benefits at the level prior to the disqualification. +
+
+*NOTE:* Pend the outstanding claim and reinstate benefits to the level prior to recoupment, at the AU’s request.
+|===

@@ -1,0 +1,299 @@
+= 3605 Prospective Budgeting
+:chapter-number: 3600
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: 3605
+:policy-title: Prospective Budgeting
+:previous-mt-number: MT-77
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Prospective budgeting uses a representative amount of income received and expenses incurred to determine the Assistance Unit's (AU's) eligibility and benefit amount.
+
+== Basic Considerations
+
+=== Representative Income and Expenses
+
+Representative income and expenses are used to determine the monthly income and deductions for use in the SNAP budget.
+
+Representative income is the amount that best represents what the AU has received or will receive on an ongoing basis.
+
+Representative expenses are the amounts that best represent what the AU has incurred or will incur on an ongoing basis.
+
+When the amount of the income or expense is stable (i.e., does not change from one period to the next), then the amount of the monthly income or the monthly expense is the representative amount.
+
+When the income or expenses vary in amount for each period (i.e., fluctuates), then representative income and expenses are calculated as follows:
+
+* the representative income or expense is based on available verification and information from the AU and from the source.
+
+* the representative income or expense may be an average of the last month's income or expense.
+
+* the representative income or expense may be the four (4) current consecutive weeks of pay for fluctuating income.
+(Current means the most recent information available to determine the representative income or expense).
+
+* the representative income or expense may be for a specific period determined to be the most representative.
+In some instances, more or less than one month's income or expenses OR more or less than the four (4) current consecutive weeks of pay for fluctuating income/expense is used if one month's income or expense is not representative.
+Other consecutive weeks of pay may be used to determine representative income or expenses, if the most current weeks of pay are not available.
+
+* Periods in which there is little, or no income received, or expenses incurred are not used unless they are determined to be representative.
+
+Representative income and expenses are calculated at the following times:
+
+* at the initial application
+* at a recertification (renewal)
+* at periodic report when there is a change in the AU's income/expenses
+* when there is a change in the AU's income/expenses.
+
+=== Conversion
+
+Monthly income and expenses are determined by multiplying the representative amounts by the following conversion factors:
+
+* 4.3333 (weekly)
+* 2.1666 (bi-weekly)
+* 2 (semi-monthly)
+* 1 (monthly)
+
+NOTE: To calculate *fluctuating* semi-monthly income or expenses from a new source, determine the representative weekly amount based on the rate of pay and anticipate the number of hours weekly.
+Multiply the representative amount by 4.3333 to get the monthly income or expense.
+Divide the monthly income or expense by 2 to obtain the representative amount of the pay/expense.
+
+=== Verification
+
+The best estimate of income or expenses used in determining an AU's benefit amount is based on verification of at least one full month's income or expenses OR the four current consecutive weeks of pay or expenses for fluctuating income or expenses.
+In some instances, more than one month's income or expenses is not representative of the AU's ongoing situation.
+Refer to <<chart-3605-1,Chart 3605.1, Minimum Verification Requirements>>.
+
+Verify earned income in the following order:
+
+* First, Truv (Effective July 1, 2024, Truv became the primary source of income verification *if* the customer uses the service *and* certifies the information received from Truv as accurate);
+
+[.underline]#**Note**#: Before July 1, 2024, The Work Number was the primary source.
+
+* Second, pay stubs;
+* Third, Form 809 must be completed by the employer or a written statement from the employer; Documentation is required if these are used as a source of verification.
+* Fourth, the client's statement of earnings is used as verification (as a last resort) if no other source is available.
++
+
+
+If the AU does not have the minimum number of pay stubs for income verification because some are missing, use the year-to-date figures if these amounts are displayed on the other pay stubs.
+
+In order to use year-to-date figures, the AU must provide the paycheck stubs for the pay periods immediately prior to and immediately after the missing paycheck stub.
+
+If, because of a new source of income, the AU cannot comply with the minimum verification requirements specified above, obtain verification of all income received from the first receipt of the new income to the present.
+
+NOTE: Refer to xref:3035.adoc[] for policy pertaining to acceptable verification sources.
+
+.CHART 3605.1 - MINIMUM VERIFICATION REQUIREMENTS
+[#chart-3605-1]
+|===
+| FREQUENCY OF PAY OR EXPENSE | MINIMUM VERIFICATION REQUIRED
+
+| Weekly, bi-weekly, or semi-monthly (stable OR fluctuating income or expenses)
+| One month or 4 current consecutive weeks of income or expenses
+
+| Monthly
+| (2) months of income or expenses
+
+| Irregular
+| (3) months of income or expenses
+|===
+
+== Procedures
+
+Follow the steps below to determine the AU's monthly income and expenses:
+
+[horizontal,labelwidth=10]
+Step 1:: Determine the following:
+
+* the type of income or expense; and
+* the frequency with which the income is received, or the expense is incurred (weekly, bi-weekly, etc.).
+
+Step 2:: Verify income or expenses.
+Refer to <<chart-3605-1,Chart 3605.1>> for verification requirements.
+
+Step 3:: Compute the representative income or expenses based on the information provided, the AU's situation, and the worker's judgement.
++
+Do not use periods with non-representative amounts to determine ongoing income and/or expenses.
+
+Step 4:: Convert the representative amounts from Step 3 to determine the AU's monthly gross income and/or expense.
+
+Step 5:: Document the following:
+
+* the type and frequency of the income received and/or expenses incurred;
+* the verification source;
+* the amount of income and/or expenses used in determining the representative amounts;
+* the reason for determining that income received and/or expenses incurred during a period are not representative; and
+* the calculation of the representative amount.
+
+Use the following methodologies to calculate monthly income:
+
+.CHART 3605.2 - HOW TO DETERMINE MONTHLY INCOME
+[#chart-3605-2]
+|===
+| IF | THEN
+
+| The income is either stable or fluctuating and is received (semi-monthly, weekly, biweekly)
+| Determine a representative amount of income received for each date received in a calendar month.
+Compute past, present and anticipated income amounts that represent regular payments received.
+Convert to a monthly amount by using the appropriate conversion factor.
+
+Document case notes.
+Explain what income was used and why.
+
+| The income is received monthly
+a| Do not automatically convert the income.
+Determine the best estimate based on the following criteria:
+
+* If stable, budget the actual income received in the application, recertification, or periodic report month.
+
+* If fluctuating, average the current income.
+
+*NOTE:* Current means the most recent information available to determine the representative income.
+
+| The income is received less often than monthly (irregularly)
+a| Do not automatically convert the income.
+Determine the best estimate based on the following criteria:
+
+* If fluctuating, average the verified income received in the last *three* months prior to the application, recertification, or periodic report month.
+* In some instances, use more or less than three months of income if the income received in the three months prior to the application, recertification, or periodic report month is not representative of the ongoing situation.
+
+| The income is received for a specified period of time
+a| Do not automatically convert the income.
+Determine a monthly amount based on the period of time the income is intended to cover.
+
+* To obtain a monthly amount, divide the total income to be received during the life of the contract or agreement by the number of months specified in the contract or agreement.
+
+Document case notes.
+Explain what income was used and why.
+
+| There is *no change in the rate* at which the AU has or will receive income
+
+*AND*
+
+the income has been or will be received during the month,
+| Determine a representative amount of income.
+Convert to a monthly amount using the appropriate conversion factors.
+Document case notes.
+
+| There has been *a change in the rate* at which the AU has or will receive income
+
+*AND*
+
+the income has been or will be received during the month,
+| Do not convert.
+Use the actual and representative amount of income.
+Use the actual income for dates that have already occurred AND the representative amount of income for future dates in the month.
+Document case notes.
+
+| There is *new, interrupted, or terminated income*
+
+*AND*
+
+the AU has or will receive less than a full month's income,
+| Do not convert.
+Use the actual and representative amount of income.
+Use the actual income for dates that have already occurred AND the representative amount of income for future dates in that month.
+Document case notes.
+|===
+
+Use the following methodologies to calculate monthly expenses:
+
+.CHART 3605.3 - HOW TO DETERMINE MONTHLY EXPENSES
+[#chart-3605-3]
+|===
+| IF | THEN
+
+| The expenses are either stable or fluctuating and incurred (semi-monthly, bi-weekly, weekly)
+| Determine a representative amount of expenses incurred for each date incurred in a calendar month.
+Compute past, present and anticipated expense amounts that represent the regular expenses incurred.
+Convert to a monthly amount by using the appropriate conversion factor.
+
+Document case notes.
+Explain what expenses were used and why.
+
+| The expenses are incurred monthly
+a| Do not automatically convert the expense.
+Determine the best estimate based on the following criteria:
+
+* If stable, budget the actual expense incurred in the application, recertification, or periodic report month.
+
+* If fluctuating, average the current expenses.
+
+*NOTE:* Current means the most recent information available to determine the representative expense.
+
+| The expenses are incurred less often than monthly (irregularly)
+a| Do not automatically convert the expense.
+Determine the best estimate based on the following criteria:
+
+* If fluctuating, average the verified expense incurred in the last *three* months prior to the application, recertification, or periodic report month.
+
+* In some instances, use more or less than three months of expenses if the expense incurred in the three months prior to the application, recertification, or periodic report month is not representative of the ongoing situation.
+
+| The expense is incurred for a specified period of time
+a| Do not automatically convert the expense.
+Determine a monthly amount based on the period of time the expense is intended to cover.
+
+* To obtain a monthly amount, divide the total expense to be incurred during the life of the contract or agreement by the number of months specified in the contract or agreement.
+
+Document case notes.
+Explain what expenses were used and why.
+
+| There is *no change in the rate* at which the AU has or will incur expenses
+
+*AND*
+
+the expense has been or will be incurred during the month,
+| Determine a representative amount of expenses.
+Convert to a monthly amount using the appropriate conversion factors.
+Document case notes.
+
+| There has been *a change in the rate* at which the AU has or will incur expenses
+
+*AND*
+
+the expense has been or will be incurred during the month,
+| Do not convert.
+Use the actual and representative amount of expenses.
+Use the actual expense for dates that have already occurred AND the representative amount of expenses for future dates in the month.
+
+| There is a *new, interrupted, or terminated expense*
+
+*AND*
+
+the AU has or will incur less than a full month of expenses,
+| Do not convert.
+Use the actual and representative amount of expenses.
+Use the actual expense for dates that have already occurred AND the representative amount of expenses for future dates in that month.
+|===
+
+If an A/R has income or is incurring expenses from more than one source, each source is treated separately in determining if the income/expense is converted to a monthly amount.
+
+.CHART 3605.4 - HOW TO DETERMINE MONTHLY INCOME & EXPENSES RECEIVED FROM SPECIFIC SOURCES
+[#chart-3605-4]
+|===
+| IF | THEN
+
+| Child support income is received through the Division of Child Support Services (DCSS),
+a| Determine the monthly amount of income using the last [.underline]#*three*# months of child support income received if representative.
+
+If the AU reports a change after representative income has been determined, use the anticipated income to determine the best estimate for future months.
+Refer to <<chart-3605-2,Chart 3605.2>> in this section.
+
+NOTE: *Effective February 1, 2021*, cases that are authorized on February 1 and ongoing will have child support payments budgeted in the month that they are received.
+Payments received on the last two (2) days of the month from the Division of Child Support Services (DCSS) will no longer be budgeted in the next month.
+
+| Child support *expense* is paid through the Division of Child Support Services (DCSS),
+| Determine the monthly amount of *expenses* using the last [.underline]#*three*# months of child support paid if representative.
+
+If the AU reports a change after representative expenses have been determined, use anticipated expenses to determine the best estimate for future months.
+Refer to <<chart-3605-3,Chart 3605.3>> in this section.
+Refer to xref:3616.adoc[] for child support deductions.
+
+| TANF income is received
+| At application, refer to previous <<chart-3605-2,Chart 3605.2, How to Determine Monthly Income>>.
+
+For ongoing months, budget the TANF income that is received for the current month.
+If the automatic update is incorrect, correct the case with an underpayment or overpayment.
+|===

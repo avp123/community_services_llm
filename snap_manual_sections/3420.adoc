@@ -1,0 +1,1006 @@
+= 3420 Income
+:chapter-number: 3400
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3420
+:policy-title: Income
+:previous-mt-number: MT-85
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 273.9(b)
+
+== Requirements
+
+All money received from any source by the assistance unit (AU) is considered in determining eligibility and the benefit level.
+
+== Basic Considerations
+
+Money received is considered to be one of the following:
+
+* Earned – money received from wages, salaries, or commissions in exchange for services rendered.
+* Unearned – money received from any source other than those listed above.
+
+Eligibility based on income is determined by answering the following series of questions:
+
+* What is the income limit for the AU?
+* Whose income is considered?
+* What is the source of the income?
+* Is the income accessible to the AU to meet its needs?
+* Is the income included or excluded?
+* How often is the income received?
+
+=== Income to be Considered
+
+The countable income of the following individuals is considered when determining eligibility:
+
+* eligible AU members
+* disqualified individuals
+* deemed income of sponsors of aliens
+* ineligible aliens
+* lawbreakers
+* ineligible Able-Bodied Adults Without Dependents (ABAWDs)
+* enumeration-sanctioned individuals
+* work-sanctioned individuals
+
+=== Income Limit Sources
+
+The source of the income must be identified to determine if the income is included or excluded.
+Refer to <<chart-3420-2,Chart 3420.2, Types of Income>>.
+
+=== Income Limit
+
+The countable income of the AU member is applied to the income limit(s) for the AU size.
+
+[caption=Exception]
+NOTE: Refer to xref:3210.adoc[].
+
+=== Income Accessible to the AU
+
+Income may be included if it is accessible to the AU for daily use and the AU has the legal ability to use it.
+
+=== Jointly Received Income
+
+If an AU member receives income jointly with another person or a group of people, the portion that belongs to the AU member is determined as follows:
+
+* If there is an agreement between the parties that specifies how they will divide the income, this agreement is used to determine the amount of income to consider.
+* If there is no agreement, a pro-rata share of the income is counted to the member whose income is being considered.
+
+=== Bankruptcy
+
+Bankruptcy is a legal process to help people who owe money, or debtors get relief from debts they cannot pay and, at the same time, help people who are owed money, or creditors, get paid from assets or property the debtor has.
+
+Money directed to pay creditors in a bankruptcy is not deducted from gross income in a SNAP budget, unless the income is otherwise exempt by policy.
+
+=== Garnishment
+
+Garnishment is a condition where a debtor has wages/monies withheld by an employer/entity to pay a debt owed to a third party.
+
+Money directed to pay creditors via garnishment is not deducted from gross income in a SNAP budget, unless the income is otherwise exempt by policy.
+Refer to <<chart-3420-2,Chart 3420.2>> in this section.
+
+=== Verification
+
+Verification of income is obtained in the following order:
+
+* The A/R should provide current verification from the payment source.
+If the A/R cannot obtain the verification, the agency must request it directly from the payment source.
+* Verification can be obtained from a collateral source, a person who has knowledge of the income, if verification cannot be provided by the payment source.
+
+The statement of the A/R may be accepted if all other attempts to verify income are unsuccessful and the A/R has cooperated with previous attempts to obtain verification.
+
+=== Means of Verification
+
+Verification of income can be provided in a variety of ways, including:
+
+* Truv (Effective July 1, 2024)
+* pay stubs
+* award letter
+* copy of check reflecting gross income
+* written statement from the payment source
+* computer match
+* Form 809 – Verification of Earned Income Form
+
+*Note*: The Work Number could be used as acceptable verification before July 1, 2024.  SteadyIQ could be used as acceptable verification from November 18, 2024, through June 30, 2026.
+
+=== Income from a Terminated Source at Application
+
+Terminated income during the application or subsequent months should be verified.
+The last date of employment, the date and amount of final payment, if appropriate, and the reason for separation/termination are verified if the income is terminated within 30 days of the application date or thereafter.
+Income terminated before the application month may be verified if questionable.
+
+If an eligibility determination cannot be made for the application or intervening months because of insufficient information or verification, but ongoing eligibility can be established, then deny the applicable month and approve the case ongoing.
+Document all efforts and attempts made to verify eligibility for these months.
+
+The following chart provides an alphabetical listing of the following:
+
+* source or type of income
+* whether the income is earned or unearned
+* a description of the income
+* whether the income is included (I) or excluded (E) in the SNAP budget.
+
+Included means it is counted in the SNAP budget; excluded means it is not.
+
+=== Chart-3420.2 Types of Income
+
+[#chart-3420-2]
+.CHART 3420.2 – TYPES OF INCOME
+[cols="2,4,^"]
+|===
+| SOURCE/TYPE | DESCRIPTION | SNAP
+
+| ADOPTION ASSISTANCE
+
+(TITLE IV-E AND STATE)
+| UNEARNED-Payment received for the adoption of certain children.
+| I
+
+.2+| ADVANCE PAYMENT
+| UNEARNED-A payment received for future expenses that does not represent a gain to the AU.
+| E
+| EARNED-A prepayment of wages or salaries.
+^| I
+
+| [[AOP]]AGENT ORANGE PAYMENT
+| UNEARNED-A payment made to a Vietnam Veteran who was exposed to Agent Orange.
+The payment is made to the surviving spouse and/or children of a deceased Vietnam Veteran who was exposed to Agent Orange.
+| E
+
+| ALASKA NATIVE CLAIM
+| UNEARNED-A payment made under the Alaska Native Claims Settlement Act.
+| E
+
+| ALIMONY
+| UNEARNED-A court-ordered payment from an estranged spouse or former spouse to the other spouse.
+Refer to <<vendor-payments,Vendor Payments>> in this chart.
+| I
+
+.7+| AMERICORPS
+| Income from the AMERICORPS Network of programs, which encompasses AMERICORPS USA, AMERICORPS VISTA, and AMERICORPS NCCC.
+
+EARNED INCOME - Living Allowance Stipend
+| E
+a| EARNED INCOME - On-The-Job Training
+
+* Children under age 19
+^| E
+a|* Adults age 19 & up
+^| I
+| UNEARNED - _Childcare allowance_ - Payments are exempt to the extent that the funds are not a gain or benefit to the AU.
+^| E
+| UNEARNED - _Basic health insurance policy_
+^| E
+| UNEARNED - _Auxiliary Aid & Service to Individuals with Disabilities_
+^| E
+|UNEARNED - _Educational Money_
+^| E
+
+| ANNUITY
+| UNEARNED-A recurring payment received from an investment plan.
+| I
+
+| BLACK LUNG BENEFITS
+| UNEARNED-Benefits paid to miners and their survivors under the provisions of the Federal Mine Safety and Health Act.
+| I
+
+| BLOOD (sale of)
+| EARNED-Money received from the sale of blood.
+| I
+
+| BOARDER INCOME
+a| EARNED-Direct payments for food and shelter, less the cost of doing business.
+
+Refer to xref:3205.adoc[] for treatment of boarders.
+
+NOTE: Refer to xref:3425.adoc[].
+| I
+
+| BONUS
+| EARNED-Wages paid in addition to the usual or expected wages.
+Refer to <<wages,Wages>> in this chart.
+| I
+
+| CAFETERIA/SECTION 125 PLANS
+| EARNED or UNEARNED-Credits made available to an individual to buy health insurance, life insurance, leave, spending accounts, Dual Special Needs Plans (D-SNP), flex cards or other benefits also known as flexible benefits plans.
+The individual cannot elect to receive cash for the credits.
+| E
+
+| CAPITAL GAINS
+| EARNED or UNEARNED-Profits gained from the sale of capital assets.
+
+Capital assets are resources, such as real estate, stocks, securities, and equipment that are typically held for long periods of time.
+
+A capital gain is realized when the asset sold has appreciated in value from the original purchase price.
+Refer to xref:3425.adoc[].
+| I
+
+.2+| CHARITABLE DONATIONS FROM PRIVATE, NON-PROFIT ORGANIZATIONS (NOT STATE OR FEDERALLY FUNDED)
+| UNEARNED–Charitable donations paid to the AU that total $300 or less in a federal fiscal quarter.
+| E
+
+| UNEARNED-Donations given to the AU exceeding $300 in a federal fiscal quarter.
+^| I
+
+| CHARITABLE DONATIONS FROM FEDERALLY OR STATE FUNDED ORGANIZATIONS
+| UNEARNED-Donations paid to the AU from organizations receiving state or federal funds.
+For example: Salvation Army, United Way, Catholic Charities, and Lutheran Social Services Agencies.
+| I
+
+| CHILDCARE ATTENDANT
+| EARNED-Income received for providing childcare services.
+
+If the attendant has a self-employment business and provides childcare services in his/her home or place of residence, treat the income as self-employment income.
+
+If the attendant provides services in the home of the child and an employee/employer relationship exists, treat the income as wages.
+Refer to xref:3425.adoc[].
+| I
+
+.2+| CHILD NUTRITION PAYMENTS
+| UNEARNED-The value of meals provided to a child in daycare through the Child Nutrition Amendment of 1978.
+
+If the payment is for a child of the childcare provider, budget the entire amount as unearned income.
+| I
+a| If the payment is for any other child, treat it as self-employment income, using the following guidelines:
+
+* If more than one child is included in the payment, allow each child a prorated share of the total payment.
+* When determining the cost of doing business, do not exceed the SNAP allotment for one person for each child.
+^| I
+
+| CHILD NUTRITION SUBSIDY
+| UNEARNED-Payments made under Title IV of the Social Security Act to a childcare provider on behalf of the AU.
+These payments include Transitional Child Care, At-Risk block grants, and childcare payments made under Section 5801 of the Social Security Act.
+| E
+
+.4+| CHILD SUPPORT
+a| UNEARNED-Income received from a non-custodial parent for the support of his/her children.
+| I
+a| Payments are made to the AU as follows:
+
+* from the probation office
+^| I
+a|* directly from the non-custodial parent
+^| I
+a|* from the Division of Child Support Services (DCSS)
+
+Refer to <<military-allotment,Military Allotment>> and <<vendor-payments,Vendor Payments>> in this chart.
+^| I
+
+| COMMISSION
+| EARNED-A payment, usually a set fee or percentage, made to an employee for his/her service in facilitating a transaction such as buying or selling goods.
+A commission may be paid in lieu of or in addition to a regular salary.
+Refer to <<wages,Wages>> in this chart.
+
+If the payment is recurring, include it when determining representative pay.
+If not, do not include the pay.
+Refer to xref:3605.adoc[].
+| I
+
+| CONTRACTED EMPLOYMENT INCOME
+| EARNED-Income received from jobs in which there is a contract or payment agreement.
+Determine the gross monthly amount by dividing the total amount during the life of the contract by the number of months specified in the contract.
+
+Refer to xref:3605.adoc[] and xref:3640.adoc[].
+| I
+
+| CONTRIBUTION (CASH), GIFT, PRIZE, OR REWARD
+| UNEARNED-Money given to the AU as a gift from individuals or organizations.
+Refer to Charitable Donations in this chart.
+| I
+
+| CRIME VICTIM COMPENSATION PROGRAM
+| UNEARNED-Money paid through federal or federally funded state or local programs that cover costs incurred by victims of crimes.
+| E
+
+| DEFERRED COMPENSATION PLAN
+| UNEARNED-Money paid regularly from a deferred compensation plan.
+The money is usually accessible upon the owner's employment retirement or the owner attains a certain age.
+| I
+
+| DEEMED INCOME FROM AN ALIEN'S SPONSOR
+| Refer to xref:3630.adoc[].
+| I
+
+| DISABILITY PAYMENT
+| UNEARNED-Money paid to an employee by an insurance company or a source other than the employer.
+Refer to <<sick-pay,Sick Pay>> in this chart.
+| I
+
+.3+| DISASTER RELIEF ACT OF 1974 AND EMERGENCY ASSISTANCE ACT OF 1988
+| UNEARNED-Funds paid for disaster relief, to save lives, protect property, and for public health and safety because of a major disaster or natural catastrophe.
+| E
+
+| Federal Emergency Management Assistance (FEMA) payments for a major disaster or natural catastrophe.
+^| E
+
+| FEMA payments for rent, mortgage, food and utility assistance made to homeless people when there is no major disaster or natural catastrophe.
+^| I
+
+| DISASTER UNEMPLOYMENT ASSISTANCE
+| UNEARNED-Unemployment benefits paid to an AU member during a major disaster or catastrophe.
+Public Law 100-707 authorizes the President under the Robert T. Stafford Disaster Relief and Emergency Assistance Act to pay unemployment assistance to any individual unemployed because of a major disaster for the weeks of unemployment for which the individual is not entitled to any other unemployment compensation.
+| E
+
+.2+| DIVERTED INCOME
+| UNEARNED-Income received by a spouse or dependent family member from an individual [.underline]#not# in the AU who is in a Nursing Home, Institutionalized Hospice or EDWP (CCSP).
+|I
+a|*NOTE:* If the individual is in the home with the person to whom the income is being diverted, then it is excluded.
+^| E
+
+
+
+
+| DIVIDEND
+| UNEARNED-A share of company profits received by a policyholder or shareholder.
+
+Divide the amount of income anticipated to be received during the certification period by the number of months in the certification period.
+Count the prorated amount in each month of the certification period.
+Accept the A/R's statement as verification for amounts equal to or less than $10 per month or $120 per year.
+| I
+
+| EARNED INCOME TAX CREDIT (EITC)
+| EARNED-A special tax credit that reduces the federal tax liability of certain low-income working taxpayers.
+This tax credit may or may not result in a payment.
+
+EITC payments can be received as an advance from an employer or as a refund from the IRS.
+EITC given as a tax credit (no payment) is not income.
+
+Refer to xref:3405.adoc#chart-3405-1[Chart 3405.1, Types of Resources] for treatment of EITC received as an income tax refund.
+| E
+
+.2+| EDUCATIONAL GRANT, LOAN, SCHOLARSHIP
+
+| UNEARNED-Payments for the educational assistance of an AU member enrolled at a recognized institution of post-secondary education, school for the handicapped, vocational-program, career and technical education, or a program that provides for completion of a secondary school diploma/degree or GED.
+Refer to xref:3245.adoc[].
+| E
+
+a| EARNED-Work study program wages are earnings from a program operated by a secondary or post-secondary school in which the student works and earns money during the year.
+
+NOTE: Exclusions apply only to monies from an educational source and not to educational payments made from income accessible to the AU, such as earnings, contributions from parents, TANF, etc.
+^| E
+
+| EMPLOYMENT AND TRAINING (E&T) / EMPLOYMENT SERVICES (ES) FUNDS
+| UNEARNED or EARNED-Payments made to an AU member for reimbursement of costs that are related to participation in the program.
+These costs include, but are not limited to, transportation, tuition, registration, education testing fees, equipment, books, required wearing apparel, tools, supplies, and occupational license fees.
+| E
+
+.4+| ENERGY ASSISTANCE OTHER THAN LIHEAP
+| UNEARNED-Payments or allowances made under federal, state, or local law for the purpose of assisting the AU with the cost of heating and/or cooling its home.
+Payments can be one of the following:
+|
+a|* Federal or state assistance paid only once for weatherization, emergency repair, or replacement of heating or cooling devices.
+^| E
+
+a|* Energy assistance payments made under a state law for a household that does NOT include an elderly or disabled AU member.
+^| I
+
+a|* Energy assistance payments made under a state law for a household that include an elderly or disabled AU member.
+^| E
+
+| ENHANCED RELATIVE RATE (ERR) PAYMENTS
+| UNEARNED-Payments that provide financial support in assisting relative caregivers with the basic needs of a related child.
+The child must be in the custody of DFCS and placed with the relative caregiver.
+
+If the person for whom the payments are intended is included in the SNAP AU, count the income in the budget.
+| I
+
+| FAMILY SUBSISTENCE SUPPLEMENTAL ALLOWANCE (FSSA)
+| EARNED-Cash benefit up to $500 to supplement the income of low pay grade military families.
+Refer to xref:3430.adoc[].
+| I
+
+| FARM ALLOTMENT
+| UNEARNED-Payments received from government-sponsored programs, such as Agricultural Stabilization and Conservation Services, which are a gain or a benefit
+| I
+
+| FARMING
+| EARNED-Income received from agricultural labor.
+Refer to xref:3425.adoc[].
+| I
+
+| FOSTER CARE PAYMENTS
+
+(IV-B, IV-E or Title XX)
+| UNEARNED-Per diem payments received on behalf of a foster child or foster family.
+
+If the person for whom the payments are intended is included in the SNAP AU
+| I
+
+| GARNISHMENT
+| UNEARNED/EARNED-A set amount of wages or monies withheld by an employer/entity to pay a debt owed to a third party.
+| I
+
+| GENERAL ASSISTANCE
+| UNEARNED – Payments received by the AU from county funds administered by a local DFCS Office.
+| I
+
+
+| GIFT CARD
+| UNEARNED – A card that typically functions like a debit card and can be used for a specified cash value for goods and/or services at businesses.
+| E
+
+| [[GBI]]GUARANTEED BASIC INCOME
+
+| UNEARNED-A program in which every eligible individual or family would receive a set amount of money regularly based on need. Its purpose is to ensure all people have the means to purchase necessities and improve their quality of life. The program may be funded by private funds or a mixture of public (state or federal) and private funds. *Refer also to Universal Basic Income in this chart.
+|I
+
+| HOUSING AND URBAN DEVELOPMENT (HUD) RENTAL SUBSIDY
+| UNEARNED-Payment received by an AU for rent.
+Payments are sometimes distributed by the Georgia Residential Financial Authority (GRFA).
+
+Payments can be made directly to the AU, by a two-party check or directly to the landlord on behalf of the AU.
+Refer to <<vendor-payments,Vendor Payments>>.
+| E
+
+| INCOME TAX REFUND
+| Refer to xref:3405.adoc[].
+|
+
+| INDIAN JUDGEMENT GAMBLING PUBLIC LAW 101-277
+| UNEARNED-A payment of up to $2,000 per calendar year per individual made to an American Indian from his/her interest in tribal trusts or restricted lands.
+| E
+
+| INDIAN LAND GRANTS
+| UNEARNED-Payments to Native Americans based on federal statutes.
+| E
+
+.3+| INDIVIDUAL DEVELOPMENT ACCOUNT (IDA) AND INTEREST
+| UNEARNED-Funds withdrawn from an account established by or on behalf of a TANF A/R to pay for post-secondary educational expenses, a first home purchase, or to start up a new business, if the funds are used to pay for a qualified expense.
+| E
+
+| UNEARNED-Interest income accumulated in an IDA account.
+^| E
+
+| UNEARNED-Funds withdrawn from an IDA by a non-TANF individual.
+^| I
+
+| INHERITANCE
+a| UNEARNED–Cash, a right, or non-cash item(s) received because of someone's death.
+Consider accessibility.
+
+NOTE: Until an item or right has a value or is accessible, it is neither income nor a resource.
+| I
+
+| IN-KIND BENEFIT (SUPPORT AND MAINTENANCE)
+| UNEARNED-Any gain or benefit, such as food, clothing, or housing, which is not in the form of money payable directly to the AU.
+| E
+
+| IN-KIND BENEFIT (IN LIEU OF WAGES)
+| EARNED-Wages that may include the value of food, clothing, shelter, or other items provided in lieu of cash wages.
+| E
+
+| INSURANCE BENEFITS DUE TO LOSS OF INCOME
+| UNEARNED-Benefits paid from an insurance policy due to loss of income.
+| I
+
+| INSTALLMENT CONTRACTS/ AGREEMENTS
+| EARNED OR UNEARNED-Monies given due to a written agreement with specific stipulations for the sale, rental, or lease of property real or personal.
+| I
+
+| INTEREST
+| UNEARNED-Income received on investments.
+
+Divide the amount of interest income anticipated to be received during the certification period by the number of months in the certification period and count the prorated amount in each month of the certification period.
+
+Accept A/R's statement as verification for amounts equal to or less than $10 per month or $120 per year.
+
+Refer to Individual Development Account and PASS Account in this chart.
+| I
+
+.2+| IRREGULAR UNEARNED INCOME
+a| UNEARNED-Unearned income that is received irregularly is treated as follows:
+
+* income of $30 or more received in a calendar quarter
+| I
+a|* income of less than $30 received in a calendar quarter.
+^| E
+
+.3+| JOB CORPS
+a| UNEARNED-The following types of income received from Job Corps are budgeted as follows:
+
+* Living allowance.
+| E
+
+a|
+* Readjustment allowance.
+Payments made to those participating in Job Corps for at least 6 months.
+The money is placed into an account and paid to the participant upon leaving Job Corps.
+^| E
+
+a|
+* Allotments.
+Money sent to a dependent child from the Job Corps participant.
+This money is an allotment, not child support.
+^| E
+
+| JURY DUTY
+| EARNED-Compensation received for serving on a jury.
+| I
+
+| LOANS (PERSONAL OR BUSINESS)
+| UNEARNED-Money received that the borrower must repay to the lender.
+A written repayment agreement (signed by both parties) is required in order for the money received to be considered a loan.
+There must be an understanding between both parties that the money is a loan, and there must be an accounting of the loan activity/balance.
+| E
+
+| LOTTERY WINNINGS, GAMBLING WINNINGS, PRIZES, AWARDS, AND/OR WINDFALLS
+a| UNEARNED-A sum of money received as a result of a winning ticket or other monetary gain in a game of chance.
+
+Budget as income in the first ongoing month of receipt.
+
+NOTE: Refer to Lottery Winnings, Gambling Winnings, Prizes, Awards, and/or Windfalls in xref:3405.adoc#chart-3405-1[Chart 3405.1, Types of Resources] for ongoing budgeting rules
+| I
+
+| LOW-INCOME HOME ENERGY ASSISTANCE PROGRAM (LIHEAP)
+| UNEARNED-Payments or allowance for home energy provided to, or indirectly on behalf of, an AU.
+| E
+
+| LUMP SUMS
+| Refer to Lump Sums in xref:3405.adoc#chart-3405-1[Chart 3405.1, Types of Resources].
+| E
+
+.3+| MANAGED INCOME
+| UNEARNED-Money received and used for the care of a third party who is not a member of the AU.
+
+All or any portion of the money used for the care of the third party.
+| E
+| All or any portion of the money used by the AU.
+^| I
+| UNEARNED or EARNED-Money that belongs to the AU that is under the control of a third party in order to pay debts owed by an AU member.
+^| I
+
+| MEDICARE ADVANTAGE SUPPLEMENTAL BENEFITS
+| UNEARNED-benefits issued to cover certain items or services such as food, transportation, utilities, or other items that improve or maintain the health or overall function of the enrollee.
+^| E
+
+| MEDICARE PREMIUM PAYMENTS
+| UNEARNED-Payments made by DMA to pay for Medicare premiums on behalf of Medicaid recipients.
+| E
+
+| [[military-allotment]]MILITARY ALLOTMENT
+| UNEARNED-Payments received by an AU or Eligibility Determination Group (EDG) member who is a spouse and/or dependent child of military personnel.
+
+Consider the income as child support if it is for a dependent child.
+
+Refer to xref:3430.adoc[].
+| I
+
+| MILITARY COMBAT PAY
+| EARNED-Payments received by a member of the U.S Armed Forces due to deployment to a designated combat zone for the duration of the member's deployment to or service in the combat zone.
+
+Determine if any of the allotment/monies accessible to the SNAP AU is combat pay.
+If yes, exclude that portion of the allotment /money.
+The additional or special pay may be identified as “incentive pay for hazardous duty,” “special pay for duty,” or “special pay for duty subject to hostile fire or imminent danger”.
+Refer to xref:3430.adoc[],  Military Pay and Family Subsistence Supplemental Allowance.
+| E
+
+| MILITARY, NATIONAL GUARD, AND RESERVE PAY
+| EARNED-Payments received by military personnel.
+Refer to xref:3430.adoc[], Military Pay and Family Subsistence Supplemental Allowance in this chart.
+| I
+
+| MILITARY RETIREMENT
+| UNEARNED-Income received by military retirees and survivors.
+Beneficiaries who may be entitled to receive military payments include the retiree, his/her surviving spouse, and children.
+| I
+
+| MONTGOMERY GI BILL PAYMENTS
+a| UNEARNED-VA payments for individuals enrolled in Active Duty or the Selected Reserve of the Army, Navy, Air Force, Marine Corps, Coast Guard, or Air National Guard for up to 36 months of education assistance.
+
+NOTE: Any portion of funds that come from the individual's earnings is counted as income.
+| E
+
+| NATIONAL EMERGENCY GRANT (DISASTER RELIEF EMPLOYMENT)
+| UNEARNED-Grants funded by FEMA used to provide disaster relief employment on projects that provide food, clothing, shelter, and other humanitarian assistance for disaster victims.
+| E
+
+| NATIONAL FLOOD INSURANCE PAYMENTS (NFIP)
+| UNEARNED-Payments made for flood mitigation activities under the National Flood Insurance Act of 1968.
+| E
+
+| NOISE ABATEMENT PAYMENTS
+| UNEARNED-A non-recurring payment designated for noise abatement work on a dwelling.
+| E
+
+| OVERTIME PAY
+| EARNED-Extra income paid to employees who work more than 40 hours a week.
+Refer to <<wages,Wages>> in this chart.
+| I
+
+| PENSION
+| UNEARNED-A payment received regularly as a retirement benefit.
+| I
+
+| PUBLIC LAW 103-286
+| UNEARNED-Payments to individuals received because of their status of Nazi persecution.
+| E
+
+| REFUGEE CASH ASSISTANCE (RCA)
+a| UNEARNED-Cash payments provided to new entrant refugees, asylums, Amerasians, Cubans/Haitians, and victims of human trafficking (or other refugee eligible status) who are ineligible for TANF benefits.
+Payments are provided to these immigrants for a period of up to 8 months on a one-time basis.
+
+* ** If the Date of Entry for an individual is on or after 10/1/2021, payments are provided to these immigrants for a period, up to 12 months, from the month the immigrant entered the USA or the month refugee status eligibility started, on a one-time basis.
+| I
+
+| REIMBURSEMENT
+| UNEARNED-Payment for past expenses that do not represent a gain or benefit to the AU.
+| E
+
+.2+| RELATIVE CARE SUBSIDY
+| UNEARNED-Monthly per diem paid out of redirected TANF funds for children placed with relatives whose parents have agreed to non-reunification.
+
+If the person for whom the payments are intended is included in the AU.
+| I
+| If the person for whom the payments are intended is not included in the AU.
+^| E
+
+| RENTAL INCOME
+| Money received on property owned by an AU member and rented to others.
+
+EARNED-must be engaged in management of the property an average of 20 hrs./week.
+
+UNEARNED-if not involved in management more than 20 hrs./week.
+Refer to xref:3425.adoc[].
+| I
+
+.2+| REPAYMENT FOR OVERPAYMENT OF BENEFITS
+| UNEARNED-Money withheld from an income source (earned or unearned) or money received from any income source, which is voluntarily or involuntarily returned to repay a previous overpayment received from that source.
+Do not count the repayment amount.
+Ex: An AU receives Social Security Administration (SSA) income of $534/mon.
+SSA discovers that it overpaid the AU in benefits because the AU failed to report wages.
+SSA must now withhold $100/mon from the AU's income to repay an overpayment of benefits.
+The overpayment amount is excluded as income.
+$434 ($534 - $100) is counted in the budget.
+| E
+
+a| Wages or monies withheld by an employer/entity to pay a debt owed to a third party are garnishments.
+Money withheld from assistance from another program is included as income.
+Refer to Garnishments in this section.
+Ex: An AU receives Social Security Administration (SSA) Income of $680/mon.
+SSA discovers that the AU owes the IRS in taxes.
+SSA must now withhold 80/mon to pay the IRS.
+This overpayment amount is included as income.
+$680 is counted in the budget.
+
+[.underline]#*Non-Means Tested Income*#
+
+For a non-means-tested program (e.g., RSDI, UCB), do not count the repayment amount.
+Count the gross minus the repayment amount.
+
+[.underline]#*Means Tested Income*#
+
+For a means-tested program (e.g., TANF), count the income as follows:
+
+* if fraud/IPV, count the gross income.
+* if AU error, count the gross income.
+* if agency error, do not count the repayment amount.
+* if the reason for the overpayment is unknown, do not count.
+
+Exclude the repayment amount.
+Document the reason for the overpayment.
+If the worker is unable to verify the reason through third-party verification, document the attempt and exclude the repayment amount.
+^| I
+
+| RESTITUTION FOR WORLD WAR II INTERNMENT OF JAPANESE AMERICANS AND ALEUTS;
+PL 100-383
+| UNEARNED–Payment of $20,000 made to U.S. citizens of Japanese ancestry and to lawful permanent resident Japanese aliens or their survivors, and to Aleutian Island residents, as a consequence of their evacuation, relocation, and internment during World War II.
+| E
+
+| RETIREMENT
+| UNEARNED-A sum of money paid regularly as a retirement benefit.
+| I
+
+| ROOMER
+| EARNED-Payments received for a room only.
+Refer to xref:3425.adoc[].
+| I
+
+| [[salary]]SALARY
+| EARNED-Fixed compensation for services paid to a person on a regular basis.
+Most salaries are considered overtime exempt.
+Refer to <<wages,Wages>> in this chart.
+| I
+
+| SCHOOL LUNCH PROGRAM
+| UNEARNED-The cash value of assistance provided to children under the National School Lunch Program, Child Nutrition Act, Special Milk Program, and School Breakfast Program.
+Refer to Child Nutrition Payments in this chart.
+| E
+
+| SELF-EMPLOYMENT
+| EARNED-Income received from a self-employment enterprise, including rental property, roomers, and boarders.
+
+Refer to xref:3425.adoc[].
+| I
+
+| SENIOR COMMUNITY SERVICE EMPLOYMENT PROGRAM
+a| EARNED-Payments made to individuals aged 55 or older under Title V of the Older Americans Act for part-time employment.
+
+Agencies that receive funds for this program include:
+
+* U.S.D.A. Forest Service/ Forest Service
+* National Able Network/ABLE
+* National Council on Aging, Inc./NCOA
+* National Caucus & Center on Black Aged, Inc/NCBA
+* Mature Services, Inc/Mature Services
+* SER-Jobs for Progress National, Inc/SER
+* Senior Service America, Inc
+* National Council of Senior Citizens
+* American Association of Retired Persons/AARP
+* Experience Works Inc/Experience Works
+* National Indian Council on Aging/NICOA
+* National Asian Pacific Center on Aging/NAPCA
+* Asociacion Nacional Pro Personas Mayores
+* Easter Seals, Inc.
+* DHS Division of Aging Services
+
+Also refer to <<volunteer-payments,Volunteer Payments>> in this chart.
+| E
+
+.2+| SEVERANCE PAY
+| EARNED-Payments received from an employer *upon* termination of employment.
+| I
+| UNEARNED-Payments received from a former employer *after* termination of employment.
+^| I
+
+| SHARED HOUSEHOLD EXPENSES
+| UNEARNED-Payments made to an AU by a person who shares household expenses, and which do not represent a gain or benefit to the AU.
+| E
+
+| [[sick-pay]]SICK PAY
+| Payments made to an individual when out of work because of illness.
+
+EARNED-If paid by the employer's payroll.
+
+UNEARNED-If paid by another source (e.g., insurance).
+| I
+
+| SOCIAL SECURITY BENEFITS (RSDI)
+| UNEARNED-Retirement, Survivors, Disability Insurance (RSDI) benefits received from the Social Security Administration (SSA).
+
+Do not use the check as the sole source of verification of the entitlement amount.
+Include the amount paid for Part B Medicare premium in the total gross amount if paid by the individual or DMA.
+| I
+
+| SPENDING ACCOUNT
+| EARNED-Pre-taxed earnings that are deducted from an employee's gross wages and placed in an account to pay AU expenses such as childcare and medical costs.
+
+* Refer to <<wages,Wages>> or <<salary,Salary>>.
+| *
+
+| STRIKE BENEFITS
+| UNEARNED-Income received by individuals on strike.
+
+Refer to xref:3240.adoc[].
+| I
+
+| SUBSIDIZED EMPLOYMENT (GRANT DIVERSION)
+a| EARNED-Full-time employment in the private for-profit, private non-profit, or public sector in which the recipient's wages are subsidized through TANF (grant diversion) and the TANF benefits are reduced to zero.
+
+NOTE: Exclude the TANF grant amount from the gross wages received.
+| I
+
+| SUPPLEMENTAL SECURITY INCOME (SSI)
+| UNEARNED-Benefits paid by the Social Security Administration for Aged, Blind, or Disabled individuals.
+
+Refer to Lump Sum/SSI Back Payments in xref:3405.adoc#chart-3405-1[Chart 3405.1, Types of Resources].
+| I
+
+| TANF
+| UNEARNED-Benefits received from Temporary Assistance for Needy Families (TANF), including under issuance received in the month it is intended to cover.
+| I
+
+| TANF CORRECTIVE
+| UNEARNED-TANF benefits for a previous month owed to the AU because of an agency error.
+| E
+
+| TANF EMPLOYMENT INTERVENTION SERVICES (EIS)
+| UNEARNED-A non-recurrent lump sum payment that is equivalent to four times the maximum TANF grant amount for the AU size.
+The income is treated as a lump sum payment and is not counted in the SNAP budget.
+
+Refer to Lump Sum Payments in xref:3405.adoc#chart-3405-1[Chart 3405.1, Types of Resources].
+| E
+
+| TANF FROM ANOTHER STATE
+| UNEARNED-TANF benefits received from another state.
+Budget for the month of receipt only.
+| I
+
+| TANF TRANSITIONAL SUPPORT SERVICES (TSS)
+| UNEARNED-TANF support payment used to pay for or reimburse the cost of childcare, transportation, and incidental expenses to an applicant or a recipient.
+TSS is available to former TANF clients for a twelve-month period of WSP eligibility.
+The twelve-month count begins the first month of TANF ineligibility.
+TSS should run concurrently with the AU's twelve-months of WSP.
+
+TSS is not counted in the SNAP budget.
+| E
+
+.2+| TANF WORK SUPPORT PAYMENT (WSP)
+a| UNEARNED-Work support payments provide time-limited cash supplements to former TANF recipients who are transitioning from TANF dependency to self-sufficiency.
+
+WSP payments are available to former TANF AUs for a period of twelve months and twice in their lifetime receipt of TANF.
+
+The former TANF AU receives a cash supplement of $200 per month.
+If the AU is eligible for and/or receives TSNAP benefits, the income is not counted in the SNAP budget during the first five (5) months of TSNAP eligibility.
+
+NOTE: If the AU is not receiving TSNAP benefits, then the income is counted in the SNAP budget.
+| E
+| If the AU reapplies for/ receives regular SNAP benefits, the income is counted in the SNAP budget.
+^| I
+
+| TIPS
+| EARNED-Voluntary payments above the stated cost of a product or service given in appreciation for the service rendered.
+Refer to <<wages,Wages>> in this chart.
+| I
+
+| [[tra]]TRADE READJUSTMENT ALLOWANCE (TRA)
+| UNEARNED-Weekly payment available for up to 52 weeks after an individual's UCB is exhausted and during a period in which the individual is participating in a full-time training program approved in accordance with the Trade Act.
+| I
+
+| TRAINING ALLOWANCE/ STIPEND
+| EARNED– Payment received from vocational/ rehabilitation programs recognized by federal, state, or local governments, to the extent the payments are not a reimbursement or specifically excluded
+| I
+
+| TRUST FUND PROCEEDS
+a| UNEARNED-Payments from a trust.
+
+* payments distributed to the AU
+* payments that the AU has access to but are reinvested
+* income earned by the trust to which the AU has access.
+| I
+
+| UNEMPLOYMENT COMPENSATION BENEFITS (UCB)
+| UNEARNED-Benefits received from the Department of Labor (DOL) by unemployed individuals.
+
+Refer to <<tra,Trade Readjustment Allowance>> in this chart.
+| I
+
+| UNIFORM RELOCATION ASSISTANCE AND REAL PROPERTY ACQUISITION OF 1970 PAYMENTS
+| UNEARNED-Reimbursements received under Public Law 91-646, Section 210.
+| E
+
+| UNIVERSAL BASIC INCOME (UBI)
+
+| UNEARNED – A government funded program in which every eligible individual or family would receive a set amount of money regularly, regardless of need.
+Its purpose is to ensure all people have the means to purchase necessities and improve their quality of life.
+Refer to <<GBI,Guaranteed Basic Income>> in this chart.
+
+| I
+
+| UTILITY REIMBURSEMENT HOUSING AND URBAN DEVELOPMENT (HUD) OR FARMERS HOME ADMINISTRATION (FMHA) UTILITY REIMBURSEMENT
+| UNEARNED-A utility reimbursement paid by HUD or FMHA to an AU that receives housing assistance and is responsible for paying its utilities separately from its rent.
+
+Refer to <<vendor-payments,Vendor Payments>>.
+| E
+
+| VACATION PAY
+| EARNED-Any amount paid to employees for a regular scheduled period spent away from work or regular duty.
+It includes amounts paid even if the employee chooses not to take a vacation.
+Refer to <<wages,Wages>> in this chart.
+| I
+
+.6+| [[vendor-payments]]VENDOR PAYMENTS OTHER THAN GENERAL ASSISTANCE VENDOR PAYMENTS
+a| UNEARNED-Money paid by an outside source to a third party on behalf of the AU for an expense.
+
+Vendor payments are treated as follows:
+
+* Monies deducted or diverted by the AU or Eligibility Determination Group (EDG) to go directly to a third party to pay AU or EDG expenses.
+| I
+a|* HUD vendor payment for rent or mortgage
+^| E
+a|* Reimbursements made in the form of vendor payments
+^| E
+a|* Vendor payments from monies that are legally obligated and otherwise payable to the AU
+^| I
+a|* Vendor payments from money that is not owed to the AU
+^| E
+a|* Monies deducted or diverted by court order or other legally binding agreement, such as child support and alimony, to go directly to a third party to pay an AU expense
+
+Refer to General Assistance, Child Care Subsidy in this chart.
+^| E
+
+.2+| VETERANS ADMINISTRATION (VA) BENEFITS EDUCATIONAL
+
+(NON-EDUCATIONAL)
+| UNEARNED-Benefits received from the VA by a veteran or a veteran's dependent(s) for educational purposes.
+| E
+| UNEARNED-Disability and/or survivors' benefits, including Aid and Attendance Care, received from the VA by a veteran, or a spouse or a dependent of a veteran, for non-educational purposes.
+Also included are stipends paid for participation in a study of Vietnam-era veterans' psychological problems.
+
+Refer to <<AOP,Agent Orange Payment>> in this chart.
+^| I
+
+| VETERANS ADMINISTRATION (VA) PAYMENTS FOR CHILDREN OF VIETNAM VETERANS WITH BIRTH DEFECTS
+| UNEARNED-Benefits paid by the VA to children of Vietnam veterans born with congenital spinal bifida and certain other defects.
+| E
+
+.4+| VICTIM RESTITUTION
+| UNEARNED-Money received by a victim of a crime from a crime victim restitution program, usually as a reimbursement for financial losses.
+| E
+a|* The value of the payment does not exceed the value of the loss.
+^| E
+a|* The value of the payment exceeds the value of the loss.
+Count the excess value.
+^| I
+a|* The payment is a set monthly amount based on a court ruling.
+^| I
+
+| VISTA VOLUNTEER PAYMENT
+| EARNED-Income received by VISTA volunteers under Title I of the Domestic Volunteer Services Act.
+Included are payments from the Urban Crime Prevention Program.
+
+Exclude income only for individuals who were receiving TANF or SNAP when they originally joined VISTA, even if there is a break in participation.
+| I
+
+| [[volunteer-payments]]VOLUNTEER PAYMENTS
+| UNEARNED-Payment received under Title II of the Domestic Volunteer Services Act of 1973, including the Retired Senior Volunteer Program, Foster Grandparents Program, and Senior Companion Program.
+| E
+
+| [[wages]]WAGES
+| EARNED-Payment given in return for labor, goods, and services rendered.
+Wages may be paid on an hourly, weekly, bi-weekly, semi-monthly, monthly, or daily basis.
+
+Include commissions, tips, overtime, vacation pay, bonus pay, flex benefits, and the employee's share of FICA when paid by the employer.
+| I
+
+.3+| WAGES OF A CHILD
+| EARNED-Wages, including self-employment wages of a child under age 18 who is attending GED classes, in elementary or secondary school at least ½ time, and who is under the parental control of an AU member.
+Exclusions apply during school breaks if the intent is for the child to return to school.
+| E
+| Wages of a child under age 18 not under parental control or not in school.
+^| I
+
+| EARNED-Wages, including self-employment wages of a child who turns 18, are included effective the month following the month in which the 18^th^ birthday falls, unless the birthday falls on the first day of the month.
+^| I
+
+.2+| WORKER'S COMPENSATION
+| EARNED or UNEARNED-Payments received by an employee injured on the job.
+
+EARNED-If the AU member remains employed during recuperation and expects to return to work.
+| I
+|UNEARNED-If the AU member does not remain employed during recuperation.
+
+Include the full amount of the award.
+Do not exclude any amount withheld for legal expenses.
+^| I
+
+.4+| WORKFORCE INNOVATION AND OPPORTUNITY ACT (WIOA)
+| UNEARNED-Payments, such as training allowances and grants, that are not designated for services rendered.
+| E
+a| EARNED-On-the-job training payments for:
+
+* Children under age 19 who are 1) under the parental control of another adult AU member, and 2) in a year-round program
+^| E
+a|* Children under 19 who are not under the parental control of another adult AU member and/or are not in a year-round program
+^| I
+a|* Adults, age 19 and up
+^| I
+
+
+.2+| WORK-STUDY PROGRAM
+| EARNED Work-Study program wages are earnings from a program operated by a secondary or post-secondary school in which the student works and earns money during the year.
+Work-Study wages may be funded by the federal government, state government, institutions, or a combination. Refer to xref:3245.adoc[].
+
+EARNED-Federal Work-Study program wages  funded by the federal government, whether in whole or part
+| E
+|EARNED - State Work-Study wages funded by the state
+
+EARNED - Institutional Work Study (IWS) wages funded directly by the institution
+^| I
+
+| YOUTH BUILD PROGRAM PAYMENTS
+| EARNED-Payments made through the Youth Build Program.
+
+*Treat as WIOA income.
+| *
+
+| YOUTH PROJECT PAYMENTS
+a| UNEARNED-Payments made through projects developed to assist youth in acquiring work skills, including the following:
+
+* youth incentive entitlement pilot project
+* youth community conservation and improvement projects
+* youth employment
+
+*Treat as WIOA income.
+| *
+|===

@@ -1,0 +1,54 @@
+= 3115 Special Considerations for Applications
+:chapter-number: 3000
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: 3115
+:policy-title: Special Considerations for Applications
+:previous-mt-number: MT-55
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Certain situations in processing Supplemental Nutrition Assistance Program (SNAP) applications require special treatment.
+
+== Basic Considerations
+
+AUs in which *ALL* members are applying for or receiving SSI may apply for SNAP at the Social Security Administration (SSA) office.
+
+Use the chart below to process SNAP applications filed at the SSA office.
+
+[#chart-3115-1]
+.Chart 3115.1 - Processing SNAP Applications Filed at the SSA Office
+|===
+^| IF ^| THEN
+
+| the county receives the application in the mail from SSA
+| the date of application is the date the application is received at the SSA office.
+
+| the AU is eligible for SNAP expedited processing
+| the date of application is the date the application is received at the SSA office.
+Eligibility for expedited services begins immediately upon receipt of the application.
+
+| the application form is complete and mandatory verification is available to the agency
+| process the application without contacting the applicant.
+
+| the application form is incomplete or mandatory verification is not available to the agency
+| contact the applicant by telephone, mail or home visit to complete the form or request verification.
+|===
+
+NOTE: Under no circumstances will any AU member be required to come into the office for an interview, if an application is filed at the SSA office.
+
+=== Joint TANF/SNAP or General Assistance (GA)/SNAP Applications
+
+AUs in which all members are applying for TANF or General Assistance (GA) may apply for SNAP at the same time.
+
+NOTE: Joint processing procedures apply to GA programs that are based on a formal application process with consistently applied eligibility rules.
+
+Determine at the TANF or GA interview if the AU wishes to apply for SNAP.
+If not, document the TANF/GA record that the AU did not wish to apply for both programs.
+
+If the AU wants to apply, conduct a single interview.
+
+[caption=Exception]
+NOTE: If the AU is entitled to expedited processing and the agency cannot interview the AU immediately for TANF or GA, proceed with the SNAP interview.

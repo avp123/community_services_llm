@@ -1,0 +1,400 @@
+= 3355 Able-Bodied Adults Without Dependents (ABAWD)
+:chapter-number: 3300
+:effective-date: November 2025
+:mt: MT-85
+:policy-number: 3355
+:policy-title: Able-Bodied Adults Without Dependents (ABAWD)
+:previous-mt-number: MT-84
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+ 7 CFR § 273.24
+
+== Requirements
+
+An ABAWD who is subject to the ABAWD Time Limit cannot receive benefits for more than 3 months in a 36-month period UNLESS she/he is meeting the ABAWD Work Requirement.
+The first fixed 36-month period began in December 1996 and ended in November 1999.
+A new period starts every 36 months thereafter.
+*The current 36-month period is December 1, 2023, through November 30, 2026.*
+
+== Basic Considerations
+
+An Able-Bodied Adult Without Dependents (ABAWD) is defined as an individual who meets all the following criteria:
+
+* a work registrant,
+* age 18 through 65 (until the month in which the 66th birthday falls, *_effective July 4, 2025)_*,
+
+
++
+NOTE: An 18-year-old becomes subject to ABAWD work requirements starting the month following the month the individual turns 18.
++
+* not pregnant,
+* not physically or mentally unfit for employment,
++
+[NOTE]
+====
+If obviously unfit and medical verification is not available to support the unfitness determination, register the applicant/recipient (A/R) as temporarily unfit for employment based on the worker's observation of the A/R's mental or physical unfitness.
+
+Documentation of the observed unfitness is sufficient to determine the A/R is exempt from work registration.
+Follow the minimum necessary protected health information (PHI) standard and document the observed behaviors or physical conditions that deem the individual as unfit for employment at the time of the interview.
+Refer to xref:3350.adoc[].
+====
+* not responsible for the dependent care of a SNAP household member under age 14, even if the child is not eligible for SNAP benefits. The child may be related or unrelated to the adult(s).
+
+Effective July 4, 2025, an *Aged ABAWD* (AA) is an individual who meets all the ABAWD criteria above but is aged *60 – 65*. Aged ABAWDs do not have to meet the time limit work requirements.
+
+=== ABAWD Waiver
+
+The waiver eliminates the 3 of 36-month time-limit on the receipt of Supplemental Nutrition Assistance Program (SNAP) benefits and the ABAWD Work Requirement.
+If the State chooses to apply for the ABAWD Waiver, the State must meet one of the following core standards for waiver approval:
+
+* The data from BLS (Bureau of Labor Statistics) or a BLS-cooperating agency must show an area has a recent 12-month average unemployment rate over 10 percent;
++
+or
+
+* The data from BLS or a BLS-cooperating agency must show an area has a 24- month average unemployment rate 20 percent or more above the national rate for a recent 24-month period, but in no case may the 24-month average unemployment rate of the requested area be less.
++
+NOTE: The data reference period for the 20 percent standard has a specific limit.
+In order for the 24-month data period to be approvable, there must not be more than 21 months from the end of the last month of the 24-month data period through the last month that the waiver would be effective.
+
+=== ABAWD Discretionary Exemptions
+
+The ABAWD Discretionary exemption is an exemption that may be granted to an ABAWD who does not meet the ABAWD work requirement and is subject to the three-month time limit under specific circumstances.
+Each year the Food and Nutrition Service (FNS) allots states a specified number of these exemptions for their use.
+
+NOTE: If a change is reported that may result in a change in work status prior to the next recertification (renewal) or initial application, the ABAWD may be removed from the discretionary exemption and may be required to participate in employment and training activities.
+
+=== Requests/Approval for ABAWD Discretionary Exemption
+
+The ABAWD discretionary exemption may be requested and granted to ABAWDs on a temporary and case-by-case basis by the Food and Nutrition Unit (FANU) at the State Office.
+The FANU is required to track and approve the use of all ABAWD Discretionary Exemptions for quarterly reporting to the FNS.
+
+The request to grant a discretionary exemption to an ABAWD should be reviewed and submitted by the eligibility specialist's supervisor to the FANU via email to snap@dhs.ga.gov.
+The email subject must indicate, “*ABAWD Discretionary Exemption Request”.* The email request must include the following information: case number, client ID, ABAWD's name, non-compliance months, the month for which the discretionary exemption is being requested, and the reason the discretionary exemption is being requested.
+
+The eligibility specialist must copy and paste the documentation of the FANU's approval or denial statement into the Gateway system using the client-level case note feature.
+*ABAWD Discretionary Exemptions granted without approval must be corrected by the eligibility specialist.*
+
+=== ABAWD Waiver/Exempt Counties
+
+ABAWDs who reside in ABAWD time-limit exempt counties are identified as work registrants but are not subject to time-limits and countable months.
+
+NOTE: Eligibility staff are required to complete the ABAWD Time Clock and confirm ABAWD eligibility for the current 36-month period regardless of applied exemptions or existing waivers.
+
+
+
+=== ABAWD Work Requirement in Time-Limited Counties
+
+ABAWDs who reside in the time-limited counties must meet the ABAWD Work Requirement to remain eligible.
+Additionally, the ABAWD is required to comply with general work requirements for work registrants (Refer to xref:3350.adoc[]).
+
+*Currently, all counties in Georgia are considered ABAWD time-limited counties. Any changes to the time-limited counties will be communicated by the FANU.*
+
+=== ABAWDs Can Participate in SNAP Works Program
+
+ABAWDs may volunteer to participate in the SNAP Works Program to meet their ABAWD work requirements and remain eligible for SNAP benefits.
+
+ABAWDs who need to regain eligibility are *not* eligible for enrollment in the SNAP Works Program or any of its contracted providers.
+The SNAP Works Program offers services to both ABAWDs and non-ABAWDs.
+SNAP Works participants are not subject to sanction by the SNAP Works Program because it is a voluntary program.
+
+[#chart-3355-1]
+.CHART 3355.1 - ABAWD ELIGIBILITY CRITERIA. Use this chart to determine the applicable ABAWD Policies.
+|===
+^| POLICY ^| TIME-LIMITED COUNTIES ^| EXEMPT COUNTIES
+
+| *ABAWD Identification*
+2+| The Gateway system identifies ABAWD status.
+Counties must screen the “List of SNAP AUs With Individuals Who Are Potential ABAWDs Report” each month.
+Counties must review the work registration status of each individual record to ensure the correct work status is indicated.
+The eligibility specialist must update the work registration status of the individual, if it is incorrectly identified.
+
+| *ABAWD Work Requirement*
+a|
+ABAWDs who reside in the time-limited counties must meet the ABAWD Work Requirement to remain eligible.
+ABAWDs can meet the work requirement by participating in one of the following activities:
+
+* Working 20 hours per week, averaged 80 hours monthly.
+** Working means work in exchange for wages, goods or services, such as work in exchange for rent payment, in-kind work or unpaid work, such as volunteerism and/or community service and includes employment and self-employment.
+
+* Participating and complying with the requirements of the work program for 20 hours per week, averaged 80 hours monthly, such as WIOA or the SNAP Works Program.
+* Participating and complying with the requirements of the Comparable Workfare Component.
+* Any combination of work and participating and complying with the requirements of a work program for 20 hours per week, averaged 80 hours monthly.
++
+NOTE: The hourly wage does not have to meet the federal minimum wage for participation purposes.
+| The ABAWD is required to comply with work registration and general work requirements only.
+Refer to Section 3350.
+
+| *Comparable Workfare*
+a| Comparable Workfare Activities increase access to qualifying components for able-bodied adults without dependents (ABAWDs).
+Georgia is adding comparable workfare to its allowable component opportunities, which is intended to provide ABAWDs with another means to meet the ABAWD work requirement.
+Comparable workfare is expected to be widely utilized in areas where connections to the SNAP Works Program or other work programs may be limited.
+Under comparable workfare, the ABAWD is responsible for the following:
+
+* arranging their own placement at a nonprofit or for-profit provider;
+* reporting participation; and
+* verifying hours of participation to their SNAP case manager.
+
+The number of monthly required hours is obtained by dividing the SNAP AU's monthly allotment by the federal minimum wage.
+For example: $292 (allotment amount)/$7.25 (current minimum wage) = 40.27; the ABAWD must complete 40 hours per month for comparable workfare. *Note: Only use whole numbers and do not round.*
+Hours may not exceed 30 hours weekly.
+Refer to xref:attachment$form-858.pdf[Form 858 – Comparable Workfare: A Guide for ABAWDs].
+
+NOTE: If more than one ABAWD is receiving SNAP benefits in the SNAP household, the hours must be divided between all ABAWDs in the AU.
+The eligibility specialist will maintain records to support the issuance of benefits to comparable workfare participants beyond the third month of eligibility.
+The SNAP eligibility specialist will track each month of the State's fixed 36-month period to ensure compliance with the ABAWD time limit and work requirements.
+
+ABAWDs who have exhausted their three months under the time limit should not receive a fourth month of SNAP benefits without providing proof they have regained eligibility through their comparable workfare activity.
+| The ABAWD is required to comply with work registrant general work requirements only.
+Refer to xref:3350.adoc[].
+|===
+
+.CHART 3355.1 ABAWD ELIGIBILITY CRITERIA
+[cols="2,4"]
+|===
+^| POLICY ^| TIME-LIMITED COUNTIES
+
+|*Reporting Requirement for ABAWDs participating in Comparable Workfare*
+a|
+NOTE: Comparable workfare is *NOT* a SNAP Works Program activity.
+SNAP E&T funds cannot be used towards this component.
+ABAWDs who need to regain eligibility cannot do so through the SNAP Works Program.
+The fastest way to regain eligibility is through comparable workfare or other work activities.
+
+Participation must be verified timely to prevent an over-issuance of benefits.
+
+ABAWDs participating in comparable workfare must have the comparable workfare provider complete the Form 805 “ABAWD Volunteer Work Requirement Verification Form.” ABAWDs must verify comparable workfare participation at application and recertification (renewal).
+
+| *Reporting Requirement for ABAWDs who are employed*
+a| ABAWDs are required to report when their monthly gross income exceeds 130% of the FPL, and/or when their work hours are less than 20 hours per week, averaged 80 hours per month, no later than 10 days from the end of the month in which the change occurred.
+ABAWDs are also required to report when the household or household member receives substantial winnings from lottery, gambling, prizes, awards and/or windfalls with a gross amount of $4,500 or more (before taxes or other amounts are withheld).
+They must report these winnings no later than 10 days from the end of the month in which the household received the winnings.
+
+These requirements are stated on the Form 859, SNAP Consolidated Work Requirements Notice.
+The notice includes the following information:
+
+* All work registrants, including ABAWDs at application and recertification (renewal) must be informed of the general work requirements.
+* ABAWDs who reside in time-limited counties at application, interim change and recertification (renewal) are advised of ways to meet the ABAWD work requirement through participation in work program activities or other means.
+* All ABAWDs are subject to Simplified Reporting Requirements (SRR) and substantial winnings from lottery, gambling, prizes, awards and/or windfalls reporting requirements and are made aware of this requirement.
+
+| *Certification Periods*
+a| ABAWDs are assigned a four (4) month certification period.
+
+NOTE: ABAWDs require a standard renewal.
+
+| *Volunteering for the SNAP Works Voluntary Program*
+| The SNAP Works Program accepts referrals from all 159 counties.
+
+ABAWDs can volunteer to participate in the SNAP Works Program by notifying their SNAP eligibility specialist.
+To generate the referral, the SNAP Screening and Referral Tool Details page (form 864) must be accurately completed in Gateway, and “YES” must be entered for the question, “SNAP Voluntarily Refer.” This will automatically prepopulate a check mark in the “refer to the SNAP Works Program” button on EDBC page to trigger the referral.
+
+| *Employed ABAWD monitored at recertification*
+| ABAWDs' employment hours are monitored at the recertification (renewal) eligibility determination.
+Monitoring employment hours is an eligibility function.
+Employment hours for every month of the certification period are verified at recertification (renewal) to track compliance with the minimum monthly 80-hour participation requirement.
+
+This verification can be obtained using the Form 809, the attendance sheet, check stubs, Truv, or SteadyIQ.
+If check stubs are used as verification of the ABAWDs' employment hours, then documentation of representative pay must clearly state if a check stub(s) provided was not used to determine representative pay to determine ongoing eligibility.
+For example, state “only the last four check stubs are being used because they are the best representation of the AU's current situation”.
+
+The eligibility specialist must explain this requirement to the ABAWD at application and at recertification (renewal).
+However, if the ABAWD does not provide the verification at the interview, request verification of hours.
+
+If verification of hours is not provided or hours of participation are not met, for any month, and the ABAWD is otherwise eligible, determine if good cause exists.
+If good cause for failure to meet the hours or failure to verify the hours does not exist, determine if countable months or over-issuance months exist.
+
+Review and discuss Simplified Reporting Requirements and substantial winnings from lottery, gambling, prizes, awards and/or windfalls reporting requirements with the AU.
+
+
+| *Employed ABAWD monitored at periodic report*
+a| ABAWDs’ employment hours are monitored at periodic reporting if a change in employment is reported. The Eligibility Specialist must address the month in which the reported change occurred. It is *not* required that the work requirements be verified for all the previous months at periodic report. The work requirements and the hours of employment for all the previous months will be verified at the next recertification (renewal).
+
+| *Countable / Noncompliance Months*
+a| Countable months are months in which an ABAWD receives and is issued a full month of benefits,
+but is not meeting one of the following criteria:
+
+* Exempt from work registration
+* Meeting an exception from work registration
+* Residing in an exempt county
+* Receiving the ABAWD discretionary OR good cause exemption
+* Meeting the ABAWD Work Requirement
+* 36-month time limit period has expired
+
+NOTE: Prior to determining if a month is a countable month, screen to determine that the ABAWD is not meeting an exemption or exception from work registration requirements or that the ABAWD does not have good cause.
+Refer to xref:3380.adoc[] for a list of good cause reasons.
+
+*If during the certification period*, an individual experiences a change in circumstances that results in the loss of their exception status, staff must evaluate the individual’s circumstances and screen for all other exceptions from the time limit before assigning countable months.
+
+If the agency receives information that an individual is newly meeting an exception during their certification period, then staff must act promptly to apply the new exception and stop assigning countable months.
+
+Staff must _first_ use information readily available to the agency to verify the information before requesting verification from the AU.
+
+
+| *Prorated Months*
+| Months in which the AU is certified to receive prorated benefits do not count as countable months.
+If a full month of benefits is received in the initial month, the initial month may be considered a countable month.
+
+| *Countable Months from another State*
+| Countable months used in another state are counted in Georgia.
+If there is an indication that an ABAWD has participated in the SNAP Program in another state, then contact the other state and use their information to determine how many countable months the ABAWD has used in the current 36-month period.
+Refer to countable months and over issuance months in this chart.
+
+| *Accrued three (3) countable months*
+a| Once an ABAWD has accumulated (3) countable months he/she must regain eligibility to receive SNAP benefits again.
+
+NOTE: If the SNAP case is closed, the ABAWD must reapply for SNAP benefits.
+
+| *Compliance*
+a| Compliance is defined as an action the ABAWD takes to avoid accruing three countable months and losing SNAP eligibility.
+
+NOTE: ABAWDs and mandatory registrants sanctioned for voluntary quit or voluntary reduction of work hours must serve the minimum sanction period before eligibility can be reestablished.
+
+Registration is the only required action that the ABAWD or mandatory registrant must take to meet the work requirement after serving the minimum sanction period.
+Refer to Section 3380, Failure to Comply with Work Requirements, for actions the ABAWD and/or mandatory registrant may be required to take to comply with work requirements.
+
+| *Regaining Eligibility*
+a| *A non-compliant ABAWD is NOT referred to the SNAP Works Program or any of its contractors to regain eligibility.*
+
+Eligibility must be regained when there is an accumulation of three (3) countable months.
+To regain eligibility, the ABAWD must complete 80 hours of work, 80 hours of a training or education activity, complete the required hours of comparable workfare or complete a combination of employment and education/training activities during any 30 *consecutive* day period [.underline]#*after*# accumulating the first three countable/non-compliance months.
+
+NOTE: For expedited customers who need to regain eligibility, please refer to xref:3110.adoc[].
+
+Eligibility does not have to be regained during a calendar month.
+ABAWDs may regain eligibility an unlimited number of times.
+If an ineligible ABAWD has not met the work requirement prior to application, refer the ABAWD to an employment or comparable workfare activity to complete the required hours to regain eligibility prior to approval.
+
+NOTE: If the current 36-month fixed ABAWD Time Clock has expired, the customer does not need to regain eligibility once the new 36-month period begins.
+
+| *Self-initiated activity or exemption*
+a| If the ABAWD meets a work registration exemption, eligibility can be reestablished.
+
+If the ABAWD participated in a training or education activity during a period in which they did not receive benefits for the required 80 hours, eligibility can be established.
+
+| *Regaining eligibility through employment*
+| To regain eligibility through employment, the ABAWD must work 80 hours during any 30-day consecutive period.
+The ABAWD may use employment from periods in which he/she was not certified for benefits.
+
+If the ABAWD has begun employment at the time of application, pend the application until the ABAWD has worked 80 hours but not beyond the 30-day standard of promptness (SOP). The eligibility specialist must manually extend the VCL deadline to the 29th day of the SOP to allow the customer the opportunity to meet the work requirements, and so the case can be completed timely.
+
+If the ABAWD regains eligibility through employment that began and ended prior to the date of application, request third-party verification.
+If third party verification is not available and the ABAWD is not meeting the work requirement, refer the ABAWD to an employment or comparable workfare activity to regain eligibility.
+
+| *Regaining through work program activities*
+a| The ABAWD may regain eligibility by participating in a work program activity for 20 hours weekly over a consecutive 30-day period.
+Verification of completion is required. The eligibility specialist must manually extend the VCL deadline to the 29th day of the SOP to allow the customer the opportunity to meet the work requirements, and so the case can be completed timely
+
+NOTE: The VCL should be manually extended to the appropriate due date based on the specific case action (application or recertification) to allow the ABAWD sufficient time to regain eligibility. However, SNAP cases are not held beyond the SOP waiting for the ABAWD to regain eligibility. If eligibility is regained by the appropriate SOP, provide benefits from the date of application. If eligibility is not regained by the appropriate SOP, deny or close the case, if applicable.
+
+| *Second Three-Month Period*
+a| An ABAWD is allowed a second three-month period during a 36-month period.
+The second three-month period is additional time that the ABAWD is allowed to receive benefits within a 36-month period without meeting the work requirement.
+
+The ABAWD is potentially eligible for the second three-month period after eligibility has been regained, at least once, and there is a subsequent failure to meet the ABAWD work participation requirement.
+The second three-month period is consecutive.
+
+NOTE: These are considered “bonus” months and are not guaranteed.
+An ABAWD may receive the additional three months only if all other conditions of eligibility are met.
+If the ABAWD loses eligibility prior to accruing all three additional months, the remaining months cannot be used.
+
+The second-three-month period does not begin until all of the following conditions have been met:
+
+. The ABAWD receives the first three countable months *and* has regained eligibility.
++
+*AND*
+. The ABAWD fails again to comply with the work requirement or reports a loss of employment due to a reason other than voluntary quit.
++
+*AND*
+. The ABAWD is eligible for the first month of the second three-month period.
+The first month of the second three-month period is the month timely notice is issued or the month the loss of employment is reported.
++
+NOTE: If the ABAWD is ineligible for the first month of the second three-month period, the second three-month period does not begin.
+The second three-month period is still available if the ABAWD fails to meet the participation requirement at another time.
++
+*AND*
+. The first month of the second three-month period is not a prorated month.
++
+*THEN*
+. The second three-month period begins the month timely notice is issued for failure to comply with the ABAWD work requirement, such as the month the ABAWD reports loss of employment.
+
+NOTE: The date of report is crucial when the ABAWD is meeting the requirement through work.
+For example, if the ABAWD is working, loses employment for reasons other than voluntary quit in the last month of the certification period, does not reapply for several months, and does not report the loss of employment until he/she reapplies,
+the second three-month period is started when the ABAWD reapplies.
+
+However, if this same ABAWD reported loss of employment in the last month of the certification period, the second three-month period would start in the last month of the certification period.
+*The ABAWD loses the remaining months of the second three-month period if she/he does not reapply.*
+
+| *Non-compliant ABAWD after the Second Three Months*
+a| After the ABAWD has used the second three months, he/she must be in a self-initiated employment or training activity to re-establish eligibility.
+
+NOTE: *A non-compliant ABAWD is NOT referred to the SNAP Works Program or any of its contractors to reestablish eligibility.*
+
+| *Countable Months and Overpayment Months*
+a| An over-issuance exists if the ABAWD receives benefits for a month in which he/she:
+
+* did not have good cause for failing to meet the work requirement,
+* is not sanctioned,
+* is not exempt,
+* is not meeting an exception,
+* has exhausted all 3 countable months (non-compliance) months, *AND*
+* is not eligible for the second three months.
+
+When a SNAP AU is totally ineligible for a month or receives benefits in error for a month and that month is also a countable month, the month is considered an over-issuance month.
+
+All SNAP cases are SRR cases.
+Therefore, month(s) in which a non-reportable change occurs that makes an AU member an ABAWD are considered countable months.
+The ABAWD discretionary exemption may be applied for every month of the certification period that the ABAWD work requirement was not met *IF* approved by the FANU. In some instances, it may be appropriate to allow good cause.
+
+NOTE: Changes in ABAWD status are effective the month after the change occurs.
+
+An over issuance does not occur under the ABAWD policy in the following situations:
+
+* The  month is considered a countable (non-compliance) month.
+* The month is included in the second three-month period.
+* The month a SNAP work sanction is applied.
+* A month in which an ABAWD has good cause for failure to comply.
+* A month in which the ABAWD discretionary exemption is granted.
+
+| *ABAWD Eligibility Tracking Clock*
+a| The eligibility SNAP worker must accurately account for and document each month of the 36-month period and ensure that the ABAWD does not receive more than 3 countable/noncompliance months and the second three-month period.
+
+Document the eligibility status for each month of the 36-month period by indicating one of the following descriptions on the ABAWD Time Clock (ATC) in the Gateway system or the Manual ABAWD Calendar Tracking Form 507 uploaded into the document imaging system (DIS).
+
+If the case is inactive, complete the Form 507 Manual ABAWD Tracking Calendar, upload the document into the document imaging system, and add a descriptive client-level case note regarding the ABAWD's participation.
+
+*ABAWD TRACKING CALENDAR VALUES*
+[%hardbreaks]
+*C* Food Stamp Case/Client Closed – No Food Stamps Issued
+*E* Employed ABAWD (Employed 20-29 Hours per Week)
+*D* ABAWD Discretionary Exemption
+*A* Aged ABAWD
+*G* Good Cause for Non-Participation
+*H* Hours of Participation in Activity Reported
+*M* Mandatory Registrant
+*N* Noncompliance (Countable) Month
+*O* Over-Issuance Month
+*P* Prorated Month
+*R* Regained Eligibility
+*S* Sanction Month
+*W* ABAWD Waiver Granted
+*X* Work Registration Exemption Granted
+*T* Second Three-Month Period (Additional)
+
+| *Sanctioned work registrant moves from county to county*
+| If a sanctioned work registrant, including an ABAWD, moves from a mandatory county to an ABAWD-exempt county OR a time-limited county, continue the sanction for the appropriate minimum sanction period.
+At the end of the minimum sanction period, re-determine the work registration status of the work registrant.
+If the individual is still a work registrant, re-registration is the only action necessary to lift the sanction.
+
+| *Resources and Income of an ineligible ABAWD are counted in their entirety*
+| Work registrants may be sanctioned for failure to comply with SNAP work requirements such as voluntary quit, voluntary reduction of work hours to less than 30 hours per week, failure to comply with TANF ES, and refusal to register for work.
+
+| *Resources of an ineligible ABAWD*
+| Exclude resources in their entirety if the ABAWD is included in an AU that is categorically eligible for SNAP.
+Refer to Section 3210, Categorically Eligible Assistance Units.
+
+| *Income of an ineligible ABAWD*
+| Prorate income.
+Refer to Section 3625, Budget for an AU with IPV Disqualified or Work Sanctioned Individuals or Lawbreakers.
+|===

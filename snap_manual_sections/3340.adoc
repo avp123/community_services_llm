@@ -1,0 +1,45 @@
+= 3340 Residency
+:chapter-number: 3300
+:effective-date: April 2025
+:mt: MT-82
+:policy-number: 3340
+:policy-title: Residency
+:previous-mt-number: MT-61
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Assistance Unit (AU) members who receive benefits must live in Georgia.
+
+== Basic Considerations
+
+=== Georgia Residency
+
+There is no specific durational requirement for residency to participate in SNAP.
+The place of residence need not be a fixed dwelling.
+The AU may be homeless.
+
+=== County Residency
+
+An AU may apply for assistance in any county but is encouraged to apply in the county in which he/she may reside.
+The AU may be certified for benefits in any county within the state.
+Refer to xref:3105.adoc[].
+
+== Verification/Documentation
+
+Verify residency prior to certification of _initial applications._
+
+Residency may be verified by one of the following sources:
+
+* Georgia Department of Driver Services (DDS) interface if the results from the interface verify that the customer has a current and valid Georgia Driver's License or Identification card
+* mortgage statement or lease
+* rent or utility company receipts
+* school records
+* written statement of responsible reference
+* TANF/SSI and TCOS eligibility
+* any other document proving residency
+
+This list is not all inclusive.
+
+At _recertification_, accept and document the AU's statement of continued residency unless information known to the agency conflicts with the AU's statement.

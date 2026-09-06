@@ -1,0 +1,68 @@
+= 3615 Dependent Care Deduction
+:chapter-number: 3600
+:effective-date: January 2025
+:mt: MT-80
+:policy-number: 3615
+:policy-title: Dependent Care Deduction
+:previous-mt-number: MT-62
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The dependent care deduction is allowed when necessary for an Assistance Unit (AU) member to search for, accept, or continue employment, comply with employment and training requirements, attend training, or pursue education that is preparatory to employment.
+Dependent care costs that are fully incurred by the AU (including transportation costs) are allowed as a deduction.
+Allow the expense even if another adult lives in the home.
+
+== Basic Considerations
+
+Deduct the full costs incurred or billed to the AU for children under 18 or incapacitated persons of any age.
+Dependent care expenses may include the cost of transporting the child or other dependent to or from the provider, for meals, and other costs associated with the care and maintenance of a dependent.
+Mileage driven to and from the provider may be allowed as a dependent care deduction if at least one of the household vehicles is used for transportation.
+The vehicle must belong to a member of the Supplemental Nutrition Assistance Program (SNAP) AU.
+The mileage rate as established for state employees (when the individual uses a household vehicle) is used to calculate dependent care transportation costs.
+If an AU incurs an expense that can qualify under both medical deduction and dependent care deduction, the cost may be allowed as a medical expense or dependent care expense, not both.
+
+Deduct the full amount incurred or billed to the AU for dependent care.
+A deduction for dependent care is allowed, when necessary, for an AU member to do any one of the following:
+
+* search for, accept, or continue employment
+
+* attend training or pursue education which is preparatory to employment
+
+* comply with Employment and Training (E&T) requirements.
+Refer to xref:3360.adoc[].
+
+All or any portion of dependent care expenses paid under Title IV of the Social Security Act is not allowable.
+These payments include:
+
+* Transitional Child Care (TCC)
+* Childcare subsidized through the Childcare and Parent Services (CAPS) program.
+
+Do not allow the dependent care expense as a deduction if the expense is paid to an AU member who provides the care.
+
+Dependent care expenses do not include costs that are *separate and identified solely as educational*.
+Such costs may include the cost of books, instruction materials, or tuition for private schools.
+
+=== Verification
+
+Client statement may be accepted for dependent care expenses unless the information appears questionable.
+For example, if a household reports expenses that exceed income, verify dependent care costs through any of the following sources:
+
+* receipt from the provider
+* statement from the provider
+* subsidized childcare record or by the CAPS worker
+* Childcare and Parent Services (CAPS) Disposition and Parent Information Notice OR Child Care Certificate
+
+NOTE: Information received from the CAPS Unit is primary verification of the childcare expense billed to the AU.
+No additional verification is required.
+
+=== Documentation
+
+Document the following:
+
+* circumstances which entitle the AU to a dependent care deduction
+* the children or individuals for whom dependent care is paid
+* provider or individuals to whom dependent care is paid, including the address and telephone number
+* frequency of payment
+* date paid

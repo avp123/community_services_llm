@@ -1,0 +1,20 @@
+= 3200 Assistance Units Overview
+:chapter-number: 3200
+:effective-date: September 2019
+:mt: MT-55
+:policy-number: 3200
+:policy-title: Assistance Units Overview
+:previous-mt-number: MT-01
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An Assistance Unit (AU) includes the individuals who will receive benefits upon approval of the application for assistance.
+
+== Basic Considerations
+
+The AU size determines the income limit.
+The income and resources of all individuals in the AU are used to determine eligibility.
+
+Because of financial responsibility, certain individuals who are not included in the AU may have their income and resources considered when determining the AU's eligibility for assistance.

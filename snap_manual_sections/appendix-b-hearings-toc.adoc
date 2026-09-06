@@ -1,0 +1,22 @@
+= Appendix B Hearings Table of Contents
+:chapter-number: Appendix B
+:effective-date: January 2020
+:mt: MT-59
+:policy-number: Appendix B
+:policy-title: Hearings Table of Contents
+:previous-mt-number: MT-51
+
+include::partial$policy-header.adoc[]
+
+[.noheader,cols=1*]
+|===
+^s| APPENDIX B - HEARINGS TABLE OF CONTENTS
+| xref:appendix-b-hearings-overview.adoc[Hearings Overview]
+| xref:appendix-b-responsibilities-of-the-office-of-state-administrative-hearings-(OSAH).adoc[Responsibilities of the Office of State Administrative Hearings (OSAH)]
+| xref:appendix-b-initial-hearings.adoc[Initial Hearings]
+| xref:appendix-b-final-appeals.adoc[Final Appeals]
+| xref:appendix-b-responsibilities-of-ogc.adoc[Responsibilities of the Office of General Counsel (OGC)]
+| xref:appendix-b-administrative-disqualification-hearings.adoc[Administrative Disqualification Hearings (ADH)]
+
+|===
+

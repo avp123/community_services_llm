@@ -1,0 +1,23 @@
+= Appendix B Responsibilities of the Office of General Counsel (OGC) in Appeals
+:chapter-number: Appendix B
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: Appendix B
+:policy-title: Responsibilities of the OGC
+:previous-mt-number: MT-59
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The Office of General Counsel (OGC) has specific duties regarding any appeal of an OSAH hearing decision.
+
+== Basic Considerations
+
+The OGC appeals reviewer for final appeals has responsibility for the following:
+
+* taking additional testimony
+* remanding the case to the Administrative Law Judge (ALJ) for correction to or adjustment of the initial decision
+* requesting a response to any additional material or documentary evidence from the agency
+* basing the final decision on the record from the ALJ augmented by additional material
+* notifying the AU in writing of the final decision and of the right to a judicial review.

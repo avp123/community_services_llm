@@ -1,0 +1,61 @@
+= 3620 Budget for an AU with Individuals Who Fail to Comply with Enumeration Requirements
+:chapter-number: 3600
+:effective-date: December 2019
+:mt: MT-58
+:policy-number: 3620
+:policy-title: Budget for an AU with Individuals Who Fail to Comply with Enumeration Requirements
+:previous-mt-number: MT-1
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An individual who fails to comply with enumeration requirements is sanctioned and is not eligible to be included in the AU.
+
+== Basic Considerations
+
+Exclude an enumeration sanctioned individual from the AU count when determining resource limits, income limits and allotment levels.
+
+Resources of the sanctioned individual are counted in their entirety toward the remaining AU members.
+
+A pro rata share of the income of the enumeration sanctioned individual is counted as income to the remaining eligible AU members.
+If only eligible members have income, do not prorate it.
+
+An eligible AU member's income is not prorated to an ineligible member.
+
+If expenses are paid by or billed to only the sanctioned member, prorate the deductions.
+If expenses are paid by or billed only to the eligible members, allow the full amounts of the deductions.
+
+NOTE: The full amount of the H/C SUA or non-LSUA is always allowed, if appropriate.
+
+The standard deduction is never prorated.
+
+== Procedures
+
+Follow the steps below to compute the income and determine the benefit level of an AU that contains an enumeration sanctioned individual:
+
+[horizontal,labelwidth=10]
+Step 1:: Subtract allowable income exclusions from the sanctioned individual's gross income.
+
+Step 2:: Divide the remaining allowable income equally among all of the AU members including the enumeration sanctioned individual, other sanctioned/disqualified AU members and any ineligible aliens or students.
+
+Step 3:: Count all but the sanctioned individual's pro rata share as income to the AU.
+
+Step 4:: Allow the 20% deduction to the prorated earned income available to the remaining AU members.
+
+Step 5:: Allow the full standard deduction.
+
+Step 6:: Divide the shelter, dependent care and child support expenses which represent costs billed to or paid by the sanctioned individual equally among the AU members, including the sanctioned individual, other sanctioned/disqualified AU members and other ineligible aliens or students.
+
+Step 7:: Count all but the sanctioned individual's pro rata share as a shelter, dependent care, and/or child support deduction for the remaining eligible AU members.
+Do not prorate the H/C SUA or LSUA, if used in the budgeting process.
++
+--
+Do not allow the excess medical deduction if the enumeration sanctioned individual is the AU member eligible for the deduction.
+
+NOTE: Do not exceed the shelter/utility cap in the computation if the sanctioned individual is the only AU member eligible for unlimited shelter/utility deductions.
+--
+
+Step 8:: Determine the benefit level without the enumeration sanctioned individual included in the size of the AU.
+
+Step 9:: Document case notes with the appropriate information.

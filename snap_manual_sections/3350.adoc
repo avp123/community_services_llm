@@ -1,0 +1,305 @@
+= 3350 Work Registration
+:chapter-number: 3300
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3350
+:policy-title: Work Registration
+:previous-mt-number: MT-86
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+ 7 CFR § 273.7
+
+== Requirements
+
+The work registration status of each applicant and recipient is determined during the eligibility process.
+
+== Basic Considerations
+
+The work requirement has three parts: registration, participation, and sanction.
+The eligibility functions are registration and sanctions for non-compliance.
+
+=== Work Registration
+
+Eligibility staff are expected to use the work requirements oral script and provide a written notice via Form 859, SNAP Consolidated Work Requirements Notice, to the household explaining the general work requirements and ABAWD work requirements, if applicable. The requirements are expected to be explained during each eligibility interview, and when a previously exempt household member or a new household member is subject to these work requirements.
+
+The oral script and consolidated notice explain the rights and responsibilities of work registered Assistance Unit (AU) members, the sanctions for failure to comply with general work requirements, and the rights and responsibilities under the ABAWD time limit.
+
+
+NOTE: If the Gateway system does not generate the above required form, the worker must mail the form to the individual and document this action in the Gateway system's “client level case note feature.”
+
+The work registration status of each AU member is determined as follows:
+
+* at initial application,
++
+[NOTE,caption=Exception]
+====
+The work registration status of the applicant, at the interview, must be determined prior to certification of benefits under expedited processing procedures.
+The applicant's work registration status is not delayed due to expedited application processing unless the authorized representative files the application on behalf of the applicant.
+
+The work registration status of other AU members may be delayed, if necessary.
+Refer to xref:3110.adoc[].
+====
+* at interim change, *IF* a previously exempt household member or a new household member is subject to the work requirements
+* at every recertification (renewal)
+* at periodic report, *IF* a change is reported that impacts work registration, or a new household member is subject to the work requirements
+
+The work registration status of an AU member is either:
+
+* exempt from work registration, or
+* determined to be a work registrant
+
+NOTE: IPV and SSN disqualified AU members and ineligible AU members are not subject to work registration requirements.
+An exempt AU member is not required to comply with general work requirements for SNAP.
+
+=== Exemptions from Work Requirements
+
+An AU member is exempt from work requirements if she/he meet one of the following exemptions:
+
+NOTE: If an AU member meets more than one exemption, apply the one that has the longest benefit for the individual.
+
+* under age 16.
++
+NOTE: If a child turns 16 during the certification period, register unless otherwise exempt, at the next recertification (renewal).
+
+* age 16 or 17 and not the head of AU.
++
+NOTE: Only a 16 or 17-year-old, who is the head of the AU and does not meet an exemption, is a mandatory registrant.
+
+* is registered and complying with Employment Services as a TANF recipient.
+* physically or mentally unfit for employment:
+* [.underline]#*Unfitness for employment criteria*#
+** Unfitness may be a temporary incapacity or a permanent disability.
+A person who is ill, injured, or incapacitated may be unfit for employment.
+Obtain verification from a medical professional, mental health provider, or a social worker.
+** Pregnant women who are high-risk are considered to be unfit for employment and are exempt from work requirements.
+Verification from a medical source is required.
+** [.underline]#*Chronically Homeless Definition*#: Individuals who are homeless and do not have a permanent residence are [.underline]#*NOT*# automatically considered to be unfit for employment or exempt from work registration.
+
+*** Individuals who are considered chronically homeless *and* are  [.underline]#unfit for employment# are exempt from work registration and may have the following circumstances:
+**** are sleeping under a bridge, on sidewalks, in parks, on benches, or on the street
+**** an individual who will imminently lose their nighttime residence*
+**** have an employment history that is inconsistent, sporadic, or shows little to no employment
+**** have an employment history that is not consistent with self-sufficiency, such as wages that cannot support independent living
+**** may struggle with drug and/or alcohol abuse
+**** may struggle with undiagnosed mental or physical health issues
+
+This is not an all-inclusive list.
+
+In these situations, third-party verification is not required unless it is questionable.
+If the homeless customer does not meet one of the above circumstances but claims unfitness for employment, third-party verification is required.
+
+NOTE: An individual is considered imminently homeless if they are due to lose their primary nighttime residence within 14 days, do not have an alternative residence, and lack the resources to secure permanent housing.
+
+If an individual's unfitness for work is obvious to the worker, the worker must exempt the individual without requiring a statement or verification from medical professionals.
+The worker must document what the individual states and the information provided regarding the individual's circumstances to establish unfitness.
+
+** Examples of unfitness for employment as a temporary exemption from work requirements may include, but are  not limited to the following:
+*** the observation of a cast on a broken leg
+*** information, provided by the client, of a scheduled surgery or recuperation from surgery
+
+** Receipt of or certification for a temporary or permanent disability benefit, such as SSI, RSDI, VA, Railroad Retirement, or Worker's Compensation, is sufficient verification of incapacity or disability.
+
+** AU members who *file joint applications for SSI and SNAP at the SSA office* are not required to register for work while the initial SSI decision is pending.
+This policy does not apply to SSI decisions that are in appeal.
+AU members who apply for SNAP and state that they have filed for SSI and/or SSA benefits *are required to provide a medical statement* to verify incapacity or disability.
+
+** If a person is chronically ill, as determined by the worker, when a physical or mental impairment, either by itself or in conjunction with age or other factors, prevents the person from engaging in employment or participating in the SNAP Works Program.
+The worker must document their observation of the physical state and observed behaviors of the individual.
+
+Unfitness for employment is established, assessed, determined, and re-evaluated at each recertification (renewal).
+
+* a student enrolled at least half-time in a GED program, home schooling registered with the department of education, high school, online courses, post-secondary education, seminary, or trade school.
++
+*OR*
+
+* a refugee student participating in a recognized refugee educational/training program *at least halftime.*
++
+*OR*
+
+* a student aged 18 - 49 enrolled *at least half-time* in an institution of higher education, such as a business, technical, trade, or vocational school that normally requires a high school diploma or equivalency certificate for enrollment in the curriculum or if the student is enrolled in a regular curriculum at a college or university that offers degree programs regardless of whether a high school diploma is required.
+Refer to xref:3245.adoc[].
+
+[.underline]#Definition of Enrollment# - A student enrolled in a school, training program, or institution of higher education remains exempt during normal periods of class attendance, vacation, and recess unless the student graduates, is suspended or expelled, drops out, or does not intend to register for the next normal school term, excluding the summer term.
+
+NOTE: A student in an institution of higher education must first meet certain student exemptions to be an eligible student.
+For purposes of the work registration student exemption, verification of school enrollment is required if the student is enrolled in an institution of higher education.
+Refer to xref:3245.adoc[].
+
+[caption=Exception]
+NOTE: If the enrollment is part of the SNAP Works Program and the work or training activity details are defined in the SNAP Works Individual Employment Plan (IEP), then the SNAP Works participant continues to be a work registrant AND is [.underline]#*not*# considered a student. Re-register at every recertification (renewal) period.
+
+* responsible for the daily care of a child under the age of 6. A parent or other AU member is responsible for the care of a dependent child under 6.
+If the child has his or her 6^th^ birthday during a certification period, the eligibility specialist must screen the individual at the next recertification (renewal) to determine if s/he meets any other exemptions or exceptions.
+
+* responsible for the care of an incapacitated individual.
+Verify through a medical source that the incapacitated individual requires care.
+The incapacitated individual does not have to reside with or be a member of the SNAP AU.
+
+* an employed or self-employed person who works a minimum of 30 hours weekly on a job expected to last 30 days.
+
+* receives weekly earnings equal to the Federal minimum wage multiplied by 30 hours, including self-employment.
+If a temporary break in employment is not expected to last longer than 10 workdays, the exemption continues.
+
+* a VISTA volunteer.
+
+* a migrant or seasonal farmworker under a contract agreement with an employer or crew chief to begin employment within 30 days.
+
+* a regular participant in a drug addiction, alcohol treatment, or rehabilitation program.
+
+* an individual who applies for or receives Unemployment Compensation Benefits (UCB).
+AU's statement is accepted for the UCB application unless the statement conflicts with information known to the agency.
+
+
+
+=== Work Registrants
+
+Effective July 4, 2025, an AU member, who is 16 years or older, who does not meet one of the work registration exemption criteria above is a work registrant.
+
+In Georgia, work registrants are defined by two categories:
+
+* Mandatory Registrant; or
+* ABAWD
+
+Work registrants are required to adhere to general SNAP work requirements, which include registering for work and complying with the following work requirements:
+
+* Register for work at the time of application and every 12 months thereafter.
+
+* Provide sufficient information for the agency to determine the employment status or job availability of the individual.
+
+* Participate in the SNAP Works Program, if they choose, and comply with the requirements of the program.
+
+* Accept an offer of employment paying at least the minimum wage at a site or plant that is not subject to strike or lockout at the time of offer.
+
+* Report to an employer if the employment meets the requirements for suitable employment.
+
+* Continue employment of 30 hours or more a week without voluntarily quitting or voluntarily reducing work hours to less than 30 hours per week.
+
+=== Mandatory Registrants
+
+*Effective July 4, 2025, an AU member is a mandatory registrant if he/she meets one of the following:*
+
+* Under age 18 or 66 or older
+
+* Pregnant, but not high risk
+
+* Responsible for the dependent care of a SNAP household member under age 14, even if the child is not eligible for SNAP
+
+NOTE: The ineligible member under 14 must reside in the SNAP AU and may be an ineligible AU member, such as an ineligible alien or a sanctioned AU member.
+
+
+Some work registrants are required to participate in work activities to remain eligible.
+Refer to xref:3380.adoc[] for policy regarding compliance for work registrants.
+Refer to xref:3355.adoc[] for a definition of compliance for ABAWDs subject to the time limits.
+
+All applicants or recipients who do not meet a work registration exemption must meet the work requirements listed in this section.
+<<chart-3350-1,Chart 3350.1, Work Registration Exemptions>>, identifies the exemptions and verification requirements for all applicants or recipients exempt from work registration.
+This list is not all-inclusive.
+<<chart-3350-2,Chart 3350.2, Work Registrants>>, lists the appropriate description for all work registrants.
+
+Staff must screen for all exemptions from the general work requirements and all exceptions from the time limit at certification and recertification (renewals). Staff must not begin assigning countable months until screening has been completed.
+
+Additionally, if an individual experiences a change in circumstances that results in the loss of their exception status, staff must evaluate the individual’s circumstances and screen for all other exceptions from the time limit before assigning countable months.
+
+=== SNAP Employment & Training (E&T) Program
+
+The SNAP Works Program is the program responsible for implementing the employment and training (E&T) work requirements.
+Refer to xref:3345.adoc[].
+The SNAP Works Program is a voluntary program that operates in all 159 counties.
+
+Eligibility specialists are required to screen all AU members who meet the following criteria during the interview to determine if a referral is appropriate to SNAP Works:
+
+•	are 16 or 17 years of age or older, *and* the head of the household
+•	are at least 18 years old or older
+•	are not receiving TANF benefits
+•	are fit for employment
+
+The SNAP Works Program is offered to SNAP recipients who meet the SNAP Works Program eligiblity criteria.
+Program services are provided through contracted SNAP Works direct service partners.
+Refer to xref:3345.adoc[] for more information.
+
+=== Voluntary Registrants
+
+Voluntary registrants are SNAP recipients who are exempt from work registration and choose to volunteer to participate in the SNAP Works Program's training activities to gain self-sufficiency through economic independence.
+Voluntary registrants are *not* required to register for work or comply with work requirements and are *not* sanctioned for non- participation in the SNAP Works Program.
+
+.CHART 3350.1 - WORK REGISTRATION EXEMPTIONS
+[#chart-3350-1%noheader]
+|===
+| Child under 16
+
+| Age 16 & 17 and not the head of the AU
+
+| Registered and complying with TANF employment services
+
+| Physically or mentally unfit for employment with medical verification, unless obvious (documentation required)
+
+| Receiving disability benefits (SSI, RSDI, VA, Railroad Retirement), Workers' Compensation, etc.
+Third-party verification is required.
+
+| SSI and SNAP joint applications filed at the SSA Office.
+Verification of SSI and SNAP joint application status is not required if information is forwarded from SSA.
+
+| Students enrolled at least half-time in high school or other primary studies.
+Verification of school enrollment is required.
+
+| Students aged 18 - 49 enrolled at least half-time in an institution of higher education.
+Verification of school enrollment is required.
+
+| Refugee participating in a recognized refugee education/training program at least half-time.
+Verification of participation is required.
+
+| Caretaker of a dependent child under the age of 6 in the SNAP AU.
+
+| Caretaker of an incapacitated individual.
+The need for continuous care must be verified by a medical source.
+
+| Employment or self-employment of at least 30 hours per week or earning at least equal to the federal minimum wage times 30 hours.
+Verification of work hours and wages is required.
+
+| Vista Volunteer.
+Verification of volunteer status is required.
+
+| Migrant or seasonal farmer.
+Verification of contract agreement to begin employment within 30 days is required.
+
+| Participation in a drug addiction, alcohol treatment, or rehabilitation program.
+Verification of participation is required.
+
+| Receiving UCB or (have applied for or been approved for UCB).
+Verification of the application for benefits is required if questionable.
+
+
+|===
+
+.CHART 3350.2 - WORK REGISTRANTS
+[#chart-3350-2%noheader]
+|===
+a| *ABAWD* individuals are work registrants who reside in time-limited counties and must meet the ABAWD Work Requirements to remain eligible. ABAWDs are:
+
+
+* age 18 - 54 (effective October 1, 2024 – July 3, 2025)
+* age 18 - 65 (effective July 4, 2025)
+
+* not pregnant
+
+* not physically or mentally unfit for employment
+
+* not responsible for the dependent care of a SNAP household member under age 14
+
+Effective July 4, 2025, an *Aged ABAWD* (AA) is an individual who meets all the ABAWD criteria above but is aged *60 – 65*. Aged ABAWDs [.underline]#do not# have to meet the time limit work requirements.
+
+Refer to Section 3355, ABAWDs.
+
+a|
+*MANDATORY REGISTRANTS* are work registrants who are:
+
+* under age 18 or 66 or older (effective July 4, 2025)
+* pregnant, but not high risk
+* responsible for the dependent care of a SNAP household member under age 14, even if the child is not eligible for SNAP benefits.
+
+NOTE: The ineligible member under 14 must reside in the SNAP AU and may be an ineligible AU member, such as an ineligible alien or a sanctioned AU member.
+
+|===

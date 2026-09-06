@@ -1,0 +1,898 @@
+= 3035 Verification
+:chapter-number: 3000
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3035
+:policy-title: Verification
+:previous-mt-number: MT-86
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 273.2(f)
+
+== Requirements
+
+The agency must give the Assistance Unit (AU) at least 10 calendar days to verify information and must offer assistance in obtaining information.
+
+== Basic Considerations
+
+Verify the following current information prior to certification of _initial applications_:
+
+* identity
+* enumeration (xref:3325.adoc[])
+* citizenship and immigration status
+* residency
+* gross income
+* actual utility expenses if the AU is not eligible for the mandatory standard utility allowance (SUA)
+* disability
+* medical expenses
+* shelter expenses
+* student status (for work registration purposes)
+* legally obligated and actual child support payments
+* ABAWD work hours, participation, and countable months including months in another state
+* compliance with Supplemental Nutrition Assistance Program (SNAP) work program sanctions
+* all questionable information
+
+At _recertification (renewal)_, verify current:
+
+* immigration status
+* gross income
+* medical expenses, if previously unreported
+* shelter expenses if they have not been previously verified, if a change was reported, or if the previous verification is no longer current
+* actual utility expenses if the AU is not eligible for the mandatory standard utility allowance (SUA)
+* ABAWD work hours, participation, and countable months, including months in another state
+* compliance with SNAP work program sanctions
+* information that is incomplete, inaccurate, inconsistent, or questionable
+
+At periodic report, verify the following current information *IF* it has changed:
+
+* household composition
+* address and applicable shelter costs
+* ABAWD work requirements
+* gross income (earned and self-employment)
+* gross unearned income (*IF* it has changed by more than $100, or the income will cause the case to terminate)
+* lottery and gambling winnings
+* child support deductions
+
+
+*Any information that is incomplete, inaccurate, inconsistent, or questionable must be verified.*
+
+Refer to the <<chart-3035-1,Summary Verification Chart>> in this section for verification required at interim change.
+
+Refer to Documentation Standards to determine the information and verification needed for each point of eligibility.
+
+The agency must assist households in obtaining sufficient verification.
+
+The AU's statement is accepted as a last resort and must include documentation to explain the circumstances.
+
+=== Third Party Verification
+
+Verification is the use of documents, collateral contacts, home visits, computer matches and documentation, which confirms the accuracy of statements and information.
+
+Third-party verification is contact with an individual or outside entity to obtain information about an AU's circumstances.
+
+Third-party verification includes the following:
+
+* [.underline]#Documents# - legal agreements, contracts, bills, leases, medical or doctor's statements, prescription receipts, check stubs, employer statements, social security cards, driver's licenses, etc.
+
+* [.underline]#Collateral contacts# – an oral or written statement from a third-party contact with a social service agency, a landlord, a letter from a non-custodial parent, etc.
+
+* [.underline]#Home visits# - visits made by DFCS personnel or other state, local, community or federal agencies to confirm the accuracy of statements and information.
+
+* [.underline]#Computer matches# – Gateway interfaces with other federal, state, and local computer systems to compare and provide data regarding AU members.
+
+=== Documents
+
+When possible, documents are used as the primary source of verification.
+Documents provide written evidence of the AU's statements.
+Certain documents or copies of documents are filed in the case record as proof of the AU's circumstances.
+
+=== Collateral Contacts
+
+A collateral contact is an oral or written confirmation of the AU's circumstances by a non-AU member.
+The collateral contact may be made in person, over the telephone, or in writing.
+
+When taking a collateral statement on the telephone or in person, document in the case record the name, relationship/title, address or telephone number of the contact, the date of the contact and the collateral contact's statements regarding the AU.
+
+If a written statement is provided by the collateral contact, the individual completing the statement must sign the statement.
+The statement should be dated, but if it is not dated, DFCS is to date-stamp or record on the statement the date it is received.
+
+The telephone number, address or another way to contact the collateral contact must be furnished.
+
+This information may be provided as part of the written collateral statement or recorded in the case file.
+
+If a collateral statement is unacceptable to the agency because it is not completed correctly or lacks the required information, and the AU is cooperating with providing information, the agency must offer assistance to the AU.
+
+Collateral contacts should not be allowed in suspected fraudulent cases.
+The State agency is not required to use a collateral contact designated by the household if the collateral contact cannot provide accurate third-party verification.
+The agency may ask the AU to provide another collateral contact, select another one for the AU if the AU fails to designate one or designates one that is unacceptable to the agency, or contact the collateral contact directly.
+The State agency is responsible for obtaining verification from acceptable collateral contacts.
+Examples of acceptable collateral contacts include employers, landlords, neighbors, social service agencies, migrant service agencies, etc., who can be expected to provide accurate third-party verification.
+
+The agency may substitute a home visit or select an alternative form of verification if circumstances warrant.
+
+The agency must make sure that the AU understands what information is needed from the collateral contact.
+
+When talking with a collateral contact, the agency must disclose only the information that is absolutely necessary to get the information being sought.
+Avoid disclosing the following information:
+
+* that the AU has applied for benefits
+* information supplied by the AU
+* information that cannot be released to anyone, including the AU, as provided in Section 3005.
++
+*OR*
+* the suggestion that the AU is suspected of any wrongdoing.
+
+NOTE: The intent of this policy is to minimize the disclosure of information.
+
+=== Home Visits
+
+Home visits may only be used as verification  under certain circumstances and on a case-by-case basis where the supplied documentation is insufficient.
+DFCS employees may use home visits in the following situations:
+
+* third-party verification is insufficient to make a firm determination of eligibility or the benefit level
+* third-party verification cannot be obtained, and the AU's statements are questionable
+
+The home visit must be prearranged with the AU.
+
+NOTE: A home visit cannot be made or used as verification solely because an AU fits the profile of an error-prone AU as defined by the agency.
+
+=== Computer Matches
+
+Refer to xref:3500.adoc[]; xref:3505.adoc[]; xref:3515.adoc[]; xref:3510.adoc[]; xref:3520.adoc[]; and xref:3525.adoc[].
+
+These sections provide policy regarding the verification of case information via computer matches.
+
+Consider information received from the Social Security Administration (BENDEX and SDX), TANF, DOL Unemployment Compensation Benefits (UCB) match, the Division of Child Support Services (DCSS) Child Support interface, and Vital Records Inquiry, as verified.
+No other follow-up is required.
+
+*Employment Income Verification System (EIVS)* - A system in Gateway that verifies employment income using a pre-defined hierarchy and multiple electronic sources.
+The system’s framework provides the ability to add or remove electronic sources from the hierarchy at any time.
+
+*Income Eligibility Verification System (IEVS)* - A federally mandated system that periodically matches with other state and federal agencies, such as the Department of Labor and the Social Security Administration.
+
+Effective July 1, 2024, consider information received from Truv as verified *IF* the data has been certified by the customer and does not appear to be questionable.
+
+Before July 1, 2024, the Work Number was a computer match used and was considered to be verified upon receipt unless questionable.
+
+Effective *November 18, 2024, through June 30, 2026*, consider information from SteadyIQ as verified IF the data has been certified by the customer and does not appear to be questionable.
+
+If information from these sources appears to be questionable or inconsistent, request third-party verification from the AU or the source.
+
+The agency must not require the AU to present verification in person at the SNAP office.
+
+=== AU Statement
+
+The AU's statement may be accepted for some basic eligibility criteria such as AU composition, certain work registration statuses, and enumeration.
+
+The AU's statement may be accepted as verification if the AU has made all efforts to obtain third-party verification and it cannot be obtained, there is no available source, and the information provided is sufficient to make an eligibility determination or benefit level.
+
+Document the following information when the AU's statement is accepted as verification:
+
+* The deadline for verification and all contacts made to verify through a third-party source
+* The reason verification cannot be obtained through third-party sources such as the company went out of business, closed, or information is unavailable.
+* The information provided by the AU
+
+
+
+=== Verification of Income
+
+All attempts must be made to verify an AU's eligibility for benefits. Verify gross earned income using Truv (if available), pay stubs, Form 809, or a letter from the employer.
+Verify self-employment income using Truv (if available), tax files, business records, receipt bills, or  written statements of the self-employment earnings from the customer who has the business.
+Verify gross unearned income using a letter, statement from the source, or Form 139 for contributions/vendor payments.
+
+If verification of income may not be obtained because an employer, agency, or organization has failed to cooperate with the AU and all other sources are unavailable, use the best available information to determine the amount to use in establishing eligibility. In such situations, the best available information may be accepting the customer’s statement as a last resort. The worker must document the circumstances to explain.
+
+=== Verification of Citizenship/Alien Status
+
+Use the SAVE system to verify the eligibility status of immigrants applying for benefits.
+
+If an immigrant does not want to verify his/her immigration status, the AU may withdraw its application or participate in the program without that member.
+
+Consider the following when verifying an immigrant's status:
+
+* date of admission
+* date status was granted
+* if the immigrant is a Sponsored Alien
+* if the immigrant is a Lawful Permanent Resident
+* if an immigrant meets a condition for indefinite eligibility
+
+
+Refer to xref:3320.adoc[], for policy on how to determine eligibility for citizens and aliens.
+
+=== Verification of Residency
+
+Residency should be verified using information such as a mortgage statement, lease, or utility bill displaying [.underline]#any# Georgia address.
+Residency can also be verified by the Georgia Department of Driver Services (DDS) interface if the results from the interface verify that the customer has a current and valid Georgia Driver's License or Identity card.
+If residency cannot be verified with these sources, use a collateral contact or other document.
+Verify utility expenses only when the AU claims an actual expense.
+Otherwise, the AU's statement is accepted as verification of utility expenses.
+Refer to xref:3340.adoc[].
+
+=== Verification of Identity
+
+An applicant's identity must be verified.
+If an authorized representative or another individual applies on behalf of the AU, both the authorized representative's and the applicant's identities must be verified.
+Refer to xref:3335.adoc[].
+
+=== Verification of Student Status
+
+If a student claims to be physically or mentally unfit they can be considered an eligible student, but verification may be required.
+If an individual’s unfitness is obvious to the worker, the worker must exempt the individual without requiring verification. The worker must document the observation regarding the individual’s circumstances to establish unfitness. Verification of unfitness may include the following:
+
+* Receipt of or certification for a temporary or permanent disability benefit such as SSI, RSDI, VA, Railroad Retirement, or Workers' Compensation.
+
+* A statement from a physician, other medical professional, or mental health provider.
+
+* Receipt of services from an institution's disability access or reasonable accommodations office.
+
+* A student experiencing chronic homelessness.
+
+NOTE: This is not an all-inclusive list.
+
+Refer to xref:3245.adoc[].
+
+=== Verification of Child Support Deduction
+
+Verify the legal obligation to pay child support, the obligated amount of support, and the actual monthly amount that is paid.
+The court-ordered document showing the legally obligated support cannot be used to verify the AU's actual payments.
+The non-custodial parent or other person responsible for paying the support must verify the actual payments.
+
+The Division of Child Support Services (DCSS) files may be used to verify the legally obligated and actual child support amounts if paid/received through this system.
+Refer to xref:3616.adoc[].
+
+=== Verification of ABAWD Participation
+
+Verify an ABAWD's participation, work hours, and countable months using Form 516, Record of Attendance and Performance Report, Form 809, Verification of Earned Income, check stubs, employer statement, Form 805, ABAWD Volunteer Work Verification, etc.
+If an ABAWD has participated in another State's employment and training (E&T) program, verify the number of countable months the ABAWD has obtained in that state.
+
+An AU may provide verification using any of the following methods:
+
+* Georgia Gateway system
+* through the mail
+* in person
+* by facsimile or another electronic device
+* through an authorized representative
+
+=== Verification of Questionable Information
+
+The agency may request verification of any eligibility factors that are questionable, or unclear, and that may  affect on the AU's eligibility and benefit level.
+
+The AU has primary responsibility for providing verification to support statements or to resolve questionable information.
+
+If the agency receives conflicting information or there is a discrepancy in the information provided by the AU, then verification must be requested to clarify the AU's circumstances.
+
+Examples of household circumstances that may require additional information are:
+
+* AU composition
+* Separate household status
+* Household expenses that exceed income
+* Name on paystub differs from the employed SNAP AU member's name
+
+NOTE: This list is not all-inclusive.
+
+=== Procedures
+
+Follow the procedures below to resolve questionable or unclear information or discrepancies in information.
+
+. If there is an obvious discrepancy, address the concern with the customer during the interview. Document the explanation and request additional verification if appropriate.
+. If the discrepancy occurs outside of an interview, contact the customer by phone to address it if possible. If the eligibility specialist is unable to reach the customer by phone, document the attempt(s) made to address the discrepancy and request additional information only if appropriate.
+
+NOTE: We must speak to the client to obtain their explanation of the discrepancy or unclear information in order to know what verification is appropriate to request, if any. In certain situations, depending on the customer’s explanation, their statement may be accepted. At interim change and periodic report, non-SRR discrepancies and items that are not a required point of eligibility may have to be resolved at the next recertification if we are unable to reach the customer.
+[start=3]
+. Use the additional information to determine eligibility if it resolves the discrepancy.
+. If verification is provided and discrepancies still exist, contact the AU. Document all household circumstances in the case file. If the discrepancy remains unresolved and it is a point of eligibility, the case should be closed or denied.
+. If mandatory verification is not provided, close the case for failure to provide information.
+
+NOTE: When requesting information, the request should ask for information that is needed to determine eligibility.
+
+If the customer provides verification that is fraudulent and/or appears to be altered, the worker should contact the customer to explain the concern and ask that the person provide acceptable verification.
+If the customer does not, then the case can be denied as “verification not returned” since the household failed to sufficiently verify the information.
+The eligibility specialist should then submit a request for a case review to OIG. Staff should NOT approve the case based on questionable and/or fraudulent documents.
+
+There are some instances in which the AU has verified questionable information, such as when expenses exceed income by providing current utility bills with past due amounts.
+
+Although the AU is unable to pay its household expenses with reported income, the discrepancy regarding household expenses and income has been resolved.
+
+In instances where an AU member has reported earnings and provided pay stubs with a different name on the stub, the AU member has verified earnings as required by policy.
+The purpose of documenting the pay stubs is not to verify identity, but earnings.
+
+The household may attest to the accuracy of the stubs by providing a reasonable explanation for the discrepancy with the name on the stub. If it is not questionable, the agency may use these stubs to determine the AU’s eligibility.
+
+The agency may use these stubs to determine the AU's eligibility.
+
+The agency must ensure that the Verification Checklist, xref:attachment$form-173.pdf[Form 173], is inclusive of all mandatory verifications required as determined during the interview process.
+
+=== Incomplete Verification
+
+If the verification returned is not complete, a _reminder notice_ may be sent to the AU.
+If the AU submits verification that does not include all items indicated on the verification checklist, additional contact with the AU may be necessary such as a reminder notice.
+
+Sending a _reminder notice_ provides good customer service to the AU, while still allowing the agency to take action within the appropriate SOP.
+
+The _reminder notice_ could be a copy of the original, xref:attachment$form-173.pdf[Form 173], Verification Checklist, highlighting verification that was not received, copies of what was provided, and the postmarked envelope.
+
+The original checklist and the portion of the verification that was returned should be retained in the case file.
+
+If it is determined that the original Verification Checklist did not list all mandatory verifications, a 2^nd^ Verification Checklist with a new deadline is required.
+Negative actions may not be taken on a case until the day after the verification deadline, even if the deadline is beyond the appropriate SOP.
+
+Documentation of ineligibility factors is important.
+If an application is denied or a case is closed, documentation of the reason for termination or denial is required, and the correct denial/closure reason must be displayed on the eligibility determination notice.
+
+
+=== Termination/Denials
+
+If the termination or denial is due to failure to verify information, there must be documents such as a verification checklist or other documentation to support that specific information, documents, or verification was requested and not returned within the required time frame.
+The verification deadline and the specific information that was not returned are documented to establish the cause of ineligibility.
+
+== Procedures
+
+Verify household information as provided by policy in this manual.
+Information is verified either by a Third-Party Source (TPS) or the AU's statement (AUS).
+<<chart-3035-1,Chart 3035.1, Summary Verification Chart>>, is used to determine verification that is required at initial application, recertification, interim change, and periodic reporting.
+
+.Chart 3035.1 - Summary Verification Chart
+[#chart-3035-1]
+|===
+^| Basic Eligibility Criteria ^| Application ^| Recertification ^| Interim Change ^| Periodic Reporting
+
+| *Identity*
+| *TPS*
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify if identity has changed.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify if identity has changed.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify if identity has changed.
+
+| *AU Composition*
+| *AUS*
+| *AUS*
+| *AUS*
+| *AUS*
+
+| *Citizenship*
+| *TPS*
+
+Ex: birth certificate, hospital record
+a| *AUS*
+
+[caption=Exception]
+NOTE: If good cause was granted or a newborn's citizenship has not been verified, TPS is required. If a new AU member is reported, TPS is required.
+
+NOTE: Citizenship must be verified only once.
+| *TPS*
+
+Ex: birth certificate, hospital record
+a| *N/A*
+
+[caption=Exception]
+NOTE: If good cause was granted or a newborn's citizenship has not been verified, TPS is required. If a new AU member is reported, TPS is required.
+
+NOTE: Citizenship must be verified only once.
+
+| *Immigrant / Alien Status*
+| *TPS*
+
+Ex: SAVE website, Alien Registration Card (green card)
+
+a| *TPS*
+
+Ex: SAVE website, Alien Registration Card (green card)
+
+| *TPS*
+
+Ex: SAVE website, Alien Registration Card (green card)
+a| *N/A*
+
+
+[caption=Exception]
+NOTE: Verify by TPS if a new alien AU member is added
+
+Ex: SAVE website, Alien Registration Card (green card)
+
+
+| *Enumeration*
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if SSN is not valid
+a| *AUS*
+
+[caption=Exception]
+NOTE: If good cause was granted or a newborn's enumeration has not been verified within 6 months of birth, TPS is required.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS, if SSN is unknown or, if SSN is not valid
+a| *N/A*
+
+[NOTE,caption=Exceptions]
+====
+Verify by TPS, if SSN is unknown, or SSN is not valid.
+
+If good cause was granted or a newborn's enumeration has not been verified within 6 months of birth, TPS is required.
+====
+| *Residency*
+| *TPS*
+
+Ex: current lease, mortgage statement, or utility bill displaying any Georgia address
+| *AUS*
+
+Verify by TPS if the information is _questionable_
+| *AUS*
+| *N/A*
+
+| *Lawbreakers*
+| *AUS*
+
+Verify by TPS if the information is _questionable_
+| *AUS*
+
+Verify by TPS if the information is _questionable_
+| *AUS*
+
+With the addition of an AU member, verify by TPS if the information is questionable
+| *N/A*
+
+| *Prison Matches*
+a| *TPS*
+
+Ex: Department of Corrections website printout, oral or written statements from probation/parole officers, copy of release papers
+
+a| *TPS*
+
+Ex: Department of Corrections website printout, oral or written statements from probation/parole officers, copy of release papers
+
+a| *TPS*
+
+Ex: Department of Corrections website printout, oral or written statements from probation/parole officers, copy of release papers
+
+| *N/A*
+5+| *Work Registration Note: When customers report changes that impact their work registration exception, staff must utilize all available information to verify an individual’s exception status before requiring them to provide sources of verification. The information may be obtained by reviewing data sources available to the agency or by speaking with the individual.*
+
+| *Work Registration: Incapacity*
+| *TPS*
+
+Ex: statement from doctor
+| *TPS*
+
+Ex: statement from doctor
+| *TPS*
+
+Ex: statement from doctor
+| *N/A*
+
+(*See note at bottom of chart*)
+
+| *Work Registration: Enrollment in School / Training*
+| *TPS*
+
+| *TPS*
+
+| *TPS*
+
+| *N/A*
+
+(*See note at bottom of chart*)
+
+| *Work Registration: Caretaker of Incapacitated Person Required Care*
+| *TPS*
+
+Ex: statement from doctor
+| *TPS*
+
+Ex: statement from doctor
+| *TPS*
+
+Ex: statement from doctor
+| *N/A*
+
+(*See note at bottom of chart*)
+
+| *Work Registration: Employment*
+| *AUS*
+
+Refer to earned income requirements at application.
+| *AUS*
+
+Refer to earned income requirements at recertification.
+| *AUS*
+
+Refer to earned income requirements at interim change.
+| *AUS*
+
+Refer to earned income requirements at periodic reporting.
+
+| *Work Registration: Application or Receipt of Unemployment Compensation*
+| *AUS*
+
+Refer to unearned income requirements at application.
+| *AUS*
+
+Refer to unearned income requirements at recertification.
+| *AUS*
+
+Refer to unearned income requirements at interim change.
+| *AUS*
+
+Refer to unearned income requirements at periodic reporting.
+
+| *Work Registration: ABAWD*
+
+*Employed 20-29 hours per week*
+| *TPS*
+
+Ex: pay stubs
+| *TPS*
+
+Ex: pay stubs
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if there is an increase in benefits
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if it has changed
+
+Ex: pay stubs
+
+| *Work Registration: ABAWD / Mandatory Registrant Compliance with E&T (Sanction)*
+| *TPS*
+
+Ex: Attendance Sheet
+| *TPS*
+
+Ex: Attendance Sheet
+| *TPS*
+
+Ex: Attendance Sheet
+| *N/A*
+
+(*See note at bottom of chart*)
+
+| *School Attendance for a child < 18 years of age*
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the student is employed.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the student is employed.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the student is employed.
+| *N/A*
+
+
+
+| *Wages of a child < 18 years of age*
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the student is employed and will turn 18 during the certification period or if the student is not in school and not under parental control.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the student is employed and will turn 18 during the certification period or if the student is not in school and not under parental control.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the student is employed and will turn 18 during the certification period or if the student is not in school and not under parental control.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the student is employed and will turn 18 during the certification period or if the student is not in school and not under parental control AND a change in income was reported.
+
+| *Student Status for Higher Education: Enrollment Criteria*
+| *AUS*
+| *AUS*
+| *AUS*
+| *N/A*
+
+
+
+| *Student Status for Higher Education: Work Study Criteria*
+| *TPS*
+
+Ex: Form 875 or statement from school
+| *TPS*
+
+Ex: Form 875 or statement from school
+| *TPS*
+
+
+
+Ex: Form 875 or statement from school
+| *N/A*
+
+
+
+^h| Resources ^h| Application ^h| Recertification ^h| Interim Changes ^h| Periodic Reporting
+
+| *Liquid Resources*
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the total countable liquid resources exceed 75% of the limit.
+Refer to Section 3405, Resources.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the total countable liquid resources exceed 75% of the limit.
+Refer to Section 3405, Resources.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the total countable liquid resources exceed 75% of the limit.
+Refer to Section 3405, Resources.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the total countable liquid resources exceed 75% of the limit.
+Refer to Section 3405, Resources.
+
+| *Earned Income*
+a| *TPS*
+
+Ex: EIVS (Employment Income Verification System) – includes vendors such as Truv, Experian, and Transunion,  pay stubs, Form 809.
+
+NOTE: Truv income must be certified by the customer to be considered as verified.
+
+NOTE: Income must be verified by TPS even if the reported income will result in a denial of benefits.
+a| *TPS*
+
+Ex: The EIVS (Employment Income Verification System) – includes vendors such as Truv, Experian, and Transunion,  pay stubs, Form 809.
+
+NOTE: Truv income must be certified by the customer to be considered as verified.
+
+NOTE: Income must be verified by TPS even if the reported income will result in termination of benefits.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the amount of income has changed by more than $50 or if the information is incomplete, inaccurate, inconsistent, or outdated.
+
+Verify by TPS if a change in income will result in termination or denial of benefits.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the earned income has changed. Changes may include changes in the wage rate, salary, full-time or part-time employment status, or source of income, including starting a job.
+
+Verify with TPS if a change in income will result in the termination of benefits.
+
+
+| *Unearned Income*
+a| *TPS*
+
+[caption=Note]
+NOTE: Income must be verified by TPS even if the reported income will result in a denial of benefits.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the source has changed, the amount has changed by more than $50, or if the information is incomplete, inaccurate, inconsistent, or outdated. Verify by TPS if the change will result in a termination.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the amount of income has changed by more than $50 or if the information is incomplete, inaccurate, inconsistent, or outdated.
+
+Verify by TPS if a change in income will result in termination or denial of benefits.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the AU reports a change in the unearned income of more than $100 or if the income will result in termination of benefits.
+
+| *Termination of Earned or Unearned Income*
+| *TPS*
+
+Verify by TPS if termination is within 30 days of the application.
+
+Verify last day employed, last date of pay, reason for separation or termination, and amount paid if income is budgeted for the intervening and/or ongoing month.
+| *TPS*
+
+If AU is no longer employed and the job *is budgeted in Gateway*, the termination of employment must be verified, no matter when the job ended, to remove the income.
+
+If the job shows in Clearinghouse and *is not budgeted in Gateway*, verify if the employment has terminated within the last 30 days.
+
+Verify terminated income and termination of employment.
+
+Verify last day employed, last date of pay, reason for separation or termination, and amount paid if income will be budgeted for the ongoing month.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if there is an increase in benefits.
+
+Verify last day employed, last date of pay, and reason for separation or termination.
+
+Verify amount received if income will be budgeted for the ongoing month
+| *TPS*
+
+If AU is no longer employed and the job *is budgeted in Gateway*, termination of employment must be verified no matter when the job ended to remove the income.
+
+Verify last day employed, last date of pay, reason for separation or termination, and amount paid if income will be budgeted for the ongoing month.
+
+| *Self-Employment Income*
+a| *TPS preferred, but AUS accepted*
+
+Ex: Truv, tax return, monthly receipts, or business records, work log, or written statements of self-employment income from the client
+[caption=Note]
+NOTE: Truv income must be certified by the customer to be considered verified.
+[caption=Note]
+NOTE: When accepting AU's statement, it must be a *written* statement
+a| *TPS preferred, but AUS accepted*
+
+Ex: Truv, tax return, monthly receipts, business records, work log, or written statements of self-employment income from the client
+[caption=Note]
+NOTE: Truv income must be certified by the customer to be considered verified.
+[caption=Note]
+NOTE: When accepting AU's statement, it must be a *written* statement.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the amount of income has changed by more than $50 or if the information is incomplete, inaccurate, inconsistent, or outdated.
+
+Verify by TPS if a change in income will result in termination or denial of benefits.
+[caption=Note]
+NOTE: When accepting AU's statement, it must be a *written* statement.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if a change in self-employment is reported.
+
+Ex: Truv, tax return, monthly receipts, business records, work log, or written statements of self-employment from the client
+[caption=Note]
+NOTE: Truv income must be certified by the customer to be considered verified.
+[caption=Note]
+NOTE: When accepting AU's statement, it must be a *written* statement.
+| *Educational Income*
+| *AUS*
+| *AUS*
+| *AUS*
+| *AUS*
+
+| *Student Loans*
+| *AUS*
+| *AUS*
+| *AUS*
+| *AUS*
+
+| *Vendor Payments*
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if questionable.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if questionable.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if questionable.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if questionable.
+
+^h| Deductions ^h| Application ^h| Recertification ^h| Interim Changes ^h| Periodic Reporting
+
+| *Dependent Care Deduction*
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the expense is questionable.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the expense is questionable.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the expense is questionable.
+| *N/A*
+
+| *Child Support Deduction*
+| *TPS*
+
+Verify obligation to pay and actual amount paid.
+
+Ex: court order, receipts, check
+| *TPS*
+
+Verify by TPS when there is a new source, a change in obligated amount, or a payment amount has changed by more than $25.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if there is an increase in benefits.
+| *TPS*
+
+Verify by TPS when there is a new source, a change in obligated amount or a payment amount.
+
+| *Shelter Deduction*
+a| *TPS*
+
+Ex: current rent receipt, lease, mortgage statement, insurance bill
+
+NOTE: All shelter deductions must still be verified by TPS for an AU when the *net* income limit applies, and they exceed that limit.
+
+a| *TPS*
+
+[caption=Exception]
+NOTE: Accept AUS if the amount has not changed, it was previously verified, *AND* the verification provided is still current.
+
+NOTE: All shelter deductions must still be verified by TPS for an AU when the *net* income limit applies, and they exceed that limit
+
+a| *TPS*
+
+Ex: current rent receipt, lease, mortgage statement, insurance bill
+
+NOTE: All shelter deductions must still be verified by TPS for an AU when the *net* income limit applies, and they exceed that limit.
+
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if a change was reported
+
+NOTE: All shelter deductions must still be verified by  TPS for an AU when the *net* income limit applies, and they exceed that limit
+
+| *Utility Deductions*
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the AU is eligible for the actual utility allowance.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the AU is eligible for the actual utility allowance.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the AU is eligible for the actual utility allowance.
+a| *AUS*
+
+[caption=Exception]
+NOTE: Verify by TPS if the AU is eligible for the actual utility allowance.
+
+| *Medical Deductions*
+a| *TPS*
+
+Ex: hospital bill, prescription drug printout, SSA award letter to verify Medicare premium
+
+[caption=Exception]
+NOTE: Verify by AUS if it is for mileage for medical transportation.
+
+Ex: picking up medication from a pharmacy, driving back and forth to the doctor, etc.
+
+a| *TPS*
+
+Ex: Hospital bills, prescription drug printout.
+
+[caption=Exceptions]
+[NOTE]
+====
+Verify by AUS if it is for mileage for medical transportation.
+Ex: picking up medication from a pharmacy, driving back and forth to the doctor, etc.
+
+Verify by AUS if the AU member already had medical expenses reported/verified, is receiving the Standard Medical Deduction, and they continue to report that they still have the expenses.
+====
+| *AUS*
+
+Verify by TPS if reported by the AU and the amount has changed by more than $25, or a new expense is reported.
+
+| *N/A*
+|===
+
+NOTE: At Periodic Report, if a change is reported that impacts an individual's work registration status then it must be reviewed, and verification may be required based on the policy for the specific work registration status. Refer to xref:3350.adoc[].
+
+*If any information is questionable, the AU may be required to verify eligibility by a Third-Party Source (TPS).*

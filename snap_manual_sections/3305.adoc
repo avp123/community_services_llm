@@ -1,0 +1,34 @@
+= 3305 Cooperation with Eligibility Investigations
+:chapter-number: 3300
+:effective-date: April 2025
+:mt: MT-82
+:policy-number: 3305
+:policy-title: Cooperation with Eligibility Investigations
+:previous-mt-number: MT-57
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An assistance unit (AU) may be asked to cooperate with special investigations or reviews of its eligibility for benefits.
+
+== Basic Considerations
+
+Special reviews or investigations of an AU's eligibility may be conducted by such entities as Quality Control (QC) and the Office of Inspector General (OIG).
+
+=== Quality Control Reviews
+
+AUs are required to cooperate with QC reviews.
+Refusal to cooperate with a QC review results in termination of the AU's eligibility.
+If QC staff determines that an AU has refused to cooperate with the QC review process, the QC staff notifies the eligibility worker (EW).
+A written notification from the QC staff instructs the EW to take action to close a case for failure to cooperate with the QC review process.
+QC provides the period of ineligibility that is to be imposed, and the AU is given timely notice.
+If the AU decides to cooperate during the timely action period, QC staff notifies the EW to delay or terminate the closure action.
+
+=== Office of Inspector General
+
+The AU is not mandated to cooperate with an OIG investigation of its past eligibility for benefits.
+The investigators may request but not require AU members to attend meetings, discuss issues on the telephone or respond to written requests in order to gather information or evidence.
+If the AU member fails to or refuses to cooperate with such requests, the investigator proceeds with the investigation and, if sufficient evidence is provided, adverse action may proceed through the Administrative Disqualification Hearing process.
+Unless the AU's current eligibility is in question, the AU's eligibility for current benefits is not terminated.
+The AU is not to be threatened with the possibility of termination for not cooperating with an OIG investigation of *past* program eligibility.

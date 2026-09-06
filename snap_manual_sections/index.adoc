@@ -1,0 +1,7 @@
+= SNAP Policy Manual
+:manual-title: SNAP
+:page-role: -toc
+
+include::partial$manual-header.adoc[]
+
+

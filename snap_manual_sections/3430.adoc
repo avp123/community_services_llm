@@ -1,0 +1,105 @@
+= 3430 Military Pay
+:chapter-number: 3400
+:effective-date: November 2019
+:mt: MT-57
+:policy-number: 3430
+:policy-title: Military Pay
+:previous-mt-number: MT-14
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Military pay such as housing allowances, subsistence allowances and other entitlements are considered when determining eligibility for assistance.
+
+== Basic Considerations
+
+Military pay is income received by anyone in any branch of the military - Army, Navy, Air Force, Marines, Coast Guard, National Guard and Reserves.
+
+Military pay is treated as earned income when the individual in the military is an AU member.
+
+When an individual in the military is not in the AU but gives money to the AU or authorizes money to be sent to the AU, that money is counted as an unearned income contribution.
+
+== Procedures
+
+Verify all military pay.
+Use the Leave and Earnings Statement (LES) to verify the type and amount of military income.
+
+<<chart-3430-1,Chart 3430.1>> in this policy section provides information on the treatment of military pay.
+
+Determine if there are any debt repayments listed on the LES and treat as follows:
+
+* if a debt repayment is for Advance Pay then deduct the repayment from the gross income
+* if a debt repayment, listed as FININ or Debt Repayment on the LES, is for a personal loan, such as for a car, count the repayment as part of the gross income.
+
+Do not allow federal tax, FICA, SGLI, Soldiers Home, or Insurance as deductions or exclusions from income.
+
+Allotments withheld for dependents not in the AU may be allowed as a child support deduction.
+Refer to xref:3616.adoc[].
+
+Use the chart below to determine treatment of military pay:
+
+[#chart-3430-1]
+.CHART 3430.1 - TREATMENT OF MILITARY PAY
+|===
+^| BENEFIT ^| TREATMENT OF INCOME
+
+| Amount Brought Forward
+| Disregard amounts brought forward from a previous month.
+
+| Advance Pay/Casual Pay
+| Count the gross amount as earned income in the month received.
+
+| Base Pay
+| Count the gross amount as earned income in the month received.
+
+| Basic Allowance for Housing (BAH)
+| Count the gross amount as earned income in the month for which it is intended.
+
+| Basic Allowance for Subsistence (BAS)
+| Count the gross amount as earned income in the month for which it is intended.
+
+| Career Sea Pay
+| Count the gross amount as earned income in the month for which it is intended.
+
+| Clothing Maintenance Allowance (CMA)
+| Do not count as income.
+Consider it as a reimbursement.
+Deduct the CMA from the total gross earned income.
+
+| Cost-of-Living Allowance (COLA) or HOUSE
+| Count the gross amount as earned income in the month for which it is intended.
+
+| Fly Pay/Fly Pay-non
+| Count the gross amount as earned income in the month for which it is intended.
+
+| FSSA (Family Subsistence Supplemental Allowances)
+| Count the gross amount as earned income in the month received.
+
+| Jump Pay
+| Count the gross amount as earned income in the month for which it is intended.
+
+| Leave or Separate Rations
+| Count the gross amount as earned income in the month for which it is intended.
+
+| National Guard Pay
+| Count the gross amount as earned income in the month for which it is intended.
+
+| Pro-Di
+| Count the gross amount as earned income in the month for which it is intended.
+
+| Reenlistment Bonus
+a| Treat the gross amount as a non-recurring lump sum payment.
+
+[caption=Exception]
+NOTE: If paid in installments, count as unearned income in the month received.
+
+| Regular Sea Pay
+| Count the gross amount as earned income in the month for which it is intended
+
+| Combat Pay
+| Exclude additional or special payments received by a member of the US Armed Forces due to deployment to a designated combat zone for the duration of the member's deployment to or service in a combat zone.
+Determine if any of the allotment/monies made available to the food stamp AU is combat pay.
+If yes, exclude as income, that portion of the allotment/money.
+The additional or special pay may be identified as “incentive pay for hazardous duty” or “special pay for duty” or “special pay for duty subject to hostile fire or imminent danger”.
+|===
