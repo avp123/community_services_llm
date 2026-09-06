@@ -1,0 +1,81 @@
+= 3525 Social Security Administration (SSA) Death Verification Inquiry
+:chapter-number: 3500
+:effective-date: July 2025
+:mt: MT-83
+:policy-number: 3525
+:policy-title: Social Security Administration (SSA) Death Verification Inquiry
+:previous-mt-number: MT-77
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The death verification inquiry is a computer match of the Social Security Administration (SSA) files of deceased individuals with the files of SNAP applicants and recipients.
+
+== Basic Considerations
+
+The information associated with the SSNs of the applicants in pending status and recipients in active status is matched with the SSA file of deceased individuals to determine if the individuals who have been reported as deceased are applying for benefits or included in an active SNAP case.
+If a match is found, a system task is generated for the worker.
+The worker will navigate to the respective interface to access the data.
+
+The SSA information on death matches is [.underline]*not* considered verified upon receipt.
+Therefore, an attempt must be made to contact the AU regarding the information before a negative action is taken to deny, terminate or reduce benefits.
+The AU must be informed that the SSA has reported the death of an AU member.
+A verification checklist must be mailed requesting that the AU provide verification that the AU member is deceased.
+The verification checklist must request documents that confirm the AU member's death and proof of the date of death.
+This information should be verified by an obituary from a funeral home, a newspaper death notice, a death certificate, documents from an insurance company, or documents from the Social Security Administration verifying proof of death as acceptable proof of death.
+The verification checklist must also clearly explain the consequences of failing to respond to the request.
+If there is no response to the request for information, terminate benefits and allow timely notice.
+
+NOTE: An online obituary submitted by the funeral home for publishing is acceptable for the family member to provide as proof. However, family-placed death notices are [.underline]#not# acceptable proof.
+
+If the death is confirmed at application or recertification (renewal), or periodic reporting (PR), AU composition and other related changes are processed as part of the application or recertification (renewal), or PR process.
+If the death is confirmed as an interim change, timely notice is given prior to termination or reduction of benefits unless all members of the AU are deceased.
+If all members of the AU are deceased, adequate notice is given to terminate benefits.
+
+If the primary individual of the AU is the AU member who died, allow the AU the opportunity to name another AU member as the primary individual.
+The AU is given this opportunity without being treated as an initial application.
+Do not prorate the initial month's benefits.
+
+If the AU disputes the death of the AU member, verify using the verification methods provided in Section 3035, Verification.
+
+== Procedures
+
+The following Gateway procedures are taken when the death of an AU member is reported by the SSA at Intake, Change, Renewal, or Periodic Report.
+
+Send a verification checklist to the AU within 10 calendar days of receiving the task to inform the AU that SSA has reported the death of an AU member.
+
+=== Intake
+
+Remove the deceased AU member from the household the month the AU member is reported to be deceased.
+
+
+=== Renewal
+
+Remove the deceased AU member from the household in the first month of the new certification period.
+
+
+=== Periodic Reporting
+
+Remove the deceased AU member from the household in the first month of the new reporting period.
+
+
+=== Change
+
+Remove the deceased AU member from the household the month after timely notice expires from the reported-on date.
+
+Remove the AU member from the AU, if confirmed.
+Allow timely notice, if at interim change.
+Allow the AU time to name another AU member as the primary individual of the AU if the deceased AU member is the primary individual of the AU.
+
+When the deceased member is the only AU member, allow adequate notice if at interim change.
+
+NOTE: Remember the SSA computer match can be in error.
+
+If there is no response to the request for information, terminate benefits and allow timely notice.
+Eligibility cannot be established if there is no response to the request for information.
+
+Refer to Section 3715 – Interim Changes, for policy and case management procedures when the primary individual dies or moves.
+
+[.underline]#When appropriate#, create an overpayment for historical months if an agency error or inadvertent household error is determined.
+Refer the AU to the Office of Inspector General (OIG) if fraud is suspected.

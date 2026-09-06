@@ -1,0 +1,21 @@
+= 3612 Earned Income Deduction
+:chapter-number: 3600
+:effective-date: December 2019
+:mt: MT-58
+:policy-number: 3612
+:policy-title: Earned Income Deduction
+:previous-mt-number: MT-14
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Allow a 20% earned income deduction for assistance units (AUs) with earned income.
+
+== Basic Considerations
+
+Apply the 20% earned income deduction to the AU's total countable gross earned income.
+This deduction is allowed to cover withholdings and work expenses.
+
+Failure to report earned income timely will result in the loss of the 20% earned income deduction.
+Refer to xref:3650.adoc[].

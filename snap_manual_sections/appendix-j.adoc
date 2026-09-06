@@ -1,0 +1,45 @@
+= Appendix J Customer Complaint Procedures
+:chapter-number: Appendix J
+:effective-date: January 2025
+:mt: MT-80
+:policy-number: Appendix J
+:policy-title: Customer Complaint Procedures
+:previous-mt-number: MT-59
+
+include::partial$policy-header.adoc[]
+
+== Procedures
+
+This section outlines procedures for counties to follow when a complaint is received in the Office of Family Independence (OFI).
+Customers can contact the County Office, Customer Contact Center (CCC) or the Office of Constituent Services concerning any program administered through the State of Georgia.
+The Office of Constituent Services was established by the Division of Family and Children Services (DFCS) and serves as an advocate for Georgia citizens, DFCS customers, government officials, state employees, and other stakeholders with policy questions and practice concerns.
+
+The Division of Family and Children Services' (DFCS), OFI continues to strive to provide outstanding customer service to our customers.
+However, in our work with customers, we do receive complaints about how duties are performed.
+Sometimes the complaints are legitimate, and sometimes they are the result of policy requirements and other decisions that are based on the mission of the Division.
+
+Customer Service complaints enter the system from various agencies and departments:
+
+* County Offices
+* CCC
+* Correspondence and telephone inquiries
+* Office of Constituent Services (Walk-Ins, Emails, Letters)
+
+Complaints must be collected at all points of access including the County Offices and the CCC.
+
+Complaints fall into four separate categories:
+
+. Complaints about discrimination or civil rights
+. Complaints concerning alleged HIPAA or confidentiality violations
+. Complaints about benefit level or allotment amount which result in a hearing request
+. Complaints about delays in processing or customer service issues including the inability to contact a worker and discourteous service.
+
+Client issues that fall into the fourth category should be handled at the first point of contact either in the office or on the phone.
+If a client does not feel that their issue has been resolved and the issue has been reviewed by a supervisor, clients should be informed that they can contact the DFCS Constituent Services Unit by phone at 404-657-3433 or by email at CustomerServiceDHS@dhs.ga.gov.
+
+The DFCS Constituent Services Unit will follow up on the complaint, resolve the complaint and report the results to the complainant.
+All complaints are reviewed for correct policy, procedures, best practices, and customer service.
+
+Complaints received through the County Office, CCC, and the DFCS Constituent Services Unit will be maintained and analyzed at least yearly to assess where there are patterns of problems that may persist in local offices, CCC, or throughout the state.
+
+For information about the civil rights complaint process and where to file civil rights complaints, please refer to xref:3030.adoc[], of the SNAP manual and the DFCS Civil Rights Complaint Process procedures.

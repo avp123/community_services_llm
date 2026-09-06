@@ -1,0 +1,29 @@
+= 3700 Ongoing Case Management Overview
+:chapter-number: 3700
+:effective-date: December 2019
+:mt: MT-58
+:policy-number: 3700
+:policy-title: Ongoing Case Management Overview
+:previous-mt-number: MT-1
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Case management is the activity that begins with approval and continues as long as the AU remains eligible for food stamps.
+
+== Basic Considerations
+
+Assistance units (AUs) must receive proper notification of any action taken on their case.
+
+AUs are required to cooperate with periodic reviews of eligibility.
+
+AUs are required to report changes which may affect their eligibility and/or their benefit level.
+
+All reported changes must be processed in a timely manner.
+
+AUs have the right to request a hearing on any action taken on their case.
+
+In some cases, changes reported by the AU may result in the AU's receipt of incorrect benefits in prior months.
+It may be necessary to recover these overpayments.
+Refer to Volume IV, Benefit Recovery.

@@ -1,0 +1,40 @@
+= 3613 Standard Deductions
+:chapter-number: 3600
+:effective-date: October 2025
+:mt: MT-84
+:policy-number: 3613
+:policy-title: Standard Deductions
+:previous-mt-number: MT-79
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Apply the appropriate standard deduction to each Assistance Unit (AU).
+
+== Basic Considerations
+
+Apply the standard deduction to the AU's total countable income for all AUs.
+
+NOTE: The standard deductions are adjusted annually based on the United States Department of Agriculture (USDA), Food and Nutrition Service (FNS) cost of living adjustments (COLA).
+
+The standard deductions are as follows:
+
+[%autowidth]
+|===
+^|AU Size ^|Standard Deduction
+
+|1-3
+|$209
+
+|4
+|$223
+
+|5
+|$261
+
+|6 or more
+|$299
+|===
+
+These deduction changes are effective *October 1, 2025, through September 30, 2026.*

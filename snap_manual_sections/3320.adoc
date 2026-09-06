@@ -1,0 +1,977 @@
+= 3320 Citizenship/Alien Status
+:chapter-number: 3300
+:effective-date: January 2026
+:mt: MT-86
+:policy-number: 3320
+:policy-title: Citizenship/Alien Status
+:previous-mt-number: MT-83
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+7 CFR § 273.4
+
+== Requirements
+
+To qualify for Supplemental Nutrition Assistance Program (SNAP) benefits, individuals must be a U.S. citizen, Non-Citizen U.S. National, lawful permanent resident (LPR), Cuban or Haitian entrant, or Compact of Free Association (COFA) citizen.
+Pursuant to section 11(e)(2)(b)(v)(II) of the Food and Nutrition Act of 2008, 7 C.F.R), 273.2 (f)(1)(ii), and the Social Security Act § 1137(a), individuals who are applying for SNAP benefits must verify their citizenship or immigration status and/or provide or apply for an SSN.
+Some immigrants are eligible, and some are not, depending on their legal status.
+An individual, who is not applying for SNAP benefits and who does not provide citizenship or immigrant status and/or an SSN may be designated as a non-applicant.
+A non-applicant is [.underline]#not# required to provide citizenship, immigrant status, or an SSN, but is required to provide other information that may affect the eligibility of the other applicant AU members, such as income or resources.
+A non-applicant is not eligible to receive SNAP benefits.
+
+== Basic Considerations
+
+=== U.S Citizens
+
+A U.S. citizen is an individual who meets one of the following conditions:
+
+* born in one of the 50 states, the District of Columbia, Puerto Rico, Guam, U.S. Virgin Islands (St. Thomas, St. John, and St. Croix), Northern Mariana Islands (Saipan, Rota, and Tinian)
+
+* born in another country to a U.S. citizen
++
+NOTE: If a Certificate of Citizenship or Consular Report of Birth Abroad was filed on behalf of the child, then no other documents are required to verify citizenship.
+Refer to Verification of Citizenship in this section for verification requirements.
+
+* naturalized or born in another country to a non-U.S. citizen residing in the U.S. for the required period and becoming a U.S. citizen
+
+* a child adopted by a U.S. citizen or naturalized citizen
+
+NOTE: Effective February 27, 2001, The Child Citizenship Act amended the Immigration and Naturalization Act (INA) to provide U.S. citizenship to certain foreign-born children, including adopted children of U.S. citizens, if certain criteria are met.
+
+The criteria are as follows:
+
+* the child must have at least one U.S. citizen parent (by birth or naturalization)
+* the child must be under 18 years of age
+* the child must be a lawful permanent resident
+* the child must be residing permanently in the U.S. in the legal and physical custody of the U.S. citizen parent
+* the child is adopted but meets the requirements applicable to adopted children under immigration law.
+
+For SNAP purposes, the following aliens are to be treated as citizens of the United States *until July 3, 2025*.  Effective July 4, 2025, with the enactment of the One Big Beautiful Bill Act (OBBBA), these aliens will now need to become Lawful Permanent Residents (LPR) first, and then they will be eligible for benefits without a waiting period:
+
+* American Indians born in Canada living in the U.S. under Section 289 of the Immigration and Naturalization Act (INA) or non-citizen members of a federally recognized Indian tribe under Section 4(e) of the Indian Self-determination and Education Assistance Act.
+This provision is intended to cover Native Americans who are entitled to cross the United States border into Canada or Mexico.
+Included under the provisions are the Regis Band of the Mohawk in New York, the Micmac in Maine and the Kickapoos in Texas.
+
+* An individual lawfully residing in the United States who was a member of a Hmong or Highland Laotian tribe that rendered assistance to the United States personnel by taking part in a military or rescue operation during the Vietnam Era (August 5, 1964 - May 7, 1975).
+This category includes the spouse or unmarried surviving spouse or unmarried dependent children of these individuals.
+
+=== Non-Citizen U.S. National
+Section 308 of the Immigration and Nationality Act (INA)  grants U.S. nationality but not U.S. citizenship to persons born in "an outlying possession of the United States" or born of a parent or parents who are non-citizen nationals and meet certain physical presence or residence requirements. The term “outlying possessions of the United States” is defined in Section 101(a)(29) of the INA as American Samoa and Swains Island. For SNAP purposes, these applicants and recipients are to be treated as U.S. citizens.
+
+=== Verification of Citizenship
+
+*The following forms of verification may be used to verify citizenship*:
+
+* Birth certificate
+* Certificate of Citizenship (N-560, N-561)
+* Naturalization certificate (N-550) (N-570)
+* Consular Report of Birth Abroad (CRBA) of U.S. Citizen (Form FS-240, FS 545, DS 1350)
+* U.S. Citizen I.D. card (I-197 or I-179)
+* U.S. Passport
+* Consular Report of Birth Abroad (CRBA)
+* American Indian card with KIC listed (I-872), first issued by INS, now known as the United States Citizenship and Immigration Services (USCIS) in 1983
+* Northern Mariana Primary I.D. card (I-873), issued prior to 1986 and to applicants born prior to 11/3/86 by INS
+* Court records of parentage, juvenile proceedings, or child support indicating place of birth
+* Property records verifying U.S. citizenship status
+* Religious record of birth recorded in the U.S. or its territories within three months of birth.
+The document must show either the date of birth or the individual's age at the time the record was made
+* Any document that establishes place of birth or U.S. citizenship, such as records from SSA, VA, local government agencies, hospitals, and a clinic's record of birth or parentage
+* Verification of citizenship is established through another public assistance program or governmental agency.
+For example, the Medicaid or TANF program.
+* Evidence of civil service employment by the U.S. government before 6/1/76
+* Early school records showing the date of admission to the school, the child's date and place of birth, and the name(s) and place(s) of birth of the parent(s)
+* Census record showing the name, U.S. citizenship or a U.S. place of birth, and the date of birth or age of the individual
+* Adoption Finalization Papers showing the child's name and place of birth in one of the 50 states, the District of Columbia, Puerto Rico, Guam, U.S. Virgin Islands (St. Thomas, St. John, St. Croix), Northern Mariana Islands (Saipan, Rota, Tinian), American Samoa, or Swains Island
+* A Third-Party Collateral Statement of a person who has knowledge of an individual's place of birth (used only when no other method of verification is available)
+
+Citizenship verification is not required in the first month of SNAP participation for applications subject to expedited application processing.
+
+Refusal to verify citizenship results in an automatic determination that the individual does not meet the citizenship requirements.
+
+An individual who does not meet the citizenship requirement is ineligible and is not included in the AU.
+Refer to xref:3635.adoc[].
+
+=== Citizenship Verification for Newborns
+
+A newborn's citizenship must be verified in order for the newborn to be included in the assistance unit.
+Compliance with citizenship requirements is not required until the next recertification (renewal) *or* within six months following the month of the newborn's birth, whichever is later.
+
+Newborns approved for “*Newborn Medicaid*” or listed on the “*Newborn Report of Birth*” have met the citizenship verification requirements for SNAP.
+Case documentation should indicate that citizenship was established by Medicaid or another governmental entity, whichever is appropriate.
+
+=== Good Cause
+
+Good cause may be established when it is determined that the AU has made every effort to obtain citizenship verification but has been unable to provide the documentation by the verification deadline.
+
+The agency must make every effort to assist the AU in obtaining the documents needed to verify citizenship.
+*Good cause is granted until the next recertification (renewal)*.
+
+Good cause reasons include the following:
+
+* Temporary absence from the home
+* Inability of the AU to obtain documents from a hospital or the vital records department because the AU was not born in Georgia
+* Financial hardship
+
+If good cause is established at initial application *OR* is established when an individual is added to the AU, then document the following information:
+
+* The AU's reason for not verifying citizenship
+* The reason and period for granting good cause
+* The assistance provided to the AU in obtaining verification
+
+Include the individual in the AU.
+
+If the individual meets the citizenship requirement during the good cause period, then document the following information:
+
+* that the citizenship requirement has been met
+* the date and source of verification provided by the AU
+
+If the good cause period has expired and the AU has not provided verification, then the individual is ineligible to participate in SNAP.
+
+=== Expiration of Good Cause Period
+
+Follow the procedures below for individuals who have failed to verify citizenship:
+
+. Document the good cause determination.
+. Change the status to an ineligible member.
+Refer to xref:3635.adoc[].
+. Issue timely notice to the AU.
+The notice must include the following information:
+** The reason for the action
+** The eligibility and benefit amount for the remaining AU members
+** The action the individual must take to be added to the AU
+
+Remove the individual from the AU effective the month following the month timely notice expires.
+
+Refer to xref:3105.adoc[] regarding the policy for disclosure of citizenship/alien status and social security numbers.
+
+=== Aliens
+
+An alien is anyone living in the U.S. who is not a U.S. citizen.
+
+The USCIS categorizes aliens into two primary categories: immigrants and non-immigrants. There are also several other alien groups shown in Chart 3320.1.
+
+=== Immigrant Aliens
+
+Immigrant aliens are individuals lawfully admitted to the U.S. for permanent residence.
+
+If an immigrant alien indicates an inability or unwillingness to provide verification of alien status for any alien AU member, that alien is classified as an ineligible alien.
+In such cases, the agency must not continue efforts to obtain the verification.
+Refer to xref:3635.adoc[].
+
+=== Non-Immigrant Aliens
+
+Non-immigrants are individuals who are admitted to the U.S. for lawful temporary residence, including those admitted under employment authorization.
+Also included as non-immigrants are tourists, visitors, foreign students, and diplomats. Non-immigrants are ineligible to receive SNAP benefits.
+
+=== Other Alien Groups
+Immigrants who are legally present in the U.S. but not yet permanent residents are categorized into other alien groups. They are afforded certain benefits and pathways distinct from non-immigrants and undocumented aliens. This group contains aliens such as refugees, asylees, etc. These individuals may be eligible for SNAP if they obtain an LPR status.
+
+==== Undocumented Immigrant Aliens
+:table-caption: Chart
+
+Undocumented aliens are those individuals who are not in the U.S. lawfully, and those residing in the U.S. without current USCIS documentation or who are in violation of the terms of a non-immigrant visa after entering the U.S. legally.
+
+Chart 3320.1 shows the eligibility of certain alien groups before and after the One Big Beautiful Bill Act (OBBBA) of 2025.
+
+.3320.1
+[%header,cols="3*"]
+|===
+^|Alien Group
+^|Prior to July 4, 2025
+^|On or after July 4, 2025
+
+^|Certain American Indians born abroad
+^|Eligible Immediately
+^|Not eligible unless an LPR, then eligible immediately
+
+^|Hmong or Highland Laotian Tribal Members
+^|Eligible Immediately
+^|Not eligible unless an LPR, then eligible immediately
+
+^|Iraqi and Afghan Special Immigrants (SIV)
+^|Eligible Immediately
+^|Not eligible unless an LPR, then eligible immediately
+
+^|Conditional Immigrants
+^|Eligible Immediately
+^|Must be an LPR and meet all normal LPR regulations for eligibility
+
+^|Battered Aliens
+^|Eligible Immediately
+^|Must be an LPR and meet all normal LPR regulations for eligibility
+
+^| Victims of Severe Trafficking and Certain Family Members
+^|Eligible Immediately
+^|Not eligible unless an LPR, then eligible immediately
+
+^|Refugees
+^|Eligible Immediately
+^|Not eligible unless an LPR, then eligible immediately
+
+^|Individuals Granted Asylum
+^|Eligible Immediately
+^|Not eligible unless an LPR, then eligible immediately
+
+^|Parolees
+^|Eligible after a 5-year waiting period
+^|Must be an LPR and meet all normal LPR regulations for eligibility
+
+^|Certain Afghan Nationals Granted Parole Between July 31, 2021, and September 30, 2023
+^|Eligible immediately
+^|Not eligible unless an LPR, then eligible immediately
+
+^|Certain Ukrainian Nationals Granted Parole Between February 24, 2022, and September 30, 2024
+^|Eligible Immediately
+^|Not eligible unless an LPR, then eligible immediately
+
+^|Deportation withheld
+^|Eligible Immediately
+^|Not eligible unless an LPR, then eligible immediately
+
+^|Lawful Permanent Residents
+^|Eligible after 5 years
+^|Eligible after 5 years unless they meet certain conditions
+|===
+
+Alien groups in the above chart who are eligible immediately are exempt from meeting the 5-year waiting period outlined in the Personal Responsibility and Work Opportunity Reconciliation Act (PRWORA).  Individuals must meet all other SNAP eligibility requirements, such as income and resource limits.
+
+According to USDA regulations at 7 CFR 273.12(a)(1), 7 CFR 273.12(d), and 7 CFR 273.18, households are not liable for a claim due to a change in circumstances that the household is not required to report. Since households are not required to report a change in immigration status, aliens who lose SNAP eligibility at recertification are not subject to a claim for overissuance for the benefits received after the change took effect.
+
+==== [.underline]#Alien Group Descriptions#
+Chart 3320.2 provides a detailed description of the alien groups who were either previously eligible or are currently eligible for SNAP.
+
+.3320.2
+[%header,cols="2*"]
+|===
+|Alien Group
+|Description
+
+|Battered aliens
+|Under certain circumstances, a battered alien spouse or child, an alien parent of a battered child, or an alien child of a battered parent with a petition pending
+
+|Certain American Indians born abroad
+|American Indians born in Canada living in the United States (U.S.) under §289 of the  https://www.uscis.gov/laws-and-policy/legislation/immigration-and-nationality-act[Immigration and Nationality Act (INA)] or alien members of a federally recognized Indian tribe under §4(e) of the https://www.bia.gov/sites/default/files/dup/assets/bia/ots/ots/pdf/Public_Law93-638.pdf[Indian Self-Determination and Education Assistance Act].
+
+|Compacts of Free Association (COFA) citizens
+|Individuals who lawfully reside in the U.S. in accordance with section 141 of the Compacts of Free Association between the   Government of the United States and the Governments of the Federated States of Micronesia, the Republic of the Marshall Islands, and the Republic of Palau.
+
+|Conditional entrants
+|Granted conditional entry under §203(a)(7) of the INA as in effect before 04/01/80.
+
+|Cuban or Haitian entrants
+|Cuban or Haitian entrant under §501(e) of the https://www.govinfo.gov/content/pkg/COMPS-758/pdf/COMPS-758.pdf?[Refugee Education Assistance Act of 1980].
+
+|Deportation (or removal) withheld
+|Deportation is being withheld under §243(h) of the INA as in effect before 04/01/97, or removal is withheld under §241(b)(3) of the INA.
+
+|Hmong or Highland Laotian tribal members
+|An individual lawfully residing in the U.S. who was a member of a Hmong or Highland Laotian tribe that rendered assistance to U.S. personnel by taking part in a military or rescue operation during the Vietnam era (Aug. 5, 1964 – May 7, 1975). This category includes the spouse (or unremarried surviving spouse) or unmarried dependent children of these individuals.
+
+|Individuals granted asylum
+|Granted asylum under §208(b) of the INA.
+
+|Iraqi and Afghan special immigrants (SIV)
+a|Special immigrant status under §101(a)(27) of the INA may be granted to Iraqi and Afghan nationals who have worked on behalf of the U.S. government in Iraq or Afghanistan. The Department of Defense Appropriations Act of 2010, https://www.govinfo.gov/app/details/PLAW-111publ118[PL 111-118], § 8120 enacted on Dec. 19, 2009, provides that SIVs are eligible for all benefits to the same extent and the same time period as refugees.
+
+NOTE: Once an SIV applicant completes the process and is admitted to the U.S., they are automatically lawful permanent residents (green card holders).
+
+|Lawful Permanent Resident (LPR)
+|LPRs, also known as “Green Card” holders, are aliens who are lawfully authorized to live permanently in the United States. This category also includes “Amerasian immigrants” as defined under §584 of the https://www.govinfo.gov/content/pkg/COMPS-10577/pdf/COMPS-10577.pdf[Foreign Operations, Export Financing and Related Programs Appropriations Act of 1988]. This category also includes the surviving spouses and children of deceased Afghans and Iraqis who previously worked for or on behalf of the U.S. government. They are the Surviving Spouse or child of an SQ-1 eligible person (SW1), the current spouse of SW1 (SW2), and the unmarried child of SW1 (SW3). These Special Immigrant LPRs meet the immigration status requirement for public benefits under section 602(b)(8) of the Afghan Allies Protection Act of 2009 (8 U.S.C. § 1101 note) and section 1244(g) of the Refugee Crisis in Iraq Act of 2007, which state that individuals granted this special immigrant status “shall be eligible for resettlement assistance, entitlement programs, and other benefits available to refugees admitted under section 207 of [the Immigration and Nationality] Act (8 U.S.C. 1157).
+
+|Military Connection
+|An individual who is lawfully residing in a State and is on active duty in the military (excluding National Guard) or is an honorably discharged veteran whose discharge is not because of immigration status (includes spouse, surviving spouse if not married, and unmarried dependent children). A discharge “Under Honorable Conditions”, which is not the same as an honorable discharge, does not meet this requirement.
+
+|Parolees
+|Paroled into the U.S. under §212(d)(5) of the INA for a period of at least 1 year.
+
+|Victims of a severe form of trafficking in persons and certain family members
+|Victims under the https://www.govinfo.gov/content/pkg/PLAW-106publ386/pdf/PLAW-106publ386.pdf?[Trafficking Victims Protection Act of 2000] and family members granted derivative T nonimmigrant status.
+
+|Non-Citizen U.S. Nationals
+|Section 308 of the Immigration and Nationality Act (INA) confers U.S. nationality but not U.S. citizenship on persons born in "an outlying possession of the United States" or born of a parent or parents who are non-citizen nationals who meet certain physical presence or residence requirements. The term “outlying possessions of the United States” is defined in Section 101(a)(29) of the INA as American Samoa and Swains Island.
+For SNAP purposes, these applicants and recipients are to be treated as U.S. citizens.
+|===
+
+=== Indefinite Eligibility for SNAP-eligible Alien Groups
+
+SNAP-eligible Alien Groups are U.S. nationals, LPRs, Cuban and Haitian entrants, and Compacts of Free Association (COFA) citizens. If someone is a SNAP-eligible alien and meets [.underline]#*ONE*# of the following conditions, they are eligible for SNAP benefits immediately.
+
+==== [.underline]#Blind and Disabled Aliens#
+
+Blind or disabled aliens who are receiving or certified for benefits, or assistance for a disability condition, regardless of when they entered the U.S., are eligible indefinitely for SNAP benefits.
+
+The SNAP-eligible alien must be disabled as defined by the SNAP policy.
+Section 3(j) (2) through (7) of the Food and Nutrition Act of 2008 defines disability for SNAP purposes.
+
+The SNAP-eligible alien must receive or be certified for SSI, Social Security disability, federal or state disability retirement benefits for a permanent disability, veteran's disability benefits, railroad disability retirement, disability-related Medicaid, or State or Federal supplemental assistance that is based on criteria used to determine federal SSI criteria such as from the State Medicaid Eligibility Unit (SMEU) (Effective October 1, 2002).
+
+==== [.underline]#Elderly Aliens#
+
+An alien who was born on or before August 22, 1931, and who was lawfully residing in the United States on August 22, 1996, is eligible indefinitely for SNAP benefits as a SNAP-eligible alien without a waiting period.
+
+==== [.underline]#Children under Age 18#
+
+Children who are SNAP-eligible aliens under the age of 18, are eligible for SNAP benefits regardless of when they came to the U.S.
+
+Once the child turns 18, the child may continue eligibility for SNAP as long as he/she meets the other program requirements.
+
+At age 18 the child(ren) may have to meet another condition for SNAP-eligible aliens in order to remain eligible for benefits indefinitely.
+
+==== [.underline]#*Citizens of the  Compacts of Free Association (COFA)*#
+
+Individuals residing in the U.S. who are citizens of the Federated States of Micronesia, the Republic of the Marshall Islands, and the Republic of Palau. These nations are collectively known as the Compacts of Free Association (COFA), and their citizens are eligible with no waiting period.
+
+==== [.underline]#*Amerasian Immigrants*#
+Lawful Permanent Residents born in Korea, Vietnam, Laos, Kampuchea (Cambodia), or Thailand after December 31, 1950, and before October 22, 1982.  They must have a US citizen as their natural father. (Amerasian Act of 10/22/1982) Also included are mothers and other immediate family members of certain Vietnamese Amerasians who relocated to the US with their Amerasian children.  This program is called the Amerasian Homecoming Act of 1987 (Section 584) and only pertains to persons fathered by a US citizen but born in Vietnam after January 1, 1962, and before January 1, 1976, if they were residing in Vietnam on or after March 22, 1988.
+
+==== [.underline]#*Military Connection*#
+
+Any alien in a SNAP-eligible alien group with a military connection is eligible for SNAP benefits without a waiting period.
+
+A SNAP-eligible alien who meets one of the following criteria is considered to have a military connection:
+
+* An individual who is lawfully residing in a State and is on active duty in the military (excluding National Guard)
+* An honorably discharged veteran whose discharge is not because of immigration status (includes spouse, surviving spouse if not married, and unmarried dependent children). A discharge “Under Honorable Conditions”, which is not the same as an honorable discharge, does not meet this requirement.
+
+NOTE: A surviving spouse continues to meet eligibility criteria if the veteran or alien on active duty dies, and the spouse has not remarried.
+The marriage must have lasted for one year *or* for any period if a child was born during or before the marriage.
+
+==== [.underline]#Residing in the U.S. for 5 Years (5-year residents)#
+
+Any alien in a SNAP-eligible alien group who has lived in the U.S. for 5 years (or longer) from the date of entry is eligible for SNAP benefits indefinitely.
+
+==== [.underline]#40 Qualifying Work Quarters#
+
+Lawful permanent residents (adults and/or children) who can be credited with 40 qualifying work quarters meet the citizenship/alien requirement and are eligible for SNAP benefits indefinitely.
+
+=== Determining 40 Qualifying Work Quarters
+
+To establish 40 qualifying work quarters, complete the following procedures:
+
+Step 1:: Obtain the full name, Social Security Number, date of birth, and sex of each wage earner whose quarters are being used to establish eligibility.
+
+The wage earner may be:
+
+* the alien (self)
+* a current spouse (consider only quarters worked during the marriage)
+* a deceased spouse whose credited quarters were worked during the marriage
++
+NOTE: The alien must not be currently married if considering the deceased spouse's qualifying quarters.
+
+* A parent (deceased or divorced) whose children (biological or adopted) are or were under age 18 at the time the credited quarters were worked.
++
+NOTE: Quarters earned prior to the birth of the child may be used.
+
+* A stepparent, if at the time the credited quarters were worked the child was under age 18, unmarried, and there was a marital relationship with the child's parent.
++
+NOTE: If the marital relationship ends for reasons other than death, the credited quarters of a stepparent cannot be used.
++
+NOTE: To meet this requirement, a parent may not use a child's quarters of employment.
+
+Step 2:: Accept the A/R's or wage earner's statement to verify quarters worked if the following conditions exist:
+
+. Alone or in combination with parents and/or spouse, the alien has sufficient time in this country to have acquired 40 quarters and;
+
+. USCIS documents verify that the dates of entry are consistent with 40 credited quarters or more;
+
+. The alien, spouse, parent, or a combination of these individuals has sufficient quarters to meet the requirement.
+The same quarters may be used to meet the requirement for more than one alien.
+
+Step 3:: Use the SVES system to interface with the Social Security Administration (SSA) to obtain the verification needed for credit quarters.
+
+If SSA indicates through SVES data or other means that the number of qualifying quarters that can be credited is under investigation, the alien is eligible to be included in the AU for up to six months from the date of the notification from SSA that the number of quarters is being investigated.
+
+Step 4:: Have each wage earner whose quarters are being used to establish eligibility complete and sign Form SSA-3288, Social Security Administration Consent for
+Release of Information and provide a statement of his/her work history as outlined in Step 2.
+
+NOTE: The wage earner may be an alien or U.S. citizen by birth or naturalization.
+The wage earner is not required to have paid Social Security taxes or have earned quarters under the SSA.
+
+Step 5:: Eliminate as a credited quarter any quarter in which the wage earner received federal public assistance on or after January 1, 1997.
+The result is the number of qualifying quarters and must equal 40 (or more) for the lawful permanent resident to be eligible for benefits.
+
+NOTE: “Received” is defined as being included in a federal public assistance benefit.
+
+Public Assistance is defined as SNAP benefits, housing, TANF, employment services, support services, childcare subsidy, federal energy assistance, subsidized utilities, SSI, or Medicaid (other than EMA).
+This list is not all-inclusive.
+Public assistance does not include EMA, public health assistance, foster care, adoption assistance, soup kitchen meals, crisis counseling, short-term shelter, educational assistance, WIOA, disaster relief, or Head Start.
+This list is not all-inclusive.
+
+Determine the number of credited work quarters, as follows:
+
+* *Prior to 1978* - if earnings totaled at least $50 per calendar quarter (January through March, April through June, July through September, or October through December), a quarter was credited to the wage earner.
+
+* *Effective January 1, 1978* - credited quarters are based on the total yearly earnings.
+To determine the number of credited quarters, divide the total yearly earnings by the figures listed below for that year.
+
+The result (up to 4), minus the number of quarters public assistance was received, is the number of credited quarters.
+
+For example, the total yearly earnings are $3,000 for 2003.
+Divide $3000 by $890.
+The individual has 3.3 credited quarters.
+
+[%header,cols="6*^"]
+|===
+|Year
+|Earnings
+|Year
+|Earnings
+|Year
+|Earnings
+
+|1978
+|$250
+|1998
+|$700
+|2018
+|$1,320
+
+|1979
+|$260
+|1999
+|$740
+|2019
+|$1,360
+
+|1980
+|$290
+|2000
+|$780
+|2020
+|$1,410
+
+|1981
+|$310
+|2001
+|$830
+|2021
+|$1,470
+
+|1982
+|$340
+|2002
+|$870
+|2022
+|$1,510
+
+|1983
+|$370
+|2003
+|$890
+|2023
+|$1,640
+
+|1984
+|$390
+|2004
+|$900
+|2024
+|$1,730
+
+|1985
+|$410
+|2005
+|$920
+|2025
+|$1,810
+
+|1986
+|$440
+|2006
+|$970
+
+|
+|
+|1987
+|$460
+|2007
+|$1,000
+
+|
+|
+|1988
+|$470
+|2008
+|$1,050
+|
+|
+|1989
+|$500
+|2009
+|$1,090
+
+|
+|
+|1990
+|$520
+|2010
+|$1,120
+
+|
+|
+|1991
+|$540
+|2011
+|$1,120
+
+|
+|
+|1992
+|$570
+|2012
+|$1,130
+
+|
+|
+|1993
+|$590
+|2013
+|$1,160
+
+|
+|
+|1994
+|$620
+|2014
+|$1,200
+
+|
+|
+|1995
+|$630
+|2015
+|$1,220
+
+|
+|
+|1996
+|$640
+|2016
+|$1,260
+
+|
+|
+|1997
+|$670
+|2017
+|$1,300
+
+|
+|
+|===
+
+
+Step 6:: Document calculations in case notes if the 40 QTRS Interface in Gateway is not working.
+
+=== Eligibility Conditions for SNAP-eligible Alien Groups
+
+To be eligible for SNAP benefits, an alien must be in a SNAP-eligible alien group AND either: (1) be eligible without having a waiting period or (2) meet one of the criteria for indefinite eligibility.
+
+
+[#_verification_of_alien_status]
+=== Verification of Alien Status
+
+Chart 3320.3, _Determining Eligibility for Aliens_, below lists the alien statuses that may or may not result in SNAP eligibility, and the documents required to verify USCIS status.
+USCIS has the discretion to change documents and codes to allow any alien or group of aliens to stay in the U.S. indefinitely.
+
+An individual has an “adjusted status to LPR” when they have received an approval notice and a Lawful Permanent Resident Card (Green Card) from the USCIS. An individual is not considered an LPR if they have only applied to adjust status but have not yet received a decision.
+
+Documents issued by USCIS may vary by local USCIS office.
+USCIS status may also be verified by a letter of decision from an immigration judge.
+
+Chart 3320.3, _Determining Eligibility for Aliens_, provides the eligibility and verification requirements for all categories of aliens.
+
+[#chart-3320-3]
+.3320.3 DETERMINING ELIGIBILITY FOR ALIENS
+[cols=3*]
+|===
+| An Amerasian immigrant under section 584 of the Foreign Operations, Export Financing and Related Program Appropriations Act of 1988
+| The alien is *eligible* from the date of entry into the U.S.
+a|
+[%hardbreaks]
+I-95 annotated AM1, AM2, AM3
+
+I-551 annotated AM6, AM7, AM8
+
+Vietnamese Exit Visa,
+Vietnamese Passport,
+U.S. Passport stamped AM1, AM2, AM3
+
+| Granted asylum under section 208 of the INA
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR. Once they are an LPR, they are *NOT* subject to the 5-year waiting period.
+a|
+[%hardbreaks]
+I-94 annotated Section 208
+
+I-688B annotated 274a.12(a)(10)
+
+I-551 or other USCIS documents with asylum codes AS1, AS2, AS3, AS6, AS7, AS8
+
+I-766 annotated A10
+
+| Cuban or Haitian entrant under section 501(e) of the Refugee Education Assistance Act (REAA) of 1980
+| The alien is *eligible* from the date of entry
+| I-94 annotated paroled as a refugee section 207
+
+I-551 annotated with codes CU6, CU7, CH6
+
+Form I-766, Employment Authorization Document with a C11 category if they have applied for and received one
+
+| Deportation withheld under section 243(h) of the INA as in effect prior to 4/1/97 OR removal withheld under section 241(b)(3) of the INA
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR. Once they are an LPR, they are *NOT* subject to the 5-year waiting period
+a|
+[%hardbreaks]
+I-94 annotated Section 243(h) or 241(b)(3)
+
+An order from a Judge showing deportation withheld
+
+I-688B annotated 274a.12(a)(10)
+
+I-766 annotate A10
+
+| Paroled under section 212(d)(5) of the INA for at least one (1) year
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR.  Once they are an LPR, they *ARE* subject to the 5-year waiting period unless they meet one of the conditions for indefinite eligibility.
+a|
+[%hardbreaks]
+I-688B annotated 274a.12(a)(4) or c(11)
+
+I-94 annotated 212(d)(5an)
+
+I-512 annotated 212(d)(5)
+
+| Refugee admitted under section 207 of the INA
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR.  Once they are an LPR, they are *NOT* subject to the 5-year waiting period.
+| I-94 annotated section 207 or paroled as a refugee I-688B annotated 274a.12(a)(3), (a)(4), (a)(10)
+
+I-551 or USCIS
+
+documents with RE1, RE2, RE3, RE6, RE8, R86, P71, CH6, CU6, CU7, CU8, CU9, CNO, CUP, CNP, M83, Y64
+
+| A victim of a severe form of trafficking, and certain family members, under the Trafficking Victims Protection Act of 2000.
+
+If the victim is under age 21, the spouse, children, and parents of the alien are potentially eligible.
+
+If the victim is 21 years of age or older, the spouse and children of the alien are potentially eligible.
+
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR.  Once they are an LPR, they are *NOT* subject to the 5-year waiting period
+| COA codes are ST6, ST0, ST7, ST8, ST9
+
+| Iraqi and Afghan Immigrants granted special immigrant status under section 101(a)(27) of the Immigration and Nationality Act (INA).
+Public Law 110-161 of The Consolidated Appropriations Act of 2008.
+| Once an SIV applicant completes the process and is admitted to the U.S., they are automatically lawful permanent residents (green card holders).
+| Afghan or Iraqi passport Immigrant Visa category SI1, SI2, SI3, SQ1, SQ2, SQ3
+
+I-551 showing Afghan or Iraqi Nationality with codes SI6, SI7, SI9, SQ6, SQ7, SQ9
+
+| Afghan Immigrants with Special Immigrant Visa (SIV) Status (SQ/SI) Parolee Sec 602 (b)(1) AAPA/SEC 1059(a) NDAA 2006
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR. Once they are an LPR, they are *NOT* subject to the 5-year waiting period
+| Afghan passport Immigrant Visa category SQ4, SQ5
+
+| Afghan Humanitarian Parolees
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR.  Once they are an LPR, they are *NOT* subject to the 5-year waiting period.
+
+The individual would have previously been granted parole and entered the United States between 7/31/2021 and 9/30/2023.
+| Afghan passport without SQ/SI Parole
+
+| Lawfully admitted for permanent residence (LPR) in the U.S. (holders of green cards)
+| The alien is *ineligible* for SNAP for 5 years from their date of entry unless they meet one of the conditions for indefinite eligibility.
+| Passport, Visa, I-94-annotated, I-181, DHS AR-3a, Permanent Resident Card (Form I 551, also known as a Green Card)
+
+| The surviving spouses and children of deceased Afghans and Iraqis who previously worked for or on behalf of the U.S. Government, their current spouse and unmarried child(ren) granted special immigrant status under section 602(b)(8) of the Afghan Allies Protection Act of 2009 (8 U.S.C. § 1101 note) and section 1244(g) of the Refugee Crisis in Iraq Act of 2007
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR.  Once they are an LPR, they *ARE* subject to the 5-year waiting period unless they meet one of the conditions for indefinite eligibility.
+| Permanent Resident Card (Form I-551, also known as a Green Card)
+
+Foreign passport with a temporary I-551 Machine Readable Immigrant Visa
+
+Foreign passport with a temporary I-551 Permanent Resident Stamp
+
+Form I-94 Arrival/Departure Record with a Temporary I-551 Permanent Resident Stamp
+
+COA Code –SW1, SW2, SW3
+
+
+| Granted conditional entry under section 204(a)(7) of the INA prior to 4/1/80. After this date, they entered as Refugees or Asylees.
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR.  Once they are an LPR, they *ARE* subject to the 5-year waiting period unless they meet one of the conditions for indefinite eligibility.
+| I-94 or older green card annotated with section 203(a)(7) or other USCIS document indicating conditional entrant
+
+| A battered spouse, battered child, or an alien child of a battered parent with a petition pending under section 204(a)(1)(A) or section 244(a)(3) of INA.
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR.  Once they are an LPR, they *ARE* subject to the 5-year waiting period unless they meet one of the conditions for indefinite eligibility.
+a| I-94 annotated AR1, AR6, C20-C29, CF1, CF2, CR1, CR6
+
+IMPORTANT: I-551 annotated applicant has filed an I-130 or I-360 petition as a battered alien.
+
+USCIS Form 797 (is documentation of approval of I-130 application).
+
+| Micronesia, Marshall Islands, and Palau, collectively known as the Compacts of Free Associations (COFA)
+| The alien is *eligible* from the date of entry into the U.S.
+a| Form I-94, arrival/departure record;
+
+Form I-766, Employment Authorization;
+
+Form I-797, Notice of Action Receipt.
+
+NOTE: Based on information from a COFA citizen’s documentation, SAVE can provide an initial verification response of Non-immigrant Employment Authorized – Indefinitely. The initial verification response may also include employment authorization information if the COFA citizen has an EAD. If the automated SAVE response is unexpected or is not sufficient for an agency to make a benefit eligibility determination, the agency should institute additional verification.
+
+
+
+| Ukrainian Humanitarian Parolee (UHP), citizen or national who received humanitarian parole
+| The alien is *ineligible* for SNAP unless they have an adjusted status to LPR. Once they are an LPR, they are *NOT* subject to the 5-year waiting period
+
+The individual would have previously been paroled and entered the United States between February 24, 2022, and September 30, 2024.
+| *Form I-94* with a Ukrainian Humanitarian Parolee (UHP) COA
+
+*Or*
+
+Foreign passport with DHS/CBP admission stamp noting “Uniting for Ukraine”, “U4U”, or a COA of “Ukrainian Humanitarian Parolee (UHP)”
+
+*Or*
+
+Form I-766 Employment Authorization Document (EAD) receipt notice with a C11 category
+
+*Or*
+
+Form I-766 Employment Authorization Document (EAD) with a C11 category and a Form I-797C extending the EAD validity period
+
+| A non-Ukrainian individual who last habitually resided in Ukraine and received humanitarian parole
+|The alien is *ineligible* for SNAP unless they have an adjusted status to LPR.  Once they are an LPR, they *ARE* subject to the 5-year waiting period unless they meet one of the conditions for indefinite eligibility.
+| *Form I-94* with a Ukrainian Humanitarian Parolee (UHP) COA
+
+*Or*
+
+Foreign passport with DHS/CBP admission stamp noting “Uniting for Ukraine”, “U4U”, or a COA of “Ukrainian Humanitarian Parolee (UHP)”
+
+*Or*
+
+Form I-766 Employment Authorization Document (EAD) receipt notice with a C11 category
+
+*Or*
+
+Form I-766 Employment Authorization Document (EAD) with a C11 category and a Form I-797C extending the EAD validity period
+
+*AND*
+
+Documentation of last habitual residence in Ukraine
+|===
+
+=== Determining Eligibility for Afghan and Iraqi Immigrants PRIOR to July 4, 2025
+
+Use Charts 4, 5, and 6 to determine eligibility for Afghan and Iraqi Immigrants.
+
+
+|===
+4+^h|CHART 3320.4 DETERMINING ELIGIBILITY FOR AFGHAN IMMIGRANTS (Under Consolidated Appropriations Act of 2009 Effective 12/26/07)
+^| Date Granted Special Immigrant Status ^| Six (6) Month Eligibility End Date ^| Application Date ^| Dates of Eligibility/Certification Period
+
+| 10/09/08
+| 03/31/09
+| 12/17/08
+| 12/17/08 – 03/31/09
+
+| 02/26/09
+| 07/31/09
+| 03/31/09
+| 03/31/09 – 07/31/09
+
+| 01/06/09
+| 06/30/09
+| 01/15/09
+| 01/15/09 – 06/30/09
+|===
+
+
+|===
+4+^h|CHART 3320.4 DETERMINING ELIGIBILITY FOR IRAQI IMMIGRANTS (Under Consolidated Appropriations Act of 2009 Effective 12/26/07)
+^| Date Granted Special Immigrant Status ^| Eight (8) Month Eligibility End Date ^| Application Date ^| Dates of Eligibility/Certification Period
+
+| 09/10/08
+| 04/30/09
+| 12/17/08
+| From 12/17/08 – 04/30/09
+
+| 01/26/09
+| 08/31/09
+| 03/31/09
+| 03/31/09 – 08/31/09
+
+| 08/1/08
+| 03/31/09
+| 08/15/08
+| 08/15/08 – 03/31/09
+
+| 10/1/08
+| 05/31/09
+| 11/10/08
+| 11/10/08 – 05/31/09
+|===
+
+
+|===
+5+^h|CHART 3320.5 DETERMINING ELIGIBILITY FOR AFGHAN IMMIGRANTS (Under Omnibus Appropriations Act of 2009 Effective 3/11/09)
+5+^| Current Recipient Households
+
+^| *Date Granted Special Immigrant Status*
+^| *Six (6) Month Eligibility End Date*
+^| *Eight (8) Month Eligibility End Date*
+^| *Date of Recertification*
+^| *Certification Period*
+
+| 07/08/08
+| 12/31/08
+| 02/28/09
+| 12/15/08
+| Ineligible for an additional 2 months as 8-month period expired prior to 3/11/09, the effective date of the law
+
+| 09/01/08
+| 02/28/09
+| 04/30/09
+| 02/11/09
+| Eligible 3/11/09 – 4/30/09
+
+(ineligible 3/1/09 - 3/10/09) as these dates are prior to the effective date of the law
+
+| 12/16/08
+| 05/31/09
+| 07/31/09
+| 05/15/09
+| Eligible 6/01/09 - 07/31/09
+|===
+
+
+|===
+4+^h|CHART 3320.6 APPLICANT HOUSEHOLDS FOR AFGHAN AND IRAQI IMMIGRANTS
+^| Date Granted Special Immigrant Status ^| Eight (8) Month Eligibility End Date ^| Application Date ^| Certification Period
+
+| 12/16/08
+| 07/31/09
+| 03/31/09
+| Eligible for 5 months from 3/31/09 - 7/31/09
+
+| 02/02/09
+| 09/30/09
+| 03/06/09
+| Eligible for 7 months from 3/06/09 - 9/30/09
+
+| 04/21/09
+| 11/30/09
+| 04/07/09
+| Eligible 8 months from 4/07/09 - 11/30/09
+|===
+
+=== Reporting Unlawful Aliens
+
+Report aliens to the U.S. Immigration and Customs Enforcement (ICE) when the AU presents a formal order of deportation.
+The report is done by calling their hotline at 1-866-DHS-2-ICE.
+Document the case record with the referral information.
+
+=== Budgeting
+
+Income and resources are budgeted according to special procedures.
+Refer to xref:3635.adoc[] for budgeting procedures.
+
+Refer to xref:3630.adoc[] for policy on Sponsored Aliens.
+
+=== When to Verify Alien Status
+
+Verify alien status at application, at recertification (renewal), when a non-U.S. citizen is added to the AU, when the agency becomes aware of a discrepancy, if the verification previously provided has expired, and if questionable.
+
+Aliens whose documents do not clearly verify their alien status, and SAVE verification has been submitted, but is still pending a response, are eligible to be included in the AU for up to six months pending the receipt of secondary verification of their USCIS status.
+
+=== Verification Information Systems (VIS)
+
+The Systematic Alien Verification for Entitlements (SAVE) program is a VIS provided by the U.S. Citizenship and Immigration Services (USCIS) to verify the immigration status of non-citizens and certain citizens applying for various benefits.
+SAVE is designed to assist government agencies with eligibility determinations for federal, state, and/or local public benefits.
+
+SAVE establishes the legitimacy of alien documentation and verifies the status under which an alien has been admitted to the U.S.
+
+Complete SAVE procedures in the following situations:
+
+* To establish the alien status of ALL non-citizens
+* To verify the legitimacy of an alien's documentation
+* To determine the status of an alien whose documentation has been lost or expired
+* To determine if USCIS has assigned a new alien status
+
+SAVE may also be used to obtain secondary or additional information to verify alien status.
+
+SAVE is accessible through Georgia Gateway or online at: https://save.uscis.gov/Web/vislogin.aspx?JS=YES.
+
+NOTE: Effective May 2025, all SAVE users must sign in through Login.gov. To create a Login.gov account, visit https://secure.login.gov/sign_up/enter_email. Browser users must sign in through Login.gov using an email, password, and Multi-Factor Authentication (MFA).
+
+*LOGGING IN THE SYSTEM FOR THE FIRST TIME*:
+
+. Enter the web address: https://save.uscis.gov/Web/vislogin.aspx?JS=YES in the address line of your web browser (Microsoft Edge, Google Chrome, and Mozilla Firefox are supported)
+
+. Click GO or press Enter.
+
+. Select I Agree for the User Agreement.
+
+. Enter your Sign In information.
+** Enter your user ID.
+** Enter your password.
+
+. Select  *“Sign In*” to continue.
+
+. Change your password.
+You are required to do this when you log onto the system for the first time.
+** Enter the password you just used to log on in the “*Old Password*” field.
+** Enter a new password in the “*New Password*” field.
+Your new password must contain at least three of the four following password characteristics:
+*** One uppercase or lower-case letter
+*** One number
+*** One special character (! @ $ % * etc)
++
+NOTE: The password must contain between 8 to 14 characters in length.
+There is a 15-minute inactivity automatic logout.
+Passwords must be changed every 45 days.
+
+. To ensure that you have entered the correct password, re-enter the password in the “*Re-type New Password*” field.
+
+. Once you have entered the password, select the “*Submit Password Change*” button.
+Once you have completed the password change, you will be allowed into the system.
+
+. Set your password challenge questions and answers.
+These will be used to verify your user information in case you forget your password.
+
+. Select the “*Submit*” button.
+
+*FOR INITIAL VERIFICATION REQUESTS IN SAVE:*
+
+. Select the “*Create New Case”* *tab on the top left-hand side of the page.* A screen will appear requesting the full name of the applicant, their date of birth, and the number for the type of document presented. You will also need to select the type of benefits they are requesting. Select “*Continue*”.
+
+. You will be asked to verify the information you entered, and then select the green Initiate Verification button.
+
+.  If all the information has been entered correctly, the results will appear within seconds on the _SAVE Response Details page_.
+
+. This page can then be printed or saved to your computer and uploaded into DIS/UCM as verification.  Once completed, you will select the blue Close Case button.
+
+*FOR ADDITIONAL VERIFICATION REQUESTS:*
+
+There are several reasons for submitting additional verification requests including:
+
+. If the system prompts the user to input additional verification.
+
+. If the system detects potential errors in the required information fields, a screen will be generated to allow you to update your data.
+To change or reenter information, select the *“Institute Additional Verification (IAV)”* option at the bottom of _the SAVE Response Details page_ to resubmit the query.
+An additional section will appear to enter more information.
+Enter additional information.
+
+. Click the *“Submit Additional Verification”* button.
+
+The VIS system will return the Case Details from the initial results, the additional verification parameters, and the status of the additional verification.
+A response is returned within *3 to 5 federal working days*.
+
+SAVE will respond with information about the applicant: either the applicant’s United States citizenship information, or immigration status (if any), and/or other information such as employment authorization, admit to or expiration date, or a request to “Resubmit Doc.” The agency must use the Scan and Upload function to electronically submit photocopies (front and back) of the applicant’s relevant immigration/citizenship documents when instituting additional verification to avoid the possibility of a “Resubmit Doc” response. Except for very limited circumstances, the benefit of using the Scan and Upload function at the second step is to complete the entire verification process within 3-5 federal working days. The “Resubmit Docs” response is the prompt for a third step verification.
+
+*FOR THIRD-STEP VERIFICATION REQUESTS:*
+
+SAVE was unable to verify the applicant's status on initial verification or additional verification. There may have been an issue electronically locating the records, or third-level verification may be required due to conflicting data or the nature of the applicant's status.
+
+To initiate third-step verification,
+
+The agency MUST submit photocopies (front and back) of the applicant's relevant immigration documents using the Scan and Upload function. It is always best to submit the applicant's most recent immigration document. If the agency is initiating a case due to the response received previously, it should explain in the comments why it believes that the prior response needs further review. If the agency needs information on pending applications, they may write "Request Pending Application(s) and the application number(s)" in comments, e.g., I-765, for the application(s) that they would like to verify are pending. Note: SAVE will not specifically indicate that an applicant does not have an application(s) pending in its response, and such requests will not receive a response. SAVE conducts a manual search of immigration databases. Agencies should receive a response within 3-5 federal working days. However, if extensive research is required, a response may take 10-20 federal working days.
+
+The SAVE Program Assistance is available to all users Monday – Friday, 8:00 A.M. to 8:00 P.M. EST (except federal holidays).
+
+For technical assistance, call 1-877-469-2563.
+
+The SAVE E-Mail address is SAVE.help@uscis.dhs.gov

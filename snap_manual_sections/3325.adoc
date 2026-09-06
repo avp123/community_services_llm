@@ -1,0 +1,215 @@
+= 3325 Enumeration
+:chapter-number: 3300
+:effective-date: April 2025
+:mt: MT-82
+:policy-number: 3325
+:policy-title: Enumeration
+:previous-mt-number: MT-57
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An individual must be enumerated (e.g. provide a Social Security Number (SSN) in order to be included in the assistance unit (AU).
+An individual, who is not applying for SNAP benefits and who does not provide an SSN, may be designated as a non-applicant.
+A non-applicant is [.underline]#*not required*# to provide an SSN but is required to provide other information that may affect the eligibility of the other applicant AU members, such as income or resources.
+A non-applicant is not eligible to receive SNAP benefits.
+
+== Basic Considerations
+
+Enumeration is the process by which an SSN is obtained and validated.
+
+Providing an SSN is voluntary;
+however, AUs applying for SNAP benefits must provide an SSN or apply for an SSN for each AU member in order to receive benefits.
+Third-party verification of the SSN is not required in order for an individual to be included in the AU.
+
+The AU's statement of SSNs may be accepted for individuals who have been assigned an SSN.
+Individuals who provide SSNs prior to certification, recertification, or as a reported change are entered in the Gateway system and are validated through the Social Security Administration's (SSA) system.
+
+SSNs are used to secure information from other databases to achieve the following purposes:
+
+* facilitate mass changes in federal benefits
+* request and exchange information on individuals through IEVS (e.g. discover unreported income or resources)
+* prevent duplicate benefits
+* verify accuracy and/or reliability of information reported by the AU.
+
+=== Duplicate SSNs
+
+If an individual reports more than one SSN that has been assigned to him/her, the individual must be referred to SSA to resolve the discrepancy.
+All duplicate SSNs must be entered in the system.
+
+The AU must report the correct and primary SSN to the agency upon resolution with the SSA.
+
+=== Obtaining SSNs for AUs
+
+An AU member who does not have or does not know his/her SSN must apply for one with the SSA.
+
+The AU is referred to the SSA and must be informed of its responsibility to submit documents that verify age, identity, and citizenship such as birth certificates, driver's license, etc.
+to apply for an SSN.
+
+=== SSN for A Newborn
+
+If an AU is unable to provide proof of application for a newborn's SSN, the AU must provide the SSN or proof of application for the SSN at the next recertification or within 6 months following the month the baby is born, whichever is later.
+
+Enumeration is not required in the expedited months of SNAP participation for applications subject to expedited application processing.
+
+=== Good Cause
+
+Good cause may be established for failure to meet the enumeration requirement.
+Good cause is established when it is determined that the AU member has made every effort to obtain an SSN but has been unable to do so because of the inability to obtain the necessary documents required by the SSA.
+The agency must make every effort to assist the AU in obtaining the documents needed to complete the enumeration process.
+
+Good cause includes but is not limited to the following:
+
+* documentary evidence or collateral information that the AU member has applied for an SSN and has not yet been issued a number
+
+* the inability of the AU to obtain the necessary documents required by the Social Security Administration.
+Example: inability to obtain a birth certificate.
+
+Because SSA makes provisions for mail-in applications in lieu of applying in person, good cause does not include delays due to the following:
+
+* illness
+* lack of transportation
+* temporary absence from the home.
+
+=== Enumeration Sanctions
+
+Refusal to meet the enumeration requirement, which includes refusal to resolve discrepancies identified during the SSA validation process, results in an automatic determination of non-compliance for the AU member.
+
+An AU member who does not meet the enumeration requirement is sanctioned and is ineligible to be included in the AU.
+
+An individual who is considered to be a non-applicant is ineligible and is excluded from the AU.
+
+The earned or unearned income and resources of the *ineligible AU member or non-applicant* are counted as household income to determine the AU's eligibility and benefit amount for the other applicant AU members.
+
+Refer to xref:3620.adoc[].
+
+=== Compliance
+
+The individual complies with enumeration requirements when verification of the application for an SSN is provided, an SSN is provided, or any discrepancies are resolved. The AU member(s) disqualified may become eligible upon providing the agency with an SSN.
+
+== Procedures
+
+The following charts outline procedures for obtaining and recording an SSN in the case record:
+
+.Chart 3325.1 - Enumeration
+|===
+| IF AN AU MEMBER | THEN
+
+| is currently in the system with an SSN
+| compare the system number with the applicant/recipient's (A/R) statement.
+
+| knows the SSN at the interview
+| go to the Persons LUW.
+On the Person Details screen in the Demographic Information section, enter SSN in the SSN field (leave blank to request).
+Choose an appropriate selection from the dropdown in the SSN verification field.
+
+| does not know the SSN at the interview but is able to obtain it
+| issue a verification checklist to request that the SSN be provided within 10 calendar days.
+
+When the A/R provides the SSN, enter the SSN in the system.
+
+| has multiple SSNs
+| refer the AU member to the Social Security Administration (SSA) to resolve the discrepancy.
+
+enter all known SSNs in the system.
+
+Inform the AU of the responsibility to report the correct and primary SSN to the agency upon resolution with SSA.
+
+| is enumerated at birth by a medical facility
+| request the SSN at the next recertification or within 6 months following the month the baby is born, whichever is later.
+If the SSN has not been received, request the SSN at each recertification thereafter.
+
+| never had an SSN
+
+*OR*
+
+had an SSN but the number is unknown
+a| refer the AU member to SSA to apply for a new or replacement SSN.
+
+Follow these steps:
+
+. Inform the AU of its responsibility to submit original or certified copies of documents that verify age, identity, and citizenship (e.g., birth certificates, drivers' licenses, etc.) to SSA with the application for an SSN.
+. Allow the AU 10 calendar days to verify the application for an SSN.
+. If verification of the application is provided, document that it has been received and upload the verification in the Document Imaging System (DIS).
+. Request the SSN at the next recertification.
+If the SSN has not been received, request the SSN at each recertification thereafter.
+. If verification is not provided, determine if good cause exists.
+. If good cause exists, contact the AU monthly to monitor good cause.
+. If good cause does not exist, the non-enumerated individual is not included in the AU.
+|===
+
+Use the following chart to determine required action when good cause is established, or the enumeration requirement is met following non-compliance.
+
+[#chart-3325-2]
+.Chart 3325.2 – Good Cause in Enumeration
+|===
+| IF | THEN
+
+| good cause is established at application processing
+
+*OR*
+
+good cause is established when an individual joins the AU
+a| Document the following:
+
+* The AU's statement of the reason for noncompliance
+* The reason for establishing good cause
+* The offer of assistance in obtaining needed verification.
+
+Include the individual in the AU.
+
+Monitor good cause assertion on a monthly basis by the following methods:
+
+* Contact the A/R in writing, in person, or by telephone
++
+*AND*
+* Document the current status of the good cause determination.
+
+| the non-enumerated individual meets the enumeration requirement
+
+*OR*
+
+establishes good cause
+| Document that the enumeration requirement has been met.
+
+Add the AU member to the case effective the month following the month in which the enumeration requirement is met, or good cause is established.
+
+| good cause assertion is denied
+
+*OR*
+
+the AU member initially complies with enumeration but refuses to resolve discrepancies identified during the SSA validation process
+a| Document the following:
+
+* The AU's statement of the reason for non-compliance
+* The reason for denial of the good cause claim
+* The offer of assistance in applying for an SSN.
+
+Do not include the non-enumerated individual in the AU.
+
+If at application, approve the application for the other AU members.
+Issue a notice to the AU.
+Include the following information in the notice:
+
+* The reason for the action
+* The eligibility and benefit level of the remaining AU members
+* The action the individual must take in order to be added to the AU.
+
+| the AU member is currently receiving benefits
+
+*AND*
+
+good cause for non-compliance no longer exists
+a|
+Document the reason good cause no longer exists.
+
+Issue timely notice to the AU.
+The notice must include the following information:
+
+* The reason for the action
+* The eligibility and benefit level of the remaining AU members
+* The action the individual must take to be added to the AU.
+
+Remove the non-enumerated individual from the AU effective the month following the month timely notice expires.
+|===

@@ -1,0 +1,122 @@
+= 3720 Reporting Requirements
+:chapter-number: 3700
+:effective-date: October 2024
+:mt: MT-79
+:policy-number: 3720
+:policy-title: Reporting Requirements
+:previous-mt-number: MT-75
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+All Supplemental Nutrition Assistance Program (SNAP) assistance units (AUs) have a requirement to report changes in household circumstances during the certification period.
+
+Simplified Reporting Requirements (SRR) apply to all AUs.
+SRR AUs are *required* to report the following changes:
+
+* When total monthly gross income exceeds 130% of the FPL for the AU's size;
+
+* When an ABAWD's work hours fall below 20 hours per week or 80 hours averaged monthly;
+
+* When an AU or an AU member wins substantial winnings from lottery winnings, gambling winnings, prizes, awards and/or windfalls.
+
+== Basic Considerations
+
+Simplified Reporting Requirements are determined and discussed with the AU at initial application and recertification (renewal).
+The xref:attachment$form-339.pdf[Form 339 Simplified Reporting Requirement (SRR)], may be provided to the AU at initial application and recertification.
+
+An interim change occurs when the AU has a change in circumstances that has occurred after the application or recertification (renewal) interview or during the certification period.
+
+A SNAP applicant is required to report anticipated changes related to its SNAP benefits at the application or recertification (renewal) interview.
+Changes meeting a simplified reporting requirement that occur after the certification interview but before the date of the notice of eligibility must be reported no later than 10 calendar days of the date of the notice of eligibility.
+
+=== Change Report Form
+
+Changes may be reported in any of the following ways:
+
+* In person
+* By telephone
+* By mail
+* By computer match or update
+* By fax
+* Through the Gateway system
+
+The xref:attachment$form-846.pdf[Form 846 Change Report Form], may be provided to the AU at the following times:
+
+* At application certification
+* At recertification (renewal)
+* At periodic reporting, if requested by the AU
+* If the AU requests or needs a form
+* When the AU returns a completed form to report a change.
+
+=== Simplified Reporting Requirements (SRR)
+
+Simplified Reporting changes must be reported no later than the 10th calendar day from the end of the month in which the increase or change occurred.
+
+SRR AUs must report when an AU member receives substantial winnings from lottery winnings, gambling winnings, prizes, awards and/or windfalls.
+This is a cash prize won in a single game.
+If the AU receives substantial winnings from lottery winnings, gambling winnings, prizes, awards and/or windfalls, with a gross amount of $4500 or more (before taxes or other amounts are withheld), the AU must report these winnings no later than 10 calendar days of the end of the month in which the household receives the winnings.
+
+=== SRR Reported Changes
+
+When an AU reports income changes that exceed 130% of the FPL for the AU's size, the agency must reestablish the AU's eligibility.
+Prior to terminating benefits, verify the termination is due to an increase in ongoing income and not due to an additional payment of income, such as a 3^rd^ or 5^th^ payment.
+
+=== ABAWD SRR Reported Changes
+
+ABAWDs must also report changes in work hours that fall below 20 hours per week, averaged 80 hours monthly.
+xref:3355.adoc[].
+If an SRR AU reports a change in work hours below 20 hours per week, averaged 80 hours monthly, refer the individual to the eligibility worker to reassess the individual's work status.
+
+=== Periodic Reporting
+
+Periodic reporting is required for households that are certified for longer than 6 months.
+Periodic reporting is currently waived for Senior SNAP households, unless the household becomes ineligible for Senior SNAP, but remains eligible for SNAP during their 36-month certification period.
+See xref:3730.adoc[] policy.
+
+=== Agency Required Action on Reported Changes
+
+The agency is required to act on specific changes as identified below:
+
+* All address changes and any potential shelter cost changes reported by the AU to the agency.
+* All changes reported by the AU to the eligibility worker for the purpose of updating the SNAP case.
+* Changes reported by the AU at periodic report.
+* Changes processed in the TANF and Medicaid Programs that automatically update the SNAP case.
+* Changes reported by the Social Services Program to the eligibility worker.
+* Changes reported by the AU or the Georgia Lottery Corporation that the AU or an AU member has won substantial winnings from lottery winnings, gambling winnings, prizes, awards and/or windfalls in the amount of $4500 or more.
+* An AU member is identified as a fleeing felon or probation or parole violator.
+* Information received through Interfaces and data matches from Social Security (SDX, BENDEX) and the related Gateway Alerts.
+* ABAWD Reports and the related Gateway Alerts.
+* Gateway Alerts that a child in the AU has turned age 18.
+
+These changes require that an action is completed when reported or received by the agency.
+To complete these changes, contact with the AU may be required to ensure that all points of eligibility are addressed and updated appropriately.
+A change reported in the TANF and Medicaid programs must be acted on appropriately.
+
+=== Agency Required Action on Reports and Notifications
+
+The agency will act on the following reports and notifications of possible changes in AU circumstances at initial application and recertification (renewal):
+
+* Newborn Reports
+* Prisoner Matches
+* W-4 Wages Matches, New Hires Matches, and related Alerts
+* Child Care Updates
+* DOL Report of UCB and related Gateway Alerts
+* IEVS
+
+Although an AU's circumstances may change, the AU's reporting requirement is determined at initial application or recertification (renewal), whichever comes first.
+
+=== Unclear Information
+
+During the certification period, the agency may receive questionable or unclear information about a household's circumstances that prevents the agency from determining ongoing eligibility.
+
+Unclear information is information that is not verified, or information that is verified but the agency needs additional information to act on the change.
+
+The agency must request clarification and verification (if applicable) of household circumstances for any unclear information that appears to present significantly conflicting information from the information that was used by the agency at the time of certification.
+
+If the agency receives information through Interfaces or data matches from the Social Security Administration (SSA), the agency must request verification.
+The verification checklist must clearly explain what information is needed from the household and the consequences of failing to respond to the notice.
+If there is no response to the request for information, terminate benefits and issue a notice of adverse action.
+
+If the unclear information does not meet the required reporting criteria for Simplified Reporting households and does not relate to data matches, then the agency shall not act on the information or require the household to provide verification until the next certification is due.

@@ -1,0 +1,274 @@
+= 3715 Interim Changes
+:chapter-number: 3700
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3715
+:policy-title: Interim Changes
+:previous-mt-number: MT-80
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 273.12
+
+== Requirements
+
+An interim change occurs when the Assistance Unit (AU) has a change in circumstances that occurs after the application or recertification interview or during the certification period.
+An AU is required to report changes based on the reporting requirement assigned to the AU.
+
+== Basic Considerations
+
+Simplified Reporting Requirements (SRR) apply to all Supplemental Nutrition Assistance Program (SNAP) AUs.
+
+Interim changes are effective no later than the second subsequent month following the month in which the change was reported to the agency.
+
+=== Reporting Changes at Application Prior to Certification
+
+A SNAP applicant is required to report anticipated changes related to his or her SNAP benefits at the initial application or recertification (renewal) interview.
+Changes meeting a simplified reporting requirement that occur after the certification interview but before the date of the notice of eligibility [.underline]*must* be reported no later than 10 calendar days from the date of the notice.
+
+=== SRR AU and Interim Changes
+
+Simplified Reporting AUs have 4-month, 6-month, 12-month, and 36-month certification periods.
+
+NOTE: Effective March 2, 2026, households will no longer be assigned 24-month certification periods.
+
+All changes may be reported, but the only changes [.underline]*required* to be reported are:
+
+* When the AU's monthly gross income exceeds 130% of the applicable federal poverty level for the AU's size;
+* When an ABAWD's work hours fall below 20 hours per week, 80 hours averaged monthly *or*
+* When an AU member wins substantial winnings from the lottery, gambling, prizes, awards and/or windfalls.
+
+The agency will process changes received or reported during the AU's SR certification period in the following situations:
+
+* All address changes and any potential shelter cost changes reported by the AU to the agency.
+* All changes reported by the AU to the eligibility specialist for the purpose of updating the SNAP case.
+* Changes reported by the AU at periodic report.
+* Changes processed in the TANF and Medicaid Programs that automatically update the SNAP case.
+* Changes reported by the Social Services Program to the eligibility specialist.
+* Changes reported by the AU or the Georgia Lottery Corporation that an AU member has won substantial winnings from lottery, gambling, prizes, awards, and/or windfalls in the amount of $4500 or more.
+* An AU member is identified as a fleeing felon, or probation or parole violator.
+* Information received through Interfaces and data matches with Social Security (SDX, BENDEX) and related Gateway Alerts.
+* ABAWD Reports and the related Gateway Alerts.
+* Gateway Alerts that a child in the AU has turned age 18.
+
+NOTE: Changes reported or received through alerts, report matches, and updates will be addressed and processed at application or recertification (renewal).
+
+=== Reporting of Medical Expenses
+
+The full non-reimbursed amount of any medical expenses is allowed during the current certification period if reported and verified by the AU during the certification period.
+If a reported change in medical expenses is considered verified upon receipt, process the change.
+Changes in medical expenses are not acted upon if learned from a source other than the AU.
+
+If medical expenses are reported at the next recertification (renewal), the full verified non-reimbursed amount is allowed in the new certification period.
+
+=== Reporting of Address and Shelter Changes
+
+If the AU reports an address change, the agency must inquire about any potential shelter cost changes that may occur because of the address change. Verification of the change in shelter costs must be requested.
+If the AU fails to provide the shelter verification but [.underline]*does* have an existing deduction, then the shelter deduction is removed, and benefits are recalculated without the deduction.
+
+If the AU fails to provide shelter verification but [.underline]*does not* have an existing deduction, then no further action is required by the agency.
+
+=== Acting on Changes
+
+The following actions are taken when a change is reported:
+
+* The contact is recorded in the case notes in Gateway
+* Verification is requested when required
+* The AU is provided with another Change Report Form to report future changes, if a completed form is used to report the change
+* Action is taken on the case
+* Notification is sent to the AU
+
+=== Increase in Benefit Changes
+
+If a reported change results in an increase in benefits, the change is made effective no later than the first allotment issued 10 days after the date the change was reported.
+
+*Example 1: A $30 decrease in income reported on May 1 increases the household's May allotment*.
+The decrease in income is reported on May 1st. 10 days after the reported change is May 11^th^.
+If the change is reported and verified on May 11^th^ and the first allotment for the AU is available between May 11^th^ and May 23^rd^, then the household's May allotment would increase because of this change.
+
+*Example 2: A $30 decrease in income reported on May 13^th^ increases the household's May allotment and would increase the household's June allotment*.
+The decrease in income is reported on May 13^th^. 10 days after the reported change is May 23rd.
+If the change is reported and verified by May 23^rd^, and the first allotment for the AU is available on May 23^rd^, then the household's May allotment would increase because of this change.
+
+Refer to xref:3810.adoc[], for policy on the issuance dates for SNAP households.
+
+If a change is reported *after the 20*^th^ of the month and results in an increase in benefits, the change is made effective the next month.
+
+*Example 3*: A $30 decrease in income reported on the 21st of May would increase the household's June allotment.
+
+A change reported during the last 10 calendar days of the month, which results in an increase in benefits, may be made effective the next month, but no later than the second subsequent month following the month the change is reported.
+
+*Example*: A $30 decrease in income reported on May 28^th^ would increase the AU's June allotment.
+However, the AU's allotment would have to increase *no later than July*.
+
+NOTE: If the agency fails to act timely, a supplement is issued to the AU.
+
+=== Expedited Changes
+
+An expedited change occurs when an additional AU member (who is not a member of another certified AU) or a decrease in monthly gross income of $50.00 or more is reported by the AU.
+These reported changes must be made no later than the month following the month the change is reported.
+
+If the change is reported late in the month and verification cannot be obtained until the following month, issue a supplemental benefit when the verification is received to ensure that the increase in benefits occurs in the month following the month the change is reported.
+
+*Example*: A household reporting a $100 decrease in income at any time during May would have its June allotment increased.
+If the household reported the change after the 20^th^ of May and it was too late for the AU to receive the increase in its regular benefit cycle, normally issued on June 1, issue a supplement for the amount of the increase by June 10.
+
+=== Providing Verification for Increase in Benefits
+
+The AU has 10 calendar days from the date verification is requested to provide any required verification.
+The agency has the same 10-day period to verify and to act on the reported change.
+If verification is not provided during the 10-day period but is provided at a later date during the month, the agency has 10 days from the date verification is provided to act on the change.
+
+If the verification is provided timely and the change would result in an increase in benefits, the change in the benefit level must be effective no later than the second subsequent month following the month the change was reported.
+
+NOTE: The exception to this policy is Expedited Changes.
+
+For some changes, failure by the AU to provide verification within 10 days results in the termination of benefits.
+Allow timely notice, which is 14 days.
+If verification is provided prior to the effective date of the closure, reinstate the case within 10 days from the date the verification is provided.
+
+For reported changes that would result in an increase in benefits and are an allowable deduction (other than shelter or child support), and the verification is provided within the 10 days, the change is effective no later than the second subsequent month following the month the change was reported.
+
+If the AU fails to provide verification within the 10 days, leave the benefits at the original amount prior to the reported change.
+
+If the change is for a shelter or child support deduction and would result in an increase in benefits, and the verification is provided within 10 days, make the change effective no later than the second subsequent month following the month the change was reported.
+
+If the AU fails to provide verification within 10 days, remove the shelter or child support deduction, allowing timely notice, which is 14 days.
+If verification is provided prior to the effective date of the change, make the change in the new shelter or child support deduction within 10 days from the date the verification is provided.
+
+=== Decreases and Ineligibility
+
+If the reported change results in a decrease in benefits or ineligibility, an adverse action will result.
+A timely notice of the adverse action is issued to the AU within 10 calendar days from the day the change is reported.
+
+Some adverse actions do not require timely notice.
+Refer to xref:3705.adoc[], for the exceptions in providing timely notice.
+
+When timely notice is required, the adverse action is effective no later than the month following the month in which the change occurs, and the timely notice period expires.
+If adequate notice is required, the adverse action is effective no later than the month following the month in which the change is reported.
+
+If the amount of income has changed by more than $50 or if the information is incomplete, inaccurate, inconsistent, or outdated,
+verification from a third-party source is required.
+If a change in income will result in termination or denial of benefits,
+verification from a third-party source is required.
+
+Allow timely notice so that the change is effective no later than the second subsequent month following the month the change was reported.
+
+=== Concurrent Changes
+
+When more than one change is reported at the same time, the final effect of the change must be determined in order to know how to process the change.
+If the combined changes result in an increase in benefits, follow the guidelines for changes resulting in increases.
+
+If the combined changes result in a decrease or termination of benefits, follow the guidelines for changes resulting in decreases or ineligibility.
+
+If verification is required due to an increase in benefits, give the AU 10 calendar days to verify.
+Make all changes simultaneously.
+
+=== Changes in Primary Individual of the AU
+
+A change in the primary individual of the AU (due to death) does not require a new application.
+The AU may select a new primary individual of the AU, or the county may assist the AU with designating one.
+
+Contact the AU to select a new primary individual of the AU.
+If the AU fails to select a primary individual of the AU, do not terminate the case.
+The county should designate a new primary individual of the AU.
+A new application is not required.
+
+NOTE: The primary individual designation is located on the Primary Individual page in Data Collection.
+This page has a table providing the primary individual information. When changing a primary individual on a case, the new primary individual must be a member of the applicant group and must meet any age requirements established by policy.
+The record of the current primary individual must be end-dated first, and then the new primary individual is added.
+Do not prorate or allow a break in benefits.
+
+If the head of the AU moves, remove the other AU members and have them reapply.
+If the head of the new AU had an existing case, assign the previous case number or a new case number, if applicable. Gateway will assign the appropriate certification period.
+
+If an AU fails to report a required change timely, refer the case to the Office of Inspector General (OIG) to determine if overpayments exist.
+
+=== Untimely Reporting of Changes
+
+Simplified Reporting (SR) AUs must report when their monthly gross income exceeds 130% of the applicable federal poverty level (FPL) for the AU's size, no later than 10 calendar days from the end of the month in which the increase or change occurred.
+Failure to report the change within 10 calendar days, results in untimely reporting and possible AU-caused overpayments.
+
+Prior to closing the case, make sure the monthly gross income exceeds the appropriate 130% FPL for the AU size ongoing.
+For example, if the AU's income exceeded the 130% FPL due solely to five paychecks instead of the usual four, do not close the case for the ongoing month.
+
+=== Overpayments in SRR Cases
+
+An overpayment is not created for changes that the AU is not required to report.
+This rule applies to all SRR AUs.
+
+Failure of the agency to take timely action on a reported change may result in agency error overpayments or underpayments.
+
+=== Mass Changes
+
+Mass changes affect all or a large number of AUs receiving benefits.
+These changes include the following:
+
+* adjustments to income limits
+* adjustments to the standards/shelter/dependent care deductions
+* adjustments to the benefit limits
+* cost of living adjustments (COLA) to RSDI, SSI, and other benefits
+* other changes based on legislative or regulatory changes
+
+Mass changes are generally automatically processed by Gateway.
+Cases affected by a mass change but not updated by Gateway may require worker-initiated changes in the case.
+Usually, a system-generated list of cases is provided so that the cases are identified, and the appropriate actions are taken.
+Adequate notice is required for mass changes.
+
+=== Changes Reported in Gateway
+
+Some changes, such as Prisoner Matches and Death Matches, are reported by Gateway alerts to the worker.
+Clearinghouse and IVES may be used to obtain data or verify that there has been a change in circumstances.
+Computerized updates of TANF and Child Support Services (CSS) income changes are completed on a monthly basis.
+Refer to xref:3500.adoc[] for more policy on computerized updates.
+
+=== Deadline for Changes
+
+Changes are made until the last processing cycle of the month to affect the following month's benefits and eligibility, unless timely notice is required.
+
+=== Change of Address/Unable to Locate
+
+A change of address is not a reporting requirement for SRR AUs.
+Process any address changes reported by SRR AUs and changes in shelter costs only if reported by the AU.
+
+=== Reported Changes at Renewal, After the Interview, but Before Finalization
+
+An AU is allowed 10 calendar days to provide verification for interim changes reported while a recertification/renewal is pending.
+Make the change effective in the first month of the new certification period.
+
+=== Unclear Information
+
+During the certification period, the agency may receive questionable or unclear information about a household's circumstances that prevents the agency from determining ongoing eligibility.
+Unclear information is information that presents discrepancies, is not verified, or information that is verified, but the agency needs additional information to act on the change.
+
+The agency must request clarification and verification (if applicable) of the household circumstances for any unclear information that appears to present significantly conflicting information from the information that was used by the agency at the time of certification.
+
+If the agency receives information through Interfaces or data matches from the Social Security Administration (SSA), the agency must request verification.
+The verification checklist must clearly explain what information is needed from the household and the consequences of failing to respond to the notice.
+If there is no response to the request for information, terminate benefits and issue a notice of adverse action.
+
+If the unclear information does not meet the required reporting criteria for Simplified Reporting households and does not relate to data matches, then the agency shall not act on the information or require the household to provide verification until the next certification is due.
+
+== Procedures
+
+Follow the steps below to process changes:
+
+[horizontal,labelwidth=10]
+*Step 1:* Document the contact and reported change.
+
+*Step 2:* Identify the type of change.
+Assess all points of eligibility that may be affected by the reported change, including work registration status.
+
+*Step 3:* Determine if the change is reported timely or untimely.
+
+*Step 4:* Determine if verification is required, and request verification appropriately.
+Offer to assist the AU in obtaining verification.
+Allow the AU 10 calendar days to submit verification.
+
+*Step 5:* Take the appropriate case actions.
+
+**Step 6: **Provide the client with timely or adequate notice of the change.
+
+*Step 7:* Inform the client of the SR requirements and provide the Gateway website https://gateway.ga.gov to report future changes.

@@ -1,0 +1,268 @@
+= 3125 Disaster Supplemental Nutrition Assistance Program (DSNAP)
+:chapter-number: 3100
+:effective-date: October 2025
+:mt: MT-84
+:policy-number: 3125
+:policy-title: Disaster Supplemental Nutrition Assistance Program (DSNAP)
+:previous-mt-number: MT-81
+
+include::partial$policy-header.adoc[]
+
+== Program Overview
+
+The Disaster Supplemental Nutrition Assistance Program (DSNAP) is an emergency assistance program, authorized in the Food and Nutrition Act of 2008 (formerly the Food Stamp Act of 1977) as amended, and the Robert T. Stafford Disaster Relief and Emergency Assistance Act of 1988.
+
+DSNAP provides temporary food assistance to households affected by a natural disaster. DSNAP provides a one-time payment for one month of benefits to eligible disaster households who may not normally qualify for regular SNAP and can facilitate the issuance of disaster supplemental benefits for ongoing households.
+
+DSNAP will not be the appropriate response for every disaster, and it should not be assumed that DSNAP will operate after every disaster. Before the State can apply to operate DSNAP, certain presidential declarations and additional criteria, beyond just a state of emergency, are required.
+
+
+== Basic Considerations
+To be eligible for DSNAP benefits, a household must have lived or worked in the designated area at the time of the disaster, been affected by the disaster, and meet certain DSNAP eligibility criteria.
+
+The requirement of having lived or worked in the designated area may vary with each DSNAP operation. When a DSNAP is authorized, leadership will communicate to staff which criteria are included.
+
+NOTE: The details of any DSNAP will vary with each disaster, but the basic policies will apply to any disaster situation
+
+== Benefit Period
+The benefit period is the start date used to determine household composition. Only income, resources, and disaster-related expenses received or paid during the benefit period are considered when determining DSNAP eligibility.
+
+The benefit period begins on the date of the disaster or the date of any mandatory evacuation preceding the disaster. The dates of the benefit period will be provided by leadership upon authorization of a DSNAP operation.
+
+== Eligibility Criteria
+Certain eligibility criteria must be met for a household to be eligible for DSNAP benefits. In addition to having lived or worked in the identified disaster area, the AU must have purchased or plan to purchase food and experienced at least one adverse effect due to the disaster [.underline]#during the benefit period#. An adverse effect includes the loss of income, inaccessible liquid resources, and disaster-related expenses.
+
+Examples of adverse effects include:
+
+* Lost or inaccessible income, which includes the reduction or termination of income or a delay in receipt of income [.underline]#during the benefit period#
+* Lack of access to liquid resources [.underline]#during the benefit period#
+
+* Non-reimbursable disaster-related expenses paid or expected to be paid [.underline]#during the benefit period#. Eligible expenses may include the following, plus any reasonable disaster-related expenses:
+** Home repairs (or business repairs when applicable)
+** Home property protection (or business property protection when applicable)
+** Temporary shelter expenses
+** Evacuation expenses
+** Medical expenses due to injury
+** Emergency supplies or equipment such as a generator for power or fuel for the primary heating source
+
+This is not an all-inclusive list.
+
+The following eligibility criteria *DO* apply to the DSNAP eligibility process:
+
+* Identity
+* Household Composition
+* Georgia Residency
+* Income and Resources
+
+The following eligibility criteria *DO NOT* apply to the DSNAP eligibility process:
+
+* Citizenship/Alien Status
+* Enumeration
+* Student Status
+* Work Requirements
+* IPV Disqualifications
+
+Household composition is established as of the date the disaster occurred. Household composition consists of those people living together and purchasing and preparing food together at the time of the disaster.
+
+A household may be eligible if the AU was living in the disaster area at the time of the disaster, even though it is temporarily living outside the disaster area.
+
+Exclude the following individuals from the household composition:
+
+* People the AU is/was temporarily living with due to the disaster
+* People who were in the household at the time of the disaster but died before the interview date
+* Newborns born [.underline]#after# the disaster occurred
+
+
+[#_income_and_resources]
+=== Income and Resources
+
+The income limits for DSNAP are higher than the limits for regular SNAP and are adjusted annually. The current limits will be provided when DSNAP operations are initiated.
+
+Resources are determined based on the first day of the benefit period.  Any resources received during the remainder of the benefit period should be counted as income. The following steps should be completed to determine eligibility based on income and resources.
+
+[arabic]
+. Determine the AU’s amount of *net income* to be received (or expected to be received) [.underline]#during the benefit period#. We accept the client’s statement for the net income, which is income _after_ any taxes, insurance, or other withholdings. Income is NOT converted when determining DSNAP eligibility.
+
+NOTE: Staff must check accessible interfaces to determine if there are any discrepancies in the client’s statement. The interfaces aren’t used to verify income but can show any discrepancies in the client's statement. *Although we use [.underline]#net pay# for DSNAP*, the interfaces can provide the worker with a general amount of income and help guide the interview.
+
+[arabic,start=2]
+. Determine the AU’s amount of accessible liquid resources [.underline]#during the benefit period#.
+
+. Add the net income from Step 1 to the accessible liquid resources from Step 2.
+
+. Subtract all non-reimbursable disaster-related expenses paid or expected to be paid [.underline]#during the benefit period#
+
+. Compare the AU’s remaining adjusted income to the DSNAP income limit for the AU size. The AU’s income must be less than or equal to the DSNAP income limit for the AU size to be eligible.
+
+
+
+image::figure-3125-1.png[title= The household's take-home income received (or expected to be received) during the benefit period plus its accessible liquid resources minus disaster-related expenses (unreimbursed disaster-related expenses paid or anticipated to be paid out of pocket during the disaster benefit period) shall not exceed the Disaster Gross Income Limit.,align="center"]
+
+
+=== Dual Participation
+Individuals _receiving_ regular SNAP benefits are *NOT eligible* to receive DSNAP benefits in the same month. If an applicant has a _pending application_ for regular SNAP, they must decide if they wish to withdraw the application for regular benefits and have an application processed under DSNAP or continue with the regular SNAP application.
+
+== Filing an Application
+The eligibility process includes submitting a completed pre-registration, being interviewed, having certain information verified, and processing information in the eligibility system within the required standard of promptness (SOP).
+
+NOTE: A pre-registration is considered complete when it includes the applicant’s name, and address, is signed by a responsible household member or authorized representative, and is received by the agency.
+
+Anyone may apply for DSNAP benefits including the following individuals:
+
+* Head of the AU
+* Other responsible adult AU members
+* Authorized representative (Refer to xref:3120.adoc[])
+* Authorized representatives for residents of drug and alcohol treatment centers (Refer to xref:3120.adoc[])
+
+If an authorized representative applies on behalf of a customer, the pre-registration must be signed by either a responsible member of the household or the household’s authorized representative.
+
+=== Pre-Registration
+Pre-registrations are only accepted when the State has been approved by FNS to operate DSNAP. Households must pre-register to be considered for DSNAP benefits.
+
+Households may pre-register online using the DSNAP portal, submitting a paper form (Form 854, DSNAP Application for Benefits) , or telephonically when approved in the State’s DSNAP waiver. When DSNAP is authorized, a link will become available on the Gateway Customer Portal Home page where customers can pre-register for the program.
+
+Customer portal and paper submissions are considered pre-registrations. A pre-registration is [.underline]#not# considered an application until an interview is conducted. *The application date is the date of the interview.*
+
+Applications for DSNAP benefits can only be processed during the authorized DSNAP period.
+
+=== Interviewing Requirements
+
+*An interview is required for all DSNAP pre-registrations.* The interview can be a telephone or face-to-face interview and should be conducted with the applicant before making an eligibility determination (i.e. approval or denial). The type of interview conducted, and the results of the interview must be documented in the eligibility system.
+
+NOTE: The agency does not schedule DSNAP appointments for interviews. It is the household’s responsibility to contact the agency to ensure an interview is conducted during the authorized DSNAP period.
+
+If the customer pre-registers but fails to complete an interview during the authorized DSNAP period, it is not considered an application, and the AU loses its opportunity to participate in DSNAP.
+
+*Who Must Be Interviewed:*
+
+* Head of Household
+* Other responsible adult AU members
+* Authorized representative (Refer to  xref:3120.adoc[])
+
+
+*What the Interview Must Include:*
+
+Provide or explain the following information to the applicant during the interview:
+
+* The information and/or verification required to establish eligibility and the applicant’s responsibility to provide the information necessary to establish eligibility, including:
+
+** the budgeting method
+**  basic eligibility requirements, such as, the income limit, resources, deductions, and adverse effects
+
+* Clearinghouse and other computer matches (the worker must check any accessible interfaces to determine if there are any discrepancies with the client’s statement)
+* The issuance procedures of the Electronic Benefit Transfer (EBT)
+* The appropriate use and limitations of DSNAP benefits
+* The applicant’s right to the following:
+** a supervisory review
+** a fair hearing
+** prompt action within the standard of promptness (SOP)
+** confidentiality
+** non-discrimination in the processing of the application
+
+The interviewer must not simply review the information that appears on the pre-registration but must explore and resolve all unclear and incomplete information with the AU.
+
+NOTE: Only supervisors or higher may interview and process DFCS employees' applications.
+
+
+== Verification
+The verification requirements for DSNAP are eased with the understanding that households may not have access to the usual verification sources. However, the identity of the person making the application and the authorized representative (if applicable) must be verified by a third-party source.
+
+Identity may be verified by:
+
+* photo ID
+* two documents that verify identity and residency
+* a signed statement from a reliable collateral contact attesting to the applicant’s identity
+
+If none of the above is available, oral verification from a reliable collateral contact is sufficient as a *last resort*.
+
+The client’s statement is accepted for household composition.
+
+Third-party verification is preferred for proof of Georgia residency, but not required. The client’s statement is accepted unless it is questionable.
+
+Third-party verification is preferred for loss or inaccessibility of income and liquid resources, but not required. The client’s statement is acceptable.
+
+The client’s statement is accepted for food loss unless it is questionable.
+
+
+[#_standard_of_promptness_sop]
+== Standard of Promptness (SOP)
+DSNAP applications must be processed no later than three (3) calendar days from the date the application is filed. The application date is the date the applicant is interviewed.
+
+If any of the AU’s circumstances are inconsistent or questionable, the eligibility staff must refer the case to an Office of Inspector General (OIG) staff member or a supervisor or higher for review.  When applications are referred for potential fraud, the SOP is extended for up to 7 calendar days from the date of application. Delayed issuances should only occur in questionable cases.
+
+[#_issuance]
+== Issuance
+DSNAP benefits will be issued through the State’s EBT system. If the applicant already has an EBT card, issued in their name, benefits will be made available on that same card. If the applicant does not have an EBT card, a DSNAP card will be issued upon approval at the DSNAP location or may be mailed to the applicant upon request.
+
+[#_allotments]
+== Allotments
+DSNAP provides a full month’s allotment to households who may not normally qualify for regular SNAP. If eligible for DSNAP, the allotment for a household is equal to the maximum monthly allotment for the household size provided under regular SNAP. *DSNAP benefits are not prorated.*
+
+The following chart provides the disaster income limits and maximum allotment amounts for October 1, 2025 – September 30, 2026.
+
+[%header,cols="3*^"]
+|===
+|Household Size
+|DSNAP Monthly Gross Income Limit
+|Maximum Monthly Allotment
+
+|1
+|$2258
+|$298
+
+|2
+|$2716
+|$546
+
+|3
+|$3174
+|$785
+
+|4
+|$3647
+|$994
+
+|5
+|$4143
+|$1183
+
+|6
+|$4639
+|$1421
+
+|7
+|$5098
+|$1571
+
+|8
+|$5556
+|$1789
+
+|Each Additional Member
+|+459
+|+$218
+|===
+
+
+
+
+== Notification
+The AU will be notified orally and in writing of the disposition of the application via a system generated notice. However, if the client is denied then the DSNAP worksheet notice must be provided to the customer on the same day of the interview *if* conducted in person.
+
+
+
+== Fair Hearings
+If an AU requests a fair hearing, an immediate supervisory review of the case must be conducted and documented in case notes. However, the supervisory review does not replace the fair hearing. The normal fair hearing procedures that apply for regular SNAP should be followed with DSNAP as well.  Please refer to xref:appendix-b-hearings-toc.adoc[Fair Hearings] for more information.
+
+Who may request a fair hearing:
+
+* Households who applied and were interviewed for DSNAP benefits but were denied
+* Households that dispute the household size used in calculating their benefit amount
+* Households who may have completed an on-site supervisory review and were not satisfied with the outcome of the review
+
+Who may not request:
+
+* Households who did not pre-register for DSNAP benefits or who did not complete an interview during the authorized DSNAP period
+
+Households who want to withdraw their fair hearing request must do so in writing.
+

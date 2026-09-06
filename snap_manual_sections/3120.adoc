@@ -1,0 +1,98 @@
+= 3120 Authorized Representative
+:chapter-number: 3100
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: 3120
+:policy-title: Authorized Representative
+:previous-mt-number: MT-55
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+A Supplemental Nutrition Assistance Program (SNAP) assistance unit (AU) may designate someone as the authorized representative to act on behalf of the AU.
+
+== Basic Considerations
+
+An authorized representative may be one of the following:
+
+* an adult (age 18 and older), non-AU member who is sufficiently aware of relevant AU circumstances and has been designated, in writing, by the head of household, spouse, or another responsible member of the AU,
+
+* the only adult AU member who is IPV disqualified, when the agency has determined that there is no one else available to serve,
+
+* an employee of a private, non-profit organization or institution or publicly operated community mental health center administering a drug addiction or alcohol treatment and rehabilitation center,
+
+* an employee of a publicly operated community mental health center,
+
+* an employee of a public or private non-profit group living arrangement certified for no more than 16 residents who are disabled or blind.
+
+The following individuals may not serve as authorized representatives without written approval of the county director:
+
+* an employee of DFCS involved in the certification of SNAP benefits,
+
+* an individual involved with the issuance of SNAP benefits,
+
+* a retailer who accepts SNAP benefits,
+
+* DFCS social services staff, if it is determined the individual they are working with is unable to act on his own,
+
+* a homeless meal provider for a homeless A/R.
+
+NOTE: Approval is given only when it is determined no one else is available to serve as the authorized representative.
+
+Authorized representatives may be designated to do all or one of the following:
+
+* file application for the AU
+* attend the interview for the AU
+* purchase food with the SNAP benefits on a regular or emergency basis
+* carry out responsibilities during the certification period such as reporting changes.
+
+Applications for residents of drug and alcohol treatment centers must be approved through an authorized representative.
+Refer to xref:3220.adoc[].
+
+Designate in writing an individual who meets the criteria to act as an authorized representative.
+In writing means the following:
+
+* documentation of the AU's statement on the interview guide during the interview.
+* a release form signed by the AU authorizing someone to act on behalf of the AU.
+* a written statement from the AU naming someone as an authorized representative.
+
+Explain the following policies to the AU:
+
+* the AU should prepare and review the information provided for the application even though the authorized representative will be interviewed.
+* The AU will be liable for any overpayment which results from erroneous information given by the authorized representative.
+
+=== Disqualification of an Authorized Representative
+
+An individual who serves as an authorized representative and has improperly used SNAP benefits or knowingly provided false information to the agency is disqualified as an authorized representative for one year.
+
+[caption=Exception]
+NOTE: Drug and alcohol treatment centers which act on behalf of their residents cannot be disqualified.
+Refer to xref:3220.adoc[].
+
+Notify the AU and the authorized representative in writing 30 days prior to the date of disqualification, providing the following information:
+
+* Proposed action,
+* Reason for the action,
+* Right to a hearing,
+* Telephone number of the agency,
+* Name of the person to contact.
+
+The AU may appeal the disqualification.
+The authorized representative may not appeal the disqualification.
+If an individual acts on behalf of more than one AU, each AU has the right to appeal the disqualification.
+
+If employers, such as those who employ migrant or seasonal farm workers, are designated as authorized representatives for 5 or more assistance units, the agency may take additional steps to ensure that the following objectives are met:
+
+* AU has freely requested assistance from the authorized representative,
+* AU's circumstances are correctly represented,
+* AU is receiving the correct amount of benefits,
+* Authorized representative is properly using the benefits.
+
+=== Documentation
+
+The name and address of the authorized representative must be recorded in the AU's case file.
+
+=== Verification
+
+An authorized representative is required to verify his/her identity when applying for an applicant/recipient's SNAP benefits.

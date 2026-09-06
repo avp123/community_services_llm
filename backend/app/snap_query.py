@@ -97,17 +97,20 @@ HELPFUL TIPS — after SOURCE_FACTS, add 1-3 tips the person might not know:
 - Benefits or deductions they may qualify for (expedited SNAP, categorical eligibility, utility allowances)
 - Documents to gather before applying
 - Common misconceptions to correct
+Never include a citation number like [1] in a tip — write it as a plain, self-contained sentence.
 
 FLAGS:
-FLAG[1]: <helpful tip in 1 plain sentence>
+FLAG[1]: <helpful tip in 1 plain sentence, no citation numbers>
 FLAG[2]: <another tip>
 
-FOLLOW-UP QUESTIONS — after FLAGS, ask 1-3 specific questions that would help determine eligibility more precisely.
-Only ask questions not already answered in this conversation. Explain why each matters in plain language.
-Skip this block entirely if all relevant info has already been provided.
+FOLLOW-UP QUESTIONS — after FLAGS, ask exactly 2-3 short questions that would most help figure out if they
+qualify. Only ask questions not already answered in this conversation. Each question must be answerable in
+one short sentence (a number, a yes/no, or a couple words) — never a multi-part question. The reason must be
+under 12 words and contain no citation numbers. Skip this block entirely if all relevant info has already
+been provided.
 
 QUESTIONS:
-QUESTION[1]: <short plain-English question> | <1-sentence plain reason why this matters>
+QUESTION[1]: <short plain-English question, answerable in one sentence> | <under-12-word plain reason>
 QUESTION[2]: <another question> | <why>
 """
 
@@ -138,11 +141,22 @@ SYSTEM_PROMPT_EXPERT = (
 
 SYSTEM_PROMPT_SIMPLE = (
     "You are a friendly, knowledgeable guide helping people navigate Georgia SNAP (food assistance) benefits.\n"
-    "Many users have never dealt with government benefits before and may not know where to start.\n\n"
+    "Many users have never dealt with government benefits before, may be reading this on a phone, and may not "
+    "read English as a first language or have much time or patience for a long answer.\n\n"
+    "WRITE AT A 5TH-6TH GRADE READING LEVEL:\n"
+    "- One idea per sentence. Average sentence length under 15 words.\n"
+    "- No legal or bureaucratic words (e.g. do not say 'household composition' — say 'the people you live with "
+    "and buy food with'). If a specific official term is unavoidable (like 'SNAP' or a form name), say it in "
+    "plain words first, then give the official term in parentheses the first time.\n"
+    "- No nested conditionals in one sentence. Split 'if X and Y unless Z' into separate short sentences or a list.\n\n"
+    "ALWAYS START WITH A ONE-SENTENCE BOTTOM LINE — the direct answer to their question, bolded, before any "
+    "explanation. Examples: '**Yes, you can likely get SNAP.**' or '**You'll need to send in two documents.**' "
+    "If the honest answer is 'it depends,' say what it depends on in that same first sentence.\n\n"
     "Your goals:\n"
     "- Actually help them, not just recite rules. If there's something they can do, tell them.\n"
-    "- Use plain, everyday language. No jargon. Spell out acronyms the first time.\n"
     "- Be warm but concise. Short sentences. One idea at a time.\n"
+    "- When a question involves more than one step (applying, gathering documents, appealing, etc.), give the "
+    "steps as a numbered list in the order to do them, not as a paragraph.\n"
     "- Name specific forms, websites, or phone numbers when they're relevant — don't be vague.\n"
     "- Bold the most important numbers, dates, and form names so they're easy to scan.\n"
     "- Do NOT add a 'Sources' section — citations are inline only.\n\n"
@@ -296,6 +310,7 @@ def _route_to_sections(question: str, q_vec: np.ndarray, cur,
             "SELECT section_number, section_title, LEFT(full_content, 300) FROM snap_sections ORDER BY section_number"
         )
         rows = cur.fetchall()
+        valid_ids = {n for n, t, b in rows}
         lines = ["{} | {} | {}".format(n, t, re.sub(r'\s+', ' ', (b or ''))[:200]) for n, t, b in rows]
         prompt = (
             "You are routing a Georgia SNAP policy question.\n\n"
@@ -309,7 +324,7 @@ def _route_to_sections(question: str, q_vec: np.ndarray, cur,
             model=CHAT_MODEL, messages=[{"role": "user", "content": prompt}], max_completion_tokens=20,
         )
         raw = resp.choices[0].message.content.strip()
-        return [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$|^Appendix[A-Z]$", s.strip())][:MAX_ROUTED_SECTIONS]
+        return [s.strip() for s in re.split(r"[\s,]+", raw) if s.strip() in valid_ids][:MAX_ROUTED_SECTIONS]
 
     # Stage A: cosine-sim top-k from rewritten query; union with top-k from original if different
     scores_rw = {sec: float(np.dot(q_vec, v)) for sec, v in _SECTION_VECTORS.items()}
@@ -348,7 +363,8 @@ def _route_to_sections(question: str, q_vec: np.ndarray, cur,
             model=CHAT_MODEL, messages=[{"role": "user", "content": prompt}], max_completion_tokens=20,
         )
         raw = resp.choices[0].message.content.strip()
-        selected = [s.strip() for s in re.split(r"[\s,]+", raw) if re.match(r"^\d+[a-z]?$|^Appendix[A-Z]$", s.strip())]
+        candidate_set = set(candidates)
+        selected = [s.strip() for s in re.split(r"[\s,]+", raw) if s.strip() in candidate_set]
         return selected[:MAX_ROUTED_SECTIONS] if selected else candidates[:MAX_ROUTED_SECTIONS]
     except Exception:
         return candidates[:MAX_ROUTED_SECTIONS]
@@ -710,6 +726,14 @@ def query_snap(
         usage_tokens = int(getattr(u, "total_tokens", 0) or 0)
 
     answer, key_facts, quotes, flags, questions = _parse_facts(raw)
+
+    if mode == "simple":
+        # Applicant mode never shows citation badges — strip any stray [N]
+        # markers the model left in tips/questions text.
+        flags = [re.sub(r"\[\d+\]", "", f).strip() for f in flags]
+        for q in questions:
+            q["question"] = re.sub(r"\[\d+\]", "", q["question"]).strip()
+            q["reason"] = re.sub(r"\[\d+\]", "", q["reason"]).strip()
 
     cited = {int(m) for m in re.findall(r"\[(\d+)\]", answer)}
     cited_sources = [s for s in sources if s["index"] in cited]

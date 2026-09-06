@@ -1,0 +1,66 @@
+= 3635 Budget for an AU with Ineligible Aliens or Ineligible ABAWDs
+:chapter-number: 3600
+:effective-date: December 2019
+:mt: MT-58
+:policy-number: 3635
+:policy-title: Budget for an AU with Ineligible Aliens or Ineligible ABAWDs
+:previous-mt-number: MT-33
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An alien who does not meet the alien status criteria, a non-applicant who does not apply or an ineligible ABAWD is not eligible to receive food stamp benefits.
+
+== Basic Considerations
+
+Exclude an ineligible alien, non-applicant or ineligible ABAWD from the AU count when determining resource limits, gross and net income limits and benefit levels.
+
+The resources of the ineligible alien, non-applicant or ineligible ABAWD are counted in their entirety toward the remaining AU members.
+
+NOTE: If the remaining AU members are categorically eligible due to receipt of TCOS services, SSI or TANF cash assistance, then the AU's resources are excluded.
+
+A pro rata share of the income of the ineligible alien, non-applicant or ineligible ABAWD's income is counted to determine the remaining AU members' eligibility for food stamps.
+
+If only the eligible aliens have income, do not prorate the income.
+An eligible AU member's income is not prorated to an ineligible alien.
+
+If expenses are paid by or billed only to the ineligible alien(s), non-applicant or ineligible ABAWD (s), then prorate the deductions.
+
+NOTE: The full amount of the H/C SUA or LSUA is always allowed, if appropriate.
+
+The standard deduction for the AU size is never prorated.
+
+Refer to Section 3320, Citizenship/Alien Status and Section 3355, Able-Bodied Adults Without Dependents (ABAWDs).
+
+== Procedures
+
+Follow the steps below to calculate the income and determine the benefit level of an AU that contains an ineligible alien, non-applicant or ABAWD:
+
+[horizontal,labelwidth=10]
+Step 1:: Subtract the income exclusions from the ineligible alien(s), non-applicant or ineligible ABAWD's gross income.
+
+Step 2:: Divide the remaining countable income equally among all of the AU members listed on the application or case including the ineligible alien(s), non-applicant, ineligible ABAWD, or other disqualified/sanctioned AU members.
+The result is the pro rata share of income per individual.
+
+Step 3:: Count all but the ineligible alien's, non-applicant or ineligible ABAWD's pro rata share as income for the remaining eligible AU members.
+
+Step 4:: Apply the 20% deduction to the prorated earned income that is counted for the remaining AU members.
+
+Step 5:: Allow the full standard deduction for the AU size.
+
+Step 6:: Divide the shelter, dependent care and child support expenses that represent the costs billed to or paid by the ineligible alien, non-applicant or ineligible ABAWD equally among the AU members, including the ineligible alien, non-applicant, ineligible ABAWD or other disqualified/sanctioned AU members.
+Do not prorate the H/C SUA or LSUA, if the AU is eligible for the deduction.
+The result is a prorate share of the deduction per individual.
+
+Step 7:: Count all but the ineligible alien's, non-applicant or ineligible ABAWD's pro rata share as a dependent care, child support or shelter deduction for the remaining eligible AU members.
++
+--
+NOTE: Do not allow the excess medical deduction if the ineligible alien or ineligible ABAWD is the only AU member eligible for the deduction.
+
+NOTE: Do not exceed the shelter/utility cap in the computation if the ineligible alien or ineligible ABAWD is the only AU member eligible for unlimited shelter/utility deductions.
+--
+
+Step 8:: Determine the benefit level without including the ineligible alien, non-applicant or ABAWD in the size of the AU.
+
+Step 9:: Document and update the case file with the appropriate information in the Gateway system.

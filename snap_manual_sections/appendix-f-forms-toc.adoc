@@ -1,0 +1,593 @@
+= Appendix F Forms Table of Contents
+:chapter-number: Appendix F
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: Appendix F
+:policy-title: Forms Table of Contents
+:previous-mt-number: MT-86
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+C.F.R. § N/A
+
+[.noheader,cols="1,5,1,2,3"]
+|===
+5+^s| SUPPLEMENTAL NUTRITION ASSISTANCE PROGRAM (SNAP) +
+TABLE OF CONTENTS +
+APPENDIX F FORMS
+5+a| *Voter Registration Information*
+
+[#voter-registration]
+* For a copy of the Voter Registration Application Form and information on how to apply to register to vote, visit: https://sos.ga.gov
+
+Also, refer to https://sos.ga.gov/sites/default/files/forms/GA_VR_APP_2019.pdf[Form #VRA-95]
+
+^s| FORM#
+^s| FORM TITLE
+^s| REV. DATE
+^s| ORDER INFO
+^s| ADDITIONAL LANGUAGES
+
+| https://sos.ga.gov/sites/default/files/forms/GA_VR_APP_2019.pdf[VRA-95]
+| Voter Registration Application Form
+|
+| GA Secretary of State https://sos.ga.gov
+|
+
+| xref:attachment$form-1.pdf[1]
+| OSAH Form 1 SNAP
+| 10/23
+| https://osah.ga.gov
+|
+
+| xref:attachment$form-47.pdf[47]
+| SNAP in Georgia
+| 10/24
+| PAMMS
+| xref:attachment$form-47-ar.pdf[Arabic],
+xref:attachment$form-47-bs.pdf[Bosnian],
+xref:attachment$form-47-my.pdf[Burmese],
+xref:attachment$form-47-zh.pdf[Chinese],
+xref:attachment$form-47-fa.pdf[Farsi],
+xref:attachment$form-47-fr.pdf[French],
+xref:attachment$form-47-gu.pdf[Gujarati],
+xref:attachment$form-47-hi.pdf[Hindi],
+xref:attachment$form-47-ja.pdf[Japanese],
+xref:attachment$form-47-ko.pdf[Korean],
+xref:attachment$form-47-ne.pdf[Nepali],
+xref:attachment$form-47-pt.pdf[Portuguese],
+xref:attachment$form-47-ru.pdf[Russian],
+xref:attachment$form-47-es.pdf[Spanish],
+xref:attachment$form-47-vi.pdf[Vietnamese]
+
+| xref:attachment$form-74.pdf[74]
+| SNAP Manual Budget Sheet
+| 07/25
+| PAMMS
+|
+
+| xref:attachment$form-104.pdf[104]
+| Statement of Child Care Expense
+| 04/05
+| PAMMS
+|
+
+| xref:attachment$form-126.pdf[126]
+| Self-Employment Work Calendar
+| 06/16
+| PAMMS
+| xref:attachment$form-126-es.pdf[Spanish]
+
+| xref:attachment$form-127.pdf[127]
+| Calendar Log
+| 11/07
+| PAMMS
+| xref:attachment$form-127-es.pdf[Spanish]
+
+| xref:attachment$form-139.pdf[139]
+| Contribution Statement
+| 12/24
+| PAMMS
+| xref:attachment$form-139-es.pdf[Spanish]
+
+| xref:attachment$form-173.pdf[173]
+| Verification Checklist
+| 06/10
+| PAMMS
+| xref:attachment$form-173-ar.pdf[Arabic],
+xref:attachment$form-173-bs.pdf[Bosnian],
+xref:attachment$form-173-my.pdf[Burmese],
+xref:attachment$form-173-zh.pdf[Chinese],
+xref:attachment$form-173-fa.pdf[Farsi],
+xref:attachment$form-173-fr.pdf[French],
+xref:attachment$form-173-gu.pdf[Gujarati],
+xref:attachment$form-173-hi.pdf[Hindi],
+xref:attachment$form-173-ja.pdf[Japanese],
+xref:attachment$form-173-ko.pdf[Korean],
+xref:attachment$form-173-ne.pdf[Nepali],
+xref:attachment$form-173-pt.pdf[Portuguese],
+xref:attachment$form-173-ru.pdf[Russian],
+xref:attachment$form-173-es.pdf[Spanish],
+xref:attachment$form-173-vi.pdf[Vietnamese]
+
+| xref:attachment$form-173a.pdf[173]
+| Appointment Letter
+| 06/16
+| PAMMS
+| xref:attachment$form-173-es.pdf[Spanish]
+
+| xref:attachment$form-240.pdf[240]
+| Transitional SNAP Fact Sheet Instructions
+| 07/25
+| PAMMS
+|
+
+| xref:attachment$form-296.pdf[296]
+| Expedited SNAP Screening Guide
+| 10/25
+| SO
+// | xref:attachment$form-296-es.pdf[Spanish]  ### Missing
+| Spanish
+
+| xref:attachment$form-297.pdf[297]
+a| Application for TANF, SNAP or Medical Assistance
+
+_For voter registration information, refer to the * at the top of the table or click_ <<voter-registration>>
+| 11/25
+| SO
+| xref:attachment$form-297-ar.pdf[Arabic],
+xref:attachment$form-297-bs.pdf[Bosnian],
+xref:attachment$form-297-my.pdf[Burmese],
+xref:attachment$form-297-zh.pdf[Chinese],
+xref:attachment$form-297-fa.pdf[Farsi],
+xref:attachment$form-297-fr.pdf[French],
+xref:attachment$form-297-gu.pdf[Gujarati],
+xref:attachment$form-297-hi.pdf[Hindi],
+xref:attachment$form-297-ja.pdf[Japanese],
+xref:attachment$form-297-ko.pdf[Korean],
+xref:attachment$form-297-ne.pdf[Nepali],
+xref:attachment$form-297-pt.pdf[Portuguese],
+xref:attachment$form-297-ru.pdf[Russian],
+xref:attachment$form-297-es.pdf[Spanish],
+xref:attachment$form-297-vi.pdf[Vietnamese]
+
+| xref:attachment$form-297a.pdf[297A]
+| Rights and Responsibilities
+| 11/25
+| SO
+| xref:attachment$form-297a-ar.pdf[Arabic],
+xref:attachment$form-297a-bs.pdf[Bosnian],
+xref:attachment$form-297a-my.pdf[Burmese],
+xref:attachment$form-297a-zh.pdf[Chinese],
+xref:attachment$form-297a-fa.pdf[Farsi],
+xref:attachment$form-297a-fr.pdf[French],
+xref:attachment$form-297a-gu.pdf[Gujarati],
+xref:attachment$form-297a-hi.pdf[Hindi],
+xref:attachment$form-297a-ja.pdf[Japanese],
+xref:attachment$form-297a-ko.pdf[Korean],
+xref:attachment$form-297a-ne.pdf[Nepali],
+xref:attachment$form-297a-pt.pdf[Portuguese],
+xref:attachment$form-297a-ru.pdf[Russian],
+xref:attachment$form-297a-es.pdf[Spanish],
+xref:attachment$form-297a-vi.pdf[Vietnamese]
+
+| xref:attachment$form-298.pdf[298]
+| Senior SNAP Application
+| 03/26
+| PAMMS
+| xref:attachment$form-298-es.pdf[Spanish]
+
+| xref:attachment$form-299.pdf[299]
+| Senior SNAP Project Brochure
+| 06/26
+| PAMMS
+| xref:attachment$form-299-es.pdf[Spanish]
+
+| 332
+| SNAP Works Mandatory Program Non-Compliance Good Cause Notice
+| 01/14
+| SO
+| Spanish
+
+| xref:attachment$form-333.pdf[333]
+| SNAP Sanction/Penalty Notice Form
+| 11/25
+| PAMMS
+| xref:attachment$form-333-es.pdf[Spanish]
+
+| 334
+| SNAP Works Voluntary Program Non-Compliance Good Cause Notice
+| 06/16
+| SO
+| Spanish
+
+| 335
+| SNAP Works Program Notice of Completion Form
+| 06/16
+| SO
+| Spanish
+
+| xref:attachment$form-339.pdf[339]
+| Simplified Reporting Requirement (SRR) Form
+| 10/25
+| PAMMS
+| xref:attachment$form-339-ar.pdf[Arabic],
+xref:attachment$form-339-bs.pdf[Bosnian],
+xref:attachment$form-339-my.pdf[Burmese],
+xref:attachment$form-339-zh.pdf[Chinese],
+xref:attachment$form-339-fa.pdf[Farsi],
+xref:attachment$form-339-fr.pdf[French],
+xref:attachment$form-339-gu.pdf[Gujarati],
+xref:attachment$form-339-hi.pdf[Hindi],
+xref:attachment$form-339-ja.pdf[Japanese],
+xref:attachment$form-339-ko.pdf[Korean],
+xref:attachment$form-339-ne.pdf[Nepali],
+xref:attachment$form-339-pt.pdf[Portuguese],
+xref:attachment$form-339-ru.pdf[Russian],
+xref:attachment$form-339-es.pdf[Spanish],
+xref:attachment$form-339-vi.pdf[Vietnamese]
+
+| 354
+| Expense/Resource and Income Statement
+| 01/08
+| SO
+| Spanish
+
+| 406
+| SNAP Works Program Voluntary Invitation Notice
+| 04/17
+| SO
+| Spanish
+
+| 480
+| SNAP Works Participation Checklist
+| 01/16
+| SO
+| Spanish
+
+| 481
+| SNAP Works Check Request
+| 01/17
+| SO
+|
+
+| 482
+| Work Experience Agreement
+| 02/03
+| SO
+| Spanish
+
+| 483
+| Employment Services Progress Review Notice
+| 01/19
+| SO
+| Spanish
+
+| 492
+| Employment Services Communication
+| 01/14
+| SO
+| Spanish
+
+| 493
+| SNAP Works Program Employability Assessment
+| 01/16
+| SO
+| Spanish
+
+| 494
+| SNAP Works Mandatory Appointment Notice
+| 01/17
+| SO
+| Spanish
+
+| xref:attachment$form-495.pdf[495]
+| Job Search Record
+| 08/22
+| SO
+| xref:attachment$form-495-es.pdf[Spanish]
+
+| 498
+| Request for Reduction in Case Accuracy Reviews Instructions
+| 06/07
+| SO
+|
+
+| xref:attachment$form-507.pdf[507]
+| ABAWD Tracking Calendar
+| 11/25
+| SO
+// | xref:attachment$form-507[Spanish] ### Missing
+| Spanish
+
+| xref:attachment$form-508.pdf[508]
+| SNAP/Medicaid/TANF Renewal
+
+_For voter registration information, refer to the * at the top of the table or click_ <<voter-registration>>
+| 11/25
+| SO
+| xref:attachment$form-508-ar.pdf[Arabic],
+xref:attachment$form-508-bs.pdf[Bosnian],
+xref:attachment$form-508-my.pdf[Burmese],
+xref:attachment$form-508-zh.pdf[Chinese],
+xref:attachment$form-508-fa.pdf[Farsi],
+xref:attachment$form-508-fr.pdf[French],
+xref:attachment$form-508-gu.pdf[Gujarati],
+xref:attachment$form-508-hi.pdf[Hindi],
+xref:attachment$form-508-ja.pdf[Japanese],
+xref:attachment$form-508-ko.pdf[Korean],
+xref:attachment$form-508-ne.pdf[Nepali],
+xref:attachment$form-508-pt.pdf[Portuguese],
+xref:attachment$form-508-ru.pdf[Russian],
+xref:attachment$form-508-es.pdf[Spanish],
+xref:attachment$form-508-vi.pdf[Vietnamese]
+
+| 513
+| SNAP Works Voluntary Program Personal Work Plan
+| 01/19
+| SO
+| Spanish
+
+| 514
+| SNAP Works Personal Work Plan Update
+| 01/14
+| SO
+| Spanish
+
+| 515
+| SNAP Works Mandatory Personal Work Plan
+| 12/13
+| SO
+| Spanish
+
+| xref:attachment$form-516.pdf[516]
+| Job Search Record
+| 10/22
+| SO
+| xref:attachment$form-516-es.pdf[Spanish]
+
+| 517
+| Record of School Attendance and Performance Report
+| 01/14
+| SO
+| Spanish
+
+| xref:attachment$form-524.pdf[524]
+| TANF Community Outreach Services (TCOS) Brochure
+| 11/15
+| SO
+| xref:attachment$form-524-es.pdf[Spanish]
+
+| xref:attachment$form-528.pdf[528]
+| Supplemental Nutrition Assistance Program (SNAP) Periodic Report
+| 10/24
+| SO
+| xref:attachment$form-528-es.pdf[Spanish]
+
+| xref:attachment$form-713.pdf[713]
+| Interagency/Interoffice Referral and Follow-Up
+| 02/05
+| SO
+|
+
+| xref:attachment$form-713g.pdf[713G]
+| Grandparents Raising Grandchildren (GRG)
+| 04/12
+| PAMMS
+|
+
+| 713-SW
+| SNAP Works Interagency/Interoffice Referral and Follow-Up
+| 01/16
+| SO
+| Spanish
+
+| xref:attachment$form-799.pdf[799]
+| DFCS Communication
+| 01/07
+| PAMMS
+|
+
+| xref:attachment$form-805.pdf[805]
+| ABAWD Volunteer Work Verification
+| 01/19
+| PAMMS
+| xref:attachment$form-805-es.pdf[Spanish]
+
+| xref:attachment$form-806.pdf[806]
+| Medical Statement
+| 06/16
+| PAMMS
+| xref:attachment$form-806-es.pdf[Spanish]
+
+| xref:attachment$form-809.pdf[809]
+| Verification of Earned Income
+| 12/24
+| PAMMS
+| xref:attachment$form-809-es.pdf[Spanish]
+
+| xref:attachment$form-820.pdf[820]
+| Third Party Verification of Citizenship
+| 08/06
+| PAMMS
+|
+
+| xref:attachment$form-821.pdf[821]
+| Statement of Shelter Costs
+| 04/07
+| PAMMS
+| xref:attachment$form-821-es.pdf[Spanish]
+
+| 823
+| ABAWD Work Requirements Fact Sheet
+| 09/20
+| SO
+| Spanish
+
+| xref:attachment$form-826.pdf[826]
+| Ineligible ABAWD Time-Limit Adverse Action Notice
+| 11/25
+| PAMMS
+| xref:attachment$form-826-es.pdf[Spanish]
+
+| xref:attachment$form-826a.pdf[826A]
+| Ineligible ABAWD Time-Limit Second Three Month Adverse Action Notice
+| 11/25
+| PAMMS
+| xref:attachment$form-826a-es.pdf[Spanish]
+
+| 829
+| SNAP Works Program Brochure
+| 01/16
+| SO
+| Spanish
+
+| 830
+| SNAP Work Requirements Fact Sheet
+| 07/21
+| SO
+| Spanish
+
+| xref:attachment$form-840.pdf[840]
+| Medical Transportation Expense Log Instructions
+| 03/09
+| PAMMS
+| xref:attachment$form-840-es.pdf[Spanish]
+
+
+| xref:attachment$form-841.pdf[841]
+| Food Loss Replacement Form
+| 01/25
+| PAMMS
+| xref:attachment$form-841-es.pdf[Spanish]
+
+| xref:attachment$form-846.pdf[846]
+| Change Report Form
+
+_For voter registration information, refer to the * at the top of the table or click_ <<voter-registration>>
+| 10/24
+| PAMMS
+| xref:attachment$form-846-ar.pdf[Arabic],
+xref:attachment$form-846-bs.pdf[Bosnian],
+xref:attachment$form-846-my.pdf[Burmese],
+xref:attachment$form-846-zh.pdf[Chinese],
+xref:attachment$form-846-fa.pdf[Farsi],
+xref:attachment$form-846-fr.pdf[French],
+xref:attachment$form-846-gu.pdf[Gujarati],
+xref:attachment$form-846-hi.pdf[Hindi],
+xref:attachment$form-846-ja.pdf[Japanese],
+xref:attachment$form-846-ko.pdf[Korean],
+xref:attachment$form-846-ne.pdf[Nepali],
+xref:attachment$form-846-pt.pdf[Portuguese],
+xref:attachment$form-846-ru.pdf[Russian],
+xref:attachment$form-846-es.pdf[Spanish],
+xref:attachment$form-846-vi.pdf[Vietnamese]
+
+| xref:attachment$form-858.pdf[858]
+| Comparable Workfare Guide
+| 05/22
+| PAMMS
+| xref:attachment$form-858-es.pdf[Spanish]
+
+| xref:attachment$form-859.pdf[859]
+| SNAP Consolidated Work Requirements Notice
+| 11/25
+| SO
+| xref:attachment$form-859-es.pdf[Spanish]
+
+| xref:attachment$form-864.pdf[864]
+| SNAP Works Screening and Referral Tool
+| 10/24
+| PAMMS
+|
+
+| xref:attachment$form-875.pdf[875]
+| Verification of Educational Assistance Income
+| 06/23
+| PAMMS
+| xref:attachment$form-875-es.pdf[Spanish]
+
+| xref:attachment$form-880.pdf[880]
+| Applying for SNAP Required Verification
+| 11/25
+| PAMMS
+|xref:attachment$Form-880-es.pdf[Spanish]
+
+| xref:attachment$form-5459.pdf[5459]
+| Authorization for Release of Information
+| 07/16
+| SO
+| xref:attachment$form-5459-es.pdf[Spanish]
+
+| xref:attachment$form-5460.pdf[5460]
+| Notice of Privacy Practices
+| 12/23
+| PAMMS
+| xref:attachment$form-5460-es.pdf[Spanish]
+
+// | xref:attachment$form-5667.pdf[5667] ### MISSING
+| 5667
+| Request for Case Review
+| 10/18
+| PAMMS
+|
+
+| xref:attachment$form-ebt-2.pdf[EBT 2]
+| EBT Control Log-County Office EBT Cards
+| 04/04
+| PAMMS
+|
+
+| xref:attachment$form-ebt-3.pdf[EBT 3]
+| EBT Control Log-County Office PINS
+| 04/04
+| PAMMS
+|
+
+| xref:attachment$form-ebt-4.pdf[EBT 4]
+| EBT Control Log-Receipt of Card/PIN Benefit Representative
+| 04/04
+| PAMMS
+|
+
+| xref:attachment$form-ebt-5.pdf[EBT 5]
+| EBT Transfer Control Log- EBT Card Sign In/Sign Out Benefits Representative/Guardian
+| 04/04
+| PAMMS
+|
+
+| xref:attachment$form-ebt-6.pdf[EBT 6]
+| EBT Control Log-PIN Sign In/Sign Out Benefit Representative/Guardian
+| 04/04
+| PAMMS
+|
+
+| xref:attachment$form-ebt-7.pdf[EBT 7]
+| EBT Card/PIN Sign Out Authorization
+| 04/04
+| PAMMS
+|
+
+| xref:attachment$form-ebt-8.pdf[EBT 8]
+| EBT Family Service Worker/Recipient
+| 04/04
+| PAMMS
+|
+
+| xref:attachment$form-ebt-9.pdf[EBT 9]
+| Request for Manual Issuance of Benefits
+| 04/04
+| PAMMS
+|
+
+| xref:attachment$form-ebt-10.pdf[EBT 10]
+| Request for Re-Obligations of Benefits
+| 04/04
+| PAMMS
+|
+
+
+
+|===

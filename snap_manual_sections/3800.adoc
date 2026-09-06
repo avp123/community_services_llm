@@ -1,0 +1,42 @@
+= 3800 Issuance Overview
+:chapter-number: 3800
+:effective-date: December 2019
+:mt: MT-58
+:policy-number: 3800
+:policy-title: Issuance Overview
+:previous-mt-number: MT-39
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Issuance is the method by which benefits are distributed to eligible food stamp assistance units (AUs).
+
+== Basic Considerations
+
+Benefits are issued at the time of approval and thereafter as required by policy.
+
+Benefits are authorized via Gateway.
+
+== Procedures
+
+EBT cards are to be mailed to one of the following:
+
+* The residential address
+* The mailing address of the AU, if different from the residential address
+* A Post Office Box, if *both* of the following apply:
+** the residential address has been provided,
+** no more than three AUs receive benefits at the Post Office Box
+* General Delivery only in communities where no mail delivery is provided
+* An address other than the AU's address only when the AU has a valid reason.
+Document the reason in the case record.
+
+NOTE: DO NOT mail EBT cards in care of another person.
+
+Follow the guidelines below for homeless or seasonal farmworker AUs:
+
+* Explore the possibility of alternate mailing addresses with the AU.
+* If a homeless shelter is used, contact the manager for an agreement to accept mail from DFCS.
+* If no other address is available, mail the EBT cards to the county office.
+
+When EBT Cards are sent to the county office, make every effort to ensure the AU receives the EBT cards.

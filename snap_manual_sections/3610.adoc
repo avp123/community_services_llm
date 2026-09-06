@@ -1,0 +1,151 @@
+= 3610 SNAP Budgeting
+:chapter-number: 3600
+:effective-date: January 2025
+:mt: MT-80
+:policy-number: 3610
+:policy-title: SNAP Budgeting
+:previous-mt-number: MT-64
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Supplemental Nutrition Assistance Program (SNAP) budgets are computed to determine the Assistance Unit's (AU) financial eligibility and benefit level.
+
+== Basic Considerations
+
+The gross income ceiling (GIC) is 130% of the federal poverty level (FPL).
+The GIC test is used to determine financial eligibility based on the AU's countable gross income.
+
+AUs that contain at least one member who is elderly or disabled as defined by SNAP policy are not subject to the GIC test.
+
+Countable gross income is compared to the Gross Income Ceiling (GIC) and is defined as the gross income minus any excluded income types.
+
+The net income limit is 100% of the FPL.
+
+The countable net income is the AU's income after allowing all SNAP deductions.
+Refer to xref:3611.adoc[].
+
+The benefit amount is based on the AU's net countable monthly income.
+
+All of the countable resources and income of each AU member are considered in determining the AU's financial eligibility.
+
+The countable resources and income of the following non-AU members may be considered in determining financial eligibility:
+
+* ineligible aliens
+* IPV disqualified individuals
+* work sanctioned individuals
+* lawbreakers
+* enumeration sanctioned individuals
+
+The countable resources and income of an ineligible student are *not* considered in determining financial eligibility.
+
+=== Categorically Eligible
+
+The resources of TANF, SSI, and TCOS recipients are not considered in determining SNAP eligibility.
+Refer to xref:3210.adoc[].
+
+== Procedures
+
+=== Determining Financial Eligibility
+
+Follow the steps below to establish the AU's financial eligibility for SNAP:
+
+[horizontal,labelwidth=10]
+Step 1: Determine the members of the AU.
+Refer to xref:3205.adoc[].
+
+Step 2: Identify non-AU members whose resources and income must be considered in determining financial eligibility and the benefit level.
+
+Step 3: Verify the countable resources, income and expenses of the AU members and those identified in Step 2 as required by policy.
+
+Step 4: Determine if the AU has resources less than or equal to the appropriate resource limit.
+Refer to xref:3400.adoc[] for resource limits.
+
+Step 5: Complete a SNAP budget to determine the AU's financial eligibility and benefit amount.
+
+=== Completing the Budget
+
+Follow the steps below to complete a SNAP budget:
+
+NOTE: In Steps 1-10 leave amounts in dollars and cents.
+Drop fractions of cents.
+
+[horizontal,labelwidth=10]
+*Step 1:* Complete the gross income ceiling (GIC) test as follows:
+
+* Subtract income exclusions from the total gross income to get the countable gross income for the AU.
+* If the countable gross income is less than or equal to the GIC, proceed to Step 2.
+* If the countable gross income is greater than the GIC, deny or terminate the SNAP application or case.
+
+*Step 2:* Total the countable gross earned income for the AU.
+
+Refer to xref:3625.adoc[].
+
+*Step 3:* Subtract the earned income deduction from the gross countable earned income to determine the countable net monthly earned income.
+Refer to xref:3612.adoc[].
+
+*Step 4:* Total the following:
+
+--
+* the net monthly earned income from Step 3
+* the unearned income of the AU members
+* the unearned income of all sanctioned, disqualified or ineligible individuals
+
+Refer to xref:3625.adoc[].
+--
+
+*Step 5:* Subtract the standard deduction.
+Refer to xref:3613.adoc[].
+
+*Step 6:* Subtract the allowable excess medical deduction for AU members who are elderly or disabled.
+Refer to xref:3614.adoc[].
+
+*Step 7:* Subtract allowable monthly dependent care expenses.
+Refer to xref:3615.adoc[].
+
+*Step 8:* Subtract child support expenses.
+Refer to xref:3616.adoc[].
+
+*Step 9:* Subtract the homeless shelter deduction from the net SNAP income.
+Refer to xref:3618.adoc[].
+
+* If the homeless shelter deduction is applied, proceed to Step 12
+* If the homeless shelter deduction is not applied, proceed to Step 10
+
+*Step 10:* Determine the excess shelter cost as follows:
+
+* Total the allowable shelter expenses to determine the total shelter cost.
+Refer to xref:3617.adoc[].
+* Subtract 50% of the AU's monthly income remaining after deductions from the total shelter cost.
+The remaining amount, if any, is the excess shelter cost.
+
+*Step 11:* Subtract the excess shelter cost up to the maximum amount allowed.
+
+[caption=Exception]
+NOTE: Allow the full amount of the excess shelter cost as a deduction for AUs with at least one member who is elderly or disabled as defined in the glossary.
+
+*Step 12:* Round any cents up or down to the nearest dollar.
+Round up if 50 cents or more.
+Round down if less than 50 cents.
+This figure is the AU's net income.
+Compare the countable adjusted net monthly income of the AU to the net income limit for the AU size.
+Use the Maximum Net Monthly Income on the first page of the Basis of Issuance Tables.
+Refer to xref:appendix-a-financial-standards-overview.adoc[Appendix A], Financial Standards.
+
+*Step 13:* If the countable adjusted net income is less than or equal to the net income limit, determine the AU's benefit amount.
+
+If the countable adjusted net income is greater than the net income limit, the AU is not eligible.
+
+=== Determining the AU's SNAP Benefit
+
+Compare the countable adjusted net income and AU size to the Basis of Issuance (BOI) table to determine the AU's benefit amount as follows:
+
+* Locate the AU's countable adjusted net monthly income in the table.
+* Look under the appropriate AU size column to determine the benefit amount.
+
+=== Determining the Benefit for a Categorially Eligible AU
+
+If a categorically eligible AU contains one or two members and the net monthly income exceeds the net income limit, issue the minimum benefit amount.
+
+Categorically eligible AUs containing three or more members and whose net monthly income exceeds the net income limit will have their cases denied or closed in the Gateway system.

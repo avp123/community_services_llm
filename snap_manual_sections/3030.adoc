@@ -1,0 +1,2 @@
+= 3030 Civil Rights
+include::ROOT:page$civil-rights.adoc[tag=manual-insert]

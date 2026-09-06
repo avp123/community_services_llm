@@ -1,0 +1,136 @@
+= 3385 Failure to Perform Required Action
+:chapter-number: 3300
+:effective-date: April 2025
+:mt: MT-82
+:policy-number: 3385
+:policy-title: Failure to Perform Required Action
+:previous-mt-number: MT-57
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+SNAP benefits will not increase when an AU's income is decreased or terminated due to failure to perform a required action under another Federal, State or local means-tested public assistance program.
+
+== Basic Considerations
+
+The following chart provides an all-inclusive list of Temporary Assistance for Needy Families (TANF) requirements which when violated by a TANF/SNAP recipient must not result in an increase in SNAP benefits.
+
+[#chart-3385-1]
+.CHART 3385.1 – FAILURE TO PERFORM A REQUIRED ACTION
+|===
+^| TANF Requirements ^| TANF Consequence
+
+| SSN for all members
+| AU member is penalized
+
+| Immunization of pre-school children
+| AU member is penalized
+
+| Citizen/alien status (refusal to provide)
+| AU member is penalized
+
+| Minor parent living arrangement requirement
+| Minor parent is penalized
+
+| Minor parent must comply with school attendance requirements
+| Minor parent is penalized
+
+| Intentional Program Violation
+| AU member is disqualified
+
+| Prenatal Care
+| AU member is penalized
+
+| ES Requirements
+| 25% reduction or case is closed
+
+| Personal Responsibilities
+| 25% reduction or case is closed
+
+| Failure to report child absent from the home
+| 25% reduction or case is closed
+|===
+
+The failure to perform a required action policy does not apply to AUs in the following situations:
+
+* TANF application is denied for reasons other than failure to perform required actions,
+* TANF benefits are not increased as a result of the Family CAP provision.
+
+Failure to perform a required action is applied to the SNAP AU by budgeting the TANF grant amount that the TANF AU would receive if the action had not been performed.
+
+The failure to perform a required action policy is applied to ongoing benefits.
+Initial benefits are not affected.
+
+Failure to perform a required action is not applied to individuals who are ineligible for TANF for the following reasons:
+
+* ineligible aliens
+* children who are not deprived
+* children who fail to meet relationship criteria
+* SSI recipients
+* ineligible because of lump sum budgeting
+* children who are 18 and not in school
+* non-cooperation with the Division of Child Support Services (DCSS)
+* non-cooperation with the Office of Program Integrity and Compliance (OPIC) or Intake Eligibility Investigation (IEI)
+* refusal to sign the Personal Responsibility Plan (PRP) or Personal Work Plan (PWP)
+* failure to apply for other benefits
+* ineligible child because of family cap
+* failing to apply or reapply for continued TANF assistance
+* reaching the time-limit for TANF benefits
+* failing to submit a TANF verification or report
+* failure to comply with a purely procedural requirement
+
+The TANF member must fail or refuse to do a substantive requirement such as failure to participate in job search activities.
+
+== Procedures
+
+=== Failure to Comply with TANF ES Requirements
+
+The failure to perform a required action due to TANF non-compliance does not last for more than one year.
+
+Follow the steps below to prevent an increase in SNAP if the individual failed to comply with TANF work requirements:
+
+[horizontal,labelwidth=10]
+Step 1:: Freeze the TANF benefits at the pre-sanction amount.
+
+Step 2:: Budget the TANF benefit amount that the TANF AU would receive if the action had been performed.
+
+Step 3:: TANF 25% Reduction:
+
+* Access the Sanction screens through the TANF/SNAP E&T module in Gateway.
+* Enter the client ID or case number on the Non-Compliance Search screen and click ‘Search'.
+The Sanction Search Results will be displayed if the individual had previously been conciliated and/or sanctioned.
+* Click the ‘Initiate Conciliation/Good Cause/Sanction' button to start the conciliation and/or sanction process.
+* Update the required fields on the ‘Non-Compliance Conciliation/Good Cause' screen and click ‘Next'.
+* Update the required fields on the ‘Sanction Details' screen and click ‘Next'.
+* Update the required fields on the ‘Sanction Review Action' screen and click ‘Submit'.
+* Access Data Collection in ‘Change Mode' and run ‘EDBC'.
+Review the TANF sanctioned months on the ‘Eligibility Determination Results' screen to confirm the TANF benefits have been reduced.
+The worker can also access each sanction month to view the ‘TANF – Individual Disqualification/Sanctions' screen to confirm the sanction count and the sanction begin and end dates.
+* Review the SNAP case on the ‘Eligibility Determination Results' screen to confirm head of household has been sanctioned with the Ineligibility Reason as ‘Failure to Comply with TANF Work Requirement'.
+The worker can also access each sanction month to view the ‘SNAP – Individual Disqualification/Sanctions' screen to confirm the sanction count and the sanction begin and end dates.
+* Review the ‘SNAP – Income Budget' screen to confirm the TANF benefit prior to the sanction continues to count in the SNAP budget.
+* Authorize all programs if all sanction information is correct.
+
+=== TANF Termination
+
+Follow the same process above if the TANF sanction results in termination.
+When the TANF benefits are sanctioned, the previous TANF allotment will continue to budget in the SNAP case for up to one year.
+At the end of the sanction period, a batch will run to remove the sanction in the TANF and related SNAP case.
+This will reset the TANF and
+
+SNAP benefits to the previous amount.
+If the TANF case was closed due to the sanction, the TANF benefits will not be restored.
+The AU will need to re-apply for TANF if they wish to receive benefits.
+
+Refer to xref:3380.adoc[Section 3380], Failure to Comply with E&T Work Requirements, when the individual fails to comply with a TANF work requirement.
+
+=== TANF AU Member is Disqualified for Intentional Program Violation (IPV)
+
+If a TANF AU member is disqualified for committing an IPV violation in the TANF program, continue to budget the previous TANF benefit amount that the TANF AU would have received if the action to disqualify had not been taken.
+Include any amount recouped from the TANF benefit to repay the IPV claim in the SNAP case for the length of the TANF disqualification.
+
+=== Other Programs
+
+If you should become aware of a reduction in another Federal, State or local means-tested program for failure to perform a required action, subtract the reduced amount from the previous benefit amount and use the difference as unearned income in the SNAP budget.
+Document the case thoroughly.

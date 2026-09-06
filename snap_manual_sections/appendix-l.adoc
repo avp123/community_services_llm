@@ -1,0 +1,129 @@
+= Appendix L Child Support Services Glossary
+:chapter-number: Appendix L
+:effective-date: January 2020
+:mt: MT-59
+:policy-number: Appendix L
+:policy-title: Child Support Services Glossary
+:previous-mt-number: MT-24
+
+include::partial$policy-header.adoc[]
+
+[cols="1,4"]
+|===
+^| TERM ^| DEFINITION
+
+| Absent parent (see non-custodial parent)
+| A parent whose continued absence from the home interrupts or terminates the parent's ability to provide maintenance, physical care or guidance for the child.
+
+Technically, the absent parent is defined as the parent with whom the child resides less than 50 percent of the time or as the parent with the greater child support payment obligation.
+
+| Arrears
+| Unpaid child support payments for past periods owed by an absent parent who is obligated to pay child support.
+
+| B5 payment
+| OCSS cannot retain child support payments that exceed the total amount paid in TANF cash assistance, so if the UPA ever reaches zero, the AU will receive the overage.
+If an AP's UPA ever reaches zero, it's almost always the result of a tax intercept.
+The UPA typically begins to build up again if the AU continues to receive TANF.
+
+Gateway is programmed to count a B-5 payment in the TANF budget.
+However, a B-5 payment should not be budgeted unless it can be expected to continue on an ongoing basis.
+
+A TANF AU may receive all the child support paid in a month by an AP, even if the amount paid exceeds what should be the maximum gap payment.
+
+If the receipt of B5 payments is not ongoing, it never works its way into the budget.
+
+| Child Support Services (OCSS), Office of
+| An office within DHS that administers the child support enforcement program, a program required of all states by federal law in order to enforce an absent parent's obligation to support his/her child.
+
+The federal office was created by Title IV-D of the Social Security Act in 1975 and is responsible for the administration of the child support program and for the development of child support policy.
+Federal CSE is part of the Administration for Children and Families (ACF), which is within the Department of Health and Human Services (DHHS).
+
+| Custodial parent
+| A parent who lives in the home and cares for his/her child
+
+Technically, the custodial parent is defined as the parent with whom the child resides more than 50 percent of the time or as the parent with the lesser support obligation.
+
+| Custody Order
+| A legally binding determination that establishes with whom a child shall live.
+
+| Gap
+| The difference between a TANF AU's standard of need (SON) and its maximum grant amount.
+
+| Gap budgeting
+| Budgeting that allows for a filling of the gap that exists between the SON and the family maximum grant amount for an AU.
+
+| Gap payment
+| The amount of child support that is paid by OCSS to a TANF- eligible child.
+A gap payment can never exceed the difference between an AU's SON and its maximum grant amount.
+
+When an absent parent pays child support to OCSS for a child who receives TANF, OCSS retains the child support received that exceeds the gap amount.
+
+| Good cause (OCSS- specific)
+| A legal reason for which a TANF recipient is excused from cooperating with the child support enforcement process.
+
+Valid reasons include past physical harm by the child's father, situations in which rape or incest resulted in the conception of the child and situations in which a mother is considering placing her child for adoption.
+
+| IV-A case
+| A child support case in which a caretaker, or custodial parent, and a child are receiving public assistance benefits under Georgia's IV-A, i.e., TANF, program.
+(TANF is funded under Title IV-A of the Social Security Act;
+hence, the term IV-A case).
+
+TANF applicants are automatically referred to Georgia's IV-D agency, i.e., the Office of Child Support Services (OCSS), in order to identify and locate the absent parent, establish paternity and obtain child support payments.
+
+| IV-D case
+| A child support case in which either the custodial parent (CP) or the absent parent (AP) has requested or received IV-D services from the IV-D agency (OCSS).
+A IV-D case is composed of a custodial party, non-custodial parent and at least one dependent child.
+
+IV-D refers to Title IV-D of the Social Security Act, which requires that each state create a program to locate absent parents, establish paternity, establish and enforce child support obligations, and collect and distribute support payments.
+All TANF recipients must be referred to CSS.
+
+Applications from families who do not receive public assistance must be accepted, if requested, to assist in collection of child support.
+
+| Maintenance-only payments
+| Financial support paid directly to a child's AU or substantial in- kind contributions sufficient to meet the child's monthly needs.
+
+| Non-custodial, non- supporting minor parent
+| A minor parent who receives TANF in one AU while his or her child is living with and receiving cash assistance in another AU, and who does not support his/her child, as established by CSS.
+
+| Non-custodial parent (see absent parent)
+| The parent who does not have primary care, custody, or control of a child, and who has an obligation to pay child support.
+
+| Nonparent Custodian
+| An individual who has been granted legal custody of a child, or an individual who has a legal right to seek, modify, or enforce a child support order.
+
+| Non-IV-D child support
+| Child support handled through a private attorney rather than through OCSS.
+
+A non-IV-D order is an order for which the state is not providing services through its IV-A (TANF), IV-D (OCSS), or Title IV-E programs.
+
+| Parenting Time Adjustment
+| An adjustment to the absent parent's portion of the Basic Child Support Obligation based upon the Noncustodial Parent's court-ordered visitation with the child.
+
+| Paternity establishment
+| The legal determination of fatherhood by court order, administrative order, acknowledgment, or other method provided for under state law.
+
+| Standard of Need (SON)
+| An amount of money, established by the Georgia General Assembly, that is a compilation of the cost of basic needs indexed to the number of persons in the SFU.
+
+*Standard of Need* (SON): is an amount of money, established by the Georgia General Assembly that is a compilation of the cost of basic needs indexed to the number of persons in the SFU.
+
+| Support Order
+| An order issued by a court or administrative agency for the support and maintenance of a child.
+Support orders can include various forms of support in addition to direct monetary support.
+
+| Title IV-D
+a| Title IV-D of the Social Security Act requires each state to create a program to
+
+* locate non-custodial parents
+* establish paternity
+* establish and enforce child support obligations and collect and distribute CS payments.
+
+OCSS is referred to as a *“IV-D agency.”* A “IV-D case” is a child support case in which either the custodial parent or the absent parent has requested or is receiving services from the IV-D agency (OCSS).
+
+| Unearned income
+| Income received which is not for services rendered.
+Child support is unearned income.
+
+| Unreimbursed Public Assistance (UPA)
+| The amount of public assistance money (e.g., TANF) paid out to an AU that has not yet been recovered from the absent parent.
+|===

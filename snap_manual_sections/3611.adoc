@@ -1,0 +1,34 @@
+= 3611 Deductions Overview
+:chapter-number: 3600
+:effective-date: April 2021
+:mt: MT-64
+:policy-number: 3611
+:policy-title: Deductions Overview
+:previous-mt-number: MT-58
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Deductions are applied to an assistance unit's (AU's) income prior to determining financial eligibility and benefit level.
+
+== Basic Considerations
+
+The following deductions are allowed in determining financial eligibility:
+
+* 20% earned income deduction
+* standard deduction
+* excess medical deduction
+* dependent care deduction
+* child support deduction
+* excess shelter deduction
+* homeless shelter deduction
+
+Deductions are not allowed for expenses paid through reimbursement or vendor payments.
+Deductions are allowed if they are paid with money loaned to the AU.
+
+Refer to xref:3620.adoc[], xref:3625.adoc[], and xref:3635.adoc[] for policy regarding allowable deductions in these situations.
+
+To allow a deduction in the Food Stamp Program budget, the expense must be incurred or billed to the AU currently or on an ongoing basis.
+
+NOTE: The AU's intent or ability to pay is not applicable.

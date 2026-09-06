@@ -1,0 +1,98 @@
+= Appendix B Administrative Disqualification Hearings
+:chapter-number: Appendix B
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: Appendix B
+:policy-title: Administrative Disqualification Hearings
+:previous-mt-number: MT-59
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An Administrative Disqualification Hearing (ADH) is initiated by the Office of Inspector General (OIG) and held by the Office of State Administrative Hearing (OSAH) when the county DFCS office has documented information that substantiates that an Intentional Program Violation (IPV) may have been committed.
+
+== Basic Considerations
+
+The OIG conducts an investigation of an allegation that an individual committed an IPV. If the preliminary investigation supports an IPV and prosecution is not warranted, OIG refers the individual to OSAH for an ADH.
+
+NOTE: The holding of an ADH does not preclude subsequent prosecution.
+
+== Hearing Consolidation
+
+OSAH may consolidate a fair hearing with an ADH if both are based on the same or related circumstances. OSAH will hold one ADH for both TANF and SNAP if the suspected IPV affects both programs. The following provisions of fair hearings also apply to the ADH:
+
+* The qualifications, powers, and duties of the hearing official
+* The conduct of the hearing and the Assistance Unit’s (AU’s) rights
+* The hearing decision prerequisites. Refer to Sections on Initial Hearings and Responsibilities of the Office of State Administrative Hearings (OSAH).
+
+== Hearing Notice
+* The date, time and location of the hearing
+* The charge(s) against the individual
+* A summary of the evidence, and how and where the evidence can be examined
+* A statement that the individual or representative will have 10 days from the date of the scheduled hearing to present good cause for failure to appear in order to receive a new hearing
+* A warning that the decision will be based solely on the information provided by DFCS if the individual fails to appear at the hearing
+* A description of the penalties that can result from a determination that the individual has committed an IPV, and a statement of which penalty is applicable to this individual
+* A statement that the hearing does not preclude OIG from prosecuting the individual for an IPV in a civil or criminal court action, or from collecting an over issuance or overpayment
+* A listing of individuals or organizations that provide free legal representation
+* A listing of the individual’s rights as they apply in fair hearings
+* A statement that the individual has the right to obtain a copy of the hearing procedures.
+
+== Postponement
+
+The hearing officer postpones the scheduled hearing with the following conditions:
+
+* The individual requested the postponement at least 10 days in advance of the scheduled ADH
+* The hearing is not postponed for more than 30 days
+* The hearing is postponed one time only.
+
+== Scheduling of Hearing
+
+OSAH must conduct the hearing, arrive at a decision, and notify all parties of the decision within 90 days of the date of receipt by the accused individual of the notice that a hearing has been scheduled. In the event of a postponement, the 90-day limit is extended for as many days as the hearing is postponed.
+
+NOTE: The accused individual continues to receive benefits to which she/he is entitled pending the ADH.
+
+== Failure to Appear
+
+If the accused individual or a representative fails to appear at the hearing without good cause, the hearing is conducted without the individual.
+
+== Hearing Decision
+
+The hearing officer considers the evidence and determines if an IPV was committed.
+
+OSAH provides a written notice to the accused individual, to OIG and to the county DFCS office, which includes the following information:
+
+* the hearing decision
+* the specific reasons for the decision
+* the supporting evidence and regulations
+* the disqualification period and repayment requirement.
+
+The hearing decision includes the effective month of the disqualification.
+
+The county DFCS office notifies OSAH within 10 working days from receipt of the decision that the decision was received, and that appropriate action has been taken.
+
+If the hearing officer determines there is no IPV, OSAH notifies the individual, OIG and the county DFCS office, and the over-issuance is referred back to the county office to be processed as a non-fraud claim.
+
+Refer to Section 3315, Intentional Program Violations, for information on processing the disqualification following receipt of the hearing decision and the disposition package for OIG.
+
+== Waiver of the ADH
+
+An individual accused of IPV may waive the right to an ADH to avoid appearing before an Administrative Law Judge (ALJ).
+OIG is responsible for providing written notification to the individual of the right to sign a Waiver of Administrative Disqualification Hearing Consent Agreement. The notification must include the following:
+
+* a statement that the individual may waive the right to appear at an ADH
+* the date the signed waiver must be received by OIG to avoid holding the hearing
+* a statement of the accused individual’s right to remain silent concerning the charge(s) and that the charge(s) can be used against him in court
+* the fact that a WDH will result in disqualification and a reduction in benefits, even if the accused individual does not admit the facts as presented by OIG
+* an opportunity for the accused individual to specify whether or not s/he admits the facts as presented
+* the telephone number and the name of the person to contact for additional information
+* a statement that the caretaker relative or head of household must also sign the waiver if the accused individual is not the caretaker relative or head of household
+* the fact that the remaining members of the AU will be held responsible for repayment of any resulting claim.
+
+OIG presents the option of signing the WDH to the individual.
+
+If the individual signs the WDH, s/he is disqualified for the appropriate time periods.
+
+The disqualification results regardless of whether the individual admits or denies the charge.
+
+Refer to Section 3315, Intentional Program Violations, for information on notice requirements, disqualification penalties, and effective dates of disqualifications.

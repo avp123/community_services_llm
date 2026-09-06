@@ -1,0 +1,182 @@
+= 3520 Social Security Administration (SSA) Prisoner Verification Inquiry
+:chapter-number: 3500
+:effective-date: July 2025
+:mt: MT-83
+:policy-number: 3520
+:policy-title: Social Security Administration (SSA) Prisoner Verification Inquiry
+:previous-mt-number: MT-57
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The prisoner verification inquiry (PVI) is a computer interface between the Gateway system and the Social Security Administration (SSA) that determines if a member of an assistance unit is incarcerated.
+Prisoner verification inquiry may also occur between the Gateway system and the Department of Corrections (DOC).
+
+== Basic Considerations
+
+A prisoner alert is generated when the SSN is matched with the SSN of an individual who is in a federal, state, or local correctional or other detention facility for more than 30 days.
+The purpose of generating the alert is to address AU composition, rather than lawbreaker status, to determine if an individual should be included in the SNAP AU.
+Prisoner alerts are addressed at application and recertification.
+
+Chart 3520.1 provides the basic considerations for prisoner verification inquiries.
+
+.CHART 3520.1 - PRISONER VERIFICATION INQUIRY
+[#chart-3520-1]
+|===
+3+^h| PRISONER VERIFICATION INQUIRY (Data returned from SSA)
+^h| IF ^h| THEN ^h| AND
+
+a| An Applicant/Recipient (A/R)
+
+* is included in an active or pending SNAP AU,
++
+*AND*
+
+* has a status of In the Applicant Group on the Applicant Group Summary Page
++
+*AND*
+
+* is 18 years of age or older and has a primary SSN
+a| The A/R's SSN is sent to SSA for matching
+
+* when a case is registered
+* when a new AU is finalized
+* when a case is reopened
+* in the month prior to the recertification month, when the AU is selected for recertification
+* if a primary SSN is changed
++
+*OR*
+
+* when a SSN is added through the add-a-person or interim change function
+a| *The returned data from SSA is received*
+
+* as an alert to the worker.
+The alert contains one of three codes from SSA.
+The codes are 11011, 11012, and 11023.
+The worker will navigate to the respective interface screen to access the data.
+
+3+^h| PRISONER VERIFICATION INQUIRY (Data returned from DOC)
+
+^h| IF
+^h| THEN
+^h| AND
+
+a| An Applicant/Recipient (A/R)
+
+* is included in an active or pending SNAP AU,
++
+*AND*
+* has a status of In the Applicant Group on the Applicant Group Summary Page
++
+*AND*
+* is 18 years of age or older and has a primary SSN
+a| The A/R's SSN is sent to DOC for matching
+
+* when a new AU is finalized
+* when a case is reopened
+* in the month prior to the recertification month, when the AU is selected for recertification
+* if a primary SSN is changed
++
+*OR*
+* when a SSN is added through the add-a-person or interim change function
+a| *The returned data from DOC is received*
+
+* as a task for the worker.
+The task contains one code from the DOC.
+The code is 11049.
+The worker will navigate to the respective interface screen to access the data.
+|===
+
+Follow these guidelines when taking a case action on prisoner verification alerts/tasks.
+
+* An alert/task is generated in Gateway to notify the worker of an inquiry hit.
+The worker will navigate to the respective interface screen to access the data.
+
+* Check the name, spelling, SSN, date of birth, and any other identifying information.
+Based on the information received from SSA and DOC, some prisoners may give someone else's identifying information as their own.
+Carefully review and compare inquiry information with the case data.
+
+* Prisoner verification inquiry information is *not* considered verified upon receipt.
+During the intake and the standard renewal interview, the worker should go to the Interfaces module and select Prisoner Inquiry for each adult, discussing confinement dates, release dates, dates the individual in the alert was included in the SNAP AU, conviction dates, and reasons for conviction.
+Also, discuss whether the offense was a felony or misdemeanor.
+Document the date that you spoke with the customer regarding the information in the match.
+A verification checklist *must* still be mailed to the AU within 10 days of receipt of the alert/task to determine AU composition for the appropriate months, if third-party verification was not received.
+The verification checklist must request all the above-stated information and outline the consequences of failing to respond to the request.
+Failure of the AU to respond to a request to determine AU composition will result in a case closure.
+Eligibility cannot be established if there is no response to the request for information.
+When completing an alternate renewal, mail a verification checklist requesting the above information.
+The AU can submit written verification from the Department of Corrections, Probation/Parole Officer, or a copy of release papers.
+
+NOTE: A VCL does not have to be mailed if the Eligibility Specialist (ES) speaks to the AU member AND has received third-party verification to confirm the PVI data. If the ES accesses the Department of Corrections Website (https://services.gdc.ga.gov/GDC/OffenderQuery/jsp/OffQryForm.jsp), and it verifies (matches) the information from the prisoner verification Interface, then a VCL is not required. The verification from the website must be uploaded into Gateway if it is used as verification. Please be advised that the DOC interface in Gateway is not the same as the DOC website.
+
+* If third-party verification is obtained, it must consist of oral or written statements from landlords, parole officers, neighbors, or documents such as letters, bills, or correspondences that verify the A/R's name and residential address for the time periods in question. Third-party verification is used to resolve the issues.
+
+* The prisoner verification inquiry may provide information that results in the application of lawbreaker policies.
+
+* *When appropriate*, create an overpayment for historical months if an agency error or inadvertent household error is determined.
+Refer the AU to the Office of Inspector General (OIG) if the individual identified in the alert was receiving SNAP while incarcerated for more than 30 days.
+
+Prisoner verification alerts/tasks are addressed and processed at each initial application or recertification.
+Refer to xref:3715.adoc[] for the policy on when to act on system-generated alerts/tasks.
+
+== Procedures
+
+Chart 3520.2, Procedures for Prisoner Verification Inquiry, is used to determine the appropriate case action to take when a prisoner verification alert/task is received by the agency.
+
+.CHART 3520.2 - PROCEDURES FOR PRISONER VERIFICATION INQUIRY
+[#chart-3520-2,cols="^,^,2,3"]
+|===
+| ALERT/TASK ID | ALERT/TASK ^| ALERT TO WORKER ^| GATEWAY STEPS
+
+| 11011
+| Alert
+| Prisoner match found, but data cannot be disclosed.
+SVES prisoner match response returned
+a|
+. In Data Collection under the Individual Information submodule, select the Persons Logical Units of Work (LUW).
+. On the Individual Applicant Group Summary page, click the pencil to select the AU member with the prisoner match.
+. On the Person Details page, press Next to get to the Person Applicant Group Status page.
+. For the Applicant Group Verification field, select “requires additional information” from the drop-down menu.
+. Press Next to commit the data and then complete the interview.
+Run EDBC.
+. Select the VCL and add the following text to the Special Notes: Please provide proof of the confinement dates, release dates, conviction dates, reason for conviction, and if the offense was a felony or misdemeanor.
+
+| 11012
+| Alert
+| Prisoner match found.
+Data is available.
+SVES prisoner match response returned.
+a|
+. In Data Collection under the Individual Information submodule, select the Persons LUW.
+. On the Individual Applicant Group Summary page click the pencil to select the AU member with the prisoner match.
+. On the Person Details page, press Next to get to the Person Applicant Group Status page.
+. For the Applicant Group Verification field, select “requires additional information” from the drop-down menu.
+. Press Next to commit the data and then complete the interview.
+Run EDBC.
+. Select the VCL and add the following text to the Special Notes: Please provide proof of the confinement dates, release dates, conviction dates, reason for conviction, and if the offense was a felony or misdemeanor.
+
+| 11023
+| Alert
+| Prisoner match found.
+a|
+. In Data Collection under the Individual Information submodule, select the Persons LUW.
+. On the Individual Applicant Group Summary page, click the pencil to select the AU member with the prisoner match.
+. On the Person Details page, press Next to get to the Person Applicant Group Status page.
+. For the Applicant Group Verification field, select “requires additional information” from the drop-down menu.
+. Press Next to commit the data and then complete the interview.
+Run EDBC.
+. Select the VCL and add the following text to the Special Notes: Please provide proof of the confinement dates, release dates, conviction dates, reason for conviction, and if the offense was a felony or misdemeanor.
+
+| 11049
+| Task
+| The Department of Corrections (DOC) has found a match for the individual Client ID on a SNAP case.
+a|
+. In Data Collection under the Individual Information submodule, select the Persons LUW.
+. On the Individual Applicant Group Summary page, click the pencil to select the AU member with the prisoner match.
+. On the Person Details page, press Next to get to the Person Applicant Group Status page.
+. For the Applicant Group Verification field select “requires additional information” from the drop-down menu.
+. Press Next to commit the data and then complete the interview.
+Run EDBC.
+. Select the VCL and add the following text to the Special Notes: Please provide proof of the confinement dates, release dates, conviction dates, reason for conviction, and if the offense was a felony or misdemeanor.
+|===

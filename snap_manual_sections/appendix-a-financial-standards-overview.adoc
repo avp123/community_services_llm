@@ -1,0 +1,36 @@
+= Appendix A Financial Standards Overview
+:chapter-number: Appendix A
+:effective-date: October 2024
+:mt: MT-79
+:policy-number: Appendix A
+:policy-title: Financial Standards Overview
+:previous-mt-number: MT-56
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Monthly benefit amounts for all eligible Supplemental Nutrition Assistance Program (SNAP) Assistance Units (AUs) are based on the adjusted net monthly income of the AU.
+
+== Basic Considerations
+
+Monthly benefit amounts for eligible SNAP AUs are determined by comparing the AU's adjusted net monthly income to the Basis of Issuance (BOI) tables.
+Refer to xref:3610.adoc[].
+
+=== Annual Updates
+
+The Basis of Issuance (BOI) tables are issued annually by the USDA Food and Nutrition Service (FNS) based on the Consumer Price Index.
+The BOI tables are valid for the federal fiscal year (FFY) which runs from October 1 of the current year through September 30 of the following year.
+
+FNS also updates the maximum gross and net income eligibility limits for AUs based on the AU size annually.
+The income limits are based on the Federal Poverty Level (FPL) income limits and are updated annually.
+
+=== Thrifty Food Plan
+
+The BOI tables are based on a maximum allotment amount for an AU size, with monthly benefits decreasing incrementally from the maximum amount as adjusted net monthly income increases.
+The maximum monthly allotment amount is based on the Thrifty Food Plan (TFP), the cost of a diet required to feed a family of four persons (a man and woman age 20 through 50;
+a child age 6 through 8; and a child age 9 through 11) for one month.
+
+The most recent SNAP eligibility income limits, maximum allotment amounts, and BOI tables are contained in this appendix.
+
+The current Basis of Issuance tables can also be accessed in this appendix, of the Policy and Manual Management System (PAMMS).

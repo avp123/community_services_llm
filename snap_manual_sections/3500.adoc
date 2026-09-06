@@ -1,0 +1,35 @@
+= 3500 Computer Matches Overview
+:chapter-number: 3500
+:effective-date: July 2025
+:mt: MT-83
+:policy-number: 3500
+:policy-title: Computer Matches Overview
+:previous-mt-number: MT-57
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Applicants and recipients whose resources and income are used to determine eligibility are matched with the files of various governmental agencies.
+
+== Basic Considerations
+
+The applicant and/or recipient's (A/R's) primary social security numbers (SSN) are matched with the SSNs contained in other governmental agency files.
+The information associated with the SSNs is compared to information in the Gateway system.
+Discrepancies are identified for follow-up and investigation.
+
+Computer matches, which require the use of the A/R's SSN, are designed to match income, resources, and other pertinent information that is used to determine the household's eligibility and benefit level.
+
+Computer match information is used for the following purposes:
+
+* to verify the eligibility of A/Rs
+* to verify the proper amount of benefits
+* to obtain information to use to conduct criminal or civil prosecutions based on receipt of benefits to which recipients are not entitled.
+
+Computer matches are accessed through the Gateway System on the Interfaces module.
+Users must have a valid user ID and password, which is obtained from the Gateway Security Unit, to access this information in the system.
+
+Unlawful access is prohibited.
+A record of all inquiries by passwords are kept and monitored by the system.
+
+Consider information received for UCB or TANF on Interstate matches as verified.

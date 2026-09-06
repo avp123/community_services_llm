@@ -1,0 +1,364 @@
+= 3617 Shelter and Utility Deductions
+:chapter-number: 3600
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3617
+:policy-title: Shelter and Utility Deductions
+:previous-mt-number: MT-85
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 273.9(d)(6)
+
+== Requirements
+
+Monthly shelter expenses in excess of 50% of the Assistance Unit's (AU) income after other deductions may be allowed, not to exceed the maximum shelter deduction.
+AU's containing an elderly/disabled member may be allowed the shelter deduction in excess of the maximum standard.
+
+== Basic Considerations
+
+The excess shelter deduction is the monthly shelter costs in excess of 50% of the AU's income after all other deductions have been considered.
+
+=== Excess Shelter Deduction
+
+Do not allow more than $744 per month as an excess shelter deduction.
+
+[caption=Exception]
+NOTE: If at least one individual in the AU is 60 years of age or older or is [.underline]*SNAP-disabled*, allow the full amount of the excess shelter expense as a deduction.
+
+NOTE: If the head of the household is homeless, the entire Applicant Group will be considered a homeless household.
+If a homeless household incurs or expects to incur an allowable shelter expense during the month, they are potentially eligible for the homeless shelter deduction.
+*See xref:3618.adoc[]*.
+
+=== Shelter Expense
+
+Charges for the shelter occupied by the household, including rent, mortgage, condo, and homeowners' association fees, or other continuing charges leading to the ownership of the shelter such as a loan repayment for the purchase of a mobile home, including interest on such payments may be allowed as a deduction.
+
+Refer to <<chart-3617-1,Chart 3617.1, Allowable Housing Expenses>>, in this section.
+Address housing expenses at *initial application, recertification (renewal), periodic reporting (when applicable), and interim change.*
+
+Effective *July 1, 2024*, third-party verification is required for all SNAP shelter expenses, including Senior SNAP. This applies to applications, recertifications (renewals), periodic reports, and interim changes received on or after 7/1/2024. Shelter expenses must be verified at periodic reporting *if* a change is reported.
+
+
+Refer to xref:3035.adoc[].
+Use the following suggested *current* sources as verification:
+
+* lease
+* rent receipt
+* mortgage statement or payment book
+* collateral statement from landlord
+* insurance bill or receipt
+* property tax bill or receipt
+* utility bill (to verify actual utilities)
+
+NOTE: This is not an all-inclusive list.
+
+=== Temporarily Unoccupied Residence
+
+If the shelter is temporarily unoccupied by the AU due to employment or training away from home, illness, or abandonment caused by natural disaster or casualty loss, the costs of the vacated home may be included in the AU's current costs if the AU:
+
+* intends to return to the home
+* the current occupants of the home are not claiming shelter costs for SNAP purposes
+* the home is not rented or leased during the AU's absence.
+
+The SUA may only be allowed for the residential home, not the unoccupied home.
+Actual utility costs may be allowed for the temporarily unoccupied home.
+
+If the shelter expense is part of a payment that includes other costs, such as a bankruptcy payment, the entire payment is allowed as a deduction if the shelter is not a separate and/or identifiable amount.
+
+=== Shared Housing Expenses
+
+In situations in which housing costs are shared among two or more separate households that live together, allow the amount incurred by each separate AU as a housing deduction.
+
+AUs sharing rental-housing costs with a separate household may be allowed the amount that the AU incurs (is responsible for paying) for rent as a shelter cost.
+If the other household gives the AU its portion of the rent payment to add to the AU's portion of the rent to make a rent payment to the landlord, exclude it as income.
+
+Payments made from one AU to the other (regardless of ownership) are not considered income if multiple households share expenses.
+
+[caption=Exception]
+NOTE: If the amount received from other AUs is more than the monthly housing costs and is not considered payment toward utility expenses, determine if the excess would be counted as a type of income.
+
+[#chart-3617-1]
+.CHART 3617.1 - ALLOWABLE HOUSING EXPENSES
+|===
+^| ALLOWABLE ^| NOT ALLOWABLE
+
+a| MORTGAGES
+
+* First and any subsequent mortgages (houses, condominiums, and mobile home units)
+* Condo and Homeowners' Association fees
+* Home equity loans
+* Loans for which the home is used for collateral, including interest
+
+RENT
+
+* Monthly payments, apartment or houses
+* Lot rent for mobile housing units
+
+TAXES
+
+* Property (state and local), yearly amount prorated annually to determine the monthly amount
+* Ad valorem for mobile housing unit homes, campers, or vehicles, if used as a primary residence
+
+INSURANCE
+
+* Homeowner's payments covering structure only, not contents.
+(If the amounts cannot be separated, allow the total amount and prorate over the period of time it is intended to cover).
+* Mobile home units, if primary residence
+
+TEMPORARILY UNOCCUPIED RESIDENCE
+
+All shelter costs (including actual utilities) when employed away from home, illness, natural disaster, or casualty loss, AND the AU intends to return.
+
+NOTE: This also includes periods while the home is under repair.
+These costs are allowed in addition to current shelter costs.
+
+MISCELLANEOUS
+
+* Bankruptcy payments
+* Repairs due to natural disaster, exceeding any reimbursements
+a|
+* Penalty payments (late fees)
+* Basic maintenance
+* Down payments
+* Discount points
+* Closing costs
+* Service Fees for paying bills in installments
+* Security deposits
+* Membership fees for homeowner's insurance (i.e., Farm Bureau)
+* Insurance on household / personal goods (i.e. renter's insurance)
+* Costs of a house not actually occupied by the AU unless costs meet the criteria as stated under allowable expenses in this chart
+* Repairs/Replacements because of wear or mechanics
+* Site preparation to locate or set up a mobile home, tag tax on a mobile home or camper that is considered to be a vehicular tax
+|===
+
+=== Heating/Cooling Standard Utility Allowance
+
+Determine if the AU is eligible for the H/C SUA.
+
+The H/C SUA is $405.
+The H/C SUA includes costs for the following utilities:
+
+* heating/cooling expenses
+* water/sewage, installation and maintenance for a well or septic tank
+* electricity
+* cooking fuel
+* cost for one telephone, owned or leased
+* garbage and trash collection fees
+* excess utility costs for AUs in public housing, which include either a heating or cooling expense
++
+NOTE: The following are examples of allowable costs for installation and maintenance of well(s) or septic tank(s):
+
+* installation, repair, replacement of a septic tank
+* septic tank cleaning services
+* biological additives for a septic tank, and purchased on a regular basis, that decompose waste for preventive maintenance or to resolve problems
+* installation, repair, or replacement of corresponding drainage field pipes
+* installation of a well
+* installation, repair, or replacement of a pump for a well
+* installation, repair, or replacement of pressure tanks for a well
+* installation, repair, or replacement of power units for a well, such as a windmill or electrical unit
+* installation, repair, or replacement of the system and its parts of a whole-house water filtration system related to a well
+
+The H/C is based on incurring either or both of the following heating or cooling expenses:
+
+* cooling expense
+** window air conditioner
+** central air conditioner
+* heating expense
+** heating fuel (gas, kerosene, etc.)
+** electricity
+** purchased wood
+** steam heat
+** space heater (if primary source of heat)
+
+Accept the AU’s statement as verification for the H/C SUA unless questionable.
+
+NOTE: The cost(s) of incidentals associated with heating or cooling expenses, such as chain saws to cut wood, oil or gas for chain saws, are *not* allowable utility expenses.
+
+Allow the H/C SUA if the AU:
+
+* is billed or expects to be billed in the next 12 months for a heating or cooling cost separate from the rent or mortgage;
+* includes an elderly or disabled member AND received a low-income energy assistance payment (LIHEAP) in the month of application or the previous 12 months from the month of application;
++
+NOTE: The LIHEAP payment must be an amount greater than $20/year in order to qualify for the H/C SUA based on this payment
+
+*OR*
+
+* is billed or expects to be billed for an excess heating/cooling expense in any housing
+
+=== Limited Standard Utility Allowance
+
+Determine if the AU is eligible for the LSUA.
+
+The LSUA is $358 and includes costs for the following utilities:
+
+* cooking fuel costs
+* electricity not used to heat or cool the residence
+* cost for one telephone
+* water/sewage, installation, and maintenance for a well or septic tank
+* garbage and trash collection
+* excess non-heating/cooling utility costs for AUs living in any housing
+
+Allow the LSUA if either of the following applies to the AU:
+
+* is billed/expects to be billed for at least two utility costs that are not used to heat or cool and are billed separately from the rent or mortgage
+* is billed/expects to be billed for a non-heating/non-cooling excess utility costs in any housing
+
+Accept the AU’s statement as verification for the Limited SUA unless questionable.
+
+=== Actual Utilities
+
+Allow the AU to use the cost of actual monthly utilities when only one utility expense is incurred other than heating and/or cooling and the AU provides verification of the actual utility expense.
+Only an actual utility expense may be divided among AUs that share the utility costs.
+
+[caption=Exception]
+NOTE: Refer to Temporarily Unoccupied Residence.
+
+Determine the actual utility expense deduction by receiving third-party verification of the actual costs of any one of the following:
+
+* electricity
+* water/sewage, installation and maintenance for a well or septic tank
+* garbage/trash collection
+
+Verify actual utilities using bills for the dwelling from the previous 12 months.
+Verification sources of actual utilities may include:
+
+* current bills or receipts from the utility provider, including a budget billing amount from the utility company
+* a statement from the landlord showing that the AU has incurred a utility expense
+
+NOTE: This list is not all-inclusive.
+
+Compute an average actual monthly utility expense as follows:
+
+* Total the verified expenses for the most recent 12-month period
+* Divide the total by twelve to obtain the average actual monthly utility expense
+
+=== Telephone Standard for the Cost of One Basic Service Fee
+
+The telephone standard is considered a utility standard, and if the cost is shared, each AU may receive the telephone standard.
+The telephone standard of $47 is included in the SUAs.
+If the AU incurs only a telephone expense, the telephone standard is used to allow the deduction.
+The telephone may be a cellular or an installed phone.
+
+NOTE: See <<chart-3617-3,Chart 3617.3, Shared Utility Expenses>>.
+
+The telephone standard is not allowed if the AU incurs the cost of long-distance telephone service only, or only a telephone expense as a usage fee (e.g., hotel).
+
+NOTE: If allowing the telephone standard, the AU's statement will serve as verification, unless questionable.
+
+.PHONE STANDARD
+|===
+^| IF ^| THEN
+
+| An AU only pays on the phone bill for the home phone (land or cell) and the dwelling is not eligible for the H/C SUA or the LSUA
+| The AU is eligible for the phone standard
+
+| An AU only pays on the phone bill (land or cell) that is the only phone used by the dwelling and the dwelling is eligible for the H/C SUA
+| The AU is eligible for the H/C SUA
+
+| An AU only pays on the phone bill (land or cell) that is the only phone used by the dwelling and the dwelling is eligible for the LSUA
+| The AU is eligible for the LSUA
+
+| An AU only pays on the phone bill (land or cell), and there is a different phone that is used by the dwelling, and the other AU members do not receive SNAP
+| The AU is eligible for the phone standard
+
+| An AU only pays on the phone bill (land or cell) and there is a different phone that is used by the dwelling.
+The other HH members do receive SNAP and claim an SUA
+| The AU is not eligible for any utility deduction
+|===
+
+[#chart-3617-2]
+.CHART 3617.2 - WHEN TO USE AN SUA AND ACTUAL UTILITY EXPENSES
+|===
+^| IF ^| THEN ^| SUA OR ACTUAL COSTS INCLUDE
+
+| the AU incurs or expects to incur a heating or cooling expense separately from rent or mortgage
+
+*OR*
+
+the AU has received LIHEAP in the past 12 months at the current address
+
+*OR*
+
+the AU lives in any housing and incurs or expects to incur excess utility costs, which include a heating or cooling expense
+| the AU is eligible for the H/C SUA
+a|
+* heating
+* cooling
+* water/sewage, installation, and maintenance for a well or septic tank
+* electricity
+* cooking fuel
+* basic service for one telephone
+* garbage collection
+
+| the AU incurs or expects to incur two or more non-heating or non-cooling utility costs
+
+*OR*
+
+the AU lives in any housing and is billed for an excess non-H/C expense (e.g. as excess water)
+| the AU is eligible for the LSUA
+a|
+* cooking fuel
+* electricity not used for heating or cooling
+* basic service for one telephone
+* water/sewage, installation, and maintenance for a well or septic tank
+* garbage collection
+
+| the AU incurs one utility expense
+
+*AND*
+
+the AU provides 12 months of verification for the utility expense(s) for the current address
+a| the AU is eligible for a deduction for the actual expense
+
+NOTE: Actual utility cost must be verified by a third-party source.
+If the actual expense is not verified, do not allow the deduction
+a| AU incurs one of the following:
+
+* cooking fuel
+* electricity not used for heating or cooling
+* heating
+* cooling
+* water/sewage, installation, and maintenance for a well or septic tank
+* garbage collection
+
+| the AU incurs a utility expense for a telephone only
+| the AU is eligible for the telephone standard
+| basic service for one telephone
+|===
+
+NOTE: Refer to <<chart-3617-3,Chart 3617.3, Shared Utility Expenses>>, for policy regarding AUs that share utility expenses.
+
+=== Shared Utility Expenses
+
+Use the guidelines in <<chart-3617-3,Chart 3617.3, Shared Utilities Expenses>> to determine how to consider utility expenses that are shared by separate households.
+Each household is not required to receive benefits in order for utility costs to be considered shared.
+
+Situations that define sharing the cost of utilities among separate households include:
+
+* a household pays a set amount towards the cost of utilities
+* household pays a portion of a utility expense
+* a household pays one or more of the utility expenses Allow the appropriate utility standard.
+
+[#chart-3617-3]
+.CHART 3617.3 - SHARED UTILITY EXPENSES
+|===
+^| IF ^| THEN
+
+| separate households (including the AU) live in the same dwelling and share common living areas, such as kitchen and bathroom facilities
+
+This situation may occur with roommates or family members.
+| allow the appropriate SUA for each AU separately
+
+| separate households (including the AU) do not live in the same dwelling but share utility meters, such as an AU living in a trailer near a house or in a separate apartment in a house
+| allow the appropriate SUA for each AU separately
+
+| more than one AU is sharing the cost of one utility expense
+a|
+* determine if the dwelling incurs only one utility expense and is eligible for the actual utility deduction
+* determine if AUs are sharing the cost of the utility expense
+* allow each AU its share of the actual cost.
+If the actual amount being incurred cannot be determined, divide the total cost by the number of AUs sharing.
+|===

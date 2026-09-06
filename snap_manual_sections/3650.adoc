@@ -1,0 +1,25 @@
+= 3650 Failure to Report Earned Income Budgeting
+:chapter-number: 3600
+:effective-date: December 2019
+:mt: MT-58
+:policy-number: 3650
+:policy-title: Failure to Report Earned Income Budgeting
+:previous-mt-number: MT-25
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The earned income deduction is not allowable for earnings not reported timely.
+
+== Basic Considerations
+
+If an AU does not report the receipt of earned income timely, do not allow the 20% earned income deduction for that income when computing the amount of the overpayment (OP).
+
+== Procedures
+
+Determine the months of overpayments by applying the appropriate reporting requirement.
+Gross income changes of over 130% of the applicable FPL must be reported no later than 10 days following the end of the month in which the income exceeded the SRR reporting requirement.
+Apply the 10-14 periods for taking actions following the end of that period for SRR AUs.
+
+Refer to xref:3715.adoc[].

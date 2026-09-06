@@ -1,0 +1,49 @@
+= 3230 Residents of Homeless Shelters
+:chapter-number: 3200
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: 3230
+:policy-title: Residents of Homeless Shelters
+:previous-mt-number: MT-76
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Individuals who lack a fixed and regular nighttime residence and whose primary nighttime residence is a homeless shelter may be eligible for the Supplemental Nutrition Assistance Program (SNAP).
+
+== Basic Considerations
+
+Individuals are considered residents of a homeless shelter if the primary nighttime residence is one of the following:
+
+* A supervised shelter that provides temporary accommodations for homeless individuals,
+* A halfway house that provides a temporary residence for individuals intended to be institutionalized.
+
+Homeless individuals residing in a public or private nonprofit shelter should not be denied participation in SNAP on the grounds that they are residents of an institution.
+The number of meals provided by the shelter does not apply.
+
+Homeless shelter residents must meet the same eligibility criteria and verification requirements as any other AU.
+
+Refer to xref:3205.adoc[] for additional policy regarding homeless individuals.
+
+== Procedures
+
+Follow the steps below to determine eligibility for a homeless AU.
+
+Step 1:: Accept the application from the applicant/recipient (A/R) even if an address cannot be provided.
+
+Step 2:: Using the following guidelines, explore with the A/R who cannot provide an address the possibility of providing an alternate mailing address:
+
+* If a shelter is selected as the mailing address, obtain an agreement from the manager to accept the AU's mail from the county until other arrangements can be made.
+* If necessary, authorize benefits to be mailed to the county department with the following stipulations:
+* Require the AU member who receives benefits at the county office to sign upon receipt of their EBT card and PIN.
+* Encourage the AU who receives benefits at the county office to find an alternate mailing address.
+
+Step 3:: Request verification of income, resources, and any basic eligibility criteria that must be verified.
+
+Step 4:: Allow the homeless AU the same deductions that apply to any other AU.
+Complete the eligibility determination.
+
+Step 5:: Based on the AU's situation, assign a certification period, not to exceed twelve months.
+
+Step 6:: Refer the AU for any other appropriate services.

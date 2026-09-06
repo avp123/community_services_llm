@@ -1,0 +1,160 @@
+= 3315 Intentional Program Violations
+:chapter-number: 3300
+:effective-date: April 2025
+:mt: MT-82
+:policy-number: 3315
+:policy-title: Intentional Program Violations
+:previous-mt-number: MT-61
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Individuals who have committed an intentional program violation (IPV) are disqualified from the Supplemental Nutrition Assistance Program (SNAP) and are ineligible for SNAP benefits.
+
+== Basic Considerations
+
+An IPV is an intentional action by an individual to establish or maintain an AU's eligibility or to increase or prevent a decrease in the AU's benefits, by providing false or misleading information or by withholding information.
+
+An IPV also includes:
+
+* Trading, selling, or intending to sell SNAP benefits;
+* Improperly using, possessing, or obtaining SNAP EBT cards/SNAP benefits;
+* Using SNAP benefits to buy ineligible items such as, but not limited to, alcohol or cigarettes;
+* Committing any acts that constitute a violation of the Food and Nutrition Act of 2008 – Supplemental Nutrition Assistance Program (SNAP), federal regulations.
+
+NOTE: This list is not all inclusive.
+
+The Department of Human Services (DHS) Office of Inspector General (OIG) is the state agency responsible for establishing the existence of an IPV.
+
+An IPV is established by one of the following methods:
+
+* conviction by the courts
+* administrative finding
+
+An administrative finding includes the following:
+
+* signing of a Prosecuting Attorney's Consent (PAC) Agreement;
+* an Administrative Disqualification Hearing (ADH);
+* a Waiver of Hearing and Disqualification Consent (WDH) Agreement.
+
+=== SNAP Disqualification Periods
+
+The appropriate disqualification period is determined by the OIG agent who adjudicated the claim(s) based on the following criteria:
+
+* the date the IPV was committed;
+* the method by which the IPV was established; and
+* the number of IPVs committed by the individual.
+
+The length of the SNAP disqualification periods is based on the <<chart-3315-1,Chart 3315.1, SNAP Penalties for IPV>>.
+
+SNAP IPVs committed in other states are considered when determining if the current IPV is the first or a subsequent violation.
+
+Disqualification periods imposed in another state are continued when the individual who committed an IPV applies for and/or is approved for SNAP benefits in Georgia.
+
+The Disqualified Recipient System (DRS) icon in Gateway provides the necessary information to determine the length of the disqualification.
+All IPV disqualifications must be entered into the Electronic Disqualified Recipient System (eDRS).
+Refer to Volume IV, Benefit Recovery section in the OIG policy manual.
+
+Adequate notice must be provided to the AU prior to imposing the SNAP disqualification.
+Timely notice is not required.
+
+=== Effective Month of the Disqualification
+
+The SNAP IPV disqualification is imposed based on the following criteria:
+
+* within 45 days of the date of the court order, or
+* within 45 days of the date the PAC agreement is signed, or
+* the first month following the month the AU receives written notification of the ADH from the Administrative Law Judge, or
+* the first month following the month the disqualified individual signs the WDH.
+
+The SNAP disqualification is imposed based on the above criteria regardless of whether the individual is receiving SNAP benefits for the month.
+
+Once a disqualification period is imposed, it remains in effect until the end of the disqualification period, regardless of the SNAP eligibility of the disqualified individual.
+
+If the disqualification is not imposed for the appropriate month, an overpayment (OP) exists.
+
+=== Disaster Supplemental Nutrition Assistance Program (DSNAP)
+
+A disqualified individual may receive benefits in the Disaster Supplemental Nutrition Assistance Program (DSNAP) if otherwise eligible.
+Disqualifications that are imposed because of fraud in the DSNAP program are a part of the total disqualification record.
+These disqualifications are added to the Electronic Disqualified Recipient System (eDRS).
+
+=== SNAP Disqualification Periods
+
+The following chart provides the SNAP disqualification periods applied to individuals who have committed an IPV.
+
+.Chart 3315.1 - SNAP Penalties for IPV
+[#chart-3315-1,cols=2*]
+|===
+| If the head of household (HOH) or any household member: | Then that household member will be INELIGIBLE for SNAP:
+
+a|
+* hides information or does not tell the truth
+* uses EBT cards that belong to someone else
+* uses SNAP benefits to buy alcohol or tobacco, trades or sells SNAP benefits or EBT cards
+a|
+* for *12 months* for the first offense
+* *24 months* for the second offense
+* and *permanently* for the third offense
+
+a|
+* has used or received SNAP benefits in a transaction involving the sale of a controlled substance (drugs)
+a|
+* for *24 months* for the first offense and
+* *permanently* for the second offense
+
+a|
+* has used or received SNAP benefits in a transaction involving the sale of firearms, ammunition, or explosives after 8/22/96
+a|
+* *permanently* for the first offense
+
+a|
+* has been convicted for trafficking benefits for an amount of $500 or more after 8/22/96
+a|
+* *permanently* for the first offense
+
+a|
+* has given false information about where they live or about identity (who they are) to get multiple SNAP benefits in more than one area after 8/22/96
+a|
+* *for 10 years*
+|===
+
+NOTE: If a court order imposes a disqualification period that is different from the periods indicated above, apply the court-ordered disqualification period.
+
+== Procedures
+
+Follow the steps below when notification is received from OIG that an IPV has been established:
+
+[horizontal,labelwidth=10]
+Step 1:: Determine the IPV category.
+
+Step 2:: Disqualify the individual who committed the IPV by coding his/her status in Gateway.
+
+Step 3:: Determine eligibility for the remaining AU members, counting the income and resources of the disqualified AU member.
+DO NOT include the disqualified member in the AU.
+Refer to xref:3625.adoc[].
+
+Step 4:: Provide adequate notice to the AU prior to imposing the disqualification.
+Timely notice is not required.
++
+Include in the notice, the new benefit amount, and the period of the disqualification.
+
+Step 5:: Impose the SNAP IPV disqualification effective the appropriate month based on the disposition package received from OIG and the method by which the IPV was determined.
+Refer to Basic Considerations in this section.
++
+Consider any OP created when the disqualification is not imposed timely.
+
+Step 6:: Comply with the court order if it specifies the date for imposing the disqualification.
++
+Gateway will set up a task for the end of the disqualification period.
+
+Step 7:: File the disqualification notices received from OIG or the Office of State Administrative Hearing (OSAH) on top of all other claims information in the case record.
+
+Step 8:: Once imposed, the period of disqualification continues and is uninterrupted regardless of the eligibility of the disqualified individual.
+
+Step 9:: Enter information about the IPV into the DRS system.
+Refer to Volume IV, Benefit Recovery section in the OIG policy manual.
+
+Step 10:: Establish a claims record, if appropriate.
+Refer to Volume IV, Benefit Recovery section in the OIG policy manual.

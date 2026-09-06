@@ -1,0 +1,305 @@
+= 3370 E&T Participation Activities
+:chapter-number: 3300
+:effective-date: December 2023
+:mt: MT-76
+:policy-number: 3370
+:policy-title: E&T Participation Activities
+:previous-mt-number: MT-68
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Participation in an education, training, or work activity may begin at any time. For ABAWDS, participation must begin by the first full calendar month after receipt of referral to the E&T program.
+The maximum hours of participation in an E&T component are limited to 120 hours per month.
+
+== Basic Considerations
+
+A list of allowable components and a brief description of each component are provided below.
+The minimum participation requirements, the satisfactory progress definitions, the Participant Support Services available, and the guidelines for various activities are provided for each component.
+There should be a logical progression through activities toward the eventual goal of job placement.
+
+=== Allowable E&T Components
+
+Allowable SNAP Works Program components are identified annually in the State's SNAP E&T Plan.
+Components are divided into three categories: education, work, and non-education/non-work.
+
+*Education Components:*
+
+* Basic/Foundational Skills Instruction (includes High School Equivalency Programs) (EPB)
+* Career/Technical Education Programs or other Vocational Training (EPC)
+* English Language Acquisition (EPEL)
+* Work Readiness Training (EPWRT)
+
+*Work Component:*
+
+* Work Activity (WA)
+* Work Based Learning On The Job Training (WBLOJT)
+
+*Non-Education, Non-Work Components:*
+
+* Supervised Job Search (SJS)
+* Self-Employment Training (SET)
+* Job Retention (JR) Stand Alone Component
+
+=== ABAWD Enrollment in Combined Components
+
+SNAP Works Program activities and/or components may be combined with another component to meet the ABAWD work requirement.
+Combined component time spent should never exceed the minimum participation requirement for any single activity in which an ABAWD is involved.
+
+_Example: ABAWD is employed 72 hours per month.
+S/he needs 8 additional hours to meet the work requirement.
+The total work requirement hours are 72 hours of employment and 8 hours of work program activity.
+To meet the requirement of 80 hours, place the ABAWD in 8 hours vocational training._
+
+=== Monitoring Participation in E&T Components
+
+Participation in activities and/or components is monitored carefully by the E&T Provider and the Employment Services Specialist (ES) to assure participants are involved in the assigned activities for the required number of hours.
+
+The E&T Provider will report participation activity to the SNAP Works Program.
+The ES will receive the monthly progress report to verify actual hours of participation and satisfactory performance.
+The ES enters the information in the work programs module of the Gateway system for each month, documents the source of verification in the Gateway system, and uploads a screenshot of the participant's hours to DIS.
+
+=== Qualifying & Nonqualifying Components
+
+The components are classified as qualifying or non-qualifying activities.
+
+*Qualifying Components*
+
+* Education Components
+* Work Components
+
+*Non-Qualifying Components*
+
+* Non-Education, Non-work Components
+
+
+=== Guidelines for Education/Training
+
+Referrals to education and training are geared toward the achievement of the participant's employment goal.
+Education and training activities are supported through the SNAP Works Program and limited to a maximum of twenty-four-months.
+The twenty-four-months limitation includes any combination of education and training activities in which the participant is involved.
+Job search and job readiness components can be included in the education/training curriculum.
+However, total hours involved in job search or job readiness must be less than 50% of the hours involved in education/training.
+
+The E&T provider must submit proof of attendance at the end of each month.
+The SNAP Works employment services specialist receives the monthly participation report by the 10^th^ calendar day of the following month for the previous month.
+This is necessary to document participation in components or other E&T activities and to verify the need to pay for related participants support services.
+
+E&T funds may not be used to pay for education and training, which are free to the public.
+E&T Funds cannot be used to pay for past due educational fees or fines.
+
+Basic and remedial education, GED preparation, education in English proficiency and post-secondary education are the types of adult education included in this E&T component.
+Participants who require educational training before they can fully benefit from employment search are targeted for this component.
+Participants are referred to existing training resources, which provide educational classes free of charge or through Pell Grants.
+
+=== Guidelines for Career/Technical and other Vocational Training
+
+Vocational training is a component that improves the employability of participants by providing training in a skill or trade allowing the participant to move directly into employment.
+SNAP Works participants may be assigned to occupational training.
+The chart below provides the guidelines for occupational training activities for participants.
+
+NOTE: Participants enrolled in an educational training as part of their Individual Employment Plan (IEP) remain work registrants at review and are not subject to food stamp student criteria.
+Refer to Section 3350.
+
+.EDUCATION COMPONENTS (Qualifying Activity)
+[cols=2*]
+|===
+| *Basic/Foundational Skills Instruction (Includes High School Equivalency Programs) (EPB)*
+| Education that provides an individual with basic literacy equivalent to at least grade 8 level and education to prepare a person to qualify for a high school equivalency diploma.
+
+| Minimum Participation Requirements
+a| Must have a need for basic education as a prerequisite for further educational learning needed for gainful employment.
+
+* ABAWDs must participate, a minimum of 20 hours per week.
+* Non-ABAWDs must participate according to the provider's program requirements.
+
+| Satisfactory Progress Definition
+| Meeting satisfactory academic progress.
+
+A probation period is allowable.
+
+
+| Participant Support Services Available
+| Participant Support Services reasonable and necessary for participation.
+
+| *Career/Technical Education Programs or Other Vocational Training (EPC)*
+| This is a short-term component that improves the employability of participants by providing training in a skill or trade allowing the participant to move directly into employment.
+These training programs have a direct link to the local job market.
+The training is designed to provide in-demand, high growth training in emerging industries resulting in the obtainment of industry recognized credentials.
+Currently, the SNAP Works Program offers training opportunities from certification classes to a two-year technical college associate degree.
+
+| Minimum Participation Requirements
+a| Individuals who have obtained a high school or equivalent diploma and is able to pass the entrance exam test.
+
+* ABAWDs must participate, a minimum of 20 hours per week.
+* Non-ABAWDs must participate according to the provider's program
+
+| Satisfactory Progress Definition
+| Meeting satisfactory academic progress.
+
+A probation period is allowable.
+
+| Participant Support Services Available
+| Participant Support Services reasonable and necessary for participation.
+
+| *English Language Acquisition (EPEL)*
+| Education to provide the participant with skills in speaking, reading, or writing English commensurate with the demands of their employment goal.
+
+| Minimum Participation Requirements
+a| Individuals who need to gain mastery of the English language to obtain and retain gainful employment.
+
+* ABAWDs must participate, a minimum of 20 hours per week.
+* Non-ABAWDs must participate according to the provider's program requirements.
+
+| Satisfactory Progress Definition
+| Meeting satisfactory academic progress.
+
+A probation period is allowable.
+
+| Participant Support Services Available
+| Participant Support Services reasonable and necessary for participation.
+
+| *Work Readiness Training (EPWRT)*
+| Intensive programs that include skill assessment and educational remediation services that prepare individuals for the workforce.
+Work readiness skills may include both foundational cognitive skills such as reading for information, applied mathematics, locating information, problem solving, and critical thinking and non-cognitive skills, or soft skills, which are defined as personal characteristics and behavioral skills that enhance an individual's interactions, job performance, and career prospects such as adaptability, integrity, cooperation, and workplace discipline.
+
+| Minimum Participation Requirements
+a| Individuals who need basic education services aligned with job readiness training activities.
+Those entering this component have basic reading, writing and math skills that need to be expanded to function productively in the workforce.
+
+* ABAWDs must participate, a minimum of 20 hours per week.
+* Non-ABAWDs must participate according to the provider's program requirements.
+
+| Satisfactory Progress Definition
+| Meeting satisfactory academic progress.
+
+A probation period is allowable.
+
+| Participant Support Services Available
+| Participant Support Services reasonable and necessary for participation.
+|===
+
+
+|===
+|Guidelines for Work Components
+|===
+[cols=1*]
+The State agency cannot mandate more than 120 hours per month. In addition, the hours worked by a participant in a work component (i.e. work experience), plus the hours worked by other household members, cannot exceed the value of the household monthly benefit divided by the higher of the applicable Federal or State minimum wage. Voluntary participants in work-based learning can volunteer to work more hours, so long as the voluntary E&T participant receives the same compensation for comparable work for comparable hours earned by non-SNAP E&T participants, and no minimum wage laws are violated. However, participants in a work activity cannot work additional hours, even on a voluntary basis, because their participation is limited to working off the value of their benefit. Voluntary participants are not subject to the above restrictions as long as the voluntary participants are paid a wage at least equal to the higher of the applicable Federal or State minimum wage for all hours spent in an E&T work program.
+
+.WORK COMPONENTS (Qualifying Activity)
+[cols=2*]
+|===
+| *Work Activity (Experience) (WA)*
+| Work Activity/Experience is a planned, structured learning experience that takes place in a workplace (private or non-profit sector) for a short-term period.
+Work experience may be paid or unpaid. Work experience assignments may not replace the employment of a regularly employed individual, and they must provide the same benefits and working conditions provided to regularly employed individuals performing comparable work for comparable hours.
+
+| Minimum Participation Requirements
+| Participants who have little to no work experience and need on-the-job experience to learn workplace skills and find a job.
+
+| Satisfactory Progress Definitions
+| Meeting satisfactory progress.
+
+
+
+| Participant Support Services Available
+| Participant Support Services reasonable and necessary for participation.
+
+| Work Based Learning/On the Job Training (WBLOJT)
+|
+Work-based Learning/On-the-Job provides knowledge or necessary skills needed to perform a job. The intent of the OJT program is to assist workers in developing skills leading to occupations providing adequate wages that ensure self-sufficiency. This type of work-based learning prepares individuals for industry-driven careers by combining academic training with occupation training.  Potential employers will be required to submit training plans to the State agency for approval. All training plans must clearly demonstrate that the participant will acquire the industry driven-occupational knowledge and skill set.
+
+•	Participants enrolled in OJT must meet the employer’s established qualifications and job specific criteria. Employers will assess the potential participants to ensure that they are appropriate for the training assignment.
+
+•	The length of participation in OJT will be defined by the provider. The length cannot extend beyond the timeframe set by the provider for the training assignment.
+
+| Minimum Participation Requirements
+
+| Participants with a Job Readiness Level of Near Job-Ready will be supported by the E&T program for up to 12 months.
+
+| Satisfactory Progress Definitions
+
+| Meeting satisfactory progress.
+
+| Participant Support Services Available
+
+| Participant Support Services reasonable and necessary for participation.
+|===
+
+.NON-EDUCATION, NON-WORK COMPONENTS (Non-Qualifying Activity)
+[cols=2*]
+|===
+| *Supervised Job Search (SJS)*
+| Counseling, job tips, seminars, workshops, career assessments and support provided to assist participants in successfully seeking employment.
+
+| Minimum Participation Requirements
+| Participants who have recent connection to the work industry.
+
+| Satisfactory Progress Definitions
+| Meeting satisfactory progress in the component.
+
+| Participant Support Services Available
+| Participant Support Services reasonable and necessary for participation.
+
+| Self-Employment Training (SET)
+
+| Self-employment training is a component that improves the likelihood of beginning a successful small business.  This component provides individuals with an alternative to traditional employment.
+
+The approved activities included under this component are as follows:
+•	Design business proposals,
+•	Choose a business location,
+•	Determine startup costs,
+•	Opportunities to fund business,
+•	Marketing research,
+•	Competitive analysis of targeted business area or
+•	How to buy an existing business or franchise.
+
+Self-employment training activities also include how to register your business and policies to remain legally compliant.  Participants also learn how to access small business grants and other business support services.
+Case management services for this component include but are not limited to:
+•	Analysis of business concept, professional vocational counseling,
+•	Guidance on resources needed to implement business plan.
+
+The self-employment training component is an option for individuals seeking a new or better employment opportunity.
+
+| Minimum Participation Requirements
+
+| SNAP Works participants who are motivated to be self-employed and want to start their own business may enroll in this component.
+
+| Satisfactory Progress Definitions
+
+| Meeting satisfactory progress.
+
+| Participant Support Services Available
+
+| Participant Support Services reasonable and necessary for participation.
+
+| Job Retention Service (JR)
+
+| Participants who have participated in an E&T component and then becomes employed during their participation  are eligible for job retention services.
+The job retention component is a supportive measure offered to eligible participants to increase the likelihood of long-standing, continuous employment through case management and coaching services. There is no limit to the number of times an individual may receive job retention services, as long as the individual has re-engaged with E&T prior to obtaining new employment.
+
+| Minimum Participation Requirements
+
+|
+
+Job Retention Service Participants *must meet all* the following criteria:
+
+•	Obtain gainful employment while   actively participating in an eligible E&T component
+
+•	Are SNAP eligible in the month of or the month prior to participation
+
+•	Be employed at least 30 hours weekly or the equivalent of 30 hours weekly X federal minimum wage
+
+•	Remain employed during participation months.
+gible for job retention services.
+
+
+
+
+| Satisfactory Progress Definition
+| Participants must maintain gainful employment for the duration of the job retention component.
+
+
+| Participant Support Services
+| The job retention component provides support services for at least 30 days and up to 90 days to individuals who have secured employment. Participant Support Services and incidentals will only be paid if reasonable and necessary for maintaining employment. Incidental payments are paid directly to the vendor and are a one- time payment of up to 75.00 per participant. The transportation support service amount is limited to 25.00 each month.
+|===

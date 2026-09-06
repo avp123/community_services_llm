@@ -1,0 +1,26 @@
+= 3300 Basic Eligibility Criteria Overview
+:chapter-number: 3300
+:effective-date: November 2019
+:mt: MT-57
+:policy-number: 3300
+:policy-title: Basic Eligibility Criteria Overview
+:previous-mt-number: MT-1
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An assistance unit (AU) member must meet certain non-financial eligibility criteria in order to receive benefits.
+
+== Basic Considerations
+
+Following is a list of non-financial eligibility criteria which must be applied to members of a food stamp AU prior to a determination of eligibility.
+
+* Cooperation with eligibility investigations
+* Lawbreakers
+* Intentional Program Violations
+* Citizenship/Alien status
+* Enumeration
+* Identity
+* Residency
+* FS work requirements

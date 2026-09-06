@@ -1,0 +1,104 @@
+= Appendix A SNAP Income Limits
+:chapter-number: Appendix A
+:effective-date: October 2025
+:mt: MT-84
+:policy-number: Appendix A
+:policy-title: SNAP Income Limits
+:previous-mt-number: MT-79
+
+include::partial$policy-header.adoc[]
+
+SUPPLEMENTAL NUTRITION ASSISTANCE PROGRAM (SNAP) INCOME LIMITS
+
+*Effective October 1, 2025 48 States and District of Columbia*
+
+[%header,cols="5*^"]
+|===
+| Household Size
+| Maximum Gross Monthly Income (130%) of Poverty Level
+| Maximum Net Monthly Income (100%) of Poverty Level
+| Monthly Gross Income Limit for Elderly/Disabled (165%) of Poverty Level
+| Maximum Allotments
+
+| 1
+| $1,696
+| $1,305
+| $2,152
+| $298
+
+| 2
+| 2,292
+| 1,763
+| 2,909
+| 546
+
+| 3
+| 2,888
+| 2,221
+| 3,665
+| 785
+
+| 4
+| 3,483
+| 2,680
+| 4,421
+| 994
+
+| 5
+| 4,079
+| 3,138
+| 5,177
+| 1183
+
+| 6
+| 4,675
+| 3,596
+| 5,934
+| 1421
+
+| 7
+| 5,271
+| 4,055
+| 6,690
+| 1571
+
+| 8
+| 5,867
+| 4,513
+| 7,446
+| 1789
+
+| Each Additional Member
+| +596
+| +459
+| +757
+| +218
+|===
+
+NOTE: Maximum Gross and Net Monthly Income figures are not used for computing the allotment amount.
+They are included as a reference for determining the household's eligibility.
+
+== Instructions for Basis of Issuance Table Use
+
+These tables are extended to meet the needs of certain categorically eligible households.
+Therefore, the amounts shown on the tables are higher than the net income limits for some household sizes.
+Households, which are not categorically eligible for SNAP, must have incomes below the appropriate income limits.
+
+To determine a household's monthly SNAP allotment using the Basis of Issuance tables:
+
+. Calculate the household's net monthly income.
+Households that are not categorically eligible for SNAP benefits, will have net monthly incomes which are lower than or equal to the amounts shown in the _**Net Monthly Income**_ column on the Basis of Issuance Table.
+. Find the appropriate net income amount, then go across to the appropriate household size on the Basis of Issuance Table to locate the allotment amount.
+
+. One and Two Person households that are categorically eligible will be eligible for at least $24, even if the tables do not show a benefit amount at their net income levels.
+
+To calculate the allotment manually (in lieu of step 2 above) or if the household is size 21 or larger:
+
+. Multiply the net monthly income by 30 percent.
+
+. Round the product up to the next whole dollar if it ends in 1-99 cents.
+
+. To obtain the household's allotment, subtract the result from the Maximum Allotment for the appropriate household size.
+However, if the computation results in $1, $3 or $5, round up to $2, $4 or $6, respectively.
+
+. If the allotment is for a *one or two-person household* and is less than $24, or is a negative number, then round to the minimum allotment of $24 for one and two-person households.

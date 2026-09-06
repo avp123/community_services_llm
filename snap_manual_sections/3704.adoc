@@ -1,0 +1,137 @@
+= 3704 Transitional Supplemental Nutrition Assistance Program (TSNAP)
+:chapter-number: 3700
+:effective-date: July 2025
+:mt: MT-83
+:policy-number: 3704
+:policy-title: Transitional Supplemental Nutrition Assistance Program
+:previous-mt-number: MT-78
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+Transitional Supplemental Nutrition Assistance Programs (TSNAP) provides benefits to SNAP assistance units (AU) that become ineligible for cash assistance because of changes related to earned income.
+Transitional benefits ensure that AUs continue to have their nutritional needs met as they transition from receiving cash assistance to working to have greater self-sufficiency.
+Assistance units can receive TSNAP for a period of five (5) months.
+
+== Basic Considerations
+
+SNAP AUs who are TANF eligible or who are receiving TANF or Refugee Cash Assistance (RCA) may be eligible for TSNAP if their cash assistance is terminated for employment-related reasons.
+
+A SNAP AU must be TANF eligible for at least *one month* in order to receive TSNAP.
+
+SNAP AUs that apply for TANF benefits may be eligible for TSNAP if the household becomes TANF eligible in the month of application.
+
+The transitional benefit is set at the current SNAP allotment level for five (5) months, beginning with the month of the TANF/RCA case closure or denial.
+
+The TANF/RCA case closure may be because of new or increased earnings or because another change occurred in the case, which caused existing earnings (with or without other income) to exceed the TANF income standard.
+
+To be eligible for TSNAP, the TANF/RCA case must be closed/denied for one of the following reasons:
+
+* New employment
+* Increase in earnings as a result of an increase in hours worked
+* Increase in salary or hourly wage
+* Earnings of an eligible adult are added to the TANF case
+* Termination of the TANF case to save TANF months as a result of new or increased earnings
+
+NOTE: TANF/RCA ineligibility may be caused by new or increased earnings and/or a concurrent change.
+If the concurrent change alone caused TANF/RCA ineligibility, the AU is ineligible for TSNAP.
+
+Transitional benefits begin the first month following closure of the TANF/RCA case and continue for a maximum of five (5) months.
+
+=== TSNAP Certification Period
+
+An AU member who leaves the assistance unit during receipt of TSNAP benefits must reapply for regular SNAP benefits in order to regain SNAP eligibility.
+
+The AU member may not continue to receive TSNAP benefits in a separate AU.
+
+Transitional benefits continue through the five-month period unless the AU re-applies and is approved for TANF/Refugee Cash Assistance (RCA) or re-applies for regular SNAP benefits.
+
+=== Ineligible Household Members
+
+TSNAP [.underline]#*is not*# available to AUs when:
+
+* The AU case is closed for failure to provide information that is necessary to determine eligibility
+* All AU members are IPV disqualified
+* The TANF case is closed due to failure to perform a TANF work requirement, and a SNAP sanction has been imposed
+* The TANF case is closed due to failure to perform a TANF personal responsibility
+* All AU members have failed to comply with SNAP work requirements
+* All AU members are ineligible students
+* All AU members are ineligible aliens
+* The AU is disqualified
+* The AU has failed to comply with SNAP reporting requirements
+
+NOTE: If an AU member is disqualified for an Intentional Program Violation during the TSNAP period, the disqualification must be imposed on the individual, and benefits adjusted accordingly.
+
+=== Mixed SNAP Households
+
+Mixed SNAP AU, where only some of the AU members who receive TANF/RCA are eligible for transitional benefits.
+However, any TANF/RCA case must be closed in order for the SNAP AU to be eligible for TSNAP.
+
+=== Determining the TSNAP Benefit
+
+Determine the TSNAP allotment by using the earned and unearned income that was included in the SNAP case the month prior to the TANF/RCA case closure, removing the TANF/RCA grant from the computation.
+
+AUs that qualify for TSNAP will begin their transition period and benefits on the first of the month following the last month of cash assistance.
+
+=== Notification of TSNAP Eligibility
+
+The AU must be notified when it is determined to be eligible for TSNAP and given the following information:
+
+* That it is eligible for TSNAP benefits
+* The transition period
+* That its SNAP benefit amount will remain the same as it was prior to the TANF/RCA case closure
+* That it is not required to report any changes in AU circumstances during the transitional period unless someone in the AU moves out of the household and applies for SNAP in another AU.
+* That the agency will not act on changes reported by the AU during the transitional period, but the AU may voluntarily report and verify changes that would result in increased benefits and reapply for regular SNAP benefits.
+* That the agency must reevaluate its SNAP eligibility prior to the end of the five-month transition period.
+* That if the AU begins receiving TANF or Refugee cash assistance during the transitional benefit period, the AU must reapply for regular SNAP benefits at the same time.
+* That if the AU has been recertified with a new certification period for transitional benefits as a result of a change and begins receiving TANF or Refugee cash assistance during this period, the AU must recertify for benefits.
+
+=== Changes/Reporting Requirements
+
+The TSNAP AU is not required to report changes during the five-month period unless an AU member leaves the AU and applies for SNAP in another AU.
+
+TSNAP AUs experiencing changes that would result in benefit increases may request to reapply for regular SNAP benefits before the expiration of the five-month transitional period, thereby ending their transitional period early.
+
+TSNAP AUs will be notified that they may voluntarily report changes that may result in an increase in SNAP benefits, and may request to recertify for regular benefits, but they must reapply for regular benefits in order to receive the increase and end their transitional benefit period.
+
+A TSNAP AU may apply for regular SNAP at any time during the TSNAP period.
+
+If a TSNAP AU applies for regular SNAP during the transitional period but does not follow through with the application or is determined to be ineligible for regular SNAP, transitional benefits should be continued for the remainder of the five-month period.
+
+TSNAP AUs are not subject to sanctions in instances where non-compliance with SNAP employment and training requirements occurs during the TSNAP period.
+
+Assign the AU a new certification period that conforms to the five-month transitional period.
+
+=== Determining the Transitional Period
+
+The current certification must be changed to allow the five-month extension.
+For example, Simplified Reporting (SR) AUs that have less than 5 months remaining in their certification period, must be extended beyond twelve months in order to receive their full five months of TSNAP.
+
+=== Ending TSNAP
+
+TSNAP AUs will be sent an appointment notice for recertification the month before the end of the five-month certification period.
+
+If an AU does not respond to the appointment notice, the TSNAP certification will expire, and the case will be closed automatically.
+
+== Procedures
+
+Determine if the TANF/RCA recipient qualifies for TSNAP benefits based on policy.
+
+If they do not qualify, continue with regular SNAP procedures.
+
+If they qualify for TSNAP, follow the steps below.
+
+[horizontal,labelwidth=10]
+Step 1:: Determine the last month the AU received TANF/RCA prior to the case closing.
+This month will be the month that SNAP benefits will be frozen.
+The TSNAP allotment should be set or frozen at this same level for the transitional period.
+
+Step 2:: The transitional benefits will be determined by using the case circumstances for the freeze month.
+The AU will receive this amount each month during the five-month transitional period.
+
+Step 3:: If changes have already been made in the Gateway system for any months during the TSNAP period, Gateway must continue to issue and reflect the freeze month circumstances and benefit amount unless an annual cost-of-living increase occurs during the transitional period.
+
+Step 4:: Document the case name and number, the freeze month, the benefit amount, and the date the client's benefits will end.
+
+Step 5:: Send the TSNAP Fact Sheet to the AU informing them of their eligibility for transitional benefits.

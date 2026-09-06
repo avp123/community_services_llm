@@ -1,0 +1,72 @@
+= 3616 Child Support Deduction
+:chapter-number: 3600
+:effective-date: May 2024
+:mt: MT-77
+:policy-number: 3616
+:policy-title: Child Support Deduction
+:previous-mt-number: MT-75
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+A child support deduction is allowed when an AU member is legally obligated to pay support for children outside of the AU.
+
+== Basic Considerations
+
+Legally obligated child support payments paid by an AU member to or for a non-AU member, including payments made to a third party on behalf of the non-AU member, are allowed as a child support deduction.
+
+Deduct the actual monthly amount of legally obligated child support paid by an AU member to or for an individual who is not a member of the same AU.
+Allowable payments may include:
+
+* Cash payments made directly to or for an individual.
+* Support such as the costs of clothing or infant products.
+* Direct payments to a third party in lieu of child support payment.
+
+Verify the:
+
+* legal obligation to pay child support, and
+* amount legally obligated to pay, and
+* current payment.
+
+The following sources may be used to verify the legal obligation to pay child support:
+
+* Court order
+* Order issued through an administrative process
+* Divorce or separation documents
+* Verbal confirmation of existing documents from a knowledgeable source, such as the Division of Child Support Services (DCSS), probation officer, court officer or other official source.
+
+=== Budgeting Child Support Deduction
+
+The following types of sources may be used to verify the amount of actual child support paid during the most current three-month period.
+
+* Receipts
+* Checks
+* Personal money logs
+* Administrative records
+* Statement from individual paying the support
+* Division of Child Support Services (DCSS) computer matches or records.
+
+To allow past due child support as a deduction, the amount that is past due must be verified and not have been deducted in a previous SNAP budget.
+
+Also verify the legal obligation to pay the past due amount if it was not established by the original child support document.
+
+Alimony is *not allowed* as a child support deduction.
+
+Verify:
+
+* at initial application;
+* at recertification.
+Refer to Section xref:3710.adoc[];
+* at interim change.
+Refer to Section xref:3715.adoc[];
+* at periodic reporting.
+Refer to xref:3730.adoc[];
+
+* or when the information is questionable.
+
+Document the child support deduction as follows:
+
+* source of verification of the legal obligation to pay child support and the amount legally obligated to pay.
+** source of verification for dates and amounts of actual child support payments for the most current three-month period.
+** budgeting process and amount of child support deduction to be used in current and/or ongoing month's budgets.

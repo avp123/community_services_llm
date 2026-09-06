@@ -1,0 +1,219 @@
+= 3730 Periodic Reporting
+:chapter-number: 3700
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3730
+:policy-title: Periodic Reporting
+:previous-mt-number: MT-85
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 273.12(a)(5)(iii)
+
+== Requirements
+
+A review of AU circumstances is required at the midpoint, or at an established frequency, during the certification period for the continuation of Supplemental Nutrition Assistance Program (SNAP) benefits.
+Periodic reporting is required for households that are certified for longer than 6 months if the agency implements extended certification periods.
+Households must file a periodic report in the 6^th^ month of their certification period for households certified for 12 months and in the 12^th^ month of their certification period for households certified for 24 months.
+
+NOTE: *Effective March 2, 2026, Periodic Reporting will be phased out for regular SNAP AUs since the agency has terminated extended certification periods.
+Active households that have not yet completed their recertification will continue to complete Periodic Reports as required until their next recertification.
+Once the household is assigned a new certification period at recertification, periodic reports will no longer be required.*
+
+NOTE: If a household reports certain changes in circumstances during the certification period, the frequency of the periodic report may change.
+For example, if a customer has a 24-month certification period and reports earned income at interim change, the periodic report will be due every 6 months even though the AU keeps the same 24-month certification period.
+
+== Basic Considerations
+
+The periodic report process includes filing and submitting a completed periodic report, having certain information verified, resolving discrepancies, and processing information in the eligibility system within the required standard of promptness.
+An interview is [.underline]#*not*# required for a periodic report.
+
+The periodic report process consists of a review of the AU's household composition, change of address, ABAWD work requirements, income changes, including lottery and gambling winnings, child support deductions, and resources. The customer *must* address all these sections on the form.
+
+A periodic report form is considered filed when it is signed, [.underline]#completed in its entirety#, and received by the agency. Unlike applications and recertifications, a periodic report form is *not* considered filed with only a name, address, and signature. If the customer does not address all the above sections and only signs the form, it is considered incomplete and should *NOT* be considered for continued eligibility until the form is completed.
+
+Benefits [.underline]#are not continued# if the household fails to submit a complete periodic report and provide any required verification.
+
+== Verification
+
+At periodic report, if no changes are reported and there are no discrepancies, then *verification is not required*.
+
+At Periodic Report, verify the following current information *IF* it has changed:
+
+• household composition
+• address and applicable shelter costs
+• ABAWD work requirements
+• gross income (earned and self-employment)
+• unearned income (if it has changed by [.underline]#more than $100#, or the income will cause the case to terminate)
+• lottery and gambling winnings
+• child support deductions
+
+
+NOTE:  At Periodic Report, if a change is reported that impacts work registration status, then it must be reviewed, and verification may be required based on the policy for the specific work registration status. Refer to xref:3350.adoc[].
+
+Any information that is incomplete, inaccurate, inconsistent, or questionable must be verified.
+
+Refer to xref:3035.adoc#chart-3035-1[Chart 3035.1, Summary Verification Chart] for verification requirements at periodic reporting.
+
+== Reported Changes
+
+Changes reported during the periodic report process are effective in the first month of the new reporting period. If a customer selects "No" regarding any changes on the PR form, but provides verification (i.e., check stubs, lease, etc.), it is considered a reported change, and staff must review and act on the verification received.
+
+Periodic reporting is currently waived for Senior SNAP households unless, during the certification period, a Senior SNAP household reports a change that makes the household ineligible for Senior SNAP but remains eligible for SNAP.
+The household will be converted to a regular SNAP AU and will be required to submit periodic reports until the current certification period ends.
+At recertification, the appropriate certification period will be assigned, and periodic reports will no longer be required.
+Refer to xref:3725.adoc[].
+
+NOTE: *The certification period is not shortened or extended during the periodic reporting process.
+Certification periods are only updated at recertification.*
+
+== Expedited Services
+
+Periodic reports are not considered applications; therefore, expedited processing is not applicable.
+
+== Standard of Promptness (SOP)
+
+Eligible AUs must receive notification of their eligibility and notification of receipt of their benefits by the next issuance cycle.
+Ineligible AUs must receive adequate notification of their termination by the end of the month in which the periodic report is due.
+
+== Periodic Report Notices
+
+A periodic report notice is system-generated on the 15^th^ of the month before the periodic report due month.
+The notice is used to notify the AU that the household is due for a periodic report.
+The notice includes the following information:
+
+* the date by which the AU must file a periodic report to receive uninterrupted benefits
+* the consequences of failing to file a periodic report and/or complying with the periodic report process
+* the potential delay in SNAP benefits due to a late periodic report submission
+* the date the SNAP case is due to close for failure to submit a completed periodic report form
+* the right to receive a periodic report form and have it accepted if it contains a name, address, and signature, and is completed in its entirety
+* the right to request a periodic report form by mail or in person
+* the ways to submit a periodic report
+* that the AU must complete the periodic report process and provide the required verification
+* the name and telephone number of the agency
+* the right to request a fair hearing
+
+An additional periodic report notice is system-generated on the 5^th^ of the periodic report month *IF* the AU has not submitted a [.underline]#completed# periodic report form.
+This notice is to notify the AU that the agency has not received its completed periodic reporting form.
+The notice combines the reminder notice and adequate notice of termination/change into one correspondence.
+In addition to the above information, the reminder notice includes the following:
+
+* a completed periodic report form has not been received by the agency
+* the required actions to continue receiving SNAP benefits
+* the required actions to reapply for benefits if the case terminates
+* the termination reason if the completed form is not received
+
+NOTE: The AU will [.underline]#not# receive another reminder notice or termination notice if the household does not comply with the periodic report process.
+
+
+== Required Forms at Periodic Reporting
+
+* xref:attachment$form-528.pdf[Form 528, Supplemental Nutrition Assistance Program (SNAP) Periodic Report Form]
+* xref:attachment$form-859.pdf[Form 859, SNAP Consolidated Work Requirements Notice], if work registrants are in the AU (must be mailed manually if not automatically sent by Gateway)
+
+
+NOTE: If a household submits a form 297 or 508 for a periodic report, the household will not be required to submit a form 528 to complete their periodic report. If the customer uses a form 297 or 508, all the areas that apply to the submission of a periodic report must be completed to be considered a valid periodic report. Those areas are household composition, change of address, and applicable shelter costs, ABAWD work requirements, income changes, lottery/gambling winnings, child support deduction, and resources.
+Case note documentation must be added to explain the use of form 297 or 508 to complete the household's periodic report.
+
+== Electronic Signatures
+
+Electronic signatures utilizing Adobe Signature or other E-Signature software will be acceptable for all SNAP forms.
+Examples of electronic signatures are the use of a Personal Identification Number (PIN), a computer password, clicking on an “I accept these conditions” button on a screen, or clicking on a “Submit” button on a screen. Adobe Signature, DocuSign, and Dropbox Sign are common software that offer E-Signature.
+A typed name on the signature line of a paper application is not acceptable.
+
+NOTE: If an authorized representative applies on behalf of a customer, the application must be signed by either a responsible member of the household or the household's authorized representative.
+
+== Procedures
+
+An AU may file and submit a completed periodic report in one of the following ways:
+
+* in person
+* through an authorized representative (Refer to xref:3120.adoc[])
+* by fax or other electronic transmission
+* by mail
+* during a home visit with DFCS staff
+* through a SNAP outreach partner
+* through the Georgia Gateway system
+
+*An interview is not required for a periodic report.*
+
+Follow the steps below to complete a periodic report.
+
+[horizontal,labelwidth=10]
+*Step 1:* Mail the AU a periodic report notice in the month preceding the month in which the periodic report is due so that the AU may submit a periodic report by the 5^th^ day of the due month.
+
+NOTE: If a periodic report is not received by the 5^th^ day of the due month, a system-generated periodic report combined notice will be mailed to the household.
+
+*Step 2:* Examine the periodic report form to determine if the form is incomplete or not signed.
+If the form is incomplete or not signed, the eligibility specialist must enter “No” on the Periodic Report Details page to indicate such.
+This will trigger the periodic report combined notice to be sent, which is a reminder to the customer that the agency has not received a completed Periodic Report by the 5^th^ of the due month.
+
+*Step 3:* Review the last initial application, recertification, or periodic report prior to completing the periodic report.
+
+NOTE: Third-party verification is only required if the household has reported a change in its household circumstances or discrepancies exist. An interface should only be accessed if verification is required to complete the periodic report, *and* the interface accessed provides results that are considered verified upon receipt.  Contact the customer to resolve any discrepancies.
+
+*Step 4:* Determine if verification is required to complete the Periodic Report.
+If so, send a VCL allowing the customer 10 calendar days to return the information.
+Refer to xref:3035.adoc#chart-3035-1[Chart 3035.1,] xref:3035.adoc[], for verification requirements at periodic reporting.
+
+*Step 5:* If the form and all required information are received by the appropriate SOP, document the information obtained and verified during the periodic reporting process in the Gateway system and indicate that the periodic report is complete.  *DO NOT assign a new certification period.*
+
+*Step 6:* If the form is not returned or all required verification is not received by the end of the appropriate SOP, close the case.
+
+*Use the information in the chart below to process SNAP Periodic Reports.*
+
+[#chart-3730-1]
+.CHART 3730.1 - PROCESSING SNAP PERIODIC REPORTS
+|===
+| IF THE | THEN
+
+| AU files a periodic report *on or before the 5^th^ day* of the month in which the periodic report is due
+
+*AND*
+
+has met all periodic report requirements
+| Process the periodic report by the end of the periodic report due month.
+If the end of the month falls on a weekend or holiday, process the periodic report by the last workday prior to the end of the periodic report due month.
+
+| AU files a periodic report *on or before the 5^th^ day* of the month in which the periodic report is due
+
+*AND*
+
+[.underline]#fails to return the required verification# by the requested deadline (This does not include allowable deductions.)
+| Terminate the AU after the verification deadline, but no later than the end of the periodic report due month.
+If the end of the month falls on a weekend or holiday, terminate the AU by the last workday prior to the end of the periodic report due month.
+
+If verification is submitted before the last day of the periodic report due month, reopen the case, and provide a full month of benefits beginning with the first month of the new reporting period.
+
+Benefits must be made available to the AU no later than ten days after its next issuance date.
+
+| AU files a periodic report *after the 5^th^ day* of the month in which the periodic report is due
+
+*AND*
+
+has met all periodic report requirements
+| Process the periodic report to allow  the AU to receive its SNAP allotment no more than ten days after its next issuance cycle.
+
+| AU files a periodic report, and the AU was terminated for failure to return verification, and/or the SOP has expired
+
+*BUT*
+
+Verification was returned within 30 days following the periodic report due month.
+
+*AND*
+
+has met all periodic report requirements
+| Reopen the case and prorate benefits from the date the verification is received, and all periodic report requirements are met.
+Process the case within 5 workdays after receipt of the verification.
+
+| AU [.underline]#fails to file a periodic report# in the month in which the periodic report is due during the current certification period, but files a periodic report within 30 days following the periodic report due month of the current certification period
+| Reopen the case and prorate benefits from the date the periodic report is received.
+Process the case to allow the AU to receive their benefits by the 30^th^ day from the date the periodic report was received.
+
+Expedited processing is not applicable.
+|===
+
+NOTE: The agency must give assistance units (AU) at least 10 calendar days to provide any required verification.
+Refer to xref:3035.adoc[].

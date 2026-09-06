@@ -124,6 +124,134 @@
 .snap-root--applicant {
   --snap-accent: #1b3a6b;
   --snap-accent-hover: #142c52;
+  /* Darker than the caseworker muted grey — better contrast on white (WCAG AA) */
+  --snap-text-muted: #494540;
+  --snap-base-font: 18px;
+}
+
+.snap-root--applicant.snap-root--large-text {
+  --snap-base-font: 22px;
+}
+
+/* ── Applicant accessibility: bigger type, roomier touch targets ── */
+.snap-root--applicant .snap-response-body {
+  font-size: var(--snap-base-font);
+  line-height: 1.85;
+}
+
+.snap-root--applicant .snap-user-bubble {
+  font-size: var(--snap-base-font);
+  line-height: 1.6;
+}
+
+.snap-root--applicant .snap-welcome-title {
+  font-size: calc(var(--snap-base-font) + 8px);
+}
+
+.snap-root--applicant .snap-welcome-sub {
+  font-size: calc(var(--snap-base-font) - 2px);
+  line-height: 1.6;
+}
+
+.snap-root--applicant .snap-synthesizing-text,
+.snap-root--applicant .snap-dots {
+  font-size: calc(var(--snap-base-font) - 2px);
+}
+
+.snap-root--applicant .snap-response-body h1 { font-size: calc(var(--snap-base-font) + 3px); }
+.snap-root--applicant .snap-response-body h2 { font-size: calc(var(--snap-base-font) + 1px); }
+.snap-root--applicant .snap-response-body h3 { font-size: var(--snap-base-font); }
+
+.snap-root--applicant .snap-example-btn {
+  font-size: calc(var(--snap-base-font) - 3px);
+  padding: 12px 18px;
+  min-height: 44px;
+}
+
+.snap-root--applicant .snap-disclaimer {
+  font-size: 13px;
+  color: var(--snap-text-muted);
+}
+
+.snap-root--applicant .snap-input {
+  font-size: var(--snap-base-font);
+}
+
+.snap-root--applicant .snap-input-pill {
+  padding: 14px 14px 14px 22px;
+}
+
+.snap-root--applicant .snap-send-btn {
+  width: 44px;
+  height: 44px;
+  font-size: 19px;
+}
+
+.snap-root--applicant .snap-mode-switch-link,
+.snap-root--applicant .snap-new-btn,
+.snap-root--applicant .snap-logout-btn {
+  font-size: 14px;
+  padding: 10px 16px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.snap-root--applicant .snap-questions {
+  margin-top: 22px;
+  border-width: 2px;
+  border-radius: 14px;
+}
+
+.snap-root--applicant .snap-questions-header {
+  font-size: calc(var(--snap-base-font) - 2px);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: normal;
+  padding: 16px 18px;
+}
+
+.snap-root--applicant .snap-question-text {
+  font-size: var(--snap-base-font);
+  font-weight: 700;
+}
+
+.snap-root--applicant .snap-question-item {
+  padding: 18px;
+  min-height: 44px;
+}
+
+.snap-root--applicant .snap-learn-more {
+  font-size: calc(var(--snap-base-font) - 2px);
+  font-weight: 700;
+  padding: 14px 22px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  border-width: 2px;
+  border-radius: 26px;
+}
+
+/* ── Read-aloud button (applicant mode) ── */
+.snap-listen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding: 9px 16px;
+  min-height: 40px;
+  background: #eef3fb;
+  border: 1px solid #c8ddf5;
+  border-radius: 20px;
+  color: #1a3a6a;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.snap-listen-btn:hover {
+  background: #ddeaf8;
 }
 
 .snap-new-btn {

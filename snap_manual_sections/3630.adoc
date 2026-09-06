@@ -1,0 +1,232 @@
+= 3630 Budget for an AU with Sponsored Aliens
+:chapter-number: 3600
+:effective-date: December 2019
+:mt: MT-58
+:policy-number: 3630
+:policy-title: Budget for an AU with Sponsored Aliens
+:previous-mt-number: MT-27
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An alien lawfully admitted into the U.S. for permanent residence under an agreement with a sponsor may have the income and resources of the sponsor considered in determining eligibility for food stamp benefits.
+
+== Basic Considerations
+
+A sponsor is a person or organization that executes an Affidavit of Support on behalf of the alien as a condition of the aliens' entry into the U.S.
+
+Most sponsored aliens enter the United States as lawful permanent residents.
+Sponsors who file the Affidavit of Support agree to provide the financial support necessary to maintain the alien at an income that is at least 125% of the federal poverty level.
+In many situations sponsored aliens are family members of the sponsor.
+Not all sponsors agree to financially support the alien.
+This is the case with some organizations or churches that may only agree to help the alien enter the country but do not agree to provide support.
+Refugees, asylums, and parolees are not usually sponsored aliens.
+
+=== Deeming
+
+The immigrant's sponsor and the sponsor's spouse (who has signed a legally binding affidavit of support) will have their income and resources counted as a part of the immigrant's own income and resources when determining the immigrant's eligibility and benefit amount.
+Attribution of the sponsor's income and resources to the immigrant is called deeming.
+Deeming is not done for AU members who are sponsored by an agency.
+
+Verification of whether an immigrant has a sponsor who has signed a binding affidavit of support is obtained by submitting to INS, the Document Verification Request and Supplement, INS Form G-845 and G-845 Supplement, and requesting completion of block #7 - Affidavit of Support.
+Information provided by the INS includes the name, social security number, and address of the immigrant's sponsor.
+
+Pending verification, the State agency does not delay, deny, reduce or terminate the individual's eligibility for benefits on the basis of the individual's immigration status.
+
+The deeming requirements apply only to immigrants whose sponsor has signed a legally binding affidavit of support, known as the 213A, Affidavits - Form I-864 or I-864A, on or after December 19, 1997.
+
+Deeming is not applied if an affidavit of support was signed prior to December 19, 1997.
+These affidavits of support are not considered legally binding.
+
+=== Who is exempt from Deeming
+
+The following groups of aliens are not subject to deeming rules:
+
+* *An immigrant whose sponsor has not signed a legally binding affidavit of support as discussed above.*
+
+* *Immigrants without sponsors*: In general, legal immigrants who enter the country under provisions of immigration law other than the family-sponsored categories do not have sponsors that incur a liability when the immigrant obtains means-tested benefits.
+Included in this group are refugees, asylums, parolees, Cuban/Haitian entrants, conditional entrants and aliens sponsored by agencies.
+
+* *Battered Spouse or Child Exception:* Deeming also does not apply during any 12-month period if the alien is a battered spouse, battered child or parent, or child of a battered person, providing the battered alien lives in a separate household from the person responsible for the battery.
+The exemption can be extended beyond the 12-month period if the alien demonstrates that the battery is recognized in a court or administrative order and if the agency administering the benefits determines that the battery has a substantial connection to the need for benefits.
+
+* *Sponsor in same food stamp household:* If the sponsor lives in the same AU as the alien, deeming does not apply because the sponsor's income and resources are already counted.
+However, if the sponsor receives food stamps in another household, deeming is applicable.
+
+* *Ineligible Member:* If the sponsored alien is ineligible for food stamps because of immigration status, the sponsor's resources and income are not deemed.
+If the alien AU member does not wish to provide information about the sponsor, the alien AU member may voluntarily become an ineligible alien for eligibility determination.
+Refer to xref:3635.adoc[].
+
+* Children who are qualified aliens and under age 18.
+
+* *Immigrant whose deeming period has ended*.
+Deeming of the sponsor's resources and income last until the following occurs:
+** The sponsored immigrant becomes a naturalized citizen;
+** The sponsored immigrant can be credited with 40 qualifying quarters of work;
+** The sponsored immigrant is no longer a lawful permanent resident (LPR) and leaves the U.S.;
+** The sponsored immigrant meets one of the exemptions listed above; or
+** The sponsor or the sponsored immigrant dies.
+
+* *Indigent Alien AU.* If the total monetary value of the alien's assets is 130% of the FPL for the alien's AU size, the alien's AU is considered to be indigent.
+Do not deem the sponsor's resources and income to the alien's AU when determining eligibility and benefit level.
+The indigent determination is renewable every 12 months after a full review.
+
+=== Determining Indigence
+
+Take the following steps to make a determination of indigence:
+
+[horizontal,labelwidth=10]
+Step 1:: Determine if the sponsored alien is indigent.
+(Indigent Determination)
++
+--
+* Total income of alien's AU.
+* Add cash or In-Kind payment from sponsor.
+* Add cash or In-Kind payment from others.
+* Obtain a total mandatory value of all of the above.
+* Compare total value to 130% of the FPL.
+
+NOTE: Use the best possible information available to determine the monetary value of an in-kind payment.
+A statement from the source of the in-kind payment, AU's statement, and third-party documents may be used as verification.
+Verification is not required if no support is received from the sponsor.
+--
+
+Step 2:: Report the indigent alien to the U.S. Attorney General.
+Use the attached form letter to notify the Attorney General.
+Inform the alien AU that their names and addresses, and the names and addresses of their sponsor will be provided to the U.S. Attorney General.
++
+--
+NOTE: If the alien AU member does not wish to have information about the alien or the alien's sponsor reported to the attorney general, the AU member may voluntarily become an ineligible alien for the eligibility determination.
+Refer to xref:3635.adoc[].
+
+Notify the U.S. Attorney General by mailing a written notice of the determination for public assistance, the name of the sponsored immigrant, and the name of the sponsor to the following address:
+
+[%hardbreaks]
+U.S. Immigrant and Naturalization Service Statistics Division
+425 First Street, N.W., Room 4034
+Washington, D.C. 20536
+RE: "Determination under 421(e) of the Personal Responsibility and Work Opportunity Reconciliation Act of 1996."
+
+Determine the alien AU's eligibility for benefits using normal processing standards.
+
+NOTE: FSP financial eligibility policy is not used in the indigent determination.
+Monetary sources that are excluded (in-kind payments) when determining FSP eligibility and benefit level are not excluded in the indigent determination.
+
+If the sponsored alien is not considered indigent, use the deeming budgets in Section 3630 to determine the alien AU's eligibility and benefit level.
+Do not report these cases to the U.S. Attorney General.
+--
+
+== Budgeting
+
+Follow the budgeting procedures provided in this section, if a sponsor's and sponsor spouse's resources and income are deemed to an alien's AU.
+
+=== Resources
+
+Follow the steps below to determine the amount of resources to apply.
+
+[horizontal,labelwidth=10]
+Step 1:: Determine the total nonexempt, non-excluded liquid and non-liquid resources of the sponsor and the sponsor's spouse.
+
+Step 2:: Subtract $1500 from the total determined in Step 1.
+
+Step 3:: Divide the results of Step 2 by the number of aliens applying for or receiving food stamps and for whom this sponsor is sponsoring.
+This step determines the value of the countable resources assigned to each alien.
+
+Step 4:: Add the alien AU's countable resources to the countable resources from Step 3 for each alien who is a part of the sponsored alien's AU.
+
+Step 5:: Compare the sponsored alien's resources to the appropriate FSP resource limit.
+
+=== Income
+
+Follow the steps below to determine the amount of income to count in the alien's AU:
+
+[horizontal,labelwidth=10]
+Step 1:: Determine the amount of countable gross earned income of the sponsor and the sponsor's spouse.
+
+Step 2:: Subtract 20% from the total countable gross earned income.
+
+Step 3:: Determine the amount of the countable unearned income of the sponsor and the sponsor's spouse.
+
+Step 4:: Add the results of Step 2 and Step 3 together.
+
+Step 5:: Subtract the food stamp maximum gross monthly income amount for an AU equal to the size of the sponsor's dependents which includes: the sponsor's spouse and/or any other person who is claimed or could be claimed by the sponsor or the sponsor's spouse for federal income tax purposes.
+
+Step 6:: Divide the result of Step 5 by the number of aliens who are applying for and/or receiving food stamps and whom this sponsor sponsors.
+
+Step 7:: Add the alien AU's countable unearned income to the countable unearned income determined in Step 6 for each alien who is a part of this sponsored alien's AU.
+
+Step 8:: Count the total amount of unearned income determined in Step 7 in the food stamp budget of the sponsored alien.
+
+NOTE: Any money paid directly to the alien by the sponsor or sponsor's spouse that exceeds the amount to be deemed to the alien and/or alien's AU is counted as unearned income in addition to the deemed income.
+
+== Procedures
+
+Use the chart below to apply Food Stamp Program policy to a sponsored alien's situations.
+
+[#chart-3630-1]
+.CHART 3630.1 - SPONSORED ALIENS
+|===
+^| IF ^| THEN
+
+| the alien is sponsored by a public or private organization
+| do not deem any income to the alien from the organization or group.
+
+Determine the alien's eligibility for FS based solely on the alien's income and resources.
+
+| the sponsor also sponsors other aliens
+| divide the total income and resources to be deemed, if any, from the sponsor by the number of alien AU members applying for or receiving food stamps.
+
+Refer to Food Stamp budgeting procedures in this chapter.
+
+| the alien changes sponsors
+| Recalculate the amount to be deemed, if any, based on the new sponsor's income and resources.
+
+| the alien fails to obtain the sponsor's cooperation or to provide needed information
+| the sponsored alien is ineligible to be included in the AU.
+
+Establish the eligibility of the remaining AU members whose eligibility is not affected by the income/resources of the sponsor.
+Refer to xref:3635.adoc[] for treatment of an ineligible alien's income and resources.
+
+| the sponsor dies
+| delete the sponsor's income and resources from the budget.
+
+| the alien loses his sponsor (the sponsor revokes the sponsorship agreement)
+| continue to budget the previous amount of sponsor deemed income until the alien obtains a new sponsor.
+
+| the sponsor's whereabouts are unknown
+| the sponsored alien is ineligible for that period of time for which the sponsor is liable for support.
+
+Establish eligibility of the remaining AU members whose eligibility is not affected by the income/resources of the sponsor.
+Refer to xref:3635.adoc[] for treatment of an ineligible alien's income and resources.
+
+| the AU receives an overpayment/over issuance
+a| the alien and sponsor are jointly liable for the overpayment unless the sponsor has good cause or was not at fault.
+
+NOTE: Notify the sponsor by letter regarding the overpayment and his right to a fair hearing.
+|===
+
+== Verification
+
+Request and verify the following information from a sponsored alien:
+
+* at application
+** the sponsored alien's date and place of birth and the alien's registration number
+** the date of the sponsored alien's entry or admission as a lawful permanent resident as established by INS
+** name, address and phone number of the sponsor's spouse (if applicable)
+** provision of the INS Act under which the sponsored alien was admitted to the U.S.
+
+* at application and all periodic reviews
+** the number of dependents for federal income tax purposes of the sponsor (and spouse, if applicable)
+** income and resources of the sponsor (and spouse, if living together)
+** names or other identifying information of all aliens for whom the sponsor has signed an Affidavit of Support.
+
+INS documents that may verify sponsorship include:
+
+* I-864 or I-864A, Affidavit of Support under section 213A.
+
+== Documentation
+
+Document the information obtained during the interview.
+
+Upload copies of INS documents in the Document Imaging System (DIS) in Gateway.

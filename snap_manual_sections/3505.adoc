@@ -1,0 +1,73 @@
+= 3505 Income and Eligibility Verification System (IEVS)
+:chapter-number: 3500
+:effective-date: November 2025
+:mt: MT-85
+:policy-number: 3505
+:policy-title: Income and Eligibility Verification System (IEVS)
+:previous-mt-number: MT-83
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 273.2(b)(2)
+
+== Requirements
+
+The Income and Eligibility Verification System (IEVS) is a federally operated system through which agencies request personal data, wage, and benefit information on applicants and recipients from other states and federal agencies.
+
+== Basic Considerations
+
+IEVS computer matches are performed by Gateway with the following files from other agencies:
+
+
+* Interstate Files
+* SSA Prisoner Verification Inquiry
+* SSA Death Verification Inquiry
+* SSA BENDEX
+
+Computer matches are also performed by Gateway with the Georgia Department of Corrections (DOC) and National Accuracy Clearinghouse (NAC).
+
+A match is completed on wage and benefit information between Gateway and another federal or state computer file.
+If there is information in both systems for the same individual, the information is compared to the information in Gateway.
+If the information in one system differs from the information in Gateway, a system-generated alert is sent to inform the worker of the discrepancies.
+The worker takes action to resolve the discrepancies and documents those actions in the case notes.
+Refer to the current Georgia Gateway Documentation Standards for documentation requirements.
+
+The SSA Prisoner Verification Inquiry and SSA Death Verification Inquiry match the files of the Social Security Administration with Gateway files to determine if assistance unit (AU) members are incarcerated or deceased.
+The Georgia DOC inquiry also matches the files of the DOC with Gateway to determine if an AU member is incarcerated.
+
+The National Accuracy Clearinghouse (NAC) interface matches files between Georgia and other states to prevent clients from receiving duplicate benefits in multiple states at a time.
+
+
+
+== Procedures
+
+Follow the procedures below to process data received from computer matches:
+
+=== Processing Data Matches
+
+Use information received from the matches to determine ongoing and historical eligibility and benefit levels.
+
+Complete case actions to resolve discrepancies within 45 days of receipt of the information.
+
+Completion of case actions may be postponed to the next recertification if the actions cannot be completed due to non-receipt of verification already requested from a collateral contact.
+
+=== Verification
+
+Consider the following information as a lead and [.underline]#verify# the information when a match is received:
+
+* earned income listed on DOL wage matches
+* questionable IEVS information
+* prisoner verification data
+* death match data
+
+=== Documentation
+
+Record the following information:
+
+* results of the case record screening
+* the reason a discrepancy does not exist, if applicable
+* date verification requested and from whom verification was requested
+* date action has been taken to correct ongoing benefits
+* date of completion of case action to resolve the discrepancy

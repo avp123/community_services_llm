@@ -1,0 +1,19 @@
+= Policy and Manual Management System (PAMMS)
+
+PAMMS is the Policy and Manual Management System of the https://dhs.georgia.gov/[Georgia Department of Human Services (DHS)].
+It serves as a centralized electronic warehouse of the policies and manuals for the programs and services provided by the DHS.
+
+Use the navigation on the left to locate the policies and manuals for a given program or service.
+You can also search for a policy or manual using the search box located in the top navigation bar.
+
+== Important Information
+
+* The materials available on the DHS PAMMS website are for informational purposes only.
+If you are using this information for research purposes, it is recommended that you verify your results by consulting the official sources of the information.
+* DHS may include links to external web sites on the DHS PAMMS site.
+The inclusion of an external link does not imply an endorsement of such external web site or the products and services offered at such site.
+DHS has no control of the content of external sites and cannot acknowledge the accuracy of any such information available on the Internet.
+* Nothing contained on this website may be considered as creating a contract for employment.
+* DHS reserves the right to revise this website at any time by posting new information and policies at this location.
+Please check this page periodically for changes.
+Your continued use of this web site signifies your acknowledgement and assent to these terms.

@@ -1,0 +1,92 @@
+= 3020 Mandated Reporting of Child Abuse or Neglect
+:chapter-number: 3000
+:effective-date: September 2019
+:mt: MT-55
+:policy-number: 3020
+:policy-title: Mandated Reporting of Child Abuse or Neglect
+:previous-mt-number: MT-1
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+All DFCS employees are required by law to report child maltreatment or suspected abuse.
+
+== Basic Considerations
+
+Even though your contact with an assistance unit or family may be limited to short office visits and telephone calls, you could observe or receive information that warrants a referral to Child Protective Services (CPS).
+
+The Official Georgia Code Section 19-7-5 updated through the 2000 Session of the General Assembly provides that cases of child maltreatment or suspected abuse be reported to Child Protective Services.
+
+Any suspected abuse or neglect must be reported.
+
+Your responsibility is to report anything that you suspect is abuse.
+This includes but is not limited to the following:
+
+* observing physical signs (ex., bruises, black eye) on a child during an interview,
+
+* observing abusive action during the interview or conservation,
+* someone discloses information during the interview,
+* someone discloses information during a telephone call,
+* abusive actions imposed on a child observed during an interview or while a child is in the office.
+
+If in doubt, report the abuse or neglect.
+Always err on the side of the child's safety.
+CPS screens reports of abuse or neglect and determines whether to open an investigation.
+
+Reports of abuse or neglect are made via a telephone call to CPS and followed up in writing as soon as possible.
+Form 713 - Interagency/Interoffice Referral and Follow-up, may be used to report abuse or neglect, in writing.
+
+If someone tells you of child abuse during the interview or in a telephone call, connect them with the appropriate county's CPS intake unit at that time if possible.
+It is always best for the CPS worker to talk with the person who has the most knowledge.
+If you suspect the abuse, you need to call CPS.
+Always follow up in either situation in writing and keep a copy of the documentation for your record.
+
+Include as much information as possible in the referral to CPS.
+Attempt to obtain the following information:
+
+* child's name, age and address (current location, if different from the address),
+* parent's/guardian's name, address and telephone number,
+* reason for the referral (observations or information disclosed),
+* reporter's name, address, telephone number and relationship to the problem.
+
+NOTE: The individual, who discloses the information that warrants the referral, has the right to remain anonymous.
+Note that on the referral if the request is made.
+
+The Office of the Child Advocate was created with the passage of House Bill 1422 which was signed into law on April 6, 2000.
+The Office of Child Advocate was created to promote and to enhance the State's existing protective service system and to ensure that children are secure and free from abuse and neglect.
+
+The three primary functions of the Office are as follows:
+
+* Through investigation, to provide independent oversight of those responsible for providing services to children who are victims of abuse and neglect in order to ensure that the best interests of children are met;
+
+* Through advocacy, to seek needed changes in the laws affecting children and promote positive revisions in the system's policies and procedures;
+and
+
+* Through education, to promote better training of caseworkers and service providers and more awareness about the issues surrounding the protective services system.
+
+Staff is expected to fully cooperate with investigations and inquiries from the Office of the Child Advocate.
+This includes providing prompt and comprehensive answers to questions raised, as well as requests for information or case record material.
+Staff is expected to be familiar with the existence and role of the Office, and to respond appropriately and professionally when contacted by any member of the Office of the Child Advocate.
+
+If you are contacted by the Office of the Child Advocate about a case, notify the DFCS Legal Services Office but do not delay cooperation to pending notification of Legal Services.
+
+== Procedures
+
+*Take the following steps to make a CPS referral*:
+
+[horizontal,labelwidth=10]
+Step 1:: Call the appropriate county's child protection staff (CPS).
+
+Step 2:: Document the call and your conversation with CPS in case notes in the Gateway system or in a separate case record.
+
+Step 3:: Connect the individual, who is reporting the abuse or neglect to the appropriate county's intake unit at the time the abuse is reported, if possible.
+
+Step 4:: Document your actions taken to connect the reporter of the abuse or neglect to CPS in case notes in the Gateway system or in a separate file.
+
+Step 5:: Complete a referral with the information listed under Basic Considerations in the section.
+Send or route the referral to CPS.
+
+Step 6:: Maintain a copy of the referral in the Document Imaging System (DIS) in Gateway.
++
+NOTE: If the reporter of the abuse or neglect wants to remain anonymous, remove the referral from the file if the AU reviews the file.

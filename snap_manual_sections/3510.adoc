@@ -1,0 +1,105 @@
+= 3510 National Accuracy Clearinghouse (NAC)
+:chapter-number: 3500
+:effective-date: January 2026
+:mt: MT-86
+:policy-number: 3510
+:policy-title: National Accuracy Clearinghouse (NAC)
+:previous-mt-number: N/A
+
+include::partial$policy-header.adoc[]
+
+
+== Codes and References
+7 CFR §  272.18
+
+== Requirements
+The Agriculture Improvement Act of 2018 requires the Secretary of Agriculture to establish an interstate data system called the National Accuracy Clearinghouse (NAC) to prevent the issuance of Supplemental Nutrition Assistance Program (SNAP) benefits to an individual from more than one state agency simultaneously (also known as interstate duplicate participation). Georgia was previously participating in the NAC pilot program with 4 other States. The pilot began in June 2014, and the final rule making it effective for all states was released in 2022.
+
+== Basic Considerations
+NAC can only be used to prevent duplicate participation in SNAP. Information from the NAC cannot be used to determine eligibility for Temporary Assistance for Needy Families (TANF), Medical Assistance (MA) cases, or DSNAP. All states and territories are required to utilize NAC by October 4, 2027  (Please refer to the https://www.fns.usda.gov/snap/nac[USDA website] for more information). Georgia began using the NAC effective 12/15/2025.
+
+== Vulnerable Individuals
+The agency is required to protect those people who may be considered vulnerable individuals. For the purpose of the NAC, a vulnerable individual is someone whose safety would be in danger by the disclosure of their information, regardless of age or gender, such as:
+
+* someone whose living arrangement is at a shelter for battered spouses or children; or
+* a victim of domestic violence, or
+* any person who self-identifies as fleeing domestic violence at any point during application, recertification, or addition of a new household member.
+
+The agency is required to take steps to ensure that any information resulting from a NAC match, including their identity and location, is protected during verification and resolution when that person has a positive match.
+
+[#_procedures]
+== Procedures
+:table-caption: Chart
+
+The NAC must be checked at *application*, *recertification*, and *when a household member is added to the assistance unit*.The NAC must be checked at periodic reporting *only* if the household reports the addition of a household member. Otherwise, it is not required for periodic reporting.
+
+The identity, residency, and enumeration (SSN) must be verified for the head of household, and the SSNs are verified for all other household members *before* a check for duplicate participation can be conducted.
+
+NOTE: Follow existing verification procedures found in xref:3035.adoc[].
+
+NOTE: *Any communication or notice sent resulting from a NAC match must [.underline]#not# include the location of the individual identified in the match.*
+
+=== Verification
+A NAC match is not considered verified upon receipt unless the match indicates case closure. Verification is still needed to resolve the match. It can be verified by one of the following documents listed below. *All documents must reflect the current address and be recently dated.* This is not an all-inclusive list.
+
+* A utility bill (such as electric, gas, or water);
+* A current lease or mortgage statement;
+* Mail addressed to the individual at the address provided to the agency;
+* School records
+
+=== Expedited Processing
+NAC does not change the SNAP expedited application processing policy, including late renewals. For expedited services, only identity verification is required. If the household is unable to verify residency and Social Security number(s) within the expedited standard of promptness (SOP), the case may be approved with postponed verification. In this instance, the NAC will trigger once acceptable verification of residency and Social Security number(s) is entered. The worker must still verify that the out-of-state SNAP case is closed before issuing ongoing benefits.
+
+When identity, residency, and enumeration are verified within the expedited SOP, then the NAC interface is triggered.  If there is a match for an individual in the household currently receiving benefits in another state, expedited processing standards will no longer apply. The worker must take action to resolve the NAC match before issuing benefits.
+
+Expedited processing standards continue to apply if the individual is considered a vulnerable individual *and* is a resident of a shelter for battered women and children, even if there is an unresolved NAC match.
+
+=== NAC Match Types
+Georgia can be the Matching State or the Initiating State for a NAC match.  The *initiating state* is the one that receives the match, indicating possible duplicate participation as a result of a customer applying for benefits or when adding a new household member to a Georgia case.  The *matching state* is the one that receives a NAC match indicating possible duplicate participation from an existing customer applying in another state.
+
+=== Taking Initial Action
+If a NAC match occurs during the certification period, the state agency has 10 calendar days to take initial action to resolve the match and notify the other state agency of that action.
+
+If Georgia is the *initiating* State, during the interview, discuss the results of the NAC match, and if verification cannot be provided during the interview process, the *Notice of SNAP Participation Match In Another State* will be sent notifying the customer of the match and the deadline for when verification must be received.
+
+If Georgia is the *matching* State, contact the household to clarify the information and verify any questionable information. If the NAC match cannot be resolved or verified during contact with the household, the *Notice of SNAP Participation Match In Another State* will be sent explaining how the customer can resolve the discrepancy.
+
+At application, recertification, or when adding a person, use the information in Chart 3510.1 below to process the case.
+
+.3510.1
+[%header,cols="2*"]
+|===
+^s|If at Intake
+^s|Then
+
+|the SNAP household fails to respond to the NAC notice, and the match cannot be resolved by other means
+|Deny the application or close the case.
+
+^s|If at Recertification
+^s|Then
+
+|the SNAP household fails to respond to the NAC notice, and the match cannot be resolved by other means
+a|
+* Close the case if the match is for the Primary Individual
+
+* Exclude the matched individual(s) from the assistance unit if they are [.underline]#*not*# the primary individual. All other household members must be recertified using normal procedures.
+
+^s|If Adding a Person
+^s|Then
+
+|the SNAP household fails to respond to the NAC notice, and the match cannot be resolved by other means
+|The individual being added will be denied. Staff must determine eligibility for those members who [.underline]#*are not*# part of the NAC match and have met all other eligibility requirements.
+|===
+
+
+=== Invalid Matches
+NAC allows for a match to be considered invalid. An invalid match may occur because of incorrect client information, a system error, or potential identity theft.
+
+* *Incorrect Client Information:* Inaccurate information about the client was provided to the NAC through human error. For Example, a typo in an SSN provided does not match the person who is applying for benefits.
+
+* *System Error:* A system issue caused an invalid match to be created. For example, a person who is no longer a participant was included in the participant upload.
+
+* *Potential Identity Theft:* The agency does not believe the name, SSN, and/or DOB being used by the individual belongs to that individual
+
+=== Final Disposition
+Once the case is authorized, Gateway will update the disposition details on the NAC match interface for Georgia. A NAC match will remain open as long as at least one State has not entered Final Disposition and Date information or marked the match as Invalid. Final disposition information is considered *verified information*.

@@ -1,0 +1,66 @@
+= 3618 Homeless Shelter Deduction
+:chapter-number: 3600
+:effective-date: October 2025
+:mt: MT-84
+:policy-number: 3618
+:policy-title: Homeless Shelter Deduction
+:previous-mt-number: MT-81
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The homeless shelter deduction is an option for homeless households that are not receiving free shelter throughout the month.
+
+== Basic Considerations
+
+If the head of household is homeless, the entire Applicant Group will be considered a homeless household.
+If a homeless household claims an allowable shelter expense at or below the homeless shelter deduction amount of $199, they are eligible for the homeless shelter deduction.
+
+If a homeless household claims an allowable shelter expense that is greater than the homeless shelter deduction amount, the Assistance Unit (AU) may be eligible for the excess shelter deduction and/or standard utility allowance.
+*See  xref:3617.adoc[]*.
+
+Homeless households [.underline]*cannot* receive both the homeless shelter deduction and the excess shelter deduction and/or standard utility allowance.
+Only one deduction can be applied to each AU.
+Homeless households that do not incur or expect to incur shelter costs throughout the month are not eligible for a shelter deduction.
+
+NOTE: *_Gateway will determine if a household's benefits will be higher under the homeless shelter deduction or the excess shelter deduction at application, recertification (renewal), interim change, and if a change is reported at periodic reporting. Gateway will apply the appropriate deduction based on which one is most beneficial to the AU._*
+
+A household is considered homeless if it will imminently lose its' nighttime residence, lacks a fixed or regular nighttime residence or the household's primary nighttime residence meets one of the following below:
+
+* A halfway house or similar institution that provides a temporary residence for individuals intended to be institutionalized;
+* A temporary accommodation for not more than 90 days in the residence of another individual;
+* A place not designed for, or ordinarily used, as a regular sleeping accommodation for human beings (i.e.,a hallway, a bus station, a lobby, or similar places);
+* A supervised shelter designed to provide temporary accommodations for homeless individuals.
+
+NOTE: A household is considered imminently homeless if it is due to lose its primary nighttime residence within 14 days, does not have an alternative residence, and lacks the resources to secure permanent housing.
+
+=== Applying the Homeless Shelter Deduction
+
+If a homeless shelter deduction is the most beneficial deduction for the customer and is applied to the budget (in lieu of the excess shelter expense deduction), the $199 homeless shelter deduction must be subtracted from the net income in determining eligibility and allotments for the household.
+The homeless shelter deduction is applied to the budget after all other standard SNAP deductions have been applied to the earned or unearned income.
+
+=== Allowable Expenses
+
+The household must have allowable expenses to qualify for the homeless shelter deduction.
+The following list contains some typical expenses that are considered in determining allowable expenses for the homeless shelter deduction.
+The list is not all inclusive:
+
+* payments to a homeless shelter
+* payments to a motel, hotel, or extended stay for temporary lodging
+* payments to family or friends in exchange for temporary housing (less than 90 days)
+* payments on their vehicle (for customers residing in their vehicles only)
+
+NOTE: If the homeless household's only expense is a telephone expense, only allow the Telephone Standard.
+*See xref:3617.adoc[]*.
+
+=== Verification
+
+If the household reports shelter expenses, third-party verification is required. If verification is not returned, the AU cannot receive the excess shelter or the homeless shelter deduction.
+
+=== Documentation Requirements
+
+The eligibility worker must document the criteria used to determine that the AU meets the definition of homeless and the allowable shelter expense(s) reported by the AU to qualify for the homeless shelter deduction.
+
+Gateway will determine which deduction (Homeless Shelter Deduction or the Excess Shelter Deduction) is the most beneficial (has the greater dollar amount) and automatically apply that deduction. Third-party verification of shelter expenses is still required to allow the homeless shelter deduction.
+If the eligibility worker finds the shelter expense questionable, documentation is required in the case notes in Gateway stating why the expense is questionable.

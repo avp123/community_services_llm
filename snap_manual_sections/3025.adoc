@@ -1,0 +1,2 @@
+= 3025 Americans with Disabilities Act (ADA) and Section 504
+include::ROOT:page$ada-section-504.adoc[tag=manual-insert]

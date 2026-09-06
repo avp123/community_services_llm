@@ -1,0 +1,185 @@
+= 3245 Students
+:chapter-number: 3200
+:effective-date: February 2025
+:mt: MT-81
+:policy-number: 3245
+:policy-title: Students
+:previous-mt-number: MT-77
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An individual aged 18 to 49, who is enrolled at least half-time in an Institution of Higher Education (IHE) must meet special eligibility criteria to be eligible for SNAP benefits.
+
+== Basic Considerations
+
+Determining whether an individual is considered enrolled in an institution of higher education is defined by three criteria: enrollment status, the type of school, and the type of curriculum. An individual is considered to be enrolled in an institution of higher education if the individual is enrolled in:
+
+* A business, technical, trade, or vocational school that normally requires a high school diploma or equivalency certificate (GED) before enrollment.
+
+
+*OR*
+
+* A regular curriculum at a college or university that offers a degree regardless of whether a high school diploma is required.
+
+NOTE: Students enrolled in online classes, CD-ROM, DVD, Hybrid classes, and other courses are considered to be enrolled in an institution of higher education if the course (s) meets the above criteria.
+
+An AU member enrolled in a post-secondary institution that is not an institution of higher education or is enrolled in an institution of higher education less than half-time is *not* defined as a student in higher education for SNAP purposes and is *not* subject to the student eligibility criteria.
+
+=== Courses Not Considered Higher Education
+
+If a college normally requires a high school diploma or equivalency certificate (GED) but does not require either for a particular program or course, enrollment in such a program or course does not constitute enrollment in an institution of higher education.
+
+The following courses fall into this category:
+
+* English as a second language
+* High school completion and GED courses
+* Courses that are not a part of the regular college curriculum
+* A Workforce Innovation and Opportunity Act (WIOA) program contracted by the college
+* Continuing education or skill-building courses
+* Extra curricula courses
+
+=== Student Eligibility Criteria
+
+A student enrolled in an institution of higher education is eligible to participate in the SNAP if she/he qualifies for *one* of the following exemptions:
+
+* is age 17 or younger or age 50 or older
+
+* is physically or mentally unfit (unfitness may be a temporary incapacity or a permanent disability). Physical or mental unfitness refers to a student’s ability to work while also enrolled half-time or more in an institution of higher education. Individuals who are physically or mentally unfit for employment would qualify for the student exemption because they are physically and mentally unfit for work. However, additional individuals may qualify for the student exemption. These individuals could be:
+
++
+--
+** Students who receive services from an institution’s disability access or reasonable accommodations office. They also meet the definition of physically or mentally unfit for employment and would be eligible students.
+** Students who experience chronic homelessness may also be considered unfit for employment.   Individuals who are considered chronically homeless may be exempt from student requirements if they have any of  the following circumstances:
+
+***	are sleeping under a bridge, sidewalks, parks, benches, or the street
+*** will imminently lose their nighttime residence*
+*** have an employment history that is inconsistent, sporadic, or shows little to no employment
+*** have an employment history that is not consistent with self-sufficiency such as wages that cannot support independent living
+*** struggles with drug and/or alcohol abuse
+*** struggles with undiagnosed mental or physical health issues
+
+NOTE: An individual is considered imminently homeless if they are due to lose their primary nighttime residence within 14 days, do not have an alternative residence, and lack the resources to secure permanent housing.
+
+
+If an individual’s unfitness is obvious to the worker, the worker must exempt the individual without requiring verification. The worker must document the observation regarding the individual’s circumstances to establish unfitness. However, if the information is not evident or is questionable, verification is required.  Verification may include the following:
+
+** Receipt of or certification for a temporary or permanent disability benefit such as SSI, RSDI, VA, Railroad Retirement, or Workers Compensation.
+** A statement from a physician, other medical professional, or mental health provider.
+** Receipt of services from an institution's disability access or reasonable accommodations' office.
+** Collateral Contact
+
+NOTE: This is not an all-inclusive list.
+--
++
+
+* is _employed_ an average of 20 hours per week and is paid for such employment (in-kind income does not qualify for this student exemption).
+
+* is _self-employed_ for an average of 20 hours per week and receives gross weekly earnings at least equal to the federal minimum wage times 20 hours (in-kind income does not qualify for this student exemption).
+
+* participates in an on-the-job training program.
+Participation in the training program is limited to the time the person is being trained by the employer.
+
+* participates in a state or federally financed work-study program during the regular school year. If a student refuses a work-study assignment, they are not considered to be participating in work-study.
++
+--
+These 3 criteria must be met for a student to be considered participating in a work-study program:
+
+. The student must be approved for work-study at the time of application for SNAP benefits;
+. The work-study must be approved for the school term; and
+. The student must anticipate actually working during that time
+
+NOTE: If a student meets the exemption of participating in a work-study program, they do not need to meet the 20 hours-per-week requirement.
+--
++
+
+* receives TANF benefits
+
+* participates in TANF work requirements with education as part of this plan
+
+* is assigned to or placed in an institution of higher education through or in compliance with the requirements of certain employment and training programs.
+
++
+--
+NOTE: These programs are as follows:
+
+* *Programs under Title I of the Workforce Innovation and Opportunity Act (WIOA).* This includes WIOA Adult, Dislocated Worker, and Youth Programs. These programs provide career and training services to job seekers and include job search assistance, workforce preparation, and career development services. Additionally, training services available include both classroom and work-based learning opportunities. They are available through a network of American Job Centers.
+* *State SNAP Employment and Training Programs* that meet one of the following:
+** The course or program of study is part of a program of career and technical education as defined in section 3 of the Carl D. Perkins Career and Technical Education Act of 2006; or
+** The course or program of study is a remedial, basic adult education, literacy, or English as a second language course.
+* *A program under section 236 of the Trade Act of 1974.* The Trade Act of 1974, as amended, established several programs that provide assistance to workers who have been affected by foreign trade. The programs, taken together, are referred to as the Trade Adjustment Assistance (TAA) Program. The TAA Program is a federal entitlement program that assists U.S. workers who lose their jobs or are threatened with job loss as a result of foreign trade. Specifically, section 236 provides training for adversely affected workers or adversely affected incumbent workers for whom there is not suitable employment and would benefit from training. The U.S. Department of Labor administers the program and publishes regulations and guidance governing the program's administration.
+* *An employment and training program for low-income households that is operated by a State or local government* where one or more of the components of such program is at least equivalent to an acceptable SNAP employment and training program component.
+--
++
+
+* participates in the SNAP Works Program, which is the SNAP Employment and Training (E&T) program with education as part of the work plan OR another E&T program or activity approved by (E&T)
+
+* is responsible for the care of a dependent child under the age of six
+
+* is responsible for the care of a dependent AU member who is age six but under age 12, for whom adequate child care is not available to enable the student to attend class *and* comply with work requirements by either working an average of 20 hours per week if employed or self-employed or by participating in a work-study program
+
+* is a single parent (natural, adoptive, step or when no parent is present, an individual who has parental control) enrolled in an institution of higher education on a full time basis and is responsible for the care of a dependent child under age 12 who is in the same SNAP AU as the parent.
+
+Determine if a student is responsible for the care of a dependent child by using the following criteria:
+
+* the student is the parent of the minor child;
+* when no parent is present, the student has parental control of the minor child;
+* the student is responsible for the physical care of the child.
+Financial support for the child is not a determining factor.
++
+NOTE: The student has an obligation as a caretaker to care for the basic needs and well-being of the minor child.
+The child does not have to be in the home for the student to be responsible for the child's care.
++
+NOTE: Only one parent in the AU can claim the status of a caretaker responsible for a dependent child.
+
+The client's statement may be accepted for student status, but note that third-party verification is required for exemption as a student for work registration status.
+Contact the institution to verify if the student is enrolled at least half-time, if questionable.
+
+A student is ineligible for SNAP if the institution provides a majority (more than 50 percent of three meals daily) of the student's meals each day.
+For example, if the student's meals are provided by the school and included in the tuition or fees, then the student may be considered a boarder. These students are considered residents of an institution and are ineligible for SNAP benefits.
+
+Individuals who do not receive the majority of their meals from a meal plan are not residents of an institution and may be eligible for SNAP, if  they meet other eligibility criteria.
+
+The income and resources of the ineligible student will not be considered when determining the eligibility and benefit level of the eligible AU members.
+
+Any money an ineligible student gives to the AU counts as unearned income.
+A payment made by an ineligible student on behalf of the AU directly to a third party is treated as a vendor payment.
+
+The enrollment status begins on the [.underline]#*first*# day of the school term of the institution of higher education and continues through normal periods of class attendance, vacation, and recess.
+[.underline]#*For example*#, a high school senior may be accepted by a college and registered for classes before graduation; however, the person is not considered to be enrolled in college until the first day of the school term.
+
+Student status ends when one of the following occurs:
+
+* student graduates
+* student is suspended or expelled
+* student drops out of school
+* student does not intend to register for the next normal school term (excluding summer school).
+
+Refer to xref:3420.adoc[] for policy regarding educational Income.
+
+Educational income that is excluded from the SNAP budget includes the following:
+
+* Basic Educational Opportunity Grant (BEOG)
+* Pell Grant
+* Federal Supplement Education Opportunity Grant (FSEOG)
+* State Student Incentive Grant (SSIG)
+* Federal Direct Student Loan Program (FDSLP)
+* FFELP, includes Federal Direct Stafford Loan, Unsubsidized Stafford Loan, Consolidated Loan, PLUS Program
+* Federal Airlines Loan Program
+* Bureau of Indian Affairs Adult Education, Higher Education, GED, Job Training and Technical School Programs
+* Federal Work Study Programs
+* TRIO Grants such as Upward Bound, Robert E. McNair Post-Baccalaureate Achievement, Student Support Services
+* Robert C. Byrd Honors Scholarship
+* College Assistance Migrant Program (CAMP)
+* High School Equivalency Program (HEP)
+* National Early Intervention Scholarship and Partnership Program
+* HOPE Scholarship
+* Zell Miller Scholarship
+* Educational assistance received through the Montgomery GI Bill
+
+NOTE: This list is not all-inclusive.
+
+=== Verification
+
+xref:attachment$form-875.pdf[Form 875, Verification of Educational Assistance Income], may be used to verify a student's eligibility through the work-study criterion.

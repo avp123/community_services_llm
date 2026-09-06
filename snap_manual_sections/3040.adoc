@@ -1,0 +1,158 @@
+= 3040 Health Information Portability and Accountability Act of 1996
+:chapter-number: 3000
+:effective-date: September 2019
+:mt: MT-55
+:policy-number: 3040
+:policy-title: Health Information Portability and Accountability Act of 1996
+:previous-mt-number: MT-23
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+DFCS is required to comply with the Health Information Portability and Accountability Act (HIPAA) of 1996, including its rules regarding security and privacy of confidential health information.
+
+== Basic Considerations
+
+HIPAA was enacted by Congress to provide group and individual insurance reform, introduce tax-related health care provisions, control healthcare fraud and abuse, and to ensure improvement in healthcare systems.
+
+=== Covered Entity Status
+
+The Georgia Department of Human Services (DHS) has chosen Covered Entity status to promote simplification of information sharing within the Department.
+
+=== Who Must Comply
+
+This policy applies to all individuals who are Georgia Department of Human Services (DHS) employees, volunteers, trainees, and contractors who perform duties in conjunction with the access, distribution, dissemination, modification, and management of protected health information.
+
+=== Other Related Confidentiality Requirements
+
+DHS administers programs and provides services that have more stringent requirements than those provided by the Privacy Rule.
+In the administration of such programs and provision of such services, the department will adhere to the more stringent requirements.
+
+== Privacy Rule
+
+The Privacy Rule, effective April 14, 2003, ensures privacy protection by limiting the ways that Protected Health Information (PHI) can be used and released.
+
+=== Notice of Privacy Practices
+
+Every applicant/recipient (A/R) and Personal Representative (PR) must be provided with a *Form 5460*, *Notice of Privacy Practices*, for each initial application for assistance.
+If an application is received in another program area such as TANF or Medicaid, then a new form is required for the new application.
+
+NOTE: The addition of an AU member to an existing case is considered an application for assistance.
+Send Form 5460 if the new member is age 18 and older.
+
+Each adult member (age 18 and older) who does not have a face-to-face interview must be mailed a Notice of Privacy Practices (NPP) form to sign.
+The individual's name and the date the form was mailed to the A/R should be documented in Gateway.
+Refer to Appendix D, for documentation standards.
+
+It is preferable, but not required, that each adult sign and return the form.
+However, the case record must be documented that the notice form was sent.
+
+=== Personally Identifiable Information
+
+PHI is individually identifiable health information.
+Examples of PHI include, but are not limited to the following:
+
+* demographic information, such as name, age, gender
+* health status information
+* prescription drug information
+* healthcare payment information
+* prior existing conditions
+* eligibility information
+* authorization and referral certifications
+
+PHI may be in electronic, paper-based, or oral form.
+
+=== Minimum Necessary
+
+Covered entities may use and share only the minimum amount of protected information necessary to accomplish a particular purpose.
+
+DHS is responsible for determining the amount of PHI required per function.
+Upon determination of minimum necessary PHI, DHS will communicate this decision to all affected parties.
+
+=== Use and Disclosure
+
+The Privacy Rule prohibits the use and disclosure of PHI for purposes not related to treatment, payment, or health care operations.
+
+The identity of a person requesting PHI and his/her authority to receive such information must be verified prior to release of PHI.
+
+As a covered entity, DHS is permitted, but not required, to use and disclose PHI, without an individual's authorization in certain situations and for specific purposes.
+
+The following uses and disclosures *do not* require authorization from the individual:
+
+* treatment, payment, and health care operations (TPO)
+* public health agencies activities
+* health oversight and regulatory agency activities
+* judicial proceedings and law enforcement investigations
+* healthcare fraud investigations
+* emergency situations
+* de-identified information (health information not connected with information identifying the individual)
+
+The following uses and disclosures *do* require authorization from the individual:
+
+* third party disclosures
+* marketing and fund-raising activities
+* non-health related affiliates
+* underwriting or risk rating activities
+* employment determinations
+* sale, rental or barter of PHI
+* psychotherapy records other than psychotherapy notes
+
+=== Form 5459
+
+Prior to the release of PHI that requires authorization; the A/R must complete and sign DHS Form 5459 Authorization for Release of Information.
+
+Signed, blank Form 5459s are not permissible and may not be used for any purpose.
+Form 5459 may be used to release or obtain information only if the A/R or PR has specified, on the form, to which information is to be released or from whom information is to be obtained.
+
+=== Administrative Requirements
+
+DHS will maintain compliance with HIPAA Privacy Rule administrative requirements including, but not limited to:
+
+* designation of a privacy officer who is responsible for the development, implementation and maintenance of privacy policies and procedures.
+* development, implementation, and documentation of timely and effective privacy training.
+* development, maintenance, and enforcement of compliant procedures.
+* enforcement of appropriate sanctions for failure to comply with HIPAA regulations.
+
+== Security Rule
+
+The HIPAA Security Rule ensures the security of PHI by specifying how PHI is stored, transmitted, and accessed.
+
+Guidelines for safeguarding PHI include, but are not limited to:
+
+* PHI will be discussed with the A/R or PR only in private areas
+* PHI will be discussed with staff members on a need-to-know basis and in non-public areas only
+* telephone calls regarding PHI will be held in areas in which the conversation cannot be overheard
+* computer monitors will be positioned in a way that does not permit observation by anyone other than the A/R or PR
+* computer passwords will not be shared and will be recorded only in secure locations
+* PHI will be disclosed only by those staff members authorized to do so
+* access to fax machines will be limited to authorized staff
+* case records, mail, documentation, and other materials containing PHI will be maintained in locked or otherwise secure locations, away from the general public
+* staff members will wear appropriate agency-issued identification at all times
+* PHI will be discarded in appropriate secure containers.
+
+DHS will maintain compliance with HIPAA Security Rule administrative requirements including, but not limited to:
+
+* development and enforcement of information access control
+* completion of internal security audits
+* enforcement of physical safeguards including workstation/office guidelines
+* enforcement of appropriate sanctions for failure to comply with HIPAA regulations
+* development, implementation, and documentation of security awareness training.
+
+== Business Associate Agreement
+
+HIPAA requires that covered entities notify business associates and contractors of their status as a covered entity and the requirement to adopt and implement standards and procedures for handling PHI.
+Additionally, business associates must be notified that they must comply with applicable provisions of the Privacy Rule.
+
+A Business Associate is defined as any provider performing a function or providing a service involving use or disclosure of PHI, on behalf of the Department.
+The arrangement may be through formal or informal arrangements.
+
+Appointing authorities must ensure and document that all DFCS employees complete HIPAA training as part of new employee orientation.
+
+HIPAA provides for both civil and criminal penalties for covered entities that misuse PHI.
+
+For *civil* violations of HIPAA standards, the Office of Civil Rights (OCR) may impose monetary penalties up to $100 per violation and up to $25,000 for multiple violations.
+
+*Criminal* penalties range from $50,000 and one (1) year in prison for certain offenses, to $100,000 and five (5) years in prison for offenses committed under false pretenses, up to $250,000 and ten (10) years in prison for offenses committed with the intent of personal gain or malicious harm.
+
+Additional HIPAA information is available at: https://www.dhs.ga.gov and https://www.hhs.gov/ocr/hipaa.

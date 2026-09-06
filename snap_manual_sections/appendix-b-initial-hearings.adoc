@@ -1,0 +1,161 @@
+= Appendix B Initial Hearings
+:chapter-number: Appendix B
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: Appendix B
+:policy-title: Initial Hearings
+:previous-mt-number: MT-59
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An assistance unit (AU) has the right to request a hearing if it believes that the decision regarding eligibility for and/or level of benefits is not correct and/or fair.
+
+== Basic Considerations
+
+A request for an initial hearing may be made either at the local DFCS office, the Department of Human Services (DHS), or the Office of General Counsel (OGC). County offices must explain to the AU the procedures and methods for requesting a hearing.
+
+An AU must request a hearing within 90 days from the date of notification that gives the adverse decision and in which the AU has expressed dissatisfaction. The AU may request a hearing to dispute the current level of benefits at any time within the certification period.
+If requested untimely, a second-level review will be completed to determine if the request is disputing the current level of benefits. If so, it will be processed as a timely request.
+The agency will attempt to contact the client whether the request is timely or untimely.
+
+If the hearing request is received directly by the Department of Human Services (DHS) or the Office of General Counsel (OGC), a copy of the request is forwarded to the county DFCS office. If necessary, the county office will assist the AU in submitting and processing the hearing request.
+Upon receipt of a hearing request from DFCS, OSAH notifies the county office of the date, time, and location of the hearing. For those counties with speakerphone capability, the hearing may be conducted via telephone by OSAH with the parties being present at the local hearing site.
+Hearing requests from AUs such as seasonal farm workers who plan to move out of state before the hearing decision is reached, are expedited so that they can receive a decision and restoration of benefits if applicable before they move.
+
+== Expedited SNAP Hearings
+
+AUs contesting a denial of expedited services are entitled to a conference with the local DFCS office within two working days from the date the hearing request is filed. The AU may decline to attend the conference or request a later date for the conference.
+
+== AU's Hearing Rights
+
+The AU may not be familiar with the rules of order, and it may be necessary to make particular efforts to arrive at the facts of the case in a way that makes the AU feel most at ease. The AU or its representative has the following rights:
+
+* To examine all documents and records to be used at the hearing at a reasonable time before the date of the hearing as well as during the hearing. The contents of the case file including the application form and documents of verifications used by the agency to establish the AU's ineligibility or eligibility and the allotment shall be made available, provided that confidential information, such as the names of individuals who have disclosed information about the AU without its knowledge or the nature or status of pending criminal prosecutions, is protected from release. If requested by the AU or its representative, the agency shall provide a free copy of the portions of the case file that are relevant to the hearing. Confidential information that is protected from release and other documents or records that the AU will not otherwise have an opportunity to contest, or challenge shall not be introduced at the hearing or shall not affect the hearing official's decision.
+* To present the case or have it presented by a legal counsel or other person.
+* To bring and/or subpoena witnesses.
+* To advance arguments without undue interference.
+* To question or refute any testimony or evidence, including an opportunity to confront and cross-examine adverse witnesses.
+* To submit evidence to establish all pertinent facts and circumstances in the case.
+* To request assistance from the agency for transportation to the hearing.
+
+== Agency's Hearing Responsibilities
+
+The agency has the responsibility to do the following:
+
+* To ensure that its personnel with direct knowledge of the facts in dispute are present to testify.
+* To ensure that all relevant agency records and legible copies are available as evidence.
+* To ensure that non-agency witnesses and records are present either voluntarily or by subpoena.
+
+NOTE: Confidential information that is protected from release and other documents or records that the AU may not contest, or challenge cannot be presented at the hearing.
+
+Unless the contested issue is resolved and withdrawn prior to submission to OSAH, a hearing will be conducted, a decision will be rendered, and the household and DFCS will be notified of the decision by OSAH within 60 days of receipt of the initial request. The 60-day SOP may be extended if the household requests postponements.
+
+Decisions requiring case action should be acted on within 10 days of receipt of the hearing decision. Decisions which result in a decrease in household benefits will be reflected in the next scheduled issuance following receipt of the hearing decision.
+
+== Agency's Hearing Rights
+
+The agency has the right to do the following:
+
+* To bring and/or subpoena witnesses.
+* To submit evidence to establish all pertinent facts and circumstances in the case.
+* To advance arguments without undue interference.
+* To question or refute any testimony or evidence, including an opportunity to confront and cross-examine adverse witnesses.
+
+== Processing a Hearing Request
+
+Follow the steps below when an AU or its representative requests an initial hearing.
+
+*Step 1:* Review the record to determine the following:
+
+* Was the correct action taken?
+* Is the AU eligible on all points of eligibility other than the one at issue?
+* Is there enough information in the record to determine the correct amount of assistance? If not, obtain any needed verification either directly or by requesting that OSAH subpoena needed documents and/or witnesses.
+
+*Step 2:* DFCS will attempt to discuss and resolve the complaint with the AU or the representative.
+
+*Step 3:* If a mutually satisfactory decision can be reached, the AU may wish to withdraw the hearing request. Make the changes agreed upon during client contact (i.e. Step 1) whether or not the AU withdraws the hearing request.
+
+*Step 4:* If during client contact a mutually satisfactory solution cannot be obtained, submit the completed OSAH Form within eight working days:
+
+The information should be sent to:
+
+[.text-center]
+Office of State Administrative Hearings (OSAH) +
+225 Peachtree Street NE +
+Suite 400, South Tower +
+Atlanta, GA 30303
+
+*Step 5:* Determine if the AU is entitled to continued or reinstated benefits. Refer to Appendix B, Chart 1, in this section.
+
+
+*Step 6:* Inform the AU that timeliness in filing the hearing affects the continuation or reinstatement of benefits and possible denial of the hearing request.
+
+
+*Step 7:* Inform the AU that a request for continuation or reinstatement of benefits pending a hearing decision requires repayment of those benefits if the decision is adverse to the AU.
+
+
+*Step 8:* Inform the AU that a waiver of continuation or reinstatement of benefits pending a hearing decision requires a corrective or restoration to the AU if the decision is favorable to the AU.
+
+NOTE: If the hearing request does not indicate that the AU has waived continuation of benefits, assume continuation is desired.
+
+*Step 9:* Allow the AU to examine all documents and records that will be used in the hearing. Allow the AU’s representative to examine these documents, if the applicant/recipient (A/R) signs an authorization of release of information.
+
+*Step 10:* Report any changes in the circumstances related to the hearing, including address changes, to OSAH.
+
+*Step 11:* Forward any subsequent documents received concerning the hearing to OSAH.
+
+NOTE: If the AU has a legal representative, all communication with the A/R is made through that person.
+
+Refer to “Appendix B Hearings Overview” for steps on how to withdraw a hearing request.
+
+== Implementing a Hearing Decision
+
+Follow the steps below to implement the hearing decision.
+
+*Step 1:* Determine whether the decision is in the AU or the agency’s favor. Use Appendix B, Chart B1, Adjusting Benefits After an Initial Hearing or Final Appeal, to determine the required action.
+
+*Step 2:* Adjust the AUs ongoing benefits to the proper level, if necessary.
+
+*Step 3:* Issue restorations as authorized by the Administrative Law Judge (ALJ) or Appeals Reviewer.
+
+NOTE: Authorize restorations only for those months in which an agency error occurred.
+
+*Step 4:* The system generated notice must be waived and the AU notified of the action taken via manual notice. Document on the notice each month’s circumstance and eligibility status and that the action is the result of an appeal.
+
+The hearing decision serves as adequate notice of the AU’s appeal rights.
+
+*Step 5:* Forward written notification of the AU’s entitlement to the new county if the AU has moved and is entitled to restored benefits.
+
+== Chart B2 - Continuation of Benefits Pending Initial Decision
+
+[.noheader,cols=2*]
+|===
+2+^| *CHART B2 – CONTINUATION OF BENEFITS PENDING INITIAL DECISION*
+^| *If the AU Requests a Hearing*
+^| *Then*
+| Within 14 days of the date of the [underline]#timely# notice and chooses to continue benefits or fails to waive the right to continued benefits on Form 118
+| Continue benefits at the level prior to the date of the timely notice.
+| Within *14 days* of the date of the *adequate* notice and chooses to continue benefits
+a| Reinstate benefits at the level prior to the date of the adequate notice.
+
+NOTE: Re-instate SNAP benefits within five working days of the request for a hearing.
+| And claims good cause for not appealing during the *14-day* timely notice period
+| Reinstate benefits only after approval by OSAH.
+| And the certification period ends
+| Allow the AU to reapply and determine eligibility for a new certification period.
+| And OSAH determines that the issue being appealed is federal law, regulation, or policy, and not an error by the agency
+| Reduce or terminate continued benefits immediately pending the hearing decision. Provide no additional timely notice period.
+| And a change affecting eligibility occurs while the hearing or decision is pending
+| Change the benefits appropriately unless the AU requests a hearing on the subsequent change. Notify OSAH.
+| And a change results in benefits not being reduced to the amount in the original notice
+| Adjust the benefits without waiting for the hearing decision.
+| And a mass change is required while the hearing or decision is pending
+| Change the benefits appropriately and notify the OSAH. Continuation or reinstatement of benefits is appropriate only if the OSAH determines that the mass change is incorrectly applied.
+| On an IPV disqualification
+a| Do not reinstate benefits at the level prior to the disqualification.
+
+NOTE: Pend the outstanding claim and reinstate benefits to the level prior to recoupment, at the AU’s request.
+
+|===

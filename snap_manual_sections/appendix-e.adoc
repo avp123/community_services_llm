@@ -1,0 +1,463 @@
+= Appendix E Glossary
+:chapter-number: Appendix E
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: Appendix E
+:policy-title: Glossary
+:previous-mt-number: MT-86
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+7 CFR § 271.2
+
+[cols="1,4"]
+|===
+^| TERM OR ACRONYM ^| DEFINITION
+
+| ABAWD
+a| [.underline]#Able-Bodied Adult Without Dependents# – is an individual who is a work registrant, not pregnant, not physically or mentally unfit for employment,  not responsible for the care of a dependent child under 14 years old in the SNAP household, and
+
+* age 18 to 50 *effective September 1, 2023 - September 30, 2023*,
+
+* age 18 to 52 *effective October 1, 2023 – September 30, 2024*,
+
+* age 18 to 54 *effective October 1, 2024 – July 3, 2025*,
+
+* age 18 to 65 *effective July 4, 2025* (until the month in which the 66th birthday falls).
+
+
+
+| ABD MEDICAID
+| [.underline]#Aged, Blind, and Disabled Medicaid# – Medical assistance for aged, blind, or disabled individuals who are not eligible for SSI.
+These individuals receive Medicaid only.
+
+| ACF
+| [.underline]#Administration for Children and Families# – The federal agency that provides oversight for the TANF program.
+
+| ADA
+| [.underline]#Americans with Disabilities Act of 1990# – Federal legislation giving civil rights protection to individuals with disabilities.
+These protections are similar to those provided to individuals based on race, color, gender, age, and religion.
+
+| ADEQUATE NOTICE
+| [.underline]#Adequate Notice# – It is a notification to the A/R of initial approval or a change in eligibility or benefit levels.
+
+| ADH
+| [.underline]#Administrative Disqualification Hearing# – A hearing initiated by the Office of Program Integrity and Compliance (OPIC) when it has been determined that an Intentional Program Violation has occurred.
+
+| AE
+| [.underline]#Agency Error# – A claim that is established against an AU due to the agency's failure to take appropriate case actions.
+
+| AFB
+| [.underline]#Application for Benefits# – the Gateway-generated application for assistance.
+
+| AFDC
+| [.underline]#Aid to Families with Dependent Children# – state-administered cash assistance program for low-income families with dependent children under age 18.
+The Personal Responsibility and Work Opportunity Reconciliation Act (PRWORA) of 1996 eliminated the open-ended entitlement of AFDC.
+The PRWORA created the Temporary Assistance to Needy Families (TANF) block grant.
+
+However, some AFDC policies and procedures continue to be used in Medicaid classes of assistance for Children in Placement.
+
+| AGED ABAWD (AA)
+| [.underline]#Aged ABAWD# - is an individual who is a work registrant, not pregnant, not physically or mentally unfit for employment, not responsible for the care of a dependent child under 14 years old in the SNAP household, and *aged 60 – 65 (effective July 4, 2025)*. These individuals are identified as ABAWDs but are not required to meet the ABAWD time limit rules due to their age.
+
+| ALJ
+| [.underline]#Administrative Law Judge# – Conducts fair hearings for the Office of State Administrative Hearings.
+
+| ALLOTMENT
+| [.underline]#Allotment# – The total value of benefits an AU is authorized to receive each month.
+
+| AP
+| [.underline]#Absent Parent# – A parent who does not have custody of the child.
+
+| APPLICATION
+| [.underline]#Application# – The action by which an AU indicates a desire to receive assistance.
+Refer to Section 3105, Application Processing and Section 3710, Recertifications (Renewals).
+
+| APS
+| [.underline]#Adult Protective Services# – A section within DFCS that provides services to adults who are abused or neglected.
+
+| A/R
+| [.underline]#Applicant/Recipient# – An applicant or recipient of SNAP benefits.
+
+| AU
+| [.underline]#Assistance Unit# – A group or individual(s) applying for or receiving benefits.
+
+| BEERS
+| [.underline]#SSA Beneficiary Earnings Exchange Record System# – A computer match is performed between Gateway and BEERS to obtain income information on A/Rs. This system is used by the TANF program.
+
+| BENDEX
+| [.underline]#Beneficiary Data Exchange System# – A file that contains RSDI benefit information on individuals who are current or past recipients of public assistance.
+
+|BIRU
+|[.underline]#Benefit Integrity and Recovery Unit# – A section within the Office of Inspector General (OIG) that investigates recipient fraud for SNAP and TANF public assistance programs.
+
+| CAA
+| [.underline]#Community Action Agency# – A nonprofit organization, which can be either private or public, that is part of the network of entities established under the Economic Opportunity Action of 1964.
+Offices are located through the state and offer such services as emergency food assistance, assistance with utility bills and rent, home weatherization and employment services.
+
+| CAPS
+| [.underline]#Childcare and Parent Services# – A program under the GA Department of Early Care and Learning: Bright from the Start (DECAL) that assists low-income families by subsidizing the cost of childcare.
+
+| CASE NOTES
+| [.underline]#Case Notes# – A function in Gateway used to record comprehensive notation about the client and their case throughout the intake, eligibility determination, and case maintenance process.
+
+| CCSP
+| [.underline]#Community Care Services Program# – The monthly cost share paid by an individual for medical services received through CCSP.
+The amount may be used as a medical expense.
+Refer to Section 3614, Excess Medical Deduction.
+
+| CERTIFICATION PERIOD
+| [.underline]#Certification Period# - This is the length an Applicant/Recipient can receive SNAP benefits. This term is used interchangeably with Period of Eligibility.
+
+| CHILDREN UNDER 19
+| [.underline]#Children Under 19# – Provides Medicaid to eligible children from birth through the last day of the month in which the child turns nineteen (19) years of age.
+
+| CLAIM
+| [.underline]#Claim# – An overpayment of benefits that has been scheduled for recovery.
+
+| CLEARINGHOUSE
+| [.underline]#Clearinghouse# – An automatic online computer system through which wages and benefit information are matched with state and federal agencies.
+
+| CLIENT ID
+| [.underline]#Client ID# – A randomly assigned number identifying an A/R or other household members in Gateway.
+
+| COLA
+| [.underline]#Cost of Living Adjustment# – An increase in RSDI, SSI, Railroad Retirement, or Veteran's Benefits based on a rise in the cost of living, usually received every January.
+
+| COMMERCIAL BOARDING HOUSE
+| [.underline]#Commercial Boarding House# – An establishment licensed to offer meals and lodging for compensation with the intent of making a profit.
+
+| COMPLIANCE
+| [.underline]#Compliance# – The act of successfully completing an Employment and Training (E&T) requirement before establishing the first three penalty months that an ABAWD has previously failed to fulfill.
+
+| CPS
+| [.underline]#Child Protective Services# – Refer to Section 3020, Mandated Reporting of Child Abuse or Neglect.
+
+| DBHDD
+| [.underline]#Georgia Department of Behavioral Health and Developmental Disabilities# - provides treatment and support services to people with behavioral health challenges and addictive diseases.
+
+| DCH
+| [.underline]#Georgia Department of Community Health# – The agency responsible for Georgia's health care resources, planning health coverage for uninsured Georgians, coordinating health planning for state agencies, and insuring individuals under the State Health Benefit Plan and various Medicaid programs and DCH initiatives.
+
+| DEEMING
+| [.underline]#Deeming# – A budgeting procedure that considers the resources and income of an alien's sponsor to determine eligibility and benefit amount for the alien AU.
+
+| DFCS
+| [.underline]#Division (Department) of Family and Children Services# – State/local agency under the Department of Human Services responsible for various social, economic, and community programs that offer benefits and services to the citizens of Georgia.
+
+| DHS
+| [.underline]#Department of Human Services# – The Georgia state agency responsible for the delivery of health and human services.
+It serves Georgia through regulatory inspection, direct service, and financial assistance programs.
+
+| DISABLED
+| [.underline]#Disabled# – Disabled individuals for SNAP purposes are defined as qualifying under one of the following categories: (1) Receiving Supplemental Security Income benefits under title XVI of the Social Security Act or disability or blindness payments under titles I, II, X, XIV, or XVI of the Social Security Act, (2) Receiving federally or State-administered supplemental benefits under section 1616(a) of the Social Security Act, provided that the eligibility to receive the benefits is based upon the disability or blindness criteria used under title XVI of the Social Security Act, (3) Receiving federally or State-administered supplemental benefits under section 212(a) of Pub. L. 93-66, (4) Receiving disability retirement benefits from a governmental agency because of a disability considered permanent under section 221(i) of the Social Security Act, (5) Is a veteran with a service-connected or non-service-connected disability rated by the Veteran's Administration (VA) as total or paid as total by the VA under title 38 of the United States Code, (6) Is a veteran considered by the VA to be in need of regular aid and attendance or permanently housebound under title 38 of the United States Code, (7) Is a surviving spouse of a veteran and considered by the VA to be in need of regular aid and attendance or permanently housebound or a surviving child of a veteran and considered by the VA to be permanently incapable of self-support under title 38 of the United States Code, (8) Is a surviving spouse or surviving child of a veteran and considered by the VA to be entitled to compensation for a service-connected death or pension benefits for a nonservice-connected death under title 38 of the United States Code and has a disability considered permanent under section 221(i) of the Social Security Act. “Entitled” as used in this definition refers to those veterans' surviving spouses and surviving children who are receiving the compensation or pension benefits stated or have been approved for such payments, but are not yet receiving them, (9) Receiving an annuity payment under: section 2(a)(1)(iv) of the Railroad Retirement Act of 1974 AND is determined to be eligible to receive Medicare by the Railroad Retirement Board; or section 2(a)(1)(v) of the Railroad Retirement Act of 1974 AND is determined to be disabled based upon the criteria used under title XVI of the Social Security Act, or (10) Is a recipient of interim assistance benefits pending the receipt of Supplemental Security Income, a recipient of disability related medical assistance under title XIX of the Social Security Act (known as State Medical Eligibility Unit (SMEU)
+
+“Receiving” is defined as receipt of or approval for benefits or services.
+If benefits are not being paid due to overpayments, the individual is still considered a recipient.
+
+| DISCRETIONARY EXEMPTION
+| [.underline]#Discretionary Exemption# – Employment and Training (E&T) work participation exemption that allows certain ABAWDs to be exempt from participating in work activities.
+The number of discretionary exemptions that a state is allowed is set by FNS annually.
+
+| DISQUALIFICATION
+| [.underline]#Disqualification# – The consequence of an action taken to remove the needs of an individual from the assistance unit for an adjudicated intentional program violation or adjudicated misrepresentation of residency.
+
+| DMA
+| [.underline]#Division of Medical Assistance# – The division under DCH that is responsible for administering the Medicaid program in Georgia.
+
+| DOB
+| [.underline]#Date of Birth# – The date an individual is born.
+
+| DOL
+| [.underline]#Department of Labor# – Georgia agency responsible for employment services, unemployment compensation, and other employment programs.
+
+| DRS
+| [.underline]#Disqualified Recipient System# – The nationwide system matching social security numbers of individuals disqualified from SNAP.
+The USDA Food and Nutrition Service (FNS) manages the system.
+
+| D-SNAP PLAN
+| [.underline]#Disaster Supplemental Nutrition Assistance Program Plan# - A written plan for the State of Georgia that provides policy and procedures for issuing SNAP benefits during times of declared state and federal disasters.
+
+| DV
+| [.underline]#Domestic Violence# – Section within DHS that provides services to battered women and children.
+
+| EBTAS
+| [.underline]#Electronic Benefit Transfer Application System# – The state's online system that is used to transmit data between the Gateway system and the EBT Service Provider System (EBTSPS).
+EBTAS allows for online entries for account setup, card replacements, and numerous demographic updates.
+
+| EBT Card Cloning
+| [.underline]#Electronic Benefit Transfer Card Cloning# – Card Cloning is the illegal act of obtaining EBT card information for the purpose of making an unauthorized copy of the card and the data housed on it, or to use the card information in unauthorized transactions. Card cloning can occur through the use of artificial intelligence or skimming devices.
+
+| EBT Card Skimming
+| [.underline]#Electronic Benefit Transfer Card Skimming# - Card skimming is the process of electronically stealing EBT data through skimmers attached to legitimate card readers at authorized EBT retailers. The data obtained by skimmers can be used to create fake EBT cards; this is known as card cloning.
+
+| EBTSPS
+| [.underline]#Electronic Benefit Transfer Service Provider System# – The Service Provider System that is used to transmit data between EBTAS and the Gateway system.
+EBTSPS allows for online address updates and review of customer transactions (such as card requests, benefit deposits, benefit redemptions, and account activities).
+
+| EITC/EIC
+| [.underline]#Earned Income Tax Credit# – A refundable federal income tax credit for low-income working individuals and families.
+
+| EIVS
+| [.underline]#Employment Income Verification System# – A system in Gateway that verifies employment income using a pre-defined hierarchy and multiple electronic sources. The system’s framework provides the ability to add or remove electronic sources from the hierarchy at any time.
+
+| ELE
+| [.underline]#Express Lane Eligibility# - is an automatic process to enroll or renew eligible children under the age of 19 who are receiving SNAP, TANF, Childcare and Parent Services (CAPS), Women, Infants, and Children (WIC), or Refugee Cash Assistance (RCA) into the Medical Assistance program.
+
+| ELIGIBILITY SPECIALIST (ES) or ELIGIBILITY WORKER (EW)
+| [.UNDERLINE]#Eligibility Specialist# - DFCS employee responsible for determining an A/R's eligibility for TANF, SNAP, and/or Medicaid.
+
+| EMA
+| [.underline]#Emergency Medical Assistance# – Provides medical coverage to individuals who meet all requirements for a Medicaid COA except for citizenship/alienage and enumeration requirements and who require or have received an emergency medical service.
+
+| E&T PROGRAM
+| [.underline]#Employment and Training Program# – The employment program related to SNAP.
+Certain recipients are required to register for work and can voluntarily participate in educational, training, and work-related activities through the program. In Georgia, SNAP Works is the name of the E&T program.
+
+| EV
+| [.underline]#Equity Value# – FMV less indebtedness.
+Generally used as the countable value of a non-excluded resource.
+
+| EXPUNGED BENEFITS
+| [.underline]#Expunged Benefits# – Benefits that have not been accessed by the AU are eventually deleted from the AU EBT account.
+For SNAP benefits, expungement occurs 274 days from the last debit.
+
+| FC
+| [.underline]#Foster Care# – A federal/state program that provides financial support to a person, family, or institution that is raising a child or children who are in foster care.
+Refer to Section 3420 for information on how to treat Foster Care Payments.
+
+| FEMA
+| [.underline]#Federal Emergency Management Agency# – An independent federal agency that reports to the President of the United States.
+It often works in partnership with other organizations that are part of the nation's emergency management system.
+
+| FFCC
+| [.underline]#Former Foster Care Children# - Individuals who age out of foster care, or age out of the Chafee Independence Program, and were receiving Medicaid until the last day of the month they turn 26 years of age.
+
+| FH
+| [.underline]#Fair Hearing# – A request by an AU to have an opportunity to dispute a case action taken by the agency.
+
+| FMV
+| [.underline]#Fair Market Value# – The amount of money for which an item can sell on the open market.
+
+| FNS
+| [.underline]#Food and Nutrition Service# – The federal agency that provides oversight for SNAP and administers the nutrition programs for the U.S. Department of Agriculture.
+The programs include SNAP, the National School Lunch and School Breakfast programs, the Child and Adult Care Food program, and the Special Supplemental Program for Women, Infants, and Children (WIC).
+
+| FPL
+| [.underline]#Federal Poverty Level# – The federal government official income level for establishing poverty.
+The FPL is updated in February of each year.
+
+| GATEWAY
+| [.underline]#Gateway# – The State of Georgia's Integrated Eligibility System that records information and generates benefits to AUs.
+
+| GEMA
+| [.underline]#Georgia Emergency Management Agency# – The state agency that provides coordination of services for victims of declared state and federal disasters.
+
+| GIC
+| [.underline]#Gross Income Ceiling# – A number based on a percentage of the federal poverty level for a particular AU size, which, if exceeded by an AU's gross income, causes the AU to be ineligible for assistance.
+
+| GIC TEST
+| [.underline]#Gross Income Ceiling Test# – A budget procedure by which an AU's gross countable income is compared to a percentage of the federal poverty level to determine eligibility.
+
+| HHS
+| [.underline]#Health and Human Services# – The federal agency that provides oversight for the TANF Program.
+
+| HIPAA
+| [.underline]#Health Insurance Portability and Accountability Act# – HIPAA consists of regulations designed to protect health insurance coverage for workers and their families when they change or lose their jobs.
+HIPAA is also intended to ensure patient confidentiality for all health care-related information; the act's requirements apply to storing and/or transmitting patient identifiable information on electronic media.
+A failure to comply with HIPAA mandates can result in civil and criminal penalties.
+
+| IBON
+| [.underline]#Income Based on Need# – Payments based on financial need, which are made from partial or total federal funds, or from private charitable organizations, such as TANF, VA pensions, and Salvation Army grants.
+
+| IEP
+| [.underline]#Individual Employment Plan# - A plan developed with each voluntary participant which is required to participate in the Employment and Training Program.
+
+| IEVS
+| [.underline]#Income Eligibility Verification System# – A periodic federally mandated system that matches with other state and federal agencies, such as the Department of Labor and the Social Security Administration.
+
+| IRS
+| [.underline]#Internal Revenue Service# – An interface system that provides data on leads for investigating possible unreported/unearned income and undisclosed resources.
+Information is given to the state via a tape match with the IRS files.
+This is a mandated IEVS match.
+
+| LIHEAP
+| [.underline]#Low Income Home Energy Assistance Program# - A federally funded program that helps low-income households with payment on their home energy bills, provides energy crisis assistance, and provides long-term, low-cost residential weatherization.
+
+| MANDATORY REGISTRANT (MR)
+| [.underline]#Mandatory Registrant# - is an individual who is a work registrant and meets one of the following: pregnant but not high risk, responsible for the dependent care of a SNAP household member under age 14, even if the child is not eligible for SNAP benefits, and under age 18, or:
+
+•	51 – 59 years of age *(effective September 1, 2023 - September 30, 2023)*
+
+•	53 – 59 years of age *(effective October 1, 2023 - September 30, 2024)*
+
+•	55 – 59 years of age *(effective October 1, 2024 - July 3, 2025)*
+
+•	66 or older *(effective July 4, 2025)*
+
+| MAO
+| [.underline]#Medical Assistance Only# – Medical assistance for individuals who receive Medicaid through an ABD or Family Medicaid COA.
+
+| MEDICAID
+| [.underline]#Medicaid or Medical Assistance# – Title XIX of the Social Security Act that provides grants to states for the establishment of medical assistance programs for low-income individuals and families.
+
+| MEDICAID MEMBER ID NUMBER
+| [.underline]#Medicaid Member ID Number# – A number assigned to each Medicaid recipient that must be presented to Medicaid providers for the submission of claims.
+Each number has a unique identifier at the end that confirms the type of Medicaid coverage and whether the number was generated by Gateway or DMA.
+
+| MEDICARE
+| [.underline]#Medicare# – A federal health insurance program administered by the SSA for people 65 or older and certain disabled people.
+
+*PART A* – Hospital insurance.
+There is no premium for this coverage for persons who have adequate credits for work under Social Security.
+
+*PART B* – Supplemental medical insurance.
+Eligible persons must pay a monthly premium.
+
+
+| MNIL
+| [.underline]#Medically Needy Income Level# – The income level used to determine the spenddown under Medically Needy.
+Based on 133% of the TANF Family Maximum.
+
+|NAC
+|[.underline]#National Accuracy Clearinghouse# – an interstate data matching system designed to prevent SNAP participants from receiving benefits in multiple states.
+
+| NCP
+| [.underline]#Non-Custodial Parent# – A parent who does not have custody of the child, also known as the absent parent.
+
+| OFI
+| [.underline]#Office of Family Independence# – The section in DFCS that is responsible for administering SNAP, TANF, Medicaid, and RSM Programs.
+Formerly known as Economic Support Services.
+
+| OIG
+| [.underline]#Office of Inspector General# – A unit within the Department of Human Services that investigates complaints regarding the management and operation of state agencies within the executive branch to prevent, detect, identify, expose, and eliminate fraud, waste, abuse, and corruption
+
+| OSAH
+| [.underline]#Office of State Administrative Hearings# - The office within the state of GA that processes all fair hearing requests to resolve disputes between the public and State agencies in a timely, impartial, courteous, and professional manner.
+
+| PAN
+| [.underline]#Personal Account Number# – The number printed on the AU's EBT card.
+
+| PARENT/CARETAKER
+| [.underline]#Parent/Caretaker# – Provides Medicaid benefits for eligible children under the age of 19, and the eligible adult(s), who meet the tax filer or non-tax filer status for the child(ren).
+
+| PATHWAYS
+| [.underline]#Georgia Pathways# - A MAGI class of assistance that provides coverage to adults ages 19 to 64 who are not otherwise eligible for Medicaid. To qualify, the A/R must engage in at least 80 hours per month in a qualifying activity or activities.
+
+|PIN
+|[.underline]#Personal Identification Number# - A number chosen by a SNAP recipient when they activate their EBT card that allows them to use the benefits.
+
+| PL
+| [.underline]#Public Law# – A congressional law.
+
+| POE
+| [.underline]#Period of Eligibility# - This is the length an Applicant/Recipient can receive SNAP benefits. This term is used interchangeably with Certification Period.
+
+| PPR
+| [.underline]#Performance Planning and Reporting# – A section in OFI that provides statistical data for SNAP.
+
+| PGW
+| [.underline]#Pregnant Women# – Provides Medicaid to eligible pregnant women who meet all eligibility criteria.
+
+| PRWORA
+| [.underline]#The Personal Responsibility and Work Opportunity Reconciliation Act# of 1996 (PRWORA) (Public Law 104-193) – Eliminated the open-ended entitlement for AFDC and changed various SNAP regulations, including eligibility for certain non-citizens.
+
+| QMB
+| [.underline]#Qualified Medicare Beneficiaries# – A "non-Medicaid" COA under which recipients are entitled to limited Medicaid services, such as payment by Medicaid of their Medicare Premiums, deductibles, and co-insurance.
+
+| RECERTIFICATION
+| [.UNDERLINE]#Recertification# - A review of the assistance unit’s (AU) circumstances to continue receiving Supplemental Nutrition Assistance Program (SNAP) benefits, which includes filing an application, having an interview (if required), and providing required information. It may also be referred to as a renewal.
+
+| RR
+| [.underline]#Railroad Retirement# – A benefit paid to disabled or retired employees of the railroad.
+Widows/Widowers of former RR employees may also qualify for RR.
+
+| RSDI
+| [.underline]#Retirement, Survivors, Disability Insurance# – The program of cash benefits administered by SSA.
+Entitlement is based upon the individual's employment history.
+Also known as OASDI.
+
+| RTW
+| [.underline]#Ready-To-Work# – A program that is intended to put hard-to-place TANF recipients to work.
+These individuals reside in drug and alcohol residential treatment facilities and may receive SNAP as a one-person AU.
+
+| SAVE
+| [.underline]#Systematic Alien Verification for Entitlements# – It is an automatic verification system that serves to establish the legitimacy of an alien's documents and alien status.
+
+|SCREENING
+|[.underline]#Screening# – The process of an eligibility worker evaluating an individual for all exemptions from the general work requirements, and exceptions from the ABAWD time limits, to determine if an individual should be referred to the E&T (SNAP Works) program.
+
+| SDX
+| [.underline]#State Data Exchange# – SSA interface system that provides information about SSI transactions.
+Information is provided through Federal SDX tapes and is available through Gateway inquiry.
+
+| SLMB
+| [.underline]#Specified Low-Income Medicare Beneficiaries# – A "non-Medicaid" COA that provides only for payment of the recipient's monthly Part B Medicare premium.
+
+| SMEU
+| [.underline]#State Medical Eligibility Unit# – The unit responsible for making disability decisions for ABD Medicaid A/Rs under age 65.
+
+| SNAP
+| [.underline]#Supplemental Nutrition Assistance Program# – The program that provides food benefits to low-income individuals and families to supplement their grocery budget. It is  formerly known as the Food Stamp Program.
+
+|SNAP Works
+|[.underline]#SNAP Works# – Georgia’s voluntary Employment and Training (E&T) program for SNAP recipients, which provides them with opportunities to gain skills, training, and/or experience that will improve their ability to attain employment.
+
+| SOP
+| [.underline]#Standard of Promptness# – The maximum number of days allowed to process an application, recertification, interim change, or periodic report.
+
+| SSA
+| [.underline]#Social Security Administration# – The federal agency responsible for administering and providing RSDI, SSI, and Medicare to eligible individuals.
+
+| SSI
+| [.underline]#Supplemental Security Insurance# - SSI is a monthly income provided to aged (age 65 or older), blind, or disabled individuals who are in financial need, which is administered by the Social Security Administration and funded entirely by the Federal government.
+
+| SSN
+| [.underline]#Social Security Number# – The furnishing of a SSN is an eligibility requirement for SNAP.
+Social security numbers are used to match client-level data in Gateway with data in other federal and state agencies, such as SSA and DOL.
+
+| SRR
+| [.underline]#Simplified Reporting Requirements# – All SNAP assistance units (AUs) have a requirement to report changes in household circumstances during the certification period.
+
+SRR AUs are required to report when: the total monthly gross income exceeds 130% of the FPL for the AU’s size, an ABAWD’s work hours fall below 20 hours per week or an average of 80 hours monthly, and substantial winnings from lottery, gambling, prizes, awards, and/or windfalls.
+
+
+| TANF
+| [.underline]#Temporary Assistance for Needy Families# – An employment and cash assistance program for needy families.
+Formerly known as AFDC.
+
+| TIMELY NOTICE
+| [.underline]#Timely Notice# – A 14-day advance notification to advise recipients that benefits will be decreased or terminated unless they appeal before the expiration of the notice.
+
+| TSNAP
+| [.UNDERLINE]#Transitional Supplemental Nutrition Assistance Program# - Benefits provided to SNAP assistance units (AU) that become ineligible for TANF or Refugee Cash Assistance (RCA) because of changes related to earned income. Transitional benefits ensure that AUs continue to have their nutritional needs met as they transition from receiving cash assistance to working to have greater self-sufficiency.
+
+| TWSP
+| [.underline]#TANF-to-Work Support Payment# – Payments provided to TANF recipients who have become ineligible for monthly cash assistance due to employment.
+These recipients remain categorically eligible for SNAP benefits.
+
+| UCB
+| [.underline]#Unemployment Compensation Benefit# – Benefits administered by the Department of Labor to eligible unemployed individuals.
+
+|USCIS
+|[.underline]#U.S. Citizenship and Immigration Services# – the U.S. government agency within the Department of Homeland Security (DHS) responsible for managing lawful immigration
+
+| USDA
+| [.underline]#United States Department of Agriculture# – The U.S. government agency that provides leadership on food, agriculture, natural resources, rural development, nutrition, and related issues based on public policy. They administer the Supplemental Nutrition Assistance Program (SNAP) formerly known as the Food Stamp Program.
+
+| VA
+| [.underline]#Veterans Administration# – The federal agency that provides VA benefits to some military veterans and their dependents and/or survivors.
+
+| VULNERABLE INDIVIDUAL (VI)
+| [.underline]#Vulnerable Individual# - is a person whose safety would be in danger by the disclosure of their information, regardless of age or gender. This includes (but is not limited to):
+
+•	A resident of a shelter for battered women and children
+
+•	A resident of a domestic violence shelter
+
+•	A person who self-identifies as fleeing domestic    violence
+
+
+|===

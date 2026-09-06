@@ -1,0 +1,155 @@
+= 3360 E&T Participation Requirement
+:chapter-number: 3300
+:effective-date: January 2026
+:mt: MT-86
+:policy-number: 3360
+:policy-title: E&T Participation Requirement
+:previous-mt-number: MT-76
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+
+ 7 CFR § 273.7(a)
+
+== Requirements
+
+SNAP Works Program eligible recipients may volunteer to participate in the SNAP Works Program.
+
+== Basic Considerations
+
+The State designs and operates the  SNAP E&T Program, which may consist of one or more employment and training components.
+In Georgia, this program is called SNAP Works.
+
+=== Participation Requirements
+
+SNAP E&T Eligible individuals are SNAP recipients who may volunteer to participate in the SNAP Works Program.
+If the volunteer no longer wants to participate, no adverse action is taken.
+
+=== SNAP Works Eligible Definition
+
+SNAP Works eligible individuals must meet the three criteria below.
+
+* Receive SNAP assistance
+* Is fit for employment
+* Has opted to voluntarily enroll in the SNAP Works Program
+
+[.text-center]
+*AND*
+
+SNAP Works eligible individuals must meet one or more of the following criteria:
+
+* Can be exempt or a work registrant (either an ABAWD or mandatory registrant)
+* Can be pregnant
+* Can be underemployed or unemployed
+* Can be TANF Eligible, but is *not* receiving TANF benefits
+* Can be a single parent
+* Can receive any type of unemployment compensation benefits
+* Can be a senior citizen
+* Can be homeless
+* Can be a veteran
+* Can be disabled, but fit for employment
+* Can be a returning citizen
+* Can be a refugee
+* Can be a student who is taking GED, Literacy, or English Language preparation courses.
+* Can be a student attending one of the Technical College System of Georgia (TCSG) locations and taking courses under a certificate, diploma, or associate degree program as identified in the State's SNAP E&T Plan.
+
+SNAP Works Eligible individuals are *not*:
+
+* receiving TANF
+* Students in higher learning, such as a bachelor's or master's degree program
+* Deemed unfit for employment
+
+=== Employment Services Specialist Responsibilities
+
+The SNAP Works Program Employment Services Specialist (ES) has the following responsibilities:
+
+* Provides case management services for participants.
+ ** Completes 360 progress reviews on participants after initial enrollment.
+ ** Connects the participant with referrals to community resource agencies.
+ ** Issue work support services within two workdays of review appointment, as needed for continued participation in program activities.
+ ** Assure that the actions taken on a participant's employment services case are documented using the case note feature in Georgia Gateway.
+ ** Ensures that the provider administers the following employment services:
+  *** Conducts the participant orientation and assessments.
+  *** Develop the participant's Individual Employment Plan (IEP) in accordance with their desired training activity within 10 days of the referral receipt.
+  *** Arrange for participation in the assigned training activity.
+  *** Monitor and record the participant's hours spent in activity monthly.
+  *** Arrange for or provide participant support services monthly.
+  *** Managing occurrences of non-participation in the SNAP Works Program by addressing challenges to participation.
+  *** Meets the standard of promptness as defined in the Provider's contract.
+ ** Initiates and participates in monthly staffing meetings with providers and/or participants to discuss the participants' progress toward their Individual Employment Plan objective.
+
+* Records participant information in the Gateway system, including the following:
+ ** assessment date;
+ ** orientation date;
+ ** Individual Employment Plan (IEP);
+ ** participation in activities;
+ ** participation hours;
+ ** support services payments;
+ ** non-participation;
+ ** case actions and remarks.
+
+* Notifies the eligibility specialist via the eligibility system using worker-generated alerts, email, or Communication Log entry of all cases involving the following activities:
+ ** employment within 5 workdays.
+
+=== Reporting and Accuracy
+
+The ES must screen the SNAP recipients referred to the SNAP Works Program to ensure accuracy of the referral.
+Only SNAP recipients who meet the SNAP Works Program criteria can participate in the program.
+The ES reviews and uses alerts, system-generated tasks, or SNAP Works reports to ensure the accuracy of reported data.
+
+=== Closing Employment & Training Activities
+:table-caption: Chart
+Training activities should be closed based on notification from the provider of positive or negative program completion. Case closure should not occur before 90 days following a positive program completion of training activities to allow for potential re-engagement.
+
+NOTE: Hours must cycle overnight prior to the ES case closure.
+Refer to Chart 3360.1 for the appropriate closure codes.
+
+[#chart-3360-1]
+.3360.1 - E&T CASE CLOSURES
+|===
+^| IF ^| THEN
+
+2+^| *Negative Completion Terms*
+
+| Participant becomes ineligible for the SNAP E&T Program, such as becoming unfit to participate
+a| Enter “negative program completion” and reason “Participant Illness, Incapacity”, or “Substance Abuse or Dependence”, or “Other.”
+
+NOTE: If “Other" is used, ES must add a case note to explain “Other.”
+
+| Participant's SNAP case closes due to moving out of state
+| Enter “negative program completion” and reason “Moved Out of State.”
+
+| Participant fails to take part in ES appointment (initial or review), *AND* no good cause exists
+| Enter “negative program completion” and reason “withdrew.”
+
+| Participant withdraws from SNAP E&T Program
+| Enter “negative program completion” and reason “withdrew.”
+
+| Participant fails to complete job search or job retention, *AND* no good cause exists
+a| Enter “negative program completion” and reason “Other.”
+
+NOTE: ES must add a case note to explain “Other.”
+
+| Participant fails to complete the education or training activity, *AND* no good cause exists
+| Enter “negative program completion” and reason “withdrew.”
+
+| Participant is dismissed from the provider or partner site and cannot be served by the E&T Program ongoing due to programmatic violations.
+a| Enter “negative program completion” and reason “dismissed.”
+
+NOTE: This must be approved for use by the State Office E&T Director.
+
+2+^| *Positive Completion Terms*
+
+| Participant completes job search and does not obtain employment
+| Enter “positive program completion” and reason “Attained Level.”
+
+| Participant completes job retention services
+| Enter “positive program completion” and reason “Attained Level.”
+
+| Participant completes basic education or vocational training and receives a certificate of completion.
+| Enter “positive program completion” and reason “Obtained 2 Year Degree” *OR* “Obtained GED” *OR* “Obtained High School Diploma” *OR* “Certificate/Diploma (VOC ED)”
+
+| Participant completes work experience and obtains employment.
+| Enter “positive program completion” and reason “Emp Full-Time (30 Hrs or More)” *OR* “Emp Part-Time (Less Than 30 Hrs)”
+|===

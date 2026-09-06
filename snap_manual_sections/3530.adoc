@@ -1,0 +1,126 @@
+= 3530 Social Security Number (SSN) Validation
+:chapter-number: 3500
+:effective-date: July 2025
+:mt: MT-83
+:policy-number: 3530
+:policy-title: Social Security Number (SSN) Validation
+:previous-mt-number: MT-57
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The system interfaces with the files at the Social Security Administration (SSA) to verify the accuracy of the SSN of an AU member.
+
+== Basic Considerations
+
+All SSNs entered in the system will interface with SSA files.
+
+== Procedures
+
+Social Security Number (SSN) validations and discrepancies are corrected at initial application and renewal.
+SSNs, which are not federally verified, must be entered into the system.
+
+Use the following procedures to complete the validation requirements.
+
+[#chart-3530-1]
+.CHART 3530.1 – SSN VALIDATION
+|===
+^| IF AN AU MEMBER'S SSN ^| THEN
+
+| is valid
+| the system will annotate the SSN with an FV (federally verified) code.
+
+No further action is required.
+
+a| appears on the system-generated enumeration or validation discrepancy lists
+
+NOTE: An alert is generated.
+| determine if the AU member's full name, DOB, and SSN match the information on the individual's official documents.
+
+Correct any information that is in error.
+
+Refer the A/R to SSA for corrective action if the SSA information is the source of the error.
+
+| matches with another SSN known to the system
+| determine which number in the system is correctly assigned.
+
+Correct any SSNs erroneously entered in the system
+
+*OR*
+
+Refer the AU member to SSA for corrective action if multiple individuals are assigned the same SSN.
+
+| is validated by the system but differs from the verification (SSN card) obtained from the A/R
+| refer to the procedures “How to Change a Validated SSN” in this section.
+|===
+
+=== How to Change A Validated SSN
+
+[horizontal,labelwidth=10]
+Step 1:: Gather the following case identifying information and report it in the order listed:
+
+* Eligibility Worker's name
+* Eligibility Worker's telephone number
+* County, office, supervisor
+* Case number
+* Case name
+* Individual member's name
+* Individual member's client ID number
+
+Step 2:: Send an email message with the above information to empi.helpdesk@dhs.ga.gov.
+
+Step 3:: Correct the SSN when the Help Desk provides notification that the validation code has been removed.
+
+=== How to Request A Client ID Correction
+
+In order to have the DFCS Help Desk correct a client ID, staff must complete the following guidelines:
+
+[horizontal,labelwidth=10]
+Step 1:: Before deleting a suspected duplicate client ID, ensure all demographic information is correct for the client ID that you wish to keep.
+
+Step 2:: Review all documents in UCM/WEC to make sure demographic information is correct, especially the SSN.
+Contact the A/R if necessary to make sure demographics are 100% accurate.
+
+Step 3:: Once you are certain that you know which client ID needs to be deleted, complete the following steps:
++
+[upperalpha]
+. Prior to initiating the merge of IDs, be sure to remove all pending and active program applications and cases from the secondary (erroneous) ID.
+
+. Go to the *Data Collection* module, select the *Initiate Data Collection* submodule.
+
+. Select *Case Change* as your case action.
+
+. Select the *Persons* LUW, and then you should be on the *Individual Applicant Group Summary* page.
+Click on the pencil for the duplicate individual (DO NOT use the trashcan icon to delete an individual).
+
+. On *the Person Details* page, remove the SSN if it is not a federally verified (FV) SSN.
+If there is no SSN entered for the erroneous client ID, you may skip this step.
++
+NOTE: If the SSN is federally verified (FV), the supervisor must submit an "FV code removal request" to the helpdesk email address at: empi.helpdesk@dhs.ga.gov to remove the SSN.
+During this request, the worker must cease all actions on case and program updates until the FV SSN has been removed.
+
+. On *Person Applicant Group Status* page, use current date for CS/CD, reported on, and verification received on date.
+
+. Make the following changes in the appropriate fields: Change *applicant group status* to "Out of Applicant Group", select *absence reason* "moved out of household", select client statement for *verification reason,* and select "No" for *intend to return.*
+
+. Continue through the *Individual Information* submodule until you reach the *Person Demographics Summary* page.
+
+. Click on the pencil for the individual you wish to remove and continue through the LUW to the *Person Demographics SSN Application/Armed Services* page.
+
+. Change the *reason SSN not provided* field to "match problem" after you've removed the erroneous SSN for the individual.
+
+. Run *EDBC* and make sure the erroneous client ID is showing closed.
+Once this has been verified, finalize eligibility.
+
+. Go to *Correspondence* and suppress notice.
+
+. Return to the *Data Collection* module, initiate data collection and select action as change mode and then select the *Others* submodule.
+
+. Select *Other* once more and click on the left navigation menu to get to the *Merge Individuals* LUW.
+
+. Complete the *request type* as "Merge” and enter the primary client ID (the one you want to keep) and the secondary client ID (the one you want merged).
+
+. Check "Yes" for *participation inactive*.
+
+. In the *comments* box, enter: first name, last name, DOB, SSN, sex, and the reason for the merge, and then click *Submit*.

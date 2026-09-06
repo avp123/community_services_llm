@@ -1,0 +1,58 @@
+= 3600 Budgeting Overview
+:chapter-number: 3600
+:effective-date: April 2021
+:mt: MT-64
+:policy-number: 3600
+:policy-title: Budgeting Overview
+:previous-mt-number: MT-58
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+All Assistance Units (AUs) must have their income considered in determining financial eligibility through a budgeting process.
+
+== Basic Considerations
+
+The budgeting process includes the following:
+
+* the prospective budgeting method, used to determine the AU's monthly income and expenses
+* the allowable deductions based on certain monthly expenses
+* the budgeting procedure used to calculate eligibility and benefit level using monthly income and expenses.
+
+=== Prospective Budgeting
+
+Prospective budgeting uses a best estimate of income and expenses based on a representative amount to determine the AU's eligibility and benefit amount.
+This income and expense are either estimated using a conversion factor, or actual depending on the case situation.
+
+=== Deductions
+
+Certain deductions are allowed when determining the AU's monthly benefit.
+
+The FS program allows deductions to both earned and unearned income as follows:
+
+* 20% of earned income deduction
+* standard deduction
+* excess medical expense deduction
+* dependent care expense deduction
+* child support deduction
+* excess shelter deduction
+* homeless shelter deduction
+
+=== Income Test
+
+To be eligible, the AU's income must be applied to the following tests:
+
+* Gross Income Ceiling (GIC) - the gross countable income of the AU must be less than or equal to the GIC for the AU size.
+* Net Income Limit - the net income of the AU after all deductions must be less than or equal to the net income limit for the AU size.
+
+If the AU is eligible to receive FS, the FS allotment is based on the AU's net income and the AU size.
+
+== Documentation
+
+Document the following for all budgets:
+
+* the amounts of all gross income and expenses used in the budget, including the dates income is received and expenses are incurred and the source of verification.
+* the gross amounts used to calculate the representative income/expenses.
+* calculation of representative amounts.
+* the reason(s) non-representative amount(s) are not used in calculations.

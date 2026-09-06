@@ -1,0 +1,143 @@
+= 3110 Expedited Application Processing
+:chapter-number: 3100
+:effective-date: June 2026
+:mt: MT-87
+:policy-number: 3110
+:policy-title: Expedited Application Processing
+:previous-mt-number: MT-86
+
+include::partial$policy-header.adoc[]
+
+== Codes and References
+7 CFR § 273.2(i)
+
+== Requirements
+
+All Supplemental Nutrition Assistance Program (SNAP) applications must be screened for expedited services.
+An assistance unit (AU) entitled to expedited services must be able to participate by the 7^th^ calendar day following the date of application or the date eligibility for expedited services is discovered.
+
+== Basic Considerations
+
+AUs are entitled to expedited services if *one* of the following criteria is met in the month of application:
+
+* The AU has less than $150 in monthly gross countable income *and* liquid resources that do not exceed $100.
+* The AU has monthly shelter and utility expenses (based on the standard utility deduction) that exceed their monthly gross countable income and liquid resources.
+* The AU has a destitute migrant or seasonal farm worker with liquid resources that do not exceed $100.
+Only migrant or seasonal farm worker AUs may be considered destitute.
++
+NOTE: Refer to xref:3235.adoc[] for additional information.
+
+An AU may be identified as eligible for expedited service but ineligible to receive benefits.
+
+There is no limit to the number of times an AU can be certified under expedited procedures as long as prior to each expedited certification, the household either completes the verification requirements that were postponed at the last expedited certification (as long as these requirements are still applicable) or was certified under normal processing standards since the last expedited certification.
+
+These AUs must receive their benefits by the 7^th^ day following the date of application.
+If the seventh calendar day falls on a weekend or holiday, the application must be processed in sufficient time to allow the AU to participate by the 7^th^ day.
+The AU must receive the Electronic Benefit Transfer (EBT) card, the Personal Identification Number (PIN) and benefits must be available in the AU's EBT account by the 7^th^ day following the date of application.
+
+=== Screening Applications
+
+All applications received by the agency must be screened for expedited services.
+
+Applications received through Gateway are automatically screened for expedited services and have met all screening requirements.
+
+Applications received by mail, facsimile or dropped off at a county DFCS office must be screened for expedited services.
+Use the expedited screening tool (Form 296) to determine if expedited services should be provided to the AU.
+
+=== Interviewing Requirements
+
+After an application has been screened for expedited services, all applicants who are not interviewed on the day they submit their application should have an appointment scheduled for an interview or be provided the On-Demand information if they meet the On-Demand criteria.
+
+For expedited applications eligible for an On-Demand interview, customers will receive an On-Demand Interview Notice and text message (if applicable) to inform them that they need to contact DFCS to complete their required interview. Even though these customers will not receive scheduled appointments, an interview is still required. The customers must call the agency to complete the interview within the expedited SOP timeframe to receive expedited services. However, they may still call in to complete their interview after the expedited timeframe, but by the 30-day application SOP date. When this occurs, it will be processed as an unexpedited application.
+
+The agency should make every effort to complete the interview as soon as possible in order to meet expedited processing standards.
+All attempts to contact the AU should be documented in the case.
+
+The interview for expedited applications may be a telephone interview unless the applicant requests a face-to-face interview.
+Document the type of interview conducted.
+
+If an On-Demand eligible AU requests a scheduled telephone or face-to-face interview, then the ES must schedule an appointment.
+
+== Screening and Referral to SNAP Employment and Training (E&T)
+
+The eligibility worker is required to screen all AU members who meet the following criteria during the interview to determine if a referral is appropriate to the SNAP E&T Program, also known as SNAP Works:
+
+* are at least 16 or 17 years of age or older *and* the head of household
+* are at least 18 years or older
+* are not receiving TANF benefits
+* are fit for employment
+
+For each AU member who meets the criteria, the SNAP Screening and Referral Tool page in Gateway xref:attachment$form-864.pdf[Form 864] must be completed, even if they are unavailable during the interview. If Gateway is down and screening cannot be completed in the system, a manual form 864 must be completed and uploaded. However, once Gateway becomes available, staff are also required to complete the SNAP Screening & Referral Tool page.
+
+The head of household (PI) can respond for other AU members who need to be screened if they wish to do so.
+
+If the PI provides screening information for other AU members but is unsure if they are ready to volunteer to be referred, then the eligibility worker should document accordingly.
+If the PI states that they do not feel comfortable answering for other AU members regarding a referral, eligibility workers should try to complete the screening and referral process and document accordingly.
+
+If the screening and referral process is not completed at application or recertification for absent AU members, the eligibility worker should document accordingly.
+In that case, those AU members would need to go through the screening and referral process at the next application or recertification.
+
+=== Verification
+
+For expedited cases, *identity* is the only verification required before benefits are issued and must be issued by the 6^th^ day.
+Reasonable efforts should be taken to verify *all eligibility factors* within the expedited time standard, but certification is not delayed beyond the expedited processing standard.
+
+[caption=Exception]
+[NOTE]
+====
+* If the applicant is work-sanctioned, has served the appropriate minimum sanction period, is not exempt from work registration, and is not exempt from employment and training (E&T) participation, then the applicant must first comply with E&T.
+* If the applicant is an ABAWD subject to the time limits, the ABAWD must regain eligibility prior to certification of benefits.
+Refer to xref:3355.adoc[] and xref:3380.adoc[].
+* If there is an NAC match for an individual in the AU currently receiving benefits in another state, expedited processing standards no longer apply, unless it is a vulnerable individual living in a shelter. Refer to xref:3510.adoc[].
+====
+
+Verify identity through readily available documentary evidence or a *collateral contact*.
+The agency must check for proof of identity for the head of household and/or authorized representative in the current case files, if applicable.
+Refer to Section xref:3335.adoc[].
+
+If no other identity verification is available, workers are to ensure that a collateral contact is offered at the interview and that this offer has been documented in the case.
+Collateral contacts should not be allowed in suspected fraudulent cases. The State agency is not required to use a collateral contact designated by the household if the collateral contact cannot be expected to provide accurate third-party verification.
+
+When the AU does not provide verification of identity or a collateral contact, complete the interview, or provide proof of regaining eligibility (when applicable) within the expedited services timeframe, the case reverts to non-expedited processing standard.
+The household also loses the right to postponed verification of other eligibility factors and the right to special income exclusions for destitute households.
+If the required verification is later provided, process the case within the non-expedited processing standard.
+
+The AU must provide all postponed verification by the end of the first or second month of the certification period in order to receive benefits for the remaining months in the certification period.
+There is [.underline]#*no grace period*# allowed for verification returned late for expedited applications processed with postponed verification.
+
+=== Certification Period
+
+Applications screened, identified, and approved for expedited services may receive benefits for one or two months.
+
+If the applicant provides proof of identity and all required verification on the day of the interview, then assign a normal certification period.
+If verification of a deduction is the only required information, assign a normal certification period [.underline]#without# allowing the deduction.
+Notify the AU that the deduction may be allowed when the requested verification has been provided.
+Refer to xref:3105.adoc#chart-3105-1[Chart 3105.1, Assigning Certification Periods], for normal certification periods.
+
+If the applicant is not able to provide all required verification on the day of the interview, assign the certification period in one of the following ways:
+
+. If the date of application is on or *before* the 15^th^ of the month, certify the application for one month.
+Advise the AU that it has until the end of the first month to provide the postponed verification.
+
+. If the date of application is *after* the 15^th^ of the month, certify the application for two months.
+Advise the AU that it has until the end of the second month to provide the postponed verification.
+
+Households that receive expedited benefits with postponed verification cannot receive benefits beyond the initial first or second month of the certification period if postponed verification is not returned by the end of the first or second month. Unlike other SNAP verification requests, the case [.underline]#*is not*# held until the next business day for denials, as this would cause the case to go over the standard of promptness (OSOP).
+
+Assign a normal certification period if all required verification is returned.
+
+=== Changes Reported During Expedited Processing
+
+If postponed verification has been returned and the AU reports a change, follow the policy in xref:3715.adoc[], to process the application.
+Assign a normal certification period.
+
+=== Notifications
+
+Notify households of SNAP eligibility.
+
+The *_Notice of Approval_* should contain the following information:
+
+* The month(s) in which the initial first or second month of benefits will be issued.
+* The verification(s) that has been postponed and the deadline for providing information.
+* The correct certification period if the postponed verification is provided.
+* The requirement that the benefit period will end after the first or second month and that no additional months will be issued if the postponed verification is not returned.

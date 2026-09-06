@@ -1,0 +1,100 @@
+= Appendix B Hearings Overview
+:chapter-number: Appendix B
+:effective-date: July 2024
+:mt: MT-78
+:policy-number: Appendix B
+:policy-title: Hearings Overview
+:previous-mt-number: MT-59
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An assistance unit (AU) is entitled to a fair hearing if it is aggrieved by any action taken by the agency that affects its participation in the Supplemental Nutrition Assistance Program (SNAP).
+
+== Basic Considerations
+
+A request for a hearing is a clear expression by the AU or its representative that it desires to have an opportunity to present its case or to appeal a decision on its case to a higher authority.
+
+== Notification of the Right to a Fair Hearing
+
+DFCS must inform the AU in writing of the right to a hearing at the following times:
+
+* Initial application
+* When an action is taken on the case that affects benefits
+* When the AU requests a restoration of lost benefits
+
+DFCS should assist the AU in completing the necessary document(s), if requested.
+
+== Hearings
+
+Initial hearings in the SNAP are conducted by an Administrative Law Judge (ALJ) of the Office of State Administrative Hearings (OSAH). Hearings may be granted to any AU who makes a timely request. The hearing includes consideration of the following actions:
+
+* any agency action, or failure to act with reasonable promptness, on a request for SNAP benefits, including the following:
+** a delay in determining eligibility and issuing benefits
+**  a failure to act on a change
+**  a termination or reduction of benefits
+
+* any agency decision regarding eligibility, including the following:
+**  the amount of benefits
+**  the manner or form of payment
+**  the individual to whom benefits are sent
+
+[caption=Exception]
+NOTE: The AU has no right to a hearing based on a change in the SNAP issuance cycle.
+
+NOTE: This list is not all-inclusive.
+
+A request for a hearing may be oral or in writing. If an oral request is made, the agency should ask the AU to follow up the request in writing.
+
+If a non-English speaking individual requests a hearing, then the agency must provide bilingual staff or interpreters and must ensure that the hearing procedures are explained in a language that the individual who is making the request can understand.
+
+The AU may have a representative such as legal counsel, a relative, friend, or other spokesperson, or may represent him/herself at the hearing.
+
+Hearing decisions are based on evidence and other material introduced at the hearing.
+
+Hearing decisions specify the reason for the decision, identify supporting evidence and regulations, and specify findings of fact and conclusions based on law.
+
+Benefits may be continued pending an initial decision or final appeal.
+
+Benefits [underline]#cannot# continue if the hearing request is based on an action taken at recertification (renewal), as the recertification (renewal) establishes a new certification period and a new benefit level.
+
+Refer to <<Chart B1 - Adjusting Benefits After A Hearing or Final Appeal>>. The AU may appeal the initial hearing if it disagrees with the initial decision.
+
+== Procedures to Withdraw, Cancel, or Postpone the Hearing
+
+Any cancellation, postponement, or written withdrawal received after submission of the OSAH Form 1, will be forwarded to OSAH within eight working days of receipt in the local DFCS office.
+
+The withdrawal request must be made in one of the following ways:
+
+* by written notification, signed by the A/R or representative
+* by oral request
+
+If an oral withdrawal of the hearing request is received prior to submission of the OSAH Form 1, DFCS must provide a written notice to the household within 10 days of the household’s request confirming the withdrawal and providing the household with an opportunity to request a hearing. The written notice must advise the household it has 10 days from the date of the notice to advise DFCS of its desire to request or reinstate the hearing.
+
+== Chart B1 - Adjusting Benefits After A Hearing or Final Appeal
+
+[.noheader,cols=2*]
+|===
+2+^| *CHART B2 – ADJUSTING BENEFITS AFTER A HEARING OR FINAL APPEAL*
+^| *If Benefits Are*
+^| *Then*
+| Continued or reinstated and the decision is favorable to the AU
+a| Continue benefits at the current level.
+
+Take action to issue any corrective payments or restorations as authorized by the Administrative Law Judge or Appeals Reviewer.
+
+If necessary, request additional verification to determine the benefit amount.
+
+NOTE: Corrective payments are offset against outstanding claims. Notify the Administrative Law Judge at the hearing if there is an outstanding claim.
+| NOT continued or reinstated and the decision is favorable to the AU
+| Take action to increase SNAP benefits within ten days of receipt of the hearing decision, or within the AU’s normal issuance cycle.
+| Continued or reinstated and the decision is in the agency’s favor
+| Take action to decrease SNAP benefits in the next month’s issuance cycle after the decision is received.
+
+Provide adequate notice to the AU. The notice [underline]#must not# advise the AU that he or she may request another hearing.
+
+Establish a claim against the AU for any issuance, if appropriate.
+| NOT continued or reinstated and the decision is in the agency’s favor
+| The case should remain closed or benefits should remain at the lower benefit amount.
+|===

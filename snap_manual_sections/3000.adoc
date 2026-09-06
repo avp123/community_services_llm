@@ -1,0 +1,34 @@
+= 3000 General Program Overview
+:chapter-number: 3000
+:effective-date: September 2019
+:mt: MT-55
+:policy-number: 3000
+:policy-title: General Program Overview
+:previous-mt-number: MT-25
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+The General Program Chapter contains policy on topics that are related to or associated with the Food Stamp Program.
+Title IV of the 2008 Farm Bill renames the Food Stamp Program as the Supplemental Nutrition Assistance Program (SNAP).
+The purpose of the SNAP program is to promote the well-being of Georgia's population by raising the level of nutrition among low-income assistance units.
+The SNAP program provides monthly benefits to low-income families to help pay the cost of food.
+The Department of Human Services (DHS), Division of Family and Children Services through the local County Department of Family and Children Services (DFCS) is responsible for administering the SNAP program in Georgia.
+
+== Basic Considerations
+
+The following topics, identified in bold, are included in this chapter:
+
+* The Section on *Confidentiality* provides policy based on laws that govern the AU's right to keep knowledge of case information limited to certain individuals.
+
+* Effective January 1995, county DFCS workers were mandated by law to allow AUs an opportunity to make application to register to vote.
+*Voter Registration* provides procedures that are to be in place in the county DFCS offices.
+
+* *Mandated Reporting of Child Abuse and Neglect* explains the requirement and process of agency employees to report suspected child abuse.
+
+* *Americans with Disabilities Act* states that specified individuals cannot be discriminated against but must be provided with opportunities equal to persons without disabilities in accessing government programs, public services and employment.
+
+* *Title VI*
+
+* The *Verification* Section provides methods to use to meet the verification requirements when determining eligibility.

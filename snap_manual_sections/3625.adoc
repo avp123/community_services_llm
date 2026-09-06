@@ -1,0 +1,77 @@
+= 3625 Budget for an AU with IPV Disqualified or Work Sanctioned Individuals or Lawbreakers
+:chapter-number: 3600
+:effective-date: March 2020
+:mt: MT-60
+:policy-number: 3625
+:policy-title: Budget for an AU with IPV Disqualified or Work Sanctioned Individuals or Lawbreakers
+:previous-mt-number: MT-58
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An individual found to have committed an Intentional Program Violation (IPV), determined to be a lawbreaker or who has failed to comply with FS work requirements is not eligible to be included in the assistance unit (AU).
+
+== Basic Considerations
+
+Exclude the disqualified, lawbreaker *OR* work sanctioned individual from the AU when determining resource limits, gross and net income limits and benefit levels.
+
+Countable resources and income are counted in their entirety toward the remaining eligible AU members.
+The income of a disqualified or sanctioned individual receives all of the allowable deductions.
+
+Refer to xref:3315.adoc[], xref:3310.adoc[] and xref:3380.adoc[].
+
+== Procedures
+
+Follow the steps below to compute the income and determine the benefit level of an AU that contains a disqualified or sanctioned member:
+
+[horizontal,labelwidth=10]
+Step 1:: Subtract allowable income exclusions from the disqualified or sanctioned individual's income.
+
+Step 2:: Include all of the countable income of the individual found to have committed the IPV or who failed to comply with work requirements or who is a lawbreaker.
+
+Step 3:: Exclude the disqualified or sanctioned individual from the AU count when determining income and resource limits and the benefit level.
+
+Step 4:: Add the countable income of the disqualified or sanctioned individual to the countable income of the remaining AU members.
+
+Step 5:: Allow the following deductions if appropriate, to all eligible and ineligible AU members:
+
+* Earned income deduction
+* Standard deduction (for the AU size)
+* Excess medical deduction
+* Child support deduction
+* Dependent care deduction
+* Excess shelter deduction
+
+Step 6:: *IPV Disqualified AU Member*
++
+--
+Provide the AU with adequate notice of an IPV disqualification.
+Timely notice is not required.
+Include in the notice the information listed below:
+
+* the new benefit amount
+* the period of the disqualification
+
+*Lawbreakers or Work Sanctioned Individuals*
+
+Provide the AU with timely notice.
+Include in the notice the following information listed below:
+
+* the new benefit amount
+* the period of the disqualification or sanction
+--
+
+Step 7:: Impose the disqualification or sanction effective for the appropriate month.
++
+NOTE: If a court order specifies the date for initiating an IPV disqualification period, comply with the court order.
+Otherwise, use the OPIC decision date to determine the month an IPV disqualification period begins.
+The IPV disqualification period begins with the month following the month in which the OPIC decision is made.
+
+Step 8:: Determine over issuances if the disqualification or sanction is not imposed for the appropriate month or by the date in the court order.
+
+Step 9:: Continue the disqualification or sanction once it is imposed until the disqualification period is completed even if the AU is not receiving benefits.
+
+Step 10:: Upload the pertinent documents in the Document Imaging System (DIS).
+
+Step 11:: Document case notes with the appropriate information and update the Gateway system.

@@ -1,0 +1,76 @@
+= 3240 Strikers
+:chapter-number: 3200
+:effective-date: January 2025
+:mt: MT-80
+:policy-number: 3240
+:policy-title: Strikers
+:previous-mt-number: MT-55
+
+include::partial$policy-header.adoc[]
+
+== Requirements
+
+An individual involved in a strike or planned stoppage of work is subject to special considerations when determining eligibility for benefits.
+
+== Basic Considerations
+
+Assistance Units (AU) which include strikers are eligible to participate in the Supplemental Nutrition Assistance Program (SNAP)  if they were entitled to or could have been entitled to benefits the day before the strike and are otherwise eligible at the time of application.
+Pre-strike eligibility is considered by determining the AU's eligibility for benefits as if it were the day prior to the strike.
+
+AUs with strikers must meet the same work registration requirements as any other AU.
+Ongoing AUs are not eligible for an increased allotment because of a decrease in income caused by the strike.
+
+=== Individuals Not Considered Strikers
+
+The following individuals are not considered to be strikers:
+
+* employees affected by the lockout
+* employees unable to work because of striking employees
+* employees not part of the bargaining unit who do not want to cross the picket line because of fear of personal injury
+* employees who have resigned, been laid off, fired, furloughed or permanently replaced while on strike
+* employees not allowed to return to their old jobs but are offered different jobs
+* self-employed individuals
+* employees who go on strike but would have been exempt from work registration requirements, other than employment, on the day before the strike started.
+For example, a caretaker of a 3-year-old child who was working full time.
+
+All other reported changes in circumstances, in addition to the strike, must be included when determining eligibility and the benefit level of the AU.
+
+== Procedures
+
+Follow the steps in Chart 3240.1 for a SNAP AU which contains an individual who meets the definition of striker.
+
+[#chart-3240-1]
+.Chart 3240.1 - SNAP Treatment of Strikers
+|===
+^| AT APPLICATION ^| FOR ONGOING CASES
+
+a|
+[horizontal,labelwidth=20]
+Step 1:: Consider the AU's situation on the day prior to the strike and assume the strike did not occur.
+If the AU would have been ineligible, deny the application.
+
+Step 2:: Compare the striker's income the day before the strike to the striker's current income.
+
+Step 3:: Add the higher of the two incomes to the current income of the other AU members.
+
+Step 4:: If gross countable income is equal to or less than the GIC, proceed to Step 5. Deny the application if the gross countable income exceeds the GIC.
+
+Step 5:: Calculate deductions as for any other AU.
+
+Step 6:: If net income is equal to or less than the net income test, determine the benefit level based on the appropriate budgeting criteria.
+Deny the application if the net income exceeds the net income test.
+
+Step 7:: Assign certification periods as any other AU.
+a|
+[horizontal,labelwidth=20]
+Step 1:: Compare the striker's income the day before the strike to the striker's current income.
+
+Step 2:: Add the higher of the two incomes to the current income of the other AU members.
+
+Step 3:: If gross countable income is equal to or less than the GIC, proceed to Step 4.
+
+Step 4:: Calculate deductions for the month of the strike as for any other AU.
+
+Step 5:: If the net income is equal to or less than the net income test, determine the benefit level based on the appropriate budgeting criteria.
+Terminate benefits if the net income exceeds the net income test, allowing timely notice.
+|===
