@@ -1,0 +1,1 @@
+A 27-year-old man in Camden started a job three weeks ago after two years out of work. He says he is exhausted and has been thinking about quitting, and he is also worried about what happens to his Medicaid now that he is earning.

@@ -1,0 +1,1 @@
+A 29-year-old woman in Trenton left her job six weeks ago and is close to running out of savings. She is behind on her utility bills, needs to keep her car on the road to look for work, and thinks she might qualify for some kind of help but does not know what to deal with first. She asks her peer provider where she should start.
