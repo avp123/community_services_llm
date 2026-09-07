@@ -5,6 +5,7 @@ import requests
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut
 from geopy.distance import geodesic
+import threading
 import time
 
 geolocator = Nominatim(user_agent="peercopilot_app")
@@ -433,9 +434,30 @@ def check_eligibility(program: str, household_size: int, monthly_income: float, 
     return "Error: Unknown benefit program. Currently supporting: SNAP, TANF, Medicaid, SSDI, SSI, Section 8."
 
 
-def web_search_tool(query: str, max_results: int = 4):
+# Brave's free tier allows roughly one query per second. A single response makes
+# 5-8 search calls, and eval runs fire several responses in parallel, so without
+# pacing about half of all searches came back 429 and the model was told "Search
+# failed" -- silently degrading every answer that depends on a live lookup.
+# Measured before this fix: 3 of 6 back-to-back calls failed; spaced 1.2s, 0 of 6.
+_BRAVE_MIN_INTERVAL = 1.2
+_brave_lock = threading.Lock()
+_brave_last_call = [0.0]
+
+
+def _brave_throttle():
+    """Serialise Brave calls process-wide, at most one per _BRAVE_MIN_INTERVAL."""
+    with _brave_lock:
+        wait = _BRAVE_MIN_INTERVAL - (time.monotonic() - _brave_last_call[0])
+        if wait > 0:
+            time.sleep(wait)
+        _brave_last_call[0] = time.monotonic()
+
+
+def web_search_tool(query: str, max_results: int = 4, _max_retries: int = 3):
     """
     Performs a live web search using Brave Search API.
+
+    Paced and retried on 429 -- see _brave_throttle above.
     """
 
     try:
@@ -456,12 +478,19 @@ def web_search_tool(query: str, max_results: int = 4):
             "safesearch": "moderate"  # Options: off, moderate, strict
         }
         
-        response = requests.get(
-            "https://api.search.brave.com/res/v1/web/search",
-            headers=headers,
-            params=params,
-            timeout=10
-        )
+        for attempt in range(_max_retries):
+            _brave_throttle()
+            response = requests.get(
+                "https://api.search.brave.com/res/v1/web/search",
+                headers=headers,
+                params=params,
+                timeout=10
+            )
+            if response.status_code != 429:
+                break
+            # Rate limited: back off and try again rather than reporting failure
+            # to the model, which makes it withhold resources it could have given.
+            time.sleep(_BRAVE_MIN_INTERVAL * (attempt + 1))
         response.raise_for_status()
         
         data = response.json()

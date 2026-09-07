@@ -1,0 +1,1 @@
+A 52-year-old man in Atlantic City is being discharged from a short inpatient stay next week. He has Medicaid, no primary care doctor, and wants mental health follow-up set up close to home before he leaves, because the last time he was discharged nothing was in place and he lost contact with services.

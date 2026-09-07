@@ -1,0 +1,1478 @@
+{
+  "axis_direction|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_direction",
+    "A_score": 3,
+    "B_score": 4,
+    "A_reason": "It offers practical, time-sensitive resource navigation and concrete scripts that support linking to services and crisis prevention, but it is largely directive/problem-solving with little mutuality, self-determination, or lived-experience framing, and it veers toward case-management rather than an IPS-style collaborative exploration.",
+    "B_reason": "It offers practical, choice-driven next steps, strengths-based language, and concrete resource linkage that support self-determination and crisis-prevention, but it leans into quasi\u2013case-management/assessment framing and lacks mutuality/lived-experience sharing typical of IPS."
+  },
+  "axis_direction|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_direction",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B better fits peer support and IPS by offering multiple options and shared language that supports self-determination and collaboration without sounding directive or case-management-heavy, while still giving practical next-step guidance and resource linkage.",
+    "swapped_reason": "Response B better aligns with peer support by emphasizing shared decision-making and collaborative triage without over-directing, while still offering practical, resource-linking steps; Response A is helpful but reads more like case-management and includes questionable \u201cverified via web search\u201d claims that a peer shouldn\u2019t present as authoritative."
+  },
+  "axis_direction|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "axis_direction",
+    "fwd": 2,
+    "swapped": 2,
+    "mean": 2.0,
+    "fwd_reason": "Response A gives a clearer, prioritized step-by-step triage plan with concrete scripts and next actions (especially around preventing shutoff and starting benefits), while Response B is more \u201cchoose-your-own\u201d and includes some less-reliable specifics like \u201cverified via web search today\u201d details that a peer may not be able to confirm.",
+    "swapped_reason": "Response B gives a clearer, stepwise triage-to-action plan (what to do today vs this week) with practical scripts and fewer potentially unreliable specifics, making it easier for a peer to implement quickly with the person."
+  },
+  "axis_direction|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "axis_direction",
+    "A_score": 4,
+    "B_score": 4,
+    "A_reason": "It offers a clear, prioritized triage plan with actionable scripts and relevant NJ resources, but it leans case-management heavy for a peer role and includes an unverified \u201cweb search today\u201d claim and specific hotline info that may be outdated or inaccurate.",
+    "B_reason": "It offers a clear, practical triage plan with supportive prompts and relevant local resources, but it overreaches by claiming \u201cverified via web search today\u201d and could better reflect peer-role boundaries and avoid potentially inaccurate specifics."
+  },
+  "axis_direction|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "axis_direction",
+    "A_score": 4,
+    "B_score": 4,
+    "A_reason": "High take-away density with usable scripts and a sensible triage order, but the \u201cverified via web search today\u201d claim is unreliable in-session and key NJ-specific items (NJUA/PAAD/NJ SHARES, county WFNJ/online links, utility-specific hardship programs, exact unemployment/NJ DOL contact path, and car/transport assistance options) are missing or not fully checkable.",
+    "B_reason": "High take-away density with usable scripts and a solid triage frame, but the \u201cverified via web search today\u201d claim is not reliable and a couple resources/details may not be precisely correct for Mercer County intake pathways."
+  },
+  "axis_direction|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "axis_direction",
+    "fwd": 2,
+    "swapped": 2,
+    "mean": 2.0,
+    "fwd_reason": "Response A is more immediately usable because it gives a tighter first-48-hours sequence and concrete utility/LIHEAP call-prep steps, but it loses points for claiming \u201cverified via web search\u201d with specific numbers that are likely untrustworthy without my own check.",
+    "swapped_reason": "Response B is more usable at a glance with a clear triage-to-action flow and tighter, more immediately liftable scripts, plus a more specific Mercer County LIHEAP/USF entry point."
+  },
+  "axis_direction|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "axis_direction",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B gives a peer-friendly, collaborative menu of steps (time-sensitive triage, utilities, benefits, unemployment, car) without over-prescribing a single path, which fits peer support practice and shared decision-making. Response A is strong on prioritization, but it\u2019s more directive and includes specific \u201cverified via web search today\u201d claims and a hotline that may be unreliable, which is riskier for a peer to repeat."
+  },
+  "axis_direction|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "axis_direction",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is more take-away dense and gives a clearer first-48-hours sequence (triage \u2192 stop shutoff clock \u2192 start LIHEAP/USF \u2192 start SNAP/Medicaid/UC) with specific call scripts and what to collect (account #, shutoff date, utility fax/email). Response B adds some helpful extra resources, but A is tighter, more actionable at a glance, and less \u201cpick any direction\u201d when she\u2019s overwhelmed."
+  },
+  "axis_direction|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_direction",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B better aligns with peer support competencies and IPS by offering options, emphasizing choice, and using collaborative, non-directive language that supports self-determination and mutual problem-solving. Response A is more prescriptive and reads closer to case-management (stepwise directives, \u201cdo this today\u201d), and it includes a questionable \u201cverified via web search\u201d claim that could undermine trust and fidelity to peer roles."
+  },
+  "axis_role|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "axis_role",
+    "A_score": 5,
+    "B_score": 5,
+    "A_reason": "It gives a peer specialist concrete, trauma-informed coaching steps, scripts, and accurate local Medicaid reporting resources while balancing emotional support with practical next actions and a key clarifying question.",
+    "B_reason": "It offers peer-appropriate, trauma-informed coaching with concrete questions, micro-steps, supervisor scripting, and clear Medicaid navigation resources while encouraging a pause on quitting and checking safety without being overly clinical or directive."
+  },
+  "axis_role|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "axis_role",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B is more helpful for a peer support specialist because it balances practical Medicaid next-steps with peer-appropriate coaching (pause the quit decision, assess safety, pick micro-steps) without overloading on procedural details.",
+    "swapped_reason": "Response B is more helpful for a peer support specialist because it stays practical and peer-appropriate (concrete questions, a clear same-day \u201creport + verify\u201d Medicaid action plan, and collaboration offers) without adding unnecessary crisis screening or overconfident \u201cverified today\u201d claims."
+  },
+  "axis_role|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_role",
+    "A_score": 4,
+    "B_score": 4,
+    "A_reason": "It offers practical, recovery-oriented options and clear resource linkage (including scripted language) but leans into directive, case-management style guidance with little mutuality or lived-experience framing and limited emphasis on self-determination/relationship-building consistent with IPS.",
+    "B_reason": "It offers collaborative, practical, self-determination\u2013oriented steps (normalizing, exploring what\u2019s driving \u201cquit,\u201d micro-steps, scripting, and concrete resource linkage) and includes appropriate crisis check-ins, but it leans somewhat directive/coach-like and doesn\u2019t explicitly center mutuality or lived-experience sharing consistent with IPS."
+  },
+  "axis_role|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_role",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B better aligns with peer support/IPS by emphasizing a pause and self-determination, exploring meaning and fear (including safety check) without drifting into case-management, while still offering practical resource linkage and actionable language.",
+    "swapped_reason": "Response B more consistently supports self-determination and mutual, practical problem-solving without slipping into risk-screening/clinical framing, while still offering concrete, collaborative steps for work adjustment and Medicaid navigation."
+  },
+  "axis_role|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "axis_role",
+    "fwd": 2,
+    "swapped": 1,
+    "mean": 1.5,
+    "fwd_reason": "Response A is more immediately usable because it gives the exact NJ FamilyCare call script plus what documents to gather and a clear \u201cdo it today\u201d sequence, while Response B adds good framing but fewer concrete next-5-minutes actions.",
+    "swapped_reason": "Response B is more lift-and-use right now because it gives a same-day, scriptable \u2018report + check category\u2019 Medicaid call with exactly what to ask and what documents to gather, plus a concrete local-office backup without extra padding."
+  },
+  "axis_language|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "axis_language",
+    "A_score": 4,
+    "B_score": 4,
+    "A_reason": "It offers practical de-escalation steps, clear goal-setting questions, and respectful script options with attention to child wellbeing and safety resources, though it risks overstepping peer scope by sounding somewhat prescriptive/clinical and making assumptions about custody and roles.",
+    "B_reason": "It offers a clear, trauma-informed, stepwise approach with validation, safety screening, autonomy, and de-escalation planning, but it leans a bit clinical/therapeutic and includes location-specific resources/custody framing that may be outside typical peer scope without more emphasis on peer role boundaries."
+  },
+  "axis_language|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "axis_language",
+    "fwd": 5,
+    "swapped": 2,
+    "mean": 3.5,
+    "fwd_reason": "Response B better matches a peer support role by centering validation, autonomy, and safety assessment without offering overly directive scripts or potentially risky legal/custody framing that could exceed typical peer scope.",
+    "swapped_reason": "Response B is more directly usable in-the-moment for peer support (clear pause/grounding steps, client-centered goal setting, and editable scripts) while staying less clinical and more practical than Response A."
+  },
+  "axis_role|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "axis_role",
+    "votes": {
+      "fwd": [
+        "B",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 5,
+    "n_B": 1,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response B better matches a peer support specialist role by using supportive, non-directive coaching, normalizing the stress, and including a brief safety check without becoming overly procedural. It still offers concrete Medicaid next steps and local contacts, but keeps the focus on collaborative planning and motivation rather than a case-management-heavy script."
+  },
+  "axis_language|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_language",
+    "A_score": 3,
+    "B_score": 3,
+    "A_reason": "It offers practical de-escalation and communication options and avoids diagnosis, but it reads more like directive coaching/case-management than mutual peer support, lacks lived-experience sharing and curiosity about what happened/meaning-making, and includes potentially risky legal/custody prompting and specific local resources without checking location or collaboration preferences.",
+    "B_reason": "It offers practical de-escalation steps and supports choice with crisis resources, but it leans clinical/assessment-like (risk screening, quasi-case management, limited mutuality/lived-experience framing) and doesn\u2019t clearly center the peer relationship as reciprocal or explore \u201cwhat happened to you\u201d beyond surface reflection."
+  },
+  "axis_language|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_language",
+    "fwd": 5,
+    "swapped": 2,
+    "mean": 3.5,
+    "fwd_reason": "Response B stays closer to peer support/IPS by centering mutual, non-clinical support and self-determination (choice, reflection, grounding, escalation planning) without sliding into directive \u201cscripts,\u201d legal/custody probing, or quasi-assessment/case-management, while still aligning with SAMHSA competencies like crisis support, communication, and linking to resources.",
+    "swapped_reason": "Response B stays more squarely in peer-support practice by offering collaborative, concrete de-escalation and choice without sounding like a risk-screening/protocolized assessment, while still supporting self-determination and practical next steps."
+  },
+  "axis_role|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "axis_role",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is more immediately usable because it gives a same-day, do-this-now Medicaid reporting script plus exactly what documents to gather, and it includes a concrete local office backup with address/phone/email/hours. Response B has good framing and questions, but A has more checkable, actionable specifics you can lift in the next five minutes."
+  },
+  "axis_role|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_role",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B better aligns with IPS and SAMHSA by using collaborative, person-led framing (pause vs. quit, mapping what exhaustion means to him), exploring fears/meaning behind the Medicaid concern, and including crisis check-ins without drifting into directive case-management. Response A is more prescriptive and leans toward tasking the peer to do benefits navigation \u201con speaker,\u201d which can undermine mutuality/self-determination even though the concrete resources are helpful."
+  },
+  "axis_language|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "axis_language",
+    "A_score": 5,
+    "B_score": 3,
+    "A_reason": "It\u2019s immediately usable with verbatim lines, a simple de-escalation sequence, concrete message options, and only two accurate NJ/anytime resources without extra fluff.",
+    "B_reason": "It\u2019s organized and includes real NJ crisis lines, but most of it is generic framework language and it\u2019s missing ready-to-send exact scripts (text/call) and NJ-specific family/legal/DV resources that would actually be used if access-to-kids/custody escalation is the risk."
+  },
+  "axis_role|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "axis_role",
+    "A_score": 4,
+    "B_score": 4,
+    "A_reason": "High take-away density with usable scripts and solid NJ FamilyCare and Camden County BSS contacts, but it\u2019s missing the most common NJ path (GetCoveredNJ/Medicaid-to-marketplace transition details) and the Camden BSS address is not actually in Camden, which could trip someone up without clarification.",
+    "B_reason": "High take-away density with usable scripts and a solid frame, but the Camden resource verification claims and WorkAbility applicability are risky without tighter eligibility notes and a couple more NJ-specific Medicaid-to-work options (e.g., NJ FamilyCare/Marketplace navigator) that reduce the 'quit to keep coverage' impulse."
+  },
+  "axis_language|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "axis_language",
+    "fwd": 1,
+    "swapped": 1,
+    "mean": 1.0,
+    "fwd_reason": "Response A gives immediately usable, verbatim lines and a simple send/don\u2019t-send structure with concrete escalation controls, while Response B is mostly process labels and questions without ready-to-use wording for the sister.",
+    "swapped_reason": "Response B is more lift-and-use in the next five minutes because it gives ready-to-send language, a quick de-escalation pause with a concrete threshold (7+ draft in Notes), and practical delivery rules, while A feels more like a framework with fewer verbatim lines."
+  },
+  "axis_language|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "axis_language",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B stays more squarely in a peer-support role: it validates, supports self-determination, checks immediate safety, and helps the person choose a calm, goal-aligned next step without sounding directive or giving potentially risky quasi-legal framing. Response A is practical but prescriptive and includes statements like \u201cI\u2019m their mom\u201d plus custody-order probing that could escalate conflict or drift toward legal advice."
+  },
+  "axis_language|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_language",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B better aligns with peer support and IPS by emphasizing validation, mutual choice/agency, and collaborative decision-making without sliding into directive scripting or quasi-case-management. Response A is practical but is more prescriptive (ready-to-send messages, \u201cfastest help\u201d framing) and includes a custody/visitation probe that can feel like assessment rather than peer mutuality."
+  },
+  "axis_language|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "axis_language",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is more lift-and-use in the next five minutes: it gives ready-to-send word-for-word texts, a simple escalation plan (Notes draft, one message only, timer), and keeps the focus on kids/logistics. Response B has solid framing but leans more on labeled process steps and adds extra screening/resources that may not be needed for this specific moment."
+  },
+  "s1_newark_housing_id|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "s1_newark_housing_id",
+    "fwd": 5,
+    "swapped": 4,
+    "mean": 4.5,
+    "fwd_reason": "Response B better aligns with peer support/IPS by avoiding authoritative case-management tone and unverifiable \u201cverified today\u201d claims, offering collaborative, self-determination-oriented options and questions while still linking to resources without over-prescribing a rigid plan.",
+    "swapped_reason": "Response A better fits peer support boundaries and reliability by avoiding unverifiable \u201cverified today\u201d claims and overly case-managerial specificity, while still offering collaborative, stepwise options and questions that support self-determination."
+  },
+  "s1_newark_housing_id|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "s1_newark_housing_id",
+    "A_score": 3,
+    "B_score": 3,
+    "A_reason": "Good actionable sequencing and scripts, but several key referrals/phone numbers are uncertain or potentially wrong for Newark/Essex CE and BSS, and it misses a couple of high-yield local ID/benefits navigation options that would increase immediate usefulness.",
+    "B_reason": "It gives a workable prioritization and a usable 3-day plan, but it leans too hard on 211 without naming Newark/Essex-specific, checkable agencies/addresses for Coordinated Entry, ID/document help, and benefits intake, which limits immediate lift-and-use."
+  },
+  "s1_newark_housing_id|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "s1_newark_housing_id",
+    "A_score": 3,
+    "B_score": 3,
+    "A_reason": "It offers concrete, locally relevant next steps and resource linkage, but it reads more like directive case-management (limited mutuality, collaboration, and self-determination emphasis), includes unverifiable \u201cverified today\u201d claims/possible inaccurate details, and lacks peer-support elements like shared lived experience framing, strengths-based engagement, and crisis/backup planning.",
+    "B_reason": "It offers clear, practical navigation to resources and a prioritized action plan, but it reads like case-management (directive, system-focused) with little mutuality, lived-experience sharing, or empowerment language consistent with IPS and SAMHSA peer values."
+  },
+  "s1_newark_housing_id|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "s1_newark_housing_id",
+    "A_score": 4,
+    "B_score": 5,
+    "A_reason": "It gives a clear, prioritized action plan with specific local Newark/Essex entry points and practical ID/benefits workarounds, but it risks accuracy by citing phone numbers as \u201cverified today\u201d and could add brief peer-support considerations (safety, consent, trauma-informed approach) and more reliable confirmation guidance.",
+    "B_reason": "It offers a clear, prioritized action plan with realistic guidance about coordinated entry, benefits, and ID replacement while naming practical local entry points (NJ 211) and follow-up questions to tailor next steps."
+  },
+  "s1_newark_housing_id|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "s1_newark_housing_id",
+    "fwd": 2,
+    "swapped": 4,
+    "mean": 3.0,
+    "fwd_reason": "Response A is slightly more helpful because it gives concrete Newark/Essex-specific entry points and an actionable parallel plan (coordinated entry, benefits, ID), though it risks accuracy by citing specific phone numbers/\"verified today\" claims a peer specialist would need to re-check.",
+    "swapped_reason": "Response A is more reliably helpful because it gives a clear, trauma-informed priority order and uses trustworthy entry points (NJ 211) without unverifiable phone numbers or \"verified today\" web-search claims that could mislead a peer specialist."
+  },
+  "s1_newark_housing_id|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "s1_newark_housing_id",
+    "fwd": 1,
+    "swapped": 2,
+    "mean": 1.5,
+    "fwd_reason": "Response A gives Newark/Essex-specific, checkable entry points (DFAB/Coordinated Entry line, BSS address, Newark Municipal ID site) plus ready-to-say scripts, while Response B leans on 211 and generic steps without enough local specifics.",
+    "swapped_reason": "Response B is more immediately usable because it gives specific Newark/Essex entry points (Coordinated Entry line, BSS address, Newark Municipal ID) plus exact ask-phrases, while A leans heavily on 211 and generic steps with fewer checkable local details."
+  },
+  "s2_camden_snap_transport|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "s2_camden_snap_transport",
+    "A_score": 4,
+    "B_score": 5,
+    "A_reason": "It gives clear, actionable steps and relevant local resources (SNAP, Medicaid transportation, energy assistance) in a peer-friendly structure, but it overstates \u201cverified via web search today\u201d and could better note common documentation/online NJOneApp options and crisis resources (e.g., 211) without implying certainty about eligibility.",
+    "B_reason": "It gives clear, actionable steps tailored to Camden, NJ (NJOneApp, 211, county welfare office), accurately covers likely benefits and Medicaid NEMT transportation, and asks key follow-up questions to refine eligibility and referrals."
+  },
+  "s2_camden_snap_transport|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "s2_camden_snap_transport",
+    "fwd": 2,
+    "swapped": 2,
+    "mean": 2.0,
+    "fwd_reason": "Response A is more action-oriented with concrete local contacts and a clear step-by-step plan (including Modivcare scheduling), but it overclaims \u201cverified via web search today\u201d and is narrower than Response B\u2019s broader benefits screening (SSI/SSDI/211) and flexibility.",
+    "swapped_reason": "Response B is more immediately usable for a peer support specialist because it gives a clear step-by-step workflow with specific scripts and verified local phone numbers for SNAP, Medicaid transportation, and utility assistance, while Response A is broader but less action-oriented in the moment."
+  },
+  "s2_camden_snap_transport|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "s2_camden_snap_transport",
+    "A_score": 3,
+    "B_score": 3,
+    "A_reason": "It offers concrete, empowerment-oriented resource linkage (SNAP, NEMT, LIHEAP) and practical scripts, but it reads more like directive case-management with little mutuality, lived-experience sharing, trauma-informed curiosity, or collaboration on the person\u2019s goals and fears, and it includes an unverifiable \u201cverified via web search today\u201d claim.",
+    "B_reason": "It offers concrete, accurate resource navigation and practical steps (benefits, 211, NEMT) but is largely case-management/information-delivery with little mutuality, lived-experience framing, trauma-informed \u201cwhat happened to you\u201d stance, or support for self-determination/recovery planning in line with IPS and SAMHSA peer competencies."
+  },
+  "s2_camden_snap_transport|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "s2_camden_snap_transport",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B better aligns with peer-support principles by offering options and self-determination without a directive tone, avoids overconfident claims like \u201cverified via web search today,\u201d and provides a broader, person-centered menu of resources (NJOneApp, 211, SSA, plan-specific NEMT path) while still being practical and collaborative.",
+    "swapped_reason": "Response B better aligns with peer support/IPS by emphasizing collaborative action (\u201ccall together\u201d), using accessible non-clinical language, and offering concrete scripts and next steps while still linking to resources, whereas Response A is more expert-driven and benefits-technical with less mutuality and personalization."
+  },
+  "s1_newark_housing_id|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "s1_newark_housing_id",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A gives more immediately usable, checkable Newark/Essex-specific entry points (a named Coordinated Entry line, BSS address, Newark Municipal ID and MVC links) plus verbatim ask-lines you can use in the next five minutes. Response B is broadly correct but leans on 211 for everything and doesn\u2019t provide concrete local contacts beyond that, so it\u2019s less actionable at the table."
+  },
+  "s1_newark_housing_id|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "s1_newark_housing_id",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "B",
+        "B",
+        "B"
+      ]
+    },
+    "n_A": 0,
+    "n_B": 6,
+    "position_consistent": true,
+    "winner": "B",
+    "reason": "Response B is more appropriate for a peer support specialist because it gives a clear, safe, and broadly accurate prioritization without relying on potentially incorrect local phone numbers or claiming \u201cverified today\u201d web searches. It also emphasizes NJ 211 as the reliable front door for Newark/Essex housing/benefits navigation and asks key triage questions (documents, income, veteran status) to tailor next steps."
+  },
+  "s1_newark_housing_id|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "s1_newark_housing_id",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "B",
+        "B",
+        "B"
+      ]
+    },
+    "n_A": 0,
+    "n_B": 6,
+    "position_consistent": true,
+    "winner": "B",
+    "reason": "Response B better aligns with peer support principles by avoiding clinical/case-management tone, emphasizing safety, self-determination, and offering flexible next steps without asserting verified specifics. Response A is more directive and contains potentially risky \u201cverified today\u201d claims and exact numbers that could be incorrect, which can undermine trust and shift the role toward case-management rather than mutual, person-led support."
+  },
+  "s2_camden_snap_transport|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "s2_camden_snap_transport",
+    "fwd": 1,
+    "swapped": 1,
+    "mean": 1.0,
+    "fwd_reason": "Response A is more immediately usable because it gives concrete scripts plus specific, checkable Camden contacts (B has more generic info and asks for more details before it can act).",
+    "swapped_reason": "Response B is immediately usable at the table (verbatim questions + scripts) and includes specific, checkable Camden-relevant phone numbers/addresses for SNAP, NEMT, and LIHEAP/USF, while Response A has more unverified/conditional referrals and fewer concrete contacts."
+  },
+  "s2_camden_snap_transport|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "s2_camden_snap_transport",
+    "A_score": 5,
+    "B_score": 4,
+    "A_reason": "High take-away density with concrete scripts and three Camden-specific, checkable contacts (SNAP/CBSS, Modivcare NEMT, LIHEAP/USF) that match the scenario and can be acted on immediately.",
+    "B_reason": "Solid, immediately usable first steps with NJOneApp/211/SSA and a clear NEMT path, but it\u2019s missing verified Camden County BSS and specific Medicaid NEMT numbers and includes a couple speculative/uncertain items (e.g., CCCOEO phone, Modivcare mention) that would require extra checking before referral."
+  },
+  "s2_camden_snap_transport|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "s2_camden_snap_transport",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B gives a broader, more practical starting pathway (NJOneApp + 211 + SSA) and appropriately avoids claiming details were \u201cverified today.\u201d It also frames transportation correctly via the Medicaid plan/number on the card and asks key follow-up questions to tailor next steps, which is useful for a peer support specialist."
+  },
+  "s3_paterson_disability_work|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "s3_paterson_disability_work",
+    "A_score": 5,
+    "B_score": 5,
+    "A_reason": "It\u2019s highly actionable and peer-friendly, offering concrete local referrals, scripts, and a clear benefits-counseling pathway while balancing employment goals with benefit-protection concerns.",
+    "B_reason": "It gives locally relevant, actionable referrals for disability-friendly employment support and benefits counseling, includes concrete contact details, and asks key clarifying questions to tailor guidance while avoiding promises about benefits impacts."
+  },
+  "s3_paterson_disability_work|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "s3_paterson_disability_work",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B is more helpful for a peer support specialist because it\u2019s clear, structured, and appropriately cautious about benefits impacts without over-asserting \u201cverified today\u201d details, while still giving actionable local referrals and key questions.",
+    "swapped_reason": "Response B is more helpful for a peer support specialist because it gives a clear, client-centered step-by-step workflow with scripts and what-to-bring guidance while still including the key local referrals and benefits-counseling pathway."
+  },
+  "s3_paterson_disability_work|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "s3_paterson_disability_work",
+    "A_score": 3,
+    "B_score": 3,
+    "A_reason": "It offers practical, empowering next steps and concrete resource linkage (DVRS/WIPA) consistent with recovery planning, but it is largely directive/case-management in tone with little mutuality or lived-experience framing, and includes potentially overconfident \u201cverified today\u201d claims and a scripted employer accommodation line that risks veering into advising rather than collaborative peer support.",
+    "B_reason": "It offers concrete, locally relevant resources and benefits-counseling options that support recovery planning and linkage to services, but it is largely directive and case-management-like with little mutuality, lived-experience framing, or person-centered, trauma-informed exploration consistent with IPS and core peer competencies."
+  },
+  "s2_camden_snap_transport|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "s2_camden_snap_transport",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B stays more aligned with peer support principles by offering options, inviting the person\u2019s preferences, and avoiding a directive/case-manager tone, while still linking to concrete resources and transportation help. Response A is very actionable but can read more like professional case management (\u201cMove 1\u20134,\u201d \u201cprovider words,\u201d \u201clet\u2019s apply\u201d) and includes a questionable \u201cverified via web search today\u201d claim, which undermines trust/accuracy standards."
+  },
+  "s3_paterson_disability_work|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "s3_paterson_disability_work",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B better aligns with peer support/IPS by offering resource linkage and options without prescriptive coaching scripts or over-asserting \u201cverified today\u201d authority, while keeping the focus on the peer\u2019s goals and self-determination rather than a step-by-step directive plan.",
+    "swapped_reason": "Response B better aligns with peer support/IPS by centering the person\u2019s goals and limits through collaborative questions and practical self-advocacy language while still linking to resources and benefits counseling, whereas Response A reads more like a service-referral checklist with less mutual, individualized engagement."
+  },
+  "s3_paterson_disability_work|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "s3_paterson_disability_work",
+    "A_score": 4,
+    "B_score": 4,
+    "A_reason": "High take-away density with solid, local DVRS/BSS contacts and usable scripts, but it\u2019s missing the most immediate NJ-specific benefits counseling option (NJ WINS/WorkAbility/Medicaid pathways) and a couple Paterson-area workforce partners beyond DVRS to widen choices.",
+    "B_reason": "High take-away density with specific, local DVRS/One-Stop contacts and a correct benefits-counseling pathway (Ticket to Work/WIPA), but it would be stronger with a directly Paterson/NJ-specific WIPA provider name plus a couple verbatim lines she can use with DVRS/SSA about accommodations and reporting wages."
+  },
+  "s5_return_to_work|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "s5_return_to_work",
+    "A_score": 5,
+    "B_score": 4,
+    "A_reason": "It provides practical, peer-friendly, stepwise coaching prompts that reduce overwhelm, supports autonomy with choices, includes a realistic ramp plan, and offers concrete warm-handoff resources while maintaining a nonjudgmental tone.",
+    "B_reason": "It offers a clear, compassionate, step-by-step plan that reduces overwhelm and builds confidence, but it leans more toward career coaching than peer support (less emphasis on emotional validation, shared experience, and collaborative goal-setting based on her values and supports)."
+  },
+  "s3_paterson_disability_work|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "s3_paterson_disability_work",
+    "fwd": 1,
+    "swapped": 1,
+    "mean": 1.0,
+    "fwd_reason": "Response A gives immediately usable, verbatim call scripts and a tight step-by-step plan with specific local contacts (DVRS + BSS + WIPA) and reporting language, while B adds less actionable detail and includes at least one resource (One-Stop) with unverified specifics.",
+    "swapped_reason": "Response B is more usable in-the-moment because it gives quick scripted questions and exact call-ready phrasing plus adds a locally relevant, checkable benefits-related resource (Passaic County Board of Social Services) while still including DVRS and WIPA with concrete next moves."
+  },
+  "s2_camden_snap_transport|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "s2_camden_snap_transport",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is more usable in the next five minutes: it gives concrete call scripts and specific, checkable Camden-area phone numbers for SNAP, Medicaid NEMT (Modivcare), and energy assistance. Response B has good structure but leans more general (less immediately actionable, more \u201ctell me the plan/ZIP and I\u2019ll\u2026\u201d), and includes some potentially muddy benefit guidance without local contacts."
+  },
+  "s3_paterson_disability_work|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "s3_paterson_disability_work",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B is more helpful for a peer support specialist because it stays accurate and role-appropriate: it offers clear local referrals and benefits-counseling steps without claiming phone/address details were \"verified today.\" It also avoids giving overly specific employer scripting and documentation advice that could drift into legal/clinical territory, while still asking the key clarifying questions needed for next steps."
+  },
+  "s5_return_to_work|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "s5_return_to_work",
+    "fwd": 2,
+    "swapped": 2,
+    "mean": 2.0,
+    "fwd_reason": "Response A is more actionable for a peer support specialist because it gives a tight, in-the-moment step structure and emphasizes a warm handoff to concrete supports, though it\u2019s somewhat limited by assuming NJ-specific resources.",
+    "swapped_reason": "Response B is more tailored to a peer support specialist because it provides brief, in-the-moment coaching moves (questions, choice-based next steps, a short ramp plan, and a warm handoff) that fit peer support workflows, whereas Response A reads more like a comprehensive self-help career plan."
+  },
+  "s5_return_to_work|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "s5_return_to_work",
+    "A_score": 3,
+    "B_score": 3,
+    "A_reason": "It offers practical, empowering micro-steps and strong resource linkage, but it frames the peer role in directive/problem-solving terms with limited mutuality and lived-experience sharing, and leans toward quasi\u2013case-management (\u201cyour job,\u201d \u201cwarm handoff,\u201d intake/vocational counseling) rather than an explicitly peer, self-determined IPS approach.",
+    "B_reason": "It offers practical, stepwise employment guidance and collaborative questions, but it\u2019s largely directive and career-coach oriented with little mutuality, lived-experience sharing, or explicit self-determination/\u201cwhat happened to you\u201d framing that would better align with IPS and SAMHSA peer competencies."
+  },
+  "s5_return_to_work|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "s5_return_to_work",
+    "fwd": 4,
+    "swapped": 1,
+    "mean": 2.5,
+    "fwd_reason": "Response B better aligns with peer support/IPS by offering collaborative, self-determined, non-clinical pacing and mutual empowerment without directive \u201cyour job\u201d framing or quasi\u2013case-management elements, while still providing practical, personalized steps.",
+    "swapped_reason": "Response B is more aligned with peer support and IPS by emphasizing collaborative, choice-driven next steps, mutual respect and self-determination, and linking to concrete community resources via a warm handoff, whereas Response A reads more like expert-led coaching with less explicit relational/mutual framing."
+  },
+  "s5_return_to_work|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "s5_return_to_work",
+    "A_score": 5,
+    "B_score": 3,
+    "A_reason": "Concrete, usable in-the-moment prompts and micro-steps plus two NJ-appropriate, checkable resources with correct links/phone and a clear ask for county/ZIP to make referrals precise.",
+    "B_reason": "Solid, usable step-down plan with some verbatim lines, but it lacks NJ/CSPNJ-specific, checkable resources and concrete next-step contacts that I can hand someone in-session right now."
+  },
+  "s3_paterson_disability_work|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "s3_paterson_disability_work",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is more immediately usable in-session: it gives verbatim lines to say, a tight sequence of concrete moves, and a short \u201cwhat changes the plan\u201d question. It also includes an additional locally relevant benefits contact (Passaic County Board of Social Services) and keeps the focus on benefits counseling before increasing hours."
+  },
+  "s3_paterson_disability_work|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "s3_paterson_disability_work",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B better aligns with peer support standards by staying non-directive and self-determination focused (asks collaborative questions, offers options) without slipping into a quasi-case-manager \u201cdo this now\u201d stance or over-asserting verification. Response A is practical but more prescriptive and \u201cfastest path\u201d oriented, and it includes unnecessary claims like \u201cverified today,\u201d which can undermine trust and mutuality in a peer relationship."
+  },
+  "s5_return_to_work|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "s5_return_to_work",
+    "votes": {
+      "fwd": [
+        "B",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 5,
+    "n_B": 1,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response B is more broadly applicable for a peer support specialist because it focuses on pacing, capacity-checking, gentle structure, and strengths-based reframing without assuming a specific location or eligibility criteria. It also offers concrete weekly steps and supportive accountability options while staying within a non-clinical, peer-oriented coaching frame."
+  },
+  "s5_return_to_work|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "s5_return_to_work",
+    "fwd": 1,
+    "swapped": 2,
+    "mean": 1.5,
+    "fwd_reason": "Response A is more usable in the next five minutes because it gives verbatim questions/phrases plus NJ-specific, checkable resources (DVRS and CareerOneStop) for a real warm handoff, while B is solid but more generic and less immediately actionable.",
+    "swapped_reason": "Response B is more lift-and-use in the next five minutes (verbatim questions, a simple ramp plan, and a concrete script) and includes NJ-specific resources with phone/links, whereas A is solid but more general and longer to scan in-session."
+  },
+  "s6_rebuild_relationships|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "s6_rebuild_relationships",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B is more broadly applicable and stays closer to a peer support specialist\u2019s role (structured reflection, pacing, and reciprocity) without adding location-specific crisis/resources or overly directive scoring that could feel clinical.",
+    "swapped_reason": "Response B is more aligned with peer support practice by emphasizing small, client-led steps, feelings-based mapping, boundaries, and debriefing, while Response A is useful but more structured/\"project\"-like and less explicitly peer-oriented."
+  },
+  "s6_rebuild_relationships|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "s6_rebuild_relationships",
+    "fwd": 5,
+    "swapped": 1,
+    "mean": 3.0,
+    "fwd_reason": "Response B better aligns with peer support and IPS by centering self-determination and collaboration without sounding directive or quasi-clinical, avoiding assumptions and location-specific referrals, and offering flexible, mutuality-friendly reflection tools a peer specialist can use to personalize pacing and priorities.",
+    "swapped_reason": "Response B better aligns with peer support/IPS by emphasizing choice, pacing, boundaries, debriefing and mutual, non-clinical support while also linking to crisis and peer resources, whereas Response A feels more like an expert-driven coaching plan and lacks explicit peer/IPS framing and safety/resource linkage."
+  },
+  "s6_rebuild_relationships|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "s6_rebuild_relationships",
+    "A_score": 4,
+    "B_score": 3,
+    "A_reason": "It offers practical, self-directed tools for pacing reconnection and boundary-setting with respectful language and crisis resources, but it leans into a quasi-coaching/clinical \u201cplan\u201d with little mutuality or lived-experience framing and assumes NJ-specific referrals that may not fit the peer\u2019s context.",
+    "B_reason": "It offers practical, strengths-based, self-determined reconnection steps and avoids clinical language, but it\u2019s mostly advice-giving rather than modeling mutuality/connection, doesn\u2019t invite the person\u2019s story (\u201cwhat happened to you\u201d) or include lived-experience sharing, and reads more like coaching than peer support collaboration."
+  },
+  "s5_return_to_work|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "s5_return_to_work",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is more immediately liftable in-session: it gives verbatim questions, a simple write-down checklist (hours/job types/dealbreakers), and a concrete two-week ramp with time blocks. It also includes NJ-specific, checkable resources (DVRS + AJC) with contact info and a clear ask for county/ZIP to verify the correct office for a warm handoff."
+  },
+  "s5_return_to_work|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "s5_return_to_work",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B better aligns with peer support/IPS by avoiding directive \u201cyour job is\u2026\u201d framing and emphasizing self-determination, pacing, and collaborative exploration without sliding into case-management. Response A is practical but reads more prescriptive and includes a quasi-service navigation \u201cwarm handoff\u201d tone with location-specific referrals that can edge toward case-management rather than mutual, peer-to-peer support."
+  },
+  "s6_rebuild_relationships|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "s6_rebuild_relationships",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B stays aligned with a peer support role by offering a clear, values-based framework (tiers, test-and-learn pacing, reflection) without sounding overly directive or clinical. Response A is strong and practical, but it can feel more prescriptive and includes location-specific crisis/warmline referrals that aren\u2019t clearly indicated by the scenario."
+  },
+  "s6_rebuild_relationships|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "s6_rebuild_relationships",
+    "A_score": 5,
+    "B_score": 4,
+    "A_reason": "It offers a clear, peer-friendly, stepwise approach (mapping, prioritizing, pacing, scripts, boundaries, and debrief) while remaining trauma-informed and practical, with appropriate crisis resources included.",
+    "B_reason": "It provides clear, practical, low-pressure steps and scripts a peer specialist could adapt, but it leans a bit like coaching/therapy with heavy structure and could more explicitly emphasize peer values (mutuality, autonomy, boundaries, cultural context) and checking for safety/consent in reconnection."
+  },
+  "s6_rebuild_relationships|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "s6_rebuild_relationships",
+    "A_score": 5,
+    "B_score": 2,
+    "A_reason": "It\u2019s immediately usable at the chairside (clear prioritization, concrete questions, copy/paste texts, boundary/exit language) and only names checkable NJ resources without wasting space.",
+    "B_reason": "It has some usable scripts, but it\u2019s mostly generic framing and \u201ctiers/steps\u201d without CSPNJ/NJ-specific resources, decision shortcuts you can use in-session, or checkable referrals, so take-away density is low."
+  },
+  "s6_rebuild_relationships|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "s6_rebuild_relationships",
+    "fwd": 1,
+    "swapped": 1,
+    "mean": 1.0,
+    "fwd_reason": "Response A is more immediately usable because it gives quick, concrete steps (map/score/speed), copy\u2011paste outreach texts, an exit line, and a simple follow\u2011up rule, while B stays more conceptual and doesn\u2019t add checkable resources beyond what A already includes.",
+    "swapped_reason": "Response B is more usable in-the-room because it\u2019s organized as quick concrete moves with verbatim questions/scripts plus a debrief/boundary plan and includes at least one real, checkable NJ resource."
+  },
+  "s7_family_goals|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "s7_family_goals",
+    "A_score": 5,
+    "B_score": 4,
+    "A_reason": "It offers practical, trauma-informed peer-support steps (values clarification, collaborative goal-setting, boundary scripting, and planning) while staying nonclinical and includes appropriate crisis resources, though the NJ-specificity may not fit all contexts.",
+    "B_reason": "It validates the person\u2019s perspective and promotes values-based, person-centered goal setting with practical prompts, but it leans a bit clinical and could more explicitly reflect peer-support principles like shared lived-experience framing, mutuality, and self-determination language."
+  },
+  "s7_family_goals|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "s7_family_goals",
+    "fwd": 2,
+    "swapped": 2,
+    "mean": 2.0,
+    "fwd_reason": "Response A is more actionable and peer-oriented with concrete prompts and boundary scripts, but it over-directs the interaction and adds location-specific crisis resources that may be unnecessary or incorrect for the scenario, while Response B is less practical but cleaner and more role-appropriate.",
+    "swapped_reason": "Response B is more actionable for peer support by offering concrete, strengths-based prompts and boundary-coaching language, though it slightly overreaches with location-specific crisis resources."
+  },
+  "s6_rebuild_relationships|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "s6_rebuild_relationships",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B better aligns with peer support/IPS by avoiding a helper-to-helped tone and focusing on self-determination, mutuality (reciprocity), and the person\u2019s purpose/values to guide pacing and priorities. Response A is practical but reads more directive and includes location-specific crisis/resources that aren\u2019t indicated by the scenario, which can drift toward case-management rather than a mutual peer relationship."
+  },
+  "s7_family_goals|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "s7_family_goals",
+    "fwd": 2,
+    "swapped": 2,
+    "mean": 2.0,
+    "fwd_reason": "Response A is more actionable and supports self-determination with concrete, peer-supportive communication tools and resource linkage, though its directive/\u201cyour job\u201d framing and some quasi\u2013case-management tone make it slightly less aligned with IPS mutuality than ideal, while Response B is more clinical/abstract and less skill-building for real-time peer work.",
+    "swapped_reason": "Response B more directly supports self-determination and recovery planning with practical, person-led boundary/communication coaching and resource linkage, whereas Response A leans more clinical/framing-oriented and less actionable within a mutual peer-support approach."
+  },
+  "s7_family_goals|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "s7_family_goals",
+    "A_score": 4,
+    "B_score": 3,
+    "A_reason": "It strongly supports self-determination, boundary-setting, collaborative planning, and crisis/resource linking, but it\u2019s somewhat directive/\u201cyour job\u201d and includes quasi\u2013case-manager structure and assumptions (e.g., meds/therapy) with limited mutuality or lived-experience sharing consistent with IPS.",
+    "B_reason": "It supports self-determination and uses validating, values-based questions, but it leans clinical/case-management (\u201cthinking clinically,\u201d \u201csymptom management,\u201d \u201ctranslate to family\u201d) and lacks IPS mutuality and lived-experience sharing guidance specific to peer support."
+  },
+  "s6_rebuild_relationships|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "s6_rebuild_relationships",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is more lift-and-use in the next five minutes: it gives a fast paper exercise, a simple scoring method, concrete \u201ctoe-in-the-water\u201d choices, and copy/paste messages plus an exit line and debrief prompts. It also includes at least one checkable NJ resource (988) and flags the need for county before adding more, while Response B stays more conceptual and less immediately actionable."
+  },
+  "s7_family_goals|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "s7_family_goals",
+    "A_score": 4,
+    "B_score": 2,
+    "A_reason": "High take-away density with usable verbatim lines and a tight flow, but the NJ Hopeline detail is likely wrong/outdated and the resources aren\u2019t tailored beyond generic crisis backstops.",
+    "B_reason": "It\u2019s mostly generic framing and technique-labeled guidance with no NJ/CSPNJ-relevant, checkable resources or concrete next-five-minutes scripts/steps beyond a few broad questions."
+  },
+  "s7_family_goals|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "s7_family_goals",
+    "fwd": 1,
+    "swapped": 1,
+    "mean": 1.0,
+    "fwd_reason": "Response A is immediately usable in-session with concrete questions, repeatable boundary scripts, a mini-plan, and specific NJ backstop resources, while Response B stays generic and meta without checkable referrals or ready-to-say language.",
+    "swapped_reason": "Response B gives immediately usable, verbatim questions and boundary scripts plus a concrete mini-plan and only a few checkable NJ backstops, while Response A stays more abstract and clinician-framed."
+  },
+  "s8_unhappy_treatment|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "s8_unhappy_treatment",
+    "A_score": 4,
+    "B_score": 5,
+    "A_reason": "It offers practical, empowerment-focused coaching and concrete scripts while avoiding clinical advice, but it\u2019s a bit directive and includes location-specific resources that may not match the user\u2019s context or peer role boundaries.",
+    "B_reason": "It stays within the peer role by validating, eliciting the person\u2019s goals, offering options (not directives), supporting advocacy skills, considering rights/escalation, and briefly checking safety while emphasizing continuity of care."
+  },
+  "s8_unhappy_treatment|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "s8_unhappy_treatment",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B is more aligned with peer support ethics by avoiding prescriptive guidance, centering self-determination, and including appropriate risk/continuity considerations, while Response A is helpful but more directive and includes region-specific resources that may not fit the general scenario.",
+    "swapped_reason": "Response B is more immediately usable for peer practice because it offers concrete, stepwise coaching language and planning tools that still support self-determination, though it\u2019s slightly less explicit than A about role boundaries and the state-specific resources may not generalize."
+  },
+  "s8_unhappy_treatment|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "s8_unhappy_treatment",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B more consistently stays within the peer role by emphasizing self-determination, mutuality, and options (rather than directing a plan), while still supporting advocacy, communication, and safety without sliding into quasi-case-management or prescriptive guidance.",
+    "swapped_reason": "Response B more consistently operationalizes self-determination and advocacy with concrete, collaborative tools (agenda, boundary phrases, transition planning and resource links) while still staying non-clinical and person-led, whereas Response A is strong but more general and slightly more directive/clinical in tone (e.g., risk screening)."
+  },
+  "s8_unhappy_treatment|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "s8_unhappy_treatment",
+    "A_score": 4,
+    "B_score": 5,
+    "A_reason": "It strongly supports self-determination, communication, crisis backstops, and practical advocacy tools, but it\u2019s more directive and \u201chelper-to-helped\u201d than IPS mutuality and lacks shared lived experience framing or explicit permission/choice-checking typical of peer support.",
+    "B_reason": "It strongly aligns with SAMHSA and IPS by centering self-determination, mutual/trauma-informed exploration, collaborative planning and advocacy tools, appropriate resource-linking and safety check-ins, while avoiding prescriptive clinical advice or case-management."
+  },
+  "s7_family_goals|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "s7_family_goals",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "B",
+        "B",
+        "B"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response A is more actionable for a peer support specialist: it offers concrete, step-by-step prompts, boundary scripts, and a plan for navigating family conversations while centering the person\u2019s own priorities. Response B is accurate but more conceptual/clinical and less immediately usable in a peer-support interaction."
+  },
+  "s8_unhappy_treatment|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "s8_unhappy_treatment",
+    "fwd": 2,
+    "swapped": 1,
+    "mean": 1.5,
+    "fwd_reason": "Response A gives more immediately usable, verbatim language and a concrete next-appointment/switch plan plus NJ-specific numbers, while Response B leans into labeled techniques and generalities you already know.",
+    "swapped_reason": "Response B is more lift-and-use in the next five minutes (tight moves, verbatim phrases, a concrete switch-plan, and NJ-specific backstop numbers) while Response A leans more on generic technique labels and less actionable specificity."
+  },
+  "s8_unhappy_treatment|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "s8_unhappy_treatment",
+    "A_score": 4,
+    "B_score": 2,
+    "A_reason": "High take-away density with strong verbatim language and a practical switch/continuity plan plus real NJ backstops, but it would be even more useful with NJ-specific patient rights/OMBUDS resources and steps for records release/second opinions in common NJ systems.",
+    "B_reason": "It\u2019s broadly accurate but too technique-labeled and generic, with no NJ/CSPNJ-specific, checkable resources or ready-to-use scripts/steps beyond basics, so take-away density for the next five minutes is low."
+  },
+  "s7_family_goals|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "s7_family_goals",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A better aligns with peer support practice by focusing on the person\u2019s self-defined priorities, offering concrete, autonomy-supporting communication tools (boundary statements, specific asks), and including resource linkage without sounding clinical. Response B is generally validating but uses more clinical framing (\u201cthinking clinically,\u201d \u201cpsych eval/case management\u201d) and is less mutual/skills-focused, making it easier to drift into assessment/case-management rather than peer-to-peer support."
+  },
+  "s7_family_goals|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "s7_family_goals",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is higher take-away density: it gives ready-to-say questions, boundary scripts, and a concrete plan for the next family conversation that you can use immediately. It also includes specific, checkable NJ resources, while Response B stays more conceptual and generic without actionable next steps."
+  },
+  "s9_parents_therapy|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "s9_parents_therapy",
+    "A_score": 5,
+    "B_score": 5,
+    "A_reason": "It offers practical, peer-appropriate coaching (values, boundaries, scripted communication, collaborative reassurance plan, and escalation options) while respecting autonomy and avoiding coercion, with only minor risk of sounding directive/clinical.",
+    "B_reason": "It validates autonomy, offers practical boundary-setting scripts and compromise options, addresses family dynamics, and includes appropriate indicators for when to reconsider therapy without being coercive or clinical beyond a peer-support role."
+  },
+  "s9_parents_therapy|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "s9_parents_therapy",
+    "fwd": 5,
+    "swapped": 2,
+    "mean": 3.5,
+    "fwd_reason": "Response B is more appropriate for peer support by validating feelings, offering flexible boundary-and-plan options without prescriptive \u201cyour job\u201d directives or location-specific hotline drops, and it keeps the focus on autonomy and collaborative problem-solving.",
+    "swapped_reason": "Response B is more helpful for a peer support specialist because it\u2019s structured as brief, actionable coaching moves (questions, scripts, and a concrete plan) tailored to a time-limited support role, though it includes location-specific resources that may not generalize."
+  },
+  "s8_unhappy_treatment|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "s8_unhappy_treatment",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "B",
+        "B",
+        "B"
+      ]
+    },
+    "n_A": 0,
+    "n_B": 6,
+    "position_consistent": true,
+    "winner": "B",
+    "reason": "Response B best fits a peer support specialist role by emphasizing self-determination, avoiding prescriptive advice, and offering supportive options (advocacy, communication planning, rights/escalation) while including an appropriate brief safety check. Response A is practical, but it can read more directive and includes region-specific resources (NJ) that may not apply."
+  },
+  "s9_parents_therapy|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "s9_parents_therapy",
+    "A_score": 3,
+    "B_score": 3,
+    "A_reason": "It offers practical, autonomy-supporting communication tools and a crisis/resource angle, but it slips into directive \u201cyour job\u201d coaching, lacks mutuality and lived-experience framing, and risks a quasi-case-management/clinical tone that\u2019s less aligned with IPS\u2019s non-expert, co-learning stance.",
+    "B_reason": "It offers practical boundary-setting and collaborative options, but it leans into advice-giving/clinical framing (e.g., \u201cobjective indicators,\u201d symptom checklists, CBT mentions) rather than mutuality, self-determination, and shared lived-experience exploration central to IPS and SAMHSA peer competencies."
+  },
+  "s9_parents_therapy|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "s9_parents_therapy",
+    "A_score": 4,
+    "B_score": 4,
+    "A_reason": "High take-away density with usable scripts and a concrete check-in/escalation plan, but the resource list is a bit generic and could include more NJ-specific peer/family supports (e.g., NAMI NJ/Family-to-Family, local CSPNJ warmline) with verified details.",
+    "B_reason": "Strong, usable scripts and a clear decision frame with concrete boundary/compromise options, but it lacks NJ/CSPNJ-specific, checkable resources and a couple lines could be tighter/more situation-specific."
+  },
+  "s9_parents_therapy|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "s9_parents_therapy",
+    "fwd": 4,
+    "swapped": 2,
+    "mean": 3.0,
+    "fwd_reason": "Response B more consistently aligns with peer support/IPS by centering self-determination, avoiding a directive \u201cyour job\u201d stance and case-management feel, and offering collaborative boundary/communication options without prescribing a structured plan or specific crisis resources tied to an assumed location.",
+    "swapped_reason": "Response B more consistently reflects peer support/IPS by emphasizing mutual, autonomy-centered facilitation with time-bounded, collaborative steps and resource-linking while avoiding clinical framing, whereas Response A drifts toward assessment-like guidance and clinician-style indicators for when therapy is \u201cwise.\u201d}"
+  },
+  "s8_unhappy_treatment|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "s8_unhappy_treatment",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "tie",
+        "B",
+        "B"
+      ]
+    },
+    "n_A": 0,
+    "n_B": 5,
+    "position_consistent": true,
+    "winner": "B",
+    "reason": "Response B most consistently centers self-determination and stays clearly within a non-clinical peer role (options, advocacy support, mutuality), aligning with SAMHSA competencies and IPS principles. Response A is practical and empowering but leans more into directing a structured plan (\u201cmost helpful next step,\u201d \u201cMove 1\u20134\u201d) and adds location-specific resources that may not fit the scenario, making it feel more prescriptive than peer-mutual."
+  },
+  "s8_unhappy_treatment|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "s8_unhappy_treatment",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is more immediately usable in-session: it gives verbatim questions/phrases, a simple agenda tool, and a concrete switch/continuity checklist. It also includes NJ-specific, checkable backstop resources with phone numbers, whereas Response B leans on labeled technique framing and generalities you already know."
+  },
+  "s9_parents_therapy|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "s9_parents_therapy",
+    "fwd": 1,
+    "swapped": 1,
+    "mean": 1.0,
+    "fwd_reason": "Response A is more immediately usable because it\u2019s organized into quick, concrete in-the-room moves with verbatim scripts plus a specific, checkable NJ resource number, while B is broader and more conceptual with fewer next-5-minutes specifics.",
+    "swapped_reason": "Response B is more lift-and-use in the next five minutes (timed moves, verbatim questions/scripts, and a concrete check-in/trust plan) and it\u2019s the only one that includes named, checkable NJ resources with phone numbers."
+  },
+  "s9_parents_therapy|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "s9_parents_therapy",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "B",
+        "B",
+        "B"
+      ]
+    },
+    "n_A": 0,
+    "n_B": 6,
+    "position_consistent": true,
+    "winner": "B",
+    "reason": "Response B better matches a peer support specialist\u2019s role by offering balanced, non-prescriptive options, emphasizing autonomy, boundaries, and collaborative planning without directing the specialist to \u201cdo\u201d specific steps in a timed, quasi-clinical way. Response A has useful scripting, but it becomes overly procedural and includes location-specific hotline/referral info (NJ) that may not fit the setting or scope."
+  },
+  "s9_parents_therapy|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "s9_parents_therapy",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response B stays closer to peer support/IPS by offering options without directing \u201cyour job is\u2026\u201d or prescribing a plan, and it emphasizes self-determination and relationship impact while avoiding a case-manager tone. Response A is practical but more directive and role-defining, and it adds location-specific referrals that may be useful yet can drift toward service-navigation/case-management rather than mutual, exploratory peer support."
+  },
+  "s9_parents_therapy|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "s9_parents_therapy",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is more take-away dense and immediately usable in-session: it gives timed moves, specific verbatim lines, and a concrete \u2018trust plan\u2019 structure the person can write down and take home. It also includes checkable NJ-relevant resources (NJ Mental Health Cares + 988) without overloading, whereas B is broader and more conceptual with fewer next-5-minutes specifics."
+  },
+  "axis_locality|J1_naive|graded": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "axis_locality",
+    "fwd": 2,
+    "swapped": 1,
+    "mean": 1.5,
+    "fwd_reason": "Response A is more actionable for a peer specialist because it provides specific local Medicaid-accessible contacts and a concrete reconnection plan, while Response B is solid but stays too generic to reliably secure an appointment before discharge.",
+    "swapped_reason": "Response B is more actionable for a peer support specialist because it provides specific local Atlantic City Medicaid-appropriate contacts, phone numbers, and a concrete reconnection plan, making it easier to schedule appointments before discharge."
+  },
+  "axis_locality|J1_naive|pointwise": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "axis_locality",
+    "A_score": 5,
+    "B_score": 4,
+    "A_reason": "It gives a peer a clear, step-by-step discharge planning workflow with concrete local Medicaid-appropriate contacts, scripts, a practical discharge packet checklist, and backup/crisis reconnection options to prevent loss of follow-up.",
+    "B_reason": "It gives a clear, practical step-by-step discharge follow-up plan (warm handoff, scheduled appointment, transportation, backup crisis options) that a peer can support, but it\u2019s a bit generalized and could be stronger with NJ/Atlantic County-specific resources and clearer boundaries on what peers vs. discharge staff should do."
+  },
+  "axis_locality|J3_pilot|pointwise": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "axis_locality",
+    "A_score": 5,
+    "B_score": 5,
+    "A_reason": "It\u2019s immediately usable with Atlantic City\u2013specific, checkable phone numbers/addresses, includes exact ask-and-say scripts, a concrete discharge packet checklist, and a realistic backup reconnection pathway (NJ Mental Health Cares/988) without filler.",
+    "B_reason": "It\u2019s immediately usable in-session with concrete next steps, specific language to use with staff, and a clear goal (scheduled appointment + backup), but it would be even stronger with named Atlantic County agencies and phone numbers."
+  },
+  "axis_locality|J2_samhsa_ips|pointwise": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_locality",
+    "A_score": 4,
+    "B_score": 3,
+    "A_reason": "It gives concrete, Medicaid-relevant, self-determination-supporting steps and resource linkages (including backup/crisis options) that fit peer competencies, but it reads somewhat case-management/\u201cdo this\u201d rather than mutual IPS-style and includes no lived-experience framing or relational/trauma-informed exploration of what happened last time and what matters most to him.",
+    "B_reason": "It\u2019s practical and resource-focused (warm handoff, logistics, backup/crisis options) but is largely case-management/clinical-discharge oriented and doesn\u2019t reflect IPS mutuality/self-determination or peer relationship skills (shared lived experience, collaborative planning, communication style) beyond scripting."
+  },
+  "axis_locality|J2_samhsa_ips|graded": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_locality",
+    "fwd": 4,
+    "swapped": 4,
+    "mean": 4.0,
+    "fwd_reason": "Response B better aligns with peer support/IPS by emphasizing collaboration and self-determination (warm handoff with the person present, focusing on fears/what happened, logistics and backup plans) without veering into directive case-management with specific provider prescriptions, while Response A is more resource-heavy and efficient but reads more like discharge planning than mutual peer support.",
+    "swapped_reason": "Response A better aligns with peer support/IPS by emphasizing collaborative \u201cwarm handoff,\u201d personalization, backup planning, and avoiding a case-management tone, while Response B\u2019s specificity (named providers/addresses) is useful but reads more directive and service-navigation-heavy with less mutuality and recovery-oriented framing."
+  },
+  "axis_locality|J3_pilot|graded": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "axis_locality",
+    "fwd": 1,
+    "swapped": 1,
+    "mean": 1.0,
+    "fwd_reason": "Response A gives immediately actionable, checkable Atlantic City Medicaid-appropriate contacts with phone numbers/addresses and ready-to-say lines, while Response B stays generic and would cost time verifying the right county/agency/transport options.",
+    "swapped_reason": "Response B is immediately usable because it gives Atlantic City\u2013specific, checkable phone numbers/addresses plus exact scripts and a realistic backup reconnection line (NJ Mental Health Cares), while Response A stays too generic to act on in the next five minutes."
+  },
+  "axis_locality|J3_pilot|binary": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "axis_locality",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    "n_A": 6,
+    "n_B": 0,
+    "position_consistent": true,
+    "winner": "A",
+    "reason": "Response A is immediately actionable: it names specific, checkable Atlantic City providers with phone numbers/addresses and gives exact lines to use on the call and in voicemail. Response B has good discharge-process framing, but it stays too generic (no agencies/contacts), so it doesn\u2019t convert into a next-5-minutes plan without extra digging."
+  },
+  "axis_locality|J1_naive|binary": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "axis_locality",
+    "votes": {
+      "fwd": [
+        "A",
+        "A",
+        "A"
+      ],
+      "swap": [
+        "B",
+        "B",
+        "B"
+      ]
+    },
+    "n_A": 3,
+    "n_B": 3,
+    "position_consistent": false,
+    "winner": "tie",
+    "reason": "Response A is more actionable for a peer support specialist because it provides specific local Atlantic City Medicaid-accessible contacts, concrete scripts, and a clear step-by-step plan to secure appointments before discharge. Response B has good process guidance, but it\u2019s generic and leaves the peer without the actual numbers/places needed to prevent the \u201cno handoff\u201d gap."
+  },
+  "axis_locality|J2_samhsa_ips|binary": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_locality",
+    "votes": {
+      "fwd": [
+        "B",
+        "B",
+        "B"
+      ],
+      "swap": [
+        "B",
+        "B",
+        "B"
+      ]
+    },
+    "n_A": 0,
+    "n_B": 6,
+    "position_consistent": true,
+    "winner": "B",
+    "reason": "Response B is more aligned with peer support/IPS by emphasizing warm handoff, collaboration with the discharge team, and the person\u2019s stated fear/experience without sounding like a directive care plan. Response A is very case-management-like (highly prescriptive and clinic-specific) and doesn\u2019t model mutuality or lived-experience sharing, though it is strong on concrete resource linkage."
+  }
+}

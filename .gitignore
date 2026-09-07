@@ -1,10 +1,11 @@
-eval/
+.claude/
 .DS_Store
 */.ipynb_checkpoints
 */.DS_Store
 database/results/*.npy
 */__pycache__
 */secret.py
+debugging/
 backend/mental_health/secret.py
 backend/mental_health/__pycache__/
 backend/*/__pycache__
@@ -23,10 +24,19 @@ data_analysis/
 frontend-react/node_modules/
 frontend-react/build/
 backend/__pycache__/
-eval/**/__pycache__/
 backend/data/*.db
 .env
 *.ipynb
 .local/
 
+eval/*
+
+# 2. Ignore specific files inside eval
 eval/*.csv
+
+# 3. Un-ignore the ae_judge folder (trailing slash is required here)
+!eval/ae_judge/
+
+# 4. Re-ignore the archive folder inside ae_judge
+eval/ae_judge/_archive/
+
