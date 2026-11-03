@@ -9,7 +9,7 @@ import threading
 import time
 import secrets
 
-from fastapi import FastAPI, Request, HTTPException, Depends, Request
+from fastapi import FastAPI, Request, HTTPException, Depends, Request, Header
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field 
@@ -31,7 +31,7 @@ from backend.app.login import get_current_user, UserData
 from backend.app.login import router as auth_router
 from backend.app.audit_viewer import router as audit_router
 
-from typing import Optional, Union
+from typing import Literal, Optional, Union
 
 from backend.app.database import (
     update_conversation, 
@@ -67,9 +67,12 @@ from backend.app.database import (
     get_snap_usage_analytics,
     get_monthly_azure_chat_tokens,
     increment_monthly_azure_chat_tokens,
+    get_monthly_external_snap_tokens,
+    increment_monthly_external_snap_tokens,
 )
 from backend.app.llm_budget import (
     AZURE_CHAT_MONTHLY_TOKEN_BUDGET,
+    EXTERNAL_SNAP_MONTHLY_TOKEN_BUDGET,
     accumulate_usage,
     utc_billing_month_first_day,
 )
@@ -405,6 +408,29 @@ class SnapQueryRequest(BaseModel):
     mode: str = "expert"
     conversation_id: Optional[str] = None
 
+
+class ExternalSnapMessage(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str = Field(min_length=1, max_length=8_000)
+
+
+class ExternalSnapQueryRequest(BaseModel):
+    question: str = Field(min_length=1, max_length=2_000)
+    conversation_history: list[ExternalSnapMessage] = Field(
+        default_factory=list, max_length=20
+    )
+
+
+async def authenticate_external_snap_api_key(
+    x_api_key: Optional[str] = Header(default=None),
+) -> None:
+    """Authenticate the server-to-server FoodTalk SNAP integration."""
+    configured_key = os.getenv("EXTERNAL_SNAP_API_KEY")
+    if not configured_key:
+        raise HTTPException(status_code=503, detail="External SNAP API is not configured")
+    if not x_api_key or not secrets.compare_digest(x_api_key, configured_key):
+        raise HTTPException(status_code=401, detail="Invalid API key")
+
 _snap_pdf_cache: bytes | None = None
 
 @app.get("/api/snap/pdf")
@@ -457,6 +483,36 @@ async def snap_query_endpoint(
         return {"success": True, **result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/external/snap/query")
+async def external_snap_query_endpoint(
+    request: ExternalSnapQueryRequest,
+    _: None = Depends(authenticate_external_snap_api_key),
+):
+    """API-only Georgia SNAP query for approved integrations such as FoodTalk."""
+    billing_month = utc_billing_month_first_day()
+    if get_monthly_external_snap_tokens(billing_month) >= EXTERNAL_SNAP_MONTHLY_TOKEN_BUDGET:
+        raise HTTPException(
+            status_code=429,
+            detail="External SNAP API monthly token limit exceeded.",
+        )
+
+    try:
+        result, usage_tokens = query_snap(
+            request.question,
+            [
+                message.model_dump() if hasattr(message, "model_dump") else message.dict()
+                for message in request.conversation_history
+            ],
+            mode="simple",
+        )
+        increment_monthly_external_snap_tokens(usage_tokens, billing_month)
+        return {"success": True, **result}
+    except Exception:
+        # Do not return provider/database details to an external consumer. The
+        # request itself is intentionally not logged or persisted.
+        raise HTTPException(status_code=500, detail="SNAP query failed")
 
 
 @app.get("/api/snap/conversations")
