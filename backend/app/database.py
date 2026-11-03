@@ -1473,6 +1473,57 @@ def increment_monthly_azure_chat_tokens(delta: int, billing_month: _date) -> int
         return 0
 
 
+def get_monthly_external_snap_tokens(billing_month: _date) -> int:
+    """Return external SNAP API tokens recorded for a UTC calendar month."""
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    SELECT total_tokens FROM external_snap_api_usage
+                    WHERE billing_month = %s
+                    """,
+                    (billing_month,),
+                )
+                row = cur.fetchone()
+                return int(row[0]) if row else 0
+    except psycopg.errors.UndefinedTable:
+        print("[DB] get_monthly_external_snap_tokens: table missing; apply migration 008.")
+        return 0
+    except Exception as e:
+        print(f"[DB] get_monthly_external_snap_tokens error: {e}")
+        return 0
+
+
+def increment_monthly_external_snap_tokens(delta: int, billing_month: _date) -> int:
+    """Atomically add external SNAP API tokens for a UTC calendar month."""
+    if delta <= 0:
+        return get_monthly_external_snap_tokens(billing_month)
+    try:
+        with psycopg.connect(CONNECTION_STRING) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    INSERT INTO external_snap_api_usage (billing_month, total_tokens)
+                    VALUES (%s, %s)
+                    ON CONFLICT (billing_month)
+                    DO UPDATE SET
+                        total_tokens = external_snap_api_usage.total_tokens + EXCLUDED.total_tokens
+                    RETURNING total_tokens
+                    """,
+                    (billing_month, int(delta)),
+                )
+                row = cur.fetchone()
+            conn.commit()
+            return int(row[0]) if row else 0
+    except psycopg.errors.UndefinedTable:
+        print("[DB] increment_monthly_external_snap_tokens: table missing; apply migration 008.")
+        return 0
+    except Exception as e:
+        print(f"[DB] increment_monthly_external_snap_tokens error: {e}")
+        return 0
+
+
 def upsert_session_feedback_answer(
     conversation_id: str,
     username: str,

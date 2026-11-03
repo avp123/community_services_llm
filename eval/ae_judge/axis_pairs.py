@@ -5,12 +5,12 @@ Each tuple is (scenario, treatment F3, F3 with exactly ONE property inverted).
 Everything else in the prompt is meant to be identical, so any difference in the
 two responses is attributable to that axis.
 
-  1 AUTONOMY              F3 gives ordered moves        | variant gives unordered options
-                          and says what to do first     | and refuses to rank them
+  1 AUTONOMY              F3 follows the person's       | variant assumes conventional goals
+                          stated priorities             | and steers to them regardless
   2 INFORMATION_VALUE     F3 names NJ agencies/numbers  | variant gives categories only
   3 PRACTICAL_USABILITY   F3 gives borrowable sentences | variant gives approaches only
-  4 ROLE_COMPLEMENTARITY  F3 helps across the board     | variant does info/search only
-                                                        | and leaves relational work alone
+  4 ROLE_COMPLEMENTARITY  F3 leaves the relational      | variant runs the peer interaction
+                          peer work to the provider     | and hands it over to deliver
 
 Prompts and scenarios are read from `prompts/` (the axis set was rewritten there on
 2026-09-09; `debugging/data/` still holds the superseded direction/locality/role/
@@ -38,8 +38,8 @@ _OUT = pathlib.Path(__file__).parent / "output"
 # axis -> (variant prompt file, arm-A pole, arm-B pole)
 AXES = {
     "autonomy": ("variant_autonomy.md",
-                 "ordered moves, says what to do first",
-                 "unordered options, declines to rank"),
+                 "follows the person's stated priorities",
+                 "assumes conventional goals, steers to them"),
     "information_value": ("variant_information_value.md",
                           "names NJ agencies with numbers",
                           "gives service categories only"),
@@ -47,8 +47,8 @@ AXES = {
                             "gives borrowable sentences",
                             "gives approaches, no wording"),
     "role_complementarity": ("variant_role_complementarity.md",
-                             "helps across the board",
-                             "info/search only, leaves relational work to provider"),
+                             "leaves the relational peer work to the provider",
+                             "runs the peer interaction and hands it over"),
 }
 
 _lock = threading.Lock()

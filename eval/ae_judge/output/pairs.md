@@ -11,81 +11,79 @@ property inverted; for scenario pairs, arm B is the vanilla control.
 **A** treatment (F3)  |  **B** variant: autonomy inverted
 
 
-**Scenario:** A 29-year-old woman in Trenton left her job six weeks ago and is close to running out of savings. She is behind on her utility bills, needs to keep her car on the road to look for work, and thinks she might qualify for some kind of help but does not know what to deal with first. She asks her peer provider where she should start.
+**Scenario:** A 41-year-old man in Trenton has been out of work for about a year, and his family keeps pushing him to take a warehouse job a cousin has lined up. He tells his peer provider that what he actually cares about right now is getting regular time with his 9-year-old daughter again, and that the job is night shift, which would make that harder.
 
 
-### A (438 words)
+### A (435 words)
 
-She’s in the “cash is shrinking + bills are stacking” window where the fastest wins are (1) stop shutoff/late fees, (2) stabilize food/health coverage so savings lasts, and (3) keep the car minimally functional so she can keep job-searching. A good way to see it: do the time-sensitive protections first, then the longer applications.
+He’s being pressured toward “any job,” but his stated priority is rebuilding consistent parenting time with his 9‑year‑old—and the offered night shift would directly compete with that. A useful next step is to help him translate that priority into (1) a concrete parenting-time plan and (2) a work plan that supports it, so he can respond to family pressure without getting pulled off-track.
  
- **Move 1 — Do a 10‑minute triage and pick the first two fires**
- Ask, exactly:
- - “Do you have a shutoff notice date for electric/gas, or just past-due?”
- - “Are you behind on rent too, or mainly utilities?”
- - “Is the car issue: insurance, registration, repairs, gas, or a ticket?”
- Then decide together: **(A) stop any shutoff/eviction clock** + **(B) get a steady benefit started (SNAP/Medicaid/Unemployment)**.
+ **Move 1 — Get specific about the parenting-time target (10 minutes)**
+ Ask:
+ - “If things were better in 30 days, what would be happening with your daughter—what days, what times, overnight or not?”
+ - “What’s the current situation: informal visits, a court order, or you’re blocked from contact?”
+ - “What’s one small ‘next right’ step this week—texting her mom, a school pickup, a scheduled call?”
  
- **Move 2 — Utilities: call today and request ‘hold’ + payment plan while applying for LIHEAP/USF**
- Have her call the utility with you present.
- What she can say:
- - “I’m unemployed and applying for energy assistance through Mercer County. Can you place a temporary hold on disconnection and set up the lowest payment arrangement you can?”
- - “What documents do you need from me to note my hardship in the account?”
- Action: get the **account number**, **shutoff date**, and **fax/email** the utility accepts for assistance agencies.
+ **Move 2 — Help him say one clear boundary to family (practice it out loud)**
+ Offer him wording:
+ - “I hear you. I’m not saying ‘no’ to work—I’m saying my first move is setting steady time with my daughter. Night shift makes that harder.”
+ - “If I take a job, it needs to protect parenting time. Can you help me find day shift or weekend hours instead?”
+ - “I’m working a plan. I’ll update you Friday after I make two calls.”
  
- **Move 3 — Same day: start LIHEAP/USF through Mercer County**
- Call the LIHEAP appointment line and ask for the quickest path.
- What to ask:
- - “Do you have emergency processing if I have a shutoff notice?”
- - “What exact documents should I bring so I’m not turned away?”
- Bring: photo ID, SSN cards (or proof), most recent utility bills, lease, proof of income/unemployment/zero income statement, bank balance snapshot.
+ **Move 3 — Make a “parenting-time first” job filter (so he’s not stuck with yes/no)**
+ Do this on paper with him:
+ - Non‑negotiables: “Available after school ___ days,” “one weekend day,” “no overnights,” “court dates/meetings.”
+ - Acceptables: “early morning shift,” “part-time,” “temp work,” “seasonal.”
+ Then ask: “Do you want to counter-offer the cousin: ‘I can do day shift only’?”
  
- **Move 4 — Start income + food/health supports this week (two parallel tracks)**
- - **Unemployment (if she left for good cause or was pressured out):** file/clarify eligibility; if unsure, still ask.
- What she can say:
-   - “I separated from my job on [date]. I need help figuring out if I qualify and what documentation you need.”
- - **SNAP/Medicaid:** “I need to apply for SNAP and NJ FamilyCare; I’m currently unemployed and close to out of savings.”
+ **Move 4 — If there’s conflict or no agreement, connect to the right court door this week**
+ If there’s already an order or communication is stuck, help him call the Mercer Vicinage Family Division and ask what program/process fits (custody/parenting time motion, mediation, parenting time enforcement).
+ What he can say on the call:
+ - “I’m trying to set regular parenting time with my 9‑year‑old. What’s the right way to request help or mediation in Mercer County, and what forms do I need?”
  
- **Resources (verified via web search today for Mercer County)**
- - **Mercer County Board of Social Services (MCBOSS)**: 200 Woolverton St, Trenton, NJ 08650. Mon–Fri 8:30am–4:30pm. Contact page: https://www.mcboss.org/contact  
- - **LIHEAP/USF (Mercer County) appointment hotline**: **609-337-0933** (listed on Mercer County Housing & Community Development page). Info: https://www.mercercounty.org/departments/housing-community-development/housing-and-community-development-programs  
- - **NJ 2-1-1** (utility/rent/food referrals, local emergency funds): dial **211** or https://www.nj211.org  
- - **NJ 988** (if stress tips into crisis): call/text **988**
+ **Resources (verified via NJ Courts webpages as of today; some pages list main courthouse number)**
+ - **NJ Courts – Mercer Vicinage main number** (ask for **Family Division/Family Case Management**): **609‑571‑4200** (Trenton).
+ - **NJ Courts Family Division contact directory (statewide page to confirm Mercer Family main line)**: https://www.njcourts.gov/courts/family/esp/vicinage-dir
+ - **Legal Services of New Jersey (to reach the right local legal aid office)**: **1‑888‑576‑5529**, https://www.lsnjlaw.org
  
- One question that changes the order: **Does she have a shutoff notice with a date, and if yes, what date?**
+ One detail that would change the next step: does he currently have a **court order** for custody/parenting time, or is it informal?
 
 
-### B (465 words)
+### B (425 words)
 
-She’s trying to stretch savings while bills are piling up, and she needs her car working so she can job-search. “Where do I start?” can turn into a quick menu: protect essentials (heat/lights), protect housing, stabilize food/benefits, and connect to job support—without having to solve everything today.
+What’s happening: he’s being pushed toward *any* job to prove stability, but his real “why” is parenting time. The leverage point is building a plan that protects days with his daughter **and** gets income going, so he’s not stuck choosing between them.
  
- - **Stop a utility shutoff / reduce the balance**
-   - Ask: “Do you have a shutoff notice with a date, or just past-due bills?” “Which utility—PSE&G, JCP&L, NJNG?”
-   - Words she can use: “I’m behind and I’m trying to prevent shutoff. Can you put me on a payment plan and tell me what assistance programs you’ll accept while I apply (LIHEAP/USF)?”
-   - Action: Call the utility the same day to set a payment arrangement while you help her apply for LIHEAP/USF through Mercer.
+ **Move 1 — Get concrete on parenting-time goal (today, 5 minutes)**
+ Ask him:
+ - “What exact schedule would feel like ‘regular time’—every other weekend, 2 evenings a week, overnights?”
+ - “Is there a current court order, or is it informal?”
+ - “What’s the biggest barrier right now—mom’s no, transportation, conflict, child support, your hours?”
+ Have him pick a target you can write down: *“I want ___ days/times per week with my daughter, starting by __/__/__.”*
  
- - **Apply for cash/food/health coverage to slow the bleed**
-   - Ask: “Any income at all in the last 30 days?” “Anyone else in the household?” “Any kids?”
-   - Words she can use: “I left my job six weeks ago and I’m at risk of not being able to pay essentials. I want to apply for SNAP and Medicaid, and ask if I qualify for cash assistance.”
+ **Move 2 — Don’t let the job decision accidentally sabotage the goal**
+ Offer him wording to family/cousin:
+ - “I’m not turning down work. I’m choosing a shift that doesn’t wipe out my parenting time. If I take nights, I’ll be asleep during the only hours my daughter is free.”
+ Offer him wording to the cousin/employer:
+ - “I can start fast. Do you have **day shift** or **swing shift**, or a path to transfer after 30–60 days? I’m a parent and need consistent daytime availability twice a week.”
  
- - **Protect housing (even if rent isn’t the biggest problem yet)**
-   - Ask: “Are you behind on rent, or worried you will be next month?” “Any notice from the landlord?”
-   - Words she can use to landlord: “I’m working on assistance and job search. Can we do a written payment plan for the next 30–60 days to avoid court?”
+ **Move 3 — Make a 2-track plan: income + parenting time**
+ Set a 7-day plan:
+ 1) Apply to **3 daytime** jobs (warehouses, delivery, maintenance, security day shift).  
+ 2) If he takes the night job, set a protection rule: *“No more than X nights/week, and two fixed ‘dad’ blocks that never move.”*  
+ 3) Text/call the child’s mom with a simple proposal (keep it short):
+    - “I want to get consistent time with [child’s name]. Can we try **Tues 5–7 and Sat 10–4** for the next 4 weeks and then review?”
  
- - **Keep the car on the road without derailing everything**
-   - Ask: “What would make the car not drivable—insurance lapse, inspection/registration, one repair, or gas?”
-   - Words she can use: “My car is required for interviews. Do you have any hardship options or community programs that help with a one-time repair/registration so I can keep working?”
+ **Move 4 — If cooperation is stuck, route to the court/mediation lane**
+ Coach him to say:
+ - “I’m asking for a predictable schedule that works with school nights. If we can’t agree, I’m going to file for a parenting-time schedule so our daughter has consistency.”
+ If there’s an existing order, ask: “Is it being followed?” If not, plan next step: enforcement/modification.
  
- - **Job search support that can also connect to training/Unemployment**
-   - Ask: “Did you quit, or was it a layoff/medical/unsafe situation?” (this changes Unemployment eligibility)
-   - Words she can use: “I’m looking for work and I need help updating my resume and applying. I can do appointments this week.”
+ **Resources (I couldn’t verify Mercer-specific numbers today; use these reliable starting points now)**
+ - NJ Courts Family Division info/forms (parenting time/custody): https://www.njcourts.gov/self-help/family  
+ - NJ 2-1-1 (local legal aid/mediation referrals by Mercer County): dial **211** or https://www.nj211.org/  
+ - Legal Services of New Jersey (statewide intake; they route by county): **1-888-LSNJ-LAW (1-888-576-5529)**, https://www.lsnjlaw.org/
  
- **Trenton/Mercer resources (verified via web search Sept 2026; some program lines change—call to confirm):**
- - **Mercer County LIHEAP/USF (utility help) – appointment hotline:** 609-337-0933 (Mercer County Housing & Community Development page).
- - **Mercer County Board of Social Services (SNAP/Medicaid/TANF/general assistance):** https://www.mcboss.org/contact (lists hours M–F 8:30–4:30; use site for current phone/addresses).
- - **NJ 2-1-1 (local rent/utility/food referrals):** dial 211 or visit https://nj211.org
- - **NJ 988 (if stress feels unmanageable or she feels unsafe):** call/text 988
- 
- One detail that would change which calls you make while she’s sitting with you: does she have a **shutoff notice with a date** or a **past-due bill without a shutoff date**?
+ One question that changes the next step: **Is there already a court order for custody/parenting time, or is it informal?**
 
 
 
@@ -303,41 +301,43 @@ He’s doing two hard things at once: getting his body/mind readjusted to workin
  One detail that would change the Medicaid guidance a lot: does he have a disability determination (SSI/SSDI or documented disability), or is he covered as a standard adult?
 
 
-### B (451 words)
+### B (485 words)
 
-A new job after a long gap can hit like a shock to the body and brain—fatigue and “I might quit” thoughts can be a normal adjustment signal, not a personal failure. At the same time, Medicaid usually doesn’t stop the minute someone starts working, but *reporting income changes quickly* helps prevent surprise termination or a later payback issue.
+He pushed through a big restart after a long gap, and now his body/brain are paying the “new job tax” (sleep change, standing/sitting, social load, performance pressure). At the same time, Medicaid worry can make every shift feel higher-stakes than it is—so we tackle stamina *and* get clear information about NJ FamilyCare rules.
  
- **Move 1 — Get 3 specifics that decide the Medicaid answer (2 minutes)**
- Ask for:
- - “About how many hours/week, and what’s your hourly pay?”
- - “Are you paid weekly or biweekly, and have you gotten your first full check yet?”
- - “Is it just you on the case, or do you have a spouse/kids on your NJ FamilyCare?”
+ **Move 1 — Set the tone + get the two key facts (2 minutes)**
+ Say: “Starting work again can feel like you got hit by a truck—even if the job is ‘fine.’ Let’s make this about keeping your options open, not forcing yourself to quit or to stay.”
+ Ask:
+ - “When you say exhausted—are we talking sleepiness, body pain, anxiety, depression, or all of it?”
+ - “Are you on NJ FamilyCare because of income only, or do you also get SSI/SSDI?”
  
- **Move 2 — Give him the concrete Medicaid threshold & what to do this week**
- For NJ FamilyCare “Adults” (19–64), eligibility is generally up to **138% FPL**. The NJ DMAHS page lists **$1,836/month for a single adult** (2026 guideline).
- - Borrowable wording: “Starting work doesn’t automatically kick you off—let’s estimate your monthly income and then report the change so you don’t get an interruption.”
- - Quick estimate: hourly × hours/week × 4.3 = monthly gross.
+ **Move 2 — Make a 2-week ‘don’t-quit-yet’ plan (today)**
+ Offer: “If you’re willing, let’s treat quitting as an option we don’t use for 14 days while we try 2–3 changes.”
+ Pick 2:
+ - Sleep buffer: “For the next 7 days, same wake time; bedtime can slide but no screens the last 20 minutes.”
+ - Work pacing: “One micro-break each hour: water + 10 slow breaths in the bathroom or break area.”
+ - Recovery: “After work: shoes off, food, shower—then no ‘problem-solving’ for 30 minutes.”
  
- **Move 3 — Help him report the job change (reduce risk of a gap)**
- Best next step: report income change to his case office / NJ FamilyCare and ask what proof they want.
- - Borrowable wording to use on the phone:  
-   “I started a job on [date]. My gross pay is about $___/hour for about ___ hours/week. What documents do you need and what’s the deadline so my coverage doesn’t lapse?”
+ **Move 3 — Give him words for his supervisor (today or next shift)**
+ He can say (adapt as needed):
+ - “I’m glad to be here. I’m still adjusting after being out of work—can we look at my schedule and see if a slightly earlier/later start or fewer closing shifts for the next two weeks is possible?”
+ - “What are the top two things you want me to get right this week so I can focus my energy?”
  
- **Move 4 — If his income is over limit, don’t let him think quitting is the only option**
- If he ends up over the NJ FamilyCare income limit:
- - Ask the agency: “If I’m over-income, what’s the exact end date of coverage and what’s the next option—GetCoveredNJ/Marketplace with subsidies, or another Medicaid category?”
- - If he has a disability history (SSI/SSDI, or could meet disability criteria), flag **NJ WorkAbility** (Medicaid for working people with disabilities; can allow higher earnings with possible premium).
+ **Move 4 — Protect Medicaid with the right call(s) while he’s with you**
+ 1) Call **Camden County Board of Social Services** and ask specifically about NJ FamilyCare while working:
+ - **(856) 225-8800**, 101 Woodcrest Rd, Suite 161, Cherry Hill, NJ 08003 (verified via Camden County site, searched today)
+ Ask: “He started a job 3 weeks ago. What income level would end NJ FamilyCare for a household of 1, and what paperwork do you need to report wages? If he goes over, what are the next coverage options?”
  
- **Resources (verified via web search today)**
- - **Camden County Board of Social Services (public benefits / Medicaid case changes)**  
-   **101 Woodcrest Rd, Suite 161, Cherry Hill, NJ 08003** | **856-225-8800** | Hours listed: **Mon–Fri 8:30am–4:30pm**  
-   Source: NJ DHS county list & Camden County pages.
- - **NJ FamilyCare Member/General line:** **1-800-701-0710** (TTY 711) | https://www.njfamilycare.org
- - **Camden County One-Stop Career Center (job coaching, retention supports, training):** **856-549-0560** | CamdenOneStop@dol.nj.gov  
-   Source: Camden County One-Stop page.
- - **NJ WorkAbility (info/eligibility overview):** https://www.nj.gov/humanservices/dds/programs/njworkability/
+ 2) If he’s on **SSI/SSDI**, get benefits counseling:
+ - **Ticket to Work Help Line (WIPA referral): 1-866-968-7842** (TTY 1-866-833-2967) (verified via NJ DB101/Ticket to Work pages, searched today)
+ He can say: “I get SSI/SSDI and just started working. I need to know how this affects Medicaid and what work incentives apply.”
  
- One question that would change what I point you to next: does he have any disability determination/history (SSI/SSDI, or documented condition) that might make **WorkAbility** relevant?
+ **Resources (keep handy)**
+ - **NJ FamilyCare/Medicaid Call Center:** **1-800-356-1561** (statewide backstop)
+ - **NJ DB101 (benefits planning info + planners):** https://nj.db101.org/
+ - **988** (if exhaustion is sliding into hopelessness or safety concerns): call/text **988**
+ 
+ One question that changes what I’d suggest next: is he on **SSI/SSDI**, or is this **income-based NJ FamilyCare only**?
 
 
 

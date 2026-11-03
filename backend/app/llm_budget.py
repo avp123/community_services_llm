@@ -1,16 +1,20 @@
-"""Global monthly Azure OpenAI chat token budget (UTC calendar month).
-
-Tune AZURE_CHAT_MONTHLY_TOKEN_BUDGET in code to match your target spend; Azure
-rates vary by deployment and model.
-"""
+"""Monthly Azure OpenAI chat token budgets (UTC calendar month)."""
 
 from __future__ import annotations
 
+import os
 from datetime import date, datetime, timezone
 from typing import Any, Optional
 
 # Roughly ~$100 at common blended chat rates; adjust manually as pricing changes.
 AZURE_CHAT_MONTHLY_TOKEN_BUDGET = 10_000_000
+
+# The external FoodTalk integration has its own ceiling so it cannot consume
+# the budget intended for authenticated PeerCoPilot users. Override this with
+# EXTERNAL_SNAP_MONTHLY_TOKEN_BUDGET in the deployment environment.
+EXTERNAL_SNAP_MONTHLY_TOKEN_BUDGET = int(
+    os.getenv("EXTERNAL_SNAP_MONTHLY_TOKEN_BUDGET", "1_000_000")
+)
 
 
 def utc_billing_month_first_day() -> date:

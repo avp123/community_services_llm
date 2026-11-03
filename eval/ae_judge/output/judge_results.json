@@ -1,259 +1,4 @@
 {
-  "axis_autonomy|J1_naive|pointwise|gpt5": {
-    "mode": "pointwise",
-    "judge": "J1_naive",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "It offers a clear prioritization framework (prevent shutoff, stabilize benefits, keep transportation) plus concrete NJ/Mercer-specific programs like LIHEAP/USF and 211/988.",
-        "B_reason": "It offers a clear triage framework plus concrete NJ/Mercer-specific resource pathways (LIHEAP/USF, MC BOSS, NJ211/988) that a peer may not have at hand."
-      },
-      "practical_usability": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The step-by-step triage questions, call scripts, and document checklist are immediately usable in a session and translate into same-day actions.",
-        "B_reason": "The step-by-step prompts, same-day actions, and sample scripts are immediately usable in a peer session to help the person make calls and apply."
-      },
-      "role_complementarity": {
-        "A": 3,
-        "B": 4,
-        "A_reason": "It generally fits peer support but occasionally shifts into directive case-management style (e.g., \u201ccall today\u2026with you present\u201d) and includes \u201cverified via web search\u201d claims a peer may not be able to validate.",
-        "B_reason": "It stays mostly in a coaching/navigation lane with questions and wording rather than directing clinical decisions, though it gets close to case-management specificity at points."
-      },
-      "autonomy": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "It starts with the client\u2019s most time-sensitive needs and uses collaborative language (\u201cdecide together\u201d), though the strong ordering could more explicitly invite her preferences and constraints.",
-        "B_reason": "It emphasizes prioritizing essentials and asks what\u2019s most urgent (e.g., shutoff date), but could more explicitly invite her to choose the order based on her own goals and stress level."
-      },
-      "overall": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "Overall it is highly actionable and relevant, but would be stronger with slightly less directive tone and more caution about verifying local phone numbers/policies.",
-        "B_reason": "It\u2019s a strong, actionable starting plan for immediate needs and benefits navigation, with minor caveats about verifying resource details and maintaining client-led prioritization."
-      }
-    }
-  },
-  "axis_autonomy|J2_samhsa_ips|pointwise|gpt5": {
-    "mode": "pointwise",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "It provides concrete, time-sensitive prioritization plus specific NJ/Mercer resources, scripts, and document checklists that many peer workers may not have on hand.",
-        "B_reason": "It offers a clear triage framework plus concrete NJ/Mercer-specific resource pathways, scripts, and key questions that many peers may not have on hand."
-      },
-      "practical_usability": {
-        "A": 5,
-        "B": 4,
-        "A_reason": "The step-by-step triage flow, call scripts, and parallel-track plan (utilities + benefits) are immediately actionable in a real peer support session.",
-        "B_reason": "The step-by-step structure and sample wording are immediately usable, though the inclusion of \u201cverified via web search\u201d and specific phone numbers could date quickly and may require confirmation."
-      },
-      "role_complementarity": {
-        "A": 3,
-        "B": 3,
-        "A_reason": "While it can support a peer in coaching and accompaniment, the directive tone and case-management-like sequencing (\u201cMove 1\u20134,\u201d \u201ccall today,\u201d \u201chave her call with you present\u201d) risks sliding into doing/leading rather than mutual peer support.",
-        "B_reason": "It sometimes reads like case-management (directing what to do first, emphasizing same-day calls) with limited peer-focused elements like mutuality, shared lived experience, or collaborative exploration."
-      },
-      "autonomy": {
-        "A": 3,
-        "B": 4,
-        "A_reason": "It asks a few choice-guiding questions and says \u201cdecide together,\u201d but overall frames priorities as the obvious order of operations and doesn\u2019t explicitly explore her goals, preferences, or what feels most urgent to her.",
-        "B_reason": "It supports choice by asking prioritization questions (e.g., shutoff notice date) and offering options, but still implicitly sets priorities rather than centering her own first-step preference and values."
-      },
-      "overall": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "Highly useful for practical stabilization and navigation, but it would better align with IPS and SAMHSA peer competencies with more mutuality, choice-point language, and less prescriptive direction.",
-        "B_reason": "Strong practical resource navigation and crisis-prevention triage, but it could better align with IPS by emphasizing mutuality, self-determination, and non-clinical peer relationship practices."
-      }
-    }
-  },
-  "axis_autonomy|J3_pilot|pointwise|gpt5": {
-    "mode": "pointwise",
-    "judge": "J3_pilot",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "A": 3,
-        "B": 3,
-        "A_reason": "It offers a sensible prioritization and mentions key programs (LIHEAP/USF, SNAP/Medicaid, UI), but most of this is already standard and one \u201cverified today\u201d claim plus a specific hotline number could be wrong/outdated and creates extra checking work.",
-        "B_reason": "The prioritization frame and the 211/988 pointers are useful, but the specific Mercer LIHEAP/USF hotline number and \u201cverified Sept 2026\u201d claim are questionable and likely to cost a confirmatory call."
-      },
-      "practical_usability": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "The triage questions and exact scripts for calling utilities are immediately liftable in-session, and the \u201cget account number/shutoff date/fax-email\u201d step is concrete and actionable.",
-        "B_reason": "The call-now questions and verbatim scripts for utilities/landlord/benefits are immediately usable in-session and help turn \u201cwhere do I start\u201d into a concrete first-hour plan."
-      },
-      "role_complementarity": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "It stays in a planning/next-steps lane and gives wording the person can use without telling you how to build rapport or do peer work.",
-        "B_reason": "It stays in a coaching/navigation lane (questions, scripts, sequencing) without trying to do peer work for you or override how you build rapport."
-      },
-      "autonomy": {
-        "A": 3,
-        "B": 4,
-        "A_reason": "It\u2019s mostly directive (\u201ccall today,\u201d \u201csame day\u201d) and focuses on urgency, with limited explicit space for her priorities beyond the initial triage.",
-        "B_reason": "It offers a menu of options and asks clarifying questions that let her choose priorities rather than prescribing a single path."
-      },
-      "overall": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "Despite the risk of unverifiable referral details, it\u2019s a solid, time-sensitive checklist with usable scripts that would likely help you move the situation forward quickly.",
-        "B_reason": "Strong, actionable triage and language to use right away, with the main drawback being potentially unreliable local program contact specifics."
-      }
-    }
-  },
-  "axis_autonomy|J2_samhsa_ips|graded|gpt5": {
-    "mode": "graded",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "fwd": 2,
-        "swapped": 4,
-        "mean": 3.0,
-        "fwd_reason": "Response A offers more concrete, step-by-step detail (including a short triage flow, document checklist, and specific call scripts) that a peer might not already have, though it overstates \u201cverified via web search today.\u201d",
-        "swapped_reason": "Response A offers a broader menu of domains (including housing and car supports) and more varied prompts/scripts, giving slightly more informational breadth than B."
-      },
-      "practical_usability": {
-        "fwd": 2,
-        "swapped": 2,
-        "mean": 2.0,
-        "fwd_reason": "Response A is more immediately actionable with a clear sequence (\u201cMove 1\u20134\u201d), a same-day plan, and exact next actions, while Response B is slightly more general.",
-        "swapped_reason": "Response B is more streamlined into a clear, time-sequenced workflow (triage \u2192 utility call \u2192 LIHEAP/USF \u2192 benefits) that a peer can execute immediately with the person."
-      },
-      "role_complementarity": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B better fits peer support/IPS by sounding less directive and more collaborative, whereas Response A can read like case-management/tasking rather than mutual support.",
-        "swapped_reason": "Response B better matches peer practice by emphasizing \u201cdecide together,\u201d co-regulation/presence during calls, and focused next steps without drifting into case-manager-like comprehensiveness."
-      },
-      "autonomy": {
-        "fwd": 4,
-        "swapped": 3,
-        "mean": 3.5,
-        "fwd_reason": "Response B more consistently preserves self-determination by framing options as a menu and emphasizing \u201cwithout having to solve everything today,\u201d while Response A leans into prescriptive prioritization.",
-        "swapped_reason": "Both support self-determination with collaborative questions and scripts, though both can feel a bit directive and not explicitly mutual/IPS-oriented enough to clearly favor one."
-      },
-      "overall": {
-        "fwd": 3,
-        "swapped": 2,
-        "mean": 2.5,
-        "fwd_reason": "Response A is stronger for operational execution, but Response B aligns better with peer role boundaries and IPS mutuality, making the net advantage roughly even.",
-        "swapped_reason": "Response B is overall more usable in-the-moment for a peer specialist while still aligning with SAMHSA competencies around linking to resources and supporting planning."
-      }
-    }
-  },
-  "axis_autonomy|J1_naive|graded|gpt5": {
-    "mode": "graded",
-    "judge": "J1_naive",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "fwd": 2,
-        "swapped": 4,
-        "mean": 3.0,
-        "fwd_reason": "Response A adds more concrete, step-sequenced detail (triage framing, specific doc checklist, and specific agency/address) though it includes a questionable \u201cverified via web search today\u201d claim.",
-        "swapped_reason": "Response A adds a bit more breadth (e.g., housing protection language and car-support framing) and includes a few more contextual prompts, though both share most key resources."
-      },
-      "practical_usability": {
-        "fwd": 3,
-        "swapped": 1,
-        "mean": 2.0,
-        "fwd_reason": "Both are highly actionable with scripts and ordering, but A is more operational while B is slightly easier to scan and use in-session.",
-        "swapped_reason": "Response B is more immediately executable with a clear sequence (triage \u2192 utility call \u2192 LIHEAP/USF \u2192 benefits) and concrete call-prep items that a peer can use in-session."
-      },
-      "role_complementarity": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B better matches a peer role by offering a supportive menu without sounding directive or like a case manager running the process.",
-        "swapped_reason": "Response B better matches peer workflow by emphasizing sitting-with support during calls and focusing on doable next steps without over-expanding into multiple parallel problem areas."
-      },
-      "autonomy": {
-        "fwd": 5,
-        "swapped": 3,
-        "mean": 4.0,
-        "fwd_reason": "Response B more consistently preserves choice and pacing (\u201cmenu,\u201d \u201cwithout solving everything today\u201d), while A can feel more prescriptive even though it uses collaborative language.",
-        "swapped_reason": "Both support choice with collaborative questions and scripts, but neither clearly outperforms the other on explicitly reinforcing client-led prioritization beyond basic triage."
-      },
-      "overall": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B is the better fit overall for peer support\u2014actionable, less assumptive, and more autonomy-supporting\u2014while still pointing to the same key benefits/resources.",
-        "swapped_reason": "Response B is slightly more useful overall because it is tighter, more action-oriented, and easier to apply quickly in a real peer-support encounter."
-      }
-    }
-  },
-  "axis_autonomy|J3_pilot|graded|gpt5": {
-    "mode": "graded",
-    "judge": "J3_pilot",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "fwd": 2,
-        "swapped": 2,
-        "mean": 2.0,
-        "fwd_reason": "Response A adds more concrete, checkable specifics (what to say, what to collect, what info to capture from the utility, and a document list) beyond the shared resource list.",
-        "swapped_reason": "Response B adds more checkable, step-specific details (address, what to capture on the utility call, document list, emergency processing question) that I can directly use without inventing the missing pieces."
-      },
-      "practical_usability": {
-        "fwd": 2,
-        "swapped": 1,
-        "mean": 1.5,
-        "fwd_reason": "Response A is more \u201cgrab-and-go\u201d in the next five minutes because it sequences actions, gives exact call goals, and includes a ready document checklist that prevents wasted trips/calls.",
-        "swapped_reason": "Response B is laid out as a do-now sequence with exact prompts and actions that fit a live session (10\u2011minute triage \u2192 utility call \u2192 LIHEAP appointment \u2192 benefits tracks) and minimizes decision fatigue."
-      },
-      "role_complementarity": {
-        "fwd": 3,
-        "swapped": 2,
-        "mean": 2.5,
-        "fwd_reason": "Both fit peer workflow without getting preachy, but A can slide into light case-management territory while B stays a bit more in a menu-of-options stance.",
-        "swapped_reason": "Response B better supports what I actually do in the room\u2014help her pick two fires, make the first call, and leave with a tight next-step plan\u2014without drifting into broad categories."
-      },
-      "autonomy": {
-        "fwd": 4,
-        "swapped": 3,
-        "mean": 3.5,
-        "fwd_reason": "Response B frames choices as a menu and avoids implying a single correct order, which better supports her deciding what matters most today.",
-        "swapped_reason": "Both keep the choice with her, but A\u2019s \u201cmenu\u201d framing and multiple options reads slightly more person-led than B\u2019s more directive pathway."
-      },
-      "overall": {
-        "fwd": 2,
-        "swapped": 1,
-        "mean": 1.5,
-        "fwd_reason": "If I have to act immediately with her present, Response A is more operational and time-saving while still leaving room to tailor based on shutoff/eviction urgency.",
-        "swapped_reason": "Response B is the one I can lift and run with immediately because it operationalizes the first hour of help while still pointing to the same key Mercer resources."
-      }
-    }
-  },
   "axis_information_value|J1_naive|pointwise|gpt5": {
     "mode": "pointwise",
     "judge": "J1_naive",
@@ -339,216 +84,6 @@
       }
     }
   },
-  "axis_autonomy|J2_samhsa_ips|binary|gpt5": {
-    "mode": "binary",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "A",
-            "B"
-          ]
-        },
-        "n_A": 4,
-        "n_B": 2,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response A provides more concrete, step-by-step details (documents to gather, specific call asks, and a clearer sequencing framework), giving the peer worker more actionable information to draw from."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A is more immediately \u201cdo-this-next\u201d with a tight triage flow, scripts, and specific items to capture (account number, shutoff date, utility fax/email), which better supports real-time coaching."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B more consistently stays in a peer-support posture (options, questions, and empowerment language) without drifting into case-manager-like directives or over-structuring the interaction."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B frames choices as a menu and emphasizes not having to solve everything today, better supporting self-determination and collaborative prioritizing aligned with IPS mutuality."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "While A is stronger for operational detail, B better balances practical guidance with peer-role fit and autonomy, making it more consistent with SAMHSA competencies and IPS principles in tone and approach."
-      }
-    }
-  },
-  "axis_autonomy|J1_naive|binary|gpt5": {
-    "mode": "binary",
-    "judge": "J1_naive",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response A adds more concrete, step-sequenced details (e.g., documents to bring, specific call goals like account number/shutoff date/fax) that a peer might not already have."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A is more immediately actionable with a clear triage flow, same-day tasks, and specific scripts plus next-step logistics for utilities and LIHEAP/USF."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B better matches a peer role by offering a supportive, non-directive \u201cmenu\u201d of priorities without sounding like it\u2019s directing or verifying official details beyond the peer scope."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B more consistently frames choices and options (protect essentials/housing/benefits/car) in a way that lets the person decide priorities without prescribing a fixed sequence."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A is the most useful end-to-end for a time-sensitive situation because it operationalizes what to do today and this week while still keeping the focus on preventing shutoff and starting benefits."
-      }
-    }
-  },
   "axis_information_value|J2_samhsa_ips|pointwise|gpt5": {
     "mode": "pointwise",
     "judge": "J2_samhsa_ips",
@@ -631,111 +166,6 @@
         "mean": 2.5,
         "fwd_reason": "Response A is stronger for immediate actionable local linkage, while Response B is stronger for IPS-aligned peer practice and autonomy, making them roughly comparable overall.",
         "swapped_reason": "Despite being slightly more case-management-like, Response B is overall more actionable for preventing post-discharge drop-off because it provides specific local connection points and an immediate backup pathway."
-      }
-    }
-  },
-  "axis_autonomy|J3_pilot|binary|gpt5": {
-    "mode": "binary",
-    "judge": "J3_pilot",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It adds more checkable, immediately actionable details (specific document list, concrete call outputs like account number/shutoff date/fax-email, and a clearer sequencing frame)."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It\u2019s more \u201cnext 10 minutes\u201d usable with numbered moves, exact scripts, and a tight same-day/this-week workflow that\u2019s easy to follow while the person is present."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It supports peer work by giving concrete prompts and steps you can co-do (sit-with calling, gathering docs) without drifting into clinical framing or generic coaching."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "B",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 2,
-        "n_B": 4,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "It presents a menu of options with less prescriptive sequencing, leaving more room for the service user to choose priorities while still offering usable language."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "A is the stronger grab-and-go tool for preventing shutoff/fees and launching benefits fast, with more specific steps and fewer gaps you\u2019d have to fill in real time."
       }
     }
   },
@@ -1204,46 +634,6 @@
       }
     }
   },
-  "axis_role_complementarity|J1_naive|pointwise|gpt5": {
-    "mode": "pointwise",
-    "judge": "J1_naive",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "A": 5,
-        "B": 4,
-        "A_reason": "It adds concrete NJ-specific Medicaid/NJ FamilyCare contacts, what to ask, what documents to gather, and a useful framing of the first 30\u201360 days back to work.",
-        "B_reason": "It adds concrete Medicaid/NJ FamilyCare concepts (reporting changes, rough income estimate, WorkAbility, Marketplace fallback) and local contacts that a peer might not have on hand."
-      },
-      "practical_usability": {
-        "A": 5,
-        "B": 4,
-        "A_reason": "The step-by-step scriptable questions, supervisor language, and clear next actions (call, bring paystubs, backup office) are immediately usable in a peer session.",
-        "B_reason": "The stepwise \u201cmoves,\u201d specific questions to ask, and phone-script wording are immediately usable in a peer conversation."
-      },
-      "role_complementarity": {
-        "A": 4,
-        "B": 3,
-        "A_reason": "It supports peer work with coaching and accompaniment ideas, though it edges slightly into case-management territory by prescribing specific reporting steps and offices.",
-        "B_reason": "It mostly supports peer work, but it gets somewhat case-manager-ish by giving a specific income threshold/year and implying \u201cverified via web search today,\u201d which peers may not be positioned to confirm."
-      },
-      "autonomy": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "It offers choices (what\u2019s exhausting, whether to call on speaker, options to adjust work) but leans toward a \u201cstay employed\u201d goal that may not fully center his preferences.",
-        "B_reason": "It normalizes his experience, avoids pressuring him to quit, and frames options so he can choose next steps based on his priorities."
-      },
-      "overall": {
-        "A": 5,
-        "B": 4,
-        "A_reason": "It\u2019s highly actionable and relevant for supporting someone newly employed who is fatigued and anxious about Medicaid changes, with minimal downsides.",
-        "B_reason": "Overall it\u2019s a strong, actionable support plan with good resources, with only minor concerns about over-specific eligibility details needing verification."
-      }
-    }
-  },
   "axis_practical_usability|J3_pilot|pointwise|gpt5": {
     "mode": "pointwise",
     "judge": "J3_pilot",
@@ -1326,91 +716,6 @@
         "mean": 2.0,
         "fwd_reason": "A is more lift-and-use for a heated moment, with B mainly adding value if custody/guardianship is in play and you need a legal-safety pivot.",
         "swapped_reason": "Response B is more usable in the moment with the person in front of you, but Response A wins on higher-value, checkable legal/parenting-access resource leads\u2014so B edges out overall for immediate peer work."
-      }
-    }
-  },
-  "axis_role_complementarity|J1_naive|graded|gpt5": {
-    "mode": "graded",
-    "judge": "J1_naive",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "fwd": 4,
-        "swapped": 4,
-        "mean": 4.0,
-        "fwd_reason": "Response B adds a key extra perspective by naming the 138% FPL framework, offering a quick income-estimation method, and flagging WorkAbility and One-Stop supports, even though the exact dollar figure risks being outdated.",
-        "swapped_reason": "Response A adds more concrete Medicaid eligibility context (e.g., 138% FPL, rough monthly estimate method) and additional pathways like WorkAbility and marketplace transitions, though some specifics may risk being inaccurate/outdated."
-      },
-      "practical_usability": {
-        "fwd": 3,
-        "swapped": 2,
-        "mean": 2.5,
-        "fwd_reason": "Both give highly usable next steps (questions to ask, scripts, documents, and phone numbers), with A slightly more \u201cdo this today\u201d streamlined while B\u2019s threshold detail could mislead if incorrect.",
-        "swapped_reason": "Response B is more immediately usable in-session with clear peer-friendly questions, a quick stabilization plan, and a straightforward \u201ccall and ask these exact things\u201d script without relying on potentially wrong threshold numbers."
-      },
-      "role_complementarity": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B better matches peer-support practice by normalizing the adjustment, focusing on collaborative problem-solving, and adding employment-retention supports beyond benefits navigation.",
-        "swapped_reason": "Response B better matches peer support practice by focusing on engagement, problem-solving, and coaching (e.g., scaling question, identifying what\u2019s exhausting, trying a small work adjustment) rather than acting like an eligibility screener."
-      },
-      "autonomy": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B more explicitly counters the idea that quitting is the only option and frames choices (report, plan for transitions, explore other categories) in a way that supports informed decision-making.",
-        "swapped_reason": "Response B consistently offers choices (speakerphone if he wants, pick which exhaustion driver to target, try one adjustment before quitting) and centers his goals while still encouraging timely reporting."
-      },
-      "overall": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B is more broadly helpful and role-aligned, but it would be stronger if it avoided giving a specific monthly limit without emphasizing verification with NJ FamilyCare due to frequent guideline changes.",
-        "swapped_reason": "While Response A is richer on benefits detail, Response B is safer and more aligned with peer support workflows and realistic next steps for both job retention and Medicaid continuity."
-      }
-    }
-  },
-  "axis_role_complementarity|J2_samhsa_ips|pointwise|gpt5": {
-    "mode": "pointwise",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "A": 5,
-        "B": 4,
-        "A_reason": "It provides concrete NJ-specific Medicaid/NJ FamilyCare reporting steps, phone numbers, a local office backup, and targeted questions that many peers/providers may not have on hand.",
-        "B_reason": "It provides concrete Medicaid/NJ FamilyCare concepts (income reporting, 138% FPL frame), scripts, and relevant resource options like Marketplace and WorkAbility that a peer might not have at hand."
-      },
-      "practical_usability": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "The step-by-step structure, sample scripts, and suggested documents make it easy to use immediately, though it leans a bit toward benefits navigation/case-management detail.",
-        "B_reason": "The step-by-step structure, sample phone wording, and quick income estimate make it easy to use in a real conversation and to support next actions."
-      },
-      "role_complementarity": {
-        "A": 3,
-        "B": 3,
-        "A_reason": "It supports the peer role with coaching and collaboration options, but the directive \u201cmoves\u201d and administrative guidance can drift toward doing the work rather than emphasizing mutual, peer-to-peer exploration.",
-        "B_reason": "While it offers helpful coaching tools, it leans into benefits-navigation/case-management style (thresholds, verification claims, detailed directives) more than mutual peer exploration and shared decision-making."
-      },
-      "autonomy": {
-        "A": 4,
-        "B": 3,
-        "A_reason": "It offers choices (e.g., what adjustment to try, whether to call on speaker) and frames quitting on a continuum, but it subtly prioritizes \u201cstay employed\u201d without equally validating quitting as a possible self-directed decision.",
-        "B_reason": "It normalizes his feelings and offers options besides quitting, but the framing is fairly prescriptive and doesn\u2019t strongly invite his priorities, fears, or goals to lead the plan."
-      },
-      "overall": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "Overall it is highly actionable and resource-rich for supporting someone through early employment and benefits anxiety, with minor misalignment to IPS mutuality and non-case-management boundaries.",
-        "B_reason": "Despite being somewhat case-management oriented and potentially overconfident on specifics, it is broadly useful for equipping a peer specialist with actionable supports and resource pathways."
       }
     }
   },
@@ -1834,241 +1139,6 @@
       }
     }
   },
-  "axis_role_complementarity|J1_naive|binary|gpt5": {
-    "mode": "binary",
-    "judge": "J1_naive",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "It provides more concrete, locally actionable Medicaid reporting resources (specific phone script, documents list, and county office contact details) without relying on potentially inaccurate income thresholds."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It offers immediately usable peer-facing prompts and scripts for both job-retention problem-solving and Medicaid reporting, including a same-day call plan and backup office steps."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It aligns well with peer support by focusing on stabilization, collaborative planning, and coaching the person to self-advocate at work and with benefits offices rather than giving quasi-determinations."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "A",
-            "B",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 5,
-        "n_B": 1,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It supports choice and self-direction through scaling questions, multiple options (schedule tweaks, transportation, reporting routes), and explicit permission to do calls together only if he wants."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It is more reliable and peer-appropriate overall because it emphasizes accurate reporting and navigation steps while avoiding specific eligibility figures that could be wrong or misleading."
-      }
-    }
-  },
-  "axis_role_complementarity|J2_samhsa_ips|graded|gpt5": {
-    "mode": "graded",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "fwd": 4,
-        "swapped": 4,
-        "mean": 4.0,
-        "fwd_reason": "Response B adds a key eligibility framing (138% FPL, simple income estimate, Marketplace/WorkAbility pathways) that broadens options beyond \u201ccall and report,\u201d while A is more procedural and less explanatory.",
-        "swapped_reason": "Response A adds more concrete benefits detail (FPL threshold, WorkAbility mention, more resource list) though it risks over-specific/possibly time-sensitive claims like \u201cverified today.\u201d"
-      },
-      "practical_usability": {
-        "fwd": 2,
-        "swapped": 2,
-        "mean": 2.0,
-        "fwd_reason": "Response A is more immediately actionable for a peer specialist with step-by-step actions, scripts, and a clear same-day plan (including offering to call on speaker), whereas B requires more interpretation and caution around thresholds.",
-        "swapped_reason": "Response B gives more immediately usable peer-facing coaching steps and scripts for both job-retention and the Medicaid call without getting bogged down in exact eligibility numbers."
-      },
-      "role_complementarity": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B better supports a peer role by normalizing the adjustment, offering choices and pathways, and avoiding a case-manager tone, while A can read more directive/operational and closer to benefits navigation case-management.",
-        "swapped_reason": "Response B better fits a peer role by focusing on collaborative problem-solving, stabilization, and supported self-advocacy rather than quasi-case-management and determinations."
-      },
-      "autonomy": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B more explicitly preserves self-determination by emphasizing options if over-income and reducing \u201cquit vs keep Medicaid\u201d thinking, whereas A\u2019s \u201cstabilize 30\u201360 days\u201d framing and \u201cdo the call with him\u201d can feel more leading even if consent-based.",
-        "swapped_reason": "Response B more consistently offers choices and elicits the person\u2019s priorities (what\u2019s exhausting, readiness-to-quit scaling), while Response A is more directive and eligibility-driven."
-      },
-      "overall": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B aligns better with peer support principles and recovery orientation while still offering concrete next steps, though A is stronger for immediate execution.",
-        "swapped_reason": "Response B is more aligned with IPS/SAMHSA competencies for mutual, person-centered support while still covering the key Medicaid action step and local office backup."
-      }
-    }
-  },
-  "axis_role_complementarity|J3_pilot|pointwise|gpt5": {
-    "mode": "pointwise",
-    "judge": "J3_pilot",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "A": 4,
-        "B": 3,
-        "A_reason": "It provides immediately checkable NJ FamilyCare and Camden County BSS contact details plus concrete phrasing for reporting income and requesting workplace adjustments that many peers won\u2019t have memorized.",
-        "B_reason": "It offers a workable income-estimate formula and flags WorkAbility, but the cited NJ FamilyCare income number/year is likely off and could mislead."
-      },
-      "practical_usability": {
-        "A": 5,
-        "B": 4,
-        "A_reason": "The questions, scripts, and step-by-step \u201ccall/report/what to have in hand\u201d sequence are easy to lift verbatim in-session and turn into same-day action.",
-        "B_reason": "The three screening questions and the exact phone script for reporting income are immediately usable in-session."
-      },
-      "role_complementarity": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "It stays in the lane of practical problem-solving and resource navigation without telling you how to do rapport/validation, though it edges slightly toward coaching with the structured \u2018moves\u2019 framing.",
-        "B_reason": "It stays in the lane of concrete next steps and language to use rather than trying to teach peer skills or take over the conversation."
-      },
-      "autonomy": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "It offers options (schedule tweak, call on speaker, local office backup) and invites his priorities, but could more explicitly include a \u201cdo you want to focus on staying vs planning an exit\u201d choice point.",
-        "B_reason": "It frames quitting as one option but emphasizes exploring benefits/coverage paths first and supports the person making informed choices."
-      },
-      "overall": {
-        "A": 4,
-        "B": 3,
-        "A_reason": "Strong, actionable, resource-backed guidance for the next 30\u201360 days, with only minor gaps around benefits nuance (e.g., Marketplace transition timing) and explicit preference-setting.",
-        "B_reason": "Useful structure and scripts, but the questionable eligibility-threshold detail and \u201cverified today\u201d claim reduce trust and raise the cost of double-checking."
-      }
-    }
-  },
-  "axis_role_complementarity|J3_pilot|graded|gpt5": {
-    "mode": "graded",
-    "judge": "J3_pilot",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "fwd": 4,
-        "swapped": 4,
-        "mean": 4.0,
-        "fwd_reason": "B adds a concrete (though potentially time-sensitive) eligibility frame with a quick income-estimate method and mentions WorkAbility/One-Stop as additional avenues beyond just reporting income.",
-        "swapped_reason": "A adds a concrete eligibility frame (138% FPL), a quick monthly-income calc, and flags WorkAbility/Marketplace pathways, which is more net-new than B."
-      },
-      "practical_usability": {
-        "fwd": 2,
-        "swapped": 2,
-        "mean": 2.0,
-        "fwd_reason": "A is more immediately deployable in-session with tighter \u201cdo this now\u201d steps (speakerphone script, exact docs to gather, clear backup to county office) and better links exhaustion-to-retention actions.",
-        "swapped_reason": "B is more immediately usable in-session with quick exhaustion-sorting questions, a \u201cone adjustment before quitting\u201d script, and a same-day call flow that doesn\u2019t hinge on exact income limits."
-      },
-      "role_complementarity": {
-        "fwd": 2,
-        "swapped": 2,
-        "mean": 2.0,
-        "fwd_reason": "A fits peer workflow by giving verbatim questions/phrasing and concrete next actions you can co-do with him without drifting into policy-heavy advising.",
-        "swapped_reason": "B better fits peer workflow by focusing on job-retention problem-solving plus doing the benefits call together, while A leans more into technical eligibility details you may not want to own."
-      },
-      "autonomy": {
-        "fwd": 3,
-        "swapped": 2,
-        "mean": 2.5,
-        "fwd_reason": "Both offer options and check-in questions without directing him, with neither clearly stronger on preserving his choice-making.",
-        "swapped_reason": "B offers multiple options (schedule tweak, commute/shift changes, choose speakerphone help) and keeps decision points with him, whereas A can feel more directive around reporting/thresholds."
-      },
-      "overall": {
-        "fwd": 2,
-        "swapped": 2,
-        "mean": 2.0,
-        "fwd_reason": "A is the safer, more checkable, \u201cusable in the next five minutes\u201d plan, while B\u2019s threshold detail risks being wrong/outdated and could cost you time to re-verify.",
-        "swapped_reason": "B is the stronger five-minute, sit-with-the-person answer for stabilizing work and preventing coverage disruption, even though A has some useful technical extras."
-      }
-    }
-  },
   "s1_newark_housing_id|J1_naive|graded|gpt5": {
     "mode": "graded",
     "judge": "J1_naive",
@@ -2151,111 +1221,6 @@
         "B": 4,
         "A_reason": "Strong, practical resource-navigation guidance for Newark/Essex County with minor reliability risk from partially confirmed contact details.",
         "B_reason": "It\u2019s a solid, actionable navigation guide with locally relevant entry points, though it could be strengthened with more Newark-specific agencies and a bit more person-centered framing."
-      }
-    }
-  },
-  "axis_role_complementarity|J2_samhsa_ips|binary|gpt5": {
-    "mode": "binary",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "It offers more concrete, locally actionable Medicaid reporting details (including a same-day call script, documents checklist, and clear local-office backup) without overreaching into clinical assessment."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It is immediately implementable in a peer session with step-by-step prompts, borrowable supervisor language, and a clear 'do this today' pathway (including optional speakerphone support)."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "A",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 4,
-        "n_B": 2,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "It better fits peer practice by focusing on collaborative problem-solving and warm handoffs/links to resources rather than presenting potentially disputable eligibility figures that can pull the peer into quasi-determinations."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "It more explicitly frames quitting as not the only option and uses estimating questions to support informed choice, while Response A\u2019s 'stay employed adjustment' emphasis can feel more directive."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Despite being somewhat directive, it most strongly equips a peer specialist with realistic next steps, scripts, and resource linkages aligned with SAMHSA competencies and IPS\u2019s non-clinical, self-determination-centered role."
       }
     }
   },
@@ -2381,111 +1346,6 @@
         "mean": 3.0,
         "fwd_reason": "Response A is stronger for concrete local navigation, while Response B is stronger for IPS-aligned tone and role fit, making them roughly comparable overall.",
         "swapped_reason": "Response B is more actionable for Newark-specific navigation, but Response A is more aligned with peer role boundaries and autonomy, making them roughly balanced overall."
-      }
-    }
-  },
-  "axis_role_complementarity|J3_pilot|binary|gpt5": {
-    "mode": "binary",
-    "judge": "J3_pilot",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "gpt5",
-    "deployment": "gpt-5-chat",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "It gives more immediately checkable, NJ-specific action details (exact NJ FamilyCare line, county office contact info, and what documents to gather) without introducing a potentially wrong income threshold."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It\u2019s more \u201cgrab-and-go\u201d with speakerphone-ready scripts, a same-day call plan, and a clear fallback if the hotline stalls."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It supports what a peer actually does in-the-moment (breakdown of exhaustion + concrete job-retention asks + benefits navigation steps) without drifting into benefit-calculation advising."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "tie",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 4,
-        "n_B": 1,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "It more explicitly avoids framing quitting as the only option and offers multiple coverage pathways (Marketplace/WorkAbility) while keeping the person in the decision seat."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "It\u2019s more immediately usable in a live session and less likely to create extra work from a possibly inaccurate Medicaid threshold claim."
       }
     }
   },
@@ -6839,216 +5699,6 @@
       }
     }
   },
-  "axis_autonomy|J1_naive|graded|4omini": {
-    "mode": "graded",
-    "judge": "J1_naive",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B provides a clearer, more structured overview of essential priorities and resources, making the information easier to digest.",
-        "swapped_reason": "Response B provides a more structured approach and actionable steps, enhancing the user's ability to navigate their situation."
-      },
-      "practical_usability": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B outlines actionable steps to take immediately, while Response A is more detailed but might overwhelm with too many steps.",
-        "swapped_reason": "Response B presents clear, time-sensitive actions in a sequential manner, making it easier for the user to follow."
-      },
-      "role_complementarity": {
-        "fwd": 5,
-        "swapped": 3,
-        "mean": 4.0,
-        "fwd_reason": "Response B aligns well with a peer provider's role by offering concise, empathetic guidance while maintaining a clear action plan.",
-        "swapped_reason": "Both responses align well with the peer support role, but Response B offers a slightly more focused method for problem-solving."
-      },
-      "autonomy": {
-        "fwd": 4,
-        "swapped": 1,
-        "mean": 2.5,
-        "fwd_reason": "Response B encourages autonomy by providing flexible options and emphasizes the user's control over their situation.",
-        "swapped_reason": "Response B encourages the user to engage actively in the process, emphasizing collaboration and shared decision-making."
-      },
-      "overall": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B is overall more user-friendly and practical for immediate application, enhancing its usefulness in a peer support context.",
-        "swapped_reason": "Overall, Response B is more comprehensive and action-oriented, likely leading to more effective support for the user."
-      }
-    }
-  },
-  "axis_autonomy|J2_samhsa_ips|pointwise|4omini": {
-    "mode": "pointwise",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The AI provided a comprehensive list of potential actions and resources that are highly relevant to the user's situation.",
-        "B_reason": "The AI provided specific resources and detailed steps for the peer specialist to follow, which add substantial value."
-      },
-      "practical_usability": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The step-by-step guidance is straightforward and actionable, making it easy for the peer specialist to implement.",
-        "B_reason": "The guidance is actionable and readily applicable to the peer support context, making it easy to implement."
-      },
-      "role_complementarity": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "The response supports the peer provider's role without taking over, but still presents a very structured approach that could overshadow personal engagement.",
-        "B_reason": "While the AI offers thorough suggestions, it maintains a supportive role rather than taking over the peer support process."
-      },
-      "autonomy": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "The suggestions empower the service user to make choices and prioritize actions based on their circumstances.",
-        "B_reason": "The response encourages the service user's input and participation in prioritizing their needs, promoting their autonomy."
-      },
-      "overall": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "Overall, the AI's response is highly useful, offering clear, actionable insights while aligning with peer support principles.",
-        "B_reason": "Overall, the AI response is comprehensive, informative, and well-aligned with peer support principles."
-      }
-    }
-  },
-  "axis_autonomy|J1_naive|pointwise|4omini": {
-    "mode": "pointwise",
-    "judge": "J1_naive",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The AI provided detailed steps and resources that would be beneficial for the peer support specialist to help the client effectively.",
-        "B_reason": "The AI provided a comprehensive list of actionable steps and resources tailored to the woman's situation."
-      },
-      "practical_usability": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The step-by-step guidance is actionable and can be readily implemented by the peer provider.",
-        "B_reason": "The guidance was structured in a clear and logical manner that makes it easy to follow."
-      },
-      "role_complementarity": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "While it offers strong support, the response maintains a focus on facilitating the peer provider's role rather than taking it over completely.",
-        "B_reason": "The AI complemented the peer provider's role by offering suggestions without undermining the peer-led support model."
-      },
-      "autonomy": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "The AI encourages collaboration and decision-making between the provider and the service user, supporting individual choice.",
-        "B_reason": "The AI encouraged the woman to take charge of her situation while offering supportive phrases for communication."
-      },
-      "overall": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The response is comprehensive and practical, making it highly useful for addressing the client's immediate needs.",
-        "B_reason": "Overall, the AI's response effectively addressed the needs of the service user with practical and supportive advice."
-      }
-    }
-  },
-  "axis_autonomy|J2_samhsa_ips|graded|4omini": {
-    "mode": "graded",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B provides a broader range of actionable strategies and tailored words for the service user, enhancing the information's depth.",
-        "swapped_reason": "Response B provides a clearer structure of immediate actions and emphasizes quick referrals to necessary resources."
-      },
-      "practical_usability": {
-        "fwd": 4,
-        "swapped": 1,
-        "mean": 2.5,
-        "fwd_reason": "Response B has a more organized step-by-step approach, making it easier for the peer specialist to apply effectively.",
-        "swapped_reason": "Response B offers a step-by-step approach that is easy to follow and directly applicable in helping the service user."
-      },
-      "role_complementarity": {
-        "fwd": 3,
-        "swapped": 2,
-        "mean": 2.5,
-        "fwd_reason": "Both responses complement the role of a peer provider, but Response B demonstrates a clearer understanding of being supportive rather than directive.",
-        "swapped_reason": "Response B aligns well with the peer provider's role by facilitating understanding and direct service access, supporting the peer work framework."
-      },
-      "autonomy": {
-        "fwd": 4,
-        "swapped": 3,
-        "mean": 3.5,
-        "fwd_reason": "Response B emphasizes empowering the service user by providing phrases for them to use, fostering their independence in navigating their situation.",
-        "swapped_reason": "Both responses allow for autonomy, but Response B engages the service user in decision-making more explicitly."
-      },
-      "overall": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Overall, Response B is more comprehensive and user-friendly, making it a stronger option for peer support.",
-        "swapped_reason": "Response B is overall more comprehensive and practical, equipping the peer specialist with useful strategies and resources."
-      }
-    }
-  },
-  "axis_autonomy|J3_pilot|pointwise|4omini": {
-    "mode": "pointwise",
-    "judge": "J3_pilot",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The response includes specific steps and resources that are directly applicable to the service user's situation.",
-        "B_reason": "The response provided specific, actionable information on multiple aspects of the service user's situation, including resources that were locally relevant."
-      },
-      "practical_usability": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The concrete phrases and actions provided can be immediately used by the peer provider and the service user.",
-        "B_reason": "The guidance included concrete steps and phrases that the service user could use immediately with various agencies."
-      },
-      "role_complementarity": {
-        "A": 4,
-        "B": 5,
-        "A_reason": "The AI supports the peer provider's role by giving guidance while leaving room for the provider to facilitate the conversation.",
-        "B_reason": "The response offered support and structure without undermining the peer provider's role, allowing for collaboration."
-      },
-      "autonomy": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The response emphasizes collaboration and respects the service user's ability to make decisions.",
-        "B_reason": "The information presented options to the service user, respecting their autonomy in choosing how to proceed."
-      },
-      "overall": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "Overall, the AI's response is highly useful, offering practical, actionable steps while empowering the service user.",
-        "B_reason": "Overall, the response was highly effective, providing a clear and comprehensive plan tailored to the service user's needs."
-      }
-    }
-  },
   "axis_information_value|J1_naive|pointwise|4omini": {
     "mode": "pointwise",
     "judge": "J1_naive",
@@ -7134,51 +5784,6 @@
       }
     }
   },
-  "axis_autonomy|J3_pilot|graded|4omini": {
-    "mode": "graded",
-    "judge": "J3_pilot",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "fwd": 2,
-        "swapped": 2,
-        "mean": 2.0,
-        "fwd_reason": "Response A offers specific steps and tailored resources, which provide more actionable information than Response B.",
-        "swapped_reason": "Response B provides more structured triage and prioritization of issues, which could lead to more effective problem-solving."
-      },
-      "practical_usability": {
-        "fwd": 1,
-        "swapped": 2,
-        "mean": 1.5,
-        "fwd_reason": "Response A provides more concrete steps and phrases for the service user to use immediately, making it more usable in a real-time situation.",
-        "swapped_reason": "Response B outlines actionable steps in a clearer sequence, making it easier to implement quickly."
-      },
-      "role_complementarity": {
-        "fwd": 4,
-        "swapped": 3,
-        "mean": 3.5,
-        "fwd_reason": "Response B offers a broader menu of options that could complement a peer provider's support, while Response A is more focused.",
-        "swapped_reason": "Both responses offer complementing information, but Response B leverages more direct language suitable for immediate peer support."
-      },
-      "autonomy": {
-        "fwd": 3,
-        "swapped": 2,
-        "mean": 2.5,
-        "fwd_reason": "Both responses respect the service user's autonomy; however, Response A's structured approach may guide decision-making more effectively.",
-        "swapped_reason": "Response B encourages collaborative decision-making and empowers her to take specific actions."
-      },
-      "overall": {
-        "fwd": 2,
-        "swapped": 2,
-        "mean": 2.0,
-        "fwd_reason": "Response A is overall more focused on immediate actions, while Response B provides a wider range of options to consider.",
-        "swapped_reason": "Response B is generally more comprehensive and useful for immediate application, though both responses have merit."
-      }
-    }
-  },
   "axis_information_value|J2_samhsa_ips|pointwise|4omini": {
     "mode": "pointwise",
     "judge": "J2_samhsa_ips",
@@ -7261,321 +5866,6 @@
         "mean": 3.0,
         "fwd_reason": "Response B provides a more comprehensive, user-centered approach that aligns with peer support principles while still maintaining functionality.",
         "swapped_reason": "Response B is overall more useful due to its clarity, specificity, and alignment with peer support principles."
-      }
-    }
-  },
-  "axis_autonomy|J2_samhsa_ips|binary|4omini": {
-    "mode": "binary",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 5,
-        "n_B": 1,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A provides a detailed step-by-step plan with specific actions and resources tailored to the service user's immediate needs."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "B"
-          ]
-        },
-        "n_A": 2,
-        "n_B": 4,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B offers a more simplified and structured approach that is easier to follow in a peer support setting."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "A",
-            "B",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "B",
-            "A"
-          ]
-        },
-        "n_A": 4,
-        "n_B": 2,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A promotes collaboration by outlining specific calls to action where the peer provider can actively participate."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "A",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B emphasizes the peer user's choices and asks more open-ended questions that facilitate self-determination."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "B",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "B"
-          ]
-        },
-        "n_A": 4,
-        "n_B": 2,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A gives a more comprehensive resource that aligns closely with the immediate actionable needs of the service user."
-      }
-    }
-  },
-  "axis_autonomy|J1_naive|binary|4omini": {
-    "mode": "binary",
-    "judge": "J1_naive",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response A includes a detailed step-by-step plan with specific actions and resources that a peer support specialist can utilize."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A provides a clear, structured approach and exact phrases for the individual to use when contacting utilities and applying for assistance."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 0,
-        "n_B": 6,
-        "position_consistent": true,
-        "winner": "B",
-        "reason": "Response B takes a more supportive tone that may align better with the empathic role of a peer provider, illustrating how to approach each issue."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B emphasizes empowering the individual by offering options and guiding questions rather than detailing every step to take."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response A offers a detailed and actionable framework that directly addresses the immediate needs and situations of the service user."
-      }
-    }
-  },
-  "axis_autonomy|J3_pilot|binary|4omini": {
-    "mode": "binary",
-    "judge": "J3_pilot",
-    "pair": "axis_autonomy",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A provides more detailed and specific steps tailored to the user's situation, including actionable phrases and essential questions to ask."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A lays out a clear, prioritized action plan that the user can follow immediately, making it easier to implement."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "B",
-            "A",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B presents information in a way that allows for more collaborative exploration while maintaining the user's sense of agency."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 1,
-        "n_B": 5,
-        "position_consistent": true,
-        "winner": "B",
-        "reason": "Response B frames support in a way that invites the user to engage more actively in the decision-making process."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Overall, Response A is more comprehensive and directly actionable, offering specific guidance that addresses the user's immediate concerns effectively."
       }
     }
   },
@@ -8339,176 +6629,6 @@
       }
     }
   },
-  "axis_role_complementarity|J1_naive|pointwise|4omini": {
-    "mode": "pointwise",
-    "judge": "J1_naive",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The response provides specific resources and details about Medicaid and employment adjustment strategies that are highly relevant to the user's situation.",
-        "B_reason": "The AI provided detailed information on Medicaid eligibility, reporting income changes, and specific resources, which would be valuable for peer support."
-      },
-      "practical_usability": {
-        "A": 4,
-        "B": 5,
-        "A_reason": "The step-by-step guidance is actionable, but the user may need support in executing some of the suggestions.",
-        "B_reason": "The AI included actionable steps and scripts that can be readily used in conversations with the service user."
-      },
-      "role_complementarity": {
-        "A": 5,
-        "B": 4,
-        "A_reason": "The AI offers supportive suggestions without taking over the user's role or responsibilities.",
-        "B_reason": "While the AI offers guidance, it maintains a supportive role without overshadowing the peer provider's function."
-      },
-      "autonomy": {
-        "A": 4,
-        "B": 5,
-        "A_reason": "The response encourages user agency but could further emphasize the user\u2019s decision-making in the employment adjustment process.",
-        "B_reason": "The AI emphasizes the importance of the service user's choices and encourages them to seek information regarding their situation."
-      },
-      "overall": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "Overall, the AI's response is comprehensive, practical, and encourages self-advocacy while providing essential information.",
-        "B_reason": "Overall, the AI response is comprehensive, practical, and supportive, making it highly useful for the task."
-      }
-    }
-  },
-  "axis_role_complementarity|J1_naive|graded|4omini": {
-    "mode": "graded",
-    "judge": "J1_naive",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B provides more specific information about Medicaid thresholds and income reporting, which is useful for understanding eligibility.",
-        "swapped_reason": "Response A provides detailed information about Medicaid thresholds and specific actions to prevent coverage gaps, which adds significant value."
-      },
-      "practical_usability": {
-        "fwd": 4,
-        "swapped": 1,
-        "mean": 2.5,
-        "fwd_reason": "Response B offers concrete steps and specific wording for reporting income, enhancing immediate usability.",
-        "swapped_reason": "Response B offers immediate, actionable steps to address both the job adjustment issues and Medicaid reporting, enhancing practical usability."
-      },
-      "role_complementarity": {
-        "fwd": 3,
-        "swapped": 2,
-        "mean": 2.5,
-        "fwd_reason": "Both responses complement the peer provider role, but A involves more direct engagement in problem-solving.",
-        "swapped_reason": "Response B better complements the peer support role by promoting direct engagement and support, whereas Response A is more informational."
-      },
-      "autonomy": {
-        "fwd": 5,
-        "swapped": 1,
-        "mean": 3.0,
-        "fwd_reason": "Response B emphasizes the importance of estimating income and understanding options, which supports the individual's autonomy in decision-making.",
-        "swapped_reason": "Response B encourages the service user to take proactive steps in problem-solving and engaging with their supervisor, supporting their autonomy."
-      },
-      "overall": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B is overall more informative and practical, offering clear steps and guidance, while Response A provides a supportive approach.",
-        "swapped_reason": "Response B is overall more actionable and user-friendly, while Response A excels in providing detailed information."
-      }
-    }
-  },
-  "axis_role_complementarity|J2_samhsa_ips|graded|4omini": {
-    "mode": "graded",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B provides specific eligibility thresholds and concrete steps for Medicaid reporting that may not be as clearly articulated in Response A.",
-        "swapped_reason": "Response B provides additional context about the potential adjustments and offers a call to action, enhancing the peer's understanding of the situation."
-      },
-      "practical_usability": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B offers concise and direct steps that the peer can readily use to assist the service user, while Response A is more detailed but slightly less focused.",
-        "swapped_reason": "Response B outlines specific steps and options that are actionable and time-sensitive, making it more immediately usable."
-      },
-      "role_complementarity": {
-        "fwd": 3,
-        "swapped": 3,
-        "mean": 3.0,
-        "fwd_reason": "Both responses effectively support the role of a peer provider, but Response A's detailed guidance may be more aligned with a case management perspective.",
-        "swapped_reason": "Both responses provide information relevant to the peer specialist's role, but Response B emphasizes collaboration more effectively."
-      },
-      "autonomy": {
-        "fwd": 4,
-        "swapped": 1,
-        "mean": 2.5,
-        "fwd_reason": "Response B encourages the service user to take actionable steps while remaining supportive, thereby promoting self-determination, while Response A is more directive.",
-        "swapped_reason": "Response B strongly supports the individual's autonomy by focusing on their choices and input in finding solutions."
-      },
-      "overall": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Overall, Response B offers more precise and actionable guidance that is beneficial for the peer specialist's role.",
-        "swapped_reason": "Response B is more comprehensive and actionable, providing a supportive framework for the peer specialist to work with."
-      }
-    }
-  },
-  "axis_role_complementarity|J2_samhsa_ips|pointwise|4omini": {
-    "mode": "pointwise",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The response provides detailed information about Medicaid reporting, local resources, and coping strategies for work-related exhaustion.",
-        "B_reason": "The AI provided detailed and relevant information about Medicaid guidelines and specific resources in Camden."
-      },
-      "practical_usability": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The guidance includes specific, actionable steps that the peer specialist can use immediately in their support.",
-        "B_reason": "The AI laid out clear, actionable steps that the peer specialist could use to assist the service user."
-      },
-      "role_complementarity": {
-        "A": 4,
-        "B": 4,
-        "A_reason": "The AI offers support without taking over the role of the peer provider, but some elements may feel directive.",
-        "B_reason": "While the AI offered guidance, it also empowered the peer specialist to take the lead rather than overshadowing their role."
-      },
-      "autonomy": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The response emphasizes supporting the service user's choices and encourages self-determination throughout the process.",
-        "B_reason": "The response actively promoted choices and prioritization of the service user's needs throughout the process."
-      },
-      "overall": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "Overall, the response effectively equips the peer specialist with information and strategies that align well with peer support principles.",
-        "B_reason": "Overall, the AI response was comprehensive, practical, and aligned well with the standards of peer support."
-      }
-    }
-  },
   "axis_practical_usability|J2_samhsa_ips|binary|4omini": {
     "mode": "binary",
     "judge": "J2_samhsa_ips",
@@ -8719,46 +6839,6 @@
       }
     }
   },
-  "axis_role_complementarity|J3_pilot|pointwise|4omini": {
-    "mode": "pointwise",
-    "judge": "J3_pilot",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "A": 4,
-        "B": 5,
-        "A_reason": "The response provided specific resources and actionable steps for managing Medicaid and work-related exhaustion.",
-        "B_reason": "The response provided specific Medicaid thresholds and detailed steps for reporting income changes, which are essential for the individual in this scenario."
-      },
-      "practical_usability": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The guidance includes clear, concrete questions and phrases the service user can use immediately.",
-        "B_reason": "The guidance included concrete phrases to use in communications, making it immediately applicable in real life."
-      },
-      "role_complementarity": {
-        "A": 5,
-        "B": 5,
-        "A_reason": "The AI assists by providing solutions without overshadowing the peer support dynamic.",
-        "B_reason": "The response supplemented the peer provider role by offering practical resources without undermining the supportive relationship."
-      },
-      "autonomy": {
-        "A": 4,
-        "B": 5,
-        "A_reason": "The approach encourages the service user's choice and voices their concerns while exploring options.",
-        "B_reason": "The response emphasized the individual's choices and options, particularly regarding job retention and income reporting."
-      },
-      "overall": {
-        "A": 4,
-        "B": 5,
-        "A_reason": "Overall, the response is practical and tailored to the service user's current challenges.",
-        "B_reason": "Overall, the AI provided a thorough, actionable response tailored to the specific needs and concerns of the service user."
-      }
-    }
-  },
   "s1_newark_housing_id|J1_naive|pointwise|4omini": {
     "mode": "pointwise",
     "judge": "J1_naive",
@@ -8796,156 +6876,6 @@
         "B": 5,
         "A_reason": "Overall, the response is comprehensive, actionable, and highly useful for the task at hand.",
         "B_reason": "Overall, the response is thorough, well-structured, and directly addresses the needs of the service user."
-      }
-    }
-  },
-  "axis_role_complementarity|J3_pilot|graded|4omini": {
-    "mode": "graded",
-    "judge": "J3_pilot",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "fwd": 4,
-        "swapped": 3,
-        "mean": 3.5,
-        "fwd_reason": "Response B includes additional details about NJ FamilyCare income thresholds and the NJ WorkAbility program, which provide valuable context for the service user.",
-        "swapped_reason": "Both responses provide similar key information and resources related to Medicaid and employment challenges."
-      },
-      "practical_usability": {
-        "fwd": 5,
-        "swapped": 2,
-        "mean": 3.5,
-        "fwd_reason": "Response B offers clear, concrete steps for reporting job changes and managing Medicaid eligibility, making it easy to implement.",
-        "swapped_reason": "Response B offers more immediate, actionable steps for the user, enhancing usability for quick application."
-      },
-      "role_complementarity": {
-        "fwd": 3,
-        "swapped": 2,
-        "mean": 2.5,
-        "fwd_reason": "Both responses complement the peer role adequately, but Response A emphasizes connection and adjustment more tangibly.",
-        "swapped_reason": "Response B's engagement with the service user through specific questions aids in exploring their needs while complementing the role of a peer provider."
-      },
-      "autonomy": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Response B empowers the service user by explaining options and actionable steps, enhancing their decision-making ability.",
-        "swapped_reason": "Response B encourages service-user input and adjustment options, promoting their autonomy in decision-making."
-      },
-      "overall": {
-        "fwd": 4,
-        "swapped": 2,
-        "mean": 3.0,
-        "fwd_reason": "Overall, Response B provides a more comprehensive approach with practical guidance, making it slightly more effective for immediate use.",
-        "swapped_reason": "Overall, Response B presents a more comprehensive approach that balances immediate support with maintaining autonomy."
-      }
-    }
-  },
-  "axis_role_complementarity|J2_samhsa_ips|binary|4omini": {
-    "mode": "binary",
-    "judge": "J2_samhsa_ips",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "B"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 2,
-        "n_B": 4,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response A provides additional specific actions for stabilizing employment and navigating Medicaid, offering a broader scope of resources."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "B",
-            "A",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 4,
-        "n_B": 2,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B presents clear and concise steps that are easier to follow and implement immediately."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "A",
-            "B",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 5,
-        "n_B": 1,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A enhances the peer specialist's role by offering systematic steps that align with peer support principles."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B emphasizes the user's agency in decision-making regarding their job and Medicaid without suggesting they must take specific actions."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 5,
-        "n_B": 1,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A is more comprehensive in addressing the peer's situation while fostering growth and collaborative problem-solving."
       }
     }
   },
@@ -8991,111 +6921,6 @@
         "mean": 3.0,
         "fwd_reason": "Overall, Response B provides clearer guidance and resources while being user-friendly, making it more useful for a peer support specialist.",
         "swapped_reason": "Response B is generally more practical and direct, while still supporting the user's needs."
-      }
-    }
-  },
-  "axis_role_complementarity|J1_naive|binary|4omini": {
-    "mode": "binary",
-    "judge": "J1_naive",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response A provides more detailed guidance on specific questions to ask and actions to take regarding both exhaustion and Medicaid."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 6,
-        "n_B": 0,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A offers clear, step-by-step actions that the individual can take immediately to address exhaustion and Medicaid concerns."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "B",
-            "A",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 4,
-        "n_B": 2,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B places a stronger emphasis on understanding the individual's specific situation, which aligns well with a peer support specialist's role."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 4,
-        "n_B": 2,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response B encourages the service user to actively participate in understanding and reporting their situation, which supports their autonomy."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Overall, Response A is more comprehensive and actionable, providing a clearer path forward for the individual."
       }
     }
   },
@@ -9601,111 +7426,6 @@
         "B": 5,
         "A_reason": "Overall, the response is highly useful and aligns well with the competencies and principles of peer support.",
         "B_reason": "Overall, the AI response is highly useful, equipping a peer support specialist with actionable guidance and relevant local resources."
-      }
-    }
-  },
-  "axis_role_complementarity|J3_pilot|binary|4omini": {
-    "mode": "binary",
-    "judge": "J3_pilot",
-    "pair": "axis_role_complementarity",
-    "schema": "dims-v1",
-    "model": "4omini",
-    "deployment": "gpt-4o-mini",
-    "dims": {
-      "information_value": {
-        "votes": {
-          "fwd": [
-            "B",
-            "B",
-            "B"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 0,
-        "n_B": 6,
-        "position_consistent": true,
-        "winner": "B",
-        "reason": "Response B provides specific financial thresholds and detailed steps for reporting income that may not be covered in Response A."
-      },
-      "practical_usability": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 5,
-        "n_B": 1,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response A offers concrete actions and language tailored for immediate application, mapping a clearer path."
-      },
-      "role_complementarity": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "B"
-          ],
-          "swap": [
-            "A",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response A aligns closely with the peer support role by encouraging real-time collaboration and supporting stress management."
-      },
-      "autonomy": {
-        "votes": {
-          "fwd": [
-            "B",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "A",
-            "A",
-            "A"
-          ]
-        },
-        "n_A": 5,
-        "n_B": 1,
-        "position_consistent": true,
-        "winner": "A",
-        "reason": "Response B encourages informed decision-making about income reporting, which supports the service user's autonomy."
-      },
-      "overall": {
-        "votes": {
-          "fwd": [
-            "A",
-            "A",
-            "A"
-          ],
-          "swap": [
-            "B",
-            "B",
-            "B"
-          ]
-        },
-        "n_A": 3,
-        "n_B": 3,
-        "position_consistent": false,
-        "winner": "tie",
-        "reason": "Response A strikes a better balance by providing immediate actionable steps while fostering a supportive approach to the user's current situation."
       }
     }
   },
@@ -13676,6 +11396,2286 @@
         "position_consistent": true,
         "winner": "A",
         "reason": "It offers concrete, actionable strategies that can be implemented quickly to address the immediate situation."
+      }
+    }
+  },
+  "axis_autonomy|J1_naive|graded|gpt5": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "fwd": 2,
+        "swapped": 2,
+        "mean": 2.0,
+        "fwd_reason": "Response A adds more locally specific, actionable system-navigation details (Mercer Vicinage contact and a clearer \u201ccourt door\u201d path), which is extra information a peer may not already have.",
+        "swapped_reason": "Response B adds a more locally actionable resource (Mercer Vicinage main number and directory link) whereas Response A offers broader but less verified pointers."
+      },
+      "practical_usability": {
+        "fwd": 4,
+        "swapped": 3,
+        "mean": 3.5,
+        "fwd_reason": "Response B is slightly more plug-and-play for day-to-day peer work with a simple 2-track 7-day plan and concise scripts without overcommitting to specific phone numbers.",
+        "swapped_reason": "Both provide ready-to-use scripts and stepwise plans; A is slightly more directive/structured while B is cleaner and easier to implement without overstepping."
+      },
+      "role_complementarity": {
+        "fwd": 4,
+        "swapped": 1,
+        "mean": 2.5,
+        "fwd_reason": "Response B stays more squarely in coaching, planning, and skill-building language typical of peer support, while Response A leans a bit more into quasi-case-management/legal-navigation specificity.",
+        "swapped_reason": "Response B stays more squarely in peer-support functions (values clarification, rehearsal, navigation) and is less likely to drift into quasi-legal coaching than A."
+      },
+      "autonomy": {
+        "fwd": 3,
+        "swapped": 2,
+        "mean": 2.5,
+        "fwd_reason": "Both strongly center his stated priority (parenting time) and offer options rather than directives, with similar emphasis on choice and boundary-setting.",
+        "swapped_reason": "Response B emphasizes choice-making tools (job filter, boundary practice, small next steps) more consistently, while A sometimes nudges toward specific legal escalation language."
+      },
+      "overall": {
+        "fwd": 3,
+        "swapped": 2,
+        "mean": 2.5,
+        "fwd_reason": "Response A is stronger on local resource specificity, but Response B is stronger on immediately usable peer-facing planning and messaging, making them roughly comparable overall.",
+        "swapped_reason": "Response B is better aligned with peer role boundaries and offers more locally grounded navigation help while still being practical and goal-oriented."
+      }
+    }
+  },
+  "axis_autonomy|J2_samhsa_ips|pointwise|gpt5": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "It offers concrete framing (parenting-time-first planning), sample boundary language, and specific local court/legal-aid resources that many peers may not have at hand.",
+        "B_reason": "It offers concrete framing, sample scripts, and credible NJ parenting-time/legal resource links that a peer provider may not have on hand."
+      },
+      "practical_usability": {
+        "A": 5,
+        "B": 4,
+        "A_reason": "The step-by-step structure, questions to ask, and role-play scripts are immediately actionable in a peer session.",
+        "B_reason": "The stepwise prompts and ready-to-use language are immediately actionable in a session, though some elements (e.g., legal escalation) may need more peer-appropriate caveats."
+      },
+      "role_complementarity": {
+        "A": 3,
+        "B": 2,
+        "A_reason": "While much of it fits coaching and resource-linking, the detailed court/process direction and \u201cwhat to say on the call\u201d edges toward quasi-case-management/legal navigation rather than mutual peer support.",
+        "B_reason": "It leans into directive planning and quasi\u2013case-management/legal coaching rather than emphasizing mutuality, lived-experience sharing, and self-determined exploration consistent with peer support."
+      },
+      "autonomy": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "It centers his stated priority (time with his daughter) and offers options/filters to support self-determination, though it subtly steers toward formal court actions as a default escalation path.",
+        "B_reason": "It centers his stated priority (time with his daughter) and offers options and decision points, but the \u201cleverage point\u201d framing can subtly steer him toward a preferred solution."
+      },
+      "overall": {
+        "A": 4,
+        "B": 3,
+        "A_reason": "Overall it equips a peer with useful, recovery-aligned tools and resources, but could better reflect IPS mutuality and avoid sliding into procedural/legal advising.",
+        "B_reason": "Useful and practical for brainstorming next steps and resources, but it doesn\u2019t consistently align with IPS principles and peer-role boundaries in tone and approach."
+      }
+    }
+  },
+  "axis_autonomy|J2_samhsa_ips|graded|gpt5": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "fwd": 2,
+        "swapped": 2,
+        "mean": 2.0,
+        "fwd_reason": "Response A adds more concrete, locality-specific court navigation details and a specific Mercer contact number (despite its \u201cverified today\u201d claim), which is more novel informationally than B\u2019s general links.",
+        "swapped_reason": "Response B offers slightly more accurate, location-specific court contact info (Mercer Vicinage) and a clearer \u201cright door\u201d framing, while Response A includes useful general links but admits it couldn\u2019t verify county specifics."
+      },
+      "practical_usability": {
+        "fwd": 4,
+        "swapped": 3,
+        "mean": 3.5,
+        "fwd_reason": "Response B is more immediately usable as peer-support coaching (shorter, clearer \u201c2\u2011track plan,\u201d and less procedural/legal specificity that could bog down the conversation).",
+        "swapped_reason": "Both provide ready-to-use scripts and stepwise plans, with A being more directive and detailed and B being more flexible and peer-friendly, balancing out in day-to-day usability."
+      },
+      "role_complementarity": {
+        "fwd": 4,
+        "swapped": 1,
+        "mean": 2.5,
+        "fwd_reason": "Response B stays more aligned with a peer role (collaborative planning, language to try, resource pointers) without drifting as far into quasi-case-management/legal process instruction as A.",
+        "swapped_reason": "Response B better fits peer support/IPS by emphasizing practice, options, and self-determined planning without sliding into quasi\u2013case management or legal-strategy coaching."
+      },
+      "autonomy": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B more consistently frames choices as the person\u2019s to make and emphasizes flexible options (day shift, transfer path, protection rule) rather than steering toward a particular system pathway.",
+        "swapped_reason": "Response B more consistently centers the person\u2019s priorities and choice-making (job \u201cfilter,\u201d counter-offer as an option), whereas A\u2019s court/enforcement lane and \u201cprotection rule\u201d language can feel more prescriptive."
+      },
+      "overall": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Overall, Response B better matches peer-support principles (mutual, non-clinical, self-determination) while still offering actionable steps and appropriate resource linking.",
+        "swapped_reason": "Response B is more aligned with peer competencies and IPS mutuality/self-determination while still giving concrete next steps and resources, making it the stronger fit overall."
+      }
+    }
+  },
+  "axis_autonomy|J1_naive|pointwise|gpt5": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "It adds useful structure (parenting-time target, job filter, boundary scripts) and points to relevant NJ family-court/legal-aid entry points that a peer might not have at hand.",
+        "B_reason": "It offers concrete framing (parenting time as the primary \u201cwhy\u201d) plus relevant NJ-specific court/self-help and referral resources that a peer might not have on hand."
+      },
+      "practical_usability": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The step-by-step \u201cmoves,\u201d sample language to practice, and concrete prompts are immediately usable in a peer session.",
+        "B_reason": "The stepwise questions, sample scripts, and a 7\u2011day two-track plan are immediately usable in a session and for follow-up."
+      },
+      "role_complementarity": {
+        "A": 3,
+        "B": 3,
+        "A_reason": "It largely fits peer support, but it leans into quasi-case-management/legal navigation (specific court office/calls) in a way that could edge beyond some peer roles depending on program boundaries.",
+        "B_reason": "While it largely supports coaching and planning, it veers a bit into quasi-legal strategy (filing/enforcement language) that may exceed typical peer scope without adding clear boundaries."
+      },
+      "autonomy": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "It centers his stated priority (time with his daughter), offers options rather than directives, and supports him in setting boundaries with family pressure.",
+        "B_reason": "It centers his stated priority (time with his daughter), preserves choice around work options, and emphasizes aligning decisions with his goals rather than family pressure."
+      },
+      "overall": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "Strong, actionable coaching that respects his goals, with a minor caveat that the legal/court guidance may require careful scope/consent and warm handoffs.",
+        "B_reason": "Strong, actionable guidance with helpful resources, slightly tempered by some legal-direction intensity that could benefit from more peer-role cautioning."
+      }
+    }
+  },
+  "axis_autonomy|J3_pilot|pointwise|gpt5": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "A": 3,
+        "B": 3,
+        "A_reason": "It adds a couple of concrete legal-system touchpoints (Mercer Family Division/LSNJ) but most of the content is common-sense planning you likely already use, and the court phone number/detail may still require verification.",
+        "B_reason": "It adds a useful framing (parenting-time as the real driver) and points to NJ Courts/211/LSNJ, but the resources are generic and it admits it couldn\u2019t verify Mercer-specific contacts."
+      },
+      "practical_usability": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "The exact questions, boundary scripts, and the 'job filter' are easy to lift in-session and give the person immediate next steps and language for family/cousin conversations.",
+        "B_reason": "The exact questions, sample scripts to family/employer/co-parent, and the 7-day two-track plan are easy to lift and use immediately."
+      },
+      "role_complementarity": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "It stays in the lane of coaching, planning, and helping the person make calls rather than directing decisions or doing clinical/legal advising beyond pointing to the right door.",
+        "B_reason": "It stays in a coaching/planning lane with concrete options and doesn\u2019t overstep into therapy or legal advice beyond directing to self-help/legal aid."
+      },
+      "autonomy": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "It centers his stated priority (time with his daughter), frames work as compatible with that goal, and offers options without pushing a particular choice.",
+        "B_reason": "It clearly centers his stated priority (time with his daughter) and supports him choosing work that fits that value rather than compliance with family pressure."
+      },
+      "overall": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "Useful and ready-to-use in the moment, with the main weakness being that the legal/court referral specifics may not be reliably accurate without your usual verification.",
+        "B_reason": "Strong on in-the-moment language and next steps, slightly weaker on locally verified, checkable Mercer/Trenton-specific referrals."
+      }
+    }
+  },
+  "axis_role_complementarity|J1_naive|graded|gpt5": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "fwd": 2,
+        "swapped": 4,
+        "mean": 3.0,
+        "fwd_reason": "Response A provides more concrete NJ FamilyCare reporting steps (specific script, documents list, and local office details) that a peer specialist can act on immediately.",
+        "swapped_reason": "Response A adds extra high-value benefits resources (NJ DB101, Ticket to Work/WIPA, 988 framing) and a useful conceptual frame (\u201cnew job tax\u201d) beyond what B provides."
+      },
+      "practical_usability": {
+        "fwd": 3,
+        "swapped": 2,
+        "mean": 2.5,
+        "fwd_reason": "Both are highly actionable, with A stronger on benefits-navigation logistics and B stronger on a simple, ready-to-try fatigue/stamina plan.",
+        "swapped_reason": "Response B is more streamlined and immediately deployable (clearer exhaustion questions, simpler supervisor script, and a focused \u2018report income\u2019 call script with what documents to gather)."
+      },
+      "role_complementarity": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B better matches peer support style by normalizing, using collaborative language, and offering coping/adjustment strategies without leaning as heavily into case-management detail.",
+        "swapped_reason": "Response B better fits peer workflow by emphasizing collaborative problem-solving and concrete next steps without drifting into a directive \u2018plan\u2019 that can feel more case-manager-ish."
+      },
+      "autonomy": {
+        "fwd": 4,
+        "swapped": 3,
+        "mean": 3.5,
+        "fwd_reason": "Response B more explicitly frames choices (\u201ckeep options open,\u201d \u201cdon\u2019t-quit-yet plan\u201d) and supports the person\u2019s self-direction while still offering concrete next steps.",
+        "swapped_reason": "Both support choice and self-direction, but A\u2019s \u201cdon\u2019t-quit-yet plan\u201d nudges a bit more while B stays slightly more neutral and choice-centered."
+      },
+      "overall": {
+        "fwd": 3,
+        "swapped": 2,
+        "mean": 2.5,
+        "fwd_reason": "A is the stronger benefits/resources checklist while B is the stronger peer-support coaching response, making them roughly comparable overall depending on the peer\u2019s immediate goal.",
+        "swapped_reason": "Response B is the better day-to-day peer-support tool due to clarity and ease of use, even though Response A has somewhat richer benefits-detail and resource depth."
+      }
+    }
+  },
+  "axis_autonomy|J3_pilot|graded|gpt5": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "fwd": 2,
+        "swapped": 2,
+        "mean": 2.0,
+        "fwd_reason": "Response A adds more checkable, Mercer-specific starting points (a concrete courthouse number + directory link) that you can verify quickly, whereas B explicitly lacks local verification.",
+        "swapped_reason": "B adds a more checkable, Mercer-specific court contact and a clearer \u201cright door to call\u201d framing, while A admits it couldn\u2019t verify local numbers and stays more general."
+      },
+      "practical_usability": {
+        "fwd": 4,
+        "swapped": 3,
+        "mean": 3.5,
+        "fwd_reason": "Response B is faster to lift into the next 5 minutes with tighter scripts (to family, cousin, child\u2019s mom) and a simple 7-day two-track plan you can write down and act on immediately.",
+        "swapped_reason": "A has more immediately liftable scripts and a concrete 7\u2011day mini-plan, but B\u2019s paper \u201cjob filter\u201d and courthouse call script are equally usable in-session."
+      },
+      "role_complementarity": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B better matches peer workflow by keeping it action-forward and non-legalistic while still offering a clear \u201cif stuck, court/mediation lane\u201d without bogging you down in system navigation.",
+        "swapped_reason": "B fits peer workflow better by steering to one doable call (Mercer Family Division) and a values-aligned job screen without sounding like it\u2019s directing legal strategy."
+      },
+      "autonomy": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B more consistently frames choices (day/swing shift options, transfer path, protection rule if he takes nights) so he isn\u2019t boxed into a yes/no decision under family pressure.",
+        "swapped_reason": "B keeps the decision space broader (filter/counter-offer/plan) with fewer prescriptive rules, whereas A\u2019s \u2018protection rule\u2019 and court-warning language can feel more leading."
+      },
+      "overall": {
+        "fwd": 3,
+        "swapped": 2,
+        "mean": 2.5,
+        "fwd_reason": "A wins on verified local resource specificity, but B wins on immediate, usable language and planning structure\u2014so it balances out depending on whether today\u2019s need is referral vs. decision coaching.",
+        "swapped_reason": "B is slightly more reliable for Trenton in the next five minutes because it gives a specific Mercer contact plus clean, repeatable language, even though A is punchier on action steps."
+      }
+    }
+  },
+  "axis_role_complementarity|J1_naive|pointwise|gpt5": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "It adds concrete, locally relevant Medicaid/NJ FamilyCare reporting options (phone number, county office contact) plus a useful framing for the first 30\u201360 days of returning to work.",
+        "B_reason": "It adds high-value benefits-navigation resources (NJ FamilyCare, county board, DB101, WIPA/Ticket to Work) plus a useful framing of \u201cnew job tax\u201d that a peer might not generate on the spot."
+      },
+      "practical_usability": {
+        "A": 5,
+        "B": 4,
+        "A_reason": "The step-by-step prompts, scripts, and document checklist are immediately usable in a real peer session and can be acted on the same day.",
+        "B_reason": "The stepwise structure, scripts for supervisors, and a simple 2\u2011week plan are readily usable, though some advice (sleep/screens, pacing) may feel prescriptive without tailoring or assessment."
+      },
+      "role_complementarity": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "It generally supports peer work with coaching questions and options, though it edges toward case-management detail (e.g., advising specific calls/office visits) rather than clearly staying in peer boundaries.",
+        "B_reason": "It largely supports peer work with coaching language and concrete options, but the \u201ccall while he\u2019s with you\u201d and \u201cverified/searched today\u201d tone leans a bit into case-management/expert mode."
+      },
+      "autonomy": {
+        "A": 4,
+        "B": 5,
+        "A_reason": "It offers choices and asks scaling questions to align with his priorities, but the emphasis on \u201cstay employed\u201d could be more explicitly balanced with validating that quitting or changing jobs is also his decision.",
+        "B_reason": "It explicitly keeps quitting as an option, invites the person\u2019s preferences, and focuses on informed choice rather than directing a single \u2018right\u2019 path."
+      },
+      "overall": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "It is highly actionable, locally grounded, and appropriately supportive for helping someone navigate early work adjustment and Medicaid uncertainty.",
+        "B_reason": "It\u2019s a strong, actionable peer-support aid that balances emotional normalization with concrete next steps for stamina and Medicaid concerns."
+      }
+    }
+  },
+  "axis_autonomy|J1_naive|binary|gpt5": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "A",
+            "B",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 5,
+        "n_B": 1,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "It adds more Mercer-specific, actionable system navigation (Family Division/Vicinage details and a concrete call script), which is information a peer might not already have."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 1,
+        "n_B": 5,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "It\u2019s more immediately deployable with a clear 7-day, two-track plan (income plus parenting time) and concise scripts that fit real-time coaching."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It stays closer to peer-support coaching (goal-setting, rehearsing communication, incremental steps) without drifting into quasi-legal advising or overly specific courthouse directives."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It more consistently frames choices and tradeoffs as his decision (including conditional paths if he takes the job) rather than steering toward a particular institutional route."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "While A has stronger local detail, B is more balanced and usable in-session for supporting his priorities while managing family pressure and employment decisions."
+      }
+    }
+  },
+  "axis_role_complementarity|J2_samhsa_ips|pointwise|gpt5": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "It provides concrete NJ-specific Medicaid/NJ FamilyCare reporting resources, scripts, and documentation tips plus a useful flag about disability-related eligibility differences.",
+        "B_reason": "It adds concrete NJ-specific Medicaid/NJ FamilyCare and benefits-counseling resources plus framing of \u201cnew job tax\u201d that a peer may not have on hand."
+      },
+      "practical_usability": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "The step-by-step structure, sample supervisor wording, and call questions are immediately usable, though it leans a bit into case-management style detail that may not fit every peer setting.",
+        "B_reason": "The stepwise structure, sample supervisor scripts, and specific questions/calls are immediately actionable, though some tips (sleep rules/breathing) may feel prescriptive without more personalization."
+      },
+      "role_complementarity": {
+        "A": 3,
+        "B": 3,
+        "A_reason": "It mostly supports a peer role (planning, coaching, resource linkage) but at times slides into directing actions (e.g., \u201cdo this call with him on speaker\u201d) rather than emphasizing mutuality and peer-led pacing.",
+        "B_reason": "It generally supports a peer role but leans into a quasi-coaching/case-management style (e.g., \u201cprotect Medicaid with the right calls while he\u2019s with you,\u201d verified numbers) that can edge toward doing the work for the person."
+      },
+      "autonomy": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "It offers options and uses scaling questions to center his preferences, but the framing assumes \u201cstay employed\u201d and \u201creport same day,\u201d which could be softened to more explicitly validate his choice to pause/quit if needed.",
+        "B_reason": "It emphasizes keeping options open and treating quitting as a choice, but the \u201cdon\u2019t-quit-yet for 14 days\u201d framing could unintentionally pressure the person if not clearly co-decided."
+      },
+      "overall": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "Overall it\u2019s highly actionable and resource-rich for a peer specialist, with minor adjustments needed to better reflect IPS mutuality and avoid a helper-to-helped/case-manager tone.",
+        "B_reason": "Strong resource-linking and practical next steps make it broadly useful, with minor misalignment risk around mutuality and over-directiveness."
+      }
+    }
+  },
+  "axis_role_complementarity|J2_samhsa_ips|graded|gpt5": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "fwd": 4,
+        "swapped": 4,
+        "mean": 4.0,
+        "fwd_reason": "Response B adds more peer-relevant perspective (normalizing the \u201cnew job tax\u201d), includes SSI/SSDI-specific benefits counseling (WIPA/Ticket to Work) and safety resource framing, while still giving core NJ FamilyCare contacts.",
+        "swapped_reason": "Response A adds more concrete, diversified resources (DB101, Ticket to Work/WIPA, statewide Medicaid line, and a crisis option) and a useful framing (\u201cnew job tax\u201d) that a peer might not already use."
+      },
+      "practical_usability": {
+        "fwd": 3,
+        "swapped": 2,
+        "mean": 2.5,
+        "fwd_reason": "Both are highly actionable with scripts and concrete next steps, but A\u2019s step-by-step documentation list and single clear \u201creport + check category\u201d pathway is slightly cleaner while B adds usable self-care micro-strategies.",
+        "swapped_reason": "Response B is more streamlined and easier to deploy in-session (clear questions, fewer prescriptive steps, and a simple report-income call script with a checklist) while still addressing both exhaustion and Medicaid."
+      },
+      "role_complementarity": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Response B better matches peer support/IPS by emphasizing keeping options open, focusing on lived-experience-style normalization, and avoiding a case-manager tone while still offering resource linkage the peer can do alongside the person.",
+        "swapped_reason": "Response B better matches peer support scope by focusing on coaching, options, and supported decision-making without sounding like it\u2019s directing a quasi-case-management plan or \u201cdon\u2019t quit yet\u201d mandate."
+      },
+      "autonomy": {
+        "fwd": 4,
+        "swapped": 1,
+        "mean": 2.5,
+        "fwd_reason": "Response B more explicitly supports self-determination (quitting remains an option, time-limited experiment, choice of 2\u20133 changes), whereas A can feel more directive/administrative even though it offers options.",
+        "swapped_reason": "Response B consistently keeps choice with the person (elicits what\u2019s hardest, uses scaling, offers options) whereas Response A\u2019s 14-day \u201cdon\u2019t-quit-yet plan\u201d can subtly steer and feels more directive."
+      },
+      "overall": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B is more consistent with IPS mutuality and autonomy while remaining practical and resource-rich, though Response A is marginally stronger on streamlined benefits-reporting mechanics.",
+        "swapped_reason": "Response B is more aligned with IPS mutuality/self-determination and is highly actionable, while Response A is information-rich but more prescriptive and less clearly peer-role bounded."
+      }
+    }
+  },
+  "axis_autonomy|J2_samhsa_ips|binary|gpt5": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "B",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "It adds a broader, safer set of resource pathways (NJ Courts self-help, 211, LSNJ) without asserting potentially wrong local numbers or \u201cverified as of today\u201d claims that a peer worker may not be able to confirm."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 2,
+        "n_B": 4,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Its \u201c2-track 7-day plan\u201d and concise scripts are immediately actionable in a peer session while staying focused on the person\u2019s priorities and next steps."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It stays more clearly within a peer role (coaching, planning, linking to resources) and avoids sliding into quasi\u2013case management or court-navigation directives presented as authoritative."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It frames choices as options (including conditional acceptance of the job with self-set protection rules) and emphasizes the person deciding what works rather than prescribing a primary course of action."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Overall it better balances concrete planning, resource linkage, and self-determination while reducing risk from overconfident legal/process specifics that could undermine trust or role clarity."
+      }
+    }
+  },
+  "axis_autonomy|J3_pilot|binary|gpt5": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 6,
+        "n_B": 0,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "It adds more checkable, Mercer-specific court and contact details plus a clearer \u201cright door\u201d framing (Family Division/Case Management) than B\u2019s more generic starting points."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 0,
+        "n_B": 6,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "It gives more immediately runnable scripts (to family, cousin/employer, and co-parent) and a concrete 7-day two-track plan you can implement in-session without extra setup."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It stays in a coaching/next-steps lane (small plan, scripts, options) without leaning as hard into quasi-legal navigation, which can slide closer to case-management/legal-adjacent work."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It consistently preserves choice by offering multiple paths (day/swing/transfer, night-shift limits, trial parenting schedule) rather than steering toward a court-first escalation."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "B is the most usable in the next five minutes with a person in front of you, while still offering a court/mediation lane if needed, even though A has the stronger local numbers."
+      }
+    }
+  },
+  "axis_role_complementarity|J3_pilot|pointwise|gpt5": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "Gives specific, checkable NJ FamilyCare and Camden County BSS contact details plus a concrete \u201creport income + confirm effective date/documents\u201d script that\u2019s not obvious to everyone.",
+        "B_reason": "It adds checkable NJ-specific benefits pathways (County BSS, NJ FamilyCare call center, DB101, WIPA/Ticket to Work) and concrete framing (\u201cnew job tax\u201d) that\u2019s likely useful."
+      },
+      "practical_usability": {
+        "A": 5,
+        "B": 4,
+        "A_reason": "It\u2019s immediately usable in-session: tight questions, a supervisor script, what documents to gather, and a same-day call plan with backup if the hotline stalls.",
+        "B_reason": "The scriptable questions, 14-day hold on quitting, and specific call prompts are easy to lift in-session, though the sleep/screen guidance is a bit generic and the Camden BSS listing may require re-verification."
+      },
+      "role_complementarity": {
+        "A": 4,
+        "B": 5,
+        "A_reason": "Stays in a peer-friendly lane (planning, scripting, problem-solving) without trying to do therapy, though it edges slightly into case-management tone around benefits navigation.",
+        "B_reason": "It stays in the lane of peer-support-friendly coaching and logistical problem-solving without telling you how to \u2018do empathy\u2019 or taking over the relationship work."
+      },
+      "autonomy": {
+        "A": 4,
+        "B": 5,
+        "A_reason": "Frames options (try an adjustment before quitting, call if he wants on speaker) and supports choice, but could more explicitly center his goals (e.g., whether he wants to stay, reduce hours, or switch jobs).",
+        "B_reason": "It explicitly keeps quitting on the table, proposes a time-limited experiment, and offers options rather than directives while centering what he wants and what\u2019s workable."
+      },
+      "overall": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "Strong, actionable guidance with real local resources; main improvement would be clarifying Medicaid category nuances and adding one or two Camden-specific employment supports if available.",
+        "B_reason": "Strong, immediately usable structure with solid benefits triage and language, slightly docked for a couple details you\u2019d still need to double-check before relying on them."
+      }
+    }
+  },
+  "axis_role_complementarity|J3_pilot|graded|gpt5": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "fwd": 2,
+        "swapped": 4,
+        "mean": 3.0,
+        "fwd_reason": "Response A gives more NJ-specific, checkable Medicaid navigation details (NJ FamilyCare number, what to ask, what to bring, county office backup) with less filler, while Response B adds some extra resources but also includes a likely-wrong call center number.",
+        "swapped_reason": "Response A adds more distinct, checkable pathways (county BSS + statewide call center + Ticket to Work/WIPA + DB101 + 988) and a clearer framing of \u201cnew job tax\u201d plus SSI/SSDI branching."
+      },
+      "practical_usability": {
+        "fwd": 2,
+        "swapped": 2,
+        "mean": 2.0,
+        "fwd_reason": "Response A is easier to lift in the next five minutes because it\u2019s tightly framed around immediate questions, a supervisor script, and a same-day benefits call workflow with concrete document list and fallback office info.",
+        "swapped_reason": "Response B is faster to deploy in-session because it stays tightly on concrete questions, a single clean \u201creport income\u201d script, and a simple document checklist without extra pacing/sleep prescriptions."
+      },
+      "role_complementarity": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B better matches peer-work flow by offering short, person-centered pacing/recovery ideas and \u201ckeep options open\u201d framing you can use without sliding into case-manager mode.",
+        "swapped_reason": "Response B better matches peer workflow by offering adaptable prompts and a straightforward benefits-reporting sequence that you can do with him on speaker without feeling like a mini self-help plan."
+      },
+      "autonomy": {
+        "fwd": 4,
+        "swapped": 3,
+        "mean": 3.5,
+        "fwd_reason": "Response B more explicitly preserves choice (14-day experiment, quitting still an option) and avoids a tone that could feel like \u201cyou must stabilize,\u201d while still offering action steps.",
+        "swapped_reason": "Both support choice (not forcing quit/stay, offering options, inviting consent for speakerphone), with A slightly more directive on a 14-day \u2018don\u2019t-quit\u2019 commitment and B slightly more open-ended."
+      },
+      "overall": {
+        "fwd": 3,
+        "swapped": 2,
+        "mean": 2.5,
+        "fwd_reason": "A is the stronger benefits-navigation tool you can use immediately, but B is stronger on peer-aligned framing and coping steps\u2014so the best choice depends on whether today\u2019s priority is coverage logistics or stamina/adjustment.",
+        "swapped_reason": "Response B is more immediately usable under time pressure, even though Response A has stronger extra-resource value."
+      }
+    }
+  },
+  "axis_role_complementarity|J1_naive|binary|gpt5": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It provides more NJ-specific, actionable Medicaid reporting details (NJ FamilyCare number, what to ask, what documents to gather) plus a clear local office backup and a key eligibility differentiator (disability vs standard adult)."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 6,
+        "n_B": 0,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "It gives a tighter step-by-step workflow a peer can run in-session (problem-clarifying questions, supervisor script, exact call script, documents checklist, and fallback office)."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It reads more like peer support\u2014normalizing the experience, focusing on stamina and coping micro-skills, and adding a safety backstop (988) without drifting into caseworker tone."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It explicitly frames quitting as an option while proposing a time-limited experiment to keep choices open, which supports self-determination more than A\u2019s more directive \u201cstabilize/report\u201d framing."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 6,
+        "n_B": 0,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "Despite being slightly more administrative in tone, it is the most complete and immediately actionable for addressing both the work-adjustment issue and the urgent Medicaid uncertainty."
+      }
+    }
+  },
+  "axis_role_complementarity|J2_samhsa_ips|binary|gpt5": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 0,
+        "n_B": 6,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "It adds more breadth (including SSI/SSDI-specific benefits counseling via WIPA/Ticket to Work, NJ DB101, and a 988 safety note) while still covering NJ FamilyCare reporting."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 6,
+        "n_B": 0,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "It gives highly concrete, step-by-step actions, exact scripts, and a clear document checklist for reporting income and resolving Medicaid questions quickly."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Its language and structure better fit peer practice by normalizing experience, offering collaborative \u201ctry for 14 days\u201d experimentation, and avoiding a case-manager tone."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It more explicitly centers choice and self-determination (keeping options open, quitting as an available option, asking permission) and supports the peer in deciding what changes to try."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "It better aligns with IPS/SAMHSA principles while still providing actionable resource linkage and planning, making it more consistent with peer support standards."
+      }
+    }
+  },
+  "axis_role_complementarity|J3_pilot|binary|gpt5": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "gpt5",
+    "deployment": "gpt-5-chat",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "A gives more checkable, locally relevant Medicaid reporting details (NJ FamilyCare number, exact ask-script, documents list, and county office contact) without adding extra generic content."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "A",
+            "B"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "A is tighter and more \u201cdo-this-now\u201d with immediate speakerphone steps, a ready-to-use supervisor script, and a clear backup path if the call center stalls."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "A",
+            "B"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "A stays in a peer-friendly lane of concrete problem-solving and navigation (benefits/coverage + workplace accommodation ask) without drifting into coaching on basic rapport or lifestyle directives."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 0,
+        "n_B": 6,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "B more explicitly frames quitting vs staying as the person\u2019s choice and offers a time-limited experiment (\u201cdon\u2019t-quit-yet\u201d 14 days) that preserves options without pressure."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "A",
+            "B"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "A delivers higher take-away density with fewer nonessential add-ons while still addressing both immediate stamina/work adjustments and Medicaid reporting with specific, verifiable next steps."
+      }
+    }
+  },
+  "axis_autonomy|J1_naive|graded|4omini": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B provides clear next steps and additional resources that may not have been highlighted in Response A.",
+        "swapped_reason": "Response A provides more detailed step-by-step guidance and external resources, making it more informative."
+      },
+      "practical_usability": {
+        "fwd": 4,
+        "swapped": 1,
+        "mean": 2.5,
+        "fwd_reason": "Response B lays out a concrete 7-day plan that is easy to follow, making it more actionable than Response A.",
+        "swapped_reason": "Response B offers clearer and more streamlined advice that is easier to apply in a real conversation."
+      },
+      "role_complementarity": {
+        "fwd": 3,
+        "swapped": 3,
+        "mean": 3.0,
+        "fwd_reason": "Both responses complement the role of a peer provider, but Response A provides more detailed guidance on practicing boundaries.",
+        "swapped_reason": "Both responses offer guidance that complements the peer provider's role, but Response A provides a more structured plan."
+      },
+      "autonomy": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Response B consistently emphasizes the user's choices and control over their situation, fostering greater autonomy.",
+        "swapped_reason": "Response B encourages the individual to express their boundaries clearly, which supports personal autonomy effectively."
+      },
+      "overall": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Overall, Response B is more effective in guiding the user through actionable steps while maintaining focus on their primary goal.",
+        "swapped_reason": "Overall, Response B is more actionable and user-friendly, while Response A is more informative but can feel overwhelming."
+      }
+    }
+  },
+  "axis_autonomy|J3_pilot|pointwise|4omini": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response includes specific, actionable resources and contact information pertinent to the user's parenting concerns.",
+        "B_reason": "The response includes specific resources, legal aid options, and practical strategies tailored to the user's situation."
+      },
+      "practical_usability": {
+        "A": 5,
+        "B": 4,
+        "A_reason": "The suggested moves are clear and immediately applicable, providing the user with concrete steps to take in their situation.",
+        "B_reason": "The moves provided are actionable and could be implemented immediately, though some may require additional clarification."
+      },
+      "role_complementarity": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response supports the peer provider's role by offering practical tools without undermining the provider's agency or rapport-building.",
+        "B_reason": "The response enhances my peer support role by offering concrete steps and language without overshadowing my engagement with the service user."
+      },
+      "autonomy": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response emphasizes the user's priorities and allows them to advocate for themselves in conversations about work and parenting.",
+        "B_reason": "The guidance respects the service user's priorities and supports their decision-making regarding their parenting time."
+      },
+      "overall": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "Overall, the response is comprehensive, focused on the user's needs, and provides valuable guidance for immediate action.",
+        "B_reason": "The response is comprehensive, actionable, and well-aligned with the service user's needs and goals."
+      }
+    }
+  },
+  "axis_autonomy|J1_naive|pointwise|4omini": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response provides specific resources and steps that are relevant to the individual's situation, offering valuable insights into navigating parenting time and employment.",
+        "B_reason": "The AI provided specific resources and actionable steps that could help the individual navigate his situation effectively."
+      },
+      "practical_usability": {
+        "A": 4,
+        "B": 4,
+        "A_reason": "The guidance is clear and actionable, allowing a peer provider to implement the strategies effectively in supporting the service user.",
+        "B_reason": "The guidance included concrete actions that the peer support specialist could readily implement in supporting the client."
+      },
+      "role_complementarity": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response enhances the peer provider's role by offering frameworks and suggestions without overshadowing the peer support process.",
+        "B_reason": "The AI offered strategies without taking over the peer support role, allowing the specialist to maintain their position as a guide."
+      },
+      "autonomy": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The focus on the service user's priorities and needs promotes their autonomy in decision-making regarding parenting and employment.",
+        "B_reason": "The response emphasized supporting the client's choices and priorities, ensuring that the focus remained on his needs."
+      },
+      "overall": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "Overall, the response is comprehensive and directly applicable to the peer support scenario, making it highly useful.",
+        "B_reason": "Overall, the response was comprehensive, practical, and supportive, making it highly applicable for the peer support context."
+      }
+    }
+  },
+  "axis_autonomy|J2_samhsa_ips|graded|4omini": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B includes a broader scope of resources, including links and numbers for legal aid, enhancing the support available to the peer provider.",
+        "swapped_reason": "Response B provides a clearer organization of steps with a focus on practical nuances and specific resources that were recently verified."
+      },
+      "practical_usability": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Response B offers a structured, clear, and specific two-track plan that the peer provider can immediately implement with their service user.",
+        "swapped_reason": "Response B presents a more structured, step-by-step approach that is straightforward and actionable for the peer provider."
+      },
+      "role_complementarity": {
+        "fwd": 4,
+        "swapped": 3,
+        "mean": 3.5,
+        "fwd_reason": "Response B provides actionable scripts and coaching language, enhancing the peer specialist's ability to support the service user effectively.",
+        "swapped_reason": "Both responses complement the peer provider role, but Response B emphasizes practice and boundary-setting in a way that feels more collaborative."
+      },
+      "autonomy": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Response B emphasizes the service user's choice and priorities, promoting self-determination throughout the response.",
+        "swapped_reason": "Response B encourages service-user decision-making with options and helps articulate their needs and boundaries."
+      },
+      "overall": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Response B is overall more comprehensive and practical, equipping the peer provider with effective strategies and resources for supporting the service user.",
+        "swapped_reason": "Overall, Response B aligns more effectively with peer support principles and offers a clearer pathway to achieving the service user's goals."
+      }
+    }
+  },
+  "axis_autonomy|J2_samhsa_ips|pointwise|4omini": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The AI provided relevant resources and specific steps that address the user's parenting concerns and legal options.",
+        "B_reason": "The AI provided comprehensive resources and practical steps tailored to the peer's situation, which enhances the peer specialist's knowledge."
+      },
+      "practical_usability": {
+        "A": 4,
+        "B": 5,
+        "A_reason": "The guidance was clear and easy to follow, suitable for immediate application, though some tailoring may be needed based on the individual's unique circumstances.",
+        "B_reason": "The response included clear and actionable steps that the peer specialist could directly implement with the service user."
+      },
+      "role_complementarity": {
+        "A": 5,
+        "B": 4,
+        "A_reason": "The AI framed its suggestions in a way that empowers the peer provider to facilitate support rather than taking over the process.",
+        "B_reason": "The AI provided support without overriding the peer specialist's role, though it could further emphasize the mutual relationship in peer support."
+      },
+      "autonomy": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response emphasizes the client's priorities and choices, aligning with the principle of self-determination.",
+        "B_reason": "The guidance promotes the service user's choices and priorities, reinforcing their autonomy in decision-making."
+      },
+      "overall": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "Overall, the response was comprehensive and practical, effectively supporting the peer provider's efforts to assist the individual.",
+        "B_reason": "Overall, the AI response was highly useful, equipping the peer specialist with effective strategies and resources."
+      }
+    }
+  },
+  "axis_role_complementarity|J1_naive|pointwise|4omini": {
+    "mode": "pointwise",
+    "judge": "J1_naive",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The AI provided specific resources and actionable steps related to employment-related exhaustion and Medicaid reporting.",
+        "B_reason": "The response provides comprehensive and specific information about Medicaid options, resources, and support services that would be valuable for the peer support specialist to share."
+      },
+      "practical_usability": {
+        "A": 5,
+        "B": 4,
+        "A_reason": "The AI offered clear, concrete suggestions that the peer support specialist can implement directly with the service user.",
+        "B_reason": "The response outlines actionable steps and a structured plan that the peer support specialist can readily implement with the individual."
+      },
+      "role_complementarity": {
+        "A": 4,
+        "B": 5,
+        "A_reason": "While the AI supports the peer support role, it provides extensive detail that may detract from the personal connection the peer could build.",
+        "B_reason": "The response empowers the peer support specialist by offering support and guidance without overshadowing the specialist's role in facilitating the conversation."
+      },
+      "autonomy": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The AI emphasizes the service user's choices and offers options rather than dictating actions.",
+        "B_reason": "The response emphasizes respecting the individual's choices and encourages exploring options without pressure to quit or stay in the job."
+      },
+      "overall": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "Overall, the response is comprehensive and tailored to the service user's needs, enhancing the peer support specialist's effectiveness.",
+        "B_reason": "Overall, the AI response is highly effective, providing useful information, practical steps, and supporting the individual\u2019s autonomy."
+      }
+    }
+  },
+  "axis_role_complementarity|J1_naive|graded|4omini": {
+    "mode": "graded",
+    "judge": "J1_naive",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B includes more specific follow-up actions regarding Medicaid and SSI/SSDI, providing a broader understanding of the situation.",
+        "swapped_reason": "Response B provides a more direct approach to Medicaid reporting and checks, while Response A offers more context about job exhaustion and a two-week plan."
+      },
+      "practical_usability": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B offers practical strategies for managing exhaustion and emphasizes action plans that can be implemented quickly.",
+        "swapped_reason": "Response B presents straightforward actions and words for the service-user to use immediately, while Response A offers a structured but more complex multi-step plan."
+      },
+      "role_complementarity": {
+        "fwd": 5,
+        "swapped": 1,
+        "mean": 3.0,
+        "fwd_reason": "Response B positions the specialist as a supportive partner in addressing the individual's concerns, aligning well with peer support principles.",
+        "swapped_reason": "Response B succinctly supports the peer specialist's role, focusing on immediate action and empowerment while ensuring follow-up, whereas Response A includes more detailed instructions that may overwhelm."
+      },
+      "autonomy": {
+        "fwd": 5,
+        "swapped": 1,
+        "mean": 3.0,
+        "fwd_reason": "Both responses encourage autonomy, but Response B particularly emphasizes keeping options open and making informed decisions.",
+        "swapped_reason": "Both responses empower the service user to make decisions, but Response B emphasizes immediate control over adjustments within the job context."
+      },
+      "overall": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B provides a comprehensive approach with actionable steps while addressing emotional and practical aspects, making it overall more useful.",
+        "swapped_reason": "Response B provides clear, actionable steps and clarity on Medicaid while still touching on exhaustion, making it slightly more useful overall."
+      }
+    }
+  },
+  "axis_autonomy|J1_naive|binary|4omini": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response A provides a greater variety of resources and detailed steps regarding the court process."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 0,
+        "n_B": 6,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B offers a more straightforward and immediately actionable plan to balance work and parenting."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 6,
+        "n_B": 0,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "Response A more explicitly reinforces the peer support specialist's role in guiding and facilitating the user's parenting goals."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "A",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response A emphasizes the importance of establishing boundaries and an actionable parenting-time plan, promoting user agency."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response A combines comprehensive resources, user empowerment, and focused support on parenting priorities."
+      }
+    }
+  },
+  "axis_autonomy|J3_pilot|graded|4omini": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B includes a wider range of practical steps and clearer resource referrals tailored to the situation.",
+        "swapped_reason": "Response B provides more specific guidance on future steps and includes actionable language for communication."
+      },
+      "practical_usability": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Response B offers direct, actionable steps that can be implemented immediately to address the service user's concerns.",
+        "swapped_reason": "Response B lays out a clear, step-by-step plan that the individual can easily follow."
+      },
+      "role_complementarity": {
+        "fwd": 4,
+        "swapped": 3,
+        "mean": 3.5,
+        "fwd_reason": "Response B effectively complements the peer provider's role by providing specific, actionable language that supports the user in their interactions.",
+        "swapped_reason": "Both responses complement the role of the peer provider equally, though B may offer slightly more structured support."
+      },
+      "autonomy": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Response B places a strong emphasis on the service user's priorities and empowers them with language and strategies to advocate for themselves.",
+        "swapped_reason": "Response B more explicitly supports the service user's autonomy by providing clear boundaries and encouraging him to voice his needs."
+      },
+      "overall": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Response B stands out as the more comprehensive and practical response that directly addresses the user's immediate needs and concerns.",
+        "swapped_reason": "Overall, Response B is more comprehensive and actionable, making it the more useful choice."
+      }
+    }
+  },
+  "axis_role_complementarity|J2_samhsa_ips|pointwise|4omini": {
+    "mode": "pointwise",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response provides specific resources and contact information for Medicaid services, which is vital for the service user.",
+        "B_reason": "The response includes specific resources and contacts related to Medicaid and employment that would be highly valuable to the peer specialist."
+      },
+      "practical_usability": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The guidance is actionable and clearly outlined, offering immediate steps the peer specialist can take.",
+        "B_reason": "The step-by-step approach and practical strategies provided are actionable and can be easily implemented."
+      },
+      "role_complementarity": {
+        "A": 4,
+        "B": 5,
+        "A_reason": "The AI's response enhances the peer specialist's role without overstepping, offering practical tools while leaving the peer worker to facilitate the conversation.",
+        "B_reason": "The AI response empowers the peer specialist to lead the session without taking over, enabling a focus on mutual support."
+      },
+      "autonomy": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response emphasizes the service user's choices and encourages them to take ownership of their situation.",
+        "B_reason": "The response emphasizes self-determination by providing options and encouraging the service user to express their needs and preferences."
+      },
+      "overall": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "Overall, the response is thorough, relevant, and directly applicable to the task at hand.",
+        "B_reason": "Overall, the response is thorough, supportive, and well-aligned with peer support competencies and principles."
+      }
+    }
+  },
+  "axis_role_complementarity|J2_samhsa_ips|graded|4omini": {
+    "mode": "graded",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "fwd": 4,
+        "swapped": 1,
+        "mean": 2.5,
+        "fwd_reason": "Response B provides more nuanced information regarding Medicaid, including specifics on income thresholds and benefits counseling options.",
+        "swapped_reason": "Response B provides clearer and more organized information on Medicaid reporting and contacts, which is crucial for the peer specialist's role."
+      },
+      "practical_usability": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Response B's structured plan with specific tasks and adaptable language makes it highly actionable for the peer to follow.",
+        "swapped_reason": "Response B offers practical adjustments and specific language for the participant to use, making it more actionable."
+      },
+      "role_complementarity": {
+        "fwd": 4,
+        "swapped": 2,
+        "mean": 3.0,
+        "fwd_reason": "Response B complements the peer specialist's role by emphasizing mutual support and shared decision-making rather than a directive approach.",
+        "swapped_reason": "Response B better complements the role of a peer provider by emphasizing self-advocacy and actionable steps."
+      },
+      "autonomy": {
+        "fwd": 5,
+        "swapped": 1,
+        "mean": 3.0,
+        "fwd_reason": "Response B strongly supports the peer's autonomy by framing quitting as a future option and emphasizing personal choice in adjustments.",
+        "swapped_reason": "Response B strongly supports the service-user's autonomy by providing options for adjustments and encouraging direct communication with their supervisor."
+      },
+      "overall": {
+        "fwd": 5,
+        "swapped": 2,
+        "mean": 3.5,
+        "fwd_reason": "Overall, Response B is more comprehensive and supportive, fostering collaboration and self-determination effectively.",
+        "swapped_reason": "Overall, Response B is more useful due to its clarity, focus on practical actions, and support for individual empowerment."
+      }
+    }
+  },
+  "axis_autonomy|J2_samhsa_ips|binary|4omini": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response A provides more detailed steps and specific resources for navigating the legal system, making it richer in useful information."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 1,
+        "n_B": 5,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B offers a more straightforward 2-track plan that makes it easier for the peer specialist to implement quickly."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 5,
+        "n_B": 1,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "Response A provides a structured guide that complements the peer provider's role by detailing actionable steps that foster conversation."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response B emphasizes the service-user's agency in making decisions about job shifts explicitly, which supports autonomy more effectively."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Overall, Response A delivers a comprehensive, resource-rich approach that better equips the peer provider to guide the service-user."
+      }
+    }
+  },
+  "axis_autonomy|J3_pilot|binary|4omini": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "axis_autonomy",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "A",
+            "B"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response A includes verified local resources and specific steps tailored to the family's situation."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "A"
+          ]
+        },
+        "n_A": 1,
+        "n_B": 5,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B provides clearer immediate actions the service user can take within a 7-day plan."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 3,
+        "n_B": 3,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response B frames the peer provider's role more dynamically, empowering the service user to navigate their situation."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "A",
+            "B",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 5,
+        "n_B": 1,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "Response A emphasizes setting boundaries with family explicitly, which supports the service user\u2019s autonomy more effectively."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "A",
+            "B",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 2,
+        "n_B": 4,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response A provides a more comprehensive approach by balancing immediate steps with long-term planning while validating the user\u2019s priorities."
+      }
+    }
+  },
+  "axis_role_complementarity|J3_pilot|pointwise|4omini": {
+    "mode": "pointwise",
+    "judge": "J3_pilot",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response provided specific contacts and actionable steps relevant to addressing the user's Medicaid concerns and employment challenges.",
+        "B_reason": "The response provided specific, verified resources and clear, actionable steps relevant to the service user's situation."
+      },
+      "practical_usability": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The concrete questions and phrases for communication empower immediate application in the user's situation.",
+        "B_reason": "The concrete steps and phrases offered are immediately usable in a peer support setting."
+      },
+      "role_complementarity": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The response supports my role by offering concrete strategies without overshadowing my peer support interaction.",
+        "B_reason": "The response enhances the peer provider's role by providing structured support without taking over the therapeutic relationship."
+      },
+      "autonomy": {
+        "A": 4,
+        "B": 5,
+        "A_reason": "While the suggestions are supportive, the user ultimately retains control over their choices and actions.",
+        "B_reason": "The response encourages the service user's choices and prioritizes their comfort and agency throughout the process."
+      },
+      "overall": {
+        "A": 5,
+        "B": 5,
+        "A_reason": "The entire response effectively addresses immediate concerns, providing valuable resources and actions for the user.",
+        "B_reason": "Overall, the response is comprehensive, clear, and directly applicable to the situation at hand."
+      }
+    }
+  },
+  "axis_role_complementarity|J3_pilot|graded|4omini": {
+    "mode": "graded",
+    "judge": "J3_pilot",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "fwd": 4,
+        "swapped": 4,
+        "mean": 4.0,
+        "fwd_reason": "Response B provides additional insights and questions about the user's situation, which helps clarify his benefits status.",
+        "swapped_reason": "Response A highlights specific actions to take regarding Medicaid and provides detailed referral information, making it slightly more informative."
+      },
+      "practical_usability": {
+        "fwd": 4,
+        "swapped": 4,
+        "mean": 4.0,
+        "fwd_reason": "Response B offers concrete strategies and tailored communication for both work adjustments and Medicaid inquiries.",
+        "swapped_reason": "Response A presents a clear, actionable plan with specific words for communication, making it more immediately usable."
+      },
+      "role_complementarity": {
+        "fwd": 4,
+        "swapped": 3,
+        "mean": 3.5,
+        "fwd_reason": "Response B complements the peer provider role by addressing emotional aspects and providing specific actionable steps.",
+        "swapped_reason": "Both responses offer complementary insights, but Response B could blend in well with peer support by leaning more on emotional support."
+      },
+      "autonomy": {
+        "fwd": 4,
+        "swapped": 3,
+        "mean": 3.5,
+        "fwd_reason": "Response B emphasizes keeping options open and involves the user in creating a plan, thereby respecting his autonomy.",
+        "swapped_reason": "Both responses encourage autonomy; however, Response A emphasizes keeping options open more explicitly."
+      },
+      "overall": {
+        "fwd": 4,
+        "swapped": 4,
+        "mean": 4.0,
+        "fwd_reason": "Response B is more comprehensive, providing a clearer framework for action while considering the user's emotional and practical needs.",
+        "swapped_reason": "Response A provides a more structured and usable approach, particularly regarding practical next steps."
+      }
+    }
+  },
+  "axis_role_complementarity|J2_samhsa_ips|binary|4omini": {
+    "mode": "binary",
+    "judge": "J2_samhsa_ips",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 0,
+        "n_B": 6,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B provides a broader range of resources and clarifies the distinction between different Medicaid coverage options."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 6,
+        "n_B": 0,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "Response A offers structured steps that are clear and actionable, making it easier for the peer specialist to implement."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 0,
+        "n_B": 6,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B emphasizes a supportive partnership approach and validates the client's experience, aligning closely with peer support principles."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "B",
+            "A"
+          ]
+        },
+        "n_A": 2,
+        "n_B": 4,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response B fosters more client engagement in problem-solving and decision-making by making a collaborative plan."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 0,
+        "n_B": 6,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B's holistic approach better aligns with the SAMHSA competencies and IPS principles, making it more useful for a peer specialist."
+      }
+    }
+  },
+  "axis_role_complementarity|J1_naive|binary|4omini": {
+    "mode": "binary",
+    "judge": "J1_naive",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "B",
+            "A",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 1,
+        "n_B": 5,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B includes specific questions regarding income-based NJ FamilyCare and SSI/SSDI while also providing a broader context on work-related exhaustion."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "A",
+            "B",
+            "A"
+          ],
+          "swap": [
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 5,
+        "n_B": 1,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "Response A provides a clearly structured step-by-step plan that is explicitly actionable and straightforward."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "B",
+            "A",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 2,
+        "n_B": 4,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B better acknowledges the emotional and psychological aspects of transitioning back to work, aligning with the supportive role of a peer provider."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "A"
+          ]
+        },
+        "n_A": 1,
+        "n_B": 5,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B encourages the service user to explore options without pressuring them into either quitting or staying, supporting their autonomy."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "B",
+            "A",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 1,
+        "n_B": 5,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B offers a more holistic approach that combines emotional support with practical steps and critical information."
+      }
+    }
+  },
+  "axis_role_complementarity|J3_pilot|binary|4omini": {
+    "mode": "binary",
+    "judge": "J3_pilot",
+    "pair": "axis_role_complementarity",
+    "schema": "dims-v1",
+    "model": "4omini",
+    "deployment": "gpt-4o-mini",
+    "dims": {
+      "information_value": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "A"
+          ]
+        },
+        "n_A": 1,
+        "n_B": 5,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B provides specific numbers and resources related to SSI/SSDI, which may enhance understanding of Medicaid issues."
+      },
+      "practical_usability": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "A",
+            "A"
+          ]
+        },
+        "n_A": 5,
+        "n_B": 1,
+        "position_consistent": true,
+        "winner": "A",
+        "reason": "Response A offers straightforward, actionable steps that the individual can take immediately, making it highly usable."
+      },
+      "role_complementarity": {
+        "votes": {
+          "fwd": [
+            "B",
+            "A",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        "n_A": 2,
+        "n_B": 4,
+        "position_consistent": true,
+        "winner": "B",
+        "reason": "Response B better emphasizes the connection between emotional well-being and practical steps, which complements the peer support role."
+      },
+      "autonomy": {
+        "votes": {
+          "fwd": [
+            "B",
+            "B",
+            "B"
+          ],
+          "swap": [
+            "A",
+            "B",
+            "A"
+          ]
+        },
+        "n_A": 2,
+        "n_B": 4,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response B includes language supporting the user's agency in exploring work adjustments without the pressure to quit."
+      },
+      "overall": {
+        "votes": {
+          "fwd": [
+            "A",
+            "A",
+            "A"
+          ],
+          "swap": [
+            "B",
+            "B",
+            "A"
+          ]
+        },
+        "n_A": 4,
+        "n_B": 2,
+        "position_consistent": false,
+        "winner": "tie",
+        "reason": "Response A provides a clearer structure and actionable steps, which may enhance immediate clarity and practicality in supporting the individual."
       }
     }
   }
